@@ -1,0 +1,1 @@
+export { StandingsTable } from './StandingsTable';
