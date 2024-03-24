@@ -20,6 +20,8 @@ function App() {
           <Route path="player" element={<Outlet />}>
             <Route path=":playerName" element={<Player />} />
           </Route>
+
+          <Route path="*" element={<>error</>} />
         </Routes>
         <div className="mt-4 flex justify-center">
           <BuyMeACoffeeWidget />
