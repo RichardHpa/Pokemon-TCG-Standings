@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/pokemon-tcg-stadings/static/css/main.40ad8584.css",
+    "main.js": "/pokemon-tcg-stadings/static/js/main.6fa49226.js",
+    "static/js/453.0ceeaaf0.chunk.js": "/pokemon-tcg-stadings/static/js/453.0ceeaaf0.chunk.js",
+    "index.html": "/pokemon-tcg-stadings/index.html",
+    "main.40ad8584.css.map": "/pokemon-tcg-stadings/static/css/main.40ad8584.css.map",
+    "main.6fa49226.js.map": "/pokemon-tcg-stadings/static/js/main.6fa49226.js.map",
+    "453.0ceeaaf0.chunk.js.map": "/pokemon-tcg-stadings/static/js/453.0ceeaaf0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.40ad8584.css",
+    "static/js/main.6fa49226.js"
+  ]
+}
