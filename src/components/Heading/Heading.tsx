@@ -11,10 +11,16 @@ export type HeadingProps = {
   children: ReactNode;
 };
 
-export const Heading = ({ children, level = '1' }: HeadingProps) => {
+export const Heading = ({ children, level = '1', className = '' }: HeadingProps) => {
   return createElement(
     `h${level}`,
-    { className: clsx(headingClasses.base, headingClasses.level[level]) },
+    {
+      className: clsx({
+        [headingClasses.base]: true,
+        [headingClasses.level[level]]: true,
+        [className]: !!className,
+      }),
+    },
     children
   );
 };

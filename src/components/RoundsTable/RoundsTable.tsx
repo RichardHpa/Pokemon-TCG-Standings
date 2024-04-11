@@ -10,17 +10,17 @@ export const RoundsTable: FC<RoundsTableProps> = ({ rounds }) => {
         .reverse()
         .map(round => {
           return (
-            <li className="py-3 sm:py-4" key={round}>
-              <div className="flex items-center">
-                <div className="flex-1 min-w-0 mx-2">
+            <li className="pl-3 pr-6 py-4" key={round}>
+              <div className="flex justify-between align-top">
+                <div>
                   <p className="text-sm text-gray-500 truncate dark:text-gray-400">
                     Round {round} - Table {rounds[round].table}
                   </p>
-                  <div className="flex justify-between">
-                    <p>{rounds[round].name}</p>
-                    <p className={colorMap[rounds[round].result]}>{rounds[round].result}</p>
-                  </div>
+                  <p>{rounds[round].name}</p>
                 </div>
+                <p className={`${colorMap[rounds[round].result]} font-bold`}>
+                  {rounds[round].result}
+                </p>
               </div>
             </li>
           );
