@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import Markdown from 'markdown-to-jsx';
 
 import { BuyMeACoffeeWidget } from 'components/BuyMeACoffeeWidget';
+import { SEO } from 'components/SEO';
 
 import { Heading } from 'components/Heading';
 
@@ -53,6 +54,8 @@ export const About = () => {
 
   return (
     <div>
+      <SEO title="About" />
+
       <Markdown
         options={{
           overrides: {

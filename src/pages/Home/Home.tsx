@@ -4,6 +4,7 @@ import { Await, useLoaderData, Link } from 'react-router-dom';
 import { ContentCard } from 'components/ContentCard';
 import { Heading } from 'components/Heading';
 import { Indicator } from 'components/Indicator';
+import { SEO } from 'components/SEO';
 
 import { useGetTournaments } from 'queries/useGetTournaments';
 
@@ -98,6 +99,7 @@ export const Home = () => {
 
   return (
     <Suspense fallback={<p>Loading tournament info...</p>}>
+      <SEO />
       <Await resolve={data.tournaments} errorElement={<p>Error loading the tournaments</p>}>
         <HomeContent />
       </Await>

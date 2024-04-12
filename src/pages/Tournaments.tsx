@@ -5,6 +5,7 @@ import { useQuery } from '@tanstack/react-query';
 
 import { Heading } from 'components/Heading';
 import { ContentCard } from 'components/ContentCard';
+import { SEO } from 'components/SEO';
 
 import { tournamentsQuery } from 'queries/useGetTournaments';
 import { RUNNING } from 'constants/tournament';
@@ -20,6 +21,7 @@ export const Tournaments = () => {
 
   return (
     <div className="flex flex-col gap-4">
+      <SEO title="TCG tournaments" />
       <Heading level="3">Latest Pokemon TCG Tournaments</Heading>
 
       <Suspense fallback={<p>Loading Tournaments...</p>}>

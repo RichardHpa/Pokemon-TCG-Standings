@@ -7,6 +7,7 @@ import { useGetTournament } from 'queries/useGetTournament';
 import { Heading } from 'components/Heading';
 import { StandingsCard } from 'components/StandingsCard';
 import { Indicator } from 'components/Indicator';
+import { SEO } from 'components/SEO';
 
 import { RUNNING } from 'constants/tournament';
 
@@ -86,6 +87,8 @@ export const Tournament = () => {
 
   return (
     <>
+      <SEO title="Tournaments" />
+
       <div>
         <section className="bg-white dark:bg-gray-900">
           <div className="max-w-screen-xl px-4 py-2 sm:py-8 mx-auto text-center lg:py-16 lg:px-6">

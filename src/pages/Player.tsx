@@ -8,6 +8,7 @@ import { RoundsTable } from 'components/RoundsTable';
 import { ContentCard } from 'components/ContentCard';
 import { SimilarPointsList } from 'components/SimilarPointsList';
 import { StandingsCard } from 'components/StandingsCard';
+import { SEO } from 'components/SEO';
 
 import { createPlayerName } from 'utils/createPlayerName';
 import { getPlayerInfo } from 'utils/getPlayerInfo';
@@ -52,6 +53,8 @@ const PlayerInfo: FC<PlayerInfoProps> = ({ tournamentId, playerName }) => {
 
   return (
     <div className="flex flex-col gap-4">
+      <SEO title={`${player.name}`} />
+
       <div>
         <Heading level="4">
           {player.name} {player.placing > data.length && ` - (DQ)`}

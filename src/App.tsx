@@ -16,6 +16,7 @@ import { tournamentsQuery } from 'queries/useGetTournaments';
 import { tournamentQuery } from 'queries/useGetTournament';
 import { tournamentStandingsQuery } from 'queries/useGetTournamentStandings';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { useAnalytics } from 'hooks/useAnalytics';
 
 import { FetchingProvider } from 'context/FetchingContext';
 
@@ -34,11 +35,11 @@ const queryClient = new QueryClient({
 });
 
 const Layout = () => {
-  const location = useLocation();
+  const { sendPageView } = useAnalytics();
 
   useEffect(() => {
-    ReactGA.send({ hitType: 'pageview', page: location.pathname });
-  }, [location]);
+    sendPageView();
+  }, [sendPageView]);
 
   return (
     <div className="bg-white dark:bg-gray-900 text-black dark:text-gray-200 min-h-screen flex flex-col">
