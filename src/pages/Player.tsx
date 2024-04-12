@@ -73,24 +73,27 @@ const PlayerInfo: FC<PlayerInfoProps> = ({ tournamentId, playerName }) => {
           </span>
         </p>
       </div>
+      {player.rounds['1'].name === 'none' ? (
+        <p>More information will be available one round 1 pairings are up</p>
+      ) : (
+        <div className="mb-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <ContentCard title="Rounds">
+            <RoundsTable rounds={player.rounds} />
+          </ContentCard>
 
-      <div className="mb-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        <ContentCard title="Rounds">
-          <RoundsTable rounds={player.rounds} />
-        </ContentCard>
+          <ContentCard title="Similar points">
+            <SimilarPointsList player={player} data={data} totalPoints={totalPoints} />
+          </ContentCard>
 
-        <ContentCard title="Similar points">
-          <SimilarPointsList player={player} data={data} totalPoints={totalPoints} />
-        </ContentCard>
-
-        <StandingsCard
-          tournamentId={tournamentId}
-          standings={data}
-          title="Current standings"
-          scrollToPlayerIndex={player.placing - 1}
-          allowReset
-        />
-      </div>
+          <StandingsCard
+            tournamentId={tournamentId}
+            standings={data}
+            title="Current standings"
+            scrollToPlayerIndex={player.placing - 1}
+            allowReset
+          />
+        </div>
+      )}
     </div>
   );
 };

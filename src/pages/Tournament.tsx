@@ -61,6 +61,14 @@ const TournamentStandings = ({ tournamentId }: { tournamentId: string }) => {
     return <p>Loading standings...</p>;
   }
 
+  if (!standings) {
+    return <p>This tournament hasn't started yet</p>;
+  }
+
+  if (standings && standings[0].rounds['1'].name === 'none') {
+    return <p>Standings will be available once round 1 has started</p>;
+  }
+
   return (
     <div className="h-[600px] flex-grow">
       <StandingsCard
