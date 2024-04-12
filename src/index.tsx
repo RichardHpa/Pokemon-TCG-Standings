@@ -6,13 +6,16 @@ import reportWebVitals from './reportWebVitals';
 import 'flowbite';
 
 import { ColorModeProvider } from 'providers/ColorModeProvider';
+import { HelmetProvider } from 'react-helmet-async';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
   <React.StrictMode>
-    <ColorModeProvider>
-      <App />
-    </ColorModeProvider>
+    <HelmetProvider>
+      <ColorModeProvider>
+        <App />
+      </ColorModeProvider>
+    </HelmetProvider>
   </React.StrictMode>
 );
 
