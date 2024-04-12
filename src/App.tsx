@@ -1,9 +1,9 @@
 import { useEffect } from 'react';
-import { Outlet, createHashRouter, RouterProvider, defer } from 'react-router-dom';
+import { Outlet, createHashRouter, RouterProvider, defer, useLocation } from 'react-router-dom';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { Navbar } from 'components/Navbar';
 import { ErrorBoundary } from 'react-error-boundary';
-import ReactGA from 'react-ga';
+import ReactGA from 'react-ga4';
 
 // TODO: refactor these to also include loaders
 import { Player, Tournaments, Tournament, About } from './pages';
@@ -34,6 +34,12 @@ const queryClient = new QueryClient({
 });
 
 const Layout = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    ReactGA.send({ hitType: 'pageview', page: location.pathname });
+  }, [location]);
+
   return (
     <div className="bg-white dark:bg-gray-900 text-black dark:text-gray-200 min-h-screen flex flex-col">
       <Navbar />
@@ -172,10 +178,6 @@ function fallbackRender({ error }: { error: Error }) {
 }
 
 function App() {
-  useEffect(() => {
-    ReactGA.pageview(window.location.pathname + window.location.search);
-  }, []);
-
   return (
     <ErrorBoundary fallbackRender={fallbackRender}>
       <QueryClientProvider client={queryClient}>
