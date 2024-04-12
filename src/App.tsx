@@ -1,9 +1,12 @@
-import { useEffect } from 'react';
+import { useEffect, useCallback } from 'react';
 import { Outlet, createHashRouter, RouterProvider, defer } from 'react-router-dom';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
-import { Navbar } from 'components/Navbar';
 import { ErrorBoundary } from 'react-error-boundary';
 import ReactGA from 'react-ga4';
+
+import { Navbar } from 'components/Navbar';
+import { Notice } from 'components/Notice';
 
 // TODO: refactor these to also include loaders
 import { Player, Tournaments, Tournament, About } from './pages';
@@ -15,8 +18,9 @@ import { DefaultError } from 'errors/DefaultError';
 import { tournamentsQuery } from 'queries/useGetTournaments';
 import { tournamentQuery } from 'queries/useGetTournament';
 import { tournamentStandingsQuery } from 'queries/useGetTournamentStandings';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+
 import { useAnalytics } from 'hooks/useAnalytics';
+import { useLocalStorage } from 'hooks/useLocalStorage';
 
 import { FetchingProvider } from 'context/FetchingContext';
 
@@ -34,17 +38,33 @@ const queryClient = new QueryClient({
   },
 });
 
+const noticeId = 'welcomeNotice';
 const Layout = () => {
   const { sendPageView } = useAnalytics();
+  const [dismissedNotice, setDismissedNotice] = useLocalStorage(noticeId, 'false');
 
   useEffect(() => {
     sendPageView();
   }, [sendPageView]);
 
+  const handleOnDismiss = useCallback(() => {
+    setDismissedNotice('true');
+  }, [setDismissedNotice]);
+
   return (
     <div className="bg-white dark:bg-gray-900 text-black dark:text-gray-200 min-h-screen flex flex-col">
       <Navbar />
       <div className="container mx-auto py-12 px-4 flex flex-col flex-grow">
+        {dismissedNotice === 'false' && (
+          <Notice dismissible noticeId={noticeId} onDismiss={handleOnDismiss}>
+            Welcome to the Pokemon TCG Standings! We're thrilled to have you here. Just a heads-up,
+            since this is our debut weekend, there might be a few bugs lurking around. Thanks for
+            your understanding! If you happen to encounter any issues with the data, a quick refresh
+            might do the trick. If you're still experiencing trouble or have any other concerns,
+            feel free to click on the 'About' page to find out how to get in touch
+          </Notice>
+        )}
+
         <Outlet />
       </div>
     </div>
