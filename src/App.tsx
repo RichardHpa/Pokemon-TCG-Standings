@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { Outlet, createHashRouter, RouterProvider, defer, useLocation } from 'react-router-dom';
+import { Outlet, createHashRouter, RouterProvider, defer } from 'react-router-dom';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { Navbar } from 'components/Navbar';
 import { ErrorBoundary } from 'react-error-boundary';
