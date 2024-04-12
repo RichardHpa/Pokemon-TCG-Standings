@@ -3,7 +3,7 @@ import { Outlet, createHashRouter, RouterProvider, defer } from 'react-router-do
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { Navbar } from 'components/Navbar';
 import { ErrorBoundary } from 'react-error-boundary';
-import ReactGA from 'react-ga';
+import ReactGA from 'react-ga4';
 
 // TODO: refactor these to also include loaders
 import { Player, Tournaments, Tournament, About } from './pages';
@@ -173,7 +173,7 @@ function fallbackRender({ error }: { error: Error }) {
 
 function App() {
   useEffect(() => {
-    ReactGA.pageview(window.location.pathname + window.location.search);
+    ReactGA.send({ hitType: 'pageview', page: window.location.pathname });
   }, []);
 
   return (
