@@ -9,7 +9,6 @@ const points: RecordProps = {
 const objKeys: <Obj>(o: Obj) => (keyof Obj)[] = Object.keys;
 
 export const calculatePoints = (record: RecordProps) => {
-  console.log(record);
   const recordKeys = objKeys(record);
 
   let totalPoints = 0;

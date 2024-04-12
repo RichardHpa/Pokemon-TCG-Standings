@@ -59,7 +59,7 @@ export const StandingsTable: FC<StandingsTableProps> = ({ standings }) => {
                             <svg
                               stroke="currentColor"
                               fill="currentColor"
-                              stroke-width="0"
+                              strokeWidth="0"
                               viewBox="0 0 416 512"
                               className="shrink-0 h-5 w-5"
                               height="1em"
