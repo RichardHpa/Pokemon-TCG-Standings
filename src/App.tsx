@@ -1,7 +1,9 @@
+import { useEffect } from 'react';
 import { Outlet, createHashRouter, RouterProvider, defer } from 'react-router-dom';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { Navbar } from 'components/Navbar';
 import { ErrorBoundary } from 'react-error-boundary';
+import ReactGA from 'react-ga';
 
 // TODO: refactor these to also include loaders
 import { Player, Tournaments, Tournament, About } from './pages';
@@ -19,6 +21,9 @@ import { FetchingProvider } from 'context/FetchingContext';
 
 import type { QueryClient as QueryClientType } from '@tanstack/react-query';
 import type { LoaderFunctionArgs } from 'react-router-dom';
+
+const TRACKING_ID = 'G-H6TRSN6RWF'; // OUR_TRACKING_ID
+ReactGA.initialize(TRACKING_ID);
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -167,6 +172,10 @@ function fallbackRender({ error }: { error: Error }) {
 }
 
 function App() {
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
+
   return (
     <ErrorBoundary fallbackRender={fallbackRender}>
       <QueryClientProvider client={queryClient}>
