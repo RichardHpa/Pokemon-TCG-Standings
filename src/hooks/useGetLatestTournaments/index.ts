@@ -1,0 +1,1 @@
+export { useGetLatestTournaments } from './useGetLatestTournaments';

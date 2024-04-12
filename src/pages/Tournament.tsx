@@ -6,6 +6,9 @@ import { useGetTournament } from 'queries/useGetTournament';
 
 import { Heading } from 'components/Heading';
 import { StandingsCard } from 'components/StandingsCard';
+import { Indicator } from 'components/Indicator';
+
+import { RUNNING } from 'constants/tournament';
 
 import { formatDate } from 'helpers/formatDate';
 
@@ -24,17 +27,20 @@ export const TournamentOutlet = () => {
           {tournament => {
             return (
               <>
-                <div className="mb-4">
-                  <Link to={`/tournaments/${data.tournamentId}`}>
-                    <Heading level="3" className="hover:underline cursor-pointer">
-                      {tournament.name}
-                    </Heading>
-                  </Link>
+                <div className="flex justify-between">
+                  <div className="mb-4">
+                    <Link to={`/tournaments/${data.tournamentId}`}>
+                      <Heading level="3" className="hover:underline cursor-pointer">
+                        {tournament.name}
+                      </Heading>
+                    </Link>
 
-                  <p className="text-gray-500 dark:text-gray-400">
-                    {formatDate(tournament.date.start, 'MMMM d, yyyy')} -{' '}
-                    {formatDate(tournament.date.end, 'MMMM d, yyyy')}
-                  </p>
+                    <p className="text-gray-500 dark:text-gray-400">
+                      {formatDate(tournament.date.start, 'MMMM d, yyyy')} -{' '}
+                      {formatDate(tournament.date.end, 'MMMM d, yyyy')}
+                    </p>
+                  </div>
+                  {tournament.tournamentStatus === RUNNING && <Indicator />}
                 </div>
 
                 <Outlet />

@@ -5,6 +5,7 @@ import { useQuery } from '@tanstack/react-query';
 
 import { Heading } from 'components/Heading';
 import { Card } from 'components/Card';
+import { ContentCard } from 'components/ContentCard';
 
 import { tournamentsQuery } from 'queries/useGetTournaments';
 import { RUNNING } from 'constants/tournament';
@@ -39,12 +40,12 @@ const TournamentsList = () => {
   }
 
   return (
-    <Card>
+    <ContentCard title="Pokemon TCG Tournaments">
       <ul className="divide-y divide-gray-200 dark:divide-gray-700">
         {tournaments.map(tournament => {
           return (
             <li
-              className="py-3 sm:py-4 px-4 cursor-pointer hover:bg-gray-100 hover:text-blue-700 dark:hover:bg-gray-600 dark:hover:text-white"
+              className="py-3 sm:py-4 w-full items-center pl-3 pr-6  text-gray-700 cursor-pointer  hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900 border-b border-gray-100 dark:border-gray-800 dark:text-gray-400"
               key={tournament.id}
             >
               <Link to={`${tournament.id}`}>
@@ -60,6 +61,6 @@ const TournamentsList = () => {
           );
         })}
       </ul>
-    </Card>
+    </ContentCard>
   );
 };

@@ -1,0 +1,1 @@
+export { useGetRunningTournaments } from './useGetRunningTournaments';

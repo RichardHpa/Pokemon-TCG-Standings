@@ -2,7 +2,9 @@ import { Outlet, createHashRouter, RouterProvider, defer } from 'react-router-do
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { Navbar } from 'components/Navbar';
 
+// TODO: refactor these to also include loaders
 import { Player, Tournaments, Tournament } from './pages';
+import { Home } from 'pages/Home';
 import { TournamentOutlet } from 'pages/Tournament';
 
 import { tournamentsQuery } from 'queries/useGetTournaments';
@@ -99,7 +101,8 @@ const router = createHashRouter([
     children: [
       {
         index: true,
-        element: <>home</>,
+        loader: tournamentsLoader(queryClient),
+        element: <Home />,
       },
       {
         path: 'tournaments',

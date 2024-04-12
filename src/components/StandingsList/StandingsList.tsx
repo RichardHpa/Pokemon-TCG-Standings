@@ -51,9 +51,7 @@ export const StandingsList = forwardRef(({ standings, tournamentId }: StandingsL
               {({ data, index, style }) => {
                 return (
                   <li
-                    className="flex justify-between items-center pl-3 pr-6 
-                  
-                     text-gray-700 cursor-pointer  hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900 border-b border-gray-100 dark:border-gray-800 dark:text-gray-400"
+                    className="flex justify-between items-center pl-3 pr-6  text-gray-700 cursor-pointer  hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900 border-b border-gray-100 dark:border-gray-800 dark:text-gray-400"
                     key={index}
                     style={style}
                     onClick={() => onRowClick(data[index].name)}
