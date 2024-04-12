@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpokemon_tcg_stadings=self.webpackChunkpokemon_tcg_stadings||[]).push([[299],{299:(s,a,e)=>{s.exports=e.p+"static/media/about.a6ab5f4acc06d4efb139.md"}}]);
