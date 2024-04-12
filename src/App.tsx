@@ -4,7 +4,7 @@ import { Navbar } from 'components/Navbar';
 import { ErrorBoundary } from 'react-error-boundary';
 
 // TODO: refactor these to also include loaders
-import { Player, Tournaments, Tournament } from './pages';
+import { Player, Tournaments, Tournament, About } from './pages';
 import { Home } from 'pages/Home';
 import { TournamentOutlet } from 'pages/Tournament';
 
@@ -111,6 +111,10 @@ const router = createHashRouter([
         index: true,
         loader: tournamentsLoader(queryClient),
         element: <Home />,
+      },
+      {
+        path: 'about',
+        element: <About />,
       },
       {
         path: 'tournaments',

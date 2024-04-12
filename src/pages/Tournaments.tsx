@@ -4,7 +4,6 @@ import { Link, useLoaderData, Await } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 
 import { Heading } from 'components/Heading';
-import { Card } from 'components/Card';
 import { ContentCard } from 'components/ContentCard';
 
 import { tournamentsQuery } from 'queries/useGetTournaments';
