@@ -13,13 +13,13 @@ const Paragraph = ({ children }: { children: ReactNode }) => (
 );
 
 const UlList = ({ children }: { children: ReactNode }) => (
-  <ul className="max-w-md space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400">
+  <ul className="mb-3 max-w-md space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400">
     {children}
   </ul>
 );
 
 const OlList = ({ children }: { children: ReactNode }) => (
-  <ol className="max-w-md space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400">
+  <ol className="mb-3 max-w-md space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400">
     {children}
   </ol>
 );
@@ -33,6 +33,8 @@ const Link = ({ children, ...props }: { children: ReactNode }) => (
     {children}
   </a>
 );
+
+const HR = () => <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />;
 
 export const About = () => {
   const [markdown, setMarkdown] = useState('');
@@ -104,6 +106,9 @@ export const About = () => {
             },
             Coffee: {
               component: BuyMeACoffeeWidget,
+            },
+            hr: {
+              component: HR,
             },
           },
         }}
