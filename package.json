@@ -1,7 +1,7 @@
 {
   "name": "pokemon-tcg-stadings",
   "homepage": "https://richardhpa.github.io/Pokemon-TCG-Standings/",
-  "version": "0.1.0",
+  "version": "2.0.0",
   "private": true,
   "dependencies": {
     "@heroicons/react": "^2.1.3",
