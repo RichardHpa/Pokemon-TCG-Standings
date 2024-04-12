@@ -98,7 +98,7 @@ export const Home = () => {
 
   return (
     <Suspense fallback={<p>Loading tournament info...</p>}>
-      <Await resolve={data.tournaments} errorElement={<p>Error loading the player</p>}>
+      <Await resolve={data.tournaments} errorElement={<p>Error loading the tournaments</p>}>
         <HomeContent />
       </Await>
     </Suspense>

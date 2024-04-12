@@ -1,11 +1,14 @@
 import { Outlet, createHashRouter, RouterProvider, defer } from 'react-router-dom';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { Navbar } from 'components/Navbar';
+import { ErrorBoundary } from 'react-error-boundary';
 
 // TODO: refactor these to also include loaders
 import { Player, Tournaments, Tournament } from './pages';
 import { Home } from 'pages/Home';
 import { TournamentOutlet } from 'pages/Tournament';
+
+import { DefaultError } from 'errors/DefaultError';
 
 import { tournamentsQuery } from 'queries/useGetTournaments';
 import { tournamentQuery } from 'queries/useGetTournament';
@@ -98,6 +101,11 @@ const router = createHashRouter([
   {
     path: '/',
     element: <Layout />,
+    errorElement: (
+      <div className="min-h-screen bg-white dark:bg-gray-900">
+        <DefaultError />
+      </div>
+    ),
     children: [
       {
         index: true,
@@ -131,6 +139,10 @@ const router = createHashRouter([
           },
         ],
       },
+      {
+        path: '*',
+        element: <DefaultError />,
+      },
     ],
   },
 ]);
@@ -139,14 +151,27 @@ export function Fallback() {
   return <p>Performing initial data load</p>;
 }
 
+function fallbackRender({ error }: { error: Error }) {
+  // Call resetErrorBoundary() to reset the error boundary and retry the render.
+
+  return (
+    <div role="alert">
+      <p>Something went wrong:</p>
+      <pre style={{ color: 'red' }}>{error.message}</pre>
+    </div>
+  );
+}
+
 function App() {
   return (
-    <QueryClientProvider client={queryClient}>
-      <FetchingProvider>
-        <RouterProvider router={router} fallbackElement={<Fallback />} />
-        <ReactQueryDevtools />
-      </FetchingProvider>
-    </QueryClientProvider>
+    <ErrorBoundary fallbackRender={fallbackRender}>
+      <QueryClientProvider client={queryClient}>
+        <FetchingProvider>
+          <RouterProvider router={router} fallbackElement={<Fallback />} />
+          <ReactQueryDevtools />
+        </FetchingProvider>
+      </QueryClientProvider>
+    </ErrorBoundary>
   );
 }
 
