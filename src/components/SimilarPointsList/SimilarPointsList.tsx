@@ -125,6 +125,17 @@ export const SimilarPointsList: FC<SimilarPointsProps> = ({ player, data, totalP
     });
   }, [players?.below]);
 
+  if (Object.keys(player.rounds).length <= 3) {
+    return (
+      <div className="py-2.5 px-3">
+        <p className="my-3 font-semibold leading-tight text-gray-800 dark:text-gray-400 text-sm">
+          Player comparisons will be available after round 3 as there would be to many players to
+          compare
+        </p>
+      </div>
+    );
+  }
+
   return (
     <>
       <div className="py-2.5 px-3">

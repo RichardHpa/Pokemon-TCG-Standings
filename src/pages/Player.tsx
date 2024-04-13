@@ -85,7 +85,7 @@ const PlayerInfo: FC<PlayerInfoProps> = ({ tournamentId, playerName }) => {
             <SimilarPointsList player={player} data={data} totalPoints={totalPoints} />
           </ContentCard>
 
-          <div className="min-h-screen sm:min-h-[200px]">
+          <div className="min-h-screen sm:min-h-[600px]">
             <StandingsCard
               tournamentId={tournamentId}
               standings={data}
