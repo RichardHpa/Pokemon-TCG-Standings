@@ -85,13 +85,15 @@ const PlayerInfo: FC<PlayerInfoProps> = ({ tournamentId, playerName }) => {
             <SimilarPointsList player={player} data={data} totalPoints={totalPoints} />
           </ContentCard>
 
-          <StandingsCard
-            tournamentId={tournamentId}
-            standings={data}
-            title="Current standings"
-            scrollToPlayerIndex={player.placing - 1}
-            allowReset
-          />
+          <div className="min-h-screen sm:min-h-[200px]">
+            <StandingsCard
+              tournamentId={tournamentId}
+              standings={data}
+              title="Current standings"
+              scrollToPlayerIndex={player.placing - 1}
+              allowReset
+            />
+          </div>
         </div>
       )}
     </div>
