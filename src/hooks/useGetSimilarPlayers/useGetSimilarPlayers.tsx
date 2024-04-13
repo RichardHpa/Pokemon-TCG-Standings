@@ -8,7 +8,6 @@ interface PlayerRes {
 }
 
 export const useGetSimilarPlayers = (index: number, data: Standing[]) => {
-  if (!data || !index) return undefined;
   const playersRes: PlayerRes = {
     above: [],
     below: [],
