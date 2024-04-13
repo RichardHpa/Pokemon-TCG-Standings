@@ -14,6 +14,7 @@ export const Navbar = () => {
             Pokemon TCG Standings
           </span>
         </Link>
+        {/* This will be an IconButton */}
         <button
           data-collapse-toggle="navbar-default"
           type="button"

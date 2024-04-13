@@ -22,6 +22,7 @@ export const Button: FC<ButtonProps> = ({
       className={clsx(
         buttonClasses.base,
         buttonClasses.size[size],
+        buttonClasses.variant[variant].base,
         buttonClasses.variant[variant][color].light,
         buttonClasses.variant[variant][color].dark,
         { [buttonClasses.disabled]: disabled },

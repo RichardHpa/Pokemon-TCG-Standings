@@ -26,8 +26,8 @@ export const Primary: Story = {
 
 export const Secondary: Story = {
   render: () => (
-    <div className="flex items-center flex-col gap-4">
-      <div className="flex gap-4 bg-white text-black p-2">
+    <div className="flex flex-col gap-4">
+      <div className="flex items-center gap-4 bg-white text-black p-2">
         <Button color="secondary">Basic</Button>
         <Button color="secondary" variant="outlined">
           Basic

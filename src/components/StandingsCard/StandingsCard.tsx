@@ -2,6 +2,7 @@ import { useRef, useEffect, useState, useCallback } from 'react';
 
 import { StandingsList } from 'components/StandingsList';
 import { ContentCard } from 'components/ContentCard';
+import { Button } from 'components/Button';
 
 import type { FC } from 'react';
 import type { Standing } from 'types/standing';
@@ -51,13 +52,9 @@ export const StandingsCard: FC<StandingsCardProps> = ({
       title={title}
       action={
         allowReset && (
-          <button
-            type="button"
-            onClick={resetScroll}
-            className="px-3 py-2 text-xs font-medium text-center text-gray-900 dark:text-gray-400 bg-white dark:bg-gray-800 rounded-lg hover:bg-gray-100 hover:text-blue-700 dark:hover:text-white dark:hover:bg-gray-600"
-          >
+          <Button size="xs" color="secondary" onClick={resetScroll}>
             reset
-          </button>
+          </Button>
         )
       }
     >
