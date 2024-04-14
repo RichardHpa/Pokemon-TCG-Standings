@@ -51,6 +51,7 @@ const PlayerInfo: FC<PlayerInfoProps> = ({ tournamentId, playerName }) => {
     return <p>No player found</p>;
   }
 
+  console.log(player);
   return (
     <div className="flex flex-col gap-4">
       <SEO title={`${player.name}`} />
