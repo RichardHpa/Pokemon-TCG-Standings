@@ -66,7 +66,6 @@
     "@storybook/addon-essentials": "^8.0.8",
     "@storybook/addon-interactions": "^8.0.8",
     "@storybook/addon-links": "^8.0.8",
-    "@storybook/addon-onboarding": "^8.0.8",
     "@storybook/blocks": "^8.0.8",
     "@storybook/preset-create-react-app": "^8.0.8",
     "@storybook/react": "^8.0.8",

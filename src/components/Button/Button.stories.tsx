@@ -11,41 +11,27 @@ type Story = StoryObj<typeof Button>;
 
 export const Primary: Story = {
   render: () => (
-    <div className="flex flex-col gap-4">
-      <div className="flex items-center gap-4 bg-white text-black p-2">
-        <Button>Basic</Button>
-        <Button variant="outlined">Basic</Button>
-      </div>
-      <div className="flex items-center gap-4 dark bg-gray-900 text-gray-200 p-2">
-        <Button>Basic</Button>
-        <Button variant="outlined">Basic</Button>
-      </div>
+    <div className="flex items-center gap-4">
+      <Button>Basic</Button>
+      <Button variant="outlined">Basic</Button>
     </div>
   ),
 };
 
 export const Secondary: Story = {
   render: () => (
-    <div className="flex flex-col gap-4">
-      <div className="flex items-center gap-4 bg-white text-black p-2">
-        <Button color="secondary">Basic</Button>
-        <Button color="secondary" variant="outlined">
-          Basic
-        </Button>
-      </div>
-      <div className="flex items-center gap-4 dark bg-gray-900 text-gray-200 p-2">
-        <Button color="secondary">Basic</Button>
-        <Button color="secondary" variant="outlined">
-          Basic
-        </Button>
-      </div>
+    <div className="flex items-center gap-4">
+      <Button color="secondary">Basic</Button>
+      <Button color="secondary" variant="outlined">
+        Basic
+      </Button>
     </div>
   ),
 };
 
 export const Size: Story = {
   render: () => (
-    <div className="flex items-center gap-4 p-2">
+    <div className="flex items-center gap-4">
       <Button size="xs" onClick={() => console.log('click')}>
         extra small
       </Button>

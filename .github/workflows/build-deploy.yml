@@ -23,7 +23,7 @@ jobs:
       - name: ⎔ Setup node
         uses: actions/setup-node@v3
         with:
-          node-version: 16.x
+          node-version: 18.x
 
       - name: 📥 Download deps
         uses: bahmutov/npm-install@v1
@@ -48,7 +48,7 @@ jobs:
       - name: Installing Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: 16.x
+          node-version: 18.x
 
       - name: Installing NPM packages
         run: npm ci
