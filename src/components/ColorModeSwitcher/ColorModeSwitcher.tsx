@@ -10,6 +10,7 @@ export const ColorModeSwitcher = () => {
     setColorMode(prev => (prev === Theme.DARK ? Theme.LIGHT : Theme.DARK));
   }, [setColorMode]);
 
+  // This will be an IconButton
   return (
     <button
       type="button"

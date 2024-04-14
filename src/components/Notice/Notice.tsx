@@ -36,6 +36,7 @@ export const Notice: FC<NoticeProps> = ({
       </svg>
       <span className="sr-only">{status}</span>
       <div>{children}</div>
+      {/* This will be an icon button */}
       {dismissible && (
         <button
           type="button"

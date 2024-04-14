@@ -10,18 +10,45 @@ on:
       - main
 
 jobs:
+  vitest:
+    name: ⚡ Vitest
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🛑 Cancel Previous Runs
+        uses: styfle/cancel-workflow-action@0.11.0
+
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v3
+
+      - name: ⎔ Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.x
+
+      - name: 📥 Download deps
+        uses: bahmutov/npm-install@v1
+        with:
+          useLockFile: false
+
+      - name: ⚡ Run vitest
+        run: npm run test -- --coverage
+
   build:
-    name: Build
+    name: 🛠️ Build
+    needs: [vitest]
     runs-on: ubuntu-latest
 
     steps:
+      - name: 🛑 Cancel Previous Runs
+        uses: styfle/cancel-workflow-action@0.11.0
+
       - name: Checkout code
         uses: actions/checkout@v2
 
       - name: Installing Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: 16.x
+          node-version: 18.x
 
       - name: Installing NPM packages
         run: npm ci
@@ -36,7 +63,7 @@ jobs:
           path: ./build
 
   deploy:
-    name: Deploy
+    name: 🚀 Deploy
     needs: build
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'

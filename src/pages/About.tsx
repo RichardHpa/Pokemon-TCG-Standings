@@ -41,14 +41,14 @@ export const About = () => {
   const [markdown, setMarkdown] = useState('');
 
   useEffect(() => {
-    // @ts-expect-error
     import('./about.md')
-      .then(res => {
+      .then(res =>
+        // @ts-expect-error
         fetch(res.default)
           .then(res => res.text())
           .then(res => setMarkdown(res))
-          .catch(err => console.log(err));
-      })
+          .catch(err => console.log(err))
+      )
       .catch(err => console.log(err));
   }, []);
 
