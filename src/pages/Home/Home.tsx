@@ -71,9 +71,17 @@ const HomeContent = () => {
                         <div className="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
                           {tournament.name}
                         </div>
-                        <div>Masters winner: {tournament.winners.masters}</div>
-                        <div>Seniors winner: {tournament.winners.seniors}</div>
-                        <div>Juniors winner: {tournament.winners.juniors}</div>
+                        {tournament.winners.masters && (
+                          <div>Masters winner: {tournament.winners.masters}</div>
+                        )}
+
+                        {tournament.winners.seniors && (
+                          <div>Seniors winner: {tournament.winners.seniors}</div>
+                        )}
+
+                        {tournament.winners.juniors && (
+                          <div>Juniors winner: {tournament.winners.juniors}</div>
+                        )}
                       </div>
 
                       <div className="text-sm text-gray-500 dark:text-gray-400">

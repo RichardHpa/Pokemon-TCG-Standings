@@ -38,7 +38,7 @@ const queryClient = new QueryClient({
   },
 });
 
-const noticeId = 'welcomeNotice';
+const noticeId = 'thankyouFirstWeekend';
 const Layout = () => {
   const { sendPageView } = useAnalytics();
   const [dismissedNotice, setDismissedNotice] = useLocalStorage(noticeId, 'false');
@@ -56,12 +56,23 @@ const Layout = () => {
       <Navbar />
       <div className="container mx-auto py-12 px-4 flex flex-col flex-grow">
         {dismissedNotice === 'false' && (
-          <Notice dismissible noticeId={noticeId} onDismiss={handleOnDismiss}>
-            Welcome to the Pokemon TCG Standings! We're thrilled to have you here. Just a heads-up,
-            since this is our debut weekend, there might be a few bugs lurking around. Thanks for
-            your understanding! If you happen to encounter any issues with the data, a quick refresh
-            might do the trick. If you're still experiencing trouble or have any other concerns,
-            feel free to click on the 'About' page to find out how to get in touch
+          <Notice dismissible noticeId={noticeId} onDismiss={handleOnDismiss} status="success">
+            Welcome to the Pokemon TCG Standings! Thank you to all of you who used the site over the
+            last weekend to view the Perth and Orlando Regionals results.
+            <br />
+            This went pretty smoothly other than a couple small hiccups but I'm excited to see how
+            the site can grow and improve. Next steps will be migrating this site to a proper
+            hosting and domain, so stay tuned!
+            <br />
+            <br />
+            If you have any feedback or suggestions, please reach out to me on{' '}
+            <a className="underline cursor-pointer" href="https://twitter.com/RichardHpaNZ">
+              X
+            </a>{' '}
+            or send me an email on{' '}
+            <a href="mailto:richard.m.hpa@gmail.com?subject=Feedback about Pokemon TCG Standings!">
+              richard.m.hpa@gmail.com
+            </a>
           </Notice>
         )}
 
