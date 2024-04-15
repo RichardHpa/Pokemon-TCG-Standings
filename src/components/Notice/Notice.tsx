@@ -40,7 +40,7 @@ export const Notice: FC<NoticeProps> = ({
       {dismissible && (
         <button
           type="button"
-          className="ms-auto -mx-1.5 -my-1.5 bg-blue-50 text-blue-500 rounded-lg focus:ring-2 focus:ring-blue-400 p-1.5 hover:bg-blue-200 inline-flex items-center justify-center h-8 w-8 dark:bg-gray-800 dark:text-blue-400 dark:hover:bg-gray-700"
+          className="ms-auto -mx-1.5 -my-1.5 rounded-lg focus:ring-2  p-1.5  inline-flex items-center justify-center h-8 w-8"
           data-dismiss-target={`#${noticeId}`}
           aria-label="Close"
           onClick={() => handleDismiss()}
