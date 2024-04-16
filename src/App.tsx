@@ -66,7 +66,11 @@ const Layout = () => {
             <br />
             <br />
             If you have any feedback or suggestions, please reach out to me on{' '}
-            <a className="underline cursor-pointer" href="https://twitter.com/RichardHpaNZ">
+            <a
+              className="underline cursor-pointer"
+              href="https://twitter.com/RichardHpaNZ"
+              target="blank"
+            >
               X
             </a>{' '}
             or send me an email on{' '}

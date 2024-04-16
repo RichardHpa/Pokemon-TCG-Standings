@@ -4,10 +4,7 @@ name: Build & deploy
 on:
   push:
     branches:
-      - main
-  pull_request:
-    branches:
-      - main
+      - githubPageBranch
 
 jobs:
   vitest:
@@ -66,7 +63,7 @@ jobs:
     name: 🚀 Deploy
     needs: build
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/githubPageBranch'
 
     steps:
       - name: Downloading artifact
