@@ -1,31 +1,14 @@
-import { useEffect, useCallback } from 'react';
-import { Outlet, createHashRouter, RouterProvider, defer } from 'react-router-dom';
+import { useEffect } from 'react';
+import { createHashRouter, RouterProvider } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { ErrorBoundary } from 'react-error-boundary';
 import ReactGA from 'react-ga4';
 
-import { Navbar } from 'components/Navbar';
-import { Notice } from 'components/Notice';
-
-// TODO: refactor these to also include loaders
-import { Player, Tournaments, Tournament, About } from './pages';
-import { Home } from 'pages/Home';
-import { TournamentOutlet } from 'pages/Tournament';
-
-import { DefaultError } from 'errors/DefaultError';
-
-import { tournamentsQuery } from 'queries/useGetTournaments';
-import { tournamentQuery } from 'queries/useGetTournament';
-import { tournamentStandingsQuery } from 'queries/useGetTournamentStandings';
+import { Heading } from 'components/Heading';
 
 import { useAnalytics } from 'hooks/useAnalytics';
-import { useLocalStorage } from 'hooks/useLocalStorage';
 
 import { FetchingProvider } from 'context/FetchingContext';
-
-import type { QueryClient as QueryClientType } from '@tanstack/react-query';
-import type { LoaderFunctionArgs } from 'react-router-dom';
 
 const TRACKING_ID = 'G-H6TRSN6RWF'; // OUR_TRACKING_ID
 ReactGA.initialize(TRACKING_ID);
@@ -38,163 +21,54 @@ const queryClient = new QueryClient({
   },
 });
 
-const noticeId = 'thankyouFirstWeekend';
-const Layout = () => {
-  const { sendPageView } = useAnalytics();
-  const [dismissedNotice, setDismissedNotice] = useLocalStorage(noticeId, 'false');
+const RedirectPage = () => {
+  const { sendEvent } = useAnalytics();
 
   useEffect(() => {
-    sendPageView();
-  }, [sendPageView]);
+    // wait 3 seconds and then redirect
+    const timeout = setTimeout(() => {
+      sendEvent({
+        category: 'redirect',
+        action: 'redirect',
+        label: 'Redirecting to new site',
+      });
+      window.location.href = 'https://www.ptcg-standings.live/';
+    }, 3000);
 
-  const handleOnDismiss = useCallback(() => {
-    setDismissedNotice('true');
-  }, [setDismissedNotice]);
+    return () => clearTimeout(timeout);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
-    <div className="bg-white dark:bg-gray-900 text-black dark:text-gray-200 min-h-screen flex flex-col">
-      <Navbar />
-      <div className="container mx-auto py-12 px-4 flex flex-col flex-grow">
-        {dismissedNotice === 'false' && (
-          <Notice dismissible noticeId={noticeId} onDismiss={handleOnDismiss} status="success">
-            Welcome to the Pokemon TCG Standings! Thank you to all of you who used the site over the
-            last weekend to view the Perth and Orlando Regionals results.
-            <br />
-            This went pretty smoothly other than a couple small hiccups but I'm excited to see how
-            the site can grow and improve. Next steps will be migrating this site to a proper
-            hosting and domain, so stay tuned!
-            <br />
-            <br />
-            If you have any feedback or suggestions, please reach out to me on{' '}
-            <a
-              className="underline cursor-pointer"
-              href="https://twitter.com/RichardHpaNZ"
-              target="blank"
-            >
-              X
-            </a>{' '}
-            or send me an email on{' '}
-            <a href="mailto:richard.m.hpa@gmail.com?subject=Feedback about Pokemon TCG Standings!">
-              richard.m.hpa@gmail.com
-            </a>
-          </Notice>
-        )}
-
-        <Outlet />
+    <div className="bg-white dark:bg-gray-900 text-black dark:text-gray-200 min-h-screen flex flex-col justify-center items-center gap-4">
+      <Heading level="2">Redirecting to new site</Heading>
+      <div role="status">
+        <svg
+          aria-hidden="true"
+          className="inline w-12 h-12 text-gray-200 animate-spin dark:text-gray-600 fill-red-600"
+          viewBox="0 0 100 101"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+            fill="currentColor"
+          />
+          <path
+            d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+            fill="currentFill"
+          />
+        </svg>
+        <span className="sr-only">Redirecting...</span>
       </div>
     </div>
   );
 };
 
-// Loaders
-// Load all the tournaments
-export const tournamentsLoader = (client: QueryClientType) => async () => {
-  const tournamentsLoaderPromise = client.ensureQueryData(tournamentsQuery());
-
-  return defer({
-    tournaments: tournamentsLoaderPromise,
-  });
-};
-
-// Load all tournaments and find the one with the matching id
-export const tournamentLoader =
-  (client: QueryClientType) =>
-  async ({ params }: LoaderFunctionArgs) => {
-    if (!params.tournamentId) {
-      throw new Error('No tournamentId provided');
-    }
-
-    const tournamentLoaderPromise = client.ensureQueryData(tournamentQuery(params.tournamentId));
-
-    return defer({
-      tournamentId: params.tournamentId,
-      tournament: tournamentLoaderPromise,
-    });
-  };
-
-export const singleTournamentLoader = async ({ params }: LoaderFunctionArgs) => {
-  if (!params.tournamentId) {
-    throw new Error('No tournamentId provided');
-  }
-
-  return {
-    tournamentId: params.tournamentId,
-  };
-};
-
-export const singlePlayerLoader =
-  (client: QueryClientType) =>
-  async ({ params }: LoaderFunctionArgs) => {
-    if (!params.playerName) {
-      throw new Error('No playerName provided');
-    }
-
-    if (!params.tournamentId) {
-      throw new Error('No tournamentId provided');
-    }
-
-    const tournamentStandingLoader = client.ensureQueryData(
-      tournamentStandingsQuery(params.tournamentId)
-    );
-
-    return defer({
-      tournamentId: params.tournamentId,
-      playerName: params.playerName,
-      standings: tournamentStandingLoader,
-    });
-  };
-
 const router = createHashRouter([
   {
-    path: '/',
-    element: <Layout />,
-    errorElement: (
-      <div className="min-h-screen bg-white dark:bg-gray-900">
-        <DefaultError />
-      </div>
-    ),
-    children: [
-      {
-        index: true,
-        loader: tournamentsLoader(queryClient),
-        element: <Home />,
-      },
-      {
-        path: 'about',
-        element: <About />,
-      },
-      {
-        path: 'tournaments',
-        children: [
-          {
-            index: true,
-            loader: tournamentsLoader(queryClient),
-            element: <Tournaments />,
-          },
-          {
-            path: ':tournamentId',
-            loader: tournamentLoader(queryClient),
-            element: <TournamentOutlet />,
-            children: [
-              {
-                index: true,
-                loader: singleTournamentLoader,
-                element: <Tournament />,
-              },
-              {
-                path: ':playerName',
-                loader: singlePlayerLoader(queryClient),
-                element: <Player />,
-              },
-            ],
-          },
-        ],
-      },
-      {
-        path: '*',
-        element: <DefaultError />,
-      },
-    ],
+    path: '*',
+    element: <RedirectPage />,
   },
 ]);
 
@@ -218,8 +92,7 @@ function App() {
     <ErrorBoundary fallbackRender={fallbackRender}>
       <QueryClientProvider client={queryClient}>
         <FetchingProvider>
-          <RouterProvider router={router} fallbackElement={<Fallback />} />
-          <ReactQueryDevtools />
+          <RouterProvider router={router} fallbackElement={<Fallback />} />=
         </FetchingProvider>
       </QueryClientProvider>
     </ErrorBoundary>
