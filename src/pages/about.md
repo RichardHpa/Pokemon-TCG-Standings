@@ -1,4 +1,4 @@
-## About the Pokemon TCG Standings site
+## About the PTCG Standings
 
 This site was made my myself (Richard Hpa) as a way to track Pokemon tcg tournaments.
 
@@ -19,7 +19,6 @@ Some features I would like to add are:
 - Follow specific players
 - Follow specific tournaments
 - Follow specific decks
-- Search for specific players
 - Add in Seniors and Juniors data (which I already have but just don't displayed yet)
 
 As you also may have noticed, this isn't hosted on a domain but rather on github pages. I would like to move this to a proper domain, but I am not sure if I will be able to do that, but I only want to commit to it if I know that this site is useful. Plus servers aren't free, and I am not sure if I want to pay for one just yet. But if you find this site useful, then I will be more than happy to move it to a proper domain.

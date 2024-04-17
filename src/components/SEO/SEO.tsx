@@ -15,10 +15,10 @@ export const SEO = ({
 
   const pageTitle = useMemo(() => {
     if (location.pathname === '/' || !title) {
-      return 'Pokemon TCG Standings';
+      return 'PTCG Standings';
     }
 
-    return `Pokemon TCG Standings - ${title}`;
+    return `PTCG Standings - ${title}`;
   }, [location.pathname, title]);
 
   return (
