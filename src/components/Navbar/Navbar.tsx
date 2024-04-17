@@ -11,7 +11,7 @@ export const Navbar = () => {
       <div className="container flex flex-wrap items-center justify-between mx-auto p-4">
         <Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse hover:underline">
           <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-            Pokemon TCG Standings
+            PTCG Standings
           </span>
         </Link>
         {/* This will be an IconButton */}

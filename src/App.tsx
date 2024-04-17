@@ -27,7 +27,7 @@ import { FetchingProvider } from 'context/FetchingContext';
 import type { QueryClient as QueryClientType } from '@tanstack/react-query';
 import type { LoaderFunctionArgs } from 'react-router-dom';
 
-const TRACKING_ID = 'G-H6TRSN6RWF'; // OUR_TRACKING_ID
+const TRACKING_ID = 'G-GT0XDK8BEH';
 ReactGA.initialize(TRACKING_ID);
 
 const queryClient = new QueryClient({
@@ -57,8 +57,8 @@ const Layout = () => {
       <div className="container mx-auto py-12 px-4 flex flex-col flex-grow">
         {dismissedNotice === 'false' && (
           <Notice dismissible noticeId={noticeId} onDismiss={handleOnDismiss} status="success">
-            Welcome to the Pokemon TCG Standings! Thank you to all of you who used the site over the
-            last weekend to view the Perth and Orlando Regionals results.
+            Welcome to the PTCG Standings! Thank you to all of you who used the site over the last
+            weekend to view the Perth and Orlando Regionals results.
             <br />
             This went pretty smoothly other than a couple small hiccups but I'm excited to see how
             the site can grow and improve. Next steps will be migrating this site to a proper
@@ -74,7 +74,7 @@ const Layout = () => {
               X
             </a>{' '}
             or send me an email on{' '}
-            <a href="mailto:richard.m.hpa@gmail.com?subject=Feedback about Pokemon TCG Standings!">
+            <a href="mailto:richard.m.hpa@gmail.com?subject=Feedback about PTCG Standings!">
               richard.m.hpa@gmail.com
             </a>
           </Notice>
@@ -214,6 +214,10 @@ function fallbackRender({ error }: { error: Error }) {
 }
 
 function App() {
+  if (process.env.NODE_ENV !== 'development') {
+    console.log('analytics loaded');
+  }
+
   return (
     <ErrorBoundary fallbackRender={fallbackRender}>
       <QueryClientProvider client={queryClient}>

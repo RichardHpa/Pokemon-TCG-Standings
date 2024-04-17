@@ -1,7 +1,7 @@
 import ReactGA from 'react-ga4';
 import { useLocation } from 'react-router-dom';
 
-const TRACKING_ID = 'G-H6TRSN6RWF';
+const TRACKING_ID = 'G-GT0XDK8BEH';
 ReactGA.initialize(TRACKING_ID);
 
 export const useAnalytics = () => {
