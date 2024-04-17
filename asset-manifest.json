@@ -1,18 +1,15 @@
 {
   "files": {
-    "main.css": "/Pokemon-TCG-Standings/static/css/main.0f507a7f.css",
-    "main.js": "/Pokemon-TCG-Standings/static/js/main.d44035b9.js",
-    "static/js/299.8070e1bf.chunk.js": "/Pokemon-TCG-Standings/static/js/299.8070e1bf.chunk.js",
+    "main.css": "/Pokemon-TCG-Standings/static/css/main.58dea7c4.css",
+    "main.js": "/Pokemon-TCG-Standings/static/js/main.97a6d66b.js",
     "static/js/453.0ceeaaf0.chunk.js": "/Pokemon-TCG-Standings/static/js/453.0ceeaaf0.chunk.js",
-    "static/media/bmc-button.png": "/Pokemon-TCG-Standings/static/media/bmc-button.01c535cbb3d77310a940.png",
-    "static/media/about.md": "/Pokemon-TCG-Standings/static/media/about.a6ab5f4acc06d4efb139.md",
     "index.html": "/Pokemon-TCG-Standings/index.html",
-    "main.0f507a7f.css.map": "/Pokemon-TCG-Standings/static/css/main.0f507a7f.css.map",
-    "main.d44035b9.js.map": "/Pokemon-TCG-Standings/static/js/main.d44035b9.js.map",
+    "main.58dea7c4.css.map": "/Pokemon-TCG-Standings/static/css/main.58dea7c4.css.map",
+    "main.97a6d66b.js.map": "/Pokemon-TCG-Standings/static/js/main.97a6d66b.js.map",
     "453.0ceeaaf0.chunk.js.map": "/Pokemon-TCG-Standings/static/js/453.0ceeaaf0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0f507a7f.css",
-    "static/js/main.d44035b9.js"
+    "static/css/main.58dea7c4.css",
+    "static/js/main.97a6d66b.js"
   ]
 }
