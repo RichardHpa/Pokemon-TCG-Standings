@@ -1,6 +1,5 @@
 {
   "name": "pokemon-tcg-stadings",
-  "homepage": "https://richardhpa.github.io/Pokemon-TCG-Standings/",
   "version": "2.0.0",
   "private": true,
   "dependencies": {

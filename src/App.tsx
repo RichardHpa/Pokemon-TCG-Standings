@@ -1,5 +1,5 @@
 import { useEffect, useCallback } from 'react';
-import { Outlet, createHashRouter, RouterProvider, defer } from 'react-router-dom';
+import { Outlet, createBrowserRouter, RouterProvider, defer } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { ErrorBoundary } from 'react-error-boundary';
@@ -66,7 +66,11 @@ const Layout = () => {
             <br />
             <br />
             If you have any feedback or suggestions, please reach out to me on{' '}
-            <a className="underline cursor-pointer" href="https://twitter.com/RichardHpaNZ">
+            <a
+              className="underline cursor-pointer"
+              href="https://twitter.com/RichardHpaNZ"
+              target="blank"
+            >
               X
             </a>{' '}
             or send me an email on{' '}
@@ -140,7 +144,7 @@ export const singlePlayerLoader =
     });
   };
 
-const router = createHashRouter([
+const router = createBrowserRouter([
   {
     path: '/',
     element: <Layout />,

@@ -5,6 +5,7 @@ on:
   push:
     branches:
       - main
+      - githubPageBranch
   pull_request:
     branches:
       - main
@@ -66,7 +67,7 @@ jobs:
     name: 🚀 Deploy
     needs: build
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/githubPageBranch'
 
     steps:
       - name: Downloading artifact
