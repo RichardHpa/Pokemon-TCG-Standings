@@ -1,11 +1,18 @@
+import { useEffect } from 'react';
 import ReactGA from 'react-ga4';
 import { useLocation } from 'react-router-dom';
 
-const TRACKING_ID = 'G-GT0XDK8BEH';
-ReactGA.initialize(TRACKING_ID);
+const TRACKING_ID = process.env.REACT_APP_GA4_MEASUREMENT_ID;
 
 export const useAnalytics = () => {
   const location = useLocation();
+
+  useEffect(() => {
+    if (process.env.NODE_ENV !== 'development' && TRACKING_ID) {
+      console.log('initialize ga');
+      ReactGA.initialize(TRACKING_ID);
+    }
+  }, []);
 
   const sendPageView = () => {
     if (process.env.NODE_ENV !== 'development') {
