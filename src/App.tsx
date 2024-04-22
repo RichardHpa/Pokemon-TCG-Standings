@@ -58,7 +58,7 @@ const Layout = () => {
         {dismissedNotice === 'false' && (
           <Notice dismissible noticeId={noticeId} onDismiss={handleOnDismiss} status="success">
             Welcome to the PTCG Standings! Thank you to all of you who used the site over the last
-            weekend to view the Perth and Orlando Regionals results.
+            few weekends for the regionals.
             <br />
             This went pretty smoothly other than a couple small hiccups but I'm excited to see how
             the site can grow and improve. Next steps will be migrating this site to a proper

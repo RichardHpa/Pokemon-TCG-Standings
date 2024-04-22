@@ -1,0 +1,1 @@
+export { PinPlayer } from './PinPlayer';

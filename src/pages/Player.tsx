@@ -51,7 +51,6 @@ const PlayerInfo: FC<PlayerInfoProps> = ({ tournamentId, playerName }) => {
     return <p>No player found</p>;
   }
 
-  console.log(player);
   return (
     <div className="flex flex-col gap-4">
       <SEO title={`${player.name}`} />
@@ -60,6 +59,7 @@ const PlayerInfo: FC<PlayerInfoProps> = ({ tournamentId, playerName }) => {
         <Heading level="4">
           {player.name} {player.placing > data.length && ` - (DQ)`}
         </Heading>
+
         <p className="text-gray-500 dark:text-gray-400 mb-2">
           {player.record.wins}-{player.record.losses}-{player.record.ties} ({totalPoints})
         </p>
@@ -86,7 +86,7 @@ const PlayerInfo: FC<PlayerInfoProps> = ({ tournamentId, playerName }) => {
             <SimilarPointsList player={player} data={data} totalPoints={totalPoints} />
           </ContentCard>
 
-          <div className="min-h-screen sm:min-h-[600px]">
+          <div className="min-h-screen sm:min-h-[600px] col-span-1 sm:col-span-2 lg:col-span-1">
             <StandingsCard
               tournamentId={tournamentId}
               standings={data}
