@@ -1,4 +1,5 @@
 import { Button } from './Button';
+import { DropdownTest } from 'components/DropdownTest';
 
 import type { Meta, StoryObj } from '@storybook/react';
 
@@ -32,13 +33,15 @@ export const Secondary: Story = {
 export const Size: Story = {
   render: () => (
     <div className="flex items-center gap-4">
-      <Button size="xs" onClick={() => console.log('click')}>
-        extra small
-      </Button>
+      <Button size="xs">extra small</Button>
       <Button size="sm">small</Button>
       <Button>base</Button>
       <Button size="lg">large</Button>
       <Button size="xl">extra large</Button>
     </div>
   ),
+};
+
+export const DropDownTest: Story = {
+  render: () => <DropdownTest />,
 };

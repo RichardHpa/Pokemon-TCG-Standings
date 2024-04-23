@@ -6,6 +6,8 @@ import { Heading } from 'components/Heading';
 import { Indicator } from 'components/Indicator';
 import { SEO } from 'components/SEO';
 
+import { PinnedPlayers } from './components/PinnedPlayers';
+
 import { useGetTournaments } from 'queries/useGetTournaments';
 
 import { useGetRunningTournaments } from 'hooks/useGetRunningTournaments';
@@ -25,6 +27,9 @@ const HomeContent = () => {
   return (
     <div className="flex flex-col gap-4">
       <Heading level="3">Keep up to date with current Pokemon TCG tournaments</Heading>
+
+      <PinnedPlayers />
+
       {runningTournaments.length > 0 && (
         <ContentCard title="Tournaments currently in progress">
           <ul className="divide-y divide-gray-200 dark:divide-gray-700">

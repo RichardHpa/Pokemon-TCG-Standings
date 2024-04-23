@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-const prefix = `PokemonTCGStandings:`;
+export const prefix = `PokemonTCGStandings:`;
 
 export function useLocalStorage(key: string, defaultValue: any) {
   const prefixedKey = `${prefix}${key}`;
