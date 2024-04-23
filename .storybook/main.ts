@@ -19,18 +19,12 @@ const config: StorybookConfig = {
   staticDirs: ['../public'],
   previewHead: head => `
     ${head}
-    <style>
-      body {
-        background: red !important;
-      }
-    </style>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
   `,
   previewBody: body => `
-  ${body}
-  here is some custom html
-  
-`,
+    ${body}  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+  `,
 };
+
 export default config;

@@ -1,7 +1,5 @@
 import { Notice } from './Notice';
 
-import { DropdownTest } from 'components/DropdownTest';
-
 import type { Meta, StoryObj } from '@storybook/react';
 
 const meta: Meta<typeof Notice> = {
@@ -53,10 +51,4 @@ export const Dismissible: Story = {
       </Notice>
     </div>
   ),
-};
-
-export const Testing: Story = {
-  render: () => {
-    return <DropdownTest />;
-  },
 };

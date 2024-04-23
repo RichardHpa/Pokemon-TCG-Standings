@@ -4,8 +4,6 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { ErrorBoundary } from 'react-error-boundary';
 
-import { DropdownTest } from 'components/DropdownTest';
-
 import { Navbar } from 'components/Navbar';
 import { Notice } from 'components/Notice';
 
@@ -53,10 +51,6 @@ const Layout = () => {
     <div className="bg-white dark:bg-gray-900 text-black dark:text-gray-200 min-h-screen flex flex-col">
       <Navbar />
       <div className="container mx-auto py-12 px-4 flex flex-col flex-grow">
-        <Notice dismissible noticeId="test">
-          fdfdf
-        </Notice>
-
         {dismissedNotice === 'false' && (
           <Notice dismissible noticeId={noticeId} onDismiss={handleOnDismiss} status="success">
             Welcome to the PTCG Standings! Thank you to all of you who used the site over the last
@@ -82,9 +76,6 @@ const Layout = () => {
           </Notice>
         )}
 
-        <div className="inline-flex">
-          <DropdownTest />
-        </div>
         <Outlet />
       </div>
     </div>
