@@ -1,1 +1,9 @@
-export type AmplifyDependentResourcesAttributes = {}
+export type AmplifyDependentResourcesAttributes = {
+  api: {
+    ptcgstandings: {
+      GraphQLAPIEndpointOutput: 'string';
+      GraphQLAPIIdOutput: 'string';
+      GraphQLAPIKeyOutput: 'string';
+    };
+  };
+};
