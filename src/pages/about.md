@@ -16,7 +16,6 @@ Some features I would like to add are:
 
 - More detailed information about the tournaments
 - More detailed information about the players
-- Follow specific players
 - Follow specific tournaments
 - Follow specific decks
 - Add in Seniors and Juniors data (which I already have but just don't displayed yet)
