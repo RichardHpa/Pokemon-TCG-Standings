@@ -1,0 +1,35 @@
+# This "input" configures a global authorization rule to enable public access to
+# all models in this schema. Learn more about authorization rules here: https://docs.amplify.aws/cli/graphql/authorization-rules
+input AMPLIFY {
+  globalAuthRule: AuthRule = { allow: public }
+} # FOR TESTING ONLY!
+type Tournament @model {
+  id: ID!
+  pokeDataId: String!
+  name: String!
+  date: TournamentDate!
+  tournamentStatus: String!
+  decklists: Int!
+  players: TournamentPlayers
+  winners: TournamentPlayers
+  roundNumbers: TournamentPlayers
+  pokeDataLastUpdated: String!
+  rk9link: String!
+}
+
+type TournamentDate {
+  start: String!
+  end: String!
+}
+
+type TournamentPlayers {
+  juniors: String!
+  seniors: String!
+  masters: String!
+}
+
+type TournamentRounds {
+  juniors: Int!
+  seniors: Int!
+  masters: Int!
+}

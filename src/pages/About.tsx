@@ -14,13 +14,13 @@ const Paragraph = ({ children }: { children: ReactNode }) => (
 );
 
 const UlList = ({ children }: { children: ReactNode }) => (
-  <ul className="mb-3 max-w-md space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400">
+  <ul className="mb-3 space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400">
     {children}
   </ul>
 );
 
 const OlList = ({ children }: { children: ReactNode }) => (
-  <ol className="mb-3 max-w-md space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400">
+  <ol className="mb-3 space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400">
     {children}
   </ol>
 );
