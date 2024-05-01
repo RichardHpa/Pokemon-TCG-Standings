@@ -11,6 +11,7 @@ import { Notice } from 'components/Notice';
 import { Player, Tournaments, Tournament, About } from './pages';
 import { Home } from 'pages/Home';
 import { TournamentOutlet } from 'pages/Tournament';
+import { Demo } from './pages/Demo';
 
 import { DefaultError } from 'errors/DefaultError';
 
@@ -154,6 +155,10 @@ const router = createBrowserRouter([
         index: true,
         loader: tournamentsLoader(queryClient),
         element: <Home />,
+      },
+      {
+        path: 'demo',
+        element: <Demo />,
       },
       {
         path: 'about',
