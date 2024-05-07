@@ -1,5 +1,5 @@
 export const buttonClasses = {
-  base: 'font-medium rounded-lg focus:z-10 focus:ring-4 focus:outline-none text-center',
+  base: 'font-medium rounded-lg focus:z-10 focus:ring-4 focus:outline-none text-center cursor-pointer',
   disabled: 'opacity-50 cursor-not-allowed pointer-events-none',
   full: 'w-full',
   variant: {
