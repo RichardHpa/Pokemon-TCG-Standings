@@ -40,6 +40,7 @@ export const getTournament = /* GraphQL */ `query GetTournament($id: ID!) {
     }
     pokeDataLastUpdated
     rk9link
+    type
     createdAt
     updatedAt
     __typename
@@ -63,6 +64,7 @@ export const listTournaments = /* GraphQL */ `query ListTournaments(
       decklists
       pokeDataLastUpdated
       rk9link
+      type
       createdAt
       updatedAt
       __typename
@@ -74,4 +76,41 @@ export const listTournaments = /* GraphQL */ `query ListTournaments(
 ` as GeneratedQuery<
   APITypes.ListTournamentsQueryVariables,
   APITypes.ListTournamentsQuery
+>;
+export const tournamentsByPokeDataId = /* GraphQL */ `query TournamentsByPokeDataId(
+  $type: String!
+  $pokeDataId: ModelStringKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelTournamentFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  tournamentsByPokeDataId(
+    type: $type
+    pokeDataId: $pokeDataId
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      pokeDataId
+      name
+      tournamentStatus
+      decklists
+      pokeDataLastUpdated
+      rk9link
+      type
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+` as GeneratedQuery<
+  APITypes.TournamentsByPokeDataIdQueryVariables,
+  APITypes.TournamentsByPokeDataIdQuery
 >;

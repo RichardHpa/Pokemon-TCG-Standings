@@ -18,9 +18,9 @@ export const ColorModeSwitcher = () => {
       onClick={handleToggleTheme}
     >
       {mode === Theme.DARK ? (
-        <MoonIcon className="h-4 w-4 inline-block" />
+        <MoonIcon className="h-3 w-3 inline-block" />
       ) : (
-        <SunIcon className="h-4 w-4 inline-block" />
+        <SunIcon className="h-3 w-3 inline-block" />
       )}
       <span className="sr-only">
         {mode === Theme.DARK ? 'Switch to light mode' : 'Switch to dark mode'}

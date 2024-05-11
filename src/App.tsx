@@ -13,6 +13,7 @@ import { Notice } from 'components/Notice';
 import { Player, Tournaments, Tournament, About } from './pages';
 import { Home } from 'pages/Home';
 import { TournamentOutlet } from 'pages/Tournament';
+import { Division, divisionLoader } from 'pages/Admin/Division';
 
 import { DefaultError } from 'errors/DefaultError';
 
@@ -168,20 +169,31 @@ const router = createBrowserRouter([
             element: <div>Dashboard</div>,
           },
           {
-            path: 'pages',
+            path: 'division',
             element: <Outlet />,
             children: [
               {
-                path: 'settings',
-                element: <div>Settings</div>,
-              },
-              {
-                path: 'kanban',
-                element: <div>Kanban</div>,
-              },
-              {
-                path: 'calendar',
-                element: <div>Calendar</div>,
+                path: ':division',
+                children: [
+                  {
+                    index: true,
+                    loader: divisionLoader,
+                    element: <Division />,
+                  },
+                  {
+                    path: ':tournamentId',
+                    children: [
+                      {
+                        index: true,
+                        element: <div>Tournament</div>,
+                      },
+                      {
+                        path: 'edit',
+                        element: <div>Edit</div>,
+                      },
+                    ],
+                  },
+                ],
               },
             ],
           },

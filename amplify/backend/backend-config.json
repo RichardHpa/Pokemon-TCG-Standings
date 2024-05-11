@@ -1,13 +1,30 @@
 {
   "api": {
     "ptcgstandings": {
-      "dependsOn": [],
+      "dependsOn": [
+        {
+          "attributes": [
+            "UserPoolId"
+          ],
+          "category": "auth",
+          "resourceName": "ptcgstandingsb41f0bb7"
+        }
+      ],
       "output": {
         "authConfig": {
-          "additionalAuthenticationProviders": [],
+          "additionalAuthenticationProviders": [
+            {
+              "authenticationType": "AMAZON_COGNITO_USER_POOLS",
+              "userPoolConfig": {
+                "userPoolId": "authptcgstandingsb41f0bb7"
+              }
+            }
+          ],
           "defaultAuthentication": {
             "apiKeyConfig": {
-              "apiKeyExpirationDays": 7
+              "apiKeyExpirationDate": "2024-08-09T05:30:07.440Z",
+              "apiKeyExpirationDays": 90,
+              "description": "ptcgstandingsapi"
             },
             "authenticationType": "API_KEY"
           }

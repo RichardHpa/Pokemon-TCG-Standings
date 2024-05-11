@@ -1,5 +1,12 @@
 {
   "AppSyncApiName": "ptcgstandings",
   "DynamoDBBillingMode": "PAY_PER_REQUEST",
-  "DynamoDBEnableServerSideEncryption": false
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthModeLastUpdated": "2024-05-10T02:41:52.861Z",
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": [
+      "authptcgstandingsb41f0bb7",
+      "Outputs.UserPoolId"
+    ]
+  }
 }

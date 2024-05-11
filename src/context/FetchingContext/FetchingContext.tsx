@@ -16,7 +16,11 @@ export const FetchingProvider: FC<FetchingProviderProps> = ({ children }) => {
     <FetchingContext.Provider value={{}}>
       {children}
       {isFetching > 0 && (
-        <div id="toast-bottom-left" className="fixed bottom-5 w-full px-5 sm:max-w-xs" role="alert">
+        <div
+          id="toast-bottom-left"
+          className="fixed bottom-5 w-full px-5 sm:max-w-xs z-50"
+          role="alert"
+        >
           <div className="flex items-center w-full p-4 space-x-4 dark:text-gray-500 dark:bg-white rounded-lg shadow bottom-5 text-gray-400 divide-gray-700 space-x bg-gray-800 border dark:border-gray-200 border-gray-700">
             <div role="status">
               <svg

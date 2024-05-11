@@ -1,8 +1,5 @@
 import { Link } from 'react-router-dom';
-import { useAuthenticator } from '@aws-amplify/ui-react';
 import { Cog6ToothIcon } from '@heroicons/react/24/solid';
-
-import { Button } from 'components/Button';
 
 import { ColorModeSwitcher } from 'components/ColorModeSwitcher';
 
@@ -13,8 +10,6 @@ interface AdminNavbarProps {
 }
 
 export const AdminNavbar: FC<AdminNavbarProps> = ({ onNavToggle }) => {
-  const { signOut, user } = useAuthenticator();
-
   return (
     <header className="fixed w-full z-50">
       <nav className="bg-white p-4 dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">

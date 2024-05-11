@@ -42,6 +42,7 @@ export const onCreateTournament = /* GraphQL */ `subscription OnCreateTournament
     }
     pokeDataLastUpdated
     rk9link
+    type
     createdAt
     updatedAt
     __typename
@@ -85,6 +86,7 @@ export const onUpdateTournament = /* GraphQL */ `subscription OnUpdateTournament
     }
     pokeDataLastUpdated
     rk9link
+    type
     createdAt
     updatedAt
     __typename
@@ -128,6 +130,7 @@ export const onDeleteTournament = /* GraphQL */ `subscription OnDeleteTournament
     }
     pokeDataLastUpdated
     rk9link
+    type
     createdAt
     updatedAt
     __typename

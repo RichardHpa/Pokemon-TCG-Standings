@@ -43,6 +43,7 @@ export const createTournament = /* GraphQL */ `mutation CreateTournament(
     }
     pokeDataLastUpdated
     rk9link
+    type
     createdAt
     updatedAt
     __typename
@@ -87,6 +88,7 @@ export const updateTournament = /* GraphQL */ `mutation UpdateTournament(
     }
     pokeDataLastUpdated
     rk9link
+    type
     createdAt
     updatedAt
     __typename
@@ -131,6 +133,7 @@ export const deleteTournament = /* GraphQL */ `mutation DeleteTournament(
     }
     pokeDataLastUpdated
     rk9link
+    type
     createdAt
     updatedAt
     __typename
