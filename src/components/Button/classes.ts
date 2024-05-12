@@ -14,6 +14,10 @@ export const buttonClasses = {
           'text-gray-900 hover:text-blue-700 bg-white hover:bg-gray-100 border-gray-200 focus:ring-gray-100',
         dark: 'dark:text-gray-400 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-600 dark:border-gray-600  dark:focus:ring-gray-700',
       },
+      error: {
+        light: 'text-white bg-red-700 hover:bg-red-800 focus:ring-red-300',
+        dark: 'dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800',
+      },
     },
     outlined: {
       base: 'border',
@@ -26,6 +30,10 @@ export const buttonClasses = {
         light:
           'text-gray-900 hover:text-white hover:bg-gray-900 focus:ring-gray-300 dark:border-gray-600',
         dark: 'dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800',
+      },
+      error: {
+        light: 'text-red-700 hover:text-white border-red-700 hover:bg-red-800 focus:ring-red-300',
+        dark: 'dark:text-red-500 dark:hover:text-white dark:border-red-500 dark:hover:bg-red-500 dark:focus:ring-red-800',
       },
     },
   },

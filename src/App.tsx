@@ -14,6 +14,11 @@ import { Player, Tournaments, Tournament, About } from './pages';
 import { Home } from 'pages/Home';
 import { TournamentOutlet } from 'pages/Tournament';
 import { Division, divisionLoader } from 'pages/Admin/Division';
+import {
+  Tournament as AdminTournament,
+  EditTournament,
+  tournamentLoader as adminTournamentLoader,
+} from 'pages/Admin/Tournament';
 
 import { DefaultError } from 'errors/DefaultError';
 
@@ -185,11 +190,13 @@ const router = createBrowserRouter([
                     children: [
                       {
                         index: true,
-                        element: <div>Tournament</div>,
+                        loader: adminTournamentLoader(queryClient),
+                        element: <AdminTournament />,
                       },
                       {
                         path: 'edit',
-                        element: <div>Edit</div>,
+                        loader: adminTournamentLoader(queryClient),
+                        element: <EditTournament />,
                       },
                     ],
                   },

@@ -16,7 +16,7 @@ import { client } from 'helpers/setupAmplify';
 
 import { getGetTournamentsKey } from 'queries/useGetTournaments';
 
-import { listTournaments, tournamentsByPokeDataId } from 'graphql/queries';
+import { tournamentsByPokeDataId } from 'graphql/queries';
 
 import { capitalizeFirstLetter } from 'helpers/capitalizeFirstLetter';
 import { syncTournamentDataFromPokedata } from 'api/syncTournamentDataFromPokedata';
