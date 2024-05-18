@@ -97,7 +97,7 @@ export const syncTournamentDataFromPokedata =
 
 export const resyncTournamentData = async (tournament: Tournament) => {
   const pokeDataId = tournament.pokeDataId;
-  const tournamentId = tournament.id;
+
   // get all of the pokedata tournaments
   const pokeDataTournaments = await axios
     .get('https://www.pokedata.ovh/apiv2/tournaments/tcg')
