@@ -13,5 +13,7 @@ export const textFieldClasses = {
       error:
         'bg-red-50 border-red-500 text-red-900 placeholder-red-700 focus:ring-red-500 focus:border-red-500 dark:text-red-500 dark:placeholder-red-500 dark:border-red-500',
     },
+    readOnly:
+      'bg-gray-100 dark:bg-gray-800 focus:ring-0 focus:border-gray-300 dark:focus:border-gray-600 dark:text-gray-500 dark:placeholder-gray-400 cursor-default dark:border-gray-600 dark:focus:ring-0',
   },
 };

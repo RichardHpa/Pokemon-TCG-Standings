@@ -97,7 +97,7 @@ export const AuthLayout = () => {
     isSidebarOpen === SidebarStates.open || isSidebarOpen === SidebarStates.hover;
 
   return (
-    <Authenticator variation="modal" hideSignUp>
+    <Authenticator variation="modal">
       {({ signOut, user }) => (
         <>
           <AdminNavbar onNavToggle={handleNavToggle} />

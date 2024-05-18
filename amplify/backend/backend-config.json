@@ -22,7 +22,7 @@
           ],
           "defaultAuthentication": {
             "apiKeyConfig": {
-              "apiKeyExpirationDate": "2024-08-09T05:30:07.440Z",
+              "apiKeyExpirationDate": "2024-08-16T05:12:43.481Z",
               "apiKeyExpirationDays": 90,
               "description": "ptcgstandingsapi"
             },

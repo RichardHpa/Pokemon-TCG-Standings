@@ -5,6 +5,7 @@ import { useQuery } from '@tanstack/react-query';
 import { PencilIcon, ArrowRightIcon } from '@heroicons/react/20/solid';
 
 import { createTournament } from 'graphql/mutations';
+import { ModelSortDirection } from 'API';
 import { useQueryClient } from '@tanstack/react-query';
 
 import { Heading } from 'components/Heading';
@@ -16,7 +17,7 @@ import { client } from 'helpers/setupAmplify';
 
 import { getGetTournamentsKey } from 'queries/useGetTournaments';
 
-import { tournamentsByPokeDataId } from 'graphql/queries';
+import { getTournamentsByStartDate } from 'graphql/queries';
 
 import { capitalizeFirstLetter } from 'helpers/capitalizeFirstLetter';
 import { syncTournamentDataFromPokedata } from 'api/syncTournamentDataFromPokedata';
@@ -40,16 +41,15 @@ export const divisionLoader = async ({ params }: LoaderFunctionArgs) => {
 };
 
 const getTournamentsList = async () => {
-  console.log('Getting tournaments list');
   const result = await client.graphql({
-    query: tournamentsByPokeDataId,
+    query: getTournamentsByStartDate,
     variables: {
-      type: 'Tournament',
+      apiType: 'Tournament',
       limit: 1000,
+      sortDirection: ModelSortDirection.DESC,
     },
   });
-  console.log('GET call succeeded: ', result);
-  return result.data.tournamentsByPokeDataId.items;
+  return result.data.getTournamentsByStartDate.items;
 };
 
 export const Division = () => {
@@ -66,7 +66,6 @@ export const Division = () => {
 
   const handleSync = useCallback(async () => {
     setSyncing(true);
-
     const response = await syncTournamentDataFromPokedata();
     console.log('Synced tournaments: ', response.successfulPromises);
     console.log('Failed to sync tournaments: ', response.failedPromises);
@@ -81,13 +80,16 @@ export const Division = () => {
     <div className="flex flex-col gap-4">
       <div className="flex justify-between">
         <Heading level="2">{capitalizeFirstLetter(division)}</Heading>
-        <Button onClick={handleSync} disabled={syncing}>
+        <Button onClick={handleSync} disabled={isLoading || syncing}>
           Sync with PokeData.ovh
         </Button>
       </div>
 
       {isLoading && <div>Loading...</div>}
-      {tournaments && (
+
+      {tournaments && tournaments.length === 0 && <p>No tournaments found</p>}
+
+      {tournaments && tournaments.length > 0 && (
         <List>
           {tournaments.map((tournament: any) => (
             <ListItem
@@ -117,7 +119,7 @@ export const Division = () => {
                 </>
               }
             >
-              {tournament.name}
+              {tournament.name} ({tournament.startDate})
             </ListItem>
           ))}
         </List>

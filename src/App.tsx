@@ -1,4 +1,4 @@
-import { useEffect, useCallback } from 'react';
+import { useEffect } from 'react';
 import { Outlet, createBrowserRouter, RouterProvider, defer } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
@@ -7,7 +7,6 @@ import { Amplify } from 'aws-amplify';
 
 import { AuthLayout } from 'layouts/AuthLayout';
 import { Navbar } from 'components/Navbar';
-import { Notice } from 'components/Notice';
 
 // TODO: refactor these to also include loaders
 import { Player, Tournaments, Tournament, About } from './pages';
@@ -27,7 +26,6 @@ import { tournamentQuery } from 'queries/useGetTournament';
 import { tournamentStandingsQuery } from 'queries/useGetTournamentStandings';
 
 import { useAnalytics } from 'hooks/useAnalytics';
-import { useLocalStorage } from 'hooks/useLocalStorage';
 
 import { FetchingProvider } from 'context/FetchingContext';
 import config from './amplifyconfiguration.json';
@@ -45,48 +43,17 @@ const queryClient = new QueryClient({
   },
 });
 
-const noticeId = 'thankyouFirstWeekend';
 const Layout = () => {
   const { sendPageView } = useAnalytics();
-  const [dismissedNotice, setDismissedNotice] = useLocalStorage(noticeId, 'false');
 
   useEffect(() => {
     sendPageView();
   }, [sendPageView]);
 
-  const handleOnDismiss = useCallback(() => {
-    setDismissedNotice('true');
-  }, [setDismissedNotice]);
-
   return (
     <div className="">
       <Navbar />
       <div className="container mx-auto py-12 px-4 flex flex-col flex-grow">
-        {dismissedNotice === 'false' && (
-          <Notice dismissible noticeId={noticeId} onDismiss={handleOnDismiss} status="success">
-            Welcome to the PTCG Standings! Thank you to all of you who used the site over the last
-            few weekends for the regionals.
-            <br />
-            This went pretty smoothly other than a couple small hiccups but I'm excited to see how
-            the site can grow and improve. Next steps will be migrating this site to a proper
-            hosting and domain, so stay tuned!
-            <br />
-            <br />
-            If you have any feedback or suggestions, please reach out to me on{' '}
-            <a
-              className="underline cursor-pointer"
-              href="https://twitter.com/RichardHpaNZ"
-              target="blank"
-            >
-              X
-            </a>{' '}
-            or send me an email on{' '}
-            <a href="mailto:richard.m.hpa@gmail.com?subject=Feedback about PTCG Standings!">
-              richard.m.hpa@gmail.com
-            </a>
-          </Notice>
-        )}
-
         <Outlet />
       </div>
     </div>

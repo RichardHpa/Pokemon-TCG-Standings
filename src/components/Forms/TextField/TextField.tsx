@@ -14,6 +14,8 @@ export const TextField: FC<TextFieldProps> = ({
   onChange,
   error,
   readonly = false,
+  onBlur,
+  disabled,
 }) => {
   return (
     <div>
@@ -31,13 +33,16 @@ export const TextField: FC<TextFieldProps> = ({
         id={name}
         className={clsx(
           textFieldClasses.input.base,
-          error ? textFieldClasses.input.validation.error : textFieldClasses.input.validation.base
+          error ? textFieldClasses.input.validation.error : textFieldClasses.input.validation.base,
+          readonly && textFieldClasses.input.readOnly
         )}
         placeholder={placeholder}
         required={required}
         value={value}
-        onChange={e => onChange(e.target.value)}
+        onChange={onChange}
+        onBlur={onBlur}
         readOnly={readonly}
+        disabled={disabled}
       />
       {error && <p className="mt-2 text-sm text-red-600 dark:text-red-500">{error}</p>}
     </div>

@@ -2,7 +2,6 @@ type Tournament @model @auth(rules: [{ allow: public, operations: [read] }, { al
   id: ID!
   pokeDataId: String!
   name: String!
-  date: TournamentDate!
   tournamentStatus: String!
   decklists: Int!
   players: TournamentPlayersCount
@@ -10,17 +9,18 @@ type Tournament @model @auth(rules: [{ allow: public, operations: [read] }, { al
   roundNumbers: TournamentRounds
   pokeDataLastUpdated: String!
   rk9link: String!
-  type: String!
-    @index(
-      name: "tournamentsByPokeDataId"
-      queryField: "tournamentsByPokeDataId"
-      sortKeyFields: ["pokeDataId"]
-    )
-}
 
-type TournamentDate {
-  start: String!
-  end: String!
+  startDate: AWSDate!
+  endDate: AWSDate!
+  type: TournamentType
+  region: Region
+
+  apiType: String!
+    @index(
+      name: "tournamentsByStartDate"
+      queryField: "getTournamentsByStartDate"
+      sortKeyFields: ["startDate"]
+    )
 }
 
 type TournamentPlayers {
@@ -39,4 +39,24 @@ type TournamentRounds {
   juniors: Int
   seniors: Int
   masters: Int
+}
+
+enum TournamentType {
+  Worlds
+  International
+  Regional
+  SpecialEvent
+  Cup
+}
+
+enum Region {
+  UsaCanada
+  Europe
+  LatinAmerica
+  Oceania
+  Asia
+  MiddleEastSouthAfrica
+  Russia
+  Worlds
+  Unknown
 }

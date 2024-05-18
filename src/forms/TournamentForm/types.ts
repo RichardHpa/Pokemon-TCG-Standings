@@ -1,14 +1,6 @@
-export interface TournamentFormValues {
-  name: string;
-  description: string;
-  startDate: string;
-  endDate: string;
-  maxParticipants: number;
-  rules: string;
-  prize: string;
-}
+import { Tournament } from 'API';
 
 export interface TournamentFormProps {
-  values: any;
-  // onChange: (values: TournamentFormValues) => void;
+  tournamentValues: any;
+  onSubmit: (values: Tournament) => Promise<any>;
 }

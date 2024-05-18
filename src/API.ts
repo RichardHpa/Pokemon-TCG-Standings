@@ -6,7 +6,6 @@ export type CreateTournamentInput = {
   id?: string | null,
   pokeDataId: string,
   name: string,
-  date: TournamentDateInput,
   tournamentStatus: string,
   decklists: number,
   players?: TournamentPlayersCountInput | null,
@@ -14,12 +13,11 @@ export type CreateTournamentInput = {
   roundNumbers?: TournamentRoundsInput | null,
   pokeDataLastUpdated: string,
   rk9link: string,
-  type: string,
-};
-
-export type TournamentDateInput = {
-  start: string,
-  end: string,
+  startDate: string,
+  endDate: string,
+  type?: TournamentType | null,
+  region?: Region | null,
+  apiType: string,
 };
 
 export type TournamentPlayersCountInput = {
@@ -40,6 +38,28 @@ export type TournamentRoundsInput = {
   masters?: number | null,
 };
 
+export enum TournamentType {
+  Worlds = "Worlds",
+  International = "International",
+  Regional = "Regional",
+  SpecialEvent = "SpecialEvent",
+  Cup = "Cup",
+}
+
+
+export enum Region {
+  UsaCanada = "UsaCanada",
+  Europe = "Europe",
+  LatinAmerica = "LatinAmerica",
+  Oceania = "Oceania",
+  Asia = "Asia",
+  MiddleEastSouthAfrica = "MiddleEastSouthAfrica",
+  Russia = "Russia",
+  Worlds = "Worlds",
+  Unknown = "Unknown",
+}
+
+
 export type ModelTournamentConditionInput = {
   pokeDataId?: ModelStringInput | null,
   name?: ModelStringInput | null,
@@ -47,7 +67,11 @@ export type ModelTournamentConditionInput = {
   decklists?: ModelIntInput | null,
   pokeDataLastUpdated?: ModelStringInput | null,
   rk9link?: ModelStringInput | null,
-  type?: ModelStringInput | null,
+  startDate?: ModelStringInput | null,
+  endDate?: ModelStringInput | null,
+  type?: ModelTournamentTypeInput | null,
+  region?: ModelRegionInput | null,
+  apiType?: ModelStringInput | null,
   and?: Array< ModelTournamentConditionInput | null > | null,
   or?: Array< ModelTournamentConditionInput | null > | null,
   not?: ModelTournamentConditionInput | null,
@@ -107,12 +131,21 @@ export type ModelIntInput = {
   attributeType?: ModelAttributeTypes | null,
 };
 
+export type ModelTournamentTypeInput = {
+  eq?: TournamentType | null,
+  ne?: TournamentType | null,
+};
+
+export type ModelRegionInput = {
+  eq?: Region | null,
+  ne?: Region | null,
+};
+
 export type Tournament = {
   __typename: "Tournament",
   id: string,
   pokeDataId: string,
   name: string,
-  date: TournamentDate,
   tournamentStatus: string,
   decklists: number,
   players?: TournamentPlayersCount | null,
@@ -120,15 +153,13 @@ export type Tournament = {
   roundNumbers?: TournamentRounds | null,
   pokeDataLastUpdated: string,
   rk9link: string,
-  type: string,
+  startDate: string,
+  endDate: string,
+  type?: TournamentType | null,
+  region?: Region | null,
+  apiType: string,
   createdAt: string,
   updatedAt: string,
-};
-
-export type TournamentDate = {
-  __typename: "TournamentDate",
-  start: string,
-  end: string,
 };
 
 export type TournamentPlayersCount = {
@@ -156,7 +187,6 @@ export type UpdateTournamentInput = {
   id: string,
   pokeDataId?: string | null,
   name?: string | null,
-  date?: TournamentDateInput | null,
   tournamentStatus?: string | null,
   decklists?: number | null,
   players?: TournamentPlayersCountInput | null,
@@ -164,7 +194,11 @@ export type UpdateTournamentInput = {
   roundNumbers?: TournamentRoundsInput | null,
   pokeDataLastUpdated?: string | null,
   rk9link?: string | null,
-  type?: string | null,
+  startDate?: string | null,
+  endDate?: string | null,
+  type?: TournamentType | null,
+  region?: Region | null,
+  apiType?: string | null,
 };
 
 export type DeleteTournamentInput = {
@@ -179,7 +213,11 @@ export type ModelTournamentFilterInput = {
   decklists?: ModelIntInput | null,
   pokeDataLastUpdated?: ModelStringInput | null,
   rk9link?: ModelStringInput | null,
-  type?: ModelStringInput | null,
+  startDate?: ModelStringInput | null,
+  endDate?: ModelStringInput | null,
+  type?: ModelTournamentTypeInput | null,
+  region?: ModelRegionInput | null,
+  apiType?: ModelStringInput | null,
   createdAt?: ModelStringInput | null,
   updatedAt?: ModelStringInput | null,
   and?: Array< ModelTournamentFilterInput | null > | null,
@@ -233,7 +271,11 @@ export type ModelSubscriptionTournamentFilterInput = {
   decklists?: ModelSubscriptionIntInput | null,
   pokeDataLastUpdated?: ModelSubscriptionStringInput | null,
   rk9link?: ModelSubscriptionStringInput | null,
+  startDate?: ModelSubscriptionStringInput | null,
+  endDate?: ModelSubscriptionStringInput | null,
   type?: ModelSubscriptionStringInput | null,
+  region?: ModelSubscriptionStringInput | null,
+  apiType?: ModelSubscriptionStringInput | null,
   createdAt?: ModelSubscriptionStringInput | null,
   updatedAt?: ModelSubscriptionStringInput | null,
   and?: Array< ModelSubscriptionTournamentFilterInput | null > | null,
@@ -293,11 +335,6 @@ export type CreateTournamentMutation = {
     id: string,
     pokeDataId: string,
     name: string,
-    date:  {
-      __typename: "TournamentDate",
-      start: string,
-      end: string,
-    },
     tournamentStatus: string,
     decklists: number,
     players?:  {
@@ -320,7 +357,11 @@ export type CreateTournamentMutation = {
     } | null,
     pokeDataLastUpdated: string,
     rk9link: string,
-    type: string,
+    startDate: string,
+    endDate: string,
+    type?: TournamentType | null,
+    region?: Region | null,
+    apiType: string,
     createdAt: string,
     updatedAt: string,
   } | null,
@@ -337,11 +378,6 @@ export type UpdateTournamentMutation = {
     id: string,
     pokeDataId: string,
     name: string,
-    date:  {
-      __typename: "TournamentDate",
-      start: string,
-      end: string,
-    },
     tournamentStatus: string,
     decklists: number,
     players?:  {
@@ -364,7 +400,11 @@ export type UpdateTournamentMutation = {
     } | null,
     pokeDataLastUpdated: string,
     rk9link: string,
-    type: string,
+    startDate: string,
+    endDate: string,
+    type?: TournamentType | null,
+    region?: Region | null,
+    apiType: string,
     createdAt: string,
     updatedAt: string,
   } | null,
@@ -381,11 +421,6 @@ export type DeleteTournamentMutation = {
     id: string,
     pokeDataId: string,
     name: string,
-    date:  {
-      __typename: "TournamentDate",
-      start: string,
-      end: string,
-    },
     tournamentStatus: string,
     decklists: number,
     players?:  {
@@ -408,7 +443,11 @@ export type DeleteTournamentMutation = {
     } | null,
     pokeDataLastUpdated: string,
     rk9link: string,
-    type: string,
+    startDate: string,
+    endDate: string,
+    type?: TournamentType | null,
+    region?: Region | null,
+    apiType: string,
     createdAt: string,
     updatedAt: string,
   } | null,
@@ -424,11 +463,6 @@ export type GetTournamentQuery = {
     id: string,
     pokeDataId: string,
     name: string,
-    date:  {
-      __typename: "TournamentDate",
-      start: string,
-      end: string,
-    },
     tournamentStatus: string,
     decklists: number,
     players?:  {
@@ -451,7 +485,11 @@ export type GetTournamentQuery = {
     } | null,
     pokeDataLastUpdated: string,
     rk9link: string,
-    type: string,
+    startDate: string,
+    endDate: string,
+    type?: TournamentType | null,
+    region?: Region | null,
+    apiType: string,
     createdAt: string,
     updatedAt: string,
   } | null,
@@ -473,9 +511,31 @@ export type ListTournamentsQuery = {
       name: string,
       tournamentStatus: string,
       decklists: number,
+      players?:  {
+        __typename: "TournamentPlayersCount",
+        juniors?: number | null,
+        seniors?: number | null,
+        masters?: number | null,
+      } | null,
+      winners?:  {
+        __typename: "TournamentPlayers",
+        juniors?: string | null,
+        seniors?: string | null,
+        masters?: string | null,
+      } | null,
+      roundNumbers?:  {
+        __typename: "TournamentRounds",
+        juniors?: number | null,
+        seniors?: number | null,
+        masters?: number | null,
+      } | null,
       pokeDataLastUpdated: string,
       rk9link: string,
-      type: string,
+      startDate: string,
+      endDate: string,
+      type?: TournamentType | null,
+      region?: Region | null,
+      apiType: string,
       createdAt: string,
       updatedAt: string,
     } | null >,
@@ -483,17 +543,17 @@ export type ListTournamentsQuery = {
   } | null,
 };
 
-export type TournamentsByPokeDataIdQueryVariables = {
-  type: string,
-  pokeDataId?: ModelStringKeyConditionInput | null,
+export type GetTournamentsByStartDateQueryVariables = {
+  apiType: string,
+  startDate?: ModelStringKeyConditionInput | null,
   sortDirection?: ModelSortDirection | null,
   filter?: ModelTournamentFilterInput | null,
   limit?: number | null,
   nextToken?: string | null,
 };
 
-export type TournamentsByPokeDataIdQuery = {
-  tournamentsByPokeDataId?:  {
+export type GetTournamentsByStartDateQuery = {
+  getTournamentsByStartDate?:  {
     __typename: "ModelTournamentConnection",
     items:  Array< {
       __typename: "Tournament",
@@ -502,9 +562,31 @@ export type TournamentsByPokeDataIdQuery = {
       name: string,
       tournamentStatus: string,
       decklists: number,
+      players?:  {
+        __typename: "TournamentPlayersCount",
+        juniors?: number | null,
+        seniors?: number | null,
+        masters?: number | null,
+      } | null,
+      winners?:  {
+        __typename: "TournamentPlayers",
+        juniors?: string | null,
+        seniors?: string | null,
+        masters?: string | null,
+      } | null,
+      roundNumbers?:  {
+        __typename: "TournamentRounds",
+        juniors?: number | null,
+        seniors?: number | null,
+        masters?: number | null,
+      } | null,
       pokeDataLastUpdated: string,
       rk9link: string,
-      type: string,
+      startDate: string,
+      endDate: string,
+      type?: TournamentType | null,
+      region?: Region | null,
+      apiType: string,
       createdAt: string,
       updatedAt: string,
     } | null >,
@@ -522,11 +604,6 @@ export type OnCreateTournamentSubscription = {
     id: string,
     pokeDataId: string,
     name: string,
-    date:  {
-      __typename: "TournamentDate",
-      start: string,
-      end: string,
-    },
     tournamentStatus: string,
     decklists: number,
     players?:  {
@@ -549,7 +626,11 @@ export type OnCreateTournamentSubscription = {
     } | null,
     pokeDataLastUpdated: string,
     rk9link: string,
-    type: string,
+    startDate: string,
+    endDate: string,
+    type?: TournamentType | null,
+    region?: Region | null,
+    apiType: string,
     createdAt: string,
     updatedAt: string,
   } | null,
@@ -565,11 +646,6 @@ export type OnUpdateTournamentSubscription = {
     id: string,
     pokeDataId: string,
     name: string,
-    date:  {
-      __typename: "TournamentDate",
-      start: string,
-      end: string,
-    },
     tournamentStatus: string,
     decklists: number,
     players?:  {
@@ -592,7 +668,11 @@ export type OnUpdateTournamentSubscription = {
     } | null,
     pokeDataLastUpdated: string,
     rk9link: string,
-    type: string,
+    startDate: string,
+    endDate: string,
+    type?: TournamentType | null,
+    region?: Region | null,
+    apiType: string,
     createdAt: string,
     updatedAt: string,
   } | null,
@@ -608,11 +688,6 @@ export type OnDeleteTournamentSubscription = {
     id: string,
     pokeDataId: string,
     name: string,
-    date:  {
-      __typename: "TournamentDate",
-      start: string,
-      end: string,
-    },
     tournamentStatus: string,
     decklists: number,
     players?:  {
@@ -635,7 +710,11 @@ export type OnDeleteTournamentSubscription = {
     } | null,
     pokeDataLastUpdated: string,
     rk9link: string,
-    type: string,
+    startDate: string,
+    endDate: string,
+    type?: TournamentType | null,
+    region?: Region | null,
+    apiType: string,
     createdAt: string,
     updatedAt: string,
   } | null,

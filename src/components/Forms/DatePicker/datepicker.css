@@ -1,0 +1,6 @@
+/* Custom css for the datepicker component since you cant style the flowbite calender yet */
+
+.datepicker-cell.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

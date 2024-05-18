@@ -13,37 +13,32 @@ export const getTournament = /* GraphQL */ `query GetTournament($id: ID!) {
     id
     pokeDataId
     name
-    date {
-      start
-      end
-      __typename
-    }
     tournamentStatus
     decklists
     players {
       juniors
       seniors
       masters
-      __typename
     }
     winners {
       juniors
       seniors
       masters
-      __typename
     }
     roundNumbers {
       juniors
       seniors
       masters
-      __typename
     }
     pokeDataLastUpdated
     rk9link
+    startDate
+    endDate
     type
+    region
+    apiType
     createdAt
     updatedAt
-    __typename
   }
 }
 ` as GeneratedQuery<
@@ -62,32 +57,49 @@ export const listTournaments = /* GraphQL */ `query ListTournaments(
       name
       tournamentStatus
       decklists
+      players {
+        juniors
+        seniors
+        masters
+      }
+      winners {
+        juniors
+        seniors
+        masters
+      }
+      roundNumbers {
+        juniors
+        seniors
+        masters
+      }
       pokeDataLastUpdated
       rk9link
+      startDate
+      endDate
       type
+      region
+      apiType
       createdAt
       updatedAt
-      __typename
     }
     nextToken
-    __typename
   }
 }
 ` as GeneratedQuery<
   APITypes.ListTournamentsQueryVariables,
   APITypes.ListTournamentsQuery
 >;
-export const tournamentsByPokeDataId = /* GraphQL */ `query TournamentsByPokeDataId(
-  $type: String!
-  $pokeDataId: ModelStringKeyConditionInput
+export const getTournamentsByStartDate = /* GraphQL */ `query GetTournamentsByStartDate(
+  $apiType: String!
+  $startDate: ModelStringKeyConditionInput
   $sortDirection: ModelSortDirection
   $filter: ModelTournamentFilterInput
   $limit: Int
   $nextToken: String
 ) {
-  tournamentsByPokeDataId(
-    type: $type
-    pokeDataId: $pokeDataId
+  getTournamentsByStartDate(
+    apiType: $apiType
+    startDate: $startDate
     sortDirection: $sortDirection
     filter: $filter
     limit: $limit
@@ -99,18 +111,35 @@ export const tournamentsByPokeDataId = /* GraphQL */ `query TournamentsByPokeDat
       name
       tournamentStatus
       decklists
+      players {
+        juniors
+        seniors
+        masters
+      }
+      winners {
+        juniors
+        seniors
+        masters
+      }
+      roundNumbers {
+        juniors
+        seniors
+        masters
+      }
       pokeDataLastUpdated
       rk9link
+      startDate
+      endDate
       type
+      region
+      apiType
       createdAt
       updatedAt
-      __typename
     }
     nextToken
-    __typename
   }
 }
 ` as GeneratedQuery<
-  APITypes.TournamentsByPokeDataIdQueryVariables,
-  APITypes.TournamentsByPokeDataIdQuery
+  APITypes.GetTournamentsByStartDateQueryVariables,
+  APITypes.GetTournamentsByStartDateQuery
 >;
