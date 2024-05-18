@@ -16,36 +16,32 @@ export const createTournament = /* GraphQL */ `mutation CreateTournament(
     id
     pokeDataId
     name
-    date {
-      start
-      end
-      __typename
-    }
     tournamentStatus
     decklists
     players {
       juniors
       seniors
       masters
-      __typename
     }
     winners {
       juniors
       seniors
       masters
-      __typename
     }
     roundNumbers {
       juniors
       seniors
       masters
-      __typename
     }
     pokeDataLastUpdated
     rk9link
+    startDate
+    endDate
+    type
+    region
+    apiType
     createdAt
     updatedAt
-    __typename
   }
 }
 ` as GeneratedMutation<
@@ -60,36 +56,32 @@ export const updateTournament = /* GraphQL */ `mutation UpdateTournament(
     id
     pokeDataId
     name
-    date {
-      start
-      end
-      __typename
-    }
     tournamentStatus
     decklists
     players {
       juniors
       seniors
       masters
-      __typename
     }
     winners {
       juniors
       seniors
       masters
-      __typename
     }
     roundNumbers {
       juniors
       seniors
       masters
-      __typename
     }
     pokeDataLastUpdated
     rk9link
+    startDate
+    endDate
+    type
+    region
+    apiType
     createdAt
     updatedAt
-    __typename
   }
 }
 ` as GeneratedMutation<
@@ -104,36 +96,32 @@ export const deleteTournament = /* GraphQL */ `mutation DeleteTournament(
     id
     pokeDataId
     name
-    date {
-      start
-      end
-      __typename
-    }
     tournamentStatus
     decklists
     players {
       juniors
       seniors
       masters
-      __typename
     }
     winners {
       juniors
       seniors
       masters
-      __typename
     }
     roundNumbers {
       juniors
       seniors
       masters
-      __typename
     }
     pokeDataLastUpdated
     rk9link
+    startDate
+    endDate
+    type
+    region
+    apiType
     createdAt
     updatedAt
-    __typename
   }
 }
 ` as GeneratedMutation<

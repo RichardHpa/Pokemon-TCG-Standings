@@ -1,16 +1,23 @@
-import { useEffect, useCallback } from 'react';
+import { useEffect } from 'react';
 import { Outlet, createBrowserRouter, RouterProvider, defer } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { ErrorBoundary } from 'react-error-boundary';
+import { Amplify } from 'aws-amplify';
 
+import { AuthLayout } from 'layouts/AuthLayout';
 import { Navbar } from 'components/Navbar';
-import { Notice } from 'components/Notice';
 
 // TODO: refactor these to also include loaders
 import { Player, Tournaments, Tournament, About } from './pages';
 import { Home } from 'pages/Home';
 import { TournamentOutlet } from 'pages/Tournament';
+import { Division, divisionLoader } from 'pages/Admin/Division';
+import {
+  Tournament as AdminTournament,
+  EditTournament,
+  tournamentLoader as adminTournamentLoader,
+} from 'pages/Admin/Tournament';
 
 import { DefaultError } from 'errors/DefaultError';
 
@@ -19,12 +26,14 @@ import { tournamentQuery } from 'queries/useGetTournament';
 import { tournamentStandingsQuery } from 'queries/useGetTournamentStandings';
 
 import { useAnalytics } from 'hooks/useAnalytics';
-import { useLocalStorage } from 'hooks/useLocalStorage';
 
 import { FetchingProvider } from 'context/FetchingContext';
+import config from './amplifyconfiguration.json';
 
 import type { QueryClient as QueryClientType } from '@tanstack/react-query';
 import type { LoaderFunctionArgs } from 'react-router-dom';
+
+Amplify.configure(config);
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -34,48 +43,17 @@ const queryClient = new QueryClient({
   },
 });
 
-const noticeId = 'thankyouFirstWeekend';
 const Layout = () => {
   const { sendPageView } = useAnalytics();
-  const [dismissedNotice, setDismissedNotice] = useLocalStorage(noticeId, 'false');
 
   useEffect(() => {
     sendPageView();
   }, [sendPageView]);
 
-  const handleOnDismiss = useCallback(() => {
-    setDismissedNotice('true');
-  }, [setDismissedNotice]);
-
   return (
-    <div className="bg-white dark:bg-gray-900 text-black dark:text-gray-200 min-h-screen flex flex-col">
+    <div className="">
       <Navbar />
       <div className="container mx-auto py-12 px-4 flex flex-col flex-grow">
-        {dismissedNotice === 'false' && (
-          <Notice dismissible noticeId={noticeId} onDismiss={handleOnDismiss} status="success">
-            Welcome to the PTCG Standings! Thank you to all of you who used the site over the last
-            few weekends for the regionals.
-            <br />
-            This went pretty smoothly other than a couple small hiccups but I'm excited to see how
-            the site can grow and improve. Next steps will be migrating this site to a proper
-            hosting and domain, so stay tuned!
-            <br />
-            <br />
-            If you have any feedback or suggestions, please reach out to me on{' '}
-            <a
-              className="underline cursor-pointer"
-              href="https://twitter.com/RichardHpaNZ"
-              target="blank"
-            >
-              X
-            </a>{' '}
-            or send me an email on{' '}
-            <a href="mailto:richard.m.hpa@gmail.com?subject=Feedback about PTCG Standings!">
-              richard.m.hpa@gmail.com
-            </a>
-          </Notice>
-        )}
-
         <Outlet />
       </div>
     </div>
@@ -143,49 +121,102 @@ export const singlePlayerLoader =
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Layout />,
+    element: (
+      <div className="bg-white dark:bg-gray-900 text-black dark:text-gray-200 min-h-screen flex flex-col">
+        <Outlet />
+      </div>
+    ),
     errorElement: (
-      <div className="min-h-screen bg-white dark:bg-gray-900">
+      <div className="bg-white dark:bg-gray-900 text-black dark:text-gray-200 min-h-screen flex flex-col">
         <DefaultError />
       </div>
     ),
     children: [
       {
-        index: true,
-        loader: tournamentsLoader(queryClient),
-        element: <Home />,
-      },
-      {
-        path: 'about',
-        element: <About />,
-      },
-      {
-        path: 'tournaments',
+        path: 'dashboard',
+        element: <AuthLayout />,
         children: [
           {
             index: true,
-            loader: tournamentsLoader(queryClient),
-            element: <Tournaments />,
+            element: <div>Dashboard</div>,
           },
           {
-            path: ':tournamentId',
-            loader: tournamentLoader(queryClient),
-            element: <TournamentOutlet />,
+            path: 'division',
+            element: <Outlet />,
             children: [
               {
-                index: true,
-                loader: singleTournamentLoader,
-                element: <Tournament />,
-              },
-              {
-                path: ':playerName',
-                loader: singlePlayerLoader(queryClient),
-                element: <Player />,
+                path: ':division',
+                children: [
+                  {
+                    index: true,
+                    loader: divisionLoader,
+                    element: <Division />,
+                  },
+                  {
+                    path: ':tournamentId',
+                    children: [
+                      {
+                        index: true,
+                        loader: adminTournamentLoader(queryClient),
+                        element: <AdminTournament />,
+                      },
+                      {
+                        path: 'edit',
+                        loader: adminTournamentLoader(queryClient),
+                        element: <EditTournament />,
+                      },
+                    ],
+                  },
+                ],
               },
             ],
           },
         ],
       },
+      {
+        path: '*',
+        element: <Layout />,
+        children: [
+          {
+            index: true,
+            loader: tournamentsLoader(queryClient),
+            element: <Home />,
+          },
+
+          {
+            path: 'about',
+            element: <About />,
+          },
+          {
+            path: 'tournaments',
+            children: [
+              {
+                index: true,
+                loader: tournamentsLoader(queryClient),
+                element: <Tournaments />,
+              },
+              {
+                path: ':tournamentId',
+                loader: tournamentLoader(queryClient),
+                element: <TournamentOutlet />,
+                children: [
+                  {
+                    index: true,
+                    loader: singleTournamentLoader,
+                    element: <Tournament />,
+                  },
+                  {
+                    path: ':playerName',
+                    loader: singlePlayerLoader(queryClient),
+                    element: <Player />,
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+
       {
         path: '*',
         element: <DefaultError />,

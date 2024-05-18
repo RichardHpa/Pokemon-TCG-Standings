@@ -14,6 +14,9 @@
     "categories": {
       "api": {
         "ptcgstandings": {}
+      },
+      "auth": {
+        "ptcgstandingsb41f0bb7": {}
       }
     }
   },

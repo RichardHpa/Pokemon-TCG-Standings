@@ -3,10 +3,17 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import 'flowbite';
+import { initFlowbite } from 'flowbite';
 
 import { ColorModeProvider } from 'providers/ColorModeProvider';
 import { HelmetProvider } from 'react-helmet-async';
+
+if (process.env.NODE_ENV === 'development') {
+  const { worker } = require('./mocks/browser');
+  worker.start();
+}
+
+initFlowbite();
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
