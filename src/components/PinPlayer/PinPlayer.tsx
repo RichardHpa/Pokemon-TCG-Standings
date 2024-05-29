@@ -1,29 +1,43 @@
 import { useMemo } from 'react';
 import { Button } from 'components/Button';
+
+import { useAnalytics } from 'hooks/useAnalytics';
 import { useLocalStorage } from 'hooks/useLocalStorage';
 
 import { pinnedPlayersKey } from 'constants/siteKeys';
+import { Division } from 'types/tournament';
 
-const usePinPlayer = (tournamentId: string, player: string) => {
+const usePinPlayer = (tournamentId: string, player: string, division: Division) => {
   const [pinnedPlayers, setPinnedPlayers] = useLocalStorage(pinnedPlayersKey, JSON.stringify({}));
 
   const isPinned = useMemo(() => {
     const parsedPinPlayers = JSON.parse(pinnedPlayers);
-
-    return parsedPinPlayers[tournamentId]?.includes(player);
-  }, [pinnedPlayers, tournamentId, player]);
+    return parsedPinPlayers[tournamentId]?.[division]?.includes(player);
+  }, [division, pinnedPlayers, player, tournamentId]);
 
   const togglePin = () => {
     const parsedPinPlayers = JSON.parse(pinnedPlayers);
 
     if (!parsedPinPlayers[tournamentId]) {
-      parsedPinPlayers[tournamentId] = [player];
-    } else if (parsedPinPlayers[tournamentId].includes(player)) {
-      parsedPinPlayers[tournamentId] = parsedPinPlayers[tournamentId].filter(
+      parsedPinPlayers[tournamentId] = {
+        [division]: [player],
+      };
+    } else if (!parsedPinPlayers[tournamentId][division]) {
+      parsedPinPlayers[tournamentId][division] = [player];
+    } else if (parsedPinPlayers[tournamentId][division].includes(player)) {
+      parsedPinPlayers[tournamentId][division] = parsedPinPlayers[tournamentId][division].filter(
         (p: string) => p !== player
       );
     } else {
-      parsedPinPlayers[tournamentId].push(player);
+      parsedPinPlayers[tournamentId][division].push(player);
+    }
+
+    if (parsedPinPlayers[tournamentId][division].length === 0) {
+      delete parsedPinPlayers[tournamentId][division];
+    }
+
+    if (Object.keys(parsedPinPlayers[tournamentId]).length === 0) {
+      delete parsedPinPlayers[tournamentId];
     }
 
     setPinnedPlayers(JSON.stringify(parsedPinPlayers));
@@ -32,8 +46,17 @@ const usePinPlayer = (tournamentId: string, player: string) => {
   return { isPinned, togglePin };
 };
 
-export const PinPlayer = ({ tournamentId, player }: { tournamentId: string; player: string }) => {
-  const { togglePin, isPinned } = usePinPlayer(tournamentId, player);
+export const PinPlayer = ({
+  tournamentId,
+  player,
+  division,
+}: {
+  tournamentId: string;
+  player: string;
+  division: Division;
+}) => {
+  const { sendEvent } = useAnalytics();
+  const { togglePin, isPinned } = usePinPlayer(tournamentId, player, division);
 
   return (
     <Button
@@ -42,6 +65,13 @@ export const PinPlayer = ({ tournamentId, player }: { tournamentId: string; play
       size="sm"
       onClick={event => {
         event.stopPropagation();
+        if (!isPinned) {
+          sendEvent({
+            category: 'Pin Player',
+            action: 'click',
+            label: `Pin Player: ${player} - ${division} - ${tournamentId}`,
+          });
+        }
         togglePin();
       }}
     >

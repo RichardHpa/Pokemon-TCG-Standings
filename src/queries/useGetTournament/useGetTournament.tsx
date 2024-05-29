@@ -2,7 +2,7 @@ import { useQuery, queryOptions } from '@tanstack/react-query';
 
 import { getPokeDataTournament } from 'api/getTournament';
 
-export const getGetTournamentsKey = (tournamentId: string) => ['tournaments', tournamentId];
+export const getGetTournamentsKey = (tournamentId: string) => ['tournament', tournamentId];
 
 export const tournamentQuery = (tournamentId: string) =>
   queryOptions({

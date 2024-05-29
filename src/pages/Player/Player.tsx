@@ -18,17 +18,19 @@ import { getPokedataStandings } from 'api/getPokedataStandings';
 
 import type { Standing } from 'types/standing';
 import type { FC } from 'react';
+import { Division } from 'types/tournament';
 
 interface PlayerInfoProps {
   tournamentId: string;
   playerName: string;
+  division: Division;
 }
 
-const PlayerInfo: FC<PlayerInfoProps> = ({ tournamentId, playerName }) => {
+const PlayerInfo: FC<PlayerInfoProps> = ({ tournamentId, playerName, division }) => {
   // since we cant get a single player, we need to fetch all the standings and then find the player
   const { data, isLoading } = useQuery({
-    queryKey: ['tournamentId', tournamentId, 'standings'],
-    queryFn: () => getPokedataStandings(tournamentId),
+    queryKey: ['tournamentId', tournamentId, division, 'standings'],
+    queryFn: () => getPokedataStandings({ tournamentId, division }),
   });
 
   const player = useMemo(() => {
@@ -93,6 +95,7 @@ const PlayerInfo: FC<PlayerInfoProps> = ({ tournamentId, playerName }) => {
               title="Current standings"
               scrollToPlayerIndex={player.placing - 1}
               allowReset
+              division={division}
             />
           </div>
         </div>
@@ -106,12 +109,17 @@ export const Player = () => {
     tournamentId: string;
     playerName: string;
     standings: Standing[];
+    division: Division;
   };
 
   return (
     <Suspense fallback={<p>Loading player info...</p>}>
       <Await resolve={data.standings} errorElement={<p>Error loading the player</p>}>
-        <PlayerInfo tournamentId={data.tournamentId} playerName={data.playerName} />
+        <PlayerInfo
+          tournamentId={data.tournamentId}
+          playerName={data.playerName}
+          division={data.division}
+        />
       </Await>
     </Suspense>
   );

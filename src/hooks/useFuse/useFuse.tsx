@@ -1,5 +1,5 @@
 import Fuse from 'fuse.js';
-import { useCallback, useMemo, useState } from 'react';
+import { useCallback, useMemo, useState, useEffect } from 'react';
 import lodashDebounce from 'lodash/debounce';
 
 import type { IFuseOptions } from 'fuse.js';
@@ -7,6 +7,12 @@ import type { IFuseOptions } from 'fuse.js';
 const debounceTime = 400;
 export function useFuse<T>(list: T[], options: IFuseOptions<T>): any {
   const [query, updateQuery] = useState('');
+  const [rawQuery, setRawQuery] = useState('');
+
+  const reset = useCallback(() => {
+    updateQuery('');
+    setRawQuery('');
+  }, []);
 
   // let's memoize the fuse instance for performances
   const fuse = useMemo(() => new Fuse(list, options), [list, options]);
@@ -24,12 +30,20 @@ export function useFuse<T>(list: T[], options: IFuseOptions<T>): any {
   const setQuery = lodashDebounce(updateQuery, debounceTime);
 
   // pass a handling helper to speed up implementation
-  const onSearch = useCallback((e: string) => setQuery(e), [setQuery]);
+  const onSearch = useCallback(
+    (e: string) => {
+      setRawQuery(e);
+      setQuery(e);
+    },
+    [setQuery]
+  );
 
   return {
     hits,
     onSearch,
     query,
     searching: query.length > 0,
+    reset,
+    rawQuery,
   };
 }
