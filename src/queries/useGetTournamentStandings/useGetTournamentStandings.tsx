@@ -2,17 +2,21 @@ import { useQuery, queryOptions } from '@tanstack/react-query';
 
 import { getPokedataStandings } from 'api/getPokedataStandings';
 
-export const getTournamentStandingsKey = (tournamentId: string) => [
-  'tournamentId',
-  tournamentId,
-  'standings',
-];
+import type { useGetTournamentStandingsProps } from './types';
 
-export const tournamentStandingsQuery = (tournamentId: string) =>
+export const getTournamentStandingsKey = ({
+  tournamentId,
+  division,
+}: useGetTournamentStandingsProps) => ['tournament', tournamentId, 'standings', division];
+
+export const tournamentStandingsQuery = ({
+  tournamentId,
+  division,
+}: useGetTournamentStandingsProps) =>
   queryOptions({
-    queryKey: getTournamentStandingsKey(tournamentId),
+    queryKey: getTournamentStandingsKey({ tournamentId, division }),
     queryFn: async () => {
-      const standings = await getPokedataStandings(tournamentId);
+      const standings = await getPokedataStandings({ tournamentId, division });
       if (!standings) {
         throw new Response('', {
           status: 404,
@@ -23,6 +27,9 @@ export const tournamentStandingsQuery = (tournamentId: string) =>
     },
   });
 
-export const useGetTournamentStandings = (tournamentId: string) => {
-  return useQuery(tournamentStandingsQuery(tournamentId));
+export const useGetTournamentStandings = ({
+  tournamentId,
+  division,
+}: useGetTournamentStandingsProps) => {
+  return useQuery(tournamentStandingsQuery({ tournamentId, division }));
 };

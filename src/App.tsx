@@ -1,30 +1,23 @@
-import { useEffect, useCallback } from 'react';
-import { Outlet, createBrowserRouter, RouterProvider, defer } from 'react-router-dom';
+import { useEffect } from 'react';
+import { Outlet, createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { ErrorBoundary } from 'react-error-boundary';
 
 import { Navbar } from 'components/Navbar';
-import { Notice } from 'components/Notice';
 
-// TODO: refactor these to also include loaders
-import { Player, Tournaments, Tournament, About } from './pages';
+import { About } from './pages';
 import { Home } from 'pages/Home';
-import { TournamentOutlet } from 'pages/Tournament';
+import { tournamentsLoader, Tournaments } from 'pages/Tournaments';
+import { tournamentLoader, Tournament, TournamentOutlet } from 'pages/Tournament';
+import { playerLoader, Player } from 'pages/Player';
+import { divisionLoader, Division } from 'pages/Tournament/Division';
 
 import { DefaultError } from 'errors/DefaultError';
 
-import { tournamentsQuery } from 'queries/useGetTournaments';
-import { tournamentQuery } from 'queries/useGetTournament';
-import { tournamentStandingsQuery } from 'queries/useGetTournamentStandings';
-
 import { useAnalytics } from 'hooks/useAnalytics';
-import { useLocalStorage } from 'hooks/useLocalStorage';
 
 import { FetchingProvider } from 'context/FetchingContext';
-
-import type { QueryClient as QueryClientType } from '@tanstack/react-query';
-import type { LoaderFunctionArgs } from 'react-router-dom';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -34,111 +27,22 @@ const queryClient = new QueryClient({
   },
 });
 
-const noticeId = 'thankyouFirstWeekend';
 const Layout = () => {
   const { sendPageView } = useAnalytics();
-  const [dismissedNotice, setDismissedNotice] = useLocalStorage(noticeId, 'false');
 
   useEffect(() => {
     sendPageView();
   }, [sendPageView]);
 
-  const handleOnDismiss = useCallback(() => {
-    setDismissedNotice('true');
-  }, [setDismissedNotice]);
-
   return (
     <div className="bg-white dark:bg-gray-900 text-black dark:text-gray-200 min-h-screen flex flex-col">
       <Navbar />
       <div className="container mx-auto py-12 px-4 flex flex-col flex-grow">
-        {dismissedNotice === 'false' && (
-          <Notice dismissible noticeId={noticeId} onDismiss={handleOnDismiss} status="success">
-            Welcome to the PTCG Standings! Thank you to all of you who used the site over the last
-            few weekends for the regionals.
-            <br />
-            This went pretty smoothly other than a couple small hiccups but I'm excited to see how
-            the site can grow and improve. Next steps will be migrating this site to a proper
-            hosting and domain, so stay tuned!
-            <br />
-            <br />
-            If you have any feedback or suggestions, please reach out to me on{' '}
-            <a
-              className="underline cursor-pointer"
-              href="https://twitter.com/RichardHpaNZ"
-              target="blank"
-            >
-              X
-            </a>{' '}
-            or send me an email on{' '}
-            <a href="mailto:richard.m.hpa@gmail.com?subject=Feedback about PTCG Standings!">
-              richard.m.hpa@gmail.com
-            </a>
-          </Notice>
-        )}
-
         <Outlet />
       </div>
     </div>
   );
 };
-
-// Loaders
-// Load all the tournaments
-export const tournamentsLoader = (client: QueryClientType) => async () => {
-  const tournamentsLoaderPromise = client.ensureQueryData(tournamentsQuery());
-
-  return defer({
-    tournaments: tournamentsLoaderPromise,
-  });
-};
-
-// Load all tournaments and find the one with the matching id
-export const tournamentLoader =
-  (client: QueryClientType) =>
-  async ({ params }: LoaderFunctionArgs) => {
-    if (!params.tournamentId) {
-      throw new Error('No tournamentId provided');
-    }
-
-    const tournamentLoaderPromise = client.ensureQueryData(tournamentQuery(params.tournamentId));
-
-    return defer({
-      tournamentId: params.tournamentId,
-      tournament: tournamentLoaderPromise,
-    });
-  };
-
-export const singleTournamentLoader = async ({ params }: LoaderFunctionArgs) => {
-  if (!params.tournamentId) {
-    throw new Error('No tournamentId provided');
-  }
-
-  return {
-    tournamentId: params.tournamentId,
-  };
-};
-
-export const singlePlayerLoader =
-  (client: QueryClientType) =>
-  async ({ params }: LoaderFunctionArgs) => {
-    if (!params.playerName) {
-      throw new Error('No playerName provided');
-    }
-
-    if (!params.tournamentId) {
-      throw new Error('No tournamentId provided');
-    }
-
-    const tournamentStandingLoader = client.ensureQueryData(
-      tournamentStandingsQuery(params.tournamentId)
-    );
-
-    return defer({
-      tournamentId: params.tournamentId,
-      playerName: params.playerName,
-      standings: tournamentStandingLoader,
-    });
-  };
 
 const router = createBrowserRouter([
   {
@@ -174,13 +78,23 @@ const router = createBrowserRouter([
             children: [
               {
                 index: true,
-                loader: singleTournamentLoader,
+                loader: tournamentLoader(queryClient),
                 element: <Tournament />,
               },
               {
-                path: ':playerName',
-                loader: singlePlayerLoader(queryClient),
-                element: <Player />,
+                path: ':division',
+                children: [
+                  {
+                    index: true,
+                    loader: divisionLoader(queryClient),
+                    element: <Division />,
+                  },
+                  {
+                    path: ':playerName',
+                    loader: playerLoader(queryClient),
+                    element: <Player />,
+                  },
+                ],
               },
             ],
           },
