@@ -1,5 +1,7 @@
 import { useMemo } from 'react';
 import { Button } from 'components/Button';
+
+import { useAnalytics } from 'hooks/useAnalytics';
 import { useLocalStorage } from 'hooks/useLocalStorage';
 
 import { pinnedPlayersKey } from 'constants/siteKeys';
@@ -53,6 +55,7 @@ export const PinPlayer = ({
   player: string;
   division: Division;
 }) => {
+  const { sendEvent } = useAnalytics();
   const { togglePin, isPinned } = usePinPlayer(tournamentId, player, division);
 
   return (
@@ -62,6 +65,13 @@ export const PinPlayer = ({
       size="sm"
       onClick={event => {
         event.stopPropagation();
+        if (!isPinned) {
+          sendEvent({
+            category: 'Pin Player',
+            action: 'click',
+            label: `Pin Player: ${player} - ${division} - ${tournamentId}`,
+          });
+        }
         togglePin();
       }}
     >
