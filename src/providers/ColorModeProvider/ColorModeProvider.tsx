@@ -14,9 +14,10 @@ type ColorModeContextType = [Theme | null, Dispatch<SetStateAction<Theme>>];
 const ColorModeContext = createContext<ColorModeContextType | undefined>(undefined);
 
 const prefersDarkMQ = '(prefers-color-scheme: dark)';
+const storageKey = 'PokemonTCGStandings:currentTheme';
 const getPreferredTheme = () => {
   if (typeof window !== 'undefined' && window.localStorage) {
-    const storedTheme = window.localStorage.getItem('demo-app-current-theme') as Theme;
+    const storedTheme = window.localStorage.getItem(storageKey) as Theme;
     if (storedTheme && themes.includes(storedTheme)) {
       return storedTheme;
     }
@@ -38,7 +39,7 @@ function ColorModeProvider({ children }: { children: ReactNode }) {
     root.classList.remove(isDark ? Theme.LIGHT : Theme.DARK);
     root.classList.add(existing);
 
-    localStorage.setItem('demo-app-current-theme', existing);
+    localStorage.setItem(storageKey, existing);
   };
 
   useEffect(() => {

@@ -1,25 +1,26 @@
 import { Link } from 'react-router-dom';
 import { useMemo, createContext, useContext, useCallback } from 'react';
-import { Heading } from 'components/Heading';
+
 import { useLocalStorage } from 'hooks/useLocalStorage';
-import { Button } from 'components/Button';
 
 import { useGetTournament } from 'queries/useGetTournament';
 import { useGetTournamentStandings } from 'queries/useGetTournamentStandings';
 
-import { getPlayerInfo } from 'utils/getPlayerInfo';
 import { createPlayerName } from 'utils/createPlayerName';
+import { createPlayerUrl } from 'utils/createPlayerUrl';
 
+import { Heading } from 'components/Heading';
+import { Button } from 'components/Button';
 import { ContentCard } from 'components/ContentCard';
 
 import { pinnedPlayersKey } from 'constants/siteKeys';
 
 import type { FC, ReactNode } from 'react';
-import type { Standing } from 'types/standing';
+import type { Division } from 'types/tournament';
 
 interface PinnedPlayersContextProps {
   pinnedPlayers: any;
-  unPinPlayer: (tournamentId: string, playerName: string) => void;
+  unPinPlayer: (tournamentId: string, playerName: string, division: Division) => void;
 }
 
 const PinnedPlayersContext = createContext<PinnedPlayersContextProps>({
@@ -31,16 +32,21 @@ export const PinnedPlayersProvider = ({ children }: { children: ReactNode }) => 
   const [pinnedPlayers, setPinnedPlayers] = useLocalStorage(pinnedPlayersKey, JSON.stringify({}));
 
   const unPinPlayer = useCallback(
-    (tournamentId: string, playerName: string) => {
+    (tournamentId: string, playerName: string, division: Division) => {
       const parsedPinPlayers = JSON.parse(pinnedPlayers);
-      if (parsedPinPlayers[tournamentId].includes(playerName)) {
-        parsedPinPlayers[tournamentId] = parsedPinPlayers[tournamentId].filter(
-          (p: string) => p !== playerName
+
+      const formattedPlayerName = createPlayerUrl(playerName);
+      if (parsedPinPlayers[tournamentId][division].includes(formattedPlayerName)) {
+        parsedPinPlayers[tournamentId][division] = parsedPinPlayers[tournamentId][division].filter(
+          (p: string) => p !== formattedPlayerName
         );
       }
 
-      // remove the tournament if there are no more players
-      if (parsedPinPlayers[tournamentId].length === 0) {
+      if (parsedPinPlayers[tournamentId][division].length === 0) {
+        delete parsedPinPlayers[tournamentId][division];
+      }
+
+      if (Object.keys(parsedPinPlayers[tournamentId]).length === 0) {
         delete parsedPinPlayers[tournamentId];
       }
 
@@ -60,37 +66,31 @@ const usePinnedPlayers = () => useContext(PinnedPlayersContext);
 
 interface PinedPlayerInfoProps {
   tournamentId: string;
-  playerName: string;
-  standings: Standing[];
+  player: any;
+  division: Division;
 }
 
-const PinedPlayerInfo: FC<PinedPlayerInfoProps> = ({ tournamentId, playerName, standings }) => {
+const PinedPlayerInfo: FC<PinedPlayerInfoProps> = ({ tournamentId, division, player }) => {
   const { unPinPlayer } = usePinnedPlayers();
-  const player = useMemo(() => {
-    if (!standings) return undefined;
-    const res = getPlayerInfo(standings, createPlayerName(playerName));
-    if (!res) throw new Error('Player not found');
-    return { ...res.player };
-  }, [standings, playerName]);
+
+  const playerName = useMemo(() => {
+    return createPlayerName(player.name);
+  }, [player]);
 
   const handleUnpinPlayer = useCallback(() => {
-    unPinPlayer(tournamentId, playerName);
-  }, [playerName, tournamentId, unPinPlayer]);
-
-  if (!player) {
-    return null;
-  }
+    unPinPlayer(tournamentId, playerName, division);
+  }, [division, playerName, tournamentId, unPinPlayer]);
 
   return (
     <li className="py-3 sm:py-4 w-full items-center pl-3 pr-6  text-gray-700 cursor-pointer  hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900 border-b border-gray-100 dark:border-gray-800 dark:text-gray-400">
-      <Link to={`/tournaments/${tournamentId}/${playerName}`}>
+      <Link to={`/tournaments/${tournamentId}/${division}/${playerName}`}>
         <div className="flex items-center justify-between">
           <div className="flex gap-4">
             <Heading level="4" className="mb-0">
               {player.placing}
             </Heading>
             <div className="flex flex-col">
-              {player.name}
+              {player.name} - {division}
               <p className="text-gray-500 dark:text-gray-400 mb-2">
                 {player.record.wins}-{player.record.losses}-{player.record.ties}
               </p>
@@ -115,34 +115,67 @@ const PinedPlayerInfo: FC<PinedPlayerInfoProps> = ({ tournamentId, playerName, s
   );
 };
 
+const DivisionPlayers = ({
+  tournamentId,
+  division,
+  players,
+}: {
+  tournamentId: string;
+  division: Division;
+  players: any;
+}) => {
+  const { data: standingsData } = useGetTournamentStandings({
+    tournamentId,
+    division,
+  });
+
+  const foundPlayers = useMemo(() => {
+    if (!standingsData) return [];
+    const formattedPlayers = players.map((player: string) => createPlayerName(player));
+    return standingsData.filter((standing: any) => {
+      return formattedPlayers.includes(standing.name);
+    });
+  }, [players, standingsData]);
+
+  return (
+    <>
+      {foundPlayers.map((player: any) => {
+        return (
+          <PinedPlayerInfo
+            tournamentId={tournamentId}
+            division={division}
+            player={player}
+            key={player.name}
+          />
+        );
+      })}
+    </>
+  );
+};
 interface PinnedPlayersContentProps {
   tournamentId: string;
-  players: any[];
+  players: any;
 }
 
 const PinnedPlayersContent: FC<PinnedPlayersContentProps> = ({ tournamentId, players }) => {
-  const { data: tournamentData, isLoading: isLoadingTournament } = useGetTournament(tournamentId);
-  const { data: standingsData, isLoading: isLoadingStandings } =
-    useGetTournamentStandings(tournamentId);
+  const { data: tournamentData } = useGetTournament(tournamentId);
 
-  if (isLoadingTournament || isLoadingStandings) {
-    return <div>Loading...</div>;
-  }
-
-  if (!tournamentData || !standingsData) {
+  if (!tournamentData) {
     return null;
   }
 
+  const divisions = Object.keys(players) as Division[];
+
   return (
-    <ContentCard title={tournamentData.name}>
+    <ContentCard title={`Pinned players for ${tournamentData.name}`}>
       <ul className="divide-y divide-gray-200 dark:divide-gray-700">
-        {players.map((player: string) => {
+        {divisions.map((division: Division) => {
           return (
-            <PinedPlayerInfo
-              key={player}
+            <DivisionPlayers
+              key={division}
               tournamentId={tournamentId}
-              playerName={player}
-              standings={standingsData}
+              division={division}
+              players={players[division]}
             />
           );
         })}
@@ -160,8 +193,6 @@ export const RawPinnedPlayers = () => {
 
   return (
     <div className="flex flex-col gap-4">
-      <Heading level="4">Pinned players</Heading>
-
       {Object.keys(pinnedPlayers).map(key => {
         return <PinnedPlayersContent key={key} tournamentId={key} players={pinnedPlayers[key]} />;
       })}

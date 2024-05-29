@@ -3,10 +3,10 @@ import axios from 'axios';
 import type { Tournament } from 'types/tournament';
 
 export const getPokeDataTournaments = async () => {
-  const url = 'https://pokedata.ovh/standings/tournaments/';
+  const url = 'https://www.pokedata.ovh/apiv2/tcg/tournaments';
 
   const response = await axios.get(url).then(res => {
-    const data = res.data as Tournament[];
+    const data = res.data.tcg.data as Tournament[];
     return data;
   });
 

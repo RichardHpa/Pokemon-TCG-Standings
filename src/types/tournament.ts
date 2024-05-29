@@ -25,3 +25,5 @@ export interface Tournament {
   lastUpdated: string;
   rk9link: string;
 }
+
+export type Division = 'juniors' | 'seniors' | 'masters';

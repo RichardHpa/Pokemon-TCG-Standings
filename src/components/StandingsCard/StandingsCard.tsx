@@ -6,6 +6,7 @@ import { Button } from 'components/Button';
 
 import type { FC } from 'react';
 import type { Standing } from 'types/standing';
+import { Division } from 'types/tournament';
 
 interface StandingsCardProps {
   standings?: Standing[];
@@ -13,6 +14,7 @@ interface StandingsCardProps {
   title: string;
   scrollToPlayerIndex?: number;
   allowReset?: boolean;
+  division: Division;
 }
 
 export const StandingsCard: FC<StandingsCardProps> = ({
@@ -21,6 +23,7 @@ export const StandingsCard: FC<StandingsCardProps> = ({
   title,
   scrollToPlayerIndex,
   allowReset = false,
+  division,
 }) => {
   const listRef = useRef<HTMLUListElement>(null);
   const [initialDelay, setInitialDelay] = useState(false);
@@ -58,7 +61,12 @@ export const StandingsCard: FC<StandingsCardProps> = ({
         )
       }
     >
-      <StandingsList standings={standings} tournamentId={tournamentId} ref={listRef} />
+      <StandingsList
+        standings={standings}
+        tournamentId={tournamentId}
+        ref={listRef}
+        division={division}
+      />
     </ContentCard>
   );
 };

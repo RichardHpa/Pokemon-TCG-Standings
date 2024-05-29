@@ -4,7 +4,7 @@ import { useQuery } from '@tanstack/react-query';
 
 import { PencilIcon, ArrowRightIcon } from '@heroicons/react/20/solid';
 
-import { createTournament } from 'graphql/mutations';
+// import { createTournament } from 'graphql/mutations';
 import { ModelSortDirection } from 'API';
 import { useQueryClient } from '@tanstack/react-query';
 

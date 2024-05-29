@@ -1,61 +1,16 @@
-import { Suspense } from 'react';
-import { Await, useLoaderData, Outlet, Link } from 'react-router-dom';
+import { useLoaderData } from 'react-router-dom';
 
 import { useGetTournamentStandings } from 'queries/useGetTournamentStandings';
 import { useGetTournament } from 'queries/useGetTournament';
 
-import { Heading } from 'components/Heading';
 import { StandingsCard } from 'components/StandingsCard';
-import { Indicator } from 'components/Indicator';
+
 import { SEO } from 'components/SEO';
 import { Card } from 'components/Card';
 
 import { useFuse } from 'hooks/useFuse';
 
-import { RUNNING } from 'constants/tournament';
-
-import { formatDate } from 'helpers/formatDate';
-
 import type { Tournament as TournamentType } from 'types/tournament';
-
-export const TournamentOutlet = () => {
-  const data = useLoaderData() as {
-    tournamentId: string;
-    tournament: TournamentType;
-  };
-
-  return (
-    <Suspense fallback={<p>Loading Tournament...</p>}>
-      <div className="flex flex-col gap-4 flex-grow">
-        <Await resolve={data.tournament} errorElement={<p>Error loading your tournaments</p>}>
-          {tournament => {
-            return (
-              <>
-                <div className="flex justify-between">
-                  <div className="mb-4">
-                    <Link to={`/tournaments/${data.tournamentId}`}>
-                      <Heading level="3" className="hover:underline cursor-pointer">
-                        {tournament.name}
-                      </Heading>
-                    </Link>
-
-                    <p className="text-gray-500 dark:text-gray-400">
-                      {formatDate(tournament.date.start, 'MMMM d, yyyy')} -{' '}
-                      {formatDate(tournament.date.end, 'MMMM d, yyyy')}
-                    </p>
-                  </div>
-                  {tournament.tournamentStatus === RUNNING && <Indicator />}
-                </div>
-
-                <Outlet />
-              </>
-            );
-          }}
-        </Await>
-      </div>
-    </Suspense>
-  );
-};
 
 const fuseOptions = {
   isCaseSensitive: false,
@@ -74,8 +29,12 @@ const fuseOptions = {
   keys: ['name'],
 };
 
-const TournamentStandings = ({ tournamentId }: { tournamentId: string }) => {
-  const { data: standings = [], isLoading } = useGetTournamentStandings(tournamentId);
+const TournamentStandings = ({ tournament }: { tournament: TournamentType }) => {
+  const { id: tournamentId } = tournament;
+  const { data: standings = [], isLoading } = useGetTournamentStandings({
+    tournamentId,
+    division: 'masters',
+  });
 
   const { query, onSearch, searching, hits } = useFuse(standings, fuseOptions);
 
@@ -127,6 +86,7 @@ const TournamentStandings = ({ tournamentId }: { tournamentId: string }) => {
           standings={hits}
           tournamentId={tournamentId}
           title={searching ? `Search results for ${query}` : 'Current masters standings'}
+          division="masters"
         />
       </div>
     </>
@@ -150,29 +110,8 @@ export const Tournament = () => {
     <>
       <SEO title="Tournaments" />
 
-      <div>
-        <section className="bg-white dark:bg-gray-900">
-          <div className="max-w-screen-xl px-4 py-2  mx-auto text-center  lg:px-6">
-            <dl className="grid max-w-screen-md gap-8 mx-auto text-gray-900 grid-cols-3 dark:text-white">
-              <div className="flex flex-col items-center justify-center">
-                <dt className="mb-2 text-3xl md:text-4xl font-extrabold">{data.players.masters}</dt>
-                <dd className="font-light text-gray-500 dark:text-gray-400">Masters</dd>
-              </div>
-              <div className="flex flex-col items-center justify-center">
-                <dt className="mb-2 text-3xl md:text-4xl font-extrabold">{data.players.seniors}</dt>
-                <dd className="font-light text-gray-500 dark:text-gray-400">Seniors</dd>
-              </div>
-              <div className="flex flex-col items-center justify-center">
-                <dt className="mb-2 text-3xl md:text-4xl font-extrabold">{data.players.juniors}</dt>
-                <dd className="font-light text-gray-500 dark:text-gray-400">Juniors</dd>
-              </div>
-            </dl>
-          </div>
-        </section>
-      </div>
-
       <div className="flex-grow flex flex-col gap-4">
-        <TournamentStandings tournamentId={tournamentId} />
+        <TournamentStandings tournament={data} />
       </div>
     </>
   );

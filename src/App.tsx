@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { Outlet, createBrowserRouter, RouterProvider, defer } from 'react-router-dom';
+import { Outlet, createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { ErrorBoundary } from 'react-error-boundary';
@@ -8,30 +8,29 @@ import { Amplify } from 'aws-amplify';
 import { AuthLayout } from 'layouts/AuthLayout';
 import { Navbar } from 'components/Navbar';
 
-// TODO: refactor these to also include loaders
-import { Player, Tournaments, Tournament, About } from './pages';
+import { About } from './pages';
 import { Home } from 'pages/Home';
-import { TournamentOutlet } from 'pages/Tournament';
-import { Division, divisionLoader } from 'pages/Admin/Division';
+
+import {
+  Division as AdminDivision,
+  divisionLoader as adminDivisionLoader,
+} from 'pages/Admin/Division';
 import {
   Tournament as AdminTournament,
   EditTournament,
   tournamentLoader as adminTournamentLoader,
 } from 'pages/Admin/Tournament';
+import { tournamentsLoader, Tournaments } from 'pages/Tournaments';
+import { tournamentLoader, Tournament, TournamentOutlet } from 'pages/Tournament';
+import { playerLoader, Player } from 'pages/Player';
+import { divisionLoader, Division } from 'pages/Tournament/Division';
 
 import { DefaultError } from 'errors/DefaultError';
-
-import { tournamentsQuery } from 'queries/useGetTournaments';
-import { tournamentQuery } from 'queries/useGetTournament';
-import { tournamentStandingsQuery } from 'queries/useGetTournamentStandings';
 
 import { useAnalytics } from 'hooks/useAnalytics';
 
 import { FetchingProvider } from 'context/FetchingContext';
 import config from './amplifyconfiguration.json';
-
-import type { QueryClient as QueryClientType } from '@tanstack/react-query';
-import type { LoaderFunctionArgs } from 'react-router-dom';
 
 Amplify.configure(config);
 
@@ -59,64 +58,6 @@ const Layout = () => {
     </div>
   );
 };
-
-// Loaders
-// Load all the tournaments
-export const tournamentsLoader = (client: QueryClientType) => async () => {
-  const tournamentsLoaderPromise = client.ensureQueryData(tournamentsQuery());
-
-  return defer({
-    tournaments: tournamentsLoaderPromise,
-  });
-};
-
-// Load all tournaments and find the one with the matching id
-export const tournamentLoader =
-  (client: QueryClientType) =>
-  async ({ params }: LoaderFunctionArgs) => {
-    if (!params.tournamentId) {
-      throw new Error('No tournamentId provided');
-    }
-
-    const tournamentLoaderPromise = client.ensureQueryData(tournamentQuery(params.tournamentId));
-
-    return defer({
-      tournamentId: params.tournamentId,
-      tournament: tournamentLoaderPromise,
-    });
-  };
-
-export const singleTournamentLoader = async ({ params }: LoaderFunctionArgs) => {
-  if (!params.tournamentId) {
-    throw new Error('No tournamentId provided');
-  }
-
-  return {
-    tournamentId: params.tournamentId,
-  };
-};
-
-export const singlePlayerLoader =
-  (client: QueryClientType) =>
-  async ({ params }: LoaderFunctionArgs) => {
-    if (!params.playerName) {
-      throw new Error('No playerName provided');
-    }
-
-    if (!params.tournamentId) {
-      throw new Error('No tournamentId provided');
-    }
-
-    const tournamentStandingLoader = client.ensureQueryData(
-      tournamentStandingsQuery(params.tournamentId)
-    );
-
-    return defer({
-      tournamentId: params.tournamentId,
-      playerName: params.playerName,
-      standings: tournamentStandingLoader,
-    });
-  };
 
 const router = createBrowserRouter([
   {
@@ -149,8 +90,8 @@ const router = createBrowserRouter([
                 children: [
                   {
                     index: true,
-                    loader: divisionLoader,
-                    element: <Division />,
+                    loader: adminDivisionLoader,
+                    element: <AdminDivision />,
                   },
                   {
                     path: ':tournamentId',
@@ -202,15 +143,37 @@ const router = createBrowserRouter([
                 children: [
                   {
                     index: true,
-                    loader: singleTournamentLoader,
+                    loader: tournamentLoader(queryClient),
                     element: <Tournament />,
                   },
                   {
-                    path: ':playerName',
-                    loader: singlePlayerLoader(queryClient),
-                    element: <Player />,
+                    path: ':division',
+                    children: [
+                      {
+                        index: true,
+                        loader: divisionLoader(queryClient),
+                        element: <Division />,
+                      },
+                      {
+                        path: ':playerName',
+                        loader: playerLoader(queryClient),
+                        element: <Player />,
+                      },
+                    ],
                   },
                 ],
+                // children: [
+                //   {
+                //     index: true,
+                //     loader: singleTournamentLoader,
+                //     element: <Tournament />,
+                //   },
+                //   {
+                //     path: ':playerName',
+                //     loader: singlePlayerLoader(queryClient),
+                //     element: <Player />,
+                //   },
+                // ],
               },
             ],
           },
