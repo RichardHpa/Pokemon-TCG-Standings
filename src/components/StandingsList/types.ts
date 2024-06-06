@@ -6,4 +6,5 @@ export interface StandingsListProps {
   tournamentId: string;
   division: Division;
   hideArchetypes?: boolean;
+  fixedContainerHeight?: boolean;
 }

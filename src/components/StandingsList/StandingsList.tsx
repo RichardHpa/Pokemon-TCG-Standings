@@ -15,7 +15,16 @@ const innerElementType = forwardRef(({ ...rest }: ListChildComponentProps, ref) 
 
 // pass forward ref to component
 export const StandingsList = forwardRef(
-  ({ standings, tournamentId, division, hideArchetypes = false }: StandingsListProps, ref) => {
+  (
+    {
+      standings,
+      tournamentId,
+      division,
+      hideArchetypes = false,
+      fixedContainerHeight = false,
+    }: StandingsListProps,
+    ref
+  ) => {
     const listRef = useRef(null);
 
     useImperativeHandle(ref, () => listRef.current);
@@ -24,37 +33,63 @@ export const StandingsList = forwardRef(
       return null;
     }
 
+    if (fixedContainerHeight) {
+      return (
+        <div className="h-full">
+          <AutoSizer>
+            {/* @ts-ignore */}
+            {({ height, width }: Size) => {
+              return (
+                <List
+                  ref={listRef}
+                  innerElementType={innerElementType}
+                  itemData={standings}
+                  itemCount={standings.length}
+                  itemSize={77}
+                  height={height}
+                  width={width}
+                >
+                  {({ data, index, style }) => {
+                    return (
+                      <StandingRow
+                        tournamentId={tournamentId}
+                        division={division}
+                        player={data[index]}
+                        style={style}
+                        hideArchetypes={hideArchetypes}
+                      />
+                    );
+                  }}
+                </List>
+              );
+            }}
+          </AutoSizer>
+        </div>
+      );
+    }
+
     return (
-      <div className="h-full">
-        <AutoSizer>
-          {/* @ts-ignore */}
-          {({ height, width }: Size) => {
-            return (
-              <List
-                ref={listRef}
-                innerElementType={innerElementType}
-                itemData={standings}
-                itemCount={standings.length}
-                itemSize={77}
-                height={height}
-                width={width}
-              >
-                {({ data, index, style }) => {
-                  return (
-                    <StandingRow
-                      tournamentId={tournamentId}
-                      division={division}
-                      player={data[index]}
-                      style={style}
-                      hideArchetypes={hideArchetypes}
-                    />
-                  );
-                }}
-              </List>
-            );
-          }}
-        </AutoSizer>
-      </div>
+      <List
+        ref={listRef}
+        innerElementType={innerElementType}
+        itemData={standings}
+        itemCount={standings.length}
+        itemSize={77}
+        height={77 * standings.length}
+        width="100%"
+      >
+        {({ data, index, style }) => {
+          return (
+            <StandingRow
+              tournamentId={tournamentId}
+              division={division}
+              player={data[index]}
+              style={style}
+              hideArchetypes={hideArchetypes}
+            />
+          );
+        }}
+      </List>
     );
   }
 );

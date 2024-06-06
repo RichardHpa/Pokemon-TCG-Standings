@@ -13,7 +13,7 @@ import { tournamentLoader, Tournament, TournamentOutlet } from 'pages/Tournament
 import { playerLoader, Player } from 'pages/Player';
 import { divisionLoader, Division } from 'pages/Tournament/Division';
 
-import { ImageTest } from 'pages/images/ImageTest';
+import { Images } from 'pages/images/Images';
 
 import { DefaultError } from 'errors/DefaultError';
 
@@ -63,7 +63,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'images',
-        element: <ImageTest />,
+        element: <Images />,
       },
       {
         path: 'about',

@@ -29,7 +29,7 @@ const Forms = ({ pokemon, forms }: { pokemon: string; forms: PokemonInfo['forms'
   );
 };
 
-export const ImageTest = () => {
+export const Images = () => {
   const imageArray = Object.entries(pokemonList).map(([key, value]) => {
     return { name: key, ...value };
   });

@@ -16,6 +16,7 @@ interface StandingsCardProps {
   allowReset?: boolean;
   division: Division;
   hideArchetypes?: boolean;
+  fixedContainerHeight?: boolean;
 }
 
 export const StandingsCard: FC<StandingsCardProps> = ({
@@ -26,6 +27,7 @@ export const StandingsCard: FC<StandingsCardProps> = ({
   allowReset = false,
   division,
   hideArchetypes = false,
+  fixedContainerHeight = false,
 }) => {
   const listRef = useRef<HTMLUListElement>(null);
   const [initialDelay, setInitialDelay] = useState(false);
@@ -69,6 +71,7 @@ export const StandingsCard: FC<StandingsCardProps> = ({
         ref={listRef}
         division={division}
         hideArchetypes={hideArchetypes}
+        fixedContainerHeight={fixedContainerHeight}
       />
     </ContentCard>
   );

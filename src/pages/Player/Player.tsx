@@ -102,6 +102,7 @@ const PlayerInfo: FC<PlayerInfoProps> = ({ tournamentId, playerName, division })
               allowReset
               division={division}
               hideArchetypes
+              fixedContainerHeight
             />
           </div>
         </div>

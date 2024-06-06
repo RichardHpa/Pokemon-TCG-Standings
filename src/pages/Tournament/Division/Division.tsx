@@ -83,7 +83,7 @@ export const Division = () => {
         </div>
       </Card>
 
-      <div className="h-[600px] flex-grow">
+      <div className="flex-grow">
         <StandingsCard
           standings={hits}
           division={division}
