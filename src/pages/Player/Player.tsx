@@ -9,6 +9,7 @@ import { ContentCard } from 'components/ContentCard';
 import { SimilarPointsList } from 'components/SimilarPointsList';
 import { StandingsCard } from 'components/StandingsCard';
 import { SEO } from 'components/SEO';
+import { ArchetypeSprites } from 'components/ArchetypeSprites';
 
 import { createPlayerName } from 'utils/createPlayerName';
 import { getPlayerInfo } from 'utils/getPlayerInfo';
@@ -58,9 +59,13 @@ const PlayerInfo: FC<PlayerInfoProps> = ({ tournamentId, playerName, division })
       <SEO title={`${player.name}`} />
 
       <div>
-        <Heading level="4">
-          {player.name} {player.placing > data.length && ` - (DQ)`}
-        </Heading>
+        <div className="flex justify-between">
+          <Heading level="4">
+            {player.name} {player.placing > data.length && ` - (DQ)`}
+          </Heading>
+
+          {player.decklist && <ArchetypeSprites decklist={player.decklist} />}
+        </div>
 
         <p className="text-gray-500 dark:text-gray-400 mb-2">
           {player.record.wins}-{player.record.losses}-{player.record.ties} ({totalPoints})
@@ -96,6 +101,7 @@ const PlayerInfo: FC<PlayerInfoProps> = ({ tournamentId, playerName, division })
               scrollToPlayerIndex={player.placing - 1}
               allowReset
               division={division}
+              hideArchetypes
             />
           </div>
         </div>

@@ -5,4 +5,5 @@ export interface StandingsListProps {
   standings?: Standing[];
   tournamentId: string;
   division: Division;
+  hideArchetypes?: boolean;
 }

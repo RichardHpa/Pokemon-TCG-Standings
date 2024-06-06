@@ -15,6 +15,7 @@ interface StandingsCardProps {
   scrollToPlayerIndex?: number;
   allowReset?: boolean;
   division: Division;
+  hideArchetypes?: boolean;
 }
 
 export const StandingsCard: FC<StandingsCardProps> = ({
@@ -24,6 +25,7 @@ export const StandingsCard: FC<StandingsCardProps> = ({
   scrollToPlayerIndex,
   allowReset = false,
   division,
+  hideArchetypes = false,
 }) => {
   const listRef = useRef<HTMLUListElement>(null);
   const [initialDelay, setInitialDelay] = useState(false);
@@ -66,6 +68,7 @@ export const StandingsCard: FC<StandingsCardProps> = ({
         tournamentId={tournamentId}
         ref={listRef}
         division={division}
+        hideArchetypes={hideArchetypes}
       />
     </ContentCard>
   );
