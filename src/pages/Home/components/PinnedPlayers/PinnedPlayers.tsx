@@ -164,6 +164,10 @@ const PinnedPlayersContent: FC<PinnedPlayersContentProps> = ({ tournamentId, pla
     return null;
   }
 
+  if (tournamentData.tournamentStatus !== 'running') {
+    return null;
+  }
+
   const divisions = Object.keys(players) as Division[];
 
   return (

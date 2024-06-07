@@ -14,8 +14,15 @@ export interface Rounds {
   [key: string]: Round;
 }
 
+interface PokemonCard {
+  count: number;
+  name: string;
+  number: string;
+  set: string;
+}
+
 export interface DeckList {
-  pokemon: unknown[];
+  pokemon: PokemonCard[];
   trainer: unknown[];
   energy: unknown[];
 }

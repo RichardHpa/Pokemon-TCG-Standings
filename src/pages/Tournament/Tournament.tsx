@@ -81,7 +81,7 @@ const TournamentStandings = ({ tournament }: { tournament: TournamentType }) => 
         </div>
       </Card>
 
-      <div className="h-[600px] flex-grow">
+      <div className="flex-grow">
         <StandingsCard
           standings={hits}
           tournamentId={tournamentId}

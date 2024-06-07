@@ -1,5 +1,5 @@
 import Fuse from 'fuse.js';
-import { useCallback, useMemo, useState, useEffect } from 'react';
+import { useCallback, useMemo, useState } from 'react';
 import lodashDebounce from 'lodash/debounce';
 
 import type { IFuseOptions } from 'fuse.js';

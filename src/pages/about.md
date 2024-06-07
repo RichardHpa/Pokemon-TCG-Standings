@@ -16,11 +16,7 @@ Some features I would like to add are:
 
 - More detailed information about the tournaments
 - More detailed information about the players
-- Follow specific tournaments
 - Follow specific decks
-- Add in Seniors and Juniors data (which I already have but just don't displayed yet)
-
-As you also may have noticed, this isn't hosted on a domain but rather on github pages. I would like to move this to a proper domain, but I am not sure if I will be able to do that, but I only want to commit to it if I know that this site is useful. Plus servers aren't free, and I am not sure if I want to pay for one just yet. But if you find this site useful, then I will be more than happy to move it to a proper domain.
 
 If you did find the site useful, please let me know. Or even better help me fund it, which could help me add more features and better stability. The best way to do that is to follow the link below and buy me a coffee (since there is no "Buy me pokemon cards" service).
 
