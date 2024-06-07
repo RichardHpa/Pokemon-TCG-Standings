@@ -22,6 +22,7 @@ export const StandingsList = forwardRef(
       division,
       hideArchetypes = false,
       fixedContainerHeight = false,
+      tournamentStatus,
     }: StandingsListProps,
     ref
   ) => {
@@ -57,6 +58,7 @@ export const StandingsList = forwardRef(
                         player={data[index]}
                         style={style}
                         hideArchetypes={hideArchetypes}
+                        tournamentStatus={tournamentStatus}
                       />
                     );
                   }}
@@ -86,6 +88,7 @@ export const StandingsList = forwardRef(
               player={data[index]}
               style={style}
               hideArchetypes={hideArchetypes}
+              tournamentStatus={tournamentStatus}
             />
           );
         }}

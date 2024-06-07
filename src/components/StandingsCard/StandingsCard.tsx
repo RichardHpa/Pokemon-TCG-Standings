@@ -4,6 +4,8 @@ import { StandingsList } from 'components/StandingsList';
 import { ContentCard } from 'components/ContentCard';
 import { Button } from 'components/Button';
 
+import { useGetTournament } from 'queries/useGetTournament';
+
 import type { FC } from 'react';
 import type { Standing } from 'types/standing';
 import { Division } from 'types/tournament';
@@ -31,6 +33,8 @@ export const StandingsCard: FC<StandingsCardProps> = ({
 }) => {
   const listRef = useRef<HTMLUListElement>(null);
   const [initialDelay, setInitialDelay] = useState(false);
+
+  const { data: tournament } = useGetTournament(tournamentId);
 
   useEffect(() => {
     // this is to demonstrate a case where the rendering
@@ -68,6 +72,7 @@ export const StandingsCard: FC<StandingsCardProps> = ({
       <StandingsList
         standings={standings}
         tournamentId={tournamentId}
+        tournamentStatus={tournament?.tournamentStatus}
         ref={listRef}
         division={division}
         hideArchetypes={hideArchetypes}

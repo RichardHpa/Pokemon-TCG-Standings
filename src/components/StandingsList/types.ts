@@ -1,9 +1,10 @@
 import { Standing } from 'types/standing';
-import { Division } from 'types/tournament';
+import { Division, Tournament } from 'types/tournament';
 
 export interface StandingsListProps {
   standings?: Standing[];
   tournamentId: string;
+  tournamentStatus?: Tournament['tournamentStatus'];
   division: Division;
   hideArchetypes?: boolean;
   fixedContainerHeight?: boolean;

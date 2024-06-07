@@ -12,8 +12,11 @@ import type { Division as DivisionType } from 'types/tournament';
 
 const fuseOptions = {
   isCaseSensitive: false,
-  includeMatches: false,
+  includeMatches: true,
   keys: ['name'],
+  threshold: 0.8,
+  includeScore: true,
+  findAllMatches: true,
 };
 
 export const Division = () => {

@@ -8,7 +8,7 @@ import { ArchetypeSprites } from 'components/ArchetypeSprites';
 import { createPlayerUrl } from 'utils/createPlayerUrl';
 
 import type { Standing } from 'types/standing';
-import type { Division } from 'types/tournament';
+import type { Division, Tournament } from 'types/tournament';
 import type { FC, CSSProperties } from 'react';
 
 interface StandingRowProps {
@@ -17,6 +17,7 @@ interface StandingRowProps {
   division: Division;
   style: CSSProperties;
   hideArchetypes?: boolean;
+  tournamentStatus?: Tournament['tournamentStatus'];
 }
 
 export const StandingRow: FC<StandingRowProps> = ({
@@ -25,6 +26,7 @@ export const StandingRow: FC<StandingRowProps> = ({
   division,
   style,
   hideArchetypes = false,
+  tournamentStatus,
 }) => {
   const navigate = useNavigate();
 
@@ -75,11 +77,13 @@ export const StandingRow: FC<StandingRowProps> = ({
             </svg>
           </div>
         )}
-        <PinPlayer
-          tournamentId={tournamentId}
-          player={createPlayerUrl(player.name)}
-          division={division}
-        />
+        {tournamentStatus === 'running' && (
+          <PinPlayer
+            tournamentId={tournamentId}
+            player={createPlayerUrl(player.name)}
+            division={division}
+          />
+        )}
       </div>
     </li>
   );
