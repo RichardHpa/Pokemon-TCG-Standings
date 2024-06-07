@@ -1,0 +1,1 @@
+export { ArchetypeSprites } from './ArchetypeSprites';

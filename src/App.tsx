@@ -25,6 +25,8 @@ import { tournamentLoader, Tournament, TournamentOutlet } from 'pages/Tournament
 import { playerLoader, Player } from 'pages/Player';
 import { divisionLoader, Division } from 'pages/Tournament/Division';
 
+import { Images } from 'pages/images/Images';
+
 import { DefaultError } from 'errors/DefaultError';
 
 import { useAnalytics } from 'hooks/useAnalytics';
@@ -123,7 +125,10 @@ const router = createBrowserRouter([
             loader: tournamentsLoader(queryClient),
             element: <Home />,
           },
-
+          {
+            path: 'images',
+            element: <Images />,
+          },
           {
             path: 'about',
             element: <About />,

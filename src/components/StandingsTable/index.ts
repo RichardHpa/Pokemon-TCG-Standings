@@ -1,1 +1,0 @@
-export { StandingsTable } from './StandingsTable';
