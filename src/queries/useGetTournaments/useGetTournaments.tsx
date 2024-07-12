@@ -15,6 +15,7 @@ export const tournamentsQuery = () =>
           statusText: `No tournaments found`,
         });
       }
+
       return tournaments;
     },
     refetchOnMount: false,
