@@ -1,0 +1,1 @@
+export { useGetTournamentByStatus } from './useGetTournamentByStatus';

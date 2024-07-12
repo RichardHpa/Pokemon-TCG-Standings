@@ -1,1 +1,0 @@
-export { useGetRunningTournaments } from './useGetRunningTournaments';
