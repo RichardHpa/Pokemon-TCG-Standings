@@ -1,3 +1,4 @@
+import { vi } from 'vitest';
 import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
@@ -11,7 +12,7 @@ describe('Button', () => {
   });
 
   test('renders Button with onClick', async () => {
-    const onClick = jest.fn();
+    const onClick = vi.fn();
     render(<Button onClick={onClick}>Test</Button>);
     userEvent.click(screen.getByRole('button'));
     await waitFor(() => expect(onClick).toHaveBeenCalled());
