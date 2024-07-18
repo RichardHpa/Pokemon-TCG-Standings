@@ -25,6 +25,7 @@ export default defineConfig(({ mode }) => {
       setupFiles: './src/setupTests.ts',
       css: true,
     },
+    assetsInclude: ['**/*.md'],
   };
 });
 
