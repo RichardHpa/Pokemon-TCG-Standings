@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { Outlet, createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { Outlet, createBrowserRouter, RouterProvider, defer } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { ErrorBoundary } from 'react-error-boundary';
@@ -12,6 +12,8 @@ import { tournamentsLoader, Tournaments } from 'pages/Tournaments';
 import { tournamentLoader, Tournament, TournamentOutlet } from 'pages/Tournament';
 import { playerLoader, Player } from 'pages/Player';
 import { divisionLoader, Division } from 'pages/Tournament/Division';
+
+import { tournamentsQuery } from 'queries/useGetTournaments';
 
 import { Images } from 'pages/images/Images';
 
@@ -46,6 +48,13 @@ const Layout = () => {
   );
 };
 
+function testLoading() {
+  return defer({
+    // no await!
+    someData: queryClient.fetchQuery(tournamentsQuery()),
+  });
+}
+
 const router = createBrowserRouter([
   {
     path: '/',
@@ -58,7 +67,6 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        loader: tournamentsLoader(queryClient),
         element: <Home />,
       },
       {
@@ -120,7 +128,6 @@ export function Fallback() {
 
 function fallbackRender({ error }: { error: Error }) {
   // Call resetErrorBoundary() to reset the error boundary and retry the render.
-
   return (
     <div role="alert">
       <p>Something went wrong:</p>
@@ -135,8 +142,8 @@ function App() {
       <QueryClientProvider client={queryClient}>
         <FetchingProvider>
           <RouterProvider router={router} fallbackElement={<Fallback />} />
-          <ReactQueryDevtools />
         </FetchingProvider>
+        <ReactQueryDevtools />
       </QueryClientProvider>
     </ErrorBoundary>
   );
