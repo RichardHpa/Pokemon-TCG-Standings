@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 import { Card } from 'components/Card';
 import { StandingsCard } from 'components/StandingsCard';
@@ -20,7 +20,7 @@ const fuseOptions = {
 };
 
 export const Division = () => {
-  const { division, tournamentId } = useLoaderData() as {
+  const { division, tournamentId } = useParams() as {
     division: DivisionType;
     tournamentId: string;
   };

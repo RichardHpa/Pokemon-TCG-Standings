@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { Outlet, createBrowserRouter, RouterProvider, defer } from 'react-router-dom';
+import { Outlet, createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { ErrorBoundary } from 'react-error-boundary';
@@ -8,12 +8,10 @@ import { Navbar } from 'components/Navbar';
 
 import { About } from './pages';
 import { Home } from 'pages/Home';
-import { tournamentsLoader, Tournaments } from 'pages/Tournaments';
-import { tournamentLoader, Tournament, TournamentOutlet } from 'pages/Tournament';
-import { playerLoader, Player } from 'pages/Player';
-import { divisionLoader, Division } from 'pages/Tournament/Division';
-
-import { tournamentsQuery } from 'queries/useGetTournaments';
+import { Tournaments } from 'pages/Tournaments';
+import { Tournament, TournamentOutlet } from 'pages/Tournament';
+import { Player } from 'pages/Player';
+import { Division } from 'pages/Tournament/Division';
 
 import { Images } from 'pages/images/Images';
 
@@ -48,13 +46,6 @@ const Layout = () => {
   );
 };
 
-function testLoading() {
-  return defer({
-    // no await!
-    someData: queryClient.fetchQuery(tournamentsQuery()),
-  });
-}
-
 const router = createBrowserRouter([
   {
     path: '/',
@@ -82,17 +73,14 @@ const router = createBrowserRouter([
         children: [
           {
             index: true,
-            loader: tournamentsLoader(queryClient),
             element: <Tournaments />,
           },
           {
             path: ':tournamentId',
-            loader: tournamentLoader(queryClient),
             element: <TournamentOutlet />,
             children: [
               {
                 index: true,
-                loader: tournamentLoader(queryClient),
                 element: <Tournament />,
               },
               {
@@ -100,12 +88,10 @@ const router = createBrowserRouter([
                 children: [
                   {
                     index: true,
-                    loader: divisionLoader(queryClient),
                     element: <Division />,
                   },
                   {
                     path: ':playerName',
-                    loader: playerLoader(queryClient),
                     element: <Player />,
                   },
                 ],

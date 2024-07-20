@@ -1,4 +1,4 @@
-import { useLoaderData } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 import { useGetTournamentStandings } from 'queries/useGetTournamentStandings';
 import { useGetTournament } from 'queries/useGetTournament';
@@ -94,8 +94,7 @@ const TournamentStandings = ({ tournament }: { tournament: TournamentType }) => 
 };
 
 export const Tournament = () => {
-  const { tournamentId } = useLoaderData() as { tournamentId: string };
-
+  const { tournamentId } = useParams() as { tournamentId: string };
   const { data, isLoading } = useGetTournament(tournamentId);
 
   if (isLoading) {
