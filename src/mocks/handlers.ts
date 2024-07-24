@@ -1,5 +1,6 @@
 import { http, HttpResponse, passthrough } from 'msw';
-import { tournamentsUrl, basePokeDataUrl } from 'constants/api';
+
+import { tournamentsUrl, basePokeDataUrl } from '../constants/api';
 
 export const handlers = [
   http.get(tournamentsUrl, () => {
