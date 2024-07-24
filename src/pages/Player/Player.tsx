@@ -1,5 +1,4 @@
-import { Suspense } from 'react';
-import { Await, useLoaderData } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { useMemo } from 'react';
 import { useQuery } from '@tanstack/react-query';
 
@@ -17,7 +16,6 @@ import { calculatePoints } from 'utils/calculatePoints';
 
 import { getPokedataStandings } from 'api/getPokedataStandings';
 
-import type { Standing } from 'types/standing';
 import type { FC } from 'react';
 import { Division } from 'types/tournament';
 
@@ -112,22 +110,25 @@ const PlayerInfo: FC<PlayerInfoProps> = ({ tournamentId, playerName, division })
 };
 
 export const Player = () => {
-  const data = useLoaderData() as {
+  const { tournamentId, playerName, division } = useParams() as {
     tournamentId: string;
     playerName: string;
-    standings: Standing[];
+    // standings: Standing[];
     division: Division;
   };
 
-  return (
-    <Suspense fallback={<p>Loading player info...</p>}>
-      <Await resolve={data.standings} errorElement={<p>Error loading the player</p>}>
-        <PlayerInfo
-          tournamentId={data.tournamentId}
-          playerName={data.playerName}
-          division={data.division}
-        />
-      </Await>
-    </Suspense>
-  );
+  const { data, isLoading, isError } = useQuery({
+    queryKey: ['tournamentId', tournamentId, division, 'standings'],
+    queryFn: () => getPokedataStandings({ tournamentId, division }),
+  });
+
+  if (isLoading) {
+    return <p>Loading player info...</p>;
+  }
+
+  if (isError || !data) {
+    return <p>Error loading the player</p>;
+  }
+
+  return <PlayerInfo tournamentId={tournamentId} playerName={playerName} division={division} />;
 };

@@ -1,6 +1,3 @@
-import { Suspense } from 'react';
-import { Await, useLoaderData } from 'react-router-dom';
-
 import { Heading } from 'components/Heading';
 import { SEO } from 'components/SEO';
 import { TournamentsCard } from 'components/TournamentsCard';
@@ -10,15 +7,24 @@ import { PinnedPlayers } from './components/PinnedPlayers';
 import { useGetLatestTournaments } from 'hooks/useGetLatestTournaments';
 import { useGetTournamentByStatus } from 'hooks/useGetTournamentByStatus';
 
-import type { Tournament } from 'types/tournament';
-
-const HomeContent = () => {
-  const { runningTournaments, finishedTournaments } = useGetTournamentByStatus();
+export const Home = () => {
+  const { runningTournaments, finishedTournaments, isError, isLoading } =
+    useGetTournamentByStatus();
 
   const latestTournaments = useGetLatestTournaments(finishedTournaments, 6);
 
+  if (isError) {
+    return <p>Error loading the tournaments</p>;
+  }
+
+  if (isLoading) {
+    return <p>Loading tournament info...</p>;
+  }
+
   return (
     <div className="flex flex-col gap-4">
+      <SEO />
+
       <Heading level="3">Keep up to date with current Pokemon TCG tournaments</Heading>
 
       <PinnedPlayers />
@@ -34,20 +40,5 @@ const HomeContent = () => {
         <TournamentsCard title="Latest Tournaments" tournaments={latestTournaments} />
       )}
     </div>
-  );
-};
-
-export const Home = () => {
-  const data = useLoaderData() as {
-    tournaments: Tournament[];
-  };
-
-  return (
-    <Suspense fallback={<p>Loading tournament info...</p>}>
-      <SEO />
-      <Await resolve={data.tournaments} errorElement={<p>Error loading the tournaments</p>}>
-        <HomeContent />
-      </Await>
-    </Suspense>
   );
 };

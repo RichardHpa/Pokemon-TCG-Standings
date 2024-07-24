@@ -8,10 +8,10 @@ import { Navbar } from 'components/Navbar';
 
 import { About } from './pages';
 import { Home } from 'pages/Home';
-import { tournamentsLoader, Tournaments } from 'pages/Tournaments';
-import { tournamentLoader, Tournament, TournamentOutlet } from 'pages/Tournament';
-import { playerLoader, Player } from 'pages/Player';
-import { divisionLoader, Division } from 'pages/Tournament/Division';
+import { Tournaments } from 'pages/Tournaments';
+import { Tournament, TournamentOutlet } from 'pages/Tournament';
+import { Player } from 'pages/Player';
+import { Division } from 'pages/Tournament/Division';
 
 import { Images } from 'pages/images/Images';
 
@@ -58,7 +58,6 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        loader: tournamentsLoader(queryClient),
         element: <Home />,
       },
       {
@@ -74,17 +73,14 @@ const router = createBrowserRouter([
         children: [
           {
             index: true,
-            loader: tournamentsLoader(queryClient),
             element: <Tournaments />,
           },
           {
             path: ':tournamentId',
-            loader: tournamentLoader(queryClient),
             element: <TournamentOutlet />,
             children: [
               {
                 index: true,
-                loader: tournamentLoader(queryClient),
                 element: <Tournament />,
               },
               {
@@ -92,12 +88,10 @@ const router = createBrowserRouter([
                 children: [
                   {
                     index: true,
-                    loader: divisionLoader(queryClient),
                     element: <Division />,
                   },
                   {
                     path: ':playerName',
-                    loader: playerLoader(queryClient),
                     element: <Player />,
                   },
                 ],
@@ -120,7 +114,6 @@ export function Fallback() {
 
 function fallbackRender({ error }: { error: Error }) {
   // Call resetErrorBoundary() to reset the error boundary and retry the render.
-
   return (
     <div role="alert">
       <p>Something went wrong:</p>
@@ -135,8 +128,8 @@ function App() {
       <QueryClientProvider client={queryClient}>
         <FetchingProvider>
           <RouterProvider router={router} fallbackElement={<Fallback />} />
-          <ReactQueryDevtools />
         </FetchingProvider>
+        <ReactQueryDevtools />
       </QueryClientProvider>
     </ErrorBoundary>
   );

@@ -25,6 +25,8 @@ export const tournamentStandingsQuery = ({
       }
       return standings;
     },
+    staleTime: 1000 * 60 * 5, // 5 minutes,
+    structuralSharing: false,
   });
 
 export const useGetTournamentStandings = ({
