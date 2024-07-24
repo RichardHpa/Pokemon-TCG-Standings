@@ -28,7 +28,7 @@ interface PlayerInfoProps {
 const PlayerInfo: FC<PlayerInfoProps> = ({ tournamentId, playerName, division }) => {
   // since we cant get a single player, we need to fetch all the standings and then find the player
   const { data, isLoading } = useQuery({
-    queryKey: ['tournamentId', tournamentId, division, 'standings'],
+    queryKey: ['tournament', tournamentId, division, 'standings'],
     queryFn: () => getPokedataStandings({ tournamentId, division }),
   });
 
@@ -113,12 +113,11 @@ export const Player = () => {
   const { tournamentId, playerName, division } = useParams() as {
     tournamentId: string;
     playerName: string;
-    // standings: Standing[];
     division: Division;
   };
 
   const { data, isLoading, isError } = useQuery({
-    queryKey: ['tournamentId', tournamentId, division, 'standings'],
+    queryKey: ['tournament', tournamentId, division, 'standings'],
     queryFn: () => getPokedataStandings({ tournamentId, division }),
   });
 

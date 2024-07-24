@@ -1,5 +1,4 @@
 import { useRef, useEffect, useState, useCallback } from 'react';
-import { FixedSizeList as List } from 'react-window';
 import { StandingsList } from 'components/StandingsList';
 import { ContentCard } from 'components/ContentCard';
 import { Button } from 'components/Button';
@@ -32,24 +31,24 @@ export const StandingsCard: FC<StandingsCardProps> = ({
   fixedContainerHeight = false,
 }) => {
   const listRef = useRef<HTMLUListElement>(null);
-  // const [initialDelay, setInitialDelay] = useState(false);
+  const [initialDelay, setInitialDelay] = useState(false);
 
   const { data: tournament } = useGetTournament(tournamentId);
 
-  // useEffect(() => {
-  //   // this is to demonstrate a case where the rendering
-  //   // of the variable size list is delayed for whatever
-  //   // reason. E.g. the surrounding container dimensions
-  //   // need to be determined first before the list can scroll in the use effect below
-  //   setTimeout(() => setInitialDelay(true), 100);
-  // }, []);
+  useEffect(() => {
+    // this is to demonstrate a case where the rendering
+    // of the variable size list is delayed for whatever
+    // reason. E.g. the surrounding container dimensions
+    // need to be determined first before the list can scroll in the use effect below
+    setTimeout(() => setInitialDelay(true), 100);
+  }, []);
 
-  // useEffect(() => {
-  //   if (scrollToPlayerIndex && listRef.current) {
-  //     // @ts-expect-error
-  //     listRef.current.scrollToItem(scrollToPlayerIndex, 'start');
-  //   }
-  // }, [initialDelay, scrollToPlayerIndex]);
+  useEffect(() => {
+    if (scrollToPlayerIndex && listRef.current) {
+      // @ts-expect-error
+      listRef.current.scrollToItem(scrollToPlayerIndex, 'start');
+    }
+  }, [initialDelay, scrollToPlayerIndex]);
 
   const resetScroll = useCallback(() => {
     if (scrollToPlayerIndex && listRef.current) {
