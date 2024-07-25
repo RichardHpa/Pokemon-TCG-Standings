@@ -4,6 +4,17 @@ import { defineConfig, loadEnv, Plugin } from 'vite';
 import react from '@vitejs/plugin-react';
 import tsconfigPaths from 'vite-tsconfig-paths';
 
+const resolveFixup = {
+  name: 'resolve-fixup',
+  setup(build) {
+    build.onResolve({ filter: /react-virtualized$/ }, async args => {
+      return {
+        path: resolve('./node_modules/react-virtualized/dist/umd/react-virtualized.js'),
+      };
+    });
+  },
+};
+
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
   setEnv(mode);
@@ -26,6 +37,11 @@ export default defineConfig(({ mode }) => {
       css: true,
     },
     assetsInclude: ['**/*.md'],
+    optimizeDeps: {
+      esbuildOptions: {
+        plugins: [resolveFixup],
+      },
+    },
   };
 });
 

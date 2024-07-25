@@ -3,15 +3,11 @@ import AutoSizer from 'react-virtualized-auto-sizer';
 import { FixedSizeList as List } from 'react-window';
 
 import { StandingRow } from './StandingRow';
+import { InnerElement } from './InnerElement';
+import { WindowScrollVirtualizedList } from './WindowScrollVirtualizedList';
 
-import type { ListChildComponentProps } from 'react-window';
 import type { Size } from 'react-virtualized-auto-sizer';
 import type { StandingsListProps } from './types';
-
-const innerElementType = forwardRef(({ ...rest }: ListChildComponentProps, ref) => {
-  // @ts-expect-error
-  return <ul ref={ref} {...rest} className="divide-y divide-gray-200 dark:divide-gray-700" />;
-});
 
 // pass forward ref to component
 export const StandingsList = forwardRef(
@@ -38,24 +34,22 @@ export const StandingsList = forwardRef(
       return (
         <div className="h-full">
           <AutoSizer>
-            {/* @ts-ignore */}
             {({ height, width }: Size) => {
               return (
                 <List
                   ref={listRef}
-                  innerElementType={innerElementType}
-                  itemData={standings}
                   itemCount={standings.length}
                   itemSize={77}
-                  height={height}
                   width={width}
+                  height={height}
+                  innerElementType={InnerElement}
                 >
-                  {({ data, index, style }) => {
+                  {({ index, style }) => {
                     return (
                       <StandingRow
                         tournamentId={tournamentId}
                         division={division}
-                        player={data[index]}
+                        player={standings[index]}
                         style={style}
                         hideArchetypes={hideArchetypes}
                         tournamentStatus={tournamentStatus}
@@ -71,28 +65,11 @@ export const StandingsList = forwardRef(
     }
 
     return (
-      <List
-        ref={listRef}
-        innerElementType={innerElementType}
-        itemData={standings}
-        itemCount={standings.length}
-        itemSize={77}
-        height={77 * standings.length}
-        width="100%"
-      >
-        {({ data, index, style }) => {
-          return (
-            <StandingRow
-              tournamentId={tournamentId}
-              division={division}
-              player={data[index]}
-              style={style}
-              hideArchetypes={hideArchetypes}
-              tournamentStatus={tournamentStatus}
-            />
-          );
-        }}
-      </List>
+      <WindowScrollVirtualizedList
+        data={standings}
+        division={division}
+        tournamentId={tournamentId}
+      />
     );
   }
 );
