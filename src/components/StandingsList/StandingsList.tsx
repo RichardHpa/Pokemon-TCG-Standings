@@ -71,30 +71,5 @@ export const StandingsList = forwardRef(
         tournamentId={tournamentId}
       />
     );
-
-    // return (
-    //   <List
-    //     ref={listRef}
-    //     innerElementType={innerElementType}
-    //     itemData={standings}
-    //     itemCount={standings.length}
-    //     itemSize={77}
-    //     height={77 * standings.length}
-    //     width="100%"
-    //   >
-    //     {({ data, index, style }) => {
-    //       return (
-    //         <StandingRow
-    //           tournamentId={tournamentId}
-    //           division={division}
-    //           player={data[index]}
-    //           style={style}
-    //           hideArchetypes={hideArchetypes}
-    //           tournamentStatus={tournamentStatus}
-    //         />
-    //       );
-    //     }}
-    //   </List>
-    // );
   }
 );
