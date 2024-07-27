@@ -2,11 +2,11 @@ import axios from 'axios';
 
 import type { Tournament } from 'types/tournament';
 
-export const getPokeDataTournaments = async () => {
-  const url = 'https://www.pokedata.ovh/apiv2/tcg/tournaments';
+const url = 'https://www.pokedata.ovh/apiv2/tcg/tournaments';
 
+export const getPokeDataTournaments = async (): Promise<Tournament[]> => {
   const response = await axios.get(url).then(res => {
-    const data = res.data.tcg.data as Tournament[];
+    const data = res.data.tcg.data;
     return data;
   });
 
