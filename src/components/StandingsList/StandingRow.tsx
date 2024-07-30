@@ -77,13 +77,13 @@ export const StandingRow: FC<StandingRowProps> = ({
             </svg>
           </div>
         )}
-        {tournamentStatus === 'running' && (
-          <PinPlayer
-            tournamentId={tournamentId}
-            player={createPlayerUrl(player.name)}
-            division={division}
-          />
-        )}
+        {/* {tournamentStatus === 'running' && ( */}
+        <PinPlayer
+          tournamentId={tournamentId}
+          player={createPlayerUrl(player.name)}
+          division={division}
+        />
+        {/* )} */}
       </div>
     </li>
   );

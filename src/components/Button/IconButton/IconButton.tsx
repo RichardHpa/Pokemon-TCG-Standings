@@ -13,6 +13,7 @@ export const IconButton: FC<IconButtonProps> = ({
   color = 'primary',
   variant = 'outlined',
   disabled = false,
+  ...props
 }) => {
   const RenderedIcon = cloneElement(icon, {
     className: iconButtonClasses.icon,
@@ -28,6 +29,8 @@ export const IconButton: FC<IconButtonProps> = ({
         buttonClasses.variant[variant][color].dark,
         { [buttonClasses.disabled]: disabled }
       )}
+      disabled={disabled}
+      {...props}
     >
       {RenderedIcon}
       <span className="sr-only">{alt}</span>

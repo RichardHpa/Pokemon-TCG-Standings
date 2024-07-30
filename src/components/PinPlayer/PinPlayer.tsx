@@ -1,8 +1,14 @@
 import { useMemo } from 'react';
 import { Button } from 'components/Button';
 
+import { IconButton } from 'components/Button/IconButton';
+import { PinIcon } from 'icons/PinIcon';
+
+import { useLikes } from 'providers/PinnedPlayersProvider/PinnedPlayersProvider';
+
 import { useAnalytics } from 'hooks/useAnalytics';
 import { useLocalStorage } from 'hooks/useLocalStorage';
+import { usePinnedPlayers } from 'pages/Home/components/PinnedPlayers/PinnedPlayers';
 
 import { pinnedPlayersKey } from 'constants/siteKeys';
 import { Division } from 'types/tournament';
@@ -56,7 +62,9 @@ export const PinPlayer = ({
   division: Division;
 }) => {
   const { sendEvent } = useAnalytics();
-  const { togglePin, isPinned } = usePinPlayer(tournamentId, player, division);
+
+  const { toggleLike, isLiked } = useLikes();
+  const isPinned = isLiked(player);
 
   return (
     <Button
@@ -72,7 +80,7 @@ export const PinPlayer = ({
             label: `Pin Player: ${player} - ${division} - ${tournamentId}`,
           });
         }
-        togglePin();
+        toggleLike(player);
       }}
     >
       {isPinned ? 'Unpin' : 'Pin'}

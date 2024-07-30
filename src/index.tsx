@@ -4,7 +4,10 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'flowbite';
+import { PinnedPlayersProvider } from 'pages/Home/components/PinnedPlayers/PinnedPlayers';
 import { worker } from './mocks/browser';
+
+import { PinnedPlayersProvider as PinnedPlayerProvider2 } from 'providers/PinnedPlayersProvider/PinnedPlayersProvider';
 
 import { ColorModeProvider } from 'providers/ColorModeProvider';
 import { HelmetProvider } from 'react-helmet-async';
@@ -15,6 +18,7 @@ const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 async function enableMocking() {
   return worker.start({
     onUnhandledRequest(request, print) {
+      return;
       if (process.env.NODE_ENV !== 'development') {
         return;
       }
@@ -32,9 +36,13 @@ enableMocking().then(() => {
   root.render(
     <React.StrictMode>
       <HelmetProvider>
-        <ColorModeProvider>
-          <App />
-        </ColorModeProvider>
+        <PinnedPlayerProvider2>
+          <PinnedPlayersProvider>
+            <ColorModeProvider>
+              <App />
+            </ColorModeProvider>
+          </PinnedPlayersProvider>
+        </PinnedPlayerProvider2>
       </HelmetProvider>
     </React.StrictMode>
   );
