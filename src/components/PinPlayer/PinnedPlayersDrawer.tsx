@@ -1,15 +1,14 @@
 import { useState, useCallback, useRef } from 'react';
 import clsx from 'clsx';
 
-import { usePinnedPlayers } from 'pages/Home/components/PinnedPlayers/PinnedPlayers';
-import { useLikes } from 'providers/PinnedPlayersProvider/PinnedPlayersProvider';
+import { usePinnedPlayers } from 'providers/PinnedPlayersProvider';
 import { PinIcon } from 'icons/PinIcon';
 
 import { IconButton } from 'components/Button/IconButton';
 
 export const PinnedPlayersDrawer = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-  const { likes } = useLikes();
+  const { parsedPlayers } = usePinnedPlayers();
 
   const handleToggleDrawer = useCallback(() => {
     setIsDrawerOpen(prevIsDrawerOpen => !prevIsDrawerOpen);
@@ -25,13 +24,12 @@ export const PinnedPlayersDrawer = () => {
         icon={<PinIcon />}
         alt="View Pinned Players"
         onClick={handleToggleDrawer}
-        // disabled={Object.keys(pinnedPlayers).length === 0}
-        disabled={likes.length === 0}
+        disabled={Object.keys(parsedPlayers).length === 0}
       />
 
       <div
         className={clsx(
-          'fixed top-0 right-0 z-40 h-screen p-4 overflow-y-auto transition-transform  bg-white w-96 dark:bg-gray-800',
+          'fixed top-0 right-0 z-40 h-screen p-4 overflow-y-auto transition-transform  bg-white w-96 dark:bg-gray-800 border-l border-gray-500 dark:border-gray-400',
           {
             'translate-x-full': !isDrawerOpen,
           }
@@ -66,24 +64,35 @@ export const PinnedPlayersDrawer = () => {
               d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
             />
           </svg>
-          <span className="sr-only">Close menu</span>
+          <span className="sr-only">Close pinned players</span>
         </button>
 
-        {likes.length === 0 && (
+        {Object.keys(parsedPlayers).length === 0 && (
           <div className="flex items-center justify-center p-4 text-gray-500 dark:text-gray-400">
             No pinned players
           </div>
         )}
 
-        {likes.map((like: any) => {
+        {Object.keys(parsedPlayers).map(tournamentId => {
+          const tournament = parsedPlayers[tournamentId];
           return (
             <div
-              key={like}
-              className="flex items-center justify-between p-2 border-b border-gray-100 dark:border-gray-800"
+              key={tournamentId}
+              className="mb-4 pb-4 border-b border-gray-500 dark:border-gray-400"
             >
-              <div className="flex items-center gap-4">
-                <span>{like}</span>
-              </div>
+              <h6 className="text-sm font-semibold text-gray-500 dark:text-gray-400">
+                {tournamentId}
+              </h6>
+              <ul>
+                {Object.keys(tournament).map(division => {
+                  const players = tournament[division];
+                  return players.map((player: string) => (
+                    <li key={player} className="text-gray-700 dark:text-gray-400">
+                      {player} - {division}
+                    </li>
+                  ));
+                })}
+              </ul>
             </div>
           );
         })}

@@ -25,7 +25,10 @@ export const WindowScrollVirtualizedList = ({
 
   return (
     <>
-      <WindowScroller onScroll={onScroll}>{() => <div />}</WindowScroller>
+      <WindowScroller onScroll={onScroll}>
+        {/* @ts-expect-error */}
+        {({ registerChild }) => <div ref={registerChild} />}
+      </WindowScroller>
 
       <FixedSizeList
         ref={list}
