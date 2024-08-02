@@ -2,8 +2,6 @@ import { Heading } from 'components/Heading';
 import { SEO } from 'components/SEO';
 import { TournamentsCard } from 'components/TournamentsCard';
 
-// import { PinnedPlayers } from './components/innedPlayers';
-
 import { useGetLatestTournaments } from 'hooks/useGetLatestTournaments';
 import { useGetTournamentByStatus } from 'hooks/useGetTournamentByStatus';
 
@@ -26,8 +24,6 @@ export const Home = () => {
       <SEO />
 
       <Heading level="3">Keep up to date with current Pokemon TCG tournaments</Heading>
-
-      {/* <PinnedPlayers /> */}
 
       {runningTournaments && runningTournaments.length > 0 && (
         <TournamentsCard
