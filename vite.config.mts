@@ -19,6 +19,7 @@ const resolveFixup = {
 export default defineConfig(({ mode }) => {
   setEnv(mode);
   return {
+    base: './',
     plugins: [
       react(),
       tsconfigPaths(),
