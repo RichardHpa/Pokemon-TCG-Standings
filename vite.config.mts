@@ -42,7 +42,7 @@ export default defineConfig(({ mode }) => {
         plugins: [resolveFixup],
       },
     },
-    base: './',
+    base: '/',
     resolve: {
       alias: {
         './runtimeConfig': './runtimeConfig.browser',
