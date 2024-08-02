@@ -11,7 +11,7 @@ import { PinnedPlayersProvider } from 'providers/PinnedPlayersProvider';
 import { ColorModeProvider } from 'providers/ColorModeProvider';
 import { HelmetProvider } from 'react-helmet-async';
 
-const allowedPaths = ['/sprites/', '/logo192.png', 'src/images/'];
+const allowedPaths = ['/sprites/', '/logo192.png', 'src/images/', '/localData/'];
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 async function enableMocking() {

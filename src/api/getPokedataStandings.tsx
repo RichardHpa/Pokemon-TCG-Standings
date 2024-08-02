@@ -10,10 +10,10 @@ export const getPokedataStandings = async ({
   tournamentId: string;
   division: Division;
 }): Promise<Standing[]> => {
-  const url = `https://www.pokedata.ovh/apiv2/division/${division}/id/${tournamentId}`;
+  const url = `https://www.pokedata.ovh/apiv2/division/${division}/id/${tournamentId}/tcg`;
 
   const response = await axios.get(url).then(res => {
-    const data = res.data[0].tournament_data[0].data;
+    const data = res.data.tournament_data[0].data;
     return data;
   });
 
