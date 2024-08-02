@@ -17,7 +17,6 @@ const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 async function enableMocking() {
   return worker.start({
     onUnhandledRequest(request, print) {
-      return;
       if (process.env.NODE_ENV !== 'development') {
         return;
       }
