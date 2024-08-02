@@ -1,0 +1,7176 @@
+{
+  "type": "tcg",
+  "tournament": {
+    "id": "0000084",
+    "name": "2023 Lima TCG Special Event",
+    "date": {
+      "start": "2023-05-27",
+      "end": "2023-05-28"
+    },
+    "decklists": 0,
+    "players": {
+      "juniors": 13,
+      "seniors": 0,
+      "masters": 123
+    },
+    "winners": {
+      "juniors": "Agustín Videla [CL]",
+      "seniors": null,
+      "masters": "Rodrigo Montoya [PE]"
+    },
+    "tournamentStatus": "finished",
+    "roundNumbers": {
+      "juniors": 7,
+      "seniors": null,
+      "masters": 10
+    },
+    "lastUpdated": "2023-06-25 00:39:57.793777",
+    "rk9link": "Lima"
+  },
+  "tournament_data": [
+    {
+      "division": "masters",
+      "data": [
+        {
+          "name": "Rodrigo Montoya [PE]",
+          "placing": 1,
+          "record": {
+            "wins": 8,
+            "losses": 0,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.25,
+            "opp": 0.25,
+            "oppopp": 0.25
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Oscar Taboada Rojas [PE]",
+              "result": "W",
+              "table": 39
+            },
+            "2": {
+              "name": "Cristopher Gonzalez Diaz [CL]",
+              "result": "T",
+              "table": 12
+            },
+            "3": {
+              "name": "Jorge Flores [PE]",
+              "result": "W",
+              "table": 29
+            },
+            "4": {
+              "name": "Diego Omar Campos Velazquez [MX]",
+              "result": "W",
+              "table": 12
+            },
+            "5": {
+              "name": "Giovanno Ponce [CL]",
+              "result": "W",
+              "table": 9
+            },
+            "6": {
+              "name": "Ajay Sridhar [US]",
+              "result": "W",
+              "table": 4
+            },
+            "7": {
+              "name": "Joaquín Orrego [PE]",
+              "result": "T",
+              "table": 2
+            },
+            "8": {
+              "name": "Andrés Guzmán [MX]",
+              "result": "W",
+              "table": 3
+            },
+            "9": {
+              "name": "Diego Cassiraga [AR]",
+              "result": "W",
+              "table": 2
+            },
+            "10": {
+              "name": "Fabrizio Bellucci [AR]",
+              "result": "W",
+              "table": 1
+            }
+          }
+        },
+        {
+          "name": "Fabrizio Bellucci [AR]",
+          "placing": 2,
+          "record": {
+            "wins": 7,
+            "losses": 1,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.25,
+            "opp": 0.25,
+            "oppopp": 0.25
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Alberto Araya [CL]",
+              "result": "W",
+              "table": 44
+            },
+            "2": {
+              "name": "Fernando Ernesto Toratto Bullon [PE]",
+              "result": "T",
+              "table": 17
+            },
+            "3": {
+              "name": "Andres Saldarriaga [PE]",
+              "result": "W",
+              "table": 25
+            },
+            "4": {
+              "name": "Orlando Manque [CL]",
+              "result": "T",
+              "table": 15
+            },
+            "5": {
+              "name": "Alexander Monroy Hidalgo [PE]",
+              "result": "W",
+              "table": 20
+            },
+            "6": {
+              "name": "Carlos Medina Astete [PE]",
+              "result": "W",
+              "table": 9
+            },
+            "7": {
+              "name": "Cristopher Gonzalez Diaz [CL]",
+              "result": "W",
+              "table": 5
+            },
+            "8": {
+              "name": "Joaquín Orrego [PE]",
+              "result": "W",
+              "table": 2
+            },
+            "9": {
+              "name": "Miguel Lopez [MX]",
+              "result": "W",
+              "table": 1
+            },
+            "10": {
+              "name": "Rodrigo Montoya [PE]",
+              "result": "L",
+              "table": 1
+            }
+          }
+        },
+        {
+          "name": "Diego Cassiraga [AR]",
+          "placing": 3,
+          "record": {
+            "wins": 6,
+            "losses": 1,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.25,
+            "opp": 0.25,
+            "oppopp": 0.25
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Paulo Gouveia De Freitas [BR]",
+              "result": "W",
+              "table": 13
+            },
+            "2": {
+              "name": "Alberto Bonsanto [MX]",
+              "result": "W",
+              "table": 10
+            },
+            "3": {
+              "name": "Eduardo Paulini Villanueva [PE]",
+              "result": "W",
+              "table": 15
+            },
+            "4": {
+              "name": "Agustin Campo [AR]",
+              "result": "W",
+              "table": 8
+            },
+            "5": {
+              "name": "Hector Almeyda [PE]",
+              "result": "T",
+              "table": 8
+            },
+            "6": {
+              "name": "Fabrizio Inga [PE]",
+              "result": "W",
+              "table": 3
+            },
+            "7": {
+              "name": "Andrés Guzmán [MX]",
+              "result": "T",
+              "table": 3
+            },
+            "8": {
+              "name": "Ajay Sridhar [US]",
+              "result": "W",
+              "table": 4
+            },
+            "9": {
+              "name": "Rodrigo Montoya [PE]",
+              "result": "L",
+              "table": 2
+            }
+          }
+        },
+        {
+          "name": "Miguel Lopez [MX]",
+          "placing": 4,
+          "record": {
+            "wins": 6,
+            "losses": 2,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.25,
+            "opp": 0.25,
+            "oppopp": 0.25
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Gianmarco Antonio Gomez Hilario [PE]",
+              "result": "W",
+              "table": 25
+            },
+            "2": {
+              "name": "Angel Aranibar [PE]",
+              "result": "W",
+              "table": 33
+            },
+            "3": {
+              "name": "Victor Muñoz [CL]",
+              "result": "W",
+              "table": 12
+            },
+            "4": {
+              "name": "Hector Almeyda [PE]",
+              "result": "L",
+              "table": 9
+            },
+            "5": {
+              "name": "Agustin Campo [AR]",
+              "result": "W",
+              "table": 18
+            },
+            "6": {
+              "name": "Diego Omar Campos Velazquez [MX]",
+              "result": "T",
+              "table": 7
+            },
+            "7": {
+              "name": "Sheldon Kuppan [GB]",
+              "result": "W",
+              "table": 8
+            },
+            "8": {
+              "name": "Damian Fernandez Urroz [AR]",
+              "result": "W",
+              "table": 1
+            },
+            "9": {
+              "name": "Fabrizio Bellucci [AR]",
+              "result": "L",
+              "table": 1
+            }
+          }
+        },
+        {
+          "name": "Damian Fernandez Urroz [AR]",
+          "placing": 5,
+          "record": {
+            "wins": 6,
+            "losses": 2,
+            "ties": 0
+          },
+          "resistances": {
+            "self": 0.25,
+            "opp": 0.25,
+            "oppopp": 0.25
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Aravena Briones [CL]",
+              "result": "W",
+              "table": 62
+            },
+            "2": {
+              "name": "Omar Fernández [CR]",
+              "result": "L",
+              "table": 32
+            },
+            "3": {
+              "name": "Richard Ruiz Vargas [PE]",
+              "result": "W",
+              "table": 38
+            },
+            "4": {
+              "name": "Eduardo Mendoza [PE]",
+              "result": "W",
+              "table": 23
+            },
+            "5": {
+              "name": "Eric Uriel Patlallan [AR]",
+              "result": "W",
+              "table": 14
+            },
+            "6": {
+              "name": "Pablo Leiva [CL]",
+              "result": "W",
+              "table": 6
+            },
+            "7": {
+              "name": "Fabrizio Inga [PE]",
+              "result": "W",
+              "table": 4
+            },
+            "8": {
+              "name": "Miguel Lopez [MX]",
+              "result": "L",
+              "table": 1
+            }
+          }
+        },
+        {
+          "name": "Joaquín Orrego [PE]",
+          "placing": 6,
+          "record": {
+            "wins": 5,
+            "losses": 1,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.25,
+            "opp": 0.25,
+            "oppopp": 0.25
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Andres Saldarriaga [PE]",
+              "result": "T",
+              "table": 47
+            },
+            "2": {
+              "name": "Christian Badenas [AR]",
+              "result": "W",
+              "table": 41
+            },
+            "3": {
+              "name": "Andre Mauro Vereau Guerra [PE]",
+              "result": "W",
+              "table": 26
+            },
+            "4": {
+              "name": "Marco José Zamudio Choy [PE]",
+              "result": "W",
+              "table": 13
+            },
+            "5": {
+              "name": "Fabricio Valdivia [PE]",
+              "result": "W",
+              "table": 11
+            },
+            "6": {
+              "name": "Hector Almeyda [PE]",
+              "result": "W",
+              "table": 5
+            },
+            "7": {
+              "name": "Rodrigo Montoya [PE]",
+              "result": "T",
+              "table": 2
+            },
+            "8": {
+              "name": "Fabrizio Bellucci [AR]",
+              "result": "L",
+              "table": 2
+            }
+          }
+        },
+        {
+          "name": "Andrés Guzmán [MX]",
+          "placing": 7,
+          "record": {
+            "wins": 5,
+            "losses": 2,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.25,
+            "opp": 0.25,
+            "oppopp": 0.25
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Jessica Mellanie Reyes Maury [PE]",
+              "result": "W",
+              "table": 65
+            },
+            "2": {
+              "name": "Santiago García Arrué [PE]",
+              "result": "W",
+              "table": 31
+            },
+            "3": {
+              "name": "Pablo Leiva [CL]",
+              "result": "W",
+              "table": 10
+            },
+            "4": {
+              "name": "Alexis Elefteriu [PE]",
+              "result": "W",
+              "table": 7
+            },
+            "5": {
+              "name": "Fabrizio Inga [PE]",
+              "result": "L",
+              "table": 7
+            },
+            "6": {
+              "name": "Juan Guillermo Lara [PE]",
+              "result": "W",
+              "table": 8
+            },
+            "7": {
+              "name": "Diego Cassiraga [AR]",
+              "result": "T",
+              "table": 3
+            },
+            "8": {
+              "name": "Rodrigo Montoya [PE]",
+              "result": "L",
+              "table": 3
+            }
+          }
+        },
+        {
+          "name": "Ajay Sridhar [US]",
+          "placing": 8,
+          "record": {
+            "wins": 5,
+            "losses": 2,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.25,
+            "opp": 0.25,
+            "oppopp": 0.25
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Alexiev Castro [PE]",
+              "result": "W",
+              "table": 57
+            },
+            "2": {
+              "name": "Jose Francisco Prada Talavera [PE]",
+              "result": "W",
+              "table": 25
+            },
+            "3": {
+              "name": "Diego Varea [PE]",
+              "result": "W",
+              "table": 13
+            },
+            "4": {
+              "name": "Giovanno Ponce [CL]",
+              "result": "T",
+              "table": 10
+            },
+            "5": {
+              "name": "Victor Allan Muñoz Morales [CL]",
+              "result": "W",
+              "table": 10
+            },
+            "6": {
+              "name": "Rodrigo Montoya [PE]",
+              "result": "L",
+              "table": 4
+            },
+            "7": {
+              "name": "Diego Omar Campos Velazquez [MX]",
+              "result": "W",
+              "table": 9
+            },
+            "8": {
+              "name": "Diego Cassiraga [AR]",
+              "result": "L",
+              "table": 4
+            }
+          }
+        },
+        {
+          "name": "Victor Allan Muñoz Morales [CL]",
+          "placing": 9,
+          "record": {
+            "wins": 5,
+            "losses": 1,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.7857142857142857,
+            "opp": 0.5357142857142857,
+            "oppopp": 0.5851554907677355
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Alexis Hormazabal [CL]",
+              "result": "W",
+              "table": 38
+            },
+            "2": {
+              "name": "Marco José Zamudio Choy [PE]",
+              "result": "T",
+              "table": 27
+            },
+            "3": {
+              "name": "Alvaro Sanchez [CL]",
+              "result": "W",
+              "table": 21
+            },
+            "4": {
+              "name": "Javier Chelmes [CL]",
+              "result": "W",
+              "table": 14
+            },
+            "5": {
+              "name": "Ajay Sridhar [US]",
+              "result": "L",
+              "table": 10
+            },
+            "6": {
+              "name": "Manuel Alcaino [CL]",
+              "result": "W",
+              "table": 12
+            },
+            "7": {
+              "name": "Giovanno Ponce [CL]",
+              "result": "W",
+              "table": 6
+            }
+          }
+        },
+        {
+          "name": "Eduardo Paulini Villanueva [PE]",
+          "placing": 10,
+          "record": {
+            "wins": 5,
+            "losses": 1,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.7857142857142857,
+            "opp": 0.5272108843537414,
+            "oppopp": 0.5545432458697765
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "John Cartagena [PE]",
+              "result": "W",
+              "table": 26
+            },
+            "2": {
+              "name": "Renzo Angulo [PE]",
+              "result": "W",
+              "table": 22
+            },
+            "3": {
+              "name": "Diego Cassiraga [AR]",
+              "result": "L",
+              "table": 15
+            },
+            "4": {
+              "name": "Victor Muñoz [CL]",
+              "result": "W",
+              "table": 20
+            },
+            "5": {
+              "name": "Jorge Manuel Isuhuaylas Chávez [PE]",
+              "result": "T",
+              "table": 19
+            },
+            "6": {
+              "name": "Alonso Diaz [PE]",
+              "result": "W",
+              "table": 14
+            },
+            "7": {
+              "name": "Javier Chelmes [CL]",
+              "result": "W",
+              "table": 7
+            }
+          }
+        },
+        {
+          "name": "Fabrizio Inga [PE]",
+          "placing": 11,
+          "record": {
+            "wins": 5,
+            "losses": 2,
+            "ties": 0
+          },
+          "resistances": {
+            "self": 0.6666666666666666,
+            "opp": 0.7261904761904762,
+            "oppopp": 0.5912698412698413
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "BYE",
+              "result": "W",
+              "table": 0
+            },
+            "2": {
+              "name": "Matias Matricardi [AR]",
+              "result": "W",
+              "table": 34
+            },
+            "3": {
+              "name": "Carlos Medina Astete [PE]",
+              "result": "W",
+              "table": 18
+            },
+            "4": {
+              "name": "Eric Uriel Patlallan [AR]",
+              "result": "W",
+              "table": 11
+            },
+            "5": {
+              "name": "Andrés Guzmán [MX]",
+              "result": "W",
+              "table": 7
+            },
+            "6": {
+              "name": "Diego Cassiraga [AR]",
+              "result": "L",
+              "table": 3
+            },
+            "7": {
+              "name": "Damian Fernandez Urroz [AR]",
+              "result": "L",
+              "table": 4
+            }
+          }
+        },
+        {
+          "name": "Po Hsiung Hsu [CL]",
+          "placing": 12,
+          "record": {
+            "wins": 5,
+            "losses": 2,
+            "ties": 0
+          },
+          "resistances": {
+            "self": 0.7142857142857143,
+            "opp": 0.4727891156462585,
+            "oppopp": 0.5326368642695174
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Francisco Contreras Villa [CL]",
+              "result": "W",
+              "table": 20
+            },
+            "2": {
+              "name": "Diego Varea [PE]",
+              "result": "L",
+              "table": 19
+            },
+            "3": {
+              "name": "Tomas Riquelme [CL]",
+              "result": "L",
+              "table": 31
+            },
+            "4": {
+              "name": "Miguel Chozo Machuca [PE]",
+              "result": "W",
+              "table": 54
+            },
+            "5": {
+              "name": "Farleib Cuba [PE]",
+              "result": "W",
+              "table": 31
+            },
+            "6": {
+              "name": "Renzo Zambrano [PE]",
+              "result": "W",
+              "table": 18
+            },
+            "7": {
+              "name": "Carlos Medina Astete [PE]",
+              "result": "W",
+              "table": 14
+            }
+          }
+        },
+        {
+          "name": "Hector Almeyda [PE]",
+          "placing": 13,
+          "record": {
+            "wins": 4,
+            "losses": 1,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.7142857142857143,
+            "opp": 0.663265306122449,
+            "oppopp": 0.5510204081632654
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Vincent Quiroz [CL]",
+              "result": "W",
+              "table": 36
+            },
+            "2": {
+              "name": "Mario Cesar De La Cruz Llanos [PE]",
+              "result": "W",
+              "table": 13
+            },
+            "3": {
+              "name": "Manuel Alcaino [CL]",
+              "result": "W",
+              "table": 20
+            },
+            "4": {
+              "name": "Miguel Lopez [MX]",
+              "result": "W",
+              "table": 9
+            },
+            "5": {
+              "name": "Diego Cassiraga [AR]",
+              "result": "T",
+              "table": 8
+            },
+            "6": {
+              "name": "Joaquín Orrego [PE]",
+              "result": "L",
+              "table": 5
+            },
+            "7": {
+              "name": "Nicolas Galaz [CL]",
+              "result": "T",
+              "table": 10
+            }
+          }
+        },
+        {
+          "name": "Cristopher Gonzalez Diaz [CL]",
+          "placing": 14,
+          "record": {
+            "wins": 4,
+            "losses": 1,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.7142857142857143,
+            "opp": 0.6377551020408163,
+            "oppopp": 0.6261540330417882
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Jesus Alejandro Dominguez Jimenez [MX]",
+              "result": "W",
+              "table": 43
+            },
+            "2": {
+              "name": "Rodrigo Montoya [PE]",
+              "result": "T",
+              "table": 12
+            },
+            "3": {
+              "name": "Alexander Monroy Hidalgo [PE]",
+              "result": "T",
+              "table": 22
+            },
+            "4": {
+              "name": "Bruno Paredes [PE]",
+              "result": "W",
+              "table": 28
+            },
+            "5": {
+              "name": "Orlando Manque [CL]",
+              "result": "W",
+              "table": 21
+            },
+            "6": {
+              "name": "Jose Felix Monroy Hidalgo [PE]",
+              "result": "W",
+              "table": 10
+            },
+            "7": {
+              "name": "Fabrizio Bellucci [AR]",
+              "result": "L",
+              "table": 5
+            }
+          }
+        },
+        {
+          "name": "Orlando Manque [CL]",
+          "placing": 15,
+          "record": {
+            "wins": 4,
+            "losses": 1,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.7142857142857143,
+            "opp": 0.6003401360544218,
+            "oppopp": 0.535795270489148
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Hugo León [PE]",
+              "result": "W",
+              "table": 60
+            },
+            "2": {
+              "name": "Jorge Flores [PE]",
+              "result": "T",
+              "table": 23
+            },
+            "3": {
+              "name": "Miguel Ángel Linares [PE]",
+              "result": "W",
+              "table": 24
+            },
+            "4": {
+              "name": "Fabrizio Bellucci [AR]",
+              "result": "T",
+              "table": 15
+            },
+            "5": {
+              "name": "Cristopher Gonzalez Diaz [CL]",
+              "result": "L",
+              "table": 21
+            },
+            "6": {
+              "name": "Giovanni Peragallo Shand [CL]",
+              "result": "W",
+              "table": 25
+            },
+            "7": {
+              "name": "Jorge Villar [CL]",
+              "result": "W",
+              "table": 15
+            }
+          }
+        },
+        {
+          "name": "Alexander Monroy Hidalgo [PE]",
+          "placing": 16,
+          "record": {
+            "wins": 4,
+            "losses": 1,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.7142857142857143,
+            "opp": 0.5816326530612245,
+            "oppopp": 0.5484086491739554
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Cristhoper Martinez [PE]",
+              "result": "W",
+              "table": 68
+            },
+            "2": {
+              "name": "Bruno Paredes [PE]",
+              "result": "T",
+              "table": 20
+            },
+            "3": {
+              "name": "Cristopher Gonzalez Diaz [CL]",
+              "result": "T",
+              "table": 22
+            },
+            "4": {
+              "name": "Renzo Angulo [PE]",
+              "result": "W",
+              "table": 30
+            },
+            "5": {
+              "name": "Fabrizio Bellucci [AR]",
+              "result": "L",
+              "table": 20
+            },
+            "6": {
+              "name": "Bayron Quiroz Cortes [CL]",
+              "result": "W",
+              "table": 26
+            },
+            "7": {
+              "name": "Tomas Riquelme [CL]",
+              "result": "W",
+              "table": 16
+            }
+          }
+        },
+        {
+          "name": "Thiago Silva [BR]",
+          "placing": 17,
+          "record": {
+            "wins": 4,
+            "losses": 1,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.7142857142857143,
+            "opp": 0.5,
+            "oppopp": 0.5345602526724976
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Alfonso Herrera [PE]",
+              "result": "T",
+              "table": 16
+            },
+            "2": {
+              "name": "Andres Estefano Gajardo Lopehandia [CL]",
+              "result": "W",
+              "table": 43
+            },
+            "3": {
+              "name": "Bruno Paredes [PE]",
+              "result": "T",
+              "table": 27
+            },
+            "4": {
+              "name": "Jorge Manuel Isuhuaylas Chávez [PE]",
+              "result": "L",
+              "table": 29
+            },
+            "5": {
+              "name": "Miguel Ángel Linares [PE]",
+              "result": "W",
+              "table": 41
+            },
+            "6": {
+              "name": "Andrés Lostaunau [PE]",
+              "result": "W",
+              "table": 27
+            },
+            "7": {
+              "name": "Renzo Junior Velásquez Salazar [PE]",
+              "result": "W",
+              "table": 17
+            }
+          }
+        },
+        {
+          "name": "Diego Omar Campos Velazquez [MX]",
+          "placing": 18,
+          "record": {
+            "wins": 4,
+            "losses": 2,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.6428571428571429,
+            "opp": 0.7040816326530612,
+            "oppopp": 0.5680272108843537
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Jose Felix Monroy Hidalgo [PE]",
+              "result": "W",
+              "table": 28
+            },
+            "2": {
+              "name": "Andres Torres [CO]",
+              "result": "W",
+              "table": 11
+            },
+            "3": {
+              "name": "Fabricio Valdivia [PE]",
+              "result": "W",
+              "table": 16
+            },
+            "4": {
+              "name": "Rodrigo Montoya [PE]",
+              "result": "L",
+              "table": 12
+            },
+            "5": {
+              "name": "Santiago García Arrué [PE]",
+              "result": "W",
+              "table": 15
+            },
+            "6": {
+              "name": "Miguel Lopez [MX]",
+              "result": "T",
+              "table": 7
+            },
+            "7": {
+              "name": "Ajay Sridhar [US]",
+              "result": "L",
+              "table": 9
+            }
+          }
+        },
+        {
+          "name": "Pablo Leiva [CL]",
+          "placing": 19,
+          "record": {
+            "wins": 4,
+            "losses": 2,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.6428571428571429,
+            "opp": 0.6632653061224489,
+            "oppopp": 0.5716715257531585
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Tomas Riquelme [CL]",
+              "result": "W",
+              "table": 56
+            },
+            "2": {
+              "name": "Giovanni Peragallo Shand [CL]",
+              "result": "W",
+              "table": 35
+            },
+            "3": {
+              "name": "Andrés Guzmán [MX]",
+              "result": "L",
+              "table": 10
+            },
+            "4": {
+              "name": "Nicolas Galaz [CL]",
+              "result": "W",
+              "table": 26
+            },
+            "5": {
+              "name": "Alexis Elefteriu [PE]",
+              "result": "W",
+              "table": 16
+            },
+            "6": {
+              "name": "Damian Fernandez Urroz [AR]",
+              "result": "L",
+              "table": 6
+            },
+            "7": {
+              "name": "Eric Uriel Patlallan [AR]",
+              "result": "T",
+              "table": 11
+            }
+          }
+        },
+        {
+          "name": "Giovanno Ponce [CL]",
+          "placing": 20,
+          "record": {
+            "wins": 4,
+            "losses": 2,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.6428571428571429,
+            "opp": 0.6394557823129252,
+            "oppopp": 0.5483479105928085
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Nitish Doolub [GB]",
+              "result": "W",
+              "table": 64
+            },
+            "2": {
+              "name": "Grover Tranca Mendez [PE]",
+              "result": "W",
+              "table": 37
+            },
+            "3": {
+              "name": "Juan Guillermo Lara [PE]",
+              "result": "W",
+              "table": 19
+            },
+            "4": {
+              "name": "Ajay Sridhar [US]",
+              "result": "T",
+              "table": 10
+            },
+            "5": {
+              "name": "Rodrigo Montoya [PE]",
+              "result": "L",
+              "table": 9
+            },
+            "6": {
+              "name": "Diego Guillen Pelaez [PE]",
+              "result": "W",
+              "table": 13
+            },
+            "7": {
+              "name": "Victor Allan Muñoz Morales [CL]",
+              "result": "L",
+              "table": 6
+            }
+          }
+        },
+        {
+          "name": "Eric Uriel Patlallan [AR]",
+          "placing": 21,
+          "record": {
+            "wins": 4,
+            "losses": 2,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.6428571428571429,
+            "opp": 0.6156462585034014,
+            "oppopp": 0.5799319727891156
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Diego Leyva [PE]",
+              "result": "W",
+              "table": 10
+            },
+            "2": {
+              "name": "Diego Guillen Pelaez [PE]",
+              "result": "W",
+              "table": 18
+            },
+            "3": {
+              "name": "Demian Aguirre Zapata [CL]",
+              "result": "W",
+              "table": 17
+            },
+            "4": {
+              "name": "Fabrizio Inga [PE]",
+              "result": "L",
+              "table": 11
+            },
+            "5": {
+              "name": "Damian Fernandez Urroz [AR]",
+              "result": "L",
+              "table": 14
+            },
+            "6": {
+              "name": "Jorge Manuel Isuhuaylas Chávez [PE]",
+              "result": "W",
+              "table": 23
+            },
+            "7": {
+              "name": "Pablo Leiva [CL]",
+              "result": "T",
+              "table": 11
+            }
+          }
+        },
+        {
+          "name": "Agustin Campo [AR]",
+          "placing": 22,
+          "record": {
+            "wins": 4,
+            "losses": 2,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.6428571428571429,
+            "opp": 0.6020408163265306,
+            "oppopp": 0.5276967930029154
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Carlos Alberto Sosa Pezo [PE]",
+              "result": "W",
+              "table": 32
+            },
+            "2": {
+              "name": "Renzo Junior Velásquez Salazar [PE]",
+              "result": "W",
+              "table": 21
+            },
+            "3": {
+              "name": "Alonso Diaz [PE]",
+              "result": "W",
+              "table": 14
+            },
+            "4": {
+              "name": "Diego Cassiraga [AR]",
+              "result": "L",
+              "table": 8
+            },
+            "5": {
+              "name": "Miguel Lopez [MX]",
+              "result": "L",
+              "table": 18
+            },
+            "6": {
+              "name": "Demian Aguirre Zapata [CL]",
+              "result": "W",
+              "table": 22
+            },
+            "7": {
+              "name": "Diego Varea [PE]",
+              "result": "T",
+              "table": 13
+            }
+          }
+        },
+        {
+          "name": "Juan Guillermo Lara [PE]",
+          "placing": 23,
+          "record": {
+            "wins": 4,
+            "losses": 2,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.6428571428571429,
+            "opp": 0.5918367346938777,
+            "oppopp": 0.5051020408163265
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Carlos Felipe Pardo Narvaez [CL]",
+              "result": "W",
+              "table": 42
+            },
+            "2": {
+              "name": "Richard Ruiz Vargas [PE]",
+              "result": "W",
+              "table": 14
+            },
+            "3": {
+              "name": "Giovanno Ponce [CL]",
+              "result": "L",
+              "table": 19
+            },
+            "4": {
+              "name": "Claudio Tapia Balboa [CL]",
+              "result": "W",
+              "table": 18
+            },
+            "5": {
+              "name": "Alfredo Aldecoa [PE]",
+              "result": "W",
+              "table": 13
+            },
+            "6": {
+              "name": "Andrés Guzmán [MX]",
+              "result": "L",
+              "table": 8
+            },
+            "7": {
+              "name": "Juan Espinola [MX]",
+              "result": "T",
+              "table": 12
+            }
+          }
+        },
+        {
+          "name": "Fabricio Valdivia [PE]",
+          "placing": 24,
+          "record": {
+            "wins": 4,
+            "losses": 2,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.6428571428571429,
+            "opp": 0.5714285714285714,
+            "oppopp": 0.5748299319727892
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Julián Gabriel Casiano Zambrano [PE]",
+              "result": "W",
+              "table": 70
+            },
+            "2": {
+              "name": "Eduardo Mendoza [PE]",
+              "result": "W",
+              "table": 15
+            },
+            "3": {
+              "name": "Diego Omar Campos Velazquez [MX]",
+              "result": "L",
+              "table": 16
+            },
+            "4": {
+              "name": "Giovanni Peragallo Shand [CL]",
+              "result": "W",
+              "table": 24
+            },
+            "5": {
+              "name": "Joaquín Orrego [PE]",
+              "result": "L",
+              "table": 11
+            },
+            "6": {
+              "name": "Matias Matricardi [AR]",
+              "result": "T",
+              "table": 24
+            },
+            "7": {
+              "name": "Renzo Angulo [PE]",
+              "result": "W",
+              "table": 20
+            }
+          }
+        },
+        {
+          "name": "Santiago García Arrué [PE]",
+          "placing": 25,
+          "record": {
+            "wins": 4,
+            "losses": 2,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.6428571428571429,
+            "opp": 0.5612244897959184,
+            "oppopp": 0.5473760932944607
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Sheldon Kuppan [GB]",
+              "result": "W",
+              "table": 33
+            },
+            "2": {
+              "name": "Andrés Guzmán [MX]",
+              "result": "L",
+              "table": 31
+            },
+            "3": {
+              "name": "Walter André Chiclayo Sandoval [PE]",
+              "result": "W",
+              "table": 37
+            },
+            "4": {
+              "name": "Augusto Benavides Medina [PE]",
+              "result": "W",
+              "table": 22
+            },
+            "5": {
+              "name": "Diego Omar Campos Velazquez [MX]",
+              "result": "L",
+              "table": 15
+            },
+            "6": {
+              "name": "Alexis Elefteriu [PE]",
+              "result": "T",
+              "table": 21
+            },
+            "7": {
+              "name": "Andres Saldarriaga [PE]",
+              "result": "W",
+              "table": 25
+            }
+          }
+        },
+        {
+          "name": "Diego Varea [PE]",
+          "placing": 26,
+          "record": {
+            "wins": 4,
+            "losses": 2,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.6428571428571429,
+            "opp": 0.5612244897959183,
+            "oppopp": 0.5459183673469388
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Claudio Tapia Balboa [CL]",
+              "result": "W",
+              "table": 22
+            },
+            "2": {
+              "name": "Po Hsiung Hsu [CL]",
+              "result": "W",
+              "table": 19
+            },
+            "3": {
+              "name": "Ajay Sridhar [US]",
+              "result": "L",
+              "table": 13
+            },
+            "4": {
+              "name": "Jose Felix Monroy Hidalgo [PE]",
+              "result": "L",
+              "table": 21
+            },
+            "5": {
+              "name": "Eduardo Mendoza [PE]",
+              "result": "W",
+              "table": 30
+            },
+            "6": {
+              "name": "Omar Fernández [CR]",
+              "result": "W",
+              "table": 20
+            },
+            "7": {
+              "name": "Agustin Campo [AR]",
+              "result": "T",
+              "table": 13
+            }
+          }
+        },
+        {
+          "name": "Manuel Alcaino [CL]",
+          "placing": 27,
+          "record": {
+            "wins": 4,
+            "losses": 2,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.6428571428571429,
+            "opp": 0.5612244897959183,
+            "oppopp": 0.5454324586977647
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Bayron Quiroz Cortes [CL]",
+              "result": "W",
+              "table": 40
+            },
+            "2": {
+              "name": "Jorge Manuel Isuhuaylas Chávez [PE]",
+              "result": "T",
+              "table": 28
+            },
+            "3": {
+              "name": "Hector Almeyda [PE]",
+              "result": "L",
+              "table": 20
+            },
+            "4": {
+              "name": "Oscar Taboada Rojas [PE]",
+              "result": "W",
+              "table": 41
+            },
+            "5": {
+              "name": "Marco José Zamudio Choy [PE]",
+              "result": "W",
+              "table": 26
+            },
+            "6": {
+              "name": "Victor Allan Muñoz Morales [CL]",
+              "result": "L",
+              "table": 12
+            },
+            "7": {
+              "name": "Andrés Castillo [MX]",
+              "result": "W",
+              "table": 21
+            }
+          }
+        },
+        {
+          "name": "Matias Matricardi [AR]",
+          "placing": 28,
+          "record": {
+            "wins": 4,
+            "losses": 2,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.6428571428571429,
+            "opp": 0.5442176870748299,
+            "oppopp": 0.5512633624878521
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Andrés Castillo [MX]",
+              "result": "W",
+              "table": 31
+            },
+            "2": {
+              "name": "Fabrizio Inga [PE]",
+              "result": "L",
+              "table": 34
+            },
+            "3": {
+              "name": "Giovanni Peragallo Shand [CL]",
+              "result": "L",
+              "table": 40
+            },
+            "4": {
+              "name": "Richard Ruiz Vargas [PE]",
+              "result": "W",
+              "table": 50
+            },
+            "5": {
+              "name": "Vincent Quiroz [CL]",
+              "result": "W",
+              "table": 33
+            },
+            "6": {
+              "name": "Fabricio Valdivia [PE]",
+              "result": "T",
+              "table": 24
+            },
+            "7": {
+              "name": "Diego Guillen Pelaez [PE]",
+              "result": "W",
+              "table": 22
+            }
+          }
+        },
+        {
+          "name": "Nicolas Galaz [CL]",
+          "placing": 29,
+          "record": {
+            "wins": 4,
+            "losses": 2,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.6428571428571429,
+            "opp": 0.5408163265306122,
+            "oppopp": 0.5391156462585034
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Renzo Zambrano [PE]",
+              "result": "W",
+              "table": 52
+            },
+            "2": {
+              "name": "Demian Aguirre Zapata [CL]",
+              "result": "L",
+              "table": 26
+            },
+            "3": {
+              "name": "Renzo Junior Velásquez Salazar [PE]",
+              "result": "W",
+              "table": 41
+            },
+            "4": {
+              "name": "Pablo Leiva [CL]",
+              "result": "L",
+              "table": 26
+            },
+            "5": {
+              "name": "Andy Gray [US]",
+              "result": "W",
+              "table": 36
+            },
+            "6": {
+              "name": "Alfredo Aldecoa [PE]",
+              "result": "W",
+              "table": 17
+            },
+            "7": {
+              "name": "Hector Almeyda [PE]",
+              "result": "T",
+              "table": 10
+            }
+          }
+        },
+        {
+          "name": "Javier Chelmes [CL]",
+          "placing": 30,
+          "record": {
+            "wins": 4,
+            "losses": 2,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.6428571428571429,
+            "opp": 0.5408163265306122,
+            "oppopp": 0.531584062196307
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Andrés Lostaunau [PE]",
+              "result": "T",
+              "table": 30
+            },
+            "2": {
+              "name": "Jorge Villar [CL]",
+              "result": "W",
+              "table": 38
+            },
+            "3": {
+              "name": "Fernando Ernesto Toratto Bullon [PE]",
+              "result": "W",
+              "table": 23
+            },
+            "4": {
+              "name": "Victor Allan Muñoz Morales [CL]",
+              "result": "L",
+              "table": 14
+            },
+            "5": {
+              "name": "Alvaro Sanchez [CL]",
+              "result": "W",
+              "table": 22
+            },
+            "6": {
+              "name": "Andre Mauro Vereau Guerra [PE]",
+              "result": "W",
+              "table": 16
+            },
+            "7": {
+              "name": "Eduardo Paulini Villanueva [PE]",
+              "result": "L",
+              "table": 7
+            }
+          }
+        },
+        {
+          "name": "Sheldon Kuppan [GB]",
+          "placing": 31,
+          "record": {
+            "wins": 4,
+            "losses": 2,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.6428571428571429,
+            "opp": 0.5051020408163265,
+            "oppopp": 0.5041302235179786
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Santiago García Arrué [PE]",
+              "result": "L",
+              "table": 33
+            },
+            "2": {
+              "name": "Ronaldo Emerson Chumbe Real [PE]",
+              "result": "W",
+              "table": 65
+            },
+            "3": {
+              "name": "Julián Gabriel Casiano Zambrano [PE]",
+              "result": "T",
+              "table": 48
+            },
+            "4": {
+              "name": "Jose Carlos Gomez [PE]",
+              "result": "W",
+              "table": 36
+            },
+            "5": {
+              "name": "Carlos Lopes [BR]",
+              "result": "W",
+              "table": 25
+            },
+            "6": {
+              "name": "Andres Estefano Gajardo Lopehandia [CL]",
+              "result": "W",
+              "table": 15
+            },
+            "7": {
+              "name": "Miguel Lopez [MX]",
+              "result": "L",
+              "table": 8
+            }
+          }
+        },
+        {
+          "name": "Andres Estefano Gajardo Lopehandia [CL]",
+          "placing": 32,
+          "record": {
+            "wins": 4,
+            "losses": 2,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.6428571428571429,
+            "opp": 0.5,
+            "oppopp": 0.48542274052478135
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Grover Tranca Mendez [PE]",
+              "result": "T",
+              "table": 23
+            },
+            "2": {
+              "name": "Thiago Silva [BR]",
+              "result": "L",
+              "table": 43
+            },
+            "3": {
+              "name": "Martin Ricardo Carmona Romero [MX]",
+              "result": "W",
+              "table": 60
+            },
+            "4": {
+              "name": "Luis Carlos Alonso Delgado Araujo [PE]",
+              "result": "W",
+              "table": 37
+            },
+            "5": {
+              "name": "Andrés Lostaunau [PE]",
+              "result": "W",
+              "table": 24
+            },
+            "6": {
+              "name": "Sheldon Kuppan [GB]",
+              "result": "L",
+              "table": 15
+            },
+            "7": {
+              "name": "Alfonso Herrera [PE]",
+              "result": "W",
+              "table": 23
+            }
+          }
+        },
+        {
+          "name": "Angel Aranibar [PE]",
+          "placing": 33,
+          "record": {
+            "wins": 4,
+            "losses": 2,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.6428571428571429,
+            "opp": 0.4540816326530612,
+            "oppopp": 0.4961127308066083
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Luis Delzo [PE]",
+              "result": "W",
+              "table": 34
+            },
+            "2": {
+              "name": "Miguel Lopez [MX]",
+              "result": "L",
+              "table": 33
+            },
+            "3": {
+              "name": "Renzo Angulo [PE]",
+              "result": "T",
+              "table": 35
+            },
+            "4": {
+              "name": "Luiz Claudio Rios Pecoraro Junior [BR]",
+              "result": "L",
+              "table": 40
+            },
+            "5": {
+              "name": "Luis Carlos Alonso Delgado Araujo [PE]",
+              "result": "W",
+              "table": 45
+            },
+            "6": {
+              "name": "Jose Carlos Gomez [PE]",
+              "result": "W",
+              "table": 29
+            },
+            "7": {
+              "name": "Andre Mauro Vereau Guerra [PE]",
+              "result": "W",
+              "table": 18
+            }
+          }
+        },
+        {
+          "name": "Juan Espinola [MX]",
+          "placing": 34,
+          "record": {
+            "wins": 4,
+            "losses": 2,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.6428571428571429,
+            "opp": 0.4302721088435374,
+            "oppopp": 0.5138483965014577
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Jorge Manuel Isuhuaylas Chávez [PE]",
+              "result": "L",
+              "table": 27
+            },
+            "2": {
+              "name": "Farleib Cuba [PE]",
+              "result": "L",
+              "table": 51
+            },
+            "3": {
+              "name": "Jose Reaño Alcantara [PE]",
+              "result": "W",
+              "table": 65
+            },
+            "4": {
+              "name": "Alberto Bonsanto [MX]",
+              "result": "W",
+              "table": 48
+            },
+            "5": {
+              "name": "Luiguer Miguel Santos Llerena [PE]",
+              "result": "W",
+              "table": 34
+            },
+            "6": {
+              "name": "Luis Anibal Maitaluna Pachas [PE]",
+              "result": "W",
+              "table": 19
+            },
+            "7": {
+              "name": "Juan Guillermo Lara [PE]",
+              "result": "T",
+              "table": 12
+            }
+          }
+        },
+        {
+          "name": "Carlos Medina Astete [PE]",
+          "placing": 35,
+          "record": {
+            "wins": 4,
+            "losses": 3,
+            "ties": 0
+          },
+          "resistances": {
+            "self": 0.5714285714285714,
+            "opp": 0.5850340136054422,
+            "oppopp": 0.5362001943634597
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Luiguer Miguel Santos Llerena [PE]",
+              "result": "W",
+              "table": 11
+            },
+            "2": {
+              "name": "Alfredo Aldecoa [PE]",
+              "result": "W",
+              "table": 24
+            },
+            "3": {
+              "name": "Fabrizio Inga [PE]",
+              "result": "L",
+              "table": 18
+            },
+            "4": {
+              "name": "Francisco Contreras Villa [CL]",
+              "result": "W",
+              "table": 19
+            },
+            "5": {
+              "name": "Omar Fernández [CR]",
+              "result": "W",
+              "table": 12
+            },
+            "6": {
+              "name": "Fabrizio Bellucci [AR]",
+              "result": "L",
+              "table": 9
+            },
+            "7": {
+              "name": "Po Hsiung Hsu [CL]",
+              "result": "L",
+              "table": 14
+            }
+          }
+        },
+        {
+          "name": "Giovanni Peragallo Shand [CL]",
+          "placing": 36,
+          "record": {
+            "wins": 4,
+            "losses": 3,
+            "ties": 0
+          },
+          "resistances": {
+            "self": 0.5714285714285714,
+            "opp": 0.5612244897959183,
+            "oppopp": 0.552964042759961
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Luis Anibal Maitaluna Pachas [PE]",
+              "result": "W",
+              "table": 45
+            },
+            "2": {
+              "name": "Pablo Leiva [CL]",
+              "result": "L",
+              "table": 35
+            },
+            "3": {
+              "name": "Matias Matricardi [AR]",
+              "result": "W",
+              "table": 40
+            },
+            "4": {
+              "name": "Fabricio Valdivia [PE]",
+              "result": "L",
+              "table": 24
+            },
+            "5": {
+              "name": "Francisco Contreras Villa [CL]",
+              "result": "W",
+              "table": 35
+            },
+            "6": {
+              "name": "Orlando Manque [CL]",
+              "result": "L",
+              "table": 25
+            },
+            "7": {
+              "name": "Omar Fernández [CR]",
+              "result": "W",
+              "table": 32
+            }
+          }
+        },
+        {
+          "name": "Demian Aguirre Zapata [CL]",
+          "placing": 37,
+          "record": {
+            "wins": 4,
+            "losses": 3,
+            "ties": 0
+          },
+          "resistances": {
+            "self": 0.5714285714285714,
+            "opp": 0.5068027210884354,
+            "oppopp": 0.5307337220602526
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Luis Carlos Alonso Delgado Araujo [PE]",
+              "result": "W",
+              "table": 24
+            },
+            "2": {
+              "name": "Nicolas Galaz [CL]",
+              "result": "W",
+              "table": 26
+            },
+            "3": {
+              "name": "Eric Uriel Patlallan [AR]",
+              "result": "L",
+              "table": 17
+            },
+            "4": {
+              "name": "Alfredo Aldecoa [PE]",
+              "result": "L",
+              "table": 17
+            },
+            "5": {
+              "name": "Victor Muñoz [CL]",
+              "result": "W",
+              "table": 37
+            },
+            "6": {
+              "name": "Agustin Campo [AR]",
+              "result": "L",
+              "table": 22
+            },
+            "7": {
+              "name": "Luis Anibal Maitaluna Pachas [PE]",
+              "result": "W",
+              "table": 30
+            }
+          }
+        },
+        {
+          "name": "Richard Ruiz Vargas [PE]",
+          "placing": 38,
+          "record": {
+            "wins": 4,
+            "losses": 3,
+            "ties": 0
+          },
+          "resistances": {
+            "self": 0.5714285714285714,
+            "opp": 0.49999999999999994,
+            "oppopp": 0.5182215743440233
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Paola Lisett Rondan Guerrero [PE]",
+              "result": "W",
+              "table": 51
+            },
+            "2": {
+              "name": "Juan Guillermo Lara [PE]",
+              "result": "L",
+              "table": 14
+            },
+            "3": {
+              "name": "Damian Fernandez Urroz [AR]",
+              "result": "L",
+              "table": 38
+            },
+            "4": {
+              "name": "Matias Matricardi [AR]",
+              "result": "L",
+              "table": 50
+            },
+            "5": {
+              "name": "Collins Roque [PE]",
+              "result": "W",
+              "table": 55
+            },
+            "6": {
+              "name": "Vincent Quiroz [CL]",
+              "result": "W",
+              "table": 40
+            },
+            "7": {
+              "name": "Renzo Zambrano [PE]",
+              "result": "W",
+              "table": 31
+            }
+          }
+        },
+        {
+          "name": "Alfredo Aldecoa [PE]",
+          "placing": 39,
+          "record": {
+            "wins": 4,
+            "losses": 3,
+            "ties": 0
+          },
+          "resistances": {
+            "self": 0.5714285714285714,
+            "opp": 0.49489795918367346,
+            "oppopp": 0.5272594752186589
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Fernando Ugarte [PE]",
+              "result": "W",
+              "table": 41
+            },
+            "2": {
+              "name": "Carlos Medina Astete [PE]",
+              "result": "L",
+              "table": 24
+            },
+            "3": {
+              "name": "Javier Reategui [PE]",
+              "result": "W",
+              "table": 36
+            },
+            "4": {
+              "name": "Demian Aguirre Zapata [CL]",
+              "result": "W",
+              "table": 17
+            },
+            "5": {
+              "name": "Juan Guillermo Lara [PE]",
+              "result": "L",
+              "table": 13
+            },
+            "6": {
+              "name": "Nicolas Galaz [CL]",
+              "result": "L",
+              "table": 17
+            },
+            "7": {
+              "name": "Jorge Manuel Isuhuaylas Chávez [PE]",
+              "result": "W",
+              "table": 26
+            }
+          }
+        },
+        {
+          "name": "Andres Torres [CO]",
+          "placing": 40,
+          "record": {
+            "wins": 3,
+            "losses": 1,
+            "ties": 3
+          },
+          "resistances": {
+            "self": 0.6428571428571429,
+            "opp": 0.46598639455782315,
+            "oppopp": 0.5438532555879495
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Andy Gray [US]",
+              "result": "W",
+              "table": 63
+            },
+            "2": {
+              "name": "Diego Omar Campos Velazquez [MX]",
+              "result": "L",
+              "table": 11
+            },
+            "3": {
+              "name": "Diego Guillen Pelaez [PE]",
+              "result": "T",
+              "table": 45
+            },
+            "4": {
+              "name": "Miguel Ángel Linares [PE]",
+              "result": "T",
+              "table": 34
+            },
+            "5": {
+              "name": "Andres Saldarriaga [PE]",
+              "result": "T",
+              "table": 42
+            },
+            "6": {
+              "name": "Victor Muñoz [CL]",
+              "result": "W",
+              "table": 42
+            },
+            "7": {
+              "name": "Francisco Contreras Villa [CL]",
+              "result": "W",
+              "table": 27
+            }
+          }
+        },
+        {
+          "name": "Wilsonn Molina [CL]",
+          "placing": 41,
+          "record": {
+            "wins": 4,
+            "losses": 3,
+            "ties": 0
+          },
+          "resistances": {
+            "self": 0.5714285714285714,
+            "opp": 0.4387755102040815,
+            "oppopp": 0.5063168124392614
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Alberto Bonsanto [MX]",
+              "result": "L",
+              "table": 37
+            },
+            "2": {
+              "name": "Paulo Gouveia De Freitas [BR]",
+              "result": "W",
+              "table": 48
+            },
+            "3": {
+              "name": "Jose Felix Monroy Hidalgo [PE]",
+              "result": "L",
+              "table": 47
+            },
+            "4": {
+              "name": "Collins Roque [PE]",
+              "result": "W",
+              "table": 52
+            },
+            "5": {
+              "name": "Renzo Zambrano [PE]",
+              "result": "L",
+              "table": 39
+            },
+            "6": {
+              "name": "Erick Campos [CR]",
+              "result": "W",
+              "table": 44
+            },
+            "7": {
+              "name": "Eduardo Mendoza [PE]",
+              "result": "W",
+              "table": 29
+            }
+          }
+        },
+        {
+          "name": "Carlos Felipe Pardo Narvaez [CL]",
+          "placing": 42,
+          "record": {
+            "wins": 4,
+            "losses": 3,
+            "ties": 0
+          },
+          "resistances": {
+            "self": 0.5714285714285714,
+            "opp": 0.40476190476190477,
+            "oppopp": 0.49004697116942025
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Juan Guillermo Lara [PE]",
+              "result": "L",
+              "table": 42
+            },
+            "2": {
+              "name": "Tomas Riquelme [CL]",
+              "result": "L",
+              "table": 55
+            },
+            "3": {
+              "name": "Sebastian García Tejada [PE]",
+              "result": "W",
+              "table": 66
+            },
+            "4": {
+              "name": "Vincent Quiroz [CL]",
+              "result": "L",
+              "table": 51
+            },
+            "5": {
+              "name": "Javier Reategui [PE]",
+              "result": "W",
+              "table": 57
+            },
+            "6": {
+              "name": "Miguel Chozo Machuca [PE]",
+              "result": "W",
+              "table": 41
+            },
+            "7": {
+              "name": "Luiguer Miguel Santos Llerena [PE]",
+              "result": "W",
+              "table": 28
+            }
+          }
+        },
+        {
+          "name": "Tomas Riquelme [CL]",
+          "placing": 43,
+          "record": {
+            "wins": 3,
+            "losses": 2,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.5714285714285714,
+            "opp": 0.6122448979591837,
+            "oppopp": 0.5189504373177842
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Pablo Leiva [CL]",
+              "result": "L",
+              "table": 56
+            },
+            "2": {
+              "name": "Carlos Felipe Pardo Narvaez [CL]",
+              "result": "W",
+              "table": 55
+            },
+            "3": {
+              "name": "Po Hsiung Hsu [CL]",
+              "result": "W",
+              "table": 31
+            },
+            "4": {
+              "name": "David Alejandro Fernandez Abarca [MX]",
+              "result": "W",
+              "table": 27
+            },
+            "5": {
+              "name": "Jose Felix Monroy Hidalgo [PE]",
+              "result": "T",
+              "table": 17
+            },
+            "6": {
+              "name": "Jorge Villar [CL]",
+              "result": "T",
+              "table": 11
+            },
+            "7": {
+              "name": "Alexander Monroy Hidalgo [PE]",
+              "result": "L",
+              "table": 16
+            }
+          }
+        },
+        {
+          "name": "Jose Felix Monroy Hidalgo [PE]",
+          "placing": 44,
+          "record": {
+            "wins": 3,
+            "losses": 2,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.5714285714285714,
+            "opp": 0.5663265306122449,
+            "oppopp": 0.5613459669582117
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Diego Omar Campos Velazquez [MX]",
+              "result": "L",
+              "table": 28
+            },
+            "2": {
+              "name": "Jose Reaño Alcantara [PE]",
+              "result": "W",
+              "table": 66
+            },
+            "3": {
+              "name": "Wilsonn Molina [CL]",
+              "result": "W",
+              "table": 47
+            },
+            "4": {
+              "name": "Diego Varea [PE]",
+              "result": "W",
+              "table": 21
+            },
+            "5": {
+              "name": "Tomas Riquelme [CL]",
+              "result": "T",
+              "table": 17
+            },
+            "6": {
+              "name": "Cristopher Gonzalez Diaz [CL]",
+              "result": "L",
+              "table": 10
+            },
+            "7": {
+              "name": "Grover Tranca Mendez [PE]",
+              "result": "T",
+              "table": 24
+            }
+          }
+        },
+        {
+          "name": "Alexis Elefteriu [PE]",
+          "placing": 45,
+          "record": {
+            "wins": 3,
+            "losses": 2,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.5714285714285714,
+            "opp": 0.5153061224489796,
+            "oppopp": 0.5669339164237124
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Connor Finton [US]",
+              "result": "W",
+              "table": 21
+            },
+            "2": {
+              "name": "Collins Roque [PE]",
+              "result": "W",
+              "table": 16
+            },
+            "3": {
+              "name": "Omar Fernández [CR]",
+              "result": "W",
+              "table": 11
+            },
+            "4": {
+              "name": "Andrés Guzmán [MX]",
+              "result": "L",
+              "table": 7
+            },
+            "5": {
+              "name": "Pablo Leiva [CL]",
+              "result": "L",
+              "table": 16
+            },
+            "6": {
+              "name": "Santiago García Arrué [PE]",
+              "result": "T",
+              "table": 21
+            },
+            "7": {
+              "name": "Alonso Diaz [PE]",
+              "result": "T",
+              "table": 19
+            }
+          }
+        },
+        {
+          "name": "Alonso Diaz [PE]",
+          "placing": 46,
+          "record": {
+            "wins": 3,
+            "losses": 2,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.5714285714285714,
+            "opp": 0.5153061224489796,
+            "oppopp": 0.5133624878522838
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Ronaldo Emerson Chumbe Real [PE]",
+              "result": "W",
+              "table": 69
+            },
+            "2": {
+              "name": "Walter André Chiclayo Sandoval [PE]",
+              "result": "W",
+              "table": 29
+            },
+            "3": {
+              "name": "Agustin Campo [AR]",
+              "result": "L",
+              "table": 14
+            },
+            "4": {
+              "name": "Diego Leyva [PE]",
+              "result": "T",
+              "table": 16
+            },
+            "5": {
+              "name": "Fernando Ernesto Toratto Bullon [PE]",
+              "result": "W",
+              "table": 28
+            },
+            "6": {
+              "name": "Eduardo Paulini Villanueva [PE]",
+              "result": "L",
+              "table": 14
+            },
+            "7": {
+              "name": "Alexis Elefteriu [PE]",
+              "result": "T",
+              "table": 19
+            }
+          }
+        },
+        {
+          "name": "Grover Tranca Mendez [PE]",
+          "placing": 47,
+          "record": {
+            "wins": 3,
+            "losses": 2,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.5714285714285714,
+            "opp": 0.5051020408163265,
+            "oppopp": 0.5094752186588921
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Andres Estefano Gajardo Lopehandia [CL]",
+              "result": "T",
+              "table": 23
+            },
+            "2": {
+              "name": "Giovanno Ponce [CL]",
+              "result": "L",
+              "table": 37
+            },
+            "3": {
+              "name": "Cristian Gallo [CL]",
+              "result": "W",
+              "table": 55
+            },
+            "4": {
+              "name": "Alvaro Sanchez [CL]",
+              "result": "L",
+              "table": 32
+            },
+            "5": {
+              "name": "Óscar Videla [CL]",
+              "result": "W",
+              "table": 49
+            },
+            "6": {
+              "name": "Mario Cesar De La Cruz Llanos [PE]",
+              "result": "W",
+              "table": 30
+            },
+            "7": {
+              "name": "Jose Felix Monroy Hidalgo [PE]",
+              "result": "T",
+              "table": 24
+            }
+          }
+        },
+        {
+          "name": "Hugo León [PE]",
+          "placing": 48,
+          "record": {
+            "wins": 3,
+            "losses": 2,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.5714285714285714,
+            "opp": 0.48469387755102034,
+            "oppopp": 0.4865160349854226
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Orlando Manque [CL]",
+              "result": "L",
+              "table": 60
+            },
+            "2": {
+              "name": "Bayron Quiroz Cortes [CL]",
+              "result": "T",
+              "table": 58
+            },
+            "3": {
+              "name": "Alexiev Castro [PE]",
+              "result": "L",
+              "table": 58
+            },
+            "4": {
+              "name": "Joaquin Herrera [PE]",
+              "result": "W",
+              "table": 57
+            },
+            "5": {
+              "name": "Cristian Gallo [CL]",
+              "result": "T",
+              "table": 51
+            },
+            "6": {
+              "name": "Oscar Taboada Rojas [PE]",
+              "result": "W",
+              "table": 48
+            },
+            "7": {
+              "name": "Marco José Zamudio Choy [PE]",
+              "result": "W",
+              "table": 36
+            }
+          }
+        },
+        {
+          "name": "Jorge Villar [CL]",
+          "placing": 49,
+          "record": {
+            "wins": 3,
+            "losses": 2,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.5714285714285714,
+            "opp": 0.4795918367346938,
+            "oppopp": 0.5101635892452219
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Christian Badenas [AR]",
+              "result": "T",
+              "table": 67
+            },
+            "2": {
+              "name": "Javier Chelmes [CL]",
+              "result": "L",
+              "table": 38
+            },
+            "3": {
+              "name": "Luis Delzo [PE]",
+              "result": "W",
+              "table": 51
+            },
+            "4": {
+              "name": "Jessica Mellanie Reyes Maury [PE]",
+              "result": "W",
+              "table": 33
+            },
+            "5": {
+              "name": "Diego Leyva [PE]",
+              "result": "W",
+              "table": 27
+            },
+            "6": {
+              "name": "Tomas Riquelme [CL]",
+              "result": "T",
+              "table": 11
+            },
+            "7": {
+              "name": "Orlando Manque [CL]",
+              "result": "L",
+              "table": 15
+            }
+          }
+        },
+        {
+          "name": "Bayron Quiroz Cortes [CL]",
+          "placing": 50,
+          "record": {
+            "wins": 3,
+            "losses": 2,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.5714285714285714,
+            "opp": 0.4591836734693877,
+            "oppopp": 0.4953838678328474
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Manuel Alcaino [CL]",
+              "result": "L",
+              "table": 40
+            },
+            "2": {
+              "name": "Hugo León [PE]",
+              "result": "T",
+              "table": 58
+            },
+            "3": {
+              "name": "Carlos Alberto Sosa Pezo [PE]",
+              "result": "T",
+              "table": 59
+            },
+            "4": {
+              "name": "Paola Lisett Rondan Guerrero [PE]",
+              "result": "W",
+              "table": 56
+            },
+            "5": {
+              "name": "Gianmarco Antonio Gomez Hilario [PE]",
+              "result": "W",
+              "table": 40
+            },
+            "6": {
+              "name": "Alexander Monroy Hidalgo [PE]",
+              "result": "L",
+              "table": 26
+            },
+            "7": {
+              "name": "Alexiev Castro [PE]",
+              "result": "W",
+              "table": 34
+            }
+          }
+        },
+        {
+          "name": "Diego Leyva [PE]",
+          "placing": 51,
+          "record": {
+            "wins": 3,
+            "losses": 2,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.5714285714285714,
+            "opp": 0.4540816326530612,
+            "oppopp": 0.5110544217687074
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Eric Uriel Patlallan [AR]",
+              "result": "L",
+              "table": 10
+            },
+            "2": {
+              "name": "Connor Finton [US]",
+              "result": "W",
+              "table": 56
+            },
+            "3": {
+              "name": "Collins Roque [PE]",
+              "result": "W",
+              "table": 34
+            },
+            "4": {
+              "name": "Alonso Diaz [PE]",
+              "result": "T",
+              "table": 16
+            },
+            "5": {
+              "name": "Jorge Villar [CL]",
+              "result": "L",
+              "table": 27
+            },
+            "6": {
+              "name": "Luiz Claudio Rios Pecoraro Junior [BR]",
+              "result": "T",
+              "table": 35
+            },
+            "7": {
+              "name": "Jose Carlos Gomez [PE]",
+              "result": "W",
+              "table": 37
+            }
+          }
+        },
+        {
+          "name": "Cristian Gallo [CL]",
+          "placing": 52,
+          "record": {
+            "wins": 3,
+            "losses": 2,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.5714285714285714,
+            "opp": 0.40816326530612235,
+            "oppopp": 0.47691933916423707
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Jose Carlos Gomez [PE]",
+              "result": "L",
+              "table": 48
+            },
+            "2": {
+              "name": "Jessica Mellanie Reyes Maury [PE]",
+              "result": "T",
+              "table": 53
+            },
+            "3": {
+              "name": "Grover Tranca Mendez [PE]",
+              "result": "L",
+              "table": 55
+            },
+            "4": {
+              "name": "Fernando Ugarte [PE]",
+              "result": "W",
+              "table": 61
+            },
+            "5": {
+              "name": "Hugo León [PE]",
+              "result": "T",
+              "table": 51
+            },
+            "6": {
+              "name": "Gianmarco Antonio Gomez Hilario [PE]",
+              "result": "W",
+              "table": 47
+            },
+            "7": {
+              "name": "Augusto Benavides Medina [PE]",
+              "result": "W",
+              "table": 35
+            }
+          }
+        },
+        {
+          "name": "Renzo Angulo [PE]",
+          "placing": 53,
+          "record": {
+            "wins": 3,
+            "losses": 3,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.5,
+            "opp": 0.576530612244898,
+            "oppopp": 0.48032069970845487
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Óscar Videla [CL]",
+              "result": "W",
+              "table": 15
+            },
+            "2": {
+              "name": "Eduardo Paulini Villanueva [PE]",
+              "result": "L",
+              "table": 22
+            },
+            "3": {
+              "name": "Angel Aranibar [PE]",
+              "result": "T",
+              "table": 35
+            },
+            "4": {
+              "name": "Alexander Monroy Hidalgo [PE]",
+              "result": "L",
+              "table": 30
+            },
+            "5": {
+              "name": "David Alejandro Fernandez Abarca [MX]",
+              "result": "W",
+              "table": 43
+            },
+            "6": {
+              "name": "Bruno Partala [BR]",
+              "result": "W",
+              "table": 28
+            },
+            "7": {
+              "name": "Fabricio Valdivia [PE]",
+              "result": "L",
+              "table": 20
+            }
+          }
+        },
+        {
+          "name": "Andre Mauro Vereau Guerra [PE]",
+          "placing": 54,
+          "record": {
+            "wins": 3,
+            "losses": 3,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.5,
+            "opp": 0.5357142857142857,
+            "oppopp": 0.5143747975380628
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Alvaro Sanchez [CL]",
+              "result": "T",
+              "table": 55
+            },
+            "2": {
+              "name": "Miguel Chozo Machuca [PE]",
+              "result": "W",
+              "table": 44
+            },
+            "3": {
+              "name": "Joaquín Orrego [PE]",
+              "result": "L",
+              "table": 26
+            },
+            "4": {
+              "name": "Jorge Flores [PE]",
+              "result": "W",
+              "table": 44
+            },
+            "5": {
+              "name": "Mario Cesar De La Cruz Llanos [PE]",
+              "result": "W",
+              "table": 29
+            },
+            "6": {
+              "name": "Javier Chelmes [CL]",
+              "result": "L",
+              "table": 16
+            },
+            "7": {
+              "name": "Angel Aranibar [PE]",
+              "result": "L",
+              "table": 18
+            }
+          }
+        },
+        {
+          "name": "Diego Guillen Pelaez [PE]",
+          "placing": 55,
+          "record": {
+            "wins": 3,
+            "losses": 3,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.5,
+            "opp": 0.5357142857142857,
+            "oppopp": 0.5100826044703596
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Jose Reaño Alcantara [PE]",
+              "result": "W",
+              "table": 53
+            },
+            "2": {
+              "name": "Eric Uriel Patlallan [AR]",
+              "result": "L",
+              "table": 18
+            },
+            "3": {
+              "name": "Andres Torres [CO]",
+              "result": "T",
+              "table": 45
+            },
+            "4": {
+              "name": "Erick Campos [CR]",
+              "result": "W",
+              "table": 42
+            },
+            "5": {
+              "name": "Luiz Claudio Rios Pecoraro Junior [BR]",
+              "result": "W",
+              "table": 23
+            },
+            "6": {
+              "name": "Giovanno Ponce [CL]",
+              "result": "L",
+              "table": 13
+            },
+            "7": {
+              "name": "Matias Matricardi [AR]",
+              "result": "L",
+              "table": 22
+            }
+          }
+        },
+        {
+          "name": "Alfonso Herrera [PE]",
+          "placing": 56,
+          "record": {
+            "wins": 3,
+            "losses": 3,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.5,
+            "opp": 0.4846938775510204,
+            "oppopp": 0.48975542597991584
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Thiago Silva [BR]",
+              "result": "T",
+              "table": 16
+            },
+            "2": {
+              "name": "Andres Saldarriaga [PE]",
+              "result": "L",
+              "table": 42
+            },
+            "3": {
+              "name": "Christian Badenas [AR]",
+              "result": "W",
+              "table": 52
+            },
+            "4": {
+              "name": "Mario Cesar De La Cruz Llanos [PE]",
+              "result": "L",
+              "table": 39
+            },
+            "5": {
+              "name": "Jose Francisco Prada Talavera [PE]",
+              "result": "W",
+              "table": 44
+            },
+            "6": {
+              "name": "Carlos Lopes [BR]",
+              "result": "W",
+              "table": 32
+            },
+            "7": {
+              "name": "Andres Estefano Gajardo Lopehandia [CL]",
+              "result": "L",
+              "table": 23
+            }
+          }
+        },
+        {
+          "name": "Renzo Junior Velásquez Salazar [PE]",
+          "placing": 57,
+          "record": {
+            "wins": 3,
+            "losses": 3,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.5,
+            "opp": 0.4761904761904762,
+            "oppopp": 0.5237690314220925
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Miguel Chozo Machuca [PE]",
+              "result": "W",
+              "table": 14
+            },
+            "2": {
+              "name": "Agustin Campo [AR]",
+              "result": "L",
+              "table": 21
+            },
+            "3": {
+              "name": "Nicolas Galaz [CL]",
+              "result": "L",
+              "table": 41
+            },
+            "4": {
+              "name": "Jose Francisco Prada Talavera [PE]",
+              "result": "T",
+              "table": 47
+            },
+            "5": {
+              "name": "Julián Gabriel Casiano Zambrano [PE]",
+              "result": "W",
+              "table": 48
+            },
+            "6": {
+              "name": "Alvaro Sanchez [CL]",
+              "result": "W",
+              "table": 31
+            },
+            "7": {
+              "name": "Thiago Silva [BR]",
+              "result": "L",
+              "table": 17
+            }
+          }
+        },
+        {
+          "name": "Mario Cesar De La Cruz Llanos [PE]",
+          "placing": 58,
+          "record": {
+            "wins": 3,
+            "losses": 3,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.5,
+            "opp": 0.4744897959183674,
+            "oppopp": 0.5262390670553935
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Alvaro Daniel Villa Garcia Gonzales [PE]",
+              "result": "W",
+              "table": 18
+            },
+            "2": {
+              "name": "Hector Almeyda [PE]",
+              "result": "L",
+              "table": 13
+            },
+            "3": {
+              "name": "Oscar Taboada Rojas [PE]",
+              "result": "T",
+              "table": 39
+            },
+            "4": {
+              "name": "Alfonso Herrera [PE]",
+              "result": "W",
+              "table": 39
+            },
+            "5": {
+              "name": "Andre Mauro Vereau Guerra [PE]",
+              "result": "L",
+              "table": 29
+            },
+            "6": {
+              "name": "Grover Tranca Mendez [PE]",
+              "result": "L",
+              "table": 30
+            },
+            "7": {
+              "name": "Alvaro Sanchez [CL]",
+              "result": "W",
+              "table": 38
+            }
+          }
+        },
+        {
+          "name": "Andrés Castillo [MX]",
+          "placing": 59,
+          "record": {
+            "wins": 3,
+            "losses": 3,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.5,
+            "opp": 0.4438775510204081,
+            "oppopp": 0.4906462585034013
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Matias Matricardi [AR]",
+              "result": "L",
+              "table": 31
+            },
+            "2": {
+              "name": "Julián Gabriel Casiano Zambrano [PE]",
+              "result": "L",
+              "table": 64
+            },
+            "3": {
+              "name": "Joel Santillan Ulloa [PE]",
+              "result": "W",
+              "table": 61
+            },
+            "4": {
+              "name": "Walter André Chiclayo Sandoval [PE]",
+              "result": "W",
+              "table": 46
+            },
+            "5": {
+              "name": "Augusto Benavides Medina [PE]",
+              "result": "T",
+              "table": 38
+            },
+            "6": {
+              "name": "Fernando Ernesto Toratto Bullon [PE]",
+              "result": "W",
+              "table": 34
+            },
+            "7": {
+              "name": "Manuel Alcaino [CL]",
+              "result": "L",
+              "table": 21
+            }
+          }
+        },
+        {
+          "name": "Paulo Gouveia De Freitas [BR]",
+          "placing": 60,
+          "record": {
+            "wins": 3,
+            "losses": 3,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.5,
+            "opp": 0.4285714285714285,
+            "oppopp": 0.5141520894071914
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Diego Cassiraga [AR]",
+              "result": "L",
+              "table": 13
+            },
+            "2": {
+              "name": "Wilsonn Molina [CL]",
+              "result": "L",
+              "table": 48
+            },
+            "3": {
+              "name": "Alberto Araya [CL]",
+              "result": "L",
+              "table": 67
+            },
+            "4": {
+              "name": "Jose Reaño Alcantara [PE]",
+              "result": "W",
+              "table": 63
+            },
+            "5": {
+              "name": "Carlos Alberto Sosa Pezo [PE]",
+              "result": "W",
+              "table": 58
+            },
+            "6": {
+              "name": "Alberto Bonsanto [MX]",
+              "result": "T",
+              "table": 38
+            },
+            "7": {
+              "name": "Julián Gabriel Casiano Zambrano [PE]",
+              "result": "W",
+              "table": 39
+            }
+          }
+        },
+        {
+          "name": "Carlos Lopes [BR]",
+          "placing": 61,
+          "record": {
+            "wins": 3,
+            "losses": 3,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.5,
+            "opp": 0.413265306122449,
+            "oppopp": 0.47485422740524774
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Eduardo Mendoza [PE]",
+              "result": "L",
+              "table": 12
+            },
+            "2": {
+              "name": "Fernando Ugarte [PE]",
+              "result": "T",
+              "table": 54
+            },
+            "3": {
+              "name": "Joaquin Herrera [PE]",
+              "result": "W",
+              "table": 57
+            },
+            "4": {
+              "name": "Alexiev Castro [PE]",
+              "result": "W",
+              "table": 31
+            },
+            "5": {
+              "name": "Sheldon Kuppan [GB]",
+              "result": "L",
+              "table": 25
+            },
+            "6": {
+              "name": "Alfonso Herrera [PE]",
+              "result": "L",
+              "table": 32
+            },
+            "7": {
+              "name": "Jessica Mellanie Reyes Maury [PE]",
+              "result": "W",
+              "table": 40
+            }
+          }
+        },
+        {
+          "name": "Bruno Partala [BR]",
+          "placing": 62,
+          "record": {
+            "wins": 3,
+            "losses": 3,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.5,
+            "opp": 0.34693877551020413,
+            "oppopp": 0.478620019436346
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Fernando Ernesto Toratto Bullon [PE]",
+              "result": "L",
+              "table": 35
+            },
+            "2": {
+              "name": "Óscar Videla [CL]",
+              "result": "T",
+              "table": 67
+            },
+            "3": {
+              "name": "Luis Carlos Alonso Delgado Araujo [PE]",
+              "result": "L",
+              "table": 53
+            },
+            "4": {
+              "name": "Luis Delzo [PE]",
+              "result": "W",
+              "table": 58
+            },
+            "5": {
+              "name": "Cristhoper Martinez [PE]",
+              "result": "W",
+              "table": 46
+            },
+            "6": {
+              "name": "Renzo Angulo [PE]",
+              "result": "L",
+              "table": 28
+            },
+            "7": {
+              "name": "Andrés Lostaunau [PE]",
+              "result": "W",
+              "table": 41
+            }
+          }
+        },
+        {
+          "name": "Jorge Manuel Isuhuaylas Chávez [PE]",
+          "placing": 63,
+          "record": {
+            "wins": 2,
+            "losses": 2,
+            "ties": 3
+          },
+          "resistances": {
+            "self": 0.5,
+            "opp": 0.6428571428571429,
+            "oppopp": 0.5133624878522837
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Juan Espinola [MX]",
+              "result": "W",
+              "table": 27
+            },
+            "2": {
+              "name": "Manuel Alcaino [CL]",
+              "result": "T",
+              "table": 28
+            },
+            "3": {
+              "name": "David Alejandro Fernandez Abarca [MX]",
+              "result": "T",
+              "table": 28
+            },
+            "4": {
+              "name": "Thiago Silva [BR]",
+              "result": "W",
+              "table": 29
+            },
+            "5": {
+              "name": "Eduardo Paulini Villanueva [PE]",
+              "result": "T",
+              "table": 19
+            },
+            "6": {
+              "name": "Eric Uriel Patlallan [AR]",
+              "result": "L",
+              "table": 23
+            },
+            "7": {
+              "name": "Alfredo Aldecoa [PE]",
+              "result": "L",
+              "table": 26
+            }
+          }
+        },
+        {
+          "name": "Andres Saldarriaga [PE]",
+          "placing": 64,
+          "record": {
+            "wins": 2,
+            "losses": 2,
+            "ties": 3
+          },
+          "resistances": {
+            "self": 0.5,
+            "opp": 0.58843537414966,
+            "oppopp": 0.5080174927113703
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Joaquín Orrego [PE]",
+              "result": "T",
+              "table": 47
+            },
+            "2": {
+              "name": "Alfonso Herrera [PE]",
+              "result": "W",
+              "table": 42
+            },
+            "3": {
+              "name": "Fabrizio Bellucci [AR]",
+              "result": "L",
+              "table": 25
+            },
+            "4": {
+              "name": "Gianmarco Antonio Gomez Hilario [PE]",
+              "result": "T",
+              "table": 38
+            },
+            "5": {
+              "name": "Andres Torres [CO]",
+              "result": "T",
+              "table": 42
+            },
+            "6": {
+              "name": "Nitish Doolub [GB]",
+              "result": "W",
+              "table": 43
+            },
+            "7": {
+              "name": "Santiago García Arrué [PE]",
+              "result": "L",
+              "table": 25
+            }
+          }
+        },
+        {
+          "name": "Eduardo Mendoza [PE]",
+          "placing": 65,
+          "record": {
+            "wins": 3,
+            "losses": 4,
+            "ties": 0
+          },
+          "resistances": {
+            "self": 0.42857142857142855,
+            "opp": 0.5714285714285714,
+            "oppopp": 0.4866375121477162
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Carlos Lopes [BR]",
+              "result": "W",
+              "table": 12
+            },
+            "2": {
+              "name": "Fabricio Valdivia [PE]",
+              "result": "L",
+              "table": 15
+            },
+            "3": {
+              "name": "Luiguer Miguel Santos Llerena [PE]",
+              "result": "W",
+              "table": 32
+            },
+            "4": {
+              "name": "Damian Fernandez Urroz [AR]",
+              "result": "L",
+              "table": 23
+            },
+            "5": {
+              "name": "Diego Varea [PE]",
+              "result": "L",
+              "table": 30
+            },
+            "6": {
+              "name": "Andy Gray [US]",
+              "result": "W",
+              "table": 36
+            },
+            "7": {
+              "name": "Wilsonn Molina [CL]",
+              "result": "L",
+              "table": 29
+            }
+          }
+        },
+        {
+          "name": "Omar Fernández [CR]",
+          "placing": 66,
+          "record": {
+            "wins": 3,
+            "losses": 4,
+            "ties": 0
+          },
+          "resistances": {
+            "self": 0.42857142857142855,
+            "opp": 0.5561224489795918,
+            "oppopp": 0.5227162293488823
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Joaquin Herrera [PE]",
+              "result": "W",
+              "table": 66
+            },
+            "2": {
+              "name": "Damian Fernandez Urroz [AR]",
+              "result": "W",
+              "table": 32
+            },
+            "3": {
+              "name": "Alexis Elefteriu [PE]",
+              "result": "L",
+              "table": 11
+            },
+            "4": {
+              "name": "Renzo Zambrano [PE]",
+              "result": "W",
+              "table": 25
+            },
+            "5": {
+              "name": "Carlos Medina Astete [PE]",
+              "result": "L",
+              "table": 12
+            },
+            "6": {
+              "name": "Diego Varea [PE]",
+              "result": "L",
+              "table": 20
+            },
+            "7": {
+              "name": "Giovanni Peragallo Shand [CL]",
+              "result": "L",
+              "table": 32
+            }
+          }
+        },
+        {
+          "name": "Renzo Zambrano [PE]",
+          "placing": 67,
+          "record": {
+            "wins": 3,
+            "losses": 4,
+            "ties": 0
+          },
+          "resistances": {
+            "self": 0.42857142857142855,
+            "opp": 0.5306122448979592,
+            "oppopp": 0.5099611273080661
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Nicolas Galaz [CL]",
+              "result": "L",
+              "table": 52
+            },
+            "2": {
+              "name": "Vincent Quiroz [CL]",
+              "result": "W",
+              "table": 59
+            },
+            "3": {
+              "name": "Alberto Bonsanto [MX]",
+              "result": "W",
+              "table": 46
+            },
+            "4": {
+              "name": "Omar Fernández [CR]",
+              "result": "L",
+              "table": 25
+            },
+            "5": {
+              "name": "Wilsonn Molina [CL]",
+              "result": "W",
+              "table": 39
+            },
+            "6": {
+              "name": "Po Hsiung Hsu [CL]",
+              "result": "L",
+              "table": 18
+            },
+            "7": {
+              "name": "Richard Ruiz Vargas [PE]",
+              "result": "L",
+              "table": 31
+            }
+          }
+        },
+        {
+          "name": "Miguel Ángel Linares [PE]",
+          "placing": 68,
+          "record": {
+            "wins": 2,
+            "losses": 2,
+            "ties": 3
+          },
+          "resistances": {
+            "self": 0.5,
+            "opp": 0.5034013605442177,
+            "oppopp": 0.4901198574667962
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Sebastian García Tejada [PE]",
+              "result": "W",
+              "table": 61
+            },
+            "2": {
+              "name": "David Alejandro Fernandez Abarca [MX]",
+              "result": "T",
+              "table": 36
+            },
+            "3": {
+              "name": "Orlando Manque [CL]",
+              "result": "L",
+              "table": 24
+            },
+            "4": {
+              "name": "Andres Torres [CO]",
+              "result": "T",
+              "table": 34
+            },
+            "5": {
+              "name": "Thiago Silva [BR]",
+              "result": "L",
+              "table": 41
+            },
+            "6": {
+              "name": "Jorge Flores [PE]",
+              "result": "T",
+              "table": 46
+            },
+            "7": {
+              "name": "Collins Roque [PE]",
+              "result": "W",
+              "table": 44
+            }
+          }
+        },
+        {
+          "name": "Francisco Contreras Villa [CL]",
+          "placing": 69,
+          "record": {
+            "wins": 3,
+            "losses": 4,
+            "ties": 0
+          },
+          "resistances": {
+            "self": 0.42857142857142855,
+            "opp": 0.49489795918367346,
+            "oppopp": 0.5038265306122448
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Po Hsiung Hsu [CL]",
+              "result": "L",
+              "table": 20
+            },
+            "2": {
+              "name": "Alberto Araya [CL]",
+              "result": "W",
+              "table": 62
+            },
+            "3": {
+              "name": "Andy Gray [US]",
+              "result": "W",
+              "table": 44
+            },
+            "4": {
+              "name": "Carlos Medina Astete [PE]",
+              "result": "L",
+              "table": 19
+            },
+            "5": {
+              "name": "Giovanni Peragallo Shand [CL]",
+              "result": "L",
+              "table": 35
+            },
+            "6": {
+              "name": "Claudio Tapia Balboa [CL]",
+              "result": "W",
+              "table": 39
+            },
+            "7": {
+              "name": "Andres Torres [CO]",
+              "result": "L",
+              "table": 27
+            }
+          }
+        },
+        {
+          "name": "David Alejandro Fernandez Abarca [MX]",
+          "placing": 70,
+          "record": {
+            "wins": 2,
+            "losses": 2,
+            "ties": 3
+          },
+          "resistances": {
+            "self": 0.5,
+            "opp": 0.46428571428571425,
+            "oppopp": 0.5230806608357629
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Dalton Acchetta [BR]",
+              "result": "W",
+              "table": 46
+            },
+            "2": {
+              "name": "Miguel Ángel Linares [PE]",
+              "result": "T",
+              "table": 36
+            },
+            "3": {
+              "name": "Jorge Manuel Isuhuaylas Chávez [PE]",
+              "result": "T",
+              "table": 28
+            },
+            "4": {
+              "name": "Tomas Riquelme [CL]",
+              "result": "L",
+              "table": 27
+            },
+            "5": {
+              "name": "Renzo Angulo [PE]",
+              "result": "L",
+              "table": 43
+            },
+            "6": {
+              "name": "Martin Ricardo Carmona Romero [MX]",
+              "result": "W",
+              "table": 45
+            },
+            "7": {
+              "name": "Luiz Claudio Rios Pecoraro Junior [BR]",
+              "result": "T",
+              "table": 33
+            }
+          }
+        },
+        {
+          "name": "Luiguer Miguel Santos Llerena [PE]",
+          "placing": 71,
+          "record": {
+            "wins": 3,
+            "losses": 4,
+            "ties": 0
+          },
+          "resistances": {
+            "self": 0.42857142857142855,
+            "opp": 0.45238095238095244,
+            "oppopp": 0.47380142533203756
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Carlos Medina Astete [PE]",
+              "result": "L",
+              "table": 11
+            },
+            "2": {
+              "name": "Aravena Briones [CL]",
+              "result": "W",
+              "table": 50
+            },
+            "3": {
+              "name": "Eduardo Mendoza [PE]",
+              "result": "L",
+              "table": 32
+            },
+            "4": {
+              "name": "Carlos Alberto Sosa Pezo [PE]",
+              "result": "W",
+              "table": 55
+            },
+            "5": {
+              "name": "Juan Espinola [MX]",
+              "result": "L",
+              "table": 34
+            },
+            "6": {
+              "name": "Farleib Cuba [PE]",
+              "result": "W",
+              "table": 37
+            },
+            "7": {
+              "name": "Carlos Felipe Pardo Narvaez [CL]",
+              "result": "L",
+              "table": 28
+            }
+          }
+        },
+        {
+          "name": "Luis Anibal Maitaluna Pachas [PE]",
+          "placing": 72,
+          "record": {
+            "wins": 3,
+            "losses": 4,
+            "ties": 0
+          },
+          "resistances": {
+            "self": 0.42857142857142855,
+            "opp": 0.4404761904761904,
+            "oppopp": 0.4823655652737285
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Giovanni Peragallo Shand [CL]",
+              "result": "L",
+              "table": 45
+            },
+            "2": {
+              "name": "Andy Gray [US]",
+              "result": "L",
+              "table": 52
+            },
+            "3": {
+              "name": "Aravena Briones [CL]",
+              "result": "W",
+              "table": 62
+            },
+            "4": {
+              "name": "Alberto Araya [CL]",
+              "result": "W",
+              "table": 49
+            },
+            "5": {
+              "name": "Claudio Tapia Balboa [CL]",
+              "result": "W",
+              "table": 32
+            },
+            "6": {
+              "name": "Juan Espinola [MX]",
+              "result": "L",
+              "table": 19
+            },
+            "7": {
+              "name": "Demian Aguirre Zapata [CL]",
+              "result": "L",
+              "table": 30
+            }
+          }
+        },
+        {
+          "name": "Aravena Briones [CL]",
+          "placing": 73,
+          "record": {
+            "wins": 3,
+            "losses": 4,
+            "ties": 0
+          },
+          "resistances": {
+            "self": 0.3333333333333333,
+            "opp": 0.43650793650793646,
+            "oppopp": 0.4458616780045351
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Damian Fernandez Urroz [AR]",
+              "result": "L",
+              "table": 62
+            },
+            "2": {
+              "name": "Luiguer Miguel Santos Llerena [PE]",
+              "result": "L",
+              "table": 50
+            },
+            "3": {
+              "name": "Luis Anibal Maitaluna Pachas [PE]",
+              "result": "L",
+              "table": 62
+            },
+            "4": {
+              "name": "BYE",
+              "result": "W",
+              "table": 0
+            },
+            "5": {
+              "name": "Nitish Doolub [GB]",
+              "result": "L",
+              "table": 54
+            },
+            "6": {
+              "name": "Paola Lisett Rondan Guerrero [PE]",
+              "result": "W",
+              "table": 55
+            },
+            "7": {
+              "name": "Carlos Alberto Sosa Pezo [PE]",
+              "result": "W",
+              "table": 47
+            }
+          }
+        },
+        {
+          "name": "Luiz Claudio Rios Pecoraro Junior [BR]",
+          "placing": 74,
+          "record": {
+            "wins": 2,
+            "losses": 2,
+            "ties": 3
+          },
+          "resistances": {
+            "self": 0.5,
+            "opp": 0.4336734693877551,
+            "oppopp": 0.5076530612244897
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Collins Roque [PE]",
+              "result": "L",
+              "table": 29
+            },
+            "2": {
+              "name": "Alexis Hormazabal [CL]",
+              "result": "W",
+              "table": 63
+            },
+            "3": {
+              "name": "Gianmarco Antonio Gomez Hilario [PE]",
+              "result": "T",
+              "table": 33
+            },
+            "4": {
+              "name": "Angel Aranibar [PE]",
+              "result": "W",
+              "table": 40
+            },
+            "5": {
+              "name": "Diego Guillen Pelaez [PE]",
+              "result": "L",
+              "table": 23
+            },
+            "6": {
+              "name": "Diego Leyva [PE]",
+              "result": "T",
+              "table": 35
+            },
+            "7": {
+              "name": "David Alejandro Fernandez Abarca [MX]",
+              "result": "T",
+              "table": 33
+            }
+          }
+        },
+        {
+          "name": "Marco José Zamudio Choy [PE]",
+          "placing": 75,
+          "record": {
+            "wins": 2,
+            "losses": 3,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.42857142857142855,
+            "opp": 0.5561224489795917,
+            "oppopp": 0.4989067055393586
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Joel Santillan Ulloa [PE]",
+              "result": "W",
+              "table": 59
+            },
+            "2": {
+              "name": "Victor Allan Muñoz Morales [CL]",
+              "result": "T",
+              "table": 27
+            },
+            "3": {
+              "name": "Andrés Lostaunau [PE]",
+              "result": "W",
+              "table": 30
+            },
+            "4": {
+              "name": "Joaquín Orrego [PE]",
+              "result": "L",
+              "table": 13
+            },
+            "5": {
+              "name": "Manuel Alcaino [CL]",
+              "result": "L",
+              "table": 26
+            },
+            "6": {
+              "name": "Augusto Benavides Medina [PE]",
+              "result": "T",
+              "table": 33
+            },
+            "7": {
+              "name": "Hugo León [PE]",
+              "result": "L",
+              "table": 36
+            }
+          }
+        },
+        {
+          "name": "Fernando Ernesto Toratto Bullon [PE]",
+          "placing": 76,
+          "record": {
+            "wins": 2,
+            "losses": 3,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.42857142857142855,
+            "opp": 0.5510204081632654,
+            "oppopp": 0.49344023323615155
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Bruno Partala [BR]",
+              "result": "W",
+              "table": 35
+            },
+            "2": {
+              "name": "Fabrizio Bellucci [AR]",
+              "result": "T",
+              "table": 17
+            },
+            "3": {
+              "name": "Javier Chelmes [CL]",
+              "result": "L",
+              "table": 23
+            },
+            "4": {
+              "name": "Julián Gabriel Casiano Zambrano [PE]",
+              "result": "W",
+              "table": 35
+            },
+            "5": {
+              "name": "Alonso Diaz [PE]",
+              "result": "L",
+              "table": 28
+            },
+            "6": {
+              "name": "Andrés Castillo [MX]",
+              "result": "L",
+              "table": 34
+            },
+            "7": {
+              "name": "Alberto Bonsanto [MX]",
+              "result": "T",
+              "table": 42
+            }
+          }
+        },
+        {
+          "name": "Alberto Bonsanto [MX]",
+          "placing": 77,
+          "record": {
+            "wins": 2,
+            "losses": 3,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.42857142857142855,
+            "opp": 0.5408163265306122,
+            "oppopp": 0.4956268221574343
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Wilsonn Molina [CL]",
+              "result": "W",
+              "table": 37
+            },
+            "2": {
+              "name": "Diego Cassiraga [AR]",
+              "result": "L",
+              "table": 10
+            },
+            "3": {
+              "name": "Renzo Zambrano [PE]",
+              "result": "L",
+              "table": 46
+            },
+            "4": {
+              "name": "Juan Espinola [MX]",
+              "result": "L",
+              "table": 48
+            },
+            "5": {
+              "name": "Walter André Chiclayo Sandoval [PE]",
+              "result": "W",
+              "table": 53
+            },
+            "6": {
+              "name": "Paulo Gouveia De Freitas [BR]",
+              "result": "T",
+              "table": 38
+            },
+            "7": {
+              "name": "Fernando Ernesto Toratto Bullon [PE]",
+              "result": "T",
+              "table": 42
+            }
+          }
+        },
+        {
+          "name": "Oscar Taboada Rojas [PE]",
+          "placing": 78,
+          "record": {
+            "wins": 2,
+            "losses": 3,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.42857142857142855,
+            "opp": 0.5170068027210883,
+            "oppopp": 0.5119047619047619
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Rodrigo Montoya [PE]",
+              "result": "L",
+              "table": 39
+            },
+            "2": {
+              "name": "Nitish Doolub [GB]",
+              "result": "W",
+              "table": 45
+            },
+            "3": {
+              "name": "Mario Cesar De La Cruz Llanos [PE]",
+              "result": "T",
+              "table": 39
+            },
+            "4": {
+              "name": "Manuel Alcaino [CL]",
+              "result": "L",
+              "table": 41
+            },
+            "5": {
+              "name": "Alexiev Castro [PE]",
+              "result": "T",
+              "table": 47
+            },
+            "6": {
+              "name": "Hugo León [PE]",
+              "result": "L",
+              "table": 48
+            },
+            "7": {
+              "name": "Gianmarco Antonio Gomez Hilario [PE]",
+              "result": "W",
+              "table": 50
+            }
+          }
+        },
+        {
+          "name": "Alexiev Castro [PE]",
+          "placing": 79,
+          "record": {
+            "wins": 2,
+            "losses": 3,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.42857142857142855,
+            "opp": 0.48979591836734687,
+            "oppopp": 0.47351797862001943
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Ajay Sridhar [US]",
+              "result": "L",
+              "table": 57
+            },
+            "2": {
+              "name": "Paola Lisett Rondan Guerrero [PE]",
+              "result": "T",
+              "table": 60
+            },
+            "3": {
+              "name": "Hugo León [PE]",
+              "result": "W",
+              "table": 58
+            },
+            "4": {
+              "name": "Carlos Lopes [BR]",
+              "result": "L",
+              "table": 31
+            },
+            "5": {
+              "name": "Oscar Taboada Rojas [PE]",
+              "result": "T",
+              "table": 47
+            },
+            "6": {
+              "name": "Fernando Ugarte [PE]",
+              "result": "W",
+              "table": 49
+            },
+            "7": {
+              "name": "Bayron Quiroz Cortes [CL]",
+              "result": "L",
+              "table": 34
+            }
+          }
+        },
+        {
+          "name": "Augusto Benavides Medina [PE]",
+          "placing": 80,
+          "record": {
+            "wins": 2,
+            "losses": 3,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.42857142857142855,
+            "opp": 0.44897959183673464,
+            "oppopp": 0.4569970845481049
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Walter André Chiclayo Sandoval [PE]",
+              "result": "L",
+              "table": 19
+            },
+            "2": {
+              "name": "Luis Martin Jesus Maguiña Custodio [PE]",
+              "result": "W",
+              "table": 57
+            },
+            "3": {
+              "name": "Jose Francisco Prada Talavera [PE]",
+              "result": "W",
+              "table": 42
+            },
+            "4": {
+              "name": "Santiago García Arrué [PE]",
+              "result": "L",
+              "table": 22
+            },
+            "5": {
+              "name": "Andrés Castillo [MX]",
+              "result": "T",
+              "table": 38
+            },
+            "6": {
+              "name": "Marco José Zamudio Choy [PE]",
+              "result": "T",
+              "table": 33
+            },
+            "7": {
+              "name": "Cristian Gallo [CL]",
+              "result": "L",
+              "table": 35
+            }
+          }
+        },
+        {
+          "name": "Erick Campos [CR]",
+          "placing": 81,
+          "record": {
+            "wins": 2,
+            "losses": 3,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.42857142857142855,
+            "opp": 0.401360544217687,
+            "oppopp": 0.4789439585357952
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Martin Ricardo Carmona Romero [MX]",
+              "result": "T",
+              "table": 58
+            },
+            "2": {
+              "name": "Alvaro Sanchez [CL]",
+              "result": "L",
+              "table": 39
+            },
+            "3": {
+              "name": "Óscar Videla [CL]",
+              "result": "W",
+              "table": 54
+            },
+            "4": {
+              "name": "Diego Guillen Pelaez [PE]",
+              "result": "L",
+              "table": 42
+            },
+            "5": {
+              "name": "Jorge Flores [PE]",
+              "result": "T",
+              "table": 52
+            },
+            "6": {
+              "name": "Wilsonn Molina [CL]",
+              "result": "L",
+              "table": 44
+            },
+            "7": {
+              "name": "Luis Carlos Alonso Delgado Araujo [PE]",
+              "result": "W",
+              "table": 49
+            }
+          }
+        },
+        {
+          "name": "Martin Ricardo Carmona Romero [MX]",
+          "placing": 82,
+          "record": {
+            "wins": 2,
+            "losses": 3,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.42857142857142855,
+            "opp": 0.39285714285714285,
+            "oppopp": 0.450801749271137
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Erick Campos [CR]",
+              "result": "T",
+              "table": 58
+            },
+            "2": {
+              "name": "Andrés Lostaunau [PE]",
+              "result": "L",
+              "table": 40
+            },
+            "3": {
+              "name": "Andres Estefano Gajardo Lopehandia [CL]",
+              "result": "L",
+              "table": 60
+            },
+            "4": {
+              "name": "John Cartagena [PE]",
+              "result": "T",
+              "table": 60
+            },
+            "5": {
+              "name": "Joaquin Herrera [PE]",
+              "result": "W",
+              "table": 60
+            },
+            "6": {
+              "name": "David Alejandro Fernandez Abarca [MX]",
+              "result": "L",
+              "table": 45
+            },
+            "7": {
+              "name": "Jose Francisco Prada Talavera [PE]",
+              "result": "W",
+              "table": 48
+            }
+          }
+        },
+        {
+          "name": "Alvaro Sanchez [CL]",
+          "placing": 83,
+          "record": {
+            "wins": 2,
+            "losses": 4,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.35714285714285715,
+            "opp": 0.5612244897959183,
+            "oppopp": 0.49562682215743437
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Andre Mauro Vereau Guerra [PE]",
+              "result": "T",
+              "table": 55
+            },
+            "2": {
+              "name": "Erick Campos [CR]",
+              "result": "W",
+              "table": 39
+            },
+            "3": {
+              "name": "Victor Allan Muñoz Morales [CL]",
+              "result": "L",
+              "table": 21
+            },
+            "4": {
+              "name": "Grover Tranca Mendez [PE]",
+              "result": "W",
+              "table": 32
+            },
+            "5": {
+              "name": "Javier Chelmes [CL]",
+              "result": "L",
+              "table": 22
+            },
+            "6": {
+              "name": "Renzo Junior Velásquez Salazar [PE]",
+              "result": "L",
+              "table": 31
+            },
+            "7": {
+              "name": "Mario Cesar De La Cruz Llanos [PE]",
+              "result": "L",
+              "table": 38
+            }
+          }
+        },
+        {
+          "name": "Andrés Lostaunau [PE]",
+          "placing": 84,
+          "record": {
+            "wins": 2,
+            "losses": 4,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.35714285714285715,
+            "opp": 0.5306122448979592,
+            "oppopp": 0.4613702623906706
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Javier Chelmes [CL]",
+              "result": "T",
+              "table": 30
+            },
+            "2": {
+              "name": "Martin Ricardo Carmona Romero [MX]",
+              "result": "W",
+              "table": 40
+            },
+            "3": {
+              "name": "Marco José Zamudio Choy [PE]",
+              "result": "L",
+              "table": 30
+            },
+            "4": {
+              "name": "Cristhoper Martinez [PE]",
+              "result": "W",
+              "table": 43
+            },
+            "5": {
+              "name": "Andres Estefano Gajardo Lopehandia [CL]",
+              "result": "L",
+              "table": 24
+            },
+            "6": {
+              "name": "Thiago Silva [BR]",
+              "result": "L",
+              "table": 27
+            },
+            "7": {
+              "name": "Bruno Partala [BR]",
+              "result": "L",
+              "table": 41
+            }
+          }
+        },
+        {
+          "name": "Vincent Quiroz [CL]",
+          "placing": 85,
+          "record": {
+            "wins": 2,
+            "losses": 4,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.35714285714285715,
+            "opp": 0.5204081632653061,
+            "oppopp": 0.4861516034985422
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Hector Almeyda [PE]",
+              "result": "L",
+              "table": 36
+            },
+            "2": {
+              "name": "Renzo Zambrano [PE]",
+              "result": "L",
+              "table": 59
+            },
+            "3": {
+              "name": "Luis Martin Jesus Maguiña Custodio [PE]",
+              "result": "W",
+              "table": 63
+            },
+            "4": {
+              "name": "Carlos Felipe Pardo Narvaez [CL]",
+              "result": "W",
+              "table": 51
+            },
+            "5": {
+              "name": "Matias Matricardi [AR]",
+              "result": "L",
+              "table": 33
+            },
+            "6": {
+              "name": "Richard Ruiz Vargas [PE]",
+              "result": "L",
+              "table": 40
+            },
+            "7": {
+              "name": "Claudio Tapia Balboa [CL]",
+              "result": "T",
+              "table": 45
+            }
+          }
+        },
+        {
+          "name": "Julián Gabriel Casiano Zambrano [PE]",
+          "placing": 86,
+          "record": {
+            "wins": 2,
+            "losses": 4,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.35714285714285715,
+            "opp": 0.5102040816326531,
+            "oppopp": 0.48129251700680264
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Fabricio Valdivia [PE]",
+              "result": "L",
+              "table": 70
+            },
+            "2": {
+              "name": "Andrés Castillo [MX]",
+              "result": "W",
+              "table": 64
+            },
+            "3": {
+              "name": "Sheldon Kuppan [GB]",
+              "result": "T",
+              "table": 48
+            },
+            "4": {
+              "name": "Fernando Ernesto Toratto Bullon [PE]",
+              "result": "L",
+              "table": 35
+            },
+            "5": {
+              "name": "Renzo Junior Velásquez Salazar [PE]",
+              "result": "L",
+              "table": 48
+            },
+            "6": {
+              "name": "Cristhoper Martinez [PE]",
+              "result": "W",
+              "table": 52
+            },
+            "7": {
+              "name": "Paulo Gouveia De Freitas [BR]",
+              "result": "L",
+              "table": 39
+            }
+          }
+        },
+        {
+          "name": "Jose Carlos Gomez [PE]",
+          "placing": 87,
+          "record": {
+            "wins": 2,
+            "losses": 4,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.35714285714285715,
+            "opp": 0.4863945578231292,
+            "oppopp": 0.4631924198250728
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Cristian Gallo [CL]",
+              "result": "W",
+              "table": 48
+            },
+            "2": {
+              "name": "Victor Muñoz [CL]",
+              "result": "L",
+              "table": 30
+            },
+            "3": {
+              "name": "Paola Lisett Rondan Guerrero [PE]",
+              "result": "T",
+              "table": 49
+            },
+            "4": {
+              "name": "Sheldon Kuppan [GB]",
+              "result": "L",
+              "table": 36
+            },
+            "5": {
+              "name": "Jessica Mellanie Reyes Maury [PE]",
+              "result": "W",
+              "table": 50
+            },
+            "6": {
+              "name": "Angel Aranibar [PE]",
+              "result": "L",
+              "table": 29
+            },
+            "7": {
+              "name": "Diego Leyva [PE]",
+              "result": "L",
+              "table": 37
+            }
+          }
+        },
+        {
+          "name": "Jessica Mellanie Reyes Maury [PE]",
+          "placing": 88,
+          "record": {
+            "wins": 2,
+            "losses": 4,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.35714285714285715,
+            "opp": 0.4744897959183674,
+            "oppopp": 0.4569970845481049
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Andrés Guzmán [MX]",
+              "result": "L",
+              "table": 65
+            },
+            "2": {
+              "name": "Cristian Gallo [CL]",
+              "result": "T",
+              "table": 53
+            },
+            "3": {
+              "name": "John Cartagena [PE]",
+              "result": "W",
+              "table": 56
+            },
+            "4": {
+              "name": "Jorge Villar [CL]",
+              "result": "L",
+              "table": 33
+            },
+            "5": {
+              "name": "Jose Carlos Gomez [PE]",
+              "result": "L",
+              "table": 50
+            },
+            "6": {
+              "name": "Sebastian García Tejada [PE]",
+              "result": "W",
+              "table": 50
+            },
+            "7": {
+              "name": "Carlos Lopes [BR]",
+              "result": "L",
+              "table": 40
+            }
+          }
+        },
+        {
+          "name": "Jose Reaño Alcantara [PE]",
+          "placing": 89,
+          "record": {
+            "wins": 2,
+            "losses": 4,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.25,
+            "opp": 0.4702380952380953,
+            "oppopp": 0.46660997732426296
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Diego Guillen Pelaez [PE]",
+              "result": "L",
+              "table": 53
+            },
+            "2": {
+              "name": "Jose Felix Monroy Hidalgo [PE]",
+              "result": "L",
+              "table": 66
+            },
+            "3": {
+              "name": "Juan Espinola [MX]",
+              "result": "L",
+              "table": 65
+            },
+            "4": {
+              "name": "Paulo Gouveia De Freitas [BR]",
+              "result": "L",
+              "table": 63
+            },
+            "5": {
+              "name": "BYE",
+              "result": "W",
+              "table": 0
+            },
+            "6": {
+              "name": "Javier Reategui [PE]",
+              "result": "W",
+              "table": 54
+            },
+            "7": {
+              "name": "Andy Gray [US]",
+              "result": "T",
+              "table": 46
+            }
+          }
+        },
+        {
+          "name": "Walter André Chiclayo Sandoval [PE]",
+          "placing": 90,
+          "record": {
+            "wins": 2,
+            "losses": 4,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.35714285714285715,
+            "opp": 0.4438775510204081,
+            "oppopp": 0.47084548104956264
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Augusto Benavides Medina [PE]",
+              "result": "W",
+              "table": 19
+            },
+            "2": {
+              "name": "Alonso Diaz [PE]",
+              "result": "L",
+              "table": 29
+            },
+            "3": {
+              "name": "Santiago García Arrué [PE]",
+              "result": "L",
+              "table": 37
+            },
+            "4": {
+              "name": "Andrés Castillo [MX]",
+              "result": "L",
+              "table": 46
+            },
+            "5": {
+              "name": "Alberto Bonsanto [MX]",
+              "result": "L",
+              "table": 53
+            },
+            "6": {
+              "name": "John Cartagena [PE]",
+              "result": "T",
+              "table": 56
+            },
+            "7": {
+              "name": "Sebastian García Tejada [PE]",
+              "result": "W",
+              "table": 52
+            }
+          }
+        },
+        {
+          "name": "Claudio Tapia Balboa [CL]",
+          "placing": 91,
+          "record": {
+            "wins": 2,
+            "losses": 4,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.35714285714285715,
+            "opp": 0.4404761904761904,
+            "oppopp": 0.49173955296404276
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Diego Varea [PE]",
+              "result": "L",
+              "table": 22
+            },
+            "2": {
+              "name": "Joel Santillan Ulloa [PE]",
+              "result": "W",
+              "table": 49
+            },
+            "3": {
+              "name": "Farleib Cuba [PE]",
+              "result": "W",
+              "table": 43
+            },
+            "4": {
+              "name": "Juan Guillermo Lara [PE]",
+              "result": "L",
+              "table": 18
+            },
+            "5": {
+              "name": "Luis Anibal Maitaluna Pachas [PE]",
+              "result": "L",
+              "table": 32
+            },
+            "6": {
+              "name": "Francisco Contreras Villa [CL]",
+              "result": "L",
+              "table": 39
+            },
+            "7": {
+              "name": "Vincent Quiroz [CL]",
+              "result": "T",
+              "table": 45
+            }
+          }
+        },
+        {
+          "name": "Andy Gray [US]",
+          "placing": 92,
+          "record": {
+            "wins": 2,
+            "losses": 4,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.35714285714285715,
+            "opp": 0.4387755102040816,
+            "oppopp": 0.48340621963070945
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Andres Torres [CO]",
+              "result": "L",
+              "table": 63
+            },
+            "2": {
+              "name": "Luis Anibal Maitaluna Pachas [PE]",
+              "result": "W",
+              "table": 52
+            },
+            "3": {
+              "name": "Francisco Contreras Villa [CL]",
+              "result": "L",
+              "table": 44
+            },
+            "4": {
+              "name": "Javier Reategui [PE]",
+              "result": "W",
+              "table": 45
+            },
+            "5": {
+              "name": "Nicolas Galaz [CL]",
+              "result": "L",
+              "table": 36
+            },
+            "6": {
+              "name": "Eduardo Mendoza [PE]",
+              "result": "L",
+              "table": 36
+            },
+            "7": {
+              "name": "Jose Reaño Alcantara [PE]",
+              "result": "T",
+              "table": 46
+            }
+          }
+        },
+        {
+          "name": "Cristhoper Martinez [PE]",
+          "placing": 93,
+          "record": {
+            "wins": 2,
+            "losses": 4,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.35714285714285715,
+            "opp": 0.39285714285714285,
+            "oppopp": 0.45918367346938777
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Alexander Monroy Hidalgo [PE]",
+              "result": "L",
+              "table": 68
+            },
+            "2": {
+              "name": "John Cartagena [PE]",
+              "result": "T",
+              "table": 47
+            },
+            "3": {
+              "name": "Fernando Ugarte [PE]",
+              "result": "W",
+              "table": 50
+            },
+            "4": {
+              "name": "Andrés Lostaunau [PE]",
+              "result": "L",
+              "table": 43
+            },
+            "5": {
+              "name": "Bruno Partala [BR]",
+              "result": "L",
+              "table": 46
+            },
+            "6": {
+              "name": "Julián Gabriel Casiano Zambrano [PE]",
+              "result": "L",
+              "table": 52
+            },
+            "7": {
+              "name": "Luis Delzo [PE]",
+              "result": "W",
+              "table": 53
+            }
+          }
+        },
+        {
+          "name": "Luis Martin Jesus Maguiña Custodio [PE]",
+          "placing": 94,
+          "record": {
+            "wins": 2,
+            "losses": 4,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.35714285714285715,
+            "opp": 0.3197278911564626,
+            "oppopp": 0.44229834791059286
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Victor Muñoz [CL]",
+              "result": "L",
+              "table": 54
+            },
+            "2": {
+              "name": "Augusto Benavides Medina [PE]",
+              "result": "L",
+              "table": 57
+            },
+            "3": {
+              "name": "Vincent Quiroz [CL]",
+              "result": "L",
+              "table": 63
+            },
+            "4": {
+              "name": "Nitish Doolub [GB]",
+              "result": "L",
+              "table": 64
+            },
+            "5": {
+              "name": "Joel Santillan Ulloa [PE]",
+              "result": "T",
+              "table": 63
+            },
+            "6": {
+              "name": "Joaquin Herrera [PE]",
+              "result": "W",
+              "table": 59
+            },
+            "7": {
+              "name": "John Cartagena [PE]",
+              "result": "W",
+              "table": 51
+            }
+          }
+        },
+        {
+          "name": "Collins Roque [PE]",
+          "placing": 95,
+          "record": {
+            "wins": 2,
+            "losses": 5,
+            "ties": 0
+          },
+          "resistances": {
+            "self": 0.2857142857142857,
+            "opp": 0.5051020408163265,
+            "oppopp": 0.46598639455782304
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Luiz Claudio Rios Pecoraro Junior [BR]",
+              "result": "W",
+              "table": 29
+            },
+            "2": {
+              "name": "Alexis Elefteriu [PE]",
+              "result": "L",
+              "table": 16
+            },
+            "3": {
+              "name": "Diego Leyva [PE]",
+              "result": "L",
+              "table": 34
+            },
+            "4": {
+              "name": "Wilsonn Molina [CL]",
+              "result": "L",
+              "table": 52
+            },
+            "5": {
+              "name": "Richard Ruiz Vargas [PE]",
+              "result": "L",
+              "table": 55
+            },
+            "6": {
+              "name": "Óscar Videla [CL]",
+              "result": "W",
+              "table": 53
+            },
+            "7": {
+              "name": "Miguel Ángel Linares [PE]",
+              "result": "L",
+              "table": 44
+            }
+          }
+        },
+        {
+          "name": "Victor Muñoz [CL]",
+          "placing": 96,
+          "record": {
+            "wins": 2,
+            "losses": 4,
+            "ties": 0
+          },
+          "resistances": {
+            "self": 0.3333333333333333,
+            "opp": 0.5416666666666667,
+            "oppopp": 0.4930555555555556
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Luis Martin Jesus Maguiña Custodio [PE]",
+              "result": "W",
+              "table": 54
+            },
+            "2": {
+              "name": "Jose Carlos Gomez [PE]",
+              "result": "W",
+              "table": 30
+            },
+            "3": {
+              "name": "Miguel Lopez [MX]",
+              "result": "L",
+              "table": 12
+            },
+            "4": {
+              "name": "Eduardo Paulini Villanueva [PE]",
+              "result": "L",
+              "table": 20
+            },
+            "5": {
+              "name": "Demian Aguirre Zapata [CL]",
+              "result": "L",
+              "table": 37
+            },
+            "6": {
+              "name": "Andres Torres [CO]",
+              "result": "L",
+              "table": 42
+            }
+          }
+        },
+        {
+          "name": "Jorge Flores [PE]",
+          "placing": 97,
+          "record": {
+            "wins": 1,
+            "losses": 2,
+            "ties": 3
+          },
+          "resistances": {
+            "self": 0.4166666666666667,
+            "opp": 0.5277777777777778,
+            "oppopp": 0.5157407407407407
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Javier Reategui [PE]",
+              "result": "W",
+              "table": 49
+            },
+            "2": {
+              "name": "Orlando Manque [CL]",
+              "result": "T",
+              "table": 23
+            },
+            "3": {
+              "name": "Rodrigo Montoya [PE]",
+              "result": "L",
+              "table": 29
+            },
+            "4": {
+              "name": "Andre Mauro Vereau Guerra [PE]",
+              "result": "L",
+              "table": 44
+            },
+            "5": {
+              "name": "Erick Campos [CR]",
+              "result": "T",
+              "table": 52
+            },
+            "6": {
+              "name": "Miguel Ángel Linares [PE]",
+              "result": "T",
+              "table": 46
+            }
+          }
+        },
+        {
+          "name": "Miguel Chozo Machuca [PE]",
+          "placing": 98,
+          "record": {
+            "wins": 2,
+            "losses": 4,
+            "ties": 0
+          },
+          "resistances": {
+            "self": 0.3333333333333333,
+            "opp": 0.4861111111111111,
+            "oppopp": 0.474537037037037
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Renzo Junior Velásquez Salazar [PE]",
+              "result": "L",
+              "table": 14
+            },
+            "2": {
+              "name": "Andre Mauro Vereau Guerra [PE]",
+              "result": "L",
+              "table": 44
+            },
+            "3": {
+              "name": "Nitish Doolub [GB]",
+              "result": "W",
+              "table": 64
+            },
+            "4": {
+              "name": "Po Hsiung Hsu [CL]",
+              "result": "L",
+              "table": 54
+            },
+            "5": {
+              "name": "Ronaldo Emerson Chumbe Real [PE]",
+              "result": "W",
+              "table": 56
+            },
+            "6": {
+              "name": "Carlos Felipe Pardo Narvaez [CL]",
+              "result": "L",
+              "table": 41
+            }
+          }
+        },
+        {
+          "name": "Farleib Cuba [PE]",
+          "placing": 99,
+          "record": {
+            "wins": 2,
+            "losses": 4,
+            "ties": 0
+          },
+          "resistances": {
+            "self": 0.3333333333333333,
+            "opp": 0.4583333333333333,
+            "oppopp": 0.48148148148148145
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Jose Francisco Prada Talavera [PE]",
+              "result": "L",
+              "table": 17
+            },
+            "2": {
+              "name": "Juan Espinola [MX]",
+              "result": "W",
+              "table": 51
+            },
+            "3": {
+              "name": "Claudio Tapia Balboa [CL]",
+              "result": "L",
+              "table": 43
+            },
+            "4": {
+              "name": "Ronaldo Emerson Chumbe Real [PE]",
+              "result": "W",
+              "table": 53
+            },
+            "5": {
+              "name": "Po Hsiung Hsu [CL]",
+              "result": "L",
+              "table": 31
+            },
+            "6": {
+              "name": "Luiguer Miguel Santos Llerena [PE]",
+              "result": "L",
+              "table": 37
+            }
+          }
+        },
+        {
+          "name": "Nitish Doolub [GB]",
+          "placing": 100,
+          "record": {
+            "wins": 2,
+            "losses": 4,
+            "ties": 0
+          },
+          "resistances": {
+            "self": 0.3333333333333333,
+            "opp": 0.4166666666666667,
+            "oppopp": 0.513425925925926
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Giovanno Ponce [CL]",
+              "result": "L",
+              "table": 64
+            },
+            "2": {
+              "name": "Oscar Taboada Rojas [PE]",
+              "result": "L",
+              "table": 45
+            },
+            "3": {
+              "name": "Miguel Chozo Machuca [PE]",
+              "result": "L",
+              "table": 64
+            },
+            "4": {
+              "name": "Luis Martin Jesus Maguiña Custodio [PE]",
+              "result": "W",
+              "table": 64
+            },
+            "5": {
+              "name": "Aravena Briones [CL]",
+              "result": "W",
+              "table": 54
+            },
+            "6": {
+              "name": "Andres Saldarriaga [PE]",
+              "result": "L",
+              "table": 43
+            }
+          }
+        },
+        {
+          "name": "Gianmarco Antonio Gomez Hilario [PE]",
+          "placing": 101,
+          "record": {
+            "wins": 1,
+            "losses": 4,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.2857142857142857,
+            "opp": 0.5153061224489794,
+            "oppopp": 0.47594752186588923
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Miguel Lopez [MX]",
+              "result": "L",
+              "table": 25
+            },
+            "2": {
+              "name": "Sebastian García Tejada [PE]",
+              "result": "W",
+              "table": 46
+            },
+            "3": {
+              "name": "Luiz Claudio Rios Pecoraro Junior [BR]",
+              "result": "T",
+              "table": 33
+            },
+            "4": {
+              "name": "Andres Saldarriaga [PE]",
+              "result": "T",
+              "table": 38
+            },
+            "5": {
+              "name": "Bayron Quiroz Cortes [CL]",
+              "result": "L",
+              "table": 40
+            },
+            "6": {
+              "name": "Cristian Gallo [CL]",
+              "result": "L",
+              "table": 47
+            },
+            "7": {
+              "name": "Oscar Taboada Rojas [PE]",
+              "result": "L",
+              "table": 50
+            }
+          }
+        },
+        {
+          "name": "Luis Carlos Alonso Delgado Araujo [PE]",
+          "placing": 102,
+          "record": {
+            "wins": 1,
+            "losses": 4,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.2857142857142857,
+            "opp": 0.4795918367346938,
+            "oppopp": 0.4436345966958211
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Demian Aguirre Zapata [CL]",
+              "result": "L",
+              "table": 24
+            },
+            "2": {
+              "name": "Carlos Alberto Sosa Pezo [PE]",
+              "result": "T",
+              "table": 61
+            },
+            "3": {
+              "name": "Bruno Partala [BR]",
+              "result": "W",
+              "table": 53
+            },
+            "4": {
+              "name": "Andres Estefano Gajardo Lopehandia [CL]",
+              "result": "L",
+              "table": 37
+            },
+            "5": {
+              "name": "Angel Aranibar [PE]",
+              "result": "L",
+              "table": 45
+            },
+            "6": {
+              "name": "Jose Francisco Prada Talavera [PE]",
+              "result": "T",
+              "table": 51
+            },
+            "7": {
+              "name": "Erick Campos [CR]",
+              "result": "L",
+              "table": 49
+            }
+          }
+        },
+        {
+          "name": "Jose Francisco Prada Talavera [PE]",
+          "placing": 103,
+          "record": {
+            "wins": 1,
+            "losses": 4,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.2857142857142857,
+            "opp": 0.46598639455782304,
+            "oppopp": 0.4789844509232264
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Farleib Cuba [PE]",
+              "result": "W",
+              "table": 17
+            },
+            "2": {
+              "name": "Ajay Sridhar [US]",
+              "result": "L",
+              "table": 25
+            },
+            "3": {
+              "name": "Augusto Benavides Medina [PE]",
+              "result": "L",
+              "table": 42
+            },
+            "4": {
+              "name": "Renzo Junior Velásquez Salazar [PE]",
+              "result": "T",
+              "table": 47
+            },
+            "5": {
+              "name": "Alfonso Herrera [PE]",
+              "result": "L",
+              "table": 44
+            },
+            "6": {
+              "name": "Luis Carlos Alonso Delgado Araujo [PE]",
+              "result": "T",
+              "table": 51
+            },
+            "7": {
+              "name": "Martin Ricardo Carmona Romero [MX]",
+              "result": "L",
+              "table": 48
+            }
+          }
+        },
+        {
+          "name": "Carlos Alberto Sosa Pezo [PE]",
+          "placing": 104,
+          "record": {
+            "wins": 1,
+            "losses": 4,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.2857142857142857,
+            "opp": 0.43027210884353745,
+            "oppopp": 0.4618966634272756
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Agustin Campo [AR]",
+              "result": "L",
+              "table": 32
+            },
+            "2": {
+              "name": "Luis Carlos Alonso Delgado Araujo [PE]",
+              "result": "T",
+              "table": 61
+            },
+            "3": {
+              "name": "Bayron Quiroz Cortes [CL]",
+              "result": "T",
+              "table": 59
+            },
+            "4": {
+              "name": "Luiguer Miguel Santos Llerena [PE]",
+              "result": "L",
+              "table": 55
+            },
+            "5": {
+              "name": "Paulo Gouveia De Freitas [BR]",
+              "result": "L",
+              "table": 58
+            },
+            "6": {
+              "name": "Joel Santillan Ulloa [PE]",
+              "result": "W",
+              "table": 57
+            },
+            "7": {
+              "name": "Aravena Briones [CL]",
+              "result": "L",
+              "table": 47
+            }
+          }
+        },
+        {
+          "name": "Fernando Ugarte [PE]",
+          "placing": 105,
+          "record": {
+            "wins": 1,
+            "losses": 4,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.2857142857142857,
+            "opp": 0.423469387755102,
+            "oppopp": 0.4414075153871072
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Alfredo Aldecoa [PE]",
+              "result": "L",
+              "table": 41
+            },
+            "2": {
+              "name": "Carlos Lopes [BR]",
+              "result": "T",
+              "table": 54
+            },
+            "3": {
+              "name": "Cristhoper Martinez [PE]",
+              "result": "L",
+              "table": 50
+            },
+            "4": {
+              "name": "Cristian Gallo [CL]",
+              "result": "L",
+              "table": 61
+            },
+            "5": {
+              "name": "Christian Badenas [AR]",
+              "result": "W",
+              "table": 62
+            },
+            "6": {
+              "name": "Alexiev Castro [PE]",
+              "result": "L",
+              "table": 49
+            },
+            "7": {
+              "name": "Paola Lisett Rondan Guerrero [PE]",
+              "result": "T",
+              "table": 54
+            }
+          }
+        },
+        {
+          "name": "Bruno Paredes [PE]",
+          "placing": 106,
+          "record": {
+            "wins": 1,
+            "losses": 1,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.5,
+            "opp": 0.6041666666666666,
+            "oppopp": 0.5486111111111112
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Julio Cesar La Puente Valera [PE]",
+              "result": "W",
+              "table": 50
+            },
+            "2": {
+              "name": "Alexander Monroy Hidalgo [PE]",
+              "result": "T",
+              "table": 20
+            },
+            "3": {
+              "name": "Thiago Silva [BR]",
+              "result": "T",
+              "table": 27
+            },
+            "4": {
+              "name": "Cristopher Gonzalez Diaz [CL]",
+              "result": "L",
+              "table": 28
+            }
+          }
+        },
+        {
+          "name": "John Cartagena [PE]",
+          "placing": 107,
+          "record": {
+            "wins": 0,
+            "losses": 3,
+            "ties": 4
+          },
+          "resistances": {
+            "self": 0.2857142857142857,
+            "opp": 0.41836734693877553,
+            "oppopp": 0.42225461613216714
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Eduardo Paulini Villanueva [PE]",
+              "result": "L",
+              "table": 26
+            },
+            "2": {
+              "name": "Cristhoper Martinez [PE]",
+              "result": "T",
+              "table": 47
+            },
+            "3": {
+              "name": "Jessica Mellanie Reyes Maury [PE]",
+              "result": "L",
+              "table": 56
+            },
+            "4": {
+              "name": "Martin Ricardo Carmona Romero [MX]",
+              "result": "T",
+              "table": 60
+            },
+            "5": {
+              "name": "Paola Lisett Rondan Guerrero [PE]",
+              "result": "T",
+              "table": 59
+            },
+            "6": {
+              "name": "Walter André Chiclayo Sandoval [PE]",
+              "result": "T",
+              "table": 56
+            },
+            "7": {
+              "name": "Luis Martin Jesus Maguiña Custodio [PE]",
+              "result": "L",
+              "table": 51
+            }
+          }
+        },
+        {
+          "name": "Paola Lisett Rondan Guerrero [PE]",
+          "placing": 108,
+          "record": {
+            "wins": 0,
+            "losses": 3,
+            "ties": 4
+          },
+          "resistances": {
+            "self": 0.2857142857142857,
+            "opp": 0.40476190476190477,
+            "oppopp": 0.4591026886945254
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Richard Ruiz Vargas [PE]",
+              "result": "L",
+              "table": 51
+            },
+            "2": {
+              "name": "Alexiev Castro [PE]",
+              "result": "T",
+              "table": 60
+            },
+            "3": {
+              "name": "Jose Carlos Gomez [PE]",
+              "result": "T",
+              "table": 49
+            },
+            "4": {
+              "name": "Bayron Quiroz Cortes [CL]",
+              "result": "L",
+              "table": 56
+            },
+            "5": {
+              "name": "John Cartagena [PE]",
+              "result": "T",
+              "table": 59
+            },
+            "6": {
+              "name": "Aravena Briones [CL]",
+              "result": "L",
+              "table": 55
+            },
+            "7": {
+              "name": "Fernando Ugarte [PE]",
+              "result": "T",
+              "table": 54
+            }
+          }
+        },
+        {
+          "name": "Luis Delzo [PE]",
+          "placing": 109,
+          "record": {
+            "wins": 1,
+            "losses": 5,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.25,
+            "opp": 0.4030612244897959,
+            "oppopp": 0.4145610625202462
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Angel Aranibar [PE]",
+              "result": "L",
+              "table": 34
+            },
+            "2": {
+              "name": "Joaquin Herrera [PE]",
+              "result": "T",
+              "table": 68
+            },
+            "3": {
+              "name": "Jorge Villar [CL]",
+              "result": "L",
+              "table": 51
+            },
+            "4": {
+              "name": "Bruno Partala [BR]",
+              "result": "L",
+              "table": 58
+            },
+            "5": {
+              "name": "Sebastian García Tejada [PE]",
+              "result": "L",
+              "table": 61
+            },
+            "6": {
+              "name": "Christian Badenas [AR]",
+              "result": "W",
+              "table": 58
+            },
+            "7": {
+              "name": "Cristhoper Martinez [PE]",
+              "result": "L",
+              "table": 53
+            }
+          }
+        },
+        {
+          "name": "Sebastian García Tejada [PE]",
+          "placing": 110,
+          "record": {
+            "wins": 1,
+            "losses": 5,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.25,
+            "opp": 0.3673469387755102,
+            "oppopp": 0.4456997084548104
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Miguel Ángel Linares [PE]",
+              "result": "L",
+              "table": 61
+            },
+            "2": {
+              "name": "Gianmarco Antonio Gomez Hilario [PE]",
+              "result": "L",
+              "table": 46
+            },
+            "3": {
+              "name": "Carlos Felipe Pardo Narvaez [CL]",
+              "result": "L",
+              "table": 66
+            },
+            "4": {
+              "name": "Joel Santillan Ulloa [PE]",
+              "result": "T",
+              "table": 62
+            },
+            "5": {
+              "name": "Luis Delzo [PE]",
+              "result": "W",
+              "table": 61
+            },
+            "6": {
+              "name": "Jessica Mellanie Reyes Maury [PE]",
+              "result": "L",
+              "table": 50
+            },
+            "7": {
+              "name": "Walter André Chiclayo Sandoval [PE]",
+              "result": "L",
+              "table": 52
+            }
+          }
+        },
+        {
+          "name": "Óscar Videla [CL]",
+          "placing": 111,
+          "record": {
+            "wins": 1,
+            "losses": 4,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.25,
+            "opp": 0.4166666666666667,
+            "oppopp": 0.45601851851851855
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Renzo Angulo [PE]",
+              "result": "L",
+              "table": 15
+            },
+            "2": {
+              "name": "Bruno Partala [BR]",
+              "result": "T",
+              "table": 67
+            },
+            "3": {
+              "name": "Erick Campos [CR]",
+              "result": "L",
+              "table": 54
+            },
+            "4": {
+              "name": "Christian Badenas [AR]",
+              "result": "W",
+              "table": 59
+            },
+            "5": {
+              "name": "Grover Tranca Mendez [PE]",
+              "result": "L",
+              "table": 49
+            },
+            "6": {
+              "name": "Collins Roque [PE]",
+              "result": "L",
+              "table": 53
+            }
+          }
+        },
+        {
+          "name": "Javier Reategui [PE]",
+          "placing": 112,
+          "record": {
+            "wins": 1,
+            "losses": 5,
+            "ties": 0
+          },
+          "resistances": {
+            "self": 0.25,
+            "opp": 0.4,
+            "oppopp": 0.48888888888888893
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Jorge Flores [PE]",
+              "result": "L",
+              "table": 49
+            },
+            "2": {
+              "name": "BYE",
+              "result": "W",
+              "table": 0
+            },
+            "3": {
+              "name": "Alfredo Aldecoa [PE]",
+              "result": "L",
+              "table": 36
+            },
+            "4": {
+              "name": "Andy Gray [US]",
+              "result": "L",
+              "table": 45
+            },
+            "5": {
+              "name": "Carlos Felipe Pardo Narvaez [CL]",
+              "result": "L",
+              "table": 57
+            },
+            "6": {
+              "name": "Jose Reaño Alcantara [PE]",
+              "result": "L",
+              "table": 54
+            }
+          }
+        },
+        {
+          "name": "Ronaldo Emerson Chumbe Real [PE]",
+          "placing": 113,
+          "record": {
+            "wins": 1,
+            "losses": 4,
+            "ties": 0
+          },
+          "resistances": {
+            "self": 0.25,
+            "opp": 0.5,
+            "oppopp": 0.4652777777777778
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Alonso Diaz [PE]",
+              "result": "L",
+              "table": 69
+            },
+            "2": {
+              "name": "Sheldon Kuppan [GB]",
+              "result": "L",
+              "table": 65
+            },
+            "3": {
+              "name": "BYE",
+              "result": "W",
+              "table": 0
+            },
+            "4": {
+              "name": "Farleib Cuba [PE]",
+              "result": "L",
+              "table": 53
+            },
+            "5": {
+              "name": "Miguel Chozo Machuca [PE]",
+              "result": "L",
+              "table": 56
+            }
+          }
+        },
+        {
+          "name": "Alberto Araya [CL]",
+          "placing": 114,
+          "record": {
+            "wins": 1,
+            "losses": 3,
+            "ties": 0
+          },
+          "resistances": {
+            "self": 0.25,
+            "opp": 0.5625,
+            "oppopp": 0.4583333333333333
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Fabrizio Bellucci [AR]",
+              "result": "L",
+              "table": 44
+            },
+            "2": {
+              "name": "Francisco Contreras Villa [CL]",
+              "result": "L",
+              "table": 62
+            },
+            "3": {
+              "name": "Paulo Gouveia De Freitas [BR]",
+              "result": "W",
+              "table": 67
+            },
+            "4": {
+              "name": "Luis Anibal Maitaluna Pachas [PE]",
+              "result": "L",
+              "table": 49
+            }
+          }
+        },
+        {
+          "name": "Joel Santillan Ulloa [PE]",
+          "placing": 115,
+          "record": {
+            "wins": 0,
+            "losses": 4,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.25,
+            "opp": 0.375,
+            "oppopp": 0.4328703703703704
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Marco José Zamudio Choy [PE]",
+              "result": "L",
+              "table": 59
+            },
+            "2": {
+              "name": "Claudio Tapia Balboa [CL]",
+              "result": "L",
+              "table": 49
+            },
+            "3": {
+              "name": "Andrés Castillo [MX]",
+              "result": "L",
+              "table": 61
+            },
+            "4": {
+              "name": "Sebastian García Tejada [PE]",
+              "result": "T",
+              "table": 62
+            },
+            "5": {
+              "name": "Luis Martin Jesus Maguiña Custodio [PE]",
+              "result": "T",
+              "table": 63
+            },
+            "6": {
+              "name": "Carlos Alberto Sosa Pezo [PE]",
+              "result": "L",
+              "table": 57
+            }
+          }
+        },
+        {
+          "name": "Christian Badenas [AR]",
+          "placing": 116,
+          "record": {
+            "wins": 0,
+            "losses": 5,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.25,
+            "opp": 0.4861111111111111,
+            "oppopp": 0.44675925925925924
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Jorge Villar [CL]",
+              "result": "T",
+              "table": 67
+            },
+            "2": {
+              "name": "Joaquín Orrego [PE]",
+              "result": "L",
+              "table": 41
+            },
+            "3": {
+              "name": "Alfonso Herrera [PE]",
+              "result": "L",
+              "table": 52
+            },
+            "4": {
+              "name": "Óscar Videla [CL]",
+              "result": "L",
+              "table": 59
+            },
+            "5": {
+              "name": "Fernando Ugarte [PE]",
+              "result": "L",
+              "table": 62
+            },
+            "6": {
+              "name": "Luis Delzo [PE]",
+              "result": "L",
+              "table": 58
+            }
+          }
+        },
+        {
+          "name": "Joaquin Herrera [PE]",
+          "placing": 117,
+          "record": {
+            "wins": 0,
+            "losses": 5,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.25,
+            "opp": 0.375,
+            "oppopp": 0.4421296296296297
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Omar Fernández [CR]",
+              "result": "L",
+              "table": 66
+            },
+            "2": {
+              "name": "Luis Delzo [PE]",
+              "result": "T",
+              "table": 68
+            },
+            "3": {
+              "name": "Carlos Lopes [BR]",
+              "result": "L",
+              "table": 57
+            },
+            "4": {
+              "name": "Hugo León [PE]",
+              "result": "L",
+              "table": 57
+            },
+            "5": {
+              "name": "Martin Ricardo Carmona Romero [MX]",
+              "result": "L",
+              "table": 60
+            },
+            "6": {
+              "name": "Luis Martin Jesus Maguiña Custodio [PE]",
+              "result": "L",
+              "table": 59
+            }
+          }
+        },
+        {
+          "name": "Alexis Hormazabal [CL]",
+          "placing": 118,
+          "record": {
+            "wins": 0,
+            "losses": 2,
+            "ties": 0
+          },
+          "resistances": {
+            "self": 0.25,
+            "opp": 0.625,
+            "oppopp": 0.48611111111111116
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Victor Allan Muñoz Morales [CL]",
+              "result": "L",
+              "table": 38
+            },
+            "2": {
+              "name": "Luiz Claudio Rios Pecoraro Junior [BR]",
+              "result": "L",
+              "table": 63
+            }
+          }
+        },
+        {
+          "name": "Connor Finton [US]",
+          "placing": 119,
+          "record": {
+            "wins": 0,
+            "losses": 2,
+            "ties": 0
+          },
+          "resistances": {
+            "self": 0.25,
+            "opp": 0.5416666666666667,
+            "oppopp": 0.5138888888888888
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Alexis Elefteriu [PE]",
+              "result": "L",
+              "table": 21
+            },
+            "2": {
+              "name": "Diego Leyva [PE]",
+              "result": "L",
+              "table": 56
+            }
+          }
+        },
+        {
+          "name": "Jesus Alejandro Dominguez Jimenez [MX]",
+          "placing": 120,
+          "record": {
+            "wins": 0,
+            "losses": 1,
+            "ties": 0
+          },
+          "resistances": {
+            "self": 0.25,
+            "opp": 0.8333333333333334,
+            "oppopp": 0.5972222222222222
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Cristopher Gonzalez Diaz [CL]",
+              "result": "L",
+              "table": 43
+            }
+          }
+        },
+        {
+          "name": "Julio Cesar La Puente Valera [PE]",
+          "placing": 121,
+          "record": {
+            "wins": 0,
+            "losses": 1,
+            "ties": 0
+          },
+          "resistances": {
+            "self": 0.25,
+            "opp": 0.5,
+            "oppopp": 0.6041666666666666
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Bruno Paredes [PE]",
+              "result": "L",
+              "table": 50
+            }
+          }
+        },
+        {
+          "name": "Dalton Acchetta [BR]",
+          "placing": 122,
+          "record": {
+            "wins": 0,
+            "losses": 1,
+            "ties": 0
+          },
+          "resistances": {
+            "self": 0.25,
+            "opp": 0.5,
+            "oppopp": 0.47222222222222227
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "David Alejandro Fernandez Abarca [MX]",
+              "result": "L",
+              "table": 46
+            }
+          }
+        },
+        {
+          "name": "Alvaro Daniel Villa Garcia Gonzales [PE]",
+          "placing": 123,
+          "record": {
+            "wins": 0,
+            "losses": 1,
+            "ties": 0
+          },
+          "resistances": {
+            "self": 0.25,
+            "opp": 0.4166666666666667,
+            "oppopp": 0.513888888888889
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Mario Cesar De La Cruz Llanos [PE]",
+              "result": "L",
+              "table": 18
+            }
+          }
+        }
+      ]
+    },
+    {
+      "division": "seniors",
+      "data": [
+        {
+          "name": "Manuel Adrian Lazo Guerra [PE]",
+          "placing": 1,
+          "record": {
+            "wins": 3,
+            "losses": 0,
+            "ties": 0
+          },
+          "resistances": {
+            "self": 1,
+            "opp": 0.5,
+            "oppopp": 0.6111111111111112
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "BYE",
+              "result": "W",
+              "table": 0
+            },
+            "2": {
+              "name": "Sebastian Gallo [CL]",
+              "result": "W",
+              "table": 7
+            },
+            "3": {
+              "name": "Patrick Omar Escalante Dolores [PE]",
+              "result": "W",
+              "table": 7
+            }
+          }
+        },
+        {
+          "name": "Patrick Omar Escalante Dolores [PE]",
+          "placing": 2,
+          "record": {
+            "wins": 2,
+            "losses": 1,
+            "ties": 0
+          },
+          "resistances": {
+            "self": 0.6666666666666666,
+            "opp": 0.5,
+            "oppopp": 0.5833333333333334
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "David Avila Campos [MX]",
+              "result": "W",
+              "table": 8
+            },
+            "2": {
+              "name": "Alonso Quijada [PE]",
+              "result": "W",
+              "table": 8
+            },
+            "3": {
+              "name": "Manuel Adrian Lazo Guerra [PE]",
+              "result": "L",
+              "table": 7
+            }
+          }
+        },
+        {
+          "name": "Nicolas Chavez [PE]",
+          "placing": 3,
+          "record": {
+            "wins": 1,
+            "losses": 0,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.6666666666666666,
+            "opp": 0.3611111111111111,
+            "oppopp": 0.6018518518518517
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Alonso Quijada [PE]",
+              "result": "T",
+              "table": 9
+            },
+            "2": {
+              "name": "Eduardo Avila Campos [MX]",
+              "result": "T",
+              "table": 9
+            },
+            "3": {
+              "name": "Sebastian Gallo [CL]",
+              "result": "W",
+              "table": 8
+            }
+          }
+        },
+        {
+          "name": "Alonso Quijada [PE]",
+          "placing": 4,
+          "record": {
+            "wins": 1,
+            "losses": 1,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.25,
+            "opp": 0.6666666666666666,
+            "oppopp": 0.4305555555555556
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Nicolas Chavez [PE]",
+              "result": "T",
+              "table": 9
+            },
+            "2": {
+              "name": "Patrick Omar Escalante Dolores [PE]",
+              "result": "L",
+              "table": 8
+            },
+            "3": {
+              "name": "BYE",
+              "result": "W",
+              "table": 0
+            }
+          }
+        },
+        {
+          "name": "Eduardo Avila Campos [MX]",
+          "placing": 5,
+          "record": {
+            "wins": 1,
+            "losses": 1,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.5,
+            "opp": 0.4166666666666667,
+            "oppopp": 0.5555555555555555
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Sebastian Gallo [CL]",
+              "result": "L",
+              "table": 7
+            },
+            "2": {
+              "name": "Nicolas Chavez [PE]",
+              "result": "T",
+              "table": 9
+            },
+            "3": {
+              "name": "David Avila Campos [MX]",
+              "result": "W",
+              "table": 9
+            }
+          }
+        },
+        {
+          "name": "Sebastian Gallo [CL]",
+          "placing": 6,
+          "record": {
+            "wins": 1,
+            "losses": 2,
+            "ties": 0
+          },
+          "resistances": {
+            "self": 0.3333333333333333,
+            "opp": 0.7222222222222222,
+            "oppopp": 0.425925925925926
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Eduardo Avila Campos [MX]",
+              "result": "W",
+              "table": 7
+            },
+            "2": {
+              "name": "Manuel Adrian Lazo Guerra [PE]",
+              "result": "L",
+              "table": 7
+            },
+            "3": {
+              "name": "Nicolas Chavez [PE]",
+              "result": "L",
+              "table": 8
+            }
+          }
+        },
+        {
+          "name": "David Avila Campos [MX]",
+          "placing": 7,
+          "record": {
+            "wins": 1,
+            "losses": 2,
+            "ties": 0
+          },
+          "resistances": {
+            "self": 0.25,
+            "opp": 0.5833333333333333,
+            "oppopp": 0.45833333333333337
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Patrick Omar Escalante Dolores [PE]",
+              "result": "L",
+              "table": 8
+            },
+            "2": {
+              "name": "BYE",
+              "result": "W",
+              "table": 0
+            },
+            "3": {
+              "name": "Eduardo Avila Campos [MX]",
+              "result": "L",
+              "table": 9
+            }
+          }
+        }
+      ]
+    },
+    {
+      "division": "juniors",
+      "data": [
+        {
+          "name": "Agustín Videla [CL]",
+          "placing": 1,
+          "record": {
+            "wins": 5,
+            "losses": 0,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.25,
+            "opp": 0.25,
+            "oppopp": 0.25
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Miguel Mateo Santos Flores [PE]",
+              "result": "W",
+              "table": 2
+            },
+            "2": {
+              "name": "Mauricio Cuba [PE]",
+              "result": "W",
+              "table": 1
+            },
+            "3": {
+              "name": "Vicente Flores [CL]",
+              "result": "T",
+              "table": 1
+            },
+            "4": {
+              "name": "Angel Facundo Santos Flores [PE]",
+              "result": "W",
+              "table": 3
+            },
+            "5": {
+              "name": "Omar Cortes [US]",
+              "result": "T",
+              "table": 1
+            },
+            "6": {
+              "name": "Vicente Flores [CL]",
+              "result": "W",
+              "table": 2
+            },
+            "7": {
+              "name": "Omar Cortes [US]",
+              "result": "W",
+              "table": 1
+            }
+          }
+        },
+        {
+          "name": "Omar Cortes [US]",
+          "placing": 2,
+          "record": {
+            "wins": 4,
+            "losses": 2,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.25,
+            "opp": 0.25,
+            "oppopp": 0.25
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Paul Martin Askel Karl-Alarcón Chiroque [PE]",
+              "result": "W",
+              "table": 6
+            },
+            "2": {
+              "name": "Vicente Flores [CL]",
+              "result": "L",
+              "table": 2
+            },
+            "3": {
+              "name": "Deven Ramanathan [US]",
+              "result": "W",
+              "table": 3
+            },
+            "4": {
+              "name": "Ayden Smith [US]",
+              "result": "W",
+              "table": 2
+            },
+            "5": {
+              "name": "Agustín Videla [CL]",
+              "result": "T",
+              "table": 1
+            },
+            "6": {
+              "name": "Miguel Mateo Santos Flores [PE]",
+              "result": "W",
+              "table": 1
+            },
+            "7": {
+              "name": "Agustín Videla [CL]",
+              "result": "L",
+              "table": 1
+            }
+          }
+        },
+        {
+          "name": "Miguel Mateo Santos Flores [PE]",
+          "placing": 3,
+          "record": {
+            "wins": 4,
+            "losses": 2,
+            "ties": 0
+          },
+          "resistances": {
+            "self": 0.25,
+            "opp": 0.25,
+            "oppopp": 0.25
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Agustín Videla [CL]",
+              "result": "L",
+              "table": 2
+            },
+            "2": {
+              "name": "Antonia Gómez [CL]",
+              "result": "W",
+              "table": 6
+            },
+            "3": {
+              "name": "Mathias Angeles [PE]",
+              "result": "W",
+              "table": 4
+            },
+            "4": {
+              "name": "Vicente Flores [CL]",
+              "result": "W",
+              "table": 1
+            },
+            "5": {
+              "name": "Deven Ramanathan [US]",
+              "result": "W",
+              "table": 2
+            },
+            "6": {
+              "name": "Omar Cortes [US]",
+              "result": "L",
+              "table": 1
+            }
+          }
+        },
+        {
+          "name": "Vicente Flores [CL]",
+          "placing": 4,
+          "record": {
+            "wins": 3,
+            "losses": 2,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.25,
+            "opp": 0.25,
+            "oppopp": 0.25
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Antonia Gómez [CL]",
+              "result": "W",
+              "table": 3
+            },
+            "2": {
+              "name": "Omar Cortes [US]",
+              "result": "W",
+              "table": 2
+            },
+            "3": {
+              "name": "Agustín Videla [CL]",
+              "result": "T",
+              "table": 1
+            },
+            "4": {
+              "name": "Miguel Mateo Santos Flores [PE]",
+              "result": "L",
+              "table": 1
+            },
+            "5": {
+              "name": "Ayden Smith [US]",
+              "result": "W",
+              "table": 3
+            },
+            "6": {
+              "name": "Agustín Videla [CL]",
+              "result": "L",
+              "table": 2
+            }
+          }
+        },
+        {
+          "name": "Deven Ramanathan [US]",
+          "placing": 5,
+          "record": {
+            "wins": 2,
+            "losses": 2,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.5,
+            "opp": 0.5800000000000001,
+            "oppopp": 0.512
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Ayden Smith [US]",
+              "result": "T",
+              "table": 5
+            },
+            "2": {
+              "name": "Angel Facundo Santos Flores [PE]",
+              "result": "W",
+              "table": 4
+            },
+            "3": {
+              "name": "Omar Cortes [US]",
+              "result": "L",
+              "table": 3
+            },
+            "4": {
+              "name": "Julians Andre Escalante Dolores [PE]",
+              "result": "W",
+              "table": 4
+            },
+            "5": {
+              "name": "Miguel Mateo Santos Flores [PE]",
+              "result": "L",
+              "table": 2
+            }
+          }
+        },
+        {
+          "name": "Angel Facundo Santos Flores [PE]",
+          "placing": 6,
+          "record": {
+            "wins": 2,
+            "losses": 2,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.5,
+            "opp": 0.51,
+            "oppopp": 0.534
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Julians Andre Escalante Dolores [PE]",
+              "result": "T",
+              "table": 1
+            },
+            "2": {
+              "name": "Deven Ramanathan [US]",
+              "result": "L",
+              "table": 4
+            },
+            "3": {
+              "name": "Mauricio Cuba [PE]",
+              "result": "W",
+              "table": 5
+            },
+            "4": {
+              "name": "Agustín Videla [CL]",
+              "result": "L",
+              "table": 3
+            },
+            "5": {
+              "name": "Antonia Gómez [CL]",
+              "result": "W",
+              "table": 5
+            }
+          }
+        },
+        {
+          "name": "Mauricio Cuba [PE]",
+          "placing": 7,
+          "record": {
+            "wins": 2,
+            "losses": 2,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.5,
+            "opp": 0.49000000000000005,
+            "oppopp": 0.5000000000000001
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Remi Lorenz [US]",
+              "result": "W",
+              "table": 4
+            },
+            "2": {
+              "name": "Agustín Videla [CL]",
+              "result": "L",
+              "table": 1
+            },
+            "3": {
+              "name": "Angel Facundo Santos Flores [PE]",
+              "result": "L",
+              "table": 5
+            },
+            "4": {
+              "name": "Paul Martin Askel Karl-Alarcón Chiroque [PE]",
+              "result": "W",
+              "table": 5
+            },
+            "5": {
+              "name": "Julians Andre Escalante Dolores [PE]",
+              "result": "T",
+              "table": 4
+            }
+          }
+        },
+        {
+          "name": "Julians Andre Escalante Dolores [PE]",
+          "placing": 8,
+          "record": {
+            "wins": 1,
+            "losses": 1,
+            "ties": 3
+          },
+          "resistances": {
+            "self": 0.5,
+            "opp": 0.43,
+            "oppopp": 0.5255000000000001
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Angel Facundo Santos Flores [PE]",
+              "result": "T",
+              "table": 1
+            },
+            "2": {
+              "name": "Mathias Angeles [PE]",
+              "result": "W",
+              "table": 3
+            },
+            "3": {
+              "name": "Ayden Smith [US]",
+              "result": "T",
+              "table": 2
+            },
+            "4": {
+              "name": "Deven Ramanathan [US]",
+              "result": "L",
+              "table": 4
+            },
+            "5": {
+              "name": "Mauricio Cuba [PE]",
+              "result": "T",
+              "table": 4
+            }
+          }
+        },
+        {
+          "name": "Paul Martin Askel Karl-Alarcón Chiroque [PE]",
+          "placing": 9,
+          "record": {
+            "wins": 2,
+            "losses": 3,
+            "ties": 0
+          },
+          "resistances": {
+            "self": 0.4,
+            "opp": 0.42000000000000004,
+            "oppopp": 0.5255000000000001
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Omar Cortes [US]",
+              "result": "L",
+              "table": 6
+            },
+            "2": {
+              "name": "Ayden Smith [US]",
+              "result": "L",
+              "table": 5
+            },
+            "3": {
+              "name": "Antonia Gómez [CL]",
+              "result": "W",
+              "table": 6
+            },
+            "4": {
+              "name": "Mauricio Cuba [PE]",
+              "result": "L",
+              "table": 5
+            },
+            "5": {
+              "name": "Mathias Angeles [PE]",
+              "result": "W",
+              "table": 6
+            }
+          }
+        },
+        {
+          "name": "Ayden Smith [US]",
+          "placing": 10,
+          "record": {
+            "wins": 1,
+            "losses": 2,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.4,
+            "opp": 0.5599999999999999,
+            "oppopp": 0.5159999999999999
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Deven Ramanathan [US]",
+              "result": "T",
+              "table": 5
+            },
+            "2": {
+              "name": "Paul Martin Askel Karl-Alarcón Chiroque [PE]",
+              "result": "W",
+              "table": 5
+            },
+            "3": {
+              "name": "Julians Andre Escalante Dolores [PE]",
+              "result": "T",
+              "table": 2
+            },
+            "4": {
+              "name": "Omar Cortes [US]",
+              "result": "L",
+              "table": 2
+            },
+            "5": {
+              "name": "Vicente Flores [CL]",
+              "result": "L",
+              "table": 3
+            }
+          }
+        },
+        {
+          "name": "Antonia Gómez [CL]",
+          "placing": 11,
+          "record": {
+            "wins": 1,
+            "losses": 4,
+            "ties": 0
+          },
+          "resistances": {
+            "self": 0.25,
+            "opp": 0.53,
+            "oppopp": 0.5015
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Vicente Flores [CL]",
+              "result": "L",
+              "table": 3
+            },
+            "2": {
+              "name": "Miguel Mateo Santos Flores [PE]",
+              "result": "L",
+              "table": 6
+            },
+            "3": {
+              "name": "Paul Martin Askel Karl-Alarcón Chiroque [PE]",
+              "result": "L",
+              "table": 6
+            },
+            "4": {
+              "name": "Mathias Angeles [PE]",
+              "result": "W",
+              "table": 6
+            },
+            "5": {
+              "name": "Angel Facundo Santos Flores [PE]",
+              "result": "L",
+              "table": 5
+            }
+          }
+        },
+        {
+          "name": "Mathias Angeles [PE]",
+          "placing": 12,
+          "record": {
+            "wins": 1,
+            "losses": 4,
+            "ties": 0
+          },
+          "resistances": {
+            "self": 0.25,
+            "opp": 0.48750000000000004,
+            "oppopp": 0.47
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "BYE",
+              "result": "W",
+              "table": 0
+            },
+            "2": {
+              "name": "Julians Andre Escalante Dolores [PE]",
+              "result": "L",
+              "table": 3
+            },
+            "3": {
+              "name": "Miguel Mateo Santos Flores [PE]",
+              "result": "L",
+              "table": 4
+            },
+            "4": {
+              "name": "Antonia Gómez [CL]",
+              "result": "L",
+              "table": 6
+            },
+            "5": {
+              "name": "Paul Martin Askel Karl-Alarcón Chiroque [PE]",
+              "result": "L",
+              "table": 6
+            }
+          }
+        },
+        {
+          "name": "Remi Lorenz [US]",
+          "placing": 13,
+          "record": {
+            "wins": 0,
+            "losses": 1,
+            "ties": 0
+          },
+          "resistances": {
+            "self": 0.25,
+            "opp": 0.5,
+            "oppopp": 0.4375
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Mauricio Cuba [PE]",
+              "result": "L",
+              "table": 4
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

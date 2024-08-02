@@ -36,7 +36,7 @@ export interface Standing {
     opp: number;
     oppopp: number;
   };
-  decklist?: DeckList;
+  decklist: DeckList;
   drop: number;
   rounds: Rounds;
 }
