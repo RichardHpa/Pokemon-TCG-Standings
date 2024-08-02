@@ -15,6 +15,7 @@ import { calculatePoints } from 'utils/calculatePoints';
 import { getPokedataStandings } from 'api/getPokedataStandings';
 
 import { useGetPlayerInfo } from 'hooks/useGetPlayer';
+import { useGetTournamentStandings } from 'queries/useGetTournamentStandings';
 
 import type { FC } from 'react';
 import { Division } from 'types/tournament';
@@ -27,6 +28,11 @@ interface PlayerInfoProps {
 
 const PlayerInfo: FC<PlayerInfoProps> = ({ tournamentId, playerName, division }) => {
   const { data, isLoading, isError } = useGetPlayerInfo({ tournamentId, division, playerName });
+  const {
+    data: standingsData,
+    isLoading: isStandingsLoading,
+    isError: isStandingsError,
+  } = useGetTournamentStandings({ tournamentId, division });
 
   const totalPoints = useMemo(() => {
     if (!data) return 0;
@@ -34,11 +40,11 @@ const PlayerInfo: FC<PlayerInfoProps> = ({ tournamentId, playerName, division })
     return calculatePoints(player.record);
   }, [data]);
 
-  if (isLoading) {
+  if (isLoading || isStandingsLoading) {
     return <p>Loading...</p>;
   }
 
-  if (isError || !data) {
+  if (isError || isStandingsError || !data || !standingsData) {
     return <p>No player found</p>;
   }
 
@@ -88,13 +94,13 @@ const PlayerInfo: FC<PlayerInfoProps> = ({ tournamentId, playerName, division })
           </ContentCard>
 
           <ContentCard title="Similar points">
-            <SimilarPointsList player={player} data={data} totalPoints={totalPoints} />
+            <SimilarPointsList player={player} data={standingsData} totalPoints={totalPoints} />
           </ContentCard>
 
           <div className="min-h-screen sm:min-h-[600px] col-span-1 sm:col-span-2 lg:col-span-1">
             <StandingsCard
               tournamentId={tournamentId}
-              standings={data}
+              standings={standingsData}
               title="Current standings"
               scrollToPlayerIndex={player.placing - 1}
               allowReset

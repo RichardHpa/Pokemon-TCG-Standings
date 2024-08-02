@@ -5,14 +5,9 @@ import { tournamentsUrl, basePokeDataUrl } from '../constants/api';
 export const handlers = [
   http.get(tournamentsUrl, () => {
     passthrough();
-    // return HttpResponse.json({
-    //   tcg: {
-    //     data: [],
-    //   },
-    // });
   }),
 
-  http.get(`${basePokeDataUrl}/id/:tournamentId/tcg`, async ({ params }) => {
+  http.get(`${basePokeDataUrl}/division/:divisions/tcg/id/:tournamentId`, async ({ params }) => {
     const tournamentId = params.tournamentId;
     if (!tournamentId) {
       return HttpResponse.json({}, { status: 404 });
