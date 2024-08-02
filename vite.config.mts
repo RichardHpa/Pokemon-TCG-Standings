@@ -19,7 +19,6 @@ const resolveFixup = {
 export default defineConfig(({ mode }) => {
   setEnv(mode);
   return {
-    base: './',
     plugins: [
       react(),
       tsconfigPaths(),
@@ -41,6 +40,12 @@ export default defineConfig(({ mode }) => {
     optimizeDeps: {
       esbuildOptions: {
         plugins: [resolveFixup],
+      },
+    },
+    base: './',
+    resolve: {
+      alias: {
+        './runtimeConfig': './runtimeConfig.browser',
       },
     },
   };
