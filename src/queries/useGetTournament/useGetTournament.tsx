@@ -1,24 +1,29 @@
-import { useQuery, queryOptions } from '@tanstack/react-query';
+import { useQuery, useQueryClient } from '@tanstack/react-query';
 
 import { getPokeDataTournament } from 'api/getTournament';
 
-export const getGetTournamentsKey = (tournamentId: string) => ['tournament', tournamentId];
+import { baseTournamentKey } from 'queries/useGetTournaments';
+import { getTournamentStandingsKey } from 'queries/useGetTournamentStandings';
 
-export const tournamentQuery = (tournamentId: string) =>
-  queryOptions({
-    queryKey: getGetTournamentsKey(tournamentId),
-    queryFn: async () => {
-      const tournament = await getPokeDataTournament(tournamentId);
-      if (!tournament) {
-        throw new Response('', {
-          status: 404,
-          statusText: `No tournament found for ${tournamentId}`,
-        });
-      }
-      return tournament;
-    },
-  });
+export const getGetTournamentKey = (tournamentId: string) => [...baseTournamentKey, tournamentId];
 
 export const useGetTournament = (tournamentId: string) => {
-  return useQuery(tournamentQuery(tournamentId));
+  const queryClient = useQueryClient();
+  return useQuery({
+    queryKey: getGetTournamentKey(tournamentId),
+    queryFn: async () => {
+      const tournament = await getPokeDataTournament(tournamentId);
+      const divisions = tournament.tournament_data;
+      divisions.map((division: any) => {
+        const data = division.data;
+        const divisionKey = getTournamentStandingsKey({
+          tournamentId,
+          division: division.division,
+        });
+        return queryClient.setQueryData(divisionKey, data);
+      });
+      return tournament.tournament;
+    },
+    staleTime: 60 * 10 * 1000,
+  });
 };

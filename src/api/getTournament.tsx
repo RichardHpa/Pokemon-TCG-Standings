@@ -1,14 +1,10 @@
 import axios from 'axios';
 
-import type { Tournament } from 'types/tournament';
+import type { TournamentsApiResponse } from 'types/tournament';
 
-export const getPokeDataTournament = async (tournamentId: string): Promise<Tournament> => {
-  const url = `https://www.pokedata.ovh/apiv2/id/${tournamentId}/tcg`;
-
-  const response = await axios.get(url).then(res => {
-    const data = res.data.tournament;
-    return data;
-  });
-
-  return response;
+export const getPokeDataTournament = async (
+  tournamentId: string
+): Promise<TournamentsApiResponse> => {
+  const url = `https://www.pokedata.ovh/apiv2/division/masters+juniors+seniors/tcg/id/${tournamentId}`;
+  return axios.get(url).then(res => res.data);
 };

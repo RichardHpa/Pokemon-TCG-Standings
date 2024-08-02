@@ -1,1 +1,1 @@
-export const pinnedPlayersKey = 'pinnedPlayers';
+export const pinnedPlayersKey = 'PokemonTCGStandings:pinnedPlayers';
