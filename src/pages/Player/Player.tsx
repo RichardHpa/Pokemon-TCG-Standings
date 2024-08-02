@@ -10,11 +10,11 @@ import { StandingsCard } from 'components/StandingsCard';
 import { SEO } from 'components/SEO';
 import { ArchetypeSprites } from 'components/ArchetypeSprites';
 
-import { createPlayerName } from 'utils/createPlayerName';
-import { getPlayerInfo } from 'utils/getPlayerInfo';
 import { calculatePoints } from 'utils/calculatePoints';
 
 import { getPokedataStandings } from 'api/getPokedataStandings';
+
+import { useGetPlayerInfo } from 'hooks/useGetPlayer';
 
 import type { FC } from 'react';
 import { Division } from 'types/tournament';
@@ -26,31 +26,31 @@ interface PlayerInfoProps {
 }
 
 const PlayerInfo: FC<PlayerInfoProps> = ({ tournamentId, playerName, division }) => {
-  // since we cant get a single player, we need to fetch all the standings and then find the player
-  const { data, isLoading } = useQuery({
-    queryKey: ['tournament', tournamentId, division, 'standings'],
-    queryFn: () => getPokedataStandings({ tournamentId, division }),
-  });
-
-  const player = useMemo(() => {
-    if (!data) return undefined;
-    const res = getPlayerInfo(data, createPlayerName(playerName));
-    if (!res) throw new Error('Player not found');
-    return { ...res.player };
-  }, [data, playerName]);
+  const { data, isLoading, isError } = useGetPlayerInfo({ tournamentId, division, playerName });
 
   const totalPoints = useMemo(() => {
-    if (!player) return 0;
+    if (!data) return 0;
+    const player = data[0];
     return calculatePoints(player.record);
-  }, [player]);
+  }, [data]);
 
-  if (isLoading && !player) {
+  if (isLoading) {
     return <p>Loading...</p>;
   }
 
-  if (!player || !data) {
+  if (isError || !data) {
     return <p>No player found</p>;
   }
+
+  if (data.length === 0) {
+    return <p>No player found</p>;
+  }
+
+  if (data.length > 1) {
+    return <p>Multiple players found</p>;
+  }
+
+  const player = data[0];
 
   return (
     <div className="flex flex-col gap-4">

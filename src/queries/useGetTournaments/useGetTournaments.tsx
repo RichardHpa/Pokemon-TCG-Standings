@@ -2,7 +2,9 @@ import { useQuery, queryOptions } from '@tanstack/react-query';
 
 import { getPokeDataTournaments } from 'api/getTournaments';
 
-export const getGetTournamentsKey = () => ['tournaments'];
+export const baseTournamentKey = ['tournaments'];
+
+export const getGetTournamentsKey = () => baseTournamentKey;
 
 export const tournamentsQuery = () =>
   queryOptions({
@@ -18,8 +20,7 @@ export const tournamentsQuery = () =>
 
       return tournaments;
     },
-    refetchOnMount: false,
-    refetchOnWindowFocus: false,
+    staleTime: 1000 * 60 * 10,
   });
 
 export const useGetTournaments = () => {

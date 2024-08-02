@@ -6,6 +6,8 @@ import reportWebVitals from './reportWebVitals';
 import 'flowbite';
 import { worker } from './mocks/browser';
 
+import { PinnedPlayersProvider } from 'providers/PinnedPlayersProvider';
+
 import { ColorModeProvider } from 'providers/ColorModeProvider';
 import { HelmetProvider } from 'react-helmet-async';
 
@@ -32,9 +34,11 @@ enableMocking().then(() => {
   root.render(
     <React.StrictMode>
       <HelmetProvider>
-        <ColorModeProvider>
-          <App />
-        </ColorModeProvider>
+        <PinnedPlayersProvider>
+          <ColorModeProvider>
+            <App />
+          </ColorModeProvider>
+        </PinnedPlayersProvider>
       </HelmetProvider>
     </React.StrictMode>
   );

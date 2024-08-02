@@ -8,6 +8,7 @@ import { WindowScrollVirtualizedList } from './WindowScrollVirtualizedList';
 
 import type { Size } from 'react-virtualized-auto-sizer';
 import type { StandingsListProps } from './types';
+import type { FixedSizeList } from 'react-window';
 
 // pass forward ref to component
 export const StandingsList = forwardRef(
@@ -22,7 +23,7 @@ export const StandingsList = forwardRef(
     }: StandingsListProps,
     ref
   ) => {
-    const listRef = useRef(null);
+    const listRef = useRef<FixedSizeList>(null);
 
     useImperativeHandle(ref, () => listRef.current);
 

@@ -1,3 +1,5 @@
+import { Standing } from './standing';
+
 export interface Tournament {
   id: string;
   name: string;
@@ -27,3 +29,12 @@ export interface Tournament {
 }
 
 export type Division = 'juniors' | 'seniors' | 'masters';
+
+export interface TournamentsApiResponse {
+  type: 'tcg';
+  tournament: Tournament;
+  tournament_data: {
+    division: Division;
+    data: Standing[];
+  }[];
+}

@@ -42,6 +42,12 @@ export default defineConfig(({ mode }) => {
         plugins: [resolveFixup],
       },
     },
+    base: '/',
+    resolve: {
+      alias: {
+        './runtimeConfig': './runtimeConfig.browser',
+      },
+    },
   };
 });
 
@@ -149,7 +155,7 @@ function basePlugin(): Plugin {
     config(_, { mode }) {
       const { PUBLIC_URL } = loadEnv(mode, '.', ['PUBLIC_URL']);
       return {
-        base: PUBLIC_URL || '',
+        base: PUBLIC_URL || '/',
       };
     },
   };
