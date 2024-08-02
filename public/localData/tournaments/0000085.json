@@ -1,0 +1,7324 @@
+{
+  "type": "tcg",
+  "tournament": {
+    "id": "0000085",
+    "name": "Team Island: Tournament of Champions 2023 - TCG",
+    "date": {
+      "start": "2023-06-24",
+      "end": "2023-06-24"
+    },
+    "decklists": 0,
+    "players": {
+      "juniors": 7,
+      "seniors": 15,
+      "masters": 127
+    },
+    "winners": {
+      "juniors": "Landon Nixon [US]",
+      "seniors": "Sebastian Lashmet [US]",
+      "masters": "Jon Eng [US]"
+    },
+    "tournamentStatus": "finished",
+    "roundNumbers": {
+      "juniors": 3,
+      "seniors": 7,
+      "masters": 10
+    },
+    "lastUpdated": "2023-06-25 07:21:06.928172",
+    "rk9link": "PuertoRico"
+  },
+  "tournament_data": [
+    {
+      "division": "masters",
+      "data": [
+        {
+          "name": "Jon Eng [US]",
+          "placing": 1,
+          "record": {
+            "wins": 8,
+            "losses": 0,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.25,
+            "opp": 0.25,
+            "oppopp": 0.25
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Shar Rivera [PR]",
+              "result": "W",
+              "table": 57
+            },
+            "2": {
+              "name": "Stephen Richardson [US]",
+              "result": "W",
+              "table": 4
+            },
+            "3": {
+              "name": "Aidan Khus [US]",
+              "result": "T",
+              "table": 2
+            },
+            "4": {
+              "name": "Gabriel Perez [US]",
+              "result": "W",
+              "table": 10
+            },
+            "5": {
+              "name": "Eric Ridgeway [AE]",
+              "result": "W",
+              "table": 3
+            },
+            "6": {
+              "name": "Jared Woitalla [US]",
+              "result": "W",
+              "table": 3
+            },
+            "7": {
+              "name": "Anthony Bruno [US]",
+              "result": "T",
+              "table": 1
+            },
+            "8": {
+              "name": "James Hart [US]",
+              "result": "W",
+              "table": 4
+            },
+            "9": {
+              "name": "Ramon Miranda [PR]",
+              "result": "W",
+              "table": 2
+            },
+            "10": {
+              "name": "Aidan Khus [US]",
+              "result": "W",
+              "table": 1
+            }
+          }
+        },
+        {
+          "name": "Aidan Khus [US]",
+          "placing": 2,
+          "record": {
+            "wins": 7,
+            "losses": 2,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.25,
+            "opp": 0.25,
+            "oppopp": 0.25
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Jose Torres [PR]",
+              "result": "W",
+              "table": 58
+            },
+            "2": {
+              "name": "Juan David Oganes [PR]",
+              "result": "W",
+              "table": 9
+            },
+            "3": {
+              "name": "Jon Eng [US]",
+              "result": "T",
+              "table": 2
+            },
+            "4": {
+              "name": "Maddox Corcoran [US]",
+              "result": "W",
+              "table": 3
+            },
+            "5": {
+              "name": "Anthonie Ramirez [PR]",
+              "result": "W",
+              "table": 4
+            },
+            "6": {
+              "name": "Anthony Bruno [US]",
+              "result": "L",
+              "table": 2
+            },
+            "7": {
+              "name": "Karl Alvarez [PR]",
+              "result": "W",
+              "table": 6
+            },
+            "8": {
+              "name": "Anthony Bruno [US]",
+              "result": "W",
+              "table": 2
+            },
+            "9": {
+              "name": "Alex Rubin [US]",
+              "result": "W",
+              "table": 1
+            },
+            "10": {
+              "name": "Jon Eng [US]",
+              "result": "L",
+              "table": 1
+            }
+          }
+        },
+        {
+          "name": "Ramon Miranda [PR]",
+          "placing": 3,
+          "record": {
+            "wins": 6,
+            "losses": 1,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.25,
+            "opp": 0.25,
+            "oppopp": 0.25
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Braulio Rivera [PR]",
+              "result": "W",
+              "table": 34
+            },
+            "2": {
+              "name": "Bodden Castillo [PR]",
+              "result": "W",
+              "table": 12
+            },
+            "3": {
+              "name": "David Cooper [US]",
+              "result": "W",
+              "table": 5
+            },
+            "4": {
+              "name": "Frank Zapata [PR]",
+              "result": "W",
+              "table": 2
+            },
+            "5": {
+              "name": "Juan Oliveras [PR]",
+              "result": "W",
+              "table": 1
+            },
+            "6": {
+              "name": "Carlos Medina Astete [PE]",
+              "result": "T",
+              "table": 1
+            },
+            "7": {
+              "name": "James Hart [US]",
+              "result": "T",
+              "table": 2
+            },
+            "8": {
+              "name": "Gabriel Perez [US]",
+              "result": "W",
+              "table": 3
+            },
+            "9": {
+              "name": "Jon Eng [US]",
+              "result": "L",
+              "table": 2
+            }
+          }
+        },
+        {
+          "name": "Alex Rubin [US]",
+          "placing": 4,
+          "record": {
+            "wins": 6,
+            "losses": 2,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.25,
+            "opp": 0.25,
+            "oppopp": 0.25
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Carlos Ramos [PR]",
+              "result": "W",
+              "table": 45
+            },
+            "2": {
+              "name": "Gabriel Rosa [PR]",
+              "result": "W",
+              "table": 19
+            },
+            "3": {
+              "name": "Jose Carlos Burgos [PR]",
+              "result": "T",
+              "table": 3
+            },
+            "4": {
+              "name": "Carlos Medina Astete [PE]",
+              "result": "L",
+              "table": 8
+            },
+            "5": {
+              "name": "Shar Rivera [PR]",
+              "result": "W",
+              "table": 18
+            },
+            "6": {
+              "name": "Emmanuel Alicea [PR]",
+              "result": "W",
+              "table": 8
+            },
+            "7": {
+              "name": "Eduardo Meléndez [PR]",
+              "result": "W",
+              "table": 8
+            },
+            "8": {
+              "name": "Carlos Medina Astete [PE]",
+              "result": "W",
+              "table": 1
+            },
+            "9": {
+              "name": "Aidan Khus [US]",
+              "result": "L",
+              "table": 1
+            }
+          }
+        },
+        {
+          "name": "Carlos Medina Astete [PE]",
+          "placing": 5,
+          "record": {
+            "wins": 5,
+            "losses": 1,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.25,
+            "opp": 0.25,
+            "oppopp": 0.25
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Connor Finton [US]",
+              "result": "W",
+              "table": 40
+            },
+            "2": {
+              "name": "David Fernandez [MX]",
+              "result": "W",
+              "table": 6
+            },
+            "3": {
+              "name": "Jared Woitalla [US]",
+              "result": "T",
+              "table": 1
+            },
+            "4": {
+              "name": "Alex Rubin [US]",
+              "result": "W",
+              "table": 8
+            },
+            "5": {
+              "name": "Jerry Han [US]",
+              "result": "W",
+              "table": 2
+            },
+            "6": {
+              "name": "Ramon Miranda [PR]",
+              "result": "T",
+              "table": 1
+            },
+            "7": {
+              "name": "Emmanuel Cruz [PR]",
+              "result": "W",
+              "table": 3
+            },
+            "8": {
+              "name": "Alex Rubin [US]",
+              "result": "L",
+              "table": 1
+            }
+          }
+        },
+        {
+          "name": "Anthony Bruno [US]",
+          "placing": 6,
+          "record": {
+            "wins": 5,
+            "losses": 1,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.25,
+            "opp": 0.25,
+            "oppopp": 0.25
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Jesus Garcia [PR]",
+              "result": "W",
+              "table": 72
+            },
+            "2": {
+              "name": "Casey Bennink [AE]",
+              "result": "W",
+              "table": 7
+            },
+            "3": {
+              "name": "Jacob Peltier [US]",
+              "result": "T",
+              "table": 6
+            },
+            "4": {
+              "name": "Jean Paul Diaz Ortiz [PR]",
+              "result": "W",
+              "table": 9
+            },
+            "5": {
+              "name": "Hasan Kunukcu [US]",
+              "result": "W",
+              "table": 5
+            },
+            "6": {
+              "name": "Aidan Khus [US]",
+              "result": "W",
+              "table": 2
+            },
+            "7": {
+              "name": "Jon Eng [US]",
+              "result": "T",
+              "table": 1
+            },
+            "8": {
+              "name": "Aidan Khus [US]",
+              "result": "L",
+              "table": 2
+            }
+          }
+        },
+        {
+          "name": "Gabriel Perez [US]",
+          "placing": 7,
+          "record": {
+            "wins": 5,
+            "losses": 2,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.25,
+            "opp": 0.25,
+            "oppopp": 0.25
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Andy Gray [US]",
+              "result": "W",
+              "table": 47
+            },
+            "2": {
+              "name": "Beatriz Díaz [PR]",
+              "result": "W",
+              "table": 16
+            },
+            "3": {
+              "name": "Julio Santos [PR]",
+              "result": "T",
+              "table": 4
+            },
+            "4": {
+              "name": "Jon Eng [US]",
+              "result": "L",
+              "table": 10
+            },
+            "5": {
+              "name": "Frank Zapata [PR]",
+              "result": "W",
+              "table": 20
+            },
+            "6": {
+              "name": "Juan Oliveras [PR]",
+              "result": "W",
+              "table": 13
+            },
+            "7": {
+              "name": "Ludwig Llanos [PR]",
+              "result": "W",
+              "table": 4
+            },
+            "8": {
+              "name": "Ramon Miranda [PR]",
+              "result": "L",
+              "table": 3
+            }
+          }
+        },
+        {
+          "name": "James Hart [US]",
+          "placing": 8,
+          "record": {
+            "wins": 5,
+            "losses": 2,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.25,
+            "opp": 0.25,
+            "oppopp": 0.25
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Alberto Medina Soto [PR]",
+              "result": "W",
+              "table": 35
+            },
+            "2": {
+              "name": "Julio Santos [PR]",
+              "result": "L",
+              "table": 13
+            },
+            "3": {
+              "name": "Edward Rivera [PR]",
+              "result": "W",
+              "table": 34
+            },
+            "4": {
+              "name": "Nathaniel Rivera [PR]",
+              "result": "W",
+              "table": 12
+            },
+            "5": {
+              "name": "Connor Finton [US]",
+              "result": "W",
+              "table": 7
+            },
+            "6": {
+              "name": "David Cooper [US]",
+              "result": "W",
+              "table": 4
+            },
+            "7": {
+              "name": "Ramon Miranda [PR]",
+              "result": "T",
+              "table": 2
+            },
+            "8": {
+              "name": "Jon Eng [US]",
+              "result": "L",
+              "table": 4
+            }
+          }
+        },
+        {
+          "name": "James Cox [NL]",
+          "placing": 9,
+          "record": {
+            "wins": 5,
+            "losses": 1,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.7857142857142857,
+            "opp": 0.49829931972789115,
+            "oppopp": 0.5447197926789763
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Ciaran Farah [CA]",
+              "result": "T",
+              "table": 32
+            },
+            "2": {
+              "name": "Samuel Ruiz [PR]",
+              "result": "L",
+              "table": 43
+            },
+            "3": {
+              "name": "Ajay Sridhar [US]",
+              "result": "W",
+              "table": 54
+            },
+            "4": {
+              "name": "Carlos Pastor [PR]",
+              "result": "W",
+              "table": 32
+            },
+            "5": {
+              "name": "Diego Contes [PR]",
+              "result": "W",
+              "table": 23
+            },
+            "6": {
+              "name": "Andy Gray [US]",
+              "result": "W",
+              "table": 10
+            },
+            "7": {
+              "name": "Eric Ridgeway [AE]",
+              "result": "W",
+              "table": 7
+            }
+          }
+        },
+        {
+          "name": "Juan Flores [US]",
+          "placing": 10,
+          "record": {
+            "wins": 4,
+            "losses": 0,
+            "ties": 3
+          },
+          "resistances": {
+            "self": 0.7857142857142857,
+            "opp": 0.5153061224489796,
+            "oppopp": 0.5382750242954325
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Jose Gabriel Gómez Pérez [PR]",
+              "result": "W",
+              "table": 19
+            },
+            "2": {
+              "name": "Rafael Perez [PR]",
+              "result": "T",
+              "table": 10
+            },
+            "3": {
+              "name": "Ciaran Farah [CA]",
+              "result": "T",
+              "table": 19
+            },
+            "4": {
+              "name": "Aaron Noel Santos [US]",
+              "result": "T",
+              "table": 23
+            },
+            "5": {
+              "name": "Prin Basser [US]",
+              "result": "W",
+              "table": 32
+            },
+            "6": {
+              "name": "Clayton May [US]",
+              "result": "W",
+              "table": 14
+            },
+            "7": {
+              "name": "Carlos Rodil [PR]",
+              "result": "W",
+              "table": 11
+            }
+          }
+        },
+        {
+          "name": "Jared Woitalla [US]",
+          "placing": 11,
+          "record": {
+            "wins": 4,
+            "losses": 1,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.7142857142857143,
+            "opp": 0.6335034013605442,
+            "oppopp": 0.5954486556527374
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Ricardo Rivera Luciano [PR]",
+              "result": "W",
+              "table": 69
+            },
+            "2": {
+              "name": "Juan Pérez [PR]",
+              "result": "W",
+              "table": 5
+            },
+            "3": {
+              "name": "Carlos Medina Astete [PE]",
+              "result": "T",
+              "table": 1
+            },
+            "4": {
+              "name": "Jose Carlos Burgos [PR]",
+              "result": "W",
+              "table": 5
+            },
+            "5": {
+              "name": "Ludwig Llanos [PR]",
+              "result": "W",
+              "table": 6
+            },
+            "6": {
+              "name": "Jon Eng [US]",
+              "result": "L",
+              "table": 3
+            },
+            "7": {
+              "name": "Jerry Han [US]",
+              "result": "T",
+              "table": 5
+            }
+          }
+        },
+        {
+          "name": "Jerry Han [US]",
+          "placing": 12,
+          "record": {
+            "wins": 4,
+            "losses": 1,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.7142857142857143,
+            "opp": 0.5795918367346938,
+            "oppopp": 0.5968999028182701
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Wilfredo Crespo [US]",
+              "result": "T",
+              "table": 21
+            },
+            "2": {
+              "name": "Juan Pereira [PR]",
+              "result": "W",
+              "table": 34
+            },
+            "3": {
+              "name": "Orlando Álvarez [PR]",
+              "result": "W",
+              "table": 13
+            },
+            "4": {
+              "name": "Karl Alvarez [PR]",
+              "result": "W",
+              "table": 6
+            },
+            "5": {
+              "name": "Carlos Medina Astete [PE]",
+              "result": "L",
+              "table": 2
+            },
+            "6": {
+              "name": "Anthonie Ramirez [PR]",
+              "result": "W",
+              "table": 11
+            },
+            "7": {
+              "name": "Jared Woitalla [US]",
+              "result": "T",
+              "table": 5
+            }
+          }
+        },
+        {
+          "name": "Emmanuel Cruz [PR]",
+          "placing": 13,
+          "record": {
+            "wins": 4,
+            "losses": 1,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.7142857142857143,
+            "opp": 0.5714285714285714,
+            "oppopp": 0.5428571428571428
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Orlando Álvarez [PR]",
+              "result": "T",
+              "table": 16
+            },
+            "2": {
+              "name": "Sedrick Serrano [PR]",
+              "result": "W",
+              "table": 37
+            },
+            "3": {
+              "name": "Nelson Barros [BR]",
+              "result": "T",
+              "table": 10
+            },
+            "4": {
+              "name": "Nelson Martinez Guzman [PR]",
+              "result": "W",
+              "table": 21
+            },
+            "5": {
+              "name": "Tyler Annaert [CA]",
+              "result": "W",
+              "table": 10
+            },
+            "6": {
+              "name": "Eduardo Meléndez [PR]",
+              "result": "W",
+              "table": 5
+            },
+            "7": {
+              "name": "Carlos Medina Astete [PE]",
+              "result": "L",
+              "table": 3
+            }
+          }
+        },
+        {
+          "name": "Nelson Barros [BR]",
+          "placing": 14,
+          "record": {
+            "wins": 4,
+            "losses": 1,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.7142857142857143,
+            "opp": 0.5612244897959184,
+            "oppopp": 0.5549562682215744
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Robert Simpson [CA]",
+              "result": "T",
+              "table": 59
+            },
+            "2": {
+              "name": "Diego Contes [PR]",
+              "result": "W",
+              "table": 23
+            },
+            "3": {
+              "name": "Emmanuel Cruz [PR]",
+              "result": "T",
+              "table": 10
+            },
+            "4": {
+              "name": "Gabriel Smart [US]",
+              "result": "W",
+              "table": 19
+            },
+            "5": {
+              "name": "José Torres [PR]",
+              "result": "W",
+              "table": 11
+            },
+            "6": {
+              "name": "Ludwig Llanos [PR]",
+              "result": "L",
+              "table": 6
+            },
+            "7": {
+              "name": "Jose Carlos Burgos [PR]",
+              "result": "W",
+              "table": 13
+            }
+          }
+        },
+        {
+          "name": "Jacob Peltier [US]",
+          "placing": 15,
+          "record": {
+            "wins": 4,
+            "losses": 1,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.7142857142857143,
+            "opp": 0.5493197278911565,
+            "oppopp": 0.5386945254292194
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Nathan Brower [US]",
+              "result": "W",
+              "table": 46
+            },
+            "2": {
+              "name": "Carlos Pastor [PR]",
+              "result": "W",
+              "table": 18
+            },
+            "3": {
+              "name": "Anthony Bruno [US]",
+              "result": "T",
+              "table": 6
+            },
+            "4": {
+              "name": "Eric Ridgeway [AE]",
+              "result": "L",
+              "table": 4
+            },
+            "5": {
+              "name": "Beatriz Díaz [PR]",
+              "result": "T",
+              "table": 22
+            },
+            "6": {
+              "name": "Brian Gonzalez Carventes [PR]",
+              "result": "W",
+              "table": 15
+            },
+            "7": {
+              "name": "José Torres [PR]",
+              "result": "W",
+              "table": 14
+            }
+          }
+        },
+        {
+          "name": "Joshua Cohen [AE]",
+          "placing": 16,
+          "record": {
+            "wins": 4,
+            "losses": 1,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.7142857142857143,
+            "opp": 0.48826530612244895,
+            "oppopp": 0.550726433430515
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Jose Marzan [PR]",
+              "result": "T",
+              "table": 64
+            },
+            "2": {
+              "name": "Aaron Noel Santos [US]",
+              "result": "T",
+              "table": 36
+            },
+            "3": {
+              "name": "Carlos Rodriguez Conesa [PR]",
+              "result": "W",
+              "table": 41
+            },
+            "4": {
+              "name": "José Torres [PR]",
+              "result": "L",
+              "table": 24
+            },
+            "5": {
+              "name": "Wilfredo Crespo [US]",
+              "result": "W",
+              "table": 34
+            },
+            "6": {
+              "name": "Carlos Traverzo [PR]",
+              "result": "W",
+              "table": 23
+            },
+            "7": {
+              "name": "Jalen Jones [US]",
+              "result": "W",
+              "table": 16
+            }
+          }
+        },
+        {
+          "name": "Tyler Annaert [CA]",
+          "placing": 17,
+          "record": {
+            "wins": 4,
+            "losses": 1,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.7142857142857143,
+            "opp": 0.48486394557823126,
+            "oppopp": 0.5404130223517979
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Richard Fernandez [US]",
+              "result": "T",
+              "table": 53
+            },
+            "2": {
+              "name": "Wilfredo Crespo [US]",
+              "result": "T",
+              "table": 32
+            },
+            "3": {
+              "name": "Jeric Vera [PR]",
+              "result": "W",
+              "table": 40
+            },
+            "4": {
+              "name": "Ismanuel Rivera [PR]",
+              "result": "W",
+              "table": 22
+            },
+            "5": {
+              "name": "Emmanuel Cruz [PR]",
+              "result": "L",
+              "table": 10
+            },
+            "6": {
+              "name": "Julio Santos [PR]",
+              "result": "W",
+              "table": 24
+            },
+            "7": {
+              "name": "Cristian Rodriguez [PR]",
+              "result": "W",
+              "table": 15
+            }
+          }
+        },
+        {
+          "name": "Karl Alvarez [PR]",
+          "placing": 18,
+          "record": {
+            "wins": 4,
+            "losses": 2,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.6428571428571429,
+            "opp": 0.6224489795918368,
+            "oppopp": 0.5300048590864916
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Jose Gonzalez [PR]",
+              "result": "W",
+              "table": 48
+            },
+            "2": {
+              "name": "Sheldon Kuppan [GB]",
+              "result": "W",
+              "table": 17
+            },
+            "3": {
+              "name": "Hector Hoyos [PR]",
+              "result": "T",
+              "table": 7
+            },
+            "4": {
+              "name": "Jerry Han [US]",
+              "result": "L",
+              "table": 6
+            },
+            "5": {
+              "name": "Sylvester Kwon [US]",
+              "result": "W",
+              "table": 21
+            },
+            "6": {
+              "name": "Hasan Kunukcu [US]",
+              "result": "W",
+              "table": 9
+            },
+            "7": {
+              "name": "Aidan Khus [US]",
+              "result": "L",
+              "table": 6
+            }
+          }
+        },
+        {
+          "name": "David Cooper [US]",
+          "placing": 19,
+          "record": {
+            "wins": 4,
+            "losses": 2,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.6428571428571429,
+            "opp": 0.6130952380952381,
+            "oppopp": 0.5285349854227406
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Royer Espinosa [PR]",
+              "result": "W",
+              "table": 50
+            },
+            "2": {
+              "name": "Parker Greenwald [US]",
+              "result": "W",
+              "table": 15
+            },
+            "3": {
+              "name": "Ramon Miranda [PR]",
+              "result": "L",
+              "table": 5
+            },
+            "4": {
+              "name": "David Fernandez [MX]",
+              "result": "W",
+              "table": 18
+            },
+            "5": {
+              "name": "Matthew Brower [US]",
+              "result": "W",
+              "table": 9
+            },
+            "6": {
+              "name": "James Hart [US]",
+              "result": "L",
+              "table": 4
+            },
+            "7": {
+              "name": "Connor Finton [US]",
+              "result": "T",
+              "table": 9
+            }
+          }
+        },
+        {
+          "name": "Maddox Corcoran [US]",
+          "placing": 20,
+          "record": {
+            "wins": 4,
+            "losses": 2,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.6428571428571429,
+            "opp": 0.6122448979591837,
+            "oppopp": 0.5673347910592809
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Aaron Noel Santos [US]",
+              "result": "T",
+              "table": 71
+            },
+            "2": {
+              "name": "Clayton May [US]",
+              "result": "W",
+              "table": 29
+            },
+            "3": {
+              "name": "Carlos Traverzo [PR]",
+              "result": "W",
+              "table": 17
+            },
+            "4": {
+              "name": "Aidan Khus [US]",
+              "result": "L",
+              "table": 3
+            },
+            "5": {
+              "name": "Jose Horta [PR]",
+              "result": "W",
+              "table": 13
+            },
+            "6": {
+              "name": "Eric Ridgeway [AE]",
+              "result": "L",
+              "table": 7
+            },
+            "7": {
+              "name": "Andy Gray [US]",
+              "result": "W",
+              "table": 22
+            }
+          }
+        },
+        {
+          "name": "Aaron Noel Santos [US]",
+          "placing": 21,
+          "record": {
+            "wins": 3,
+            "losses": 0,
+            "ties": 4
+          },
+          "resistances": {
+            "self": 0.7142857142857143,
+            "opp": 0.6105442176870748,
+            "oppopp": 0.5359815354713314
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Maddox Corcoran [US]",
+              "result": "T",
+              "table": 71
+            },
+            "2": {
+              "name": "Joshua Cohen [AE]",
+              "result": "T",
+              "table": 36
+            },
+            "3": {
+              "name": "Kenneth Miranda [PR]",
+              "result": "W",
+              "table": 42
+            },
+            "4": {
+              "name": "Juan Flores [US]",
+              "result": "T",
+              "table": 23
+            },
+            "5": {
+              "name": "David Fernandez [MX]",
+              "result": "W",
+              "table": 31
+            },
+            "6": {
+              "name": "Nathaniel Rivera [PR]",
+              "result": "W",
+              "table": 18
+            },
+            "7": {
+              "name": "Gabriel Smart [US]",
+              "result": "T",
+              "table": 12
+            }
+          }
+        },
+        {
+          "name": "Ludwig Llanos [PR]",
+          "placing": 22,
+          "record": {
+            "wins": 4,
+            "losses": 2,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.6428571428571429,
+            "opp": 0.5979591836734695,
+            "oppopp": 0.5703352769679301
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Ajay Sridhar [US]",
+              "result": "W",
+              "table": 54
+            },
+            "2": {
+              "name": "Brian Gonzalez Carventes [PR]",
+              "result": "W",
+              "table": 1
+            },
+            "3": {
+              "name": "Victor Carrillo [PR]",
+              "result": "W",
+              "table": 9
+            },
+            "4": {
+              "name": "Juan Oliveras [PR]",
+              "result": "T",
+              "table": 1
+            },
+            "5": {
+              "name": "Jared Woitalla [US]",
+              "result": "L",
+              "table": 6
+            },
+            "6": {
+              "name": "Nelson Barros [BR]",
+              "result": "W",
+              "table": 6
+            },
+            "7": {
+              "name": "Gabriel Perez [US]",
+              "result": "L",
+              "table": 4
+            }
+          }
+        },
+        {
+          "name": "Eric Ridgeway [AE]",
+          "placing": 23,
+          "record": {
+            "wins": 4,
+            "losses": 2,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.6428571428571429,
+            "opp": 0.5969387755102041,
+            "oppopp": 0.5390913508260448
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Gustavo Miranda [PR]",
+              "result": "T",
+              "table": 41
+            },
+            "2": {
+              "name": "Ricardo Montes [PR]",
+              "result": "W",
+              "table": 31
+            },
+            "3": {
+              "name": "Adam Reinhardt [US]",
+              "result": "W",
+              "table": 12
+            },
+            "4": {
+              "name": "Jacob Peltier [US]",
+              "result": "W",
+              "table": 4
+            },
+            "5": {
+              "name": "Jon Eng [US]",
+              "result": "L",
+              "table": 3
+            },
+            "6": {
+              "name": "Maddox Corcoran [US]",
+              "result": "W",
+              "table": 7
+            },
+            "7": {
+              "name": "James Cox [NL]",
+              "result": "L",
+              "table": 7
+            }
+          }
+        },
+        {
+          "name": "Connor Finton [US]",
+          "placing": 24,
+          "record": {
+            "wins": 4,
+            "losses": 2,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.6428571428571429,
+            "opp": 0.5408163265306123,
+            "oppopp": 0.5570173307418205
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Carlos Medina Astete [PE]",
+              "result": "L",
+              "table": 40
+            },
+            "2": {
+              "name": "Tony Santos [US]",
+              "result": "W",
+              "table": 51
+            },
+            "3": {
+              "name": "Emanuel Hernandez [PR]",
+              "result": "W",
+              "table": 32
+            },
+            "4": {
+              "name": "Casey Bennink [AE]",
+              "result": "W",
+              "table": 16
+            },
+            "5": {
+              "name": "James Hart [US]",
+              "result": "L",
+              "table": 7
+            },
+            "6": {
+              "name": "Jose Gonzalez [PR]",
+              "result": "W",
+              "table": 17
+            },
+            "7": {
+              "name": "David Cooper [US]",
+              "result": "T",
+              "table": 9
+            }
+          }
+        },
+        {
+          "name": "Juan Oliveras [PR]",
+          "placing": 25,
+          "record": {
+            "wins": 4,
+            "losses": 2,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.6428571428571429,
+            "opp": 0.5408163265306122,
+            "oppopp": 0.5489795918367347
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Armando Arce [PR]",
+              "result": "W",
+              "table": 68
+            },
+            "2": {
+              "name": "Jose Medina [PR]",
+              "result": "W",
+              "table": 2
+            },
+            "3": {
+              "name": "Nathaniel Rivera [PR]",
+              "result": "W",
+              "table": 8
+            },
+            "4": {
+              "name": "Ludwig Llanos [PR]",
+              "result": "T",
+              "table": 1
+            },
+            "5": {
+              "name": "Ramon Miranda [PR]",
+              "result": "L",
+              "table": 1
+            },
+            "6": {
+              "name": "Gabriel Perez [US]",
+              "result": "L",
+              "table": 13
+            },
+            "7": {
+              "name": "Braulio Rivera [PR]",
+              "result": "W",
+              "table": 19
+            }
+          }
+        },
+        {
+          "name": "Anthonie Ramirez [PR]",
+          "placing": 26,
+          "record": {
+            "wins": 4,
+            "losses": 2,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.6428571428571429,
+            "opp": 0.5375850340136055,
+            "oppopp": 0.5477057013281502
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Jean Paul Diaz Ortiz [PR]",
+              "result": "T",
+              "table": 39
+            },
+            "2": {
+              "name": "Sebasthian Padilla [PR]",
+              "result": "W",
+              "table": 39
+            },
+            "3": {
+              "name": "Christian Lugo [PR]",
+              "result": "W",
+              "table": 16
+            },
+            "4": {
+              "name": "Julio Santos [PR]",
+              "result": "W",
+              "table": 7
+            },
+            "5": {
+              "name": "Aidan Khus [US]",
+              "result": "L",
+              "table": 4
+            },
+            "6": {
+              "name": "Jerry Han [US]",
+              "result": "L",
+              "table": 11
+            },
+            "7": {
+              "name": "Sylvester Kwon [US]",
+              "result": "W",
+              "table": 21
+            }
+          }
+        },
+        {
+          "name": "Hasan Kunukcu [US]",
+          "placing": 27,
+          "record": {
+            "wins": 4,
+            "losses": 2,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.6428571428571429,
+            "opp": 0.5285714285714286,
+            "oppopp": 0.5411273080660836
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Lesme Flores [PR]",
+              "result": "W",
+              "table": 33
+            },
+            "2": {
+              "name": "Victor Carrillo [PR]",
+              "result": "T",
+              "table": 8
+            },
+            "3": {
+              "name": "Christian Solis [PR]",
+              "result": "W",
+              "table": 18
+            },
+            "4": {
+              "name": "Hector Hoyos [PR]",
+              "result": "W",
+              "table": 11
+            },
+            "5": {
+              "name": "Anthony Bruno [US]",
+              "result": "L",
+              "table": 5
+            },
+            "6": {
+              "name": "Karl Alvarez [PR]",
+              "result": "L",
+              "table": 9
+            },
+            "7": {
+              "name": "Orlando Álvarez [PR]",
+              "result": "W",
+              "table": 18
+            }
+          }
+        },
+        {
+          "name": "Raul Santiago [PR]",
+          "placing": 28,
+          "record": {
+            "wins": 3,
+            "losses": 0,
+            "ties": 4
+          },
+          "resistances": {
+            "self": 0.7142857142857143,
+            "opp": 0.5163265306122449,
+            "oppopp": 0.5292274052478134
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Clayton May [US]",
+              "result": "T",
+              "table": 18
+            },
+            "2": {
+              "name": "Kenneth Miranda [PR]",
+              "result": "T",
+              "table": 35
+            },
+            "3": {
+              "name": "Bodden Castillo [PR]",
+              "result": "W",
+              "table": 37
+            },
+            "4": {
+              "name": "Ciaran Farah [CA]",
+              "result": "T",
+              "table": 20
+            },
+            "5": {
+              "name": "Bryan Ortiz-Serrano [PR]",
+              "result": "W",
+              "table": 25
+            },
+            "6": {
+              "name": "Matthew Brower [US]",
+              "result": "W",
+              "table": 19
+            },
+            "7": {
+              "name": "Sheldon Kuppan [GB]",
+              "result": "T",
+              "table": 10
+            }
+          }
+        },
+        {
+          "name": "Jose Horta [PR]",
+          "placing": 29,
+          "record": {
+            "wins": 4,
+            "losses": 2,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.6428571428571429,
+            "opp": 0.47789115646258506,
+            "oppopp": 0.5466877227081309
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Brian Gonzalez Carventes [PR]",
+              "result": "L",
+              "table": 60
+            },
+            "2": {
+              "name": "Ajay Sridhar [US]",
+              "result": "T",
+              "table": 54
+            },
+            "3": {
+              "name": "Sedrick Serrano [PR]",
+              "result": "W",
+              "table": 45
+            },
+            "4": {
+              "name": "Orlando Álvarez [PR]",
+              "result": "W",
+              "table": 28
+            },
+            "5": {
+              "name": "Maddox Corcoran [US]",
+              "result": "L",
+              "table": 13
+            },
+            "6": {
+              "name": "Ricardo Rivera Luciano [PR]",
+              "result": "W",
+              "table": 27
+            },
+            "7": {
+              "name": "Ciaran Farah [CA]",
+              "result": "W",
+              "table": 23
+            }
+          }
+        },
+        {
+          "name": "Parker Greenwald [US]",
+          "placing": 30,
+          "record": {
+            "wins": 4,
+            "losses": 2,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.6428571428571429,
+            "opp": 0.4744897959183674,
+            "oppopp": 0.5662860382248137
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Matthew Brower [US]",
+              "result": "W",
+              "table": 55
+            },
+            "2": {
+              "name": "David Cooper [US]",
+              "result": "L",
+              "table": 15
+            },
+            "3": {
+              "name": "Stephen Richardson [US]",
+              "result": "W",
+              "table": 25
+            },
+            "4": {
+              "name": "Shar Rivera [PR]",
+              "result": "T",
+              "table": 15
+            },
+            "5": {
+              "name": "Clayton May [US]",
+              "result": "L",
+              "table": 15
+            },
+            "6": {
+              "name": "Jean Paul Diaz Ortiz [PR]",
+              "result": "W",
+              "table": 34
+            },
+            "7": {
+              "name": "Adam Reinhardt [US]",
+              "result": "W",
+              "table": 17
+            }
+          }
+        },
+        {
+          "name": "Sheldon Kuppan [GB]",
+          "placing": 31,
+          "record": {
+            "wins": 4,
+            "losses": 2,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.6428571428571429,
+            "opp": 0.4668367346938776,
+            "oppopp": 0.5715014577259475
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Matthew Thompson Soto [US]",
+              "result": "W",
+              "table": 20
+            },
+            "2": {
+              "name": "Karl Alvarez [PR]",
+              "result": "L",
+              "table": 17
+            },
+            "3": {
+              "name": "Shar Rivera [PR]",
+              "result": "L",
+              "table": 29
+            },
+            "4": {
+              "name": "Jose Marzan [PR]",
+              "result": "W",
+              "table": 41
+            },
+            "5": {
+              "name": "Juan Escalera [US]",
+              "result": "W",
+              "table": 24
+            },
+            "6": {
+              "name": "Ciaran Farah [CA]",
+              "result": "W",
+              "table": 20
+            },
+            "7": {
+              "name": "Raul Santiago [PR]",
+              "result": "T",
+              "table": 10
+            }
+          }
+        },
+        {
+          "name": "Zach Cohen [US]",
+          "placing": 32,
+          "record": {
+            "wins": 3,
+            "losses": 0,
+            "ties": 4
+          },
+          "resistances": {
+            "self": 0.7142857142857143,
+            "opp": 0.413265306122449,
+            "oppopp": 0.5502308066083577
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Gilberto Acosta [PR]",
+              "result": "T",
+              "table": 25
+            },
+            "2": {
+              "name": "Jose Marzan [PR]",
+              "result": "T",
+              "table": 33
+            },
+            "3": {
+              "name": "Prin Basser [US]",
+              "result": "T",
+              "table": 39
+            },
+            "4": {
+              "name": "Matthew Thompson Soto [US]",
+              "result": "T",
+              "table": 47
+            },
+            "5": {
+              "name": "Robert Simpson [CA]",
+              "result": "W",
+              "table": 46
+            },
+            "6": {
+              "name": "Frank Zapata [PR]",
+              "result": "W",
+              "table": 32
+            },
+            "7": {
+              "name": "Clayton May [US]",
+              "result": "W",
+              "table": 20
+            }
+          }
+        },
+        {
+          "name": "Matthew Brower [US]",
+          "placing": 33,
+          "record": {
+            "wins": 4,
+            "losses": 3,
+            "ties": 0
+          },
+          "resistances": {
+            "self": 0.5714285714285714,
+            "opp": 0.5469387755102041,
+            "oppopp": 0.4804907677356657
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Parker Greenwald [US]",
+              "result": "L",
+              "table": 55
+            },
+            "2": {
+              "name": "Dallas White [US]",
+              "result": "W",
+              "table": 60
+            },
+            "3": {
+              "name": "Bryan Ortiz-Serrano [PR]",
+              "result": "W",
+              "table": 27
+            },
+            "4": {
+              "name": "Jose Gonzalez [PR]",
+              "result": "W",
+              "table": 14
+            },
+            "5": {
+              "name": "David Cooper [US]",
+              "result": "L",
+              "table": 9
+            },
+            "6": {
+              "name": "Raul Santiago [PR]",
+              "result": "L",
+              "table": 19
+            },
+            "7": {
+              "name": "Prin Basser [US]",
+              "result": "W",
+              "table": 24
+            }
+          }
+        },
+        {
+          "name": "Eduardo Meléndez [PR]",
+          "placing": 34,
+          "record": {
+            "wins": 4,
+            "losses": 3,
+            "ties": 0
+          },
+          "resistances": {
+            "self": 0.5714285714285714,
+            "opp": 0.5035714285714286,
+            "oppopp": 0.5271574344023323
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Juan Pérez [PR]",
+              "result": "L",
+              "table": 37
+            },
+            "2": {
+              "name": "Jose Torres [PR]",
+              "result": "W",
+              "table": 61
+            },
+            "3": {
+              "name": "Lesme Flores [PR]",
+              "result": "W",
+              "table": 21
+            },
+            "4": {
+              "name": "Nick Alvarez [US]",
+              "result": "W",
+              "table": 13
+            },
+            "5": {
+              "name": "Brian Gonzalez Carventes [PR]",
+              "result": "W",
+              "table": 8
+            },
+            "6": {
+              "name": "Emmanuel Cruz [PR]",
+              "result": "L",
+              "table": 5
+            },
+            "7": {
+              "name": "Alex Rubin [US]",
+              "result": "L",
+              "table": 8
+            }
+          }
+        },
+        {
+          "name": "Gabriel Smart [US]",
+          "placing": 35,
+          "record": {
+            "wins": 3,
+            "losses": 1,
+            "ties": 3
+          },
+          "resistances": {
+            "self": 0.6428571428571429,
+            "opp": 0.47806122448979593,
+            "oppopp": 0.5596185617103985
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Christian Lugo [PR]",
+              "result": "T",
+              "table": 24
+            },
+            "2": {
+              "name": "Carlos Rodriguez Conesa [PR]",
+              "result": "T",
+              "table": 30
+            },
+            "3": {
+              "name": "Wilfredo Crespo [US]",
+              "result": "W",
+              "table": 43
+            },
+            "4": {
+              "name": "Nelson Barros [BR]",
+              "result": "L",
+              "table": 19
+            },
+            "5": {
+              "name": "Nelson Martinez Guzman [PR]",
+              "result": "W",
+              "table": 35
+            },
+            "6": {
+              "name": "Beatriz Díaz [PR]",
+              "result": "W",
+              "table": 25
+            },
+            "7": {
+              "name": "Aaron Noel Santos [US]",
+              "result": "T",
+              "table": 12
+            }
+          }
+        },
+        {
+          "name": "Carlos Rodil [PR]",
+          "placing": 36,
+          "record": {
+            "wins": 3,
+            "losses": 1,
+            "ties": 3
+          },
+          "resistances": {
+            "self": 0.6428571428571429,
+            "opp": 0.4719387755102041,
+            "oppopp": 0.5016642371234208
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Sylvester Kwon [US]",
+              "result": "T",
+              "table": 27
+            },
+            "2": {
+              "name": "Jeric Vera [PR]",
+              "result": "T",
+              "table": 42
+            },
+            "3": {
+              "name": "Robert Simpson [CA]",
+              "result": "T",
+              "table": 38
+            },
+            "4": {
+              "name": "Nathan Brower [US]",
+              "result": "W",
+              "table": 40
+            },
+            "5": {
+              "name": "Christian J Ayala Hernandez [PR]",
+              "result": "W",
+              "table": 29
+            },
+            "6": {
+              "name": "Ahmed Cruz [PR]",
+              "result": "W",
+              "table": 16
+            },
+            "7": {
+              "name": "Juan Flores [US]",
+              "result": "L",
+              "table": 11
+            }
+          }
+        },
+        {
+          "name": "Jose Gonzalez [PR]",
+          "placing": 37,
+          "record": {
+            "wins": 4,
+            "losses": 3,
+            "ties": 0
+          },
+          "resistances": {
+            "self": 0.5714285714285714,
+            "opp": 0.47108843537414963,
+            "oppopp": 0.5310333657272434
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Karl Alvarez [PR]",
+              "result": "L",
+              "table": 48
+            },
+            "2": {
+              "name": "Armando Arce [PR]",
+              "result": "W",
+              "table": 59
+            },
+            "3": {
+              "name": "Paul Vallejo [PR]",
+              "result": "W",
+              "table": 36
+            },
+            "4": {
+              "name": "Matthew Brower [US]",
+              "result": "L",
+              "table": 14
+            },
+            "5": {
+              "name": "Casey Bennink [AE]",
+              "result": "W",
+              "table": 26
+            },
+            "6": {
+              "name": "Connor Finton [US]",
+              "result": "L",
+              "table": 17
+            },
+            "7": {
+              "name": "Brian Gonzalez Carventes [PR]",
+              "result": "W",
+              "table": 26
+            }
+          }
+        },
+        {
+          "name": "Christian J Ayala Hernandez [PR]",
+          "placing": 38,
+          "record": {
+            "wins": 4,
+            "losses": 3,
+            "ties": 0
+          },
+          "resistances": {
+            "self": 0.5714285714285714,
+            "opp": 0.4540816326530612,
+            "oppopp": 0.5109572400388728
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Juan Escalera [US]",
+              "result": "W",
+              "table": 44
+            },
+            "2": {
+              "name": "Jose Carlos Burgos [PR]",
+              "result": "L",
+              "table": 3
+            },
+            "3": {
+              "name": "Michael Hunter [IE]",
+              "result": "W",
+              "table": 31
+            },
+            "4": {
+              "name": "Brian Gonzalez Carventes [PR]",
+              "result": "L",
+              "table": 17
+            },
+            "5": {
+              "name": "Carlos Rodil [PR]",
+              "result": "L",
+              "table": 29
+            },
+            "6": {
+              "name": "Nelson Martinez Guzman [PR]",
+              "result": "W",
+              "table": 38
+            },
+            "7": {
+              "name": "Ahmed Cruz [PR]",
+              "result": "W",
+              "table": 25
+            }
+          }
+        },
+        {
+          "name": "Nick Alvarez [US]",
+          "placing": 39,
+          "record": {
+            "wins": 4,
+            "losses": 3,
+            "ties": 0
+          },
+          "resistances": {
+            "self": 0.5714285714285714,
+            "opp": 0.43367346938775503,
+            "oppopp": 0.5066812439261419
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "José Torres [PR]",
+              "result": "L",
+              "table": 15
+            },
+            "2": {
+              "name": "Juan Escalera [US]",
+              "result": "W",
+              "table": 53
+            },
+            "3": {
+              "name": "Ahmed Cruz [PR]",
+              "result": "W",
+              "table": 30
+            },
+            "4": {
+              "name": "Eduardo Meléndez [PR]",
+              "result": "L",
+              "table": 13
+            },
+            "5": {
+              "name": "Ciaran Farah [CA]",
+              "result": "L",
+              "table": 27
+            },
+            "6": {
+              "name": "Michael Salcedo []",
+              "result": "W",
+              "table": 36
+            },
+            "7": {
+              "name": "Ricardo Montes [PR]",
+              "result": "W",
+              "table": 27
+            }
+          }
+        },
+        {
+          "name": "Jose Carlos Burgos [PR]",
+          "placing": 40,
+          "record": {
+            "wins": 3,
+            "losses": 2,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.5714285714285714,
+            "opp": 0.5867346938775511,
+            "oppopp": 0.5235787172011662
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Tony Santos [US]",
+              "result": "W",
+              "table": 51
+            },
+            "2": {
+              "name": "Christian J Ayala Hernandez [PR]",
+              "result": "W",
+              "table": 3
+            },
+            "3": {
+              "name": "Alex Rubin [US]",
+              "result": "T",
+              "table": 3
+            },
+            "4": {
+              "name": "Jared Woitalla [US]",
+              "result": "L",
+              "table": 5
+            },
+            "5": {
+              "name": "Adam Reinhardt [US]",
+              "result": "W",
+              "table": 19
+            },
+            "6": {
+              "name": "Cristian Rodriguez [PR]",
+              "result": "T",
+              "table": 12
+            },
+            "7": {
+              "name": "Nelson Barros [BR]",
+              "result": "L",
+              "table": 13
+            }
+          }
+        },
+        {
+          "name": "Julio Santos [PR]",
+          "placing": 41,
+          "record": {
+            "wins": 3,
+            "losses": 2,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.5714285714285714,
+            "opp": 0.586734693877551,
+            "oppopp": 0.5081025267249756
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "John Díaz [PR]",
+              "result": "W",
+              "table": 26
+            },
+            "2": {
+              "name": "James Hart [US]",
+              "result": "W",
+              "table": 13
+            },
+            "3": {
+              "name": "Gabriel Perez [US]",
+              "result": "T",
+              "table": 4
+            },
+            "4": {
+              "name": "Anthonie Ramirez [PR]",
+              "result": "L",
+              "table": 7
+            },
+            "5": {
+              "name": "Carlos Traverzo [PR]",
+              "result": "T",
+              "table": 14
+            },
+            "6": {
+              "name": "Tyler Annaert [CA]",
+              "result": "L",
+              "table": 24
+            },
+            "7": {
+              "name": "Ismanuel Rivera [PR]",
+              "result": "W",
+              "table": 28
+            }
+          }
+        },
+        {
+          "name": "José Torres [PR]",
+          "placing": 42,
+          "record": {
+            "wins": 3,
+            "losses": 2,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.5714285714285714,
+            "opp": 0.5612244897959184,
+            "oppopp": 0.5240281827016521
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Nick Alvarez [US]",
+              "result": "W",
+              "table": 15
+            },
+            "2": {
+              "name": "Frank Zapata [PR]",
+              "result": "T",
+              "table": 20
+            },
+            "3": {
+              "name": "Nelson Martinez Guzman [PR]",
+              "result": "T",
+              "table": 14
+            },
+            "4": {
+              "name": "Joshua Cohen [AE]",
+              "result": "W",
+              "table": 24
+            },
+            "5": {
+              "name": "Nelson Barros [BR]",
+              "result": "L",
+              "table": 11
+            },
+            "6": {
+              "name": "Rafael Perez [PR]",
+              "result": "W",
+              "table": 22
+            },
+            "7": {
+              "name": "Jacob Peltier [US]",
+              "result": "L",
+              "table": 14
+            }
+          }
+        },
+        {
+          "name": "Beatriz Díaz [PR]",
+          "placing": 43,
+          "record": {
+            "wins": 3,
+            "losses": 2,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.5714285714285714,
+            "opp": 0.5428571428571428,
+            "oppopp": 0.4789941690962099
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Edwin Rivera [US]",
+              "result": "W",
+              "table": 52
+            },
+            "2": {
+              "name": "Gabriel Perez [US]",
+              "result": "L",
+              "table": 16
+            },
+            "3": {
+              "name": "Andy Gray [US]",
+              "result": "T",
+              "table": 23
+            },
+            "4": {
+              "name": "Jose J Reyes [PR]",
+              "result": "W",
+              "table": 35
+            },
+            "5": {
+              "name": "Jacob Peltier [US]",
+              "result": "T",
+              "table": 22
+            },
+            "6": {
+              "name": "Gabriel Smart [US]",
+              "result": "L",
+              "table": 25
+            },
+            "7": {
+              "name": "Calvin Yau [US]",
+              "result": "W",
+              "table": 32
+            }
+          }
+        },
+        {
+          "name": "Kenneth Miranda [PR]",
+          "placing": 44,
+          "record": {
+            "wins": 3,
+            "losses": 2,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.5714285714285714,
+            "opp": 0.5163265306122449,
+            "oppopp": 0.49571914480077744
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Joshua Villanueva [PR]",
+              "result": "T",
+              "table": 12
+            },
+            "2": {
+              "name": "Raul Santiago [PR]",
+              "result": "T",
+              "table": 35
+            },
+            "3": {
+              "name": "Aaron Noel Santos [US]",
+              "result": "L",
+              "table": 42
+            },
+            "4": {
+              "name": "Carlos Rodriguez Conesa [PR]",
+              "result": "W",
+              "table": 52
+            },
+            "5": {
+              "name": "Akdiel Flores [PR]",
+              "result": "W",
+              "table": 37
+            },
+            "6": {
+              "name": "Jalen Jones [US]",
+              "result": "L",
+              "table": 21
+            },
+            "7": {
+              "name": "Matthew Thompson Soto [US]",
+              "result": "W",
+              "table": 31
+            }
+          }
+        },
+        {
+          "name": "Cristian Rodriguez [PR]",
+          "placing": 45,
+          "record": {
+            "wins": 3,
+            "losses": 2,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.5714285714285714,
+            "opp": 0.504421768707483,
+            "oppopp": 0.499428247489472
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Hector Hoyos [PR]",
+              "result": "L",
+              "table": 70
+            },
+            "2": {
+              "name": "Clifton Dalgard [US]",
+              "result": "T",
+              "table": 46
+            },
+            "3": {
+              "name": "Joshua Villanueva [PR]",
+              "result": "W",
+              "table": 52
+            },
+            "4": {
+              "name": "Christian Solis [PR]",
+              "result": "W",
+              "table": 36
+            },
+            "5": {
+              "name": "Jean Paul Diaz Ortiz [PR]",
+              "result": "W",
+              "table": 17
+            },
+            "6": {
+              "name": "Jose Carlos Burgos [PR]",
+              "result": "T",
+              "table": 12
+            },
+            "7": {
+              "name": "Tyler Annaert [CA]",
+              "result": "L",
+              "table": 15
+            }
+          }
+        },
+        {
+          "name": "Jalen Jones [US]",
+          "placing": 46,
+          "record": {
+            "wins": 3,
+            "losses": 2,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.5714285714285714,
+            "opp": 0.45612244897959187,
+            "oppopp": 0.5178036929057337
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Casey Bennink [AE]",
+              "result": "L",
+              "table": 62
+            },
+            "2": {
+              "name": "Carlos Ramos [PR]",
+              "result": "W",
+              "table": 45
+            },
+            "3": {
+              "name": "Ismanuel Rivera [PR]",
+              "result": "T",
+              "table": 20
+            },
+            "4": {
+              "name": "Akdiel Flores [PR]",
+              "result": "T",
+              "table": 37
+            },
+            "5": {
+              "name": "Victor Carrillo [PR]",
+              "result": "W",
+              "table": 33
+            },
+            "6": {
+              "name": "Kenneth Miranda [PR]",
+              "result": "W",
+              "table": 21
+            },
+            "7": {
+              "name": "Joshua Cohen [AE]",
+              "result": "L",
+              "table": 16
+            }
+          }
+        },
+        {
+          "name": "Michael Hunter [IE]",
+          "placing": 47,
+          "record": {
+            "wins": 3,
+            "losses": 2,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.5714285714285714,
+            "opp": 0.4438775510204081,
+            "oppopp": 0.4688046647230321
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Clifton Dalgard [US]",
+              "result": "W",
+              "table": 11
+            },
+            "2": {
+              "name": "Hector Hoyos [PR]",
+              "result": "L",
+              "table": 14
+            },
+            "3": {
+              "name": "Christian J Ayala Hernandez [PR]",
+              "result": "L",
+              "table": 31
+            },
+            "4": {
+              "name": "Juan David Oganes [PR]",
+              "result": "T",
+              "table": 45
+            },
+            "5": {
+              "name": "Ricardo Montes [PR]",
+              "result": "T",
+              "table": 42
+            },
+            "6": {
+              "name": "Armando Arce [PR]",
+              "result": "W",
+              "table": 41
+            },
+            "7": {
+              "name": "Samuel Ruiz [PR]",
+              "result": "W",
+              "table": 30
+            }
+          }
+        },
+        {
+          "name": "Clayton May [US]",
+          "placing": 48,
+          "record": {
+            "wins": 3,
+            "losses": 3,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.5,
+            "opp": 0.596938775510204,
+            "oppopp": 0.5083090379008747
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Raul Santiago [PR]",
+              "result": "T",
+              "table": 18
+            },
+            "2": {
+              "name": "Maddox Corcoran [US]",
+              "result": "L",
+              "table": 29
+            },
+            "3": {
+              "name": "Gustavo Miranda [PR]",
+              "result": "W",
+              "table": 50
+            },
+            "4": {
+              "name": "Samuel Ruiz [PR]",
+              "result": "W",
+              "table": 31
+            },
+            "5": {
+              "name": "Parker Greenwald [US]",
+              "result": "W",
+              "table": 15
+            },
+            "6": {
+              "name": "Juan Flores [US]",
+              "result": "L",
+              "table": 14
+            },
+            "7": {
+              "name": "Zach Cohen [US]",
+              "result": "L",
+              "table": 20
+            }
+          }
+        },
+        {
+          "name": "Andy Gray [US]",
+          "placing": 49,
+          "record": {
+            "wins": 3,
+            "losses": 3,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.5,
+            "opp": 0.5739795918367347,
+            "oppopp": 0.5459305150631681
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Gabriel Perez [US]",
+              "result": "L",
+              "table": 47
+            },
+            "2": {
+              "name": "Nathan Brower [US]",
+              "result": "W",
+              "table": 57
+            },
+            "3": {
+              "name": "Beatriz Díaz [PR]",
+              "result": "T",
+              "table": 23
+            },
+            "4": {
+              "name": "Christian Lugo [PR]",
+              "result": "W",
+              "table": 29
+            },
+            "5": {
+              "name": "Braulio Rivera [PR]",
+              "result": "W",
+              "table": 16
+            },
+            "6": {
+              "name": "James Cox [NL]",
+              "result": "L",
+              "table": 10
+            },
+            "7": {
+              "name": "Maddox Corcoran [US]",
+              "result": "L",
+              "table": 22
+            }
+          }
+        },
+        {
+          "name": "Hector Hoyos [PR]",
+          "placing": 50,
+          "record": {
+            "wins": 3,
+            "losses": 3,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.5,
+            "opp": 0.5527210884353742,
+            "oppopp": 0.515391156462585
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Cristian Rodriguez [PR]",
+              "result": "W",
+              "table": 70
+            },
+            "2": {
+              "name": "Michael Hunter [IE]",
+              "result": "W",
+              "table": 14
+            },
+            "3": {
+              "name": "Karl Alvarez [PR]",
+              "result": "T",
+              "table": 7
+            },
+            "4": {
+              "name": "Hasan Kunukcu [US]",
+              "result": "L",
+              "table": 11
+            },
+            "5": {
+              "name": "Emmanuel Alicea [PR]",
+              "result": "L",
+              "table": 12
+            },
+            "6": {
+              "name": "Adam Reinhardt [US]",
+              "result": "L",
+              "table": 30
+            },
+            "7": {
+              "name": "Shar Rivera [PR]",
+              "result": "W",
+              "table": 34
+            }
+          }
+        },
+        {
+          "name": "Orlando Álvarez [PR]",
+          "placing": 51,
+          "record": {
+            "wins": 3,
+            "losses": 3,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.5,
+            "opp": 0.5459183673469388,
+            "oppopp": 0.5290816326530613
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Emmanuel Cruz [PR]",
+              "result": "T",
+              "table": 16
+            },
+            "2": {
+              "name": "Gustavo Miranda [PR]",
+              "result": "W",
+              "table": 26
+            },
+            "3": {
+              "name": "Jerry Han [US]",
+              "result": "L",
+              "table": 13
+            },
+            "4": {
+              "name": "Jose Horta [PR]",
+              "result": "L",
+              "table": 28
+            },
+            "5": {
+              "name": "Joshua Villanueva [PR]",
+              "result": "W",
+              "table": 41
+            },
+            "6": {
+              "name": "Shar Rivera [PR]",
+              "result": "W",
+              "table": 29
+            },
+            "7": {
+              "name": "Hasan Kunukcu [US]",
+              "result": "L",
+              "table": 18
+            }
+          }
+        },
+        {
+          "name": "Braulio Rivera [PR]",
+          "placing": 52,
+          "record": {
+            "wins": 3,
+            "losses": 3,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.5,
+            "opp": 0.5290816326530613,
+            "oppopp": 0.5089480077745384
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Ramon Miranda [PR]",
+              "result": "L",
+              "table": 34
+            },
+            "2": {
+              "name": "Akdiel Flores [PR]",
+              "result": "T",
+              "table": 50
+            },
+            "3": {
+              "name": "Clifton Dalgard [US]",
+              "result": "W",
+              "table": 53
+            },
+            "4": {
+              "name": "Royer Espinosa [PR]",
+              "result": "W",
+              "table": 34
+            },
+            "5": {
+              "name": "Andy Gray [US]",
+              "result": "L",
+              "table": 16
+            },
+            "6": {
+              "name": "Juan David Oganes [PR]",
+              "result": "W",
+              "table": 26
+            },
+            "7": {
+              "name": "Juan Oliveras [PR]",
+              "result": "L",
+              "table": 19
+            }
+          }
+        },
+        {
+          "name": "Sylvester Kwon [US]",
+          "placing": 53,
+          "record": {
+            "wins": 3,
+            "losses": 3,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.5,
+            "opp": 0.4836734693877551,
+            "oppopp": 0.537424684159378
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Carlos Rodil [PR]",
+              "result": "T",
+              "table": 27
+            },
+            "2": {
+              "name": "Ciaran Farah [CA]",
+              "result": "L",
+              "table": 41
+            },
+            "3": {
+              "name": "Kevin Santiago [PR]",
+              "result": "W",
+              "table": 46
+            },
+            "4": {
+              "name": "Alberto Medina Soto [PR]",
+              "result": "W",
+              "table": 27
+            },
+            "5": {
+              "name": "Karl Alvarez [PR]",
+              "result": "L",
+              "table": 21
+            },
+            "6": {
+              "name": "Sedrick Serrano [PR]",
+              "result": "W",
+              "table": 33
+            },
+            "7": {
+              "name": "Anthonie Ramirez [PR]",
+              "result": "L",
+              "table": 21
+            }
+          }
+        },
+        {
+          "name": "Adam Reinhardt [US]",
+          "placing": 54,
+          "record": {
+            "wins": 3,
+            "losses": 3,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.5,
+            "opp": 0.47397959183673466,
+            "oppopp": 0.5391277939747328
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Nelson Martinez Guzman [PR]",
+              "result": "T",
+              "table": 56
+            },
+            "2": {
+              "name": "Gilberto Acosta [PR]",
+              "result": "W",
+              "table": 40
+            },
+            "3": {
+              "name": "Eric Ridgeway [AE]",
+              "result": "L",
+              "table": 12
+            },
+            "4": {
+              "name": "Juan Pereira [PR]",
+              "result": "W",
+              "table": 38
+            },
+            "5": {
+              "name": "Jose Carlos Burgos [PR]",
+              "result": "L",
+              "table": 19
+            },
+            "6": {
+              "name": "Hector Hoyos [PR]",
+              "result": "W",
+              "table": 30
+            },
+            "7": {
+              "name": "Parker Greenwald [US]",
+              "result": "L",
+              "table": 17
+            }
+          }
+        },
+        {
+          "name": "Juan David Oganes [PR]",
+          "placing": 55,
+          "record": {
+            "wins": 3,
+            "losses": 3,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.5,
+            "opp": 0.4561224489795918,
+            "oppopp": 0.5048364107547781
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Jessica Burke [US]",
+              "result": "W",
+              "table": 49
+            },
+            "2": {
+              "name": "Aidan Khus [US]",
+              "result": "L",
+              "table": 9
+            },
+            "3": {
+              "name": "Casey Bennink [AE]",
+              "result": "L",
+              "table": 35
+            },
+            "4": {
+              "name": "Michael Hunter [IE]",
+              "result": "T",
+              "table": 45
+            },
+            "5": {
+              "name": "Alberto Medina Soto [PR]",
+              "result": "W",
+              "table": 40
+            },
+            "6": {
+              "name": "Braulio Rivera [PR]",
+              "result": "L",
+              "table": 26
+            },
+            "7": {
+              "name": "Nathan Brower [US]",
+              "result": "W",
+              "table": 33
+            }
+          }
+        },
+        {
+          "name": "Joshua Villanueva [PR]",
+          "placing": 56,
+          "record": {
+            "wins": 3,
+            "losses": 3,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.5,
+            "opp": 0.41581632653061223,
+            "oppopp": 0.5157410106899903
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Kenneth Miranda [PR]",
+              "result": "T",
+              "table": 12
+            },
+            "2": {
+              "name": "Christian Lugo [PR]",
+              "result": "L",
+              "table": 22
+            },
+            "3": {
+              "name": "Cristian Rodriguez [PR]",
+              "result": "L",
+              "table": 52
+            },
+            "4": {
+              "name": "Jose Gabriel Gómez Pérez [PR]",
+              "result": "W",
+              "table": 60
+            },
+            "5": {
+              "name": "Orlando Álvarez [PR]",
+              "result": "L",
+              "table": 41
+            },
+            "6": {
+              "name": "Robert Simpson [CA]",
+              "result": "W",
+              "table": 42
+            },
+            "7": {
+              "name": "Sedrick Serrano [PR]",
+              "result": "W",
+              "table": 36
+            }
+          }
+        },
+        {
+          "name": "Emmanuel Alicea [PR]",
+          "placing": 57,
+          "record": {
+            "wins": 3,
+            "losses": 2,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.5833333333333334,
+            "opp": 0.4375,
+            "oppopp": 0.555787037037037
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Paul Vallejo [PR]",
+              "result": "W",
+              "table": 28
+            },
+            "2": {
+              "name": "Nathaniel Rivera [PR]",
+              "result": "L",
+              "table": 11
+            },
+            "3": {
+              "name": "Juan Pérez [PR]",
+              "result": "T",
+              "table": 28
+            },
+            "4": {
+              "name": "Jesus Garcia [PR]",
+              "result": "W",
+              "table": 33
+            },
+            "5": {
+              "name": "Hector Hoyos [PR]",
+              "result": "W",
+              "table": 12
+            },
+            "6": {
+              "name": "Alex Rubin [US]",
+              "result": "L",
+              "table": 8
+            }
+          }
+        },
+        {
+          "name": "Ciaran Farah [CA]",
+          "placing": 58,
+          "record": {
+            "wins": 2,
+            "losses": 2,
+            "ties": 3
+          },
+          "resistances": {
+            "self": 0.5,
+            "opp": 0.6632653061224489,
+            "oppopp": 0.4845724003887269
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "James Cox [NL]",
+              "result": "T",
+              "table": 32
+            },
+            "2": {
+              "name": "Sylvester Kwon [US]",
+              "result": "W",
+              "table": 41
+            },
+            "3": {
+              "name": "Juan Flores [US]",
+              "result": "T",
+              "table": 19
+            },
+            "4": {
+              "name": "Raul Santiago [PR]",
+              "result": "T",
+              "table": 20
+            },
+            "5": {
+              "name": "Nick Alvarez [US]",
+              "result": "W",
+              "table": 27
+            },
+            "6": {
+              "name": "Sheldon Kuppan [GB]",
+              "result": "L",
+              "table": 20
+            },
+            "7": {
+              "name": "Jose Horta [PR]",
+              "result": "L",
+              "table": 23
+            }
+          }
+        },
+        {
+          "name": "Brian Gonzalez Carventes [PR]",
+          "placing": 59,
+          "record": {
+            "wins": 3,
+            "losses": 4,
+            "ties": 0
+          },
+          "resistances": {
+            "self": 0.42857142857142855,
+            "opp": 0.5663265306122449,
+            "oppopp": 0.5053206997084547
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Jose Horta [PR]",
+              "result": "W",
+              "table": 60
+            },
+            "2": {
+              "name": "Ludwig Llanos [PR]",
+              "result": "L",
+              "table": 1
+            },
+            "3": {
+              "name": "Jose Medina [PR]",
+              "result": "W",
+              "table": 33
+            },
+            "4": {
+              "name": "Christian J Ayala Hernandez [PR]",
+              "result": "W",
+              "table": 17
+            },
+            "5": {
+              "name": "Eduardo Meléndez [PR]",
+              "result": "L",
+              "table": 8
+            },
+            "6": {
+              "name": "Jacob Peltier [US]",
+              "result": "L",
+              "table": 15
+            },
+            "7": {
+              "name": "Jose Gonzalez [PR]",
+              "result": "L",
+              "table": 26
+            }
+          }
+        },
+        {
+          "name": "Ajay Sridhar [US]",
+          "placing": 60,
+          "record": {
+            "wins": 2,
+            "losses": 2,
+            "ties": 3
+          },
+          "resistances": {
+            "self": 0.5,
+            "opp": 0.5051020408163265,
+            "oppopp": 0.48323615160349853
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Ludwig Llanos [PR]",
+              "result": "L",
+              "table": 54
+            },
+            "2": {
+              "name": "Jose Horta [PR]",
+              "result": "T",
+              "table": 54
+            },
+            "3": {
+              "name": "James Cox [NL]",
+              "result": "L",
+              "table": 54
+            },
+            "4": {
+              "name": "Carlos Ramos [PR]",
+              "result": "W",
+              "table": 61
+            },
+            "5": {
+              "name": "Jesus Garcia [PR]",
+              "result": "W",
+              "table": 39
+            },
+            "6": {
+              "name": "Calvin Yau [US]",
+              "result": "T",
+              "table": 28
+            },
+            "7": {
+              "name": "Rafael Perez [PR]",
+              "result": "T",
+              "table": 29
+            }
+          }
+        },
+        {
+          "name": "Rafael Perez [PR]",
+          "placing": 61,
+          "record": {
+            "wins": 2,
+            "losses": 2,
+            "ties": 3
+          },
+          "resistances": {
+            "self": 0.5,
+            "opp": 0.5020408163265306,
+            "oppopp": 0.5316812439261419
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Bryan Ortiz-Serrano [PR]",
+              "result": "W",
+              "table": 67
+            },
+            "2": {
+              "name": "Juan Flores [US]",
+              "result": "T",
+              "table": 10
+            },
+            "3": {
+              "name": "Frank Zapata [PR]",
+              "result": "L",
+              "table": 15
+            },
+            "4": {
+              "name": "Victor Carrillo [PR]",
+              "result": "T",
+              "table": 26
+            },
+            "5": {
+              "name": "Ismanuel Rivera [PR]",
+              "result": "W",
+              "table": 36
+            },
+            "6": {
+              "name": "José Torres [PR]",
+              "result": "L",
+              "table": 22
+            },
+            "7": {
+              "name": "Ajay Sridhar [US]",
+              "result": "T",
+              "table": 29
+            }
+          }
+        },
+        {
+          "name": "Ahmed Cruz [PR]",
+          "placing": 62,
+          "record": {
+            "wins": 3,
+            "losses": 4,
+            "ties": 0
+          },
+          "resistances": {
+            "self": 0.42857142857142855,
+            "opp": 0.48231292517006796,
+            "oppopp": 0.4705944282474895
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Stephen Richardson [US]",
+              "result": "L",
+              "table": 13
+            },
+            "2": {
+              "name": "Matthew Thompson Soto [US]",
+              "result": "W",
+              "table": 44
+            },
+            "3": {
+              "name": "Nick Alvarez [US]",
+              "result": "L",
+              "table": 30
+            },
+            "4": {
+              "name": "Gabriel Rosa [PR]",
+              "result": "W",
+              "table": 43
+            },
+            "5": {
+              "name": "Lesme Flores [PR]",
+              "result": "W",
+              "table": 30
+            },
+            "6": {
+              "name": "Carlos Rodil [PR]",
+              "result": "L",
+              "table": 16
+            },
+            "7": {
+              "name": "Christian J Ayala Hernandez [PR]",
+              "result": "L",
+              "table": 25
+            }
+          }
+        },
+        {
+          "name": "Prin Basser [US]",
+          "placing": 63,
+          "record": {
+            "wins": 2,
+            "losses": 2,
+            "ties": 3
+          },
+          "resistances": {
+            "self": 0.5,
+            "opp": 0.4765306122448979,
+            "oppopp": 0.49650145772594756
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Juan Pereira [PR]",
+              "result": "T",
+              "table": 31
+            },
+            "2": {
+              "name": "Robert Simpson [CA]",
+              "result": "T",
+              "table": 21
+            },
+            "3": {
+              "name": "Zach Cohen [US]",
+              "result": "T",
+              "table": 39
+            },
+            "4": {
+              "name": "Jose Medina [PR]",
+              "result": "W",
+              "table": 42
+            },
+            "5": {
+              "name": "Juan Flores [US]",
+              "result": "L",
+              "table": 32
+            },
+            "6": {
+              "name": "Gabriel Rosa [PR]",
+              "result": "W",
+              "table": 35
+            },
+            "7": {
+              "name": "Matthew Brower [US]",
+              "result": "L",
+              "table": 24
+            }
+          }
+        },
+        {
+          "name": "Bodden Castillo [PR]",
+          "placing": 64,
+          "record": {
+            "wins": 3,
+            "losses": 4,
+            "ties": 0
+          },
+          "resistances": {
+            "self": 0.42857142857142855,
+            "opp": 0.46428571428571425,
+            "oppopp": 0.47206025267249757
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Calvin Yau [US]",
+              "result": "W",
+              "table": 42
+            },
+            "2": {
+              "name": "Ramon Miranda [PR]",
+              "result": "L",
+              "table": 12
+            },
+            "3": {
+              "name": "Raul Santiago [PR]",
+              "result": "L",
+              "table": 37
+            },
+            "4": {
+              "name": "Juan Escalera [US]",
+              "result": "L",
+              "table": 46
+            },
+            "5": {
+              "name": "Gabriel Rosa [PR]",
+              "result": "L",
+              "table": 49
+            },
+            "6": {
+              "name": "Carlos Rodriguez Conesa [PR]",
+              "result": "W",
+              "table": 47
+            },
+            "7": {
+              "name": "Michael Salcedo []",
+              "result": "W",
+              "table": 37
+            }
+          }
+        },
+        {
+          "name": "Gabriel Rosa [PR]",
+          "placing": 65,
+          "record": {
+            "wins": 3,
+            "losses": 4,
+            "ties": 0
+          },
+          "resistances": {
+            "self": 0.42857142857142855,
+            "opp": 0.4523809523809524,
+            "oppopp": 0.45951773566569487
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Marissa Antunez-Tapia [US]",
+              "result": "W",
+              "table": 61
+            },
+            "2": {
+              "name": "Alex Rubin [US]",
+              "result": "L",
+              "table": 19
+            },
+            "3": {
+              "name": "David Fernandez [MX]",
+              "result": "L",
+              "table": 24
+            },
+            "4": {
+              "name": "Ahmed Cruz [PR]",
+              "result": "L",
+              "table": 43
+            },
+            "5": {
+              "name": "Bodden Castillo [PR]",
+              "result": "W",
+              "table": 49
+            },
+            "6": {
+              "name": "Prin Basser [US]",
+              "result": "L",
+              "table": 35
+            },
+            "7": {
+              "name": "Dallas White [US]",
+              "result": "W",
+              "table": 38
+            }
+          }
+        },
+        {
+          "name": "Nathaniel Rivera [PR]",
+          "placing": 66,
+          "record": {
+            "wins": 3,
+            "losses": 3,
+            "ties": 0
+          },
+          "resistances": {
+            "self": 0.5,
+            "opp": 0.5916666666666667,
+            "oppopp": 0.4878240740740741
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Akdiel Flores [PR]",
+              "result": "W",
+              "table": 30
+            },
+            "2": {
+              "name": "Emmanuel Alicea [PR]",
+              "result": "W",
+              "table": 11
+            },
+            "3": {
+              "name": "Juan Oliveras [PR]",
+              "result": "L",
+              "table": 8
+            },
+            "4": {
+              "name": "James Hart [US]",
+              "result": "L",
+              "table": 12
+            },
+            "5": {
+              "name": "Eliezer Hernandez [PR]",
+              "result": "W",
+              "table": 28
+            },
+            "6": {
+              "name": "Aaron Noel Santos [US]",
+              "result": "L",
+              "table": 18
+            }
+          }
+        },
+        {
+          "name": "Frank Zapata [PR]",
+          "placing": 67,
+          "record": {
+            "wins": 2,
+            "losses": 3,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.42857142857142855,
+            "opp": 0.6081632653061224,
+            "oppopp": 0.5172206025267251
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Eliezer Hernandez [PR]",
+              "result": "W",
+              "table": 17
+            },
+            "2": {
+              "name": "José Torres [PR]",
+              "result": "T",
+              "table": 20
+            },
+            "3": {
+              "name": "Rafael Perez [PR]",
+              "result": "W",
+              "table": 15
+            },
+            "4": {
+              "name": "Ramon Miranda [PR]",
+              "result": "L",
+              "table": 2
+            },
+            "5": {
+              "name": "Gabriel Perez [US]",
+              "result": "L",
+              "table": 20
+            },
+            "6": {
+              "name": "Zach Cohen [US]",
+              "result": "L",
+              "table": 32
+            },
+            "7": {
+              "name": "Casey Bennink [AE]",
+              "result": "T",
+              "table": 35
+            }
+          }
+        },
+        {
+          "name": "Casey Bennink [AE]",
+          "placing": 68,
+          "record": {
+            "wins": 2,
+            "losses": 3,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.42857142857142855,
+            "opp": 0.5697278911564625,
+            "oppopp": 0.5246355685131194
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Jalen Jones [US]",
+              "result": "W",
+              "table": 62
+            },
+            "2": {
+              "name": "Anthony Bruno [US]",
+              "result": "L",
+              "table": 7
+            },
+            "3": {
+              "name": "Juan David Oganes [PR]",
+              "result": "W",
+              "table": 35
+            },
+            "4": {
+              "name": "Connor Finton [US]",
+              "result": "L",
+              "table": 16
+            },
+            "5": {
+              "name": "Jose Gonzalez [PR]",
+              "result": "L",
+              "table": 26
+            },
+            "6": {
+              "name": "David Fernandez [MX]",
+              "result": "T",
+              "table": 37
+            },
+            "7": {
+              "name": "Frank Zapata [PR]",
+              "result": "T",
+              "table": 35
+            }
+          }
+        },
+        {
+          "name": "Ismanuel Rivera [PR]",
+          "placing": 69,
+          "record": {
+            "wins": 2,
+            "losses": 3,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.42857142857142855,
+            "opp": 0.49863945578231295,
+            "oppopp": 0.4667517006802721
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Kevin Santiago [PR]",
+              "result": "T",
+              "table": 38
+            },
+            "2": {
+              "name": "Christian Ramos [PR]",
+              "result": "W",
+              "table": 28
+            },
+            "3": {
+              "name": "Jalen Jones [US]",
+              "result": "T",
+              "table": 20
+            },
+            "4": {
+              "name": "Tyler Annaert [CA]",
+              "result": "L",
+              "table": 22
+            },
+            "5": {
+              "name": "Rafael Perez [PR]",
+              "result": "L",
+              "table": 36
+            },
+            "6": {
+              "name": "Richard Fernandez [US]",
+              "result": "W",
+              "table": 40
+            },
+            "7": {
+              "name": "Julio Santos [PR]",
+              "result": "L",
+              "table": 28
+            }
+          }
+        },
+        {
+          "name": "Samuel Ruiz [PR]",
+          "placing": 70,
+          "record": {
+            "wins": 2,
+            "losses": 3,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.42857142857142855,
+            "opp": 0.4931972789115647,
+            "oppopp": 0.5040370910268869
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Carlos Traverzo [PR]",
+              "result": "T",
+              "table": 65
+            },
+            "2": {
+              "name": "James Cox [NL]",
+              "result": "W",
+              "table": 43
+            },
+            "3": {
+              "name": "Jean Paul Diaz Ortiz [PR]",
+              "result": "L",
+              "table": 11
+            },
+            "4": {
+              "name": "Clayton May [US]",
+              "result": "L",
+              "table": 31
+            },
+            "5": {
+              "name": "Edward Rivera [PR]",
+              "result": "W",
+              "table": 48
+            },
+            "6": {
+              "name": "Matthew Thompson Soto [US]",
+              "result": "T",
+              "table": 31
+            },
+            "7": {
+              "name": "Michael Hunter [IE]",
+              "result": "L",
+              "table": 30
+            }
+          }
+        },
+        {
+          "name": "Matthew Thompson Soto [US]",
+          "placing": 71,
+          "record": {
+            "wins": 2,
+            "losses": 3,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.42857142857142855,
+            "opp": 0.4765306122448979,
+            "oppopp": 0.4527712989957888
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Sheldon Kuppan [GB]",
+              "result": "L",
+              "table": 20
+            },
+            "2": {
+              "name": "Ahmed Cruz [PR]",
+              "result": "L",
+              "table": 44
+            },
+            "3": {
+              "name": "Jessica Burke [US]",
+              "result": "W",
+              "table": 60
+            },
+            "4": {
+              "name": "Zach Cohen [US]",
+              "result": "T",
+              "table": 47
+            },
+            "5": {
+              "name": "Jose J Reyes [PR]",
+              "result": "W",
+              "table": 44
+            },
+            "6": {
+              "name": "Samuel Ruiz [PR]",
+              "result": "T",
+              "table": 31
+            },
+            "7": {
+              "name": "Kenneth Miranda [PR]",
+              "result": "L",
+              "table": 31
+            }
+          }
+        },
+        {
+          "name": "Ricardo Montes [PR]",
+          "placing": 72,
+          "record": {
+            "wins": 2,
+            "losses": 3,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.42857142857142855,
+            "opp": 0.4670068027210884,
+            "oppopp": 0.4960779073534175
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Sebasthian Padilla [PR]",
+              "result": "T",
+              "table": 73
+            },
+            "2": {
+              "name": "Eric Ridgeway [AE]",
+              "result": "L",
+              "table": 31
+            },
+            "3": {
+              "name": "Diego Contes [PR]",
+              "result": "L",
+              "table": 51
+            },
+            "4": {
+              "name": "Tony Santos [US]",
+              "result": "W",
+              "table": 54
+            },
+            "5": {
+              "name": "Michael Hunter [IE]",
+              "result": "T",
+              "table": 42
+            },
+            "6": {
+              "name": "Stephen Richardson [US]",
+              "result": "W",
+              "table": 39
+            },
+            "7": {
+              "name": "Nick Alvarez [US]",
+              "result": "L",
+              "table": 27
+            }
+          }
+        },
+        {
+          "name": "Clifton Dalgard [US]",
+          "placing": 73,
+          "record": {
+            "wins": 2,
+            "losses": 3,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.42857142857142855,
+            "opp": 0.4319727891156462,
+            "oppopp": 0.4750404923874312
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Michael Hunter [IE]",
+              "result": "L",
+              "table": 11
+            },
+            "2": {
+              "name": "Cristian Rodriguez [PR]",
+              "result": "T",
+              "table": 46
+            },
+            "3": {
+              "name": "Braulio Rivera [PR]",
+              "result": "L",
+              "table": 53
+            },
+            "4": {
+              "name": "Ricardo Rivera Luciano [PR]",
+              "result": "L",
+              "table": 58
+            },
+            "5": {
+              "name": "Gustavo Miranda [PR]",
+              "result": "W",
+              "table": 57
+            },
+            "6": {
+              "name": "Edwin Rivera [US]",
+              "result": "T",
+              "table": 44
+            },
+            "7": {
+              "name": "Nelson Martinez Guzman [PR]",
+              "result": "W",
+              "table": 40
+            }
+          }
+        },
+        {
+          "name": "Calvin Yau [US]",
+          "placing": 74,
+          "record": {
+            "wins": 2,
+            "losses": 3,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.42857142857142855,
+            "opp": 0.36938775510204075,
+            "oppopp": 0.4687123420796889
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Bodden Castillo [PR]",
+              "result": "L",
+              "table": 42
+            },
+            "2": {
+              "name": "Jesus Garcia [PR]",
+              "result": "L",
+              "table": 55
+            },
+            "3": {
+              "name": "Jose Torres [PR]",
+              "result": "T",
+              "table": 62
+            },
+            "4": {
+              "name": "Ricardo Rivera [PR]",
+              "result": "W",
+              "table": 55
+            },
+            "5": {
+              "name": "Marvin Fuentes [US]",
+              "result": "W",
+              "table": 43
+            },
+            "6": {
+              "name": "Ajay Sridhar [US]",
+              "result": "T",
+              "table": 28
+            },
+            "7": {
+              "name": "Beatriz Díaz [PR]",
+              "result": "L",
+              "table": 32
+            }
+          }
+        },
+        {
+          "name": "Edwin Rivera [US]",
+          "placing": 75,
+          "record": {
+            "wins": 2,
+            "losses": 3,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.42857142857142855,
+            "opp": 0.34183673469387754,
+            "oppopp": 0.4568209426627794
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Beatriz Díaz [PR]",
+              "result": "L",
+              "table": 52
+            },
+            "2": {
+              "name": "Edward Rivera [PR]",
+              "result": "L",
+              "table": 48
+            },
+            "3": {
+              "name": "John Díaz [PR]",
+              "result": "L",
+              "table": 61
+            },
+            "4": {
+              "name": "Marissa Antunez-Tapia [US]",
+              "result": "W",
+              "table": 63
+            },
+            "5": {
+              "name": "Nathan Brower [US]",
+              "result": "T",
+              "table": 51
+            },
+            "6": {
+              "name": "Clifton Dalgard [US]",
+              "result": "T",
+              "table": 44
+            },
+            "7": {
+              "name": "Robert Simpson [CA]",
+              "result": "W",
+              "table": 41
+            }
+          }
+        },
+        {
+          "name": "Carlos Traverzo [PR]",
+          "placing": 76,
+          "record": {
+            "wins": 2,
+            "losses": 2,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.5,
+            "opp": 0.4875,
+            "oppopp": 0.5351851851851851
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Samuel Ruiz [PR]",
+              "result": "T",
+              "table": 65
+            },
+            "2": {
+              "name": "Kevin Santiago [PR]",
+              "result": "W",
+              "table": 27
+            },
+            "3": {
+              "name": "Maddox Corcoran [US]",
+              "result": "L",
+              "table": 17
+            },
+            "4": {
+              "name": "Gilberto Acosta [PR]",
+              "result": "W",
+              "table": 25
+            },
+            "5": {
+              "name": "Julio Santos [PR]",
+              "result": "T",
+              "table": 14
+            },
+            "6": {
+              "name": "Joshua Cohen [AE]",
+              "result": "L",
+              "table": 23
+            }
+          }
+        },
+        {
+          "name": "Shar Rivera [PR]",
+          "placing": 77,
+          "record": {
+            "wins": 2,
+            "losses": 4,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.35714285714285715,
+            "opp": 0.5969387755102041,
+            "oppopp": 0.5204421768707482
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Jon Eng [US]",
+              "result": "L",
+              "table": 57
+            },
+            "2": {
+              "name": "Jose Gabriel Gómez Pérez [PR]",
+              "result": "W",
+              "table": 52
+            },
+            "3": {
+              "name": "Sheldon Kuppan [GB]",
+              "result": "W",
+              "table": 29
+            },
+            "4": {
+              "name": "Parker Greenwald [US]",
+              "result": "T",
+              "table": 15
+            },
+            "5": {
+              "name": "Alex Rubin [US]",
+              "result": "L",
+              "table": 18
+            },
+            "6": {
+              "name": "Orlando Álvarez [PR]",
+              "result": "L",
+              "table": 29
+            },
+            "7": {
+              "name": "Hector Hoyos [PR]",
+              "result": "L",
+              "table": 34
+            }
+          }
+        },
+        {
+          "name": "Sedrick Serrano [PR]",
+          "placing": 78,
+          "record": {
+            "wins": 2,
+            "losses": 4,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.35714285714285715,
+            "opp": 0.48673469387755103,
+            "oppopp": 0.5057823129251701
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Diego Contes [PR]",
+              "result": "T",
+              "table": 29
+            },
+            "2": {
+              "name": "Emmanuel Cruz [PR]",
+              "result": "L",
+              "table": 37
+            },
+            "3": {
+              "name": "Jose Horta [PR]",
+              "result": "L",
+              "table": 45
+            },
+            "4": {
+              "name": "Gustavo Miranda [PR]",
+              "result": "W",
+              "table": 53
+            },
+            "5": {
+              "name": "Juan Pereira [PR]",
+              "result": "W",
+              "table": 45
+            },
+            "6": {
+              "name": "Sylvester Kwon [US]",
+              "result": "L",
+              "table": 33
+            },
+            "7": {
+              "name": "Joshua Villanueva [PR]",
+              "result": "L",
+              "table": 36
+            }
+          }
+        },
+        {
+          "name": "Nathan Brower [US]",
+          "placing": 79,
+          "record": {
+            "wins": 2,
+            "losses": 4,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.35714285714285715,
+            "opp": 0.4744897959183673,
+            "oppopp": 0.46236030126336247
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Jacob Peltier [US]",
+              "result": "L",
+              "table": 46
+            },
+            "2": {
+              "name": "Andy Gray [US]",
+              "result": "L",
+              "table": 57
+            },
+            "3": {
+              "name": "Marissa Antunez-Tapia [US]",
+              "result": "W",
+              "table": 58
+            },
+            "4": {
+              "name": "Carlos Rodil [PR]",
+              "result": "L",
+              "table": 40
+            },
+            "5": {
+              "name": "Edwin Rivera [US]",
+              "result": "T",
+              "table": 51
+            },
+            "6": {
+              "name": "Jesus Garcia [PR]",
+              "result": "W",
+              "table": 43
+            },
+            "7": {
+              "name": "Juan David Oganes [PR]",
+              "result": "L",
+              "table": 33
+            }
+          }
+        },
+        {
+          "name": "Jean Paul Diaz Ortiz [PR]",
+          "placing": 80,
+          "record": {
+            "wins": 2,
+            "losses": 3,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.4166666666666667,
+            "opp": 0.5972222222222222,
+            "oppopp": 0.4851851851851852
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Anthonie Ramirez [PR]",
+              "result": "T",
+              "table": 39
+            },
+            "2": {
+              "name": "Richard Fernandez [US]",
+              "result": "W",
+              "table": 24
+            },
+            "3": {
+              "name": "Samuel Ruiz [PR]",
+              "result": "W",
+              "table": 11
+            },
+            "4": {
+              "name": "Anthony Bruno [US]",
+              "result": "L",
+              "table": 9
+            },
+            "5": {
+              "name": "Cristian Rodriguez [PR]",
+              "result": "L",
+              "table": 17
+            },
+            "6": {
+              "name": "Parker Greenwald [US]",
+              "result": "L",
+              "table": 34
+            }
+          }
+        },
+        {
+          "name": "David Fernandez [MX]",
+          "placing": 81,
+          "record": {
+            "wins": 2,
+            "losses": 3,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.4166666666666667,
+            "opp": 0.5499999999999999,
+            "oppopp": 0.5580092592592593
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Marvin Fuentes [US]",
+              "result": "W",
+              "table": 43
+            },
+            "2": {
+              "name": "Carlos Medina Astete [PE]",
+              "result": "L",
+              "table": 6
+            },
+            "3": {
+              "name": "Gabriel Rosa [PR]",
+              "result": "W",
+              "table": 24
+            },
+            "4": {
+              "name": "David Cooper [US]",
+              "result": "L",
+              "table": 18
+            },
+            "5": {
+              "name": "Aaron Noel Santos [US]",
+              "result": "L",
+              "table": 31
+            },
+            "6": {
+              "name": "Casey Bennink [AE]",
+              "result": "T",
+              "table": 37
+            }
+          }
+        },
+        {
+          "name": "Ricardo Rivera Luciano [PR]",
+          "placing": 82,
+          "record": {
+            "wins": 2,
+            "losses": 3,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.4166666666666667,
+            "opp": 0.44722222222222224,
+            "oppopp": 0.4819907407407407
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Jared Woitalla [US]",
+              "result": "L",
+              "table": 69
+            },
+            "2": {
+              "name": "Marvin Fuentes [US]",
+              "result": "T",
+              "table": 62
+            },
+            "3": {
+              "name": "Jose J Reyes [PR]",
+              "result": "L",
+              "table": 55
+            },
+            "4": {
+              "name": "Clifton Dalgard [US]",
+              "result": "W",
+              "table": 58
+            },
+            "5": {
+              "name": "Carlos Pastor [PR]",
+              "result": "W",
+              "table": 38
+            },
+            "6": {
+              "name": "Jose Horta [PR]",
+              "result": "L",
+              "table": 27
+            }
+          }
+        },
+        {
+          "name": "Carlos Pastor [PR]",
+          "placing": 83,
+          "record": {
+            "wins": 2,
+            "losses": 3,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.4166666666666667,
+            "opp": 0.4388888888888889,
+            "oppopp": 0.5040740740740741
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Emanuel Hernandez [PR]",
+              "result": "W",
+              "table": 14
+            },
+            "2": {
+              "name": "Jacob Peltier [US]",
+              "result": "L",
+              "table": 18
+            },
+            "3": {
+              "name": "Alberto Medina Soto [PR]",
+              "result": "T",
+              "table": 22
+            },
+            "4": {
+              "name": "James Cox [NL]",
+              "result": "L",
+              "table": 32
+            },
+            "5": {
+              "name": "Ricardo Rivera Luciano [PR]",
+              "result": "L",
+              "table": 38
+            },
+            "6": {
+              "name": "Edward Rivera [PR]",
+              "result": "W",
+              "table": 45
+            }
+          }
+        },
+        {
+          "name": "Diego Contes [PR]",
+          "placing": 84,
+          "record": {
+            "wins": 2,
+            "losses": 2,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.5,
+            "opp": 0.5416666666666666,
+            "oppopp": 0.5455555555555555
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Sedrick Serrano [PR]",
+              "result": "T",
+              "table": 29
+            },
+            "2": {
+              "name": "Nelson Barros [BR]",
+              "result": "L",
+              "table": 23
+            },
+            "3": {
+              "name": "Ricardo Montes [PR]",
+              "result": "W",
+              "table": 51
+            },
+            "4": {
+              "name": "Juan Pérez [PR]",
+              "result": "W",
+              "table": 30
+            },
+            "5": {
+              "name": "James Cox [NL]",
+              "result": "L",
+              "table": 23
+            }
+          }
+        },
+        {
+          "name": "Michael Salcedo []",
+          "placing": 85,
+          "record": {
+            "wins": 2,
+            "losses": 5,
+            "ties": 0
+          },
+          "resistances": {
+            "self": 0.2857142857142857,
+            "opp": 0.36938775510204086,
+            "oppopp": 0.4026352445740201
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "LATE",
+              "result": "L",
+              "table": 63
+            },
+            "2": {
+              "name": "Lesme Flores [PR]",
+              "result": "L",
+              "table": 63
+            },
+            "3": {
+              "name": "Eliezer Hernandez [PR]",
+              "result": "L",
+              "table": 63
+            },
+            "4": {
+              "name": "Jessica Burke [US]",
+              "result": "W",
+              "table": 62
+            },
+            "5": {
+              "name": "Carlos Rodriguez Conesa [PR]",
+              "result": "W",
+              "table": 52
+            },
+            "6": {
+              "name": "Nick Alvarez [US]",
+              "result": "L",
+              "table": 36
+            },
+            "7": {
+              "name": "Bodden Castillo [PR]",
+              "result": "L",
+              "table": 37
+            }
+          }
+        },
+        {
+          "name": "Dallas White [US]",
+          "placing": 86,
+          "record": {
+            "wins": 1,
+            "losses": 3,
+            "ties": 3
+          },
+          "resistances": {
+            "self": 0.35714285714285715,
+            "opp": 0.3619047619047619,
+            "oppopp": 0.46965905409782965
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Victor Carrillo [PR]",
+              "result": "L",
+              "table": 63
+            },
+            "2": {
+              "name": "Matthew Brower [US]",
+              "result": "L",
+              "table": 60
+            },
+            "3": {
+              "name": "Carlos Ramos [PR]",
+              "result": "T",
+              "table": 59
+            },
+            "4": {
+              "name": "Richard Fernandez [US]",
+              "result": "T",
+              "table": 59
+            },
+            "5": {
+              "name": "Kevin Santiago [PR]",
+              "result": "T",
+              "table": 54
+            },
+            "6": {
+              "name": "Jessica Burke [US]",
+              "result": "W",
+              "table": 46
+            },
+            "7": {
+              "name": "Gabriel Rosa [PR]",
+              "result": "L",
+              "table": 38
+            }
+          }
+        },
+        {
+          "name": "Jessica Burke [US]",
+          "placing": 87,
+          "record": {
+            "wins": 2,
+            "losses": 5,
+            "ties": 0
+          },
+          "resistances": {
+            "self": 0.25,
+            "opp": 0.35912698412698413,
+            "oppopp": 0.42248677248677247
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Juan David Oganes [PR]",
+              "result": "L",
+              "table": 49
+            },
+            "2": {
+              "name": "Paul Vallejo [PR]",
+              "result": "L",
+              "table": 49
+            },
+            "3": {
+              "name": "Matthew Thompson Soto [US]",
+              "result": "L",
+              "table": 60
+            },
+            "4": {
+              "name": "Michael Salcedo []",
+              "result": "L",
+              "table": 62
+            },
+            "5": {
+              "name": "BYE",
+              "result": "W",
+              "table": 0
+            },
+            "6": {
+              "name": "Dallas White [US]",
+              "result": "L",
+              "table": 46
+            },
+            "7": {
+              "name": "Armando Arce [PR]",
+              "result": "W",
+              "table": 43
+            }
+          }
+        },
+        {
+          "name": "Juan Escalera [US]",
+          "placing": 88,
+          "record": {
+            "wins": 2,
+            "losses": 3,
+            "ties": 0
+          },
+          "resistances": {
+            "self": 0.25,
+            "opp": 0.5,
+            "oppopp": 0.4947916666666667
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Christian J Ayala Hernandez [PR]",
+              "result": "L",
+              "table": 44
+            },
+            "2": {
+              "name": "Nick Alvarez [US]",
+              "result": "L",
+              "table": 53
+            },
+            "3": {
+              "name": "BYE",
+              "result": "W",
+              "table": 0
+            },
+            "4": {
+              "name": "Bodden Castillo [PR]",
+              "result": "W",
+              "table": 46
+            },
+            "5": {
+              "name": "Sheldon Kuppan [GB]",
+              "result": "L",
+              "table": 24
+            }
+          }
+        },
+        {
+          "name": "Lesme Flores [PR]",
+          "placing": 89,
+          "record": {
+            "wins": 2,
+            "losses": 3,
+            "ties": 0
+          },
+          "resistances": {
+            "self": 0.4,
+            "opp": 0.4666666666666667,
+            "oppopp": 0.4486111111111112
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Hasan Kunukcu [US]",
+              "result": "L",
+              "table": 33
+            },
+            "2": {
+              "name": "Michael Salcedo []",
+              "result": "W",
+              "table": 63
+            },
+            "3": {
+              "name": "Eduardo Meléndez [PR]",
+              "result": "L",
+              "table": 21
+            },
+            "4": {
+              "name": "John Díaz [PR]",
+              "result": "W",
+              "table": 49
+            },
+            "5": {
+              "name": "Ahmed Cruz [PR]",
+              "result": "L",
+              "table": 30
+            }
+          }
+        },
+        {
+          "name": "Bryan Ortiz-Serrano [PR]",
+          "placing": 90,
+          "record": {
+            "wins": 2,
+            "losses": 3,
+            "ties": 0
+          },
+          "resistances": {
+            "self": 0.4,
+            "opp": 0.45,
+            "oppopp": 0.4922222222222222
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Rafael Perez [PR]",
+              "result": "L",
+              "table": 67
+            },
+            "2": {
+              "name": "John Díaz [PR]",
+              "result": "W",
+              "table": 56
+            },
+            "3": {
+              "name": "Matthew Brower [US]",
+              "result": "L",
+              "table": 27
+            },
+            "4": {
+              "name": "Emanuel Hernandez [PR]",
+              "result": "W",
+              "table": 39
+            },
+            "5": {
+              "name": "Raul Santiago [PR]",
+              "result": "L",
+              "table": 25
+            }
+          }
+        },
+        {
+          "name": "Eliezer Hernandez [PR]",
+          "placing": 91,
+          "record": {
+            "wins": 2,
+            "losses": 3,
+            "ties": 0
+          },
+          "resistances": {
+            "self": 0.4,
+            "opp": 0.36,
+            "oppopp": 0.5137777777777778
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Frank Zapata [PR]",
+              "result": "L",
+              "table": 17
+            },
+            "2": {
+              "name": "Alberto Medina Soto [PR]",
+              "result": "L",
+              "table": 47
+            },
+            "3": {
+              "name": "Michael Salcedo []",
+              "result": "W",
+              "table": 63
+            },
+            "4": {
+              "name": "Edward Rivera [PR]",
+              "result": "W",
+              "table": 48
+            },
+            "5": {
+              "name": "Nathaniel Rivera [PR]",
+              "result": "L",
+              "table": 28
+            }
+          }
+        },
+        {
+          "name": "Christian Ramos [PR]",
+          "placing": 92,
+          "record": {
+            "wins": 1,
+            "losses": 1,
+            "ties": 3
+          },
+          "resistances": {
+            "self": 0.5,
+            "opp": 0.35,
+            "oppopp": 0.5313888888888889
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Carlos Rodriguez Conesa [PR]",
+              "result": "T",
+              "table": 66
+            },
+            "2": {
+              "name": "Ismanuel Rivera [PR]",
+              "result": "L",
+              "table": 28
+            },
+            "3": {
+              "name": "Jose Marzan [PR]",
+              "result": "T",
+              "table": 44
+            },
+            "4": {
+              "name": "Jeric Vera [PR]",
+              "result": "T",
+              "table": 50
+            },
+            "5": {
+              "name": "Jose Medina [PR]",
+              "result": "W",
+              "table": 50
+            }
+          }
+        },
+        {
+          "name": "Nelson Martinez Guzman [PR]",
+          "placing": 93,
+          "record": {
+            "wins": 1,
+            "losses": 4,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.2857142857142857,
+            "opp": 0.5255102040816326,
+            "oppopp": 0.47915451895043726
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Adam Reinhardt [US]",
+              "result": "T",
+              "table": 56
+            },
+            "2": {
+              "name": "Ricardo Rivera [PR]",
+              "result": "W",
+              "table": 38
+            },
+            "3": {
+              "name": "José Torres [PR]",
+              "result": "T",
+              "table": 14
+            },
+            "4": {
+              "name": "Emmanuel Cruz [PR]",
+              "result": "L",
+              "table": 21
+            },
+            "5": {
+              "name": "Gabriel Smart [US]",
+              "result": "L",
+              "table": 35
+            },
+            "6": {
+              "name": "Christian J Ayala Hernandez [PR]",
+              "result": "L",
+              "table": 38
+            },
+            "7": {
+              "name": "Clifton Dalgard [US]",
+              "result": "L",
+              "table": 40
+            }
+          }
+        },
+        {
+          "name": "Carlos Rodriguez Conesa [PR]",
+          "placing": 94,
+          "record": {
+            "wins": 1,
+            "losses": 4,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.2857142857142857,
+            "opp": 0.4846938775510204,
+            "oppopp": 0.44203109815354713
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Christian Ramos [PR]",
+              "result": "T",
+              "table": 66
+            },
+            "2": {
+              "name": "Gabriel Smart [US]",
+              "result": "T",
+              "table": 30
+            },
+            "3": {
+              "name": "Joshua Cohen [AE]",
+              "result": "L",
+              "table": 41
+            },
+            "4": {
+              "name": "Kenneth Miranda [PR]",
+              "result": "L",
+              "table": 52
+            },
+            "5": {
+              "name": "Michael Salcedo []",
+              "result": "L",
+              "table": 52
+            },
+            "6": {
+              "name": "Bodden Castillo [PR]",
+              "result": "L",
+              "table": 47
+            },
+            "7": {
+              "name": "Edward Rivera [PR]",
+              "result": "W",
+              "table": 44
+            }
+          }
+        },
+        {
+          "name": "Jesus Garcia [PR]",
+          "placing": 95,
+          "record": {
+            "wins": 1,
+            "losses": 4,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.2857142857142857,
+            "opp": 0.47874149659863946,
+            "oppopp": 0.4674927113702624
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Anthony Bruno [US]",
+              "result": "L",
+              "table": 72
+            },
+            "2": {
+              "name": "Calvin Yau [US]",
+              "result": "W",
+              "table": 55
+            },
+            "3": {
+              "name": "Royer Espinosa [PR]",
+              "result": "T",
+              "table": 26
+            },
+            "4": {
+              "name": "Emmanuel Alicea [PR]",
+              "result": "L",
+              "table": 33
+            },
+            "5": {
+              "name": "Ajay Sridhar [US]",
+              "result": "L",
+              "table": 39
+            },
+            "6": {
+              "name": "Nathan Brower [US]",
+              "result": "L",
+              "table": 43
+            },
+            "7": {
+              "name": "Carlos Ramos [PR]",
+              "result": "T",
+              "table": 42
+            }
+          }
+        },
+        {
+          "name": "Carlos Ramos [PR]",
+          "placing": 96,
+          "record": {
+            "wins": 1,
+            "losses": 4,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.25,
+            "opp": 0.4583333333333333,
+            "oppopp": 0.45756802721088435
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Alex Rubin [US]",
+              "result": "L",
+              "table": 45
+            },
+            "2": {
+              "name": "Jalen Jones [US]",
+              "result": "L",
+              "table": 45
+            },
+            "3": {
+              "name": "Dallas White [US]",
+              "result": "T",
+              "table": 59
+            },
+            "4": {
+              "name": "Ajay Sridhar [US]",
+              "result": "L",
+              "table": 61
+            },
+            "5": {
+              "name": "Armando Arce [PR]",
+              "result": "L",
+              "table": 56
+            },
+            "6": {
+              "name": "BYE",
+              "result": "W",
+              "table": 0
+            },
+            "7": {
+              "name": "Jesus Garcia [PR]",
+              "result": "T",
+              "table": 42
+            }
+          }
+        },
+        {
+          "name": "Stephen Richardson [US]",
+          "placing": 97,
+          "record": {
+            "wins": 1,
+            "losses": 3,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.3333333333333333,
+            "opp": 0.5388888888888889,
+            "oppopp": 0.5053703703703704
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Ahmed Cruz [PR]",
+              "result": "W",
+              "table": 13
+            },
+            "2": {
+              "name": "Jon Eng [US]",
+              "result": "L",
+              "table": 4
+            },
+            "3": {
+              "name": "Parker Greenwald [US]",
+              "result": "L",
+              "table": 25
+            },
+            "4": {
+              "name": "Robert Simpson [CA]",
+              "result": "T",
+              "table": 44
+            },
+            "5": {
+              "name": "Christian Solis [PR]",
+              "result": "T",
+              "table": 47
+            },
+            "6": {
+              "name": "Ricardo Montes [PR]",
+              "result": "L",
+              "table": 39
+            }
+          }
+        },
+        {
+          "name": "Richard Fernandez [US]",
+          "placing": 98,
+          "record": {
+            "wins": 1,
+            "losses": 3,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.3333333333333333,
+            "opp": 0.4375,
+            "oppopp": 0.49194444444444435
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Tyler Annaert [CA]",
+              "result": "T",
+              "table": 53
+            },
+            "2": {
+              "name": "Jean Paul Diaz Ortiz [PR]",
+              "result": "L",
+              "table": 24
+            },
+            "3": {
+              "name": "Gilberto Acosta [PR]",
+              "result": "L",
+              "table": 48
+            },
+            "4": {
+              "name": "Dallas White [US]",
+              "result": "T",
+              "table": 59
+            },
+            "5": {
+              "name": "Jose Torres [PR]",
+              "result": "W",
+              "table": 53
+            },
+            "6": {
+              "name": "Ismanuel Rivera [PR]",
+              "result": "L",
+              "table": 40
+            }
+          }
+        },
+        {
+          "name": "Wilfredo Crespo [US]",
+          "placing": 99,
+          "record": {
+            "wins": 1,
+            "losses": 2,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.4,
+            "opp": 0.6299999999999999,
+            "oppopp": 0.47461111111111115
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Jerry Han [US]",
+              "result": "T",
+              "table": 21
+            },
+            "2": {
+              "name": "Tyler Annaert [CA]",
+              "result": "T",
+              "table": 32
+            },
+            "3": {
+              "name": "Gabriel Smart [US]",
+              "result": "L",
+              "table": 43
+            },
+            "4": {
+              "name": "Sebasthian Padilla [PR]",
+              "result": "W",
+              "table": 51
+            },
+            "5": {
+              "name": "Joshua Cohen [AE]",
+              "result": "L",
+              "table": 34
+            }
+          }
+        },
+        {
+          "name": "Victor Carrillo [PR]",
+          "placing": 100,
+          "record": {
+            "wins": 1,
+            "losses": 2,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.4,
+            "opp": 0.5833333333333333,
+            "oppopp": 0.4772222222222222
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Dallas White [US]",
+              "result": "W",
+              "table": 63
+            },
+            "2": {
+              "name": "Hasan Kunukcu [US]",
+              "result": "T",
+              "table": 8
+            },
+            "3": {
+              "name": "Ludwig Llanos [PR]",
+              "result": "L",
+              "table": 9
+            },
+            "4": {
+              "name": "Rafael Perez [PR]",
+              "result": "T",
+              "table": 26
+            },
+            "5": {
+              "name": "Jalen Jones [US]",
+              "result": "L",
+              "table": 33
+            }
+          }
+        },
+        {
+          "name": "Akdiel Flores [PR]",
+          "placing": 101,
+          "record": {
+            "wins": 1,
+            "losses": 2,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.4,
+            "opp": 0.51,
+            "oppopp": 0.4885
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Nathaniel Rivera [PR]",
+              "result": "L",
+              "table": 30
+            },
+            "2": {
+              "name": "Braulio Rivera [PR]",
+              "result": "T",
+              "table": 50
+            },
+            "3": {
+              "name": "Marvin Fuentes [US]",
+              "result": "W",
+              "table": 49
+            },
+            "4": {
+              "name": "Jalen Jones [US]",
+              "result": "T",
+              "table": 37
+            },
+            "5": {
+              "name": "Kenneth Miranda [PR]",
+              "result": "L",
+              "table": 37
+            }
+          }
+        },
+        {
+          "name": "Christian Solis [PR]",
+          "placing": 102,
+          "record": {
+            "wins": 1,
+            "losses": 2,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.4,
+            "opp": 0.42666666666666664,
+            "oppopp": 0.4698888888888889
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Ricardo Rivera [PR]",
+              "result": "T",
+              "table": 22
+            },
+            "2": {
+              "name": "Jose J Reyes [PR]",
+              "result": "W",
+              "table": 25
+            },
+            "3": {
+              "name": "Hasan Kunukcu [US]",
+              "result": "L",
+              "table": 18
+            },
+            "4": {
+              "name": "Cristian Rodriguez [PR]",
+              "result": "L",
+              "table": 36
+            },
+            "5": {
+              "name": "Stephen Richardson [US]",
+              "result": "T",
+              "table": 47
+            }
+          }
+        },
+        {
+          "name": "Sebasthian Padilla [PR]",
+          "placing": 103,
+          "record": {
+            "wins": 1,
+            "losses": 2,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.4,
+            "opp": 0.39666666666666667,
+            "oppopp": 0.4972777777777778
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Ricardo Montes [PR]",
+              "result": "T",
+              "table": 73
+            },
+            "2": {
+              "name": "Anthonie Ramirez [PR]",
+              "result": "L",
+              "table": 39
+            },
+            "3": {
+              "name": "Armando Arce [PR]",
+              "result": "T",
+              "table": 56
+            },
+            "4": {
+              "name": "Wilfredo Crespo [US]",
+              "result": "L",
+              "table": 51
+            },
+            "5": {
+              "name": "Jose Gabriel Gómez Pérez [PR]",
+              "result": "W",
+              "table": 55
+            }
+          }
+        },
+        {
+          "name": "Robert Simpson [CA]",
+          "placing": 104,
+          "record": {
+            "wins": 0,
+            "losses": 3,
+            "ties": 4
+          },
+          "resistances": {
+            "self": 0.2857142857142857,
+            "opp": 0.5476190476190477,
+            "oppopp": 0.4599287333981212
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Nelson Barros [BR]",
+              "result": "T",
+              "table": 59
+            },
+            "2": {
+              "name": "Prin Basser [US]",
+              "result": "T",
+              "table": 21
+            },
+            "3": {
+              "name": "Carlos Rodil [PR]",
+              "result": "T",
+              "table": 38
+            },
+            "4": {
+              "name": "Stephen Richardson [US]",
+              "result": "T",
+              "table": 44
+            },
+            "5": {
+              "name": "Zach Cohen [US]",
+              "result": "L",
+              "table": 46
+            },
+            "6": {
+              "name": "Joshua Villanueva [PR]",
+              "result": "L",
+              "table": 42
+            },
+            "7": {
+              "name": "Edwin Rivera [US]",
+              "result": "L",
+              "table": 41
+            }
+          }
+        },
+        {
+          "name": "Armando Arce [PR]",
+          "placing": 105,
+          "record": {
+            "wins": 1,
+            "losses": 5,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.25,
+            "opp": 0.42653061224489797,
+            "oppopp": 0.43808228053126014
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Juan Oliveras [PR]",
+              "result": "L",
+              "table": 68
+            },
+            "2": {
+              "name": "Jose Gonzalez [PR]",
+              "result": "L",
+              "table": 59
+            },
+            "3": {
+              "name": "Sebasthian Padilla [PR]",
+              "result": "T",
+              "table": 56
+            },
+            "4": {
+              "name": "Marvin Fuentes [US]",
+              "result": "L",
+              "table": 57
+            },
+            "5": {
+              "name": "Carlos Ramos [PR]",
+              "result": "W",
+              "table": 56
+            },
+            "6": {
+              "name": "Michael Hunter [IE]",
+              "result": "L",
+              "table": 41
+            },
+            "7": {
+              "name": "Jessica Burke [US]",
+              "result": "L",
+              "table": 43
+            }
+          }
+        },
+        {
+          "name": "Alberto Medina Soto [PR]",
+          "placing": 106,
+          "record": {
+            "wins": 1,
+            "losses": 3,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.3,
+            "opp": 0.53,
+            "oppopp": 0.4525555555555556
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "James Hart [US]",
+              "result": "L",
+              "table": 35
+            },
+            "2": {
+              "name": "Eliezer Hernandez [PR]",
+              "result": "W",
+              "table": 47
+            },
+            "3": {
+              "name": "Carlos Pastor [PR]",
+              "result": "T",
+              "table": 22
+            },
+            "4": {
+              "name": "Sylvester Kwon [US]",
+              "result": "L",
+              "table": 27
+            },
+            "5": {
+              "name": "Juan David Oganes [PR]",
+              "result": "L",
+              "table": 40
+            }
+          }
+        },
+        {
+          "name": "Juan Pereira [PR]",
+          "placing": 107,
+          "record": {
+            "wins": 1,
+            "losses": 3,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.3,
+            "opp": 0.5166666666666667,
+            "oppopp": 0.4758333333333333
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Prin Basser [US]",
+              "result": "T",
+              "table": 31
+            },
+            "2": {
+              "name": "Jerry Han [US]",
+              "result": "L",
+              "table": 34
+            },
+            "3": {
+              "name": "Ricardo Rivera [PR]",
+              "result": "W",
+              "table": 47
+            },
+            "4": {
+              "name": "Adam Reinhardt [US]",
+              "result": "L",
+              "table": 38
+            },
+            "5": {
+              "name": "Sedrick Serrano [PR]",
+              "result": "L",
+              "table": 45
+            }
+          }
+        },
+        {
+          "name": "Jose J Reyes [PR]",
+          "placing": 108,
+          "record": {
+            "wins": 1,
+            "losses": 3,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.3,
+            "opp": 0.4383333333333333,
+            "oppopp": 0.4917222222222223
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Jeric Vera [PR]",
+              "result": "T",
+              "table": 36
+            },
+            "2": {
+              "name": "Christian Solis [PR]",
+              "result": "L",
+              "table": 25
+            },
+            "3": {
+              "name": "Ricardo Rivera Luciano [PR]",
+              "result": "W",
+              "table": 55
+            },
+            "4": {
+              "name": "Beatriz Díaz [PR]",
+              "result": "L",
+              "table": 35
+            },
+            "5": {
+              "name": "Matthew Thompson Soto [US]",
+              "result": "L",
+              "table": 44
+            }
+          }
+        },
+        {
+          "name": "Marvin Fuentes [US]",
+          "placing": 109,
+          "record": {
+            "wins": 1,
+            "losses": 3,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.3,
+            "opp": 0.39666666666666667,
+            "oppopp": 0.44866666666666666
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "David Fernandez [MX]",
+              "result": "L",
+              "table": 43
+            },
+            "2": {
+              "name": "Ricardo Rivera Luciano [PR]",
+              "result": "T",
+              "table": 62
+            },
+            "3": {
+              "name": "Akdiel Flores [PR]",
+              "result": "L",
+              "table": 49
+            },
+            "4": {
+              "name": "Armando Arce [PR]",
+              "result": "W",
+              "table": 57
+            },
+            "5": {
+              "name": "Calvin Yau [US]",
+              "result": "L",
+              "table": 43
+            }
+          }
+        },
+        {
+          "name": "Juan Pérez [PR]",
+          "placing": 110,
+          "record": {
+            "wins": 1,
+            "losses": 2,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.375,
+            "opp": 0.625,
+            "oppopp": 0.5288194444444444
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Eduardo Meléndez [PR]",
+              "result": "W",
+              "table": 37
+            },
+            "2": {
+              "name": "Jared Woitalla [US]",
+              "result": "L",
+              "table": 5
+            },
+            "3": {
+              "name": "Emmanuel Alicea [PR]",
+              "result": "T",
+              "table": 28
+            },
+            "4": {
+              "name": "Diego Contes [PR]",
+              "result": "L",
+              "table": 30
+            }
+          }
+        },
+        {
+          "name": "Christian Lugo [PR]",
+          "placing": 111,
+          "record": {
+            "wins": 1,
+            "losses": 2,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.375,
+            "opp": 0.5625,
+            "oppopp": 0.4916666666666667
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Gabriel Smart [US]",
+              "result": "T",
+              "table": 24
+            },
+            "2": {
+              "name": "Joshua Villanueva [PR]",
+              "result": "W",
+              "table": 22
+            },
+            "3": {
+              "name": "Anthonie Ramirez [PR]",
+              "result": "L",
+              "table": 16
+            },
+            "4": {
+              "name": "Andy Gray [US]",
+              "result": "L",
+              "table": 29
+            }
+          }
+        },
+        {
+          "name": "Gilberto Acosta [PR]",
+          "placing": 112,
+          "record": {
+            "wins": 1,
+            "losses": 2,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.375,
+            "opp": 0.5208333333333333,
+            "oppopp": 0.45729166666666665
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Zach Cohen [US]",
+              "result": "T",
+              "table": 25
+            },
+            "2": {
+              "name": "Adam Reinhardt [US]",
+              "result": "L",
+              "table": 40
+            },
+            "3": {
+              "name": "Richard Fernandez [US]",
+              "result": "W",
+              "table": 48
+            },
+            "4": {
+              "name": "Carlos Traverzo [PR]",
+              "result": "L",
+              "table": 25
+            }
+          }
+        },
+        {
+          "name": "Royer Espinosa [PR]",
+          "placing": 113,
+          "record": {
+            "wins": 1,
+            "losses": 2,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.375,
+            "opp": 0.4375,
+            "oppopp": 0.5053819444444445
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "David Cooper [US]",
+              "result": "L",
+              "table": 50
+            },
+            "2": {
+              "name": "Marissa Antunez-Tapia [US]",
+              "result": "W",
+              "table": 58
+            },
+            "3": {
+              "name": "Jesus Garcia [PR]",
+              "result": "T",
+              "table": 26
+            },
+            "4": {
+              "name": "Braulio Rivera [PR]",
+              "result": "L",
+              "table": 34
+            }
+          }
+        },
+        {
+          "name": "Edward Rivera [PR]",
+          "placing": 114,
+          "record": {
+            "wins": 1,
+            "losses": 6,
+            "ties": 0
+          },
+          "resistances": {
+            "self": 0.25,
+            "opp": 0.42789115646258497,
+            "oppopp": 0.44852931648850014
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Jose Medina [PR]",
+              "result": "L",
+              "table": 23
+            },
+            "2": {
+              "name": "Edwin Rivera [US]",
+              "result": "W",
+              "table": 48
+            },
+            "3": {
+              "name": "James Hart [US]",
+              "result": "L",
+              "table": 34
+            },
+            "4": {
+              "name": "Eliezer Hernandez [PR]",
+              "result": "L",
+              "table": 48
+            },
+            "5": {
+              "name": "Samuel Ruiz [PR]",
+              "result": "L",
+              "table": 48
+            },
+            "6": {
+              "name": "Carlos Pastor [PR]",
+              "result": "L",
+              "table": 45
+            },
+            "7": {
+              "name": "Carlos Rodriguez Conesa [PR]",
+              "result": "L",
+              "table": 44
+            }
+          }
+        },
+        {
+          "name": "Jose Medina [PR]",
+          "placing": 115,
+          "record": {
+            "wins": 1,
+            "losses": 4,
+            "ties": 0
+          },
+          "resistances": {
+            "self": 0.25,
+            "opp": 0.4833333333333334,
+            "oppopp": 0.4766666666666667
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Edward Rivera [PR]",
+              "result": "W",
+              "table": 23
+            },
+            "2": {
+              "name": "Juan Oliveras [PR]",
+              "result": "L",
+              "table": 2
+            },
+            "3": {
+              "name": "Brian Gonzalez Carventes [PR]",
+              "result": "L",
+              "table": 33
+            },
+            "4": {
+              "name": "Prin Basser [US]",
+              "result": "L",
+              "table": 42
+            },
+            "5": {
+              "name": "Christian Ramos [PR]",
+              "result": "L",
+              "table": 50
+            }
+          }
+        },
+        {
+          "name": "Kevin Santiago [PR]",
+          "placing": 116,
+          "record": {
+            "wins": 0,
+            "losses": 2,
+            "ties": 3
+          },
+          "resistances": {
+            "self": 0.3,
+            "opp": 0.45,
+            "oppopp": 0.46950000000000014
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Ismanuel Rivera [PR]",
+              "result": "T",
+              "table": 38
+            },
+            "2": {
+              "name": "Carlos Traverzo [PR]",
+              "result": "L",
+              "table": 27
+            },
+            "3": {
+              "name": "Sylvester Kwon [US]",
+              "result": "L",
+              "table": 46
+            },
+            "4": {
+              "name": "Jose Torres [PR]",
+              "result": "T",
+              "table": 56
+            },
+            "5": {
+              "name": "Dallas White [US]",
+              "result": "T",
+              "table": 54
+            }
+          }
+        },
+        {
+          "name": "Jose Marzan [PR]",
+          "placing": 117,
+          "record": {
+            "wins": 0,
+            "losses": 1,
+            "ties": 3
+          },
+          "resistances": {
+            "self": 0.375,
+            "opp": 0.625,
+            "oppopp": 0.43750000000000006
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Joshua Cohen [AE]",
+              "result": "T",
+              "table": 64
+            },
+            "2": {
+              "name": "Zach Cohen [US]",
+              "result": "T",
+              "table": 33
+            },
+            "3": {
+              "name": "Christian Ramos [PR]",
+              "result": "T",
+              "table": 44
+            },
+            "4": {
+              "name": "Sheldon Kuppan [GB]",
+              "result": "L",
+              "table": 41
+            }
+          }
+        },
+        {
+          "name": "Jeric Vera [PR]",
+          "placing": 118,
+          "record": {
+            "wins": 0,
+            "losses": 1,
+            "ties": 3
+          },
+          "resistances": {
+            "self": 0.375,
+            "opp": 0.5541666666666667,
+            "oppopp": 0.4325
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Jose J Reyes [PR]",
+              "result": "T",
+              "table": 36
+            },
+            "2": {
+              "name": "Carlos Rodil [PR]",
+              "result": "T",
+              "table": 42
+            },
+            "3": {
+              "name": "Tyler Annaert [CA]",
+              "result": "L",
+              "table": 40
+            },
+            "4": {
+              "name": "Christian Ramos [PR]",
+              "result": "T",
+              "table": 50
+            }
+          }
+        },
+        {
+          "name": "Emanuel Hernandez [PR]",
+          "placing": 119,
+          "record": {
+            "wins": 1,
+            "losses": 3,
+            "ties": 0
+          },
+          "resistances": {
+            "self": 0.25,
+            "opp": 0.49444444444444446,
+            "oppopp": 0.4675925925925926
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Carlos Pastor [PR]",
+              "result": "L",
+              "table": 14
+            },
+            "2": {
+              "name": "BYE",
+              "result": "W",
+              "table": 0
+            },
+            "3": {
+              "name": "Connor Finton [US]",
+              "result": "L",
+              "table": 32
+            },
+            "4": {
+              "name": "Bryan Ortiz-Serrano [PR]",
+              "result": "L",
+              "table": 39
+            }
+          }
+        },
+        {
+          "name": "John Díaz [PR]",
+          "placing": 120,
+          "record": {
+            "wins": 1,
+            "losses": 3,
+            "ties": 0
+          },
+          "resistances": {
+            "self": 0.25,
+            "opp": 0.4083333333333333,
+            "oppopp": 0.4618055555555556
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Julio Santos [PR]",
+              "result": "L",
+              "table": 26
+            },
+            "2": {
+              "name": "Bryan Ortiz-Serrano [PR]",
+              "result": "L",
+              "table": 56
+            },
+            "3": {
+              "name": "Edwin Rivera [US]",
+              "result": "W",
+              "table": 61
+            },
+            "4": {
+              "name": "Lesme Flores [PR]",
+              "result": "L",
+              "table": 49
+            }
+          }
+        },
+        {
+          "name": "Paul Vallejo [PR]",
+          "placing": 121,
+          "record": {
+            "wins": 1,
+            "losses": 2,
+            "ties": 0
+          },
+          "resistances": {
+            "self": 0.3333333333333333,
+            "opp": 0.4444444444444445,
+            "oppopp": 0.4412037037037037
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Emmanuel Alicea [PR]",
+              "result": "L",
+              "table": 28
+            },
+            "2": {
+              "name": "Jessica Burke [US]",
+              "result": "W",
+              "table": 49
+            },
+            "3": {
+              "name": "Jose Gonzalez [PR]",
+              "result": "L",
+              "table": 36
+            }
+          }
+        },
+        {
+          "name": "Jose Torres [PR]",
+          "placing": 122,
+          "record": {
+            "wins": 0,
+            "losses": 3,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.25,
+            "opp": 0.51,
+            "oppopp": 0.45777777777777773
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Aidan Khus [US]",
+              "result": "L",
+              "table": 58
+            },
+            "2": {
+              "name": "Eduardo Meléndez [PR]",
+              "result": "L",
+              "table": 61
+            },
+            "3": {
+              "name": "Calvin Yau [US]",
+              "result": "T",
+              "table": 62
+            },
+            "4": {
+              "name": "Kevin Santiago [PR]",
+              "result": "T",
+              "table": 56
+            },
+            "5": {
+              "name": "Richard Fernandez [US]",
+              "result": "L",
+              "table": 53
+            }
+          }
+        },
+        {
+          "name": "Gustavo Miranda [PR]",
+          "placing": 123,
+          "record": {
+            "wins": 0,
+            "losses": 4,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.25,
+            "opp": 0.5333333333333334,
+            "oppopp": 0.5322222222222223
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Eric Ridgeway [AE]",
+              "result": "T",
+              "table": 41
+            },
+            "2": {
+              "name": "Orlando Álvarez [PR]",
+              "result": "L",
+              "table": 26
+            },
+            "3": {
+              "name": "Clayton May [US]",
+              "result": "L",
+              "table": 50
+            },
+            "4": {
+              "name": "Sedrick Serrano [PR]",
+              "result": "L",
+              "table": 53
+            },
+            "5": {
+              "name": "Clifton Dalgard [US]",
+              "result": "L",
+              "table": 57
+            }
+          }
+        },
+        {
+          "name": "Jose Gabriel Gómez Pérez [PR]",
+          "placing": 124,
+          "record": {
+            "wins": 0,
+            "losses": 4,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.25,
+            "opp": 0.44666666666666666,
+            "oppopp": 0.5071111111111111
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Juan Flores [US]",
+              "result": "L",
+              "table": 19
+            },
+            "2": {
+              "name": "Shar Rivera [PR]",
+              "result": "L",
+              "table": 52
+            },
+            "3": {
+              "name": "Tony Santos [US]",
+              "result": "T",
+              "table": 57
+            },
+            "4": {
+              "name": "Joshua Villanueva [PR]",
+              "result": "L",
+              "table": 60
+            },
+            "5": {
+              "name": "Sebasthian Padilla [PR]",
+              "result": "L",
+              "table": 55
+            }
+          }
+        },
+        {
+          "name": "Tony Santos [US]",
+          "placing": 125,
+          "record": {
+            "wins": 0,
+            "losses": 3,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.25,
+            "opp": 0.5208333333333333,
+            "oppopp": 0.49986111111111114
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Jose Carlos Burgos [PR]",
+              "result": "L",
+              "table": 51
+            },
+            "2": {
+              "name": "Connor Finton [US]",
+              "result": "L",
+              "table": 51
+            },
+            "3": {
+              "name": "Jose Gabriel Gómez Pérez [PR]",
+              "result": "T",
+              "table": 57
+            },
+            "4": {
+              "name": "Ricardo Montes [PR]",
+              "result": "L",
+              "table": 54
+            }
+          }
+        },
+        {
+          "name": "Ricardo Rivera [PR]",
+          "placing": 126,
+          "record": {
+            "wins": 0,
+            "losses": 3,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.25,
+            "opp": 0.38333333333333336,
+            "oppopp": 0.46013888888888893
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Christian Solis [PR]",
+              "result": "T",
+              "table": 22
+            },
+            "2": {
+              "name": "Nelson Martinez Guzman [PR]",
+              "result": "L",
+              "table": 38
+            },
+            "3": {
+              "name": "Juan Pereira [PR]",
+              "result": "L",
+              "table": 47
+            },
+            "4": {
+              "name": "Calvin Yau [US]",
+              "result": "L",
+              "table": 55
+            }
+          }
+        },
+        {
+          "name": "Marissa Antunez-Tapia [US]",
+          "placing": 127,
+          "record": {
+            "wins": 0,
+            "losses": 4,
+            "ties": 0
+          },
+          "resistances": {
+            "self": 0.25,
+            "opp": 0.3645833333333333,
+            "oppopp": 0.4288194444444445
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Gabriel Rosa [PR]",
+              "result": "L",
+              "table": 61
+            },
+            "2": {
+              "name": "Royer Espinosa [PR]",
+              "result": "L",
+              "table": 58
+            },
+            "3": {
+              "name": "Nathan Brower [US]",
+              "result": "L",
+              "table": 58
+            },
+            "4": {
+              "name": "Edwin Rivera [US]",
+              "result": "L",
+              "table": 63
+            }
+          }
+        }
+      ]
+    },
+    {
+      "division": "seniors",
+      "data": [
+        {
+          "name": "Sebastian Lashmet [US]",
+          "placing": 1,
+          "record": {
+            "wins": 5,
+            "losses": 0,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.25,
+            "opp": 0.25,
+            "oppopp": 0.25
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Tristan Tse [CA]",
+              "result": "T",
+              "table": 6
+            },
+            "2": {
+              "name": "Owen Dalgard [US]",
+              "result": "W",
+              "table": 5
+            },
+            "3": {
+              "name": "Krystian Rivera Luciano [PR]",
+              "result": "W",
+              "table": 1
+            },
+            "4": {
+              "name": "Nathan Osterkatz [US]",
+              "result": "T",
+              "table": 1
+            },
+            "5": {
+              "name": "Justin Templer [US]",
+              "result": "W",
+              "table": 1
+            },
+            "6": {
+              "name": "Justin Templer [US]",
+              "result": "W",
+              "table": 2
+            },
+            "7": {
+              "name": "Nathan Osterkatz [US]",
+              "result": "W",
+              "table": 1
+            }
+          }
+        },
+        {
+          "name": "Nathan Osterkatz [US]",
+          "placing": 2,
+          "record": {
+            "wins": 4,
+            "losses": 1,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.25,
+            "opp": 0.25,
+            "oppopp": 0.25
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Emmett Beirne [US]",
+              "result": "W",
+              "table": 4
+            },
+            "2": {
+              "name": "Justin Templer [US]",
+              "result": "T",
+              "table": 2
+            },
+            "3": {
+              "name": "Carson Washer [US]",
+              "result": "W",
+              "table": 2
+            },
+            "4": {
+              "name": "Sebastian Lashmet [US]",
+              "result": "T",
+              "table": 1
+            },
+            "5": {
+              "name": "Pedro Cavalcanti [BR]",
+              "result": "W",
+              "table": 2
+            },
+            "6": {
+              "name": "Carson Washer [US]",
+              "result": "W",
+              "table": 1
+            },
+            "7": {
+              "name": "Sebastian Lashmet [US]",
+              "result": "L",
+              "table": 1
+            }
+          }
+        },
+        {
+          "name": "Justin Templer [US]",
+          "placing": 3,
+          "record": {
+            "wins": 3,
+            "losses": 2,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.25,
+            "opp": 0.25,
+            "oppopp": 0.25
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Ziyao Qu [US]",
+              "result": "W",
+              "table": 5
+            },
+            "2": {
+              "name": "Nathan Osterkatz [US]",
+              "result": "T",
+              "table": 2
+            },
+            "3": {
+              "name": "Michael Zheng [US]",
+              "result": "W",
+              "table": 3
+            },
+            "4": {
+              "name": "Krystian Rivera Luciano [PR]",
+              "result": "W",
+              "table": 2
+            },
+            "5": {
+              "name": "Sebastian Lashmet [US]",
+              "result": "L",
+              "table": 1
+            },
+            "6": {
+              "name": "Sebastian Lashmet [US]",
+              "result": "L",
+              "table": 2
+            }
+          }
+        },
+        {
+          "name": "Carson Washer [US]",
+          "placing": 4,
+          "record": {
+            "wins": 3,
+            "losses": 2,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.25,
+            "opp": 0.25,
+            "oppopp": 0.25
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Pedro Cavalcanti [BR]",
+              "result": "T",
+              "table": 8
+            },
+            "2": {
+              "name": "Gabriel Rodriguez [US]",
+              "result": "W",
+              "table": 3
+            },
+            "3": {
+              "name": "Nathan Osterkatz [US]",
+              "result": "L",
+              "table": 2
+            },
+            "4": {
+              "name": "Emmett Beirne [US]",
+              "result": "W",
+              "table": 5
+            },
+            "5": {
+              "name": "Ziyao Qu [US]",
+              "result": "W",
+              "table": 3
+            },
+            "6": {
+              "name": "Nathan Osterkatz [US]",
+              "result": "L",
+              "table": 1
+            }
+          }
+        },
+        {
+          "name": "Michael Zheng [US]",
+          "placing": 5,
+          "record": {
+            "wins": 3,
+            "losses": 2,
+            "ties": 0
+          },
+          "resistances": {
+            "self": 0.6,
+            "opp": 0.49000000000000005,
+            "oppopp": 0.5277499999999999
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Cerys Jones [US]",
+              "result": "W",
+              "table": 9
+            },
+            "2": {
+              "name": "Krystian Rivera Luciano [PR]",
+              "result": "L",
+              "table": 1
+            },
+            "3": {
+              "name": "Justin Templer [US]",
+              "result": "L",
+              "table": 3
+            },
+            "4": {
+              "name": "Diego Arce [PR]",
+              "result": "W",
+              "table": 7
+            },
+            "5": {
+              "name": "Michael Davidson [US]",
+              "result": "W",
+              "table": 5
+            }
+          }
+        },
+        {
+          "name": "Cerys Jones [US]",
+          "placing": 6,
+          "record": {
+            "wins": 3,
+            "losses": 2,
+            "ties": 0
+          },
+          "resistances": {
+            "self": 0.6,
+            "opp": 0.425,
+            "oppopp": 0.52675
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Michael Zheng [US]",
+              "result": "L",
+              "table": 9
+            },
+            "2": {
+              "name": "Tristan Tse [CA]",
+              "result": "W",
+              "table": 6
+            },
+            "3": {
+              "name": "Michael Davidson [US]",
+              "result": "L",
+              "table": 5
+            },
+            "4": {
+              "name": "Gabriel Rodriguez [US]",
+              "result": "W",
+              "table": 6
+            },
+            "5": {
+              "name": "Krystian Rivera Luciano [PR]",
+              "result": "W",
+              "table": 4
+            }
+          }
+        },
+        {
+          "name": "Pedro Cavalcanti [BR]",
+          "placing": 7,
+          "record": {
+            "wins": 2,
+            "losses": 1,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.6,
+            "opp": 0.525,
+            "oppopp": 0.55625
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Carson Washer [US]",
+              "result": "T",
+              "table": 8
+            },
+            "2": {
+              "name": "Michael Davidson [US]",
+              "result": "T",
+              "table": 4
+            },
+            "3": {
+              "name": "Emmett Beirne [US]",
+              "result": "W",
+              "table": 6
+            },
+            "4": {
+              "name": "Owen Dalgard [US]",
+              "result": "W",
+              "table": 4
+            },
+            "5": {
+              "name": "Nathan Osterkatz [US]",
+              "result": "L",
+              "table": 2
+            }
+          }
+        },
+        {
+          "name": "Owen Dalgard [US]",
+          "placing": 8,
+          "record": {
+            "wins": 2,
+            "losses": 2,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.375,
+            "opp": 0.56875,
+            "oppopp": 0.5240625
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Michael Davidson [US]",
+              "result": "T",
+              "table": 7
+            },
+            "2": {
+              "name": "Sebastian Lashmet [US]",
+              "result": "L",
+              "table": 5
+            },
+            "3": {
+              "name": "Tristan Tse [CA]",
+              "result": "W",
+              "table": 7
+            },
+            "4": {
+              "name": "Pedro Cavalcanti [BR]",
+              "result": "L",
+              "table": 4
+            },
+            "5": {
+              "name": "BYE",
+              "result": "W",
+              "table": 0
+            }
+          }
+        },
+        {
+          "name": "Tristan Tse [CA]",
+          "placing": 9,
+          "record": {
+            "wins": 2,
+            "losses": 2,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.375,
+            "opp": 0.50625,
+            "oppopp": 0.49812500000000004
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Sebastian Lashmet [US]",
+              "result": "T",
+              "table": 6
+            },
+            "2": {
+              "name": "Cerys Jones [US]",
+              "result": "L",
+              "table": 6
+            },
+            "3": {
+              "name": "Owen Dalgard [US]",
+              "result": "L",
+              "table": 7
+            },
+            "4": {
+              "name": "BYE",
+              "result": "W",
+              "table": 0
+            },
+            "5": {
+              "name": "Diego Arce [PR]",
+              "result": "W",
+              "table": 6
+            }
+          }
+        },
+        {
+          "name": "Ziyao Qu [US]",
+          "placing": 10,
+          "record": {
+            "wins": 2,
+            "losses": 2,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.5,
+            "opp": 0.48,
+            "oppopp": 0.52325
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Justin Templer [US]",
+              "result": "L",
+              "table": 5
+            },
+            "2": {
+              "name": "Diego Arce [PR]",
+              "result": "W",
+              "table": 7
+            },
+            "3": {
+              "name": "Gabriel Rodriguez [US]",
+              "result": "W",
+              "table": 4
+            },
+            "4": {
+              "name": "Michael Davidson [US]",
+              "result": "T",
+              "table": 3
+            },
+            "5": {
+              "name": "Carson Washer [US]",
+              "result": "L",
+              "table": 3
+            }
+          }
+        },
+        {
+          "name": "Krystian Rivera Luciano [PR]",
+          "placing": 11,
+          "record": {
+            "wins": 2,
+            "losses": 3,
+            "ties": 0
+          },
+          "resistances": {
+            "self": 0.4,
+            "opp": 0.59,
+            "oppopp": 0.5067499999999999
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Diego Arce [PR]",
+              "result": "W",
+              "table": 10
+            },
+            "2": {
+              "name": "Michael Zheng [US]",
+              "result": "W",
+              "table": 1
+            },
+            "3": {
+              "name": "Sebastian Lashmet [US]",
+              "result": "L",
+              "table": 1
+            },
+            "4": {
+              "name": "Justin Templer [US]",
+              "result": "L",
+              "table": 2
+            },
+            "5": {
+              "name": "Cerys Jones [US]",
+              "result": "L",
+              "table": 4
+            }
+          }
+        },
+        {
+          "name": "Michael Davidson [US]",
+          "placing": 12,
+          "record": {
+            "wins": 1,
+            "losses": 1,
+            "ties": 3
+          },
+          "resistances": {
+            "self": 0.5,
+            "opp": 0.535,
+            "oppopp": 0.49775
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Owen Dalgard [US]",
+              "result": "T",
+              "table": 7
+            },
+            "2": {
+              "name": "Pedro Cavalcanti [BR]",
+              "result": "T",
+              "table": 4
+            },
+            "3": {
+              "name": "Cerys Jones [US]",
+              "result": "W",
+              "table": 5
+            },
+            "4": {
+              "name": "Ziyao Qu [US]",
+              "result": "T",
+              "table": 3
+            },
+            "5": {
+              "name": "Michael Zheng [US]",
+              "result": "L",
+              "table": 5
+            }
+          }
+        },
+        {
+          "name": "Gabriel Rodriguez [US]",
+          "placing": 13,
+          "record": {
+            "wins": 2,
+            "losses": 3,
+            "ties": 0
+          },
+          "resistances": {
+            "self": 0.25,
+            "opp": 0.5125,
+            "oppopp": 0.493125
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "BYE",
+              "result": "W",
+              "table": 0
+            },
+            "2": {
+              "name": "Carson Washer [US]",
+              "result": "L",
+              "table": 3
+            },
+            "3": {
+              "name": "Ziyao Qu [US]",
+              "result": "L",
+              "table": 4
+            },
+            "4": {
+              "name": "Cerys Jones [US]",
+              "result": "L",
+              "table": 6
+            },
+            "5": {
+              "name": "Emmett Beirne [US]",
+              "result": "W",
+              "table": 7
+            }
+          }
+        },
+        {
+          "name": "Emmett Beirne [US]",
+          "placing": 14,
+          "record": {
+            "wins": 1,
+            "losses": 4,
+            "ties": 0
+          },
+          "resistances": {
+            "self": 0.25,
+            "opp": 0.5874999999999999,
+            "oppopp": 0.5318750000000001
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Nathan Osterkatz [US]",
+              "result": "L",
+              "table": 4
+            },
+            "2": {
+              "name": "BYE",
+              "result": "W",
+              "table": 0
+            },
+            "3": {
+              "name": "Pedro Cavalcanti [BR]",
+              "result": "L",
+              "table": 6
+            },
+            "4": {
+              "name": "Carson Washer [US]",
+              "result": "L",
+              "table": 5
+            },
+            "5": {
+              "name": "Gabriel Rodriguez [US]",
+              "result": "L",
+              "table": 7
+            }
+          }
+        },
+        {
+          "name": "Diego Arce [PR]",
+          "placing": 15,
+          "record": {
+            "wins": 1,
+            "losses": 4,
+            "ties": 0
+          },
+          "resistances": {
+            "self": 0.25,
+            "opp": 0.46875,
+            "oppopp": 0.5165624999999999
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Krystian Rivera Luciano [PR]",
+              "result": "L",
+              "table": 10
+            },
+            "2": {
+              "name": "Ziyao Qu [US]",
+              "result": "L",
+              "table": 7
+            },
+            "3": {
+              "name": "BYE",
+              "result": "W",
+              "table": 0
+            },
+            "4": {
+              "name": "Michael Zheng [US]",
+              "result": "L",
+              "table": 7
+            },
+            "5": {
+              "name": "Tristan Tse [CA]",
+              "result": "L",
+              "table": 6
+            }
+          }
+        }
+      ]
+    },
+    {
+      "division": "juniors",
+      "data": [
+        {
+          "name": "Landon Nixon [US]",
+          "placing": 1,
+          "record": {
+            "wins": 2,
+            "losses": 0,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.8333333333333334,
+            "opp": 0.4444444444444444,
+            "oppopp": 0.6851851851851852
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Ayden Smith [US]",
+              "result": "W",
+              "table": 1
+            },
+            "2": {
+              "name": "Jaime Osterkatz [US]",
+              "result": "T",
+              "table": 1
+            },
+            "3": {
+              "name": "Lukas Tapia [US]",
+              "result": "W",
+              "table": 2
+            }
+          }
+        },
+        {
+          "name": "Omar Cortes [US]",
+          "placing": 2,
+          "record": {
+            "wins": 2,
+            "losses": 0,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.8333333333333334,
+            "opp": 0.38888888888888884,
+            "oppopp": 0.6666666666666666
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Lukas Tapia [US]",
+              "result": "W",
+              "table": 2
+            },
+            "2": {
+              "name": "João Artur Medeiros De Franca [BR]",
+              "result": "W",
+              "table": 2
+            },
+            "3": {
+              "name": "Jaime Osterkatz [US]",
+              "result": "T",
+              "table": 1
+            }
+          }
+        },
+        {
+          "name": "Ayden Smith [US]",
+          "placing": 3,
+          "record": {
+            "wins": 2,
+            "losses": 1,
+            "ties": 0
+          },
+          "resistances": {
+            "self": 0.5,
+            "opp": 0.5833333333333334,
+            "oppopp": 0.4861111111111111
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Landon Nixon [US]",
+              "result": "L",
+              "table": 1
+            },
+            "2": {
+              "name": "BYE",
+              "result": "W",
+              "table": 0
+            },
+            "3": {
+              "name": "João Artur Medeiros De Franca [BR]",
+              "result": "W",
+              "table": 3
+            }
+          }
+        },
+        {
+          "name": "Jaime Osterkatz [US]",
+          "placing": 4,
+          "record": {
+            "wins": 1,
+            "losses": 0,
+            "ties": 2
+          },
+          "resistances": {
+            "self": 0.5,
+            "opp": 0.8333333333333334,
+            "oppopp": 0.41666666666666663
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "BYE",
+              "result": "W",
+              "table": 0
+            },
+            "2": {
+              "name": "Landon Nixon [US]",
+              "result": "T",
+              "table": 1
+            },
+            "3": {
+              "name": "Omar Cortes [US]",
+              "result": "T",
+              "table": 1
+            }
+          }
+        },
+        {
+          "name": "Lukas Tapia [US]",
+          "placing": 5,
+          "record": {
+            "wins": 1,
+            "losses": 2,
+            "ties": 0
+          },
+          "resistances": {
+            "self": 0.3333333333333333,
+            "opp": 0.638888888888889,
+            "oppopp": 0.38888888888888884
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Omar Cortes [US]",
+              "result": "L",
+              "table": 2
+            },
+            "2": {
+              "name": "Arthur Silva [BR]",
+              "result": "W",
+              "table": 3
+            },
+            "3": {
+              "name": "Landon Nixon [US]",
+              "result": "L",
+              "table": 2
+            }
+          }
+        },
+        {
+          "name": "João Artur Medeiros De Franca [BR]",
+          "placing": 6,
+          "record": {
+            "wins": 1,
+            "losses": 2,
+            "ties": 0
+          },
+          "resistances": {
+            "self": 0.3333333333333333,
+            "opp": 0.5277777777777778,
+            "oppopp": 0.4351851851851851
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Arthur Silva [BR]",
+              "result": "W",
+              "table": 3
+            },
+            "2": {
+              "name": "Omar Cortes [US]",
+              "result": "L",
+              "table": 2
+            },
+            "3": {
+              "name": "Ayden Smith [US]",
+              "result": "L",
+              "table": 3
+            }
+          }
+        },
+        {
+          "name": "Arthur Silva [BR]",
+          "placing": 7,
+          "record": {
+            "wins": 1,
+            "losses": 2,
+            "ties": 0
+          },
+          "resistances": {
+            "self": 0.25,
+            "opp": 0.3333333333333333,
+            "oppopp": 0.5833333333333334
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "João Artur Medeiros De Franca [BR]",
+              "result": "L",
+              "table": 3
+            },
+            "2": {
+              "name": "Lukas Tapia [US]",
+              "result": "L",
+              "table": 3
+            },
+            "3": {
+              "name": "BYE",
+              "result": "W",
+              "table": 0
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
