@@ -139,7 +139,7 @@ export const Worlds2024 = () => {
                   <p>Currently in round {currentRound}</p>
                 </div>
 
-                <div className="grid grid-cols-4 gap-4 items-baseline">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 items-baseline">
                   {division.data.map((player: any) => {
                     return (
                       <PlayerInfo
