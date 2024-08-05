@@ -9,7 +9,6 @@ import type { LoaderFunctionArgs } from 'react-router-dom';
 export const tournamentLoader =
   () =>
   async ({ params }: LoaderFunctionArgs) => {
-    console.log('here');
     if (!params.tournamentId) {
       throw new Error('No tournamentId provided');
     }

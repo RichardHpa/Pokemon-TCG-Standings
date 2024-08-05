@@ -2,12 +2,14 @@ import { useQuery, useQueryClient } from '@tanstack/react-query';
 
 import { getPokeDataTournament } from 'api/getTournament';
 
-import { baseTournamentKey } from 'queries/useGetTournaments';
+import { getGetTournamentKey } from 'queries/useGetTournament';
 import { getTournamentStandingsKey } from 'queries/useGetTournamentStandings';
 
-export const getGetTournamentKey = (tournamentId: string) => [...baseTournamentKey, tournamentId];
+import type { UseGetPlayersByCountry } from './types';
 
-export const useGetTournament = (tournamentId: string) => {
+const order = ['Masters', 'Seniors', 'Juniors'];
+
+export const useGetPlayersByCountry = ({ tournamentId, country }: UseGetPlayersByCountry) => {
   const queryClient = useQueryClient();
   return useQuery({
     queryKey: getGetTournamentKey(tournamentId),
@@ -26,7 +28,19 @@ export const useGetTournament = (tournamentId: string) => {
     },
     staleTime: 60 * 10 * 1000,
     select: data => {
-      return data.tournament;
+      const divisions = data.tournament_data;
+
+      divisions.forEach((division: any) => {
+        division.data = division.data.filter((player: any) => player.name.includes(`[${country}]`));
+      });
+
+      const orderedData = divisions.sort(
+        (a: any, b: any) => order.indexOf(a.division) - order.indexOf(b.division)
+      );
+      return {
+        tournament: data.tournament,
+        divisions: orderedData,
+      };
     },
   });
 };
