@@ -1,1 +1,1 @@
-export { RoundsTable } from './RoundsTable';
+export { RoundsTable, RoundRow } from './RoundsTable';

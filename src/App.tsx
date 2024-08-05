@@ -12,6 +12,7 @@ import { Tournaments } from 'pages/Tournaments';
 import { Tournament, TournamentOutlet } from 'pages/Tournament';
 import { Player } from 'pages/Player';
 import { Division } from 'pages/Tournament/Division';
+import { Worlds2024 } from 'pages/Worlds';
 
 import { Images } from 'pages/images/Images';
 
@@ -67,6 +68,10 @@ const router = createBrowserRouter([
       {
         path: 'about',
         element: <About />,
+      },
+      {
+        path: 'worlds-2024',
+        element: <Worlds2024 />,
       },
       {
         path: 'tournaments',

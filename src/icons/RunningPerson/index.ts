@@ -1,0 +1,1 @@
+export { RunningPersonIcon } from './RunningPerson';
