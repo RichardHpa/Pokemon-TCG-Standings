@@ -39,7 +39,6 @@ const PlayerInfo = ({
     setShowAllRounds(prev => !prev);
   }, []);
 
-  console.log(player);
   return (
     <Card key={player.name} growHeight={false}>
       <div className="flex flex-col gap-2">
@@ -128,12 +127,11 @@ export const Worlds2024 = () => {
       {!isLoading && data && (
         <div className="flex flex-col gap-8">
           {data.divisions.map((division: any) => {
-            console.log(division.data[0].rounds);
             const maxRoundNum = Object.keys(division.data[0].rounds);
             const currentRound = maxRoundNum[maxRoundNum.length - 1];
             return (
               <div key={division.division} className="">
-                <div className="mb-8">
+                <div className="mb-8 text-center">
                   <Heading level="2" className="">
                     {uppercaseFirstLetter(division.division)}
                   </Heading>
