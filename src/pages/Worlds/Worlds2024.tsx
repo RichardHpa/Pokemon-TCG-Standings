@@ -1,6 +1,6 @@
-import { useState, useCallback, useMemo } from 'react';
+import { useMemo } from 'react';
 import { LoaderFunctionArgs, useLoaderData } from 'react-router-dom';
-import { ArrowRightIcon, ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/24/solid';
+import { ArrowRightIcon } from '@heroicons/react/24/solid';
 import { Link } from 'react-router-dom';
 import clsx from 'clsx';
 import { getCountryData, TCountryCode } from 'countries-list';
@@ -12,8 +12,9 @@ import { Heading } from 'components/Heading';
 import { LoadingPokeball } from 'components/LoadingPokeball';
 import { Card } from 'components/Card';
 import { PlayerRecord } from 'components/PlayerRecord';
-import { RoundsTable, RoundRow } from 'components/RoundsTable';
+import { RoundRow } from 'components/RoundsTable';
 import { IconButton } from 'components/Button/IconButton';
+import { NOT_STARTED } from 'constants/tournament';
 
 import { uppercaseFirstLetter } from 'utils/uppercaseFirstLetter';
 import { removeCountryFromName } from 'utils/removeCountryFromName';
@@ -33,18 +34,12 @@ const PlayerInfo = ({
   tournamentId: string;
   division: Division;
 }) => {
-  const [showAllRounds, setShowAllRounds] = useState(false);
-
   const allRounds = Object.keys(player.rounds);
   const maxRound = allRounds[allRounds.length - 1];
   const currentRound = player.rounds[maxRound];
 
-  const handleShowAllRounds = useCallback(() => {
-    setShowAllRounds(prev => !prev);
-  }, []);
-
   return (
-    <Card key={player.name} growHeight={false}>
+    <Card key={player.name}>
       <div className="flex flex-col gap-2">
         <div
           className={clsx('flex items-center', {
@@ -77,33 +72,45 @@ const PlayerInfo = ({
             </h5>
             <PlayerRecord record={player.record} />
           </div>
-          <div className="w-full">
-            {showAllRounds ? (
-              <RoundsTable rounds={player.rounds} />
-            ) : (
-              <>
-                <p className="mb-1 text-xs italic text-gray-500 truncate dark:text-gray-400">
-                  Latest Round:
-                </p>
-                <ul className="border-y-2 border-gray-200 dark:border-gray-700">
-                  <RoundRow round={currentRound} roundNum={maxRound} />
-                </ul>
-              </>
-            )}
-          </div>
-        </div>
-        <div className="flex justify-end">
-          <IconButton
-            icon={showAllRounds ? <ChevronUpIcon /> : <ChevronDownIcon />}
-            alt="View more rounds"
-            variant="text"
-            color="grey"
-            rounded={false}
-            onClick={handleShowAllRounds}
-          />
+          {allRounds && allRounds.length > 0 && (
+            <div className="w-full">
+              <p className="mb-1 text-xs italic text-gray-500 truncate dark:text-gray-400">
+                Latest Round:
+              </p>
+              <ul className="border-y-2 border-gray-200 dark:border-gray-700">
+                <RoundRow round={currentRound} roundNum={maxRound} />
+              </ul>
+            </div>
+          )}
         </div>
       </div>
     </Card>
+  );
+};
+
+const useGetEarlyPlayersByCountry = (country: string) => {
+  const players = initialWorldsPlayers.filter(player => player.Country === country);
+  return players;
+};
+
+const InitialPlayers = ({ country }: { country: string }) => {
+  const players = useGetEarlyPlayersByCountry(country);
+  return (
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 items-baseline">
+      {players.map((player: any) => {
+        return (
+          <Card>
+            <div className="flex flex-col gap-2">
+              <div className="text-center w-full">
+                <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white items-center truncate">
+                  {player.FirstName} {player.LastName}
+                </h5>
+              </div>
+            </div>
+          </Card>
+        );
+      })}
+    </div>
   );
 };
 
@@ -151,34 +158,40 @@ export const Worlds2024 = () => {
 
       {!isLoading && data && (
         <div className="flex flex-col gap-8">
-          {data.divisions.map((division: any) => {
-            const maxRoundNum = Object.keys(division.data[0].rounds);
-            const currentRound = maxRoundNum[maxRoundNum.length - 1];
-            return (
-              <div key={division.division} className="">
-                <div className="mb-8 text-center">
-                  <Heading level="2" className="">
-                    {uppercaseFirstLetter(division.division)}
-                  </Heading>
+          {data.tournament.tournamentStatus === NOT_STARTED ? (
+            <InitialPlayers country={country} />
+          ) : (
+            <>
+              {data.divisions.map((division: any) => {
+                const maxRoundNum = Object.keys(division.data[0].rounds);
+                const currentRound = maxRoundNum[maxRoundNum.length - 1];
+                return (
+                  <div key={division.division} className="">
+                    <div className="mb-8 text-center">
+                      <Heading level="2" className="">
+                        {uppercaseFirstLetter(division.division)}
+                      </Heading>
 
-                  <p>Currently in round {currentRound}</p>
-                </div>
+                      <p>Currently in round {currentRound}</p>
+                    </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 items-baseline">
-                  {division.data.map((player: any) => {
-                    return (
-                      <PlayerInfo
-                        key={player.name}
-                        player={player}
-                        division={division.division}
-                        tournamentId={tournamentId}
-                      />
-                    );
-                  })}
-                </div>
-              </div>
-            );
-          })}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 items-baseline">
+                      {division.data.map((player: any) => {
+                        return (
+                          <PlayerInfo
+                            key={player.name}
+                            player={player}
+                            division={division.division}
+                            tournamentId={tournamentId}
+                          />
+                        );
+                      })}
+                    </div>
+                  </div>
+                );
+              })}
+            </>
+          )}
         </div>
       )}
     </div>

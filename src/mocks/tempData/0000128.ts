@@ -1,4 +1,13 @@
-export const initialWorldsPlayers = [
+interface IWorldsPlayers {
+  FirstName: string;
+  LastName: string;
+  AgeDivision: string;
+  Game: string;
+  Country: string;
+  UNITETeam: string;
+}
+
+export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Dennis',
     LastName: 'Piay',
