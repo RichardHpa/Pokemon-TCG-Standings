@@ -1,7 +1,9 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useMemo } from 'react';
+import { LoaderFunctionArgs, useLoaderData } from 'react-router-dom';
 import { ArrowRightIcon, ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/24/solid';
 import { Link } from 'react-router-dom';
 import clsx from 'clsx';
+import { getCountryData, TCountryCode } from 'countries-list';
 
 import WorldsLogo from 'images/wc24-key-art-2x.webp';
 import { RunningPersonIcon } from 'icons/RunningPerson';
@@ -19,6 +21,8 @@ import { removeCountryFromName } from 'utils/removeCountryFromName';
 import { useGetPlayersByCountry } from 'hooks/useGetPlayersByCountry';
 
 import type { Division } from 'types/tournament';
+
+import { initialWorldsPlayers } from 'mocks/tempData/0000128';
 
 const PlayerInfo = ({
   player,
@@ -102,9 +106,30 @@ const PlayerInfo = ({
     </Card>
   );
 };
+
+export const worldsLoader = ({ params }: LoaderFunctionArgs) => {
+  const { country } = params as { country: string };
+  if (!country) {
+    throw new Error('Country not found');
+  }
+
+  return {
+    country: country.toUpperCase(),
+  };
+};
+
 const tournamentId = '0000109';
 export const Worlds2024 = () => {
-  const { data, isLoading } = useGetPlayersByCountry({ tournamentId, country: 'NZ' });
+  const { country } = useLoaderData() as { country: string };
+
+  const { data, isLoading } = useGetPlayersByCountry({
+    tournamentId,
+    country: country.toUpperCase(),
+  });
+
+  const countryData = useMemo(() => {
+    return getCountryData(country.toUpperCase() as TCountryCode);
+  }, [country]);
 
   return (
     <div className="flex flex-col gap-4">
@@ -113,8 +138,8 @@ export const Worlds2024 = () => {
         <Heading>Pokemon Worlds 2024</Heading>
 
         <p>
-          Follow our New Zealand players as they compete in the Pokemon World Championships 2024 in
-          Honolulu Hawaii.
+          Follow {countryData.name} players as they compete in the Pokemon World Championships 2024
+          in Honolulu Hawaii.
         </p>
       </div>
 
@@ -139,7 +164,7 @@ export const Worlds2024 = () => {
                   <p>Currently in round {currentRound}</p>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 items-baseline">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 items-baseline">
                   {division.data.map((player: any) => {
                     return (
                       <PlayerInfo

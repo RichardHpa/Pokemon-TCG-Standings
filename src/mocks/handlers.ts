@@ -2,6 +2,8 @@ import { http, HttpResponse, passthrough } from 'msw';
 
 import { tournamentsUrl, basePokeDataUrl } from '../constants/api';
 
+// import { initialWorldsPlayers } from './tempData/0000128';
+
 export const handlers = [
   http.get(tournamentsUrl, () => {
     passthrough();
@@ -25,6 +27,11 @@ export const handlers = [
       });
 
     if (result) {
+      // if (tournamentId === '0000128') {
+      //   if (result.tournament.tournamentStatus === 'not-started') {
+      //     return HttpResponse.json(initialWorldsPlayers);
+      //   }
+      // }
       return HttpResponse.json(result);
     }
 
