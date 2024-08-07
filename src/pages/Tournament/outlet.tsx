@@ -5,6 +5,7 @@ import { Indicator } from 'components/Indicator';
 import { Tabs, NavTab } from 'components/Tabs';
 
 import { RUNNING } from 'constants/tournament';
+import { tournaments } from 'constants/tournaments';
 
 import { useGetTournament } from 'queries/useGetTournament';
 
@@ -28,19 +29,32 @@ export const TournamentOutlet = () => {
 
   return (
     <div className="flex flex-col gap-4 flex-grow">
-      <div className="flex justify-between">
-        <div className="mb-4">
-          <Link to={`/tournaments/${tournamentId}`}>
-            <Heading level="3" className="hover:underline cursor-pointer">
-              {tournament.name}
-            </Heading>
-          </Link>
+      <div className="flex justify-between mb-4">
+        <div className="grid sm:grid-cols-[auto_auto] place-content-start gap-4">
+          {tournaments[tournamentId] && (
+            <div className="hidden sm:block">
+              <img
+                src={tournaments[tournamentId].logo}
+                alt={tournament.name}
+                className="h-0 min-h-full object-contain"
+              />
+            </div>
+          )}
 
-          <p className="text-gray-500 dark:text-gray-400">
-            {formatDate(tournament.date.start, 'MMMM d, yyyy')} -{' '}
-            {formatDate(tournament.date.end, 'MMMM d, yyyy')}
-          </p>
+          <div>
+            <Link to={`/tournaments/${tournamentId}`}>
+              <Heading level="3" className="hover:underline cursor-pointer">
+                {tournament.name}
+              </Heading>
+            </Link>
+
+            <p className="text-gray-500 dark:text-gray-400">
+              {formatDate(tournament.date.start, 'MMMM d, yyyy')} -{' '}
+              {formatDate(tournament.date.end, 'MMMM d, yyyy')}
+            </p>
+          </div>
         </div>
+
         {tournament.tournamentStatus === RUNNING && <Indicator />}
       </div>
 
