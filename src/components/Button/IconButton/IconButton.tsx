@@ -13,6 +13,7 @@ export const IconButton: FC<IconButtonProps> = ({
   color = 'primary',
   variant = 'outlined',
   disabled = false,
+  rounded = true,
   size = 'base',
   ...props
 }) => {
@@ -29,7 +30,11 @@ export const IconButton: FC<IconButtonProps> = ({
         buttonClasses.variant[variant].base,
         buttonClasses.variant[variant][color].light,
         buttonClasses.variant[variant][color].dark,
-        { [buttonClasses.disabled]: disabled }
+        { [buttonClasses.disabled]: disabled },
+        {
+          [iconButtonClasses.rounded.true]: rounded,
+          [iconButtonClasses.rounded.false]: !rounded,
+        }
       )}
       disabled={disabled}
       {...props}

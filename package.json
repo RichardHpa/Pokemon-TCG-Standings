@@ -9,6 +9,7 @@
     "aws-amplify": "^6.2.0",
     "axios": "^1.6.8",
     "clsx": "^2.1.0",
+    "countries-list": "^3.1.1",
     "date-fns": "^3.6.0",
     "flowbite": "^2.3.0",
     "flowbite-react": "^0.8.0",
