@@ -13,10 +13,11 @@ export const IconButton: FC<IconButtonProps> = ({
   color = 'primary',
   variant = 'outlined',
   disabled = false,
+  size = 'base',
   ...props
 }) => {
   const RenderedIcon = cloneElement(icon, {
-    className: iconButtonClasses.icon,
+    className: clsx(iconButtonClasses.icon.base, iconButtonClasses.icon.size[size]),
   });
 
   return (
@@ -24,6 +25,7 @@ export const IconButton: FC<IconButtonProps> = ({
       type="button"
       className={clsx(
         iconButtonClasses.base,
+        iconButtonClasses.size[size],
         buttonClasses.variant[variant].base,
         buttonClasses.variant[variant][color].light,
         buttonClasses.variant[variant][color].dark,
