@@ -15,6 +15,7 @@ import { calculatePoints } from 'utils/calculatePoints';
 import { getPokedataStandings } from 'api/getPokedataStandings';
 
 import { useGetPlayerInfo } from 'hooks/useGetPlayer';
+import { useResponsive } from 'hooks/useResponsive';
 import { useGetTournamentStandings } from 'queries/useGetTournamentStandings';
 
 import type { FC } from 'react';
@@ -28,6 +29,8 @@ interface PlayerInfoProps {
 
 const PlayerInfo: FC<PlayerInfoProps> = ({ tournamentId, playerName, division }) => {
   const { data, isLoading, isError } = useGetPlayerInfo({ tournamentId, division, playerName });
+  const values = useResponsive();
+  console.log(values);
   const {
     data: standingsData,
     isLoading: isStandingsLoading,
@@ -106,7 +109,7 @@ const PlayerInfo: FC<PlayerInfoProps> = ({ tournamentId, playerName, division })
               allowReset
               division={division}
               hideArchetypes
-              fixedContainerHeight
+              fixedContainerHeight={!values.lg ? false : true}
             />
           </div>
         </div>
