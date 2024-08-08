@@ -30,7 +30,7 @@ interface PlayerInfoProps {
 const PlayerInfo: FC<PlayerInfoProps> = ({ tournamentId, playerName, division }) => {
   const { data, isLoading, isError } = useGetPlayerInfo({ tournamentId, division, playerName });
   const values = useResponsive();
-  console.log(values);
+
   const {
     data: standingsData,
     isLoading: isStandingsLoading,

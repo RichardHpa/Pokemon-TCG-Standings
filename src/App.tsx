@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { Outlet, createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { Outlet, createBrowserRouter, RouterProvider, ScrollRestoration } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { ErrorBoundary } from 'react-error-boundary';
@@ -12,7 +12,7 @@ import { Tournaments } from 'pages/Tournaments';
 import { Tournament, TournamentOutlet } from 'pages/Tournament';
 import { Player } from 'pages/Player';
 import { Division } from 'pages/Tournament/Division';
-import { Worlds2024 } from 'pages/Worlds';
+import { Worlds2024, worldsLoader } from 'pages/Worlds';
 
 import { Images } from 'pages/images/Images';
 
@@ -43,6 +43,7 @@ const Layout = () => {
       <div className="container mx-auto py-12 px-4 flex flex-col flex-grow">
         <Outlet />
       </div>
+      <ScrollRestoration />
     </div>
   );
 };
@@ -69,8 +70,13 @@ const router = createBrowserRouter([
         path: 'about',
         element: <About />,
       },
+      // {
+      //   path: 'worlds',
+      //   element: <Worlds2024 />,
+      // },
       {
-        path: 'worlds-2024',
+        path: 'worlds-2024/:country',
+        loader: worldsLoader,
         element: <Worlds2024 />,
       },
       {
