@@ -1,8 +1,6 @@
 import { Fragment } from 'react';
-import { UserGroupIcon } from '@heroicons/react/24/solid';
 
 import { Card } from 'components/Card';
-import { IconButton } from 'components/Button/IconButton';
 
 import { pokemonList } from 'constants/imageSprites';
 
@@ -38,7 +36,6 @@ export const Images = () => {
 
   return (
     <div>
-      <IconButton icon={<UserGroupIcon />} alt="Pinned players" />
       <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-2">
         {imageArray.map(pokemon => (
           <Fragment key={pokemon.name}>
