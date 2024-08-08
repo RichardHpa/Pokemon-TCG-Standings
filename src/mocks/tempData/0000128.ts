@@ -1,4 +1,4 @@
-interface IWorldsPlayers {
+export interface IWorldsPlayers {
   FirstName: string;
   LastName: string;
   AgeDivision: string;
@@ -6,6 +6,61 @@ interface IWorldsPlayers {
   Country: string;
   UNITETeam: string;
 }
+
+export const countryList = [
+  'SG',
+  'HK',
+  'PH',
+  'TW',
+  'KR',
+  'TH',
+  'ID',
+  'CN',
+  'MY',
+  'JP',
+  'US',
+  'CA',
+  'FR',
+  'GB',
+  'NL',
+  'IT',
+  'CZ',
+  'DE',
+  'PL',
+  'BE',
+  'AT',
+  'FI',
+  'CH',
+  'SE',
+  'ES',
+  'SK',
+  'NO',
+  'DK',
+  'PT',
+  'HU',
+  'IE',
+  'GR',
+  'SI',
+  'CL',
+  'BR',
+  'EC',
+  'CO',
+  'PE',
+  'MX',
+  'AR',
+  'UY',
+  'SV',
+  'CR',
+  'PY',
+  'PA',
+  'GT',
+  'BO',
+  'NZ',
+  'AU',
+  'ZA',
+  'AE',
+  'IL',
+];
 
 export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
@@ -51,7 +106,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Lance Ethan',
     LastName: 'Monakil',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'PH',
     UNITETeam: '',
@@ -91,7 +146,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Sechan',
     LastName: 'Oh',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'KR',
     UNITETeam: '',
@@ -139,7 +194,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Hyunjoon',
     LastName: 'Yang',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'KR',
     UNITETeam: '',
@@ -155,7 +210,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Youyi',
     LastName: 'Lin',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'TW',
     UNITETeam: '',
@@ -163,7 +218,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Karin',
     LastName: 'Nondetkul',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'TH',
     UNITETeam: '',
@@ -203,7 +258,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Elijah Neil',
     LastName: 'Sabin',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'ID',
     UNITETeam: '',
@@ -259,7 +314,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Chun Hei',
     LastName: 'Mak',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'HK',
     UNITETeam: '',
@@ -283,7 +338,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Shao Tong',
     LastName: 'Yen',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'TW',
     UNITETeam: '',
@@ -379,7 +434,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Min Seok',
     LastName: 'Kim',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'KR',
     UNITETeam: '',
@@ -387,7 +442,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Ain',
     LastName: 'Kim',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'KR',
     UNITETeam: '',
@@ -395,7 +450,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Minseo',
     LastName: 'Yang',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'KR',
     UNITETeam: '',
@@ -403,7 +458,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Young Min',
     LastName: 'Ko',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'KR',
     UNITETeam: '',
@@ -411,7 +466,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Hohyeon',
     LastName: 'Kim',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'KR',
     UNITETeam: '',
@@ -419,7 +474,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Yuseong',
     LastName: 'Yoon',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'KR',
     UNITETeam: '',
@@ -499,7 +554,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Yugu',
     LastName: 'Jang',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'KR',
     UNITETeam: '',
@@ -507,7 +562,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Dayoung',
     LastName: 'Kang',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'KR',
     UNITETeam: '',
@@ -515,7 +570,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Hyenseo',
     LastName: 'Cho',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'KR',
     UNITETeam: '',
@@ -523,7 +578,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Jun Woo',
     LastName: 'Suh',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'KR',
     UNITETeam: '',
@@ -531,7 +586,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Jihoo',
     LastName: 'Park',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'KR',
     UNITETeam: '',
@@ -539,7 +594,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Taewoong',
     LastName: 'Moon',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'KR',
     UNITETeam: '',
@@ -707,7 +762,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Yen Chieh',
     LastName: 'Wu',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'TW',
     UNITETeam: '',
@@ -715,7 +770,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Jui-Yu',
     LastName: 'Kuo',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'TW',
     UNITETeam: '',
@@ -851,7 +906,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Miao',
     LastName: 'Zhaorui',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'TW',
     UNITETeam: '',
@@ -859,7 +914,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Pin-Ye',
     LastName: 'Lee',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'TW',
     UNITETeam: '',
@@ -931,7 +986,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Yencheng',
     LastName: 'Lung',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'TW',
     UNITETeam: '',
@@ -979,7 +1034,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Yiu Pan ',
     LastName: 'Luo',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'HK',
     UNITETeam: '',
@@ -1019,7 +1074,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Sze Ching',
     LastName: 'Chung',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'HK',
     UNITETeam: '',
@@ -1027,7 +1082,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Lee',
     LastName: 'Kin Hei',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'HK',
     UNITETeam: '',
@@ -1195,7 +1250,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Pakin ',
     LastName: 'Chivankgul',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'TH',
     UNITETeam: '',
@@ -1243,7 +1298,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Javier Mitchiru',
     LastName: 'Chaizer',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'ID',
     UNITETeam: '',
@@ -1251,7 +1306,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Qi Le Jasper',
     LastName: 'Ang',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'SG',
     UNITETeam: '',
@@ -1291,7 +1346,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Zi Le Zach',
     LastName: 'Koh',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'SG',
     UNITETeam: '',
@@ -1315,7 +1370,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Louis Jacob',
     LastName: 'Efe',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'PH',
     UNITETeam: '',
@@ -1339,7 +1394,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Zihao',
     LastName: 'Shen',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'CN',
     UNITETeam: '',
@@ -1347,7 +1402,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Zicheng',
     LastName: 'Liu',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'CN',
     UNITETeam: '',
@@ -1947,7 +2002,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Hao Wen',
     LastName: 'Loo',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'MY',
     UNITETeam: '',
@@ -1955,7 +2010,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Zi Hei',
     LastName: 'Ho',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'MY',
     UNITETeam: '',
@@ -1987,7 +2042,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Zahin Ziqri Bin ',
     LastName: 'Muhammad Azril',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'MY',
     UNITETeam: '',
@@ -2035,7 +2090,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Yuya',
     LastName: 'Tada',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2059,7 +2114,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Koousei',
     LastName: 'Matsumoto',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2067,7 +2122,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Hatsuto',
     LastName: 'Kogawa',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2075,7 +2130,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Kazusa',
     LastName: 'Yamamoto',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2083,7 +2138,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Ryuto',
     LastName: 'Honda',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2163,7 +2218,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Rinto',
     LastName: 'Shindo',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2171,7 +2226,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Yuki',
     LastName: 'Uehara',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2179,7 +2234,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Kousei',
     LastName: 'Uzaki',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2187,7 +2242,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Hotaru',
     LastName: 'Ooike',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2195,7 +2250,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Kotarou',
     LastName: 'Mori',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2203,7 +2258,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Touya',
     LastName: 'Uehata',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2211,7 +2266,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Koutarou',
     LastName: 'Matsudaira',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2219,7 +2274,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Haruku',
     LastName: 'Umehara',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2227,7 +2282,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Yukito',
     LastName: 'Hayashi',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2235,7 +2290,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Riku',
     LastName: 'Nishihashi',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2243,7 +2298,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Syori',
     LastName: 'Chaki',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2259,7 +2314,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Naoto',
     LastName: 'Wada',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2267,7 +2322,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Sakuto',
     LastName: 'Shimizu',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2275,7 +2330,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Yuuhi',
     LastName: 'Hashimoto',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2283,7 +2338,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Akito',
     LastName: 'Hirabayashi',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2291,7 +2346,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Kentaro',
     LastName: 'Hara',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2299,7 +2354,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Kousuke',
     LastName: 'Okada',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2307,7 +2362,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Rintaro',
     LastName: 'Kasahara',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2315,7 +2370,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Sai',
     LastName: 'Suzuki',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2323,7 +2378,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Akito',
     LastName: 'Furukawa',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2331,7 +2386,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Singo',
     LastName: 'Ogita',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2339,7 +2394,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Kouta',
     LastName: 'Yamano',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2347,7 +2402,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Tsukasa',
     LastName: 'Moriya',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2355,7 +2410,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Sowa',
     LastName: 'Ishikawa',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2363,7 +2418,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Akihiro',
     LastName: 'Fujimori',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2371,7 +2426,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Yu',
     LastName: 'Mochizuki',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2379,7 +2434,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Ren',
     LastName: 'Saito',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2387,7 +2442,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Tomoki',
     LastName: 'Fujioka',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2395,7 +2450,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Soujiro',
     LastName: 'Mori',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2403,7 +2458,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Yuta',
     LastName: 'Araki',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2411,7 +2466,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Hisataka',
     LastName: 'Ootsuka',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2419,7 +2474,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Itsuki',
     LastName: 'Suizu',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2427,7 +2482,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Makoto',
     LastName: 'Banda',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2435,7 +2490,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Rikuto',
     LastName: 'Shikanai',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2443,7 +2498,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Kyousuke',
     LastName: 'Nanao',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2451,7 +2506,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Haruma',
     LastName: 'Fujimori',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2459,7 +2514,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Sui',
     LastName: 'Iijima',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2467,7 +2522,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Shintaro',
     LastName: 'Uchimura',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2475,7 +2530,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Tomoki',
     LastName: 'Yamashita',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2483,7 +2538,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Hisato',
     LastName: 'Oowada',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2491,7 +2546,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Naotaro',
     LastName: 'Kurokawa',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2499,7 +2554,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Soutaro',
     LastName: 'Tomatsu',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2507,7 +2562,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Kio',
     LastName: 'Nagisa',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2515,7 +2570,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Ruruto',
     LastName: 'Matsumoto',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2523,7 +2578,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Naoki',
     LastName: 'Aota',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2531,7 +2586,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Sousuke',
     LastName: 'Inukai',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2539,7 +2594,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Sakuya',
     LastName: 'Ota',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2547,7 +2602,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Nanai',
     LastName: 'Okada',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2555,7 +2610,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Riku',
     LastName: 'Okamoto',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2563,7 +2618,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Kentaro',
     LastName: 'Tanahara',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2571,7 +2626,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Ryunosuke',
     LastName: 'Chicama',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2579,7 +2634,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Satoaki',
     LastName: 'Nagatomo',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2587,7 +2642,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Shinpei',
     LastName: 'Yamaguchi',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2595,7 +2650,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Keita',
     LastName: 'Kikuchi',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2603,7 +2658,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Kousuke',
     LastName: 'Uchikawa',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2611,7 +2666,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Tatsuki',
     LastName: 'Kawagoe',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2619,7 +2674,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Rintaro',
     LastName: 'Hoshino',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2627,7 +2682,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Shuji',
     LastName: 'Matsuishi',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2651,7 +2706,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Seiji',
     LastName: 'Miura',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2659,7 +2714,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Hiro',
     LastName: 'Harigane',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2667,7 +2722,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Yusei',
     LastName: 'Nagasawa',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2675,7 +2730,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Aoshi',
     LastName: 'Shiraska',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2691,7 +2746,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Haruki',
     LastName: 'Murao',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2707,7 +2762,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Michito',
     LastName: 'Hara',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2715,7 +2770,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Kanta',
     LastName: 'Yamada',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2723,7 +2778,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Kiyoi',
     LastName: 'Takemura',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2731,7 +2786,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Kensuke',
     LastName: 'Shimoda',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2747,7 +2802,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Hiroki',
     LastName: 'Kaneko',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2755,7 +2810,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Shunta',
     LastName: 'Igarashi',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2763,7 +2818,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Sou',
     LastName: 'Sakurai',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2779,7 +2834,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Len',
     LastName: 'Mizukami',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2787,7 +2842,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Ichi',
     LastName: 'Okamoto',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2795,7 +2850,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Hayato',
     LastName: 'Tobioka',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2803,7 +2858,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Kotarou',
     LastName: 'Iwagami',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2827,7 +2882,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Itsuki',
     LastName: 'Kaneshiro',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2851,7 +2906,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Shunsuke',
     LastName: 'Oomori',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2867,7 +2922,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Ryohei',
     LastName: 'Setou',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2875,7 +2930,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Ryuuki',
     LastName: 'Matsumoto',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2883,7 +2938,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Yousuke',
     LastName: 'Mizuno',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2899,7 +2954,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Issey',
     LastName: 'Fujii',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2915,7 +2970,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Takeru',
     LastName: 'Aoki',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -2931,7 +2986,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Ayumu',
     LastName: 'Kaneko',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -3643,7 +3698,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Shion',
     LastName: 'Hamaaki',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'JP',
     UNITETeam: '',
@@ -3651,7 +3706,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Jose Cruz',
     LastName: 'Galindo-Resendiz',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -3659,7 +3714,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Prince',
     LastName: 'Williams',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -3667,7 +3722,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Victor',
     LastName: 'Perry-Pribadi',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -3675,7 +3730,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Tyler',
     LastName: 'Liu',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -3683,7 +3738,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Elijah',
     LastName: 'Lu',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -3691,7 +3746,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Brandon',
     LastName: 'Kolodney',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -3699,7 +3754,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Edison',
     LastName: 'Chein',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -3707,7 +3762,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Yohann',
     LastName: 'Cote',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'CA',
     UNITETeam: '',
@@ -3715,7 +3770,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Conor',
     LastName: 'Moore',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -3723,7 +3778,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'William',
     LastName: 'Bailey',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -3731,7 +3786,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Theo',
     LastName: 'Youn',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -3739,7 +3794,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Byron',
     LastName: 'Ellison',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -3747,7 +3802,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Eric',
     LastName: 'Brown',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -3755,7 +3810,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Joshua',
     LastName: 'Donen',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'CA',
     UNITETeam: '',
@@ -3763,7 +3818,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Reed',
     LastName: 'Kortes',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'CA',
     UNITETeam: '',
@@ -3771,7 +3826,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Landon',
     LastName: 'Nixon',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -3779,7 +3834,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Arissa',
     LastName: 'Wong',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'CA',
     UNITETeam: '',
@@ -3787,7 +3842,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Ryder',
     LastName: 'Wasilewski',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -3795,7 +3850,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Heath',
     LastName: 'Hartmann',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -3803,7 +3858,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Kenji',
     LastName: 'Oono',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -3811,7 +3866,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Lyle',
     LastName: 'Chu',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -3819,7 +3874,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Caiden',
     LastName: 'Thieleman',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -3827,7 +3882,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Brian',
     LastName: 'Xie',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'CA',
     UNITETeam: '',
@@ -3835,7 +3890,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Henry',
     LastName: 'Carter',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -3843,7 +3898,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Zelda',
     LastName: 'Zhou',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -3851,7 +3906,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Juda',
     LastName: 'Towe',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -3859,7 +3914,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Callan',
     LastName: "O'Brien",
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -3867,7 +3922,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Jett',
     LastName: 'Warnat',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -3875,7 +3930,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Annabelle',
     LastName: 'Oono',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -3883,7 +3938,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Elijah',
     LastName: 'Upton',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -3891,7 +3946,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Yushin',
     LastName: 'Alvarez',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -3899,7 +3954,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Luke',
     LastName: 'Giffen',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -3907,7 +3962,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Max',
     LastName: 'Church-Ehrlich',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -3915,7 +3970,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Shepard',
     LastName: 'Wilson',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -3923,7 +3978,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Grayson',
     LastName: 'Lansford',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -3931,7 +3986,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Ezra',
     LastName: 'Saenz',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -3939,7 +3994,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Reed',
     LastName: 'Hartmann',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -3947,7 +4002,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Mckayla',
     LastName: 'Angeles',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -3955,7 +4010,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Lucas',
     LastName: 'Tracy',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -3963,7 +4018,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Noah',
     LastName: 'Hartigan',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -3971,7 +4026,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Caleb',
     LastName: 'Florian',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -3979,7 +4034,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Zoey',
     LastName: 'C',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'CA',
     UNITETeam: '',
@@ -3987,7 +4042,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Logan',
     LastName: 'Bailey',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -3995,7 +4050,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Lucas',
     LastName: 'Nichols',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4003,7 +4058,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Ethan',
     LastName: 'Chen',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4011,7 +4066,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Max',
     LastName: 'Fortunato',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'CA',
     UNITETeam: '',
@@ -4019,7 +4074,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Ronin',
     LastName: 'Wilson',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4027,7 +4082,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Atticus',
     LastName: 'Benbow',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4035,7 +4090,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Fletcher',
     LastName: 'Mckay',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'CA',
     UNITETeam: '',
@@ -4043,7 +4098,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Nicolas',
     LastName: 'Huang',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4051,7 +4106,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Luke',
     LastName: 'Landry',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4059,7 +4114,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Connor',
     LastName: 'Meyers',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4067,7 +4122,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Vesper',
     LastName: 'Sherman',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4075,7 +4130,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Cobey',
     LastName: 'Huh',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4083,7 +4138,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Noah',
     LastName: 'Duplessis',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4091,7 +4146,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Asha',
     LastName: 'Cherian',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4099,7 +4154,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Everett',
     LastName: 'Zelaya',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4107,7 +4162,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Felix',
     LastName: 'Wang',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'CA',
     UNITETeam: '',
@@ -4115,7 +4170,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Ethan',
     LastName: 'Carter',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4123,7 +4178,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Joseph',
     LastName: 'Hager Iii',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4131,7 +4186,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Ren',
     LastName: 'Lutfiyya',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4139,7 +4194,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Michael',
     LastName: 'Ngo',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'CA',
     UNITETeam: '',
@@ -4147,7 +4202,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Sergio Iii',
     LastName: 'Lopez',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4155,7 +4210,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Will',
     LastName: 'Rackley',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4163,7 +4218,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Leif',
     LastName: 'Whitehouse Graves',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4171,7 +4226,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Kai',
     LastName: 'Rich',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4179,7 +4234,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Johnathon',
     LastName: 'Cleveland',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4187,7 +4242,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Yuting',
     LastName: 'An',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4195,7 +4250,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Lindsay',
     LastName: 'Potteiger',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4203,7 +4258,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Sadie',
     LastName: 'Koster',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4211,7 +4266,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Tucker',
     LastName: 'Hutchens',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4219,7 +4274,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Robert',
     LastName: 'Su',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'CA',
     UNITETeam: '',
@@ -4227,7 +4282,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Isabell',
     LastName: 'Terceira',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4235,7 +4290,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Renly',
     LastName: 'Collier',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4243,7 +4298,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Cassius',
     LastName: 'Kong',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4251,7 +4306,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Parker',
     LastName: 'Amstadt',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4259,7 +4314,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'James',
     LastName: 'Jones',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4267,7 +4322,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'B',
     LastName: 'W',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4275,7 +4330,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Francisco',
     LastName: 'Flores',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4283,7 +4338,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Kaeden',
     LastName: 'Tran',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4291,7 +4346,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Tyler',
     LastName: 'Soundy',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'CA',
     UNITETeam: '',
@@ -4299,7 +4354,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Alexander',
     LastName: 'Carvalho',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'CA',
     UNITETeam: '',
@@ -4307,7 +4362,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Sebastian',
     LastName: 'Moceri',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4315,7 +4370,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Luka',
     LastName: 'Onvural',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4323,7 +4378,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Brent',
     LastName: 'Taylor',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4331,7 +4386,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Tayden',
     LastName: 'Terrell',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4339,7 +4394,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Brooks',
     LastName: 'Patterson',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4347,7 +4402,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Frankie',
     LastName: 'Remenak',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4355,7 +4410,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Theo',
     LastName: 'Dockins',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4363,7 +4418,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Charles',
     LastName: 'Ran',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4371,7 +4426,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Emery',
     LastName: 'Eisenhauer',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4379,7 +4434,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Gracen',
     LastName: 'Campbell',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4387,7 +4442,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Sofiya',
     LastName: 'Skiles',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4395,7 +4450,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Lleyton',
     LastName: 'Chan',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4403,7 +4458,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Michael',
     LastName: 'Rubin',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4411,7 +4466,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Alex',
     LastName: 'Schmitt',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4419,7 +4474,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Maxwell',
     LastName: 'Moose',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4427,7 +4482,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Keilani',
     LastName: 'Sumner',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4435,7 +4490,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Jorn',
     LastName: 'Horeman',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'CA',
     UNITETeam: '',
@@ -4443,7 +4498,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Everett',
     LastName: 'Lawson',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4451,7 +4506,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Maximus',
     LastName: 'Adams Hsu',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4459,7 +4514,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Jonah',
     LastName: 'Timmons',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4467,7 +4522,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Bryson',
     LastName: 'Baskett',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4475,7 +4530,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Ellen',
     LastName: 'Leimgruber',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4483,7 +4538,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Doyeon',
     LastName: 'Kim',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'CA',
     UNITETeam: '',
@@ -4491,7 +4546,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Koen',
     LastName: 'Lee',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4499,7 +4554,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Amaia',
     LastName: 'Marzan',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4507,7 +4562,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Urijah',
     LastName: 'Ignacio',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4515,7 +4570,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Calvin',
     LastName: 'Rocque',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4523,7 +4578,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Karl',
     LastName: 'Van Norman',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4531,7 +4586,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Micah',
     LastName: 'Koehler',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4539,7 +4594,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Everett',
     LastName: 'Kravets',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4547,7 +4602,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'David',
     LastName: 'Carter',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4555,7 +4610,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Asher',
     LastName: 'Tseng',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4563,7 +4618,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Peyton',
     LastName: 'Hicks',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4571,7 +4626,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Xu',
     LastName: 'Chen',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'CA',
     UNITETeam: '',
@@ -4579,7 +4634,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Liam',
     LastName: 'Stuntz',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4587,7 +4642,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Lincoln',
     LastName: 'Strayer',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4595,7 +4650,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Sebastian',
     LastName: 'Guice-Mendel',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4603,7 +4658,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Dylan',
     LastName: 'Wu',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4611,7 +4666,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Oliver',
     LastName: 'Choi',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4619,7 +4674,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Isa',
     LastName: 'Echevarria',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4627,7 +4682,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Alex',
     LastName: 'Jackson',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4635,7 +4690,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Micah',
     LastName: 'Tseng',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4643,7 +4698,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Mason',
     LastName: 'Landsman',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4651,7 +4706,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Henry',
     LastName: 'Flores',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4659,7 +4714,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Luke',
     LastName: 'Kwon',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4667,7 +4722,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Jak',
     LastName: 'Ker',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4675,7 +4730,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Xander',
     LastName: 'White',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4683,7 +4738,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Carter',
     LastName: 'Rowland',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4691,7 +4746,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Ethan',
     LastName: 'Jansen',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4699,7 +4754,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Connor',
     LastName: 'Ramos',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4707,7 +4762,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Corinne',
     LastName: 'Colletti',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4715,7 +4770,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Ethan',
     LastName: 'Chow',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'CA',
     UNITETeam: '',
@@ -4723,7 +4778,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Darius',
     LastName: 'Galvan',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4731,7 +4786,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Eli',
     LastName: 'Sawyer',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4739,7 +4794,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Adrian',
     LastName: 'Lee',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'CA',
     UNITETeam: '',
@@ -4747,7 +4802,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Samuel',
     LastName: 'Longer',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4755,7 +4810,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Celia',
     LastName: 'Thompson',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4763,7 +4818,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Xavier',
     LastName: 'Shen',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'CA',
     UNITETeam: '',
@@ -4771,7 +4826,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Zachary',
     LastName: 'Edson',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4779,7 +4834,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Gunner',
     LastName: 'Rose',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4787,7 +4842,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Davien',
     LastName: 'Dumont',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'CA',
     UNITETeam: '',
@@ -4795,7 +4850,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Liam',
     LastName: 'Eastburn',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4803,7 +4858,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Tommy',
     LastName: 'Wishart',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4811,7 +4866,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Trindon',
     LastName: 'Pallaya',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4819,7 +4874,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Daniel',
     LastName: 'Noblitt',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4827,7 +4882,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Rachel',
     LastName: 'Long',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'CA',
     UNITETeam: '',
@@ -4835,7 +4890,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Walter',
     LastName: 'Lopez Jr',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4843,7 +4898,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Brayden',
     LastName: 'Draves',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4851,7 +4906,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Luke',
     LastName: 'Butterfield',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4859,7 +4914,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Blake',
     LastName: 'Shetler',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4867,7 +4922,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Owen',
     LastName: 'Mcbrien',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4875,7 +4930,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Benny',
     LastName: 'Billinger',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'CA',
     UNITETeam: '',
@@ -4883,7 +4938,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Justin',
     LastName: 'Templer',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4891,7 +4946,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Nathan',
     LastName: 'Osterkatz',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4899,7 +4954,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Polaris',
     LastName: 'Altares',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4907,7 +4962,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Henry',
     LastName: 'Thompson',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4915,7 +4970,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Tristan',
     LastName: 'Tse',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'CA',
     UNITETeam: '',
@@ -4923,7 +4978,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Cerys',
     LastName: 'Jones',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4931,7 +4986,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Owen',
     LastName: 'Dalgard',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4939,7 +4994,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Evan',
     LastName: 'Pavelski',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4947,7 +5002,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Rj',
     LastName: 'Squires',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4955,7 +5010,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Carson',
     LastName: 'Washer',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4963,7 +5018,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Joseph',
     LastName: 'Bjerg',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4971,7 +5026,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Lucas Grey',
     LastName: 'Bowen',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4979,7 +5034,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Deven',
     LastName: 'Ramanathan',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4987,7 +5042,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Omar',
     LastName: 'Cortes',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -4995,7 +5050,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Isaac',
     LastName: 'Terceira',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5003,7 +5058,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Remi',
     LastName: 'Lorenz',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5011,7 +5066,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Kamil',
     LastName: 'Bidzinski',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'CA',
     UNITETeam: '',
@@ -5019,7 +5074,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Luke',
     LastName: 'Sullivan',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5027,7 +5082,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Lucas',
     LastName: 'Oldale',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'CA',
     UNITETeam: '',
@@ -5035,7 +5090,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Logan',
     LastName: 'Romero',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5043,7 +5098,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Martin',
     LastName: 'Erlandsson',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5051,7 +5106,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Robert',
     LastName: 'Moore Matise',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5059,7 +5114,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Noah',
     LastName: 'Donen',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'CA',
     UNITETeam: '',
@@ -5067,7 +5122,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Adrian',
     LastName: 'Gronek',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'CA',
     UNITETeam: '',
@@ -5075,7 +5130,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Ethan',
     LastName: 'Graham',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'CA',
     UNITETeam: '',
@@ -5083,7 +5138,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Benjamin',
     LastName: 'Hebert',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'CA',
     UNITETeam: '',
@@ -5091,7 +5146,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Callum',
     LastName: 'Elliott',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5099,7 +5154,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Quinn',
     LastName: 'Squires',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5107,7 +5162,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Lukas',
     LastName: 'Tapia',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5115,7 +5170,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Yader',
     LastName: 'Vilchez',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5123,7 +5178,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Tyler',
     LastName: 'Kramer',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5131,7 +5186,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Ethan',
     LastName: 'Morgan',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5139,7 +5194,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Justin',
     LastName: 'Newdorf',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5147,7 +5202,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Luna',
     LastName: 'Yeselavage',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5155,7 +5210,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Rafi',
     LastName: 'Tuchman',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5163,7 +5218,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Mitchell',
     LastName: 'Ransome',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5171,7 +5226,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Luke',
     LastName: 'Tully',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5179,7 +5234,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Liam',
     LastName: 'Hyatt',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5187,7 +5242,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Jacob',
     LastName: 'Lee',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5195,7 +5250,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Jake',
     LastName: 'Koster',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5203,7 +5258,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Anthem',
     LastName: 'Maxwell',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5211,7 +5266,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Passawat',
     LastName: 'Patkiatjaroen',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5219,7 +5274,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Jones',
     LastName: 'Diaz',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5227,7 +5282,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Evan',
     LastName: 'Bryant',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5235,7 +5290,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Preston',
     LastName: 'Muller',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5243,7 +5298,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Luke',
     LastName: 'Williams',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5251,7 +5306,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Mitch',
     LastName: 'Lyle',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5259,7 +5314,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Wyatt',
     LastName: 'Triplett',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5267,7 +5322,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Jack',
     LastName: 'Leimgruber',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5275,7 +5330,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Matthew',
     LastName: 'Potteiger',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5283,7 +5338,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Bo',
     LastName: 'Staheli',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5291,7 +5346,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Ziyao',
     LastName: 'Qu',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5299,7 +5354,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Collin',
     LastName: 'Hand',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5307,7 +5362,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'William',
     LastName: 'Stull',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5315,7 +5370,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Ace',
     LastName: 'Liu',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'CA',
     UNITETeam: '',
@@ -5323,7 +5378,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Isaac',
     LastName: 'Jung',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5331,7 +5386,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Adam',
     LastName: 'Dorelas',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5339,7 +5394,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Eamon',
     LastName: 'Sullivan',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5347,7 +5402,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Alex',
     LastName: 'Barbosa',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'CA',
     UNITETeam: '',
@@ -5355,7 +5410,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Elvin',
     LastName: 'Wang',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5363,7 +5418,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Lillian',
     LastName: 'Duffield',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5371,7 +5426,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Mitchell',
     LastName: 'Johnson',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5379,7 +5434,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Ayden',
     LastName: 'Smith',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5387,7 +5442,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Julien',
     LastName: 'Guimond',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'CA',
     UNITETeam: '',
@@ -5395,7 +5450,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Charlie',
     LastName: 'Thompson',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'CA',
     UNITETeam: '',
@@ -5403,7 +5458,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Jack',
     LastName: 'Parker',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5411,7 +5466,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Alexander (Alex)',
     LastName: 'Betzner',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'CA',
     UNITETeam: '',
@@ -5419,7 +5474,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Alexander',
     LastName: 'Adams Hsu',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5427,7 +5482,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Pranav',
     LastName: 'Raju',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5435,7 +5490,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Kyle',
     LastName: 'Xia',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5443,7 +5498,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Landon',
     LastName: 'Ellison',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5451,7 +5506,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Kaleb',
     LastName: 'Jacobson',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5459,7 +5514,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Zaidyn',
     LastName: 'Sumner',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5467,7 +5522,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Miles',
     LastName: 'Aranovich Sperber',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5475,7 +5530,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Max',
     LastName: 'De Saint',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'CA',
     UNITETeam: '',
@@ -5483,7 +5538,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Jayden',
     LastName: 'Normandia',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5491,7 +5546,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Gavin',
     LastName: 'Loos',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5499,7 +5554,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Robert',
     LastName: 'Rosal',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5507,7 +5562,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Gavin',
     LastName: 'Andriello',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5515,7 +5570,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Evan',
     LastName: 'Nelson',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5523,7 +5578,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Henry',
     LastName: 'Simmons',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5531,7 +5586,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Samuel',
     LastName: 'Tran',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5539,7 +5594,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Alex',
     LastName: 'Remick',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5547,7 +5602,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Riad',
     LastName: 'Ameti',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5555,7 +5610,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Isaiah',
     LastName: 'Faulkner',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5563,7 +5618,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Alex',
     LastName: 'Aldcorn',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'CA',
     UNITETeam: '',
@@ -5571,7 +5626,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Asher',
     LastName: 'Parr',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5579,7 +5634,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Miriya',
     LastName: 'Morse',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5587,7 +5642,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Johann',
     LastName: 'Hedayati',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5595,7 +5650,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Leo',
     LastName: 'Ioriya',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5603,7 +5658,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Joshua',
     LastName: 'Noblitt',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5611,7 +5666,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Bruce',
     LastName: 'Bumbarger',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5619,7 +5674,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Jesse',
     LastName: "O'Brien",
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5627,7 +5682,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Katrina',
     LastName: 'Hert',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5635,7 +5690,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Anthony',
     LastName: 'Geiger',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5643,7 +5698,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Fred',
     LastName: 'Singer V',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5651,7 +5706,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Andrew',
     LastName: 'Pifer',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5659,7 +5714,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Angel',
     LastName: 'Cornejo',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5667,7 +5722,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Gabe',
     LastName: 'Thompson',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5675,7 +5730,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Spencer',
     LastName: 'Pavelski',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5683,7 +5738,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Andrew',
     LastName: 'Hall',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5691,7 +5746,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Richard',
     LastName: 'Anderson',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5699,7 +5754,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Samuel',
     LastName: 'Wickey',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5707,7 +5762,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Alex',
     LastName: 'Chandler',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5715,7 +5770,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Thomas',
     LastName: 'Harvey',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'CA',
     UNITETeam: '',
@@ -5723,7 +5778,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Remus',
     LastName: 'Jeong',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5731,7 +5786,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Brandan',
     LastName: 'Smith',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5739,7 +5794,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Manuel',
     LastName: 'Franco',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5747,7 +5802,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Jaden',
     LastName: 'Ejeta',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5755,7 +5810,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Jason',
     LastName: 'Papadopoulos',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5763,7 +5818,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Cohen',
     LastName: 'Stuntz',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5771,7 +5826,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Zach',
     LastName: 'Forjette',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5779,7 +5834,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Jade',
     LastName: 'Vieira',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5787,7 +5842,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Michaela',
     LastName: 'Zelaya',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5795,7 +5850,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Shane',
     LastName: 'Goldschein',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5803,7 +5858,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Karson',
     LastName: 'Carter',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5811,7 +5866,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'James',
     LastName: 'Hoerner',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5819,7 +5874,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Joshua',
     LastName: 'Quevedo',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5827,7 +5882,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Peyton',
     LastName: 'Lee',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5835,7 +5890,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Miles',
     LastName: 'Rosenberg',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5843,7 +5898,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Bennett',
     LastName: 'Christian',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5851,7 +5906,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Thomas',
     LastName: 'Kowalski',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5859,7 +5914,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Adam',
     LastName: 'Rodrigues',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5867,7 +5922,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Cristiano',
     LastName: 'Castaneda',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5875,7 +5930,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Will',
     LastName: 'Ames',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5883,7 +5938,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Wyatt',
     LastName: 'Solaya',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5891,7 +5946,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Kellan',
     LastName: 'Seang',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5899,7 +5954,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Mia',
     LastName: 'Sun',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5907,7 +5962,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Isaiah',
     LastName: 'Jacques',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5915,7 +5970,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Owen',
     LastName: 'Irons',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5923,7 +5978,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Ethan',
     LastName: 'Tseng',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5931,7 +5986,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Luke',
     LastName: 'Remick',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5939,7 +5994,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Ella',
     LastName: 'Mclean',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'CA',
     UNITETeam: '',
@@ -5947,7 +6002,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Jess',
     LastName: 'Dilley',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5955,7 +6010,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Riley',
     LastName: 'Smith',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5963,7 +6018,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Hayden',
     LastName: 'Grier',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5971,7 +6026,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Jake',
     LastName: 'Xia',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5979,7 +6034,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Grayson',
     LastName: 'Holliday',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5987,7 +6042,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Leonor',
     LastName: 'Reyes',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -5995,7 +6050,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Caden',
     LastName: 'Huh',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -6003,7 +6058,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Ivan',
     LastName: 'Rodriguez',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -6011,7 +6066,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Dylan',
     LastName: 'Rible',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -6019,7 +6074,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Emmett',
     LastName: 'Beirne',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -6027,7 +6082,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Lucas',
     LastName: 'Bratton',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -6035,7 +6090,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'George',
     LastName: 'Cameron',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -6043,7 +6098,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Alayna',
     LastName: 'Humbert',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -6051,7 +6106,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Dylan',
     LastName: 'Pine',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -6059,7 +6114,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Josiah',
     LastName: 'Dockins',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -6067,7 +6122,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Liam',
     LastName: 'Culbertson',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -6075,7 +6130,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Wyatt',
     LastName: 'Oren',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -6083,7 +6138,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Johnny',
     LastName: 'Becker',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -6091,7 +6146,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Marcus',
     LastName: 'Barraza',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -6099,7 +6154,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Opie',
     LastName: 'Jankowski',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -6107,7 +6162,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Aslan',
     LastName: 'Ignacio',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -6115,7 +6170,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Max',
     LastName: 'Perry',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -6123,7 +6178,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Calvin',
     LastName: 'Mason',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -6131,7 +6186,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Leon',
     LastName: 'Ibanez',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -6139,7 +6194,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'James',
     LastName: 'Van Wingen',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -6147,7 +6202,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Marcelo',
     LastName: 'Sanchez',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'CA',
     UNITETeam: '',
@@ -6155,7 +6210,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Quinn',
     LastName: 'Creel',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -6163,7 +6218,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Mateo',
     LastName: 'Russell',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -6171,7 +6226,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Mason',
     LastName: 'Burch',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -6179,7 +6234,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Marco',
     LastName: 'Holbrook',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -6187,7 +6242,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Daniel',
     LastName: 'Huang',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -6195,7 +6250,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Luke',
     LastName: 'Fisette',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -6203,7 +6258,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Toan',
     LastName: 'Castaing',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'CA',
     UNITETeam: '',
@@ -6211,7 +6266,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Holden',
     LastName: 'Kear',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -6219,7 +6274,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Adrian',
     LastName: 'Monin',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -6227,7 +6282,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Nolan',
     LastName: 'Niedjalski',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'CA',
     UNITETeam: '',
@@ -6235,7 +6290,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Isaac',
     LastName: 'Barraza',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -6243,7 +6298,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Mattaeus',
     LastName: 'Natrakul',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -6251,7 +6306,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Nicolas',
     LastName: 'Bailey',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'CA',
     UNITETeam: '',
@@ -6259,7 +6314,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Matt',
     LastName: 'Menyo',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -6267,7 +6322,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Joshua',
     LastName: 'Lin',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -6275,7 +6330,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Landen',
     LastName: 'Owens',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -6283,7 +6338,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Ian',
     LastName: 'Ludwig',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -6291,7 +6346,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Luke',
     LastName: 'Kim',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -6299,7 +6354,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Marcus',
     LastName: 'De Meo',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'CA',
     UNITETeam: '',
@@ -6307,7 +6362,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Lucas',
     LastName: 'Breseke-Montfrooij',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -6315,7 +6370,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Cash',
     LastName: 'Otero',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -6323,7 +6378,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Lucas',
     LastName: 'Mata',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -6331,7 +6386,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Harvey',
     LastName: 'Archibald',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -6339,7 +6394,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Carson',
     LastName: 'Vonweller',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -6347,7 +6402,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Maddox',
     LastName: 'Morrison',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -6355,7 +6410,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Ella',
     LastName: 'Curtis',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -6363,7 +6418,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Isaac',
     LastName: 'Hillary',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -6371,7 +6426,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Taylor',
     LastName: 'Johnson',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -6379,7 +6434,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Max',
     LastName: 'Curfman',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -6387,7 +6442,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Jared',
     LastName: 'Webley',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'US',
     UNITETeam: '',
@@ -8555,7 +8610,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Grégory',
     LastName: 'Vexenat',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'FR',
     UNITETeam: '',
@@ -8563,7 +8618,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Peter',
     LastName: 'Shapkin',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -8571,7 +8626,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Ethan',
     LastName: 'Church',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -8579,7 +8634,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Joshua',
     LastName: 'Wubbeling',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'NL',
     UNITETeam: '',
@@ -8587,7 +8642,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Flavio',
     LastName: 'Floreani',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'IT',
     UNITETeam: '',
@@ -8595,7 +8650,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Zachary',
     LastName: 'Obertelli',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -8603,7 +8658,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Isaac',
     LastName: 'Dong',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -8611,7 +8666,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Matyas',
     LastName: 'Mohr',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'CZ',
     UNITETeam: '',
@@ -8619,7 +8674,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Samuele',
     LastName: 'Ceccobelli',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'IT',
     UNITETeam: '',
@@ -8627,7 +8682,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Levon',
     LastName: 'Fatunz',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'DE',
     UNITETeam: '',
@@ -8635,7 +8690,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Alfie',
     LastName: 'Barnes',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -8643,7 +8698,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Federico',
     LastName: 'Conte',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'IT',
     UNITETeam: '',
@@ -8651,7 +8706,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Emil',
     LastName: 'Wolf',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'DE',
     UNITETeam: '',
@@ -8659,7 +8714,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Oliver',
     LastName: 'Cahill',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -8667,7 +8722,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Lok Hei',
     LastName: 'Tso',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -8675,7 +8730,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Lucas Ruizhe',
     LastName: 'Jiang',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -8683,7 +8738,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Adam',
     LastName: 'Vojtěch',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'CZ',
     UNITETeam: '',
@@ -8691,7 +8746,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Franciszek',
     LastName: 'Raczyński',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'PL',
     UNITETeam: '',
@@ -8699,7 +8754,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Thomas',
     LastName: 'Trudeau',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'NL',
     UNITETeam: '',
@@ -8707,7 +8762,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Michele Leonardo',
     LastName: 'Buso',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'IT',
     UNITETeam: '',
@@ -8715,7 +8770,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Kayden',
     LastName: 'Slikboer',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'BE',
     UNITETeam: '',
@@ -8723,7 +8778,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Mathew',
     LastName: 'Simoes',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -8731,7 +8786,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Leo',
     LastName: 'Gartland',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -8739,7 +8794,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Benjamin',
     LastName: 'Bolonsky',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'CZ',
     UNITETeam: '',
@@ -8747,7 +8802,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Niels',
     LastName: 'Brioul',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'FR',
     UNITETeam: '',
@@ -8755,7 +8810,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Quentin',
     LastName: 'D’Anchald',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'FR',
     UNITETeam: '',
@@ -8763,7 +8818,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Declan',
     LastName: 'Peers',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -8771,7 +8826,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Martin',
     LastName: 'Carrera',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'FR',
     UNITETeam: '',
@@ -8779,7 +8834,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Owen',
     LastName: 'Slikboer',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'BE',
     UNITETeam: '',
@@ -8787,7 +8842,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Mateusz',
     LastName: 'Szukala',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'PL',
     UNITETeam: '',
@@ -8795,7 +8850,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Léo',
     LastName: 'Blanchard',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'FR',
     UNITETeam: '',
@@ -8803,7 +8858,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Nathaniel',
     LastName: 'Trudeau',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'NL',
     UNITETeam: '',
@@ -8811,7 +8866,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Jacob',
     LastName: 'Leung',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -8819,7 +8874,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Lucas',
     LastName: 'Santos',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'FR',
     UNITETeam: '',
@@ -8827,7 +8882,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Isaac',
     LastName: 'Delaney',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -8835,7 +8890,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Stanislaus',
     LastName: 'Lernpeiss',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'AT',
     UNITETeam: '',
@@ -8843,7 +8898,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Augustin',
     LastName: 'Escande Ollive',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'FR',
     UNITETeam: '',
@@ -8851,7 +8906,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Luke',
     LastName: 'Toth',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -8859,7 +8914,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Quinn',
     LastName: 'Damkat',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'NL',
     UNITETeam: '',
@@ -8867,7 +8922,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Cedrik',
     LastName: 'Balk',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'FI',
     UNITETeam: '',
@@ -8875,7 +8930,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Leonard',
     LastName: 'Ulbrich',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'DE',
     UNITETeam: '',
@@ -8883,7 +8938,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Piotr',
     LastName: 'Zakrzewski',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'PL',
     UNITETeam: '',
@@ -8891,7 +8946,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Kian',
     LastName: 'Zohurian',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'DE',
     UNITETeam: '',
@@ -8899,7 +8954,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Mattia',
     LastName: 'Becce',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'CH',
     UNITETeam: '',
@@ -8907,7 +8962,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Alessandro Noel',
     LastName: 'Visconti',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'IT',
     UNITETeam: '',
@@ -8915,7 +8970,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Hector',
     LastName: 'Labonté',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'DE',
     UNITETeam: '',
@@ -8923,7 +8978,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Luca',
     LastName: 'Vdp',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'BE',
     UNITETeam: '',
@@ -8931,7 +8986,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Olivier',
     LastName: 'Dupleix',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'FR',
     UNITETeam: '',
@@ -8939,7 +8994,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Mathias',
     LastName: 'Kapstein',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'FR',
     UNITETeam: '',
@@ -8947,7 +9002,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Felicia',
     LastName: 'Persson',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'SE',
     UNITETeam: '',
@@ -8955,7 +9010,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Ian',
     LastName: 'Pino Li',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'ES',
     UNITETeam: '',
@@ -8963,7 +9018,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Harrison',
     LastName: 'Holden-Smith',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -8971,7 +9026,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Brian',
     LastName: 'Dallara Bergesio',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'IT',
     UNITETeam: '',
@@ -8979,7 +9034,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Federico',
     LastName: 'Abbagnano',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'IT',
     UNITETeam: '',
@@ -8987,7 +9042,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Alessandro Marco',
     LastName: 'Tiscar',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'IT',
     UNITETeam: '',
@@ -8995,7 +9050,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Frsco',
     LastName: 'Odetti',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'IT',
     UNITETeam: '',
@@ -9003,7 +9058,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Andreas',
     LastName: 'Ketels',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'BE',
     UNITETeam: '',
@@ -9011,7 +9066,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Rupert',
     LastName: 'Black',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -9019,7 +9074,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Paul',
     LastName: 'Klein',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'DE',
     UNITETeam: '',
@@ -9027,7 +9082,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Nicola',
     LastName: 'Annoscia',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'IT',
     UNITETeam: '',
@@ -9035,7 +9090,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Jacques',
     LastName: 'Dupleix',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'FR',
     UNITETeam: '',
@@ -9043,7 +9098,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Antoni',
     LastName: 'Mazurczak',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -9051,7 +9106,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Mateusz',
     LastName: 'Spangenberg',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'PL',
     UNITETeam: '',
@@ -9059,7 +9114,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Oscar',
     LastName: 'Dong',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -9067,7 +9122,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Vladimir',
     LastName: 'Kuvshinnikov',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'SK',
     UNITETeam: '',
@@ -9075,7 +9130,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Ania',
     LastName: 'Matlinska',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'PL',
     UNITETeam: '',
@@ -9083,7 +9138,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Noe',
     LastName: 'Conorto',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'SK',
     UNITETeam: '',
@@ -9091,7 +9146,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Sebastiano',
     LastName: 'Salamanca',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'IT',
     UNITETeam: '',
@@ -9099,7 +9154,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Adam',
     LastName: 'Picot',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'FR',
     UNITETeam: '',
@@ -9107,7 +9162,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Ugo',
     LastName: 'Poitevin',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'FR',
     UNITETeam: '',
@@ -9115,7 +9170,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Ambra',
     LastName: 'Di Paolo',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'IT',
     UNITETeam: '',
@@ -9123,7 +9178,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Davide',
     LastName: 'Puccetti Poletti',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'IT',
     UNITETeam: '',
@@ -9131,7 +9186,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Jessica',
     LastName: 'Brown',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -9139,7 +9194,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Alba',
     LastName: 'Bueno',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'ES',
     UNITETeam: '',
@@ -9147,7 +9202,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Kirill',
     LastName: 'Schweri',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'CH',
     UNITETeam: '',
@@ -9155,7 +9210,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Diano',
     LastName: 'Geluck',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'BE',
     UNITETeam: '',
@@ -9163,7 +9218,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Semen',
     LastName: 'Kuvshinnikov',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'SK',
     UNITETeam: '',
@@ -9171,7 +9226,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Alfie',
     LastName: 'Hopton',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -9179,7 +9234,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Piper - Louise',
     LastName: 'Page',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -9187,7 +9242,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Jake',
     LastName: 'Emery',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -9195,7 +9250,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Nathan',
     LastName: 'Vause',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'BE',
     UNITETeam: '',
@@ -9203,7 +9258,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Lorenzo',
     LastName: 'Garau',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'IT',
     UNITETeam: '',
@@ -9211,7 +9266,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Leone',
     LastName: 'Nadali',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'IT',
     UNITETeam: '',
@@ -9219,7 +9274,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Finley',
     LastName: 'Thyer',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -9227,7 +9282,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Frsco',
     LastName: 'Fratini',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'IT',
     UNITETeam: '',
@@ -9235,7 +9290,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Bailey Marie Lillian Squish',
     LastName: 'Bowen',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -9243,7 +9298,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Frsca',
     LastName: 'Busatto',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'IT',
     UNITETeam: '',
@@ -9251,7 +9306,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Oliwer',
     LastName: 'Hejduk',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'PL',
     UNITETeam: '',
@@ -9259,7 +9314,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Ernest',
     LastName: 'Phoenix',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -9267,7 +9322,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Charlotte',
     LastName: 'Wolf',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'DE',
     UNITETeam: '',
@@ -9275,7 +9330,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Noah',
     LastName: 'Roger -Negrin',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'FR',
     UNITETeam: '',
@@ -9283,7 +9338,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Austin',
     LastName: 'Kind',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -9291,7 +9346,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Luke',
     LastName: 'Yim',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -9299,7 +9354,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Jakub',
     LastName: 'Denk',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'CZ',
     UNITETeam: '',
@@ -9307,7 +9362,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Hugo',
     LastName: 'Feutry',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'FR',
     UNITETeam: '',
@@ -9315,7 +9370,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Miriam',
     LastName: 'Nicotra',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'IT',
     UNITETeam: '',
@@ -9323,7 +9378,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Afonso',
     LastName: 'Santos',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'NO',
     UNITETeam: '',
@@ -9331,7 +9386,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Iestyn',
     LastName: 'Brown',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -9339,7 +9394,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Carmen',
     LastName: 'Criado Braojos',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'ES',
     UNITETeam: '',
@@ -9347,7 +9402,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Benjamin',
     LastName: 'Evrard',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'FR',
     UNITETeam: '',
@@ -9355,7 +9410,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Gabriel',
     LastName: 'Carvalho',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -9363,7 +9418,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Alessandro',
     LastName: 'Mei',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'IT',
     UNITETeam: '',
@@ -9371,7 +9426,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Edward',
     LastName: 'Cahill',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -9379,7 +9434,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Vinny',
     LastName: 'Moncek',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'SK',
     UNITETeam: '',
@@ -9387,7 +9442,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Konrad',
     LastName: 'Møller Schrøder',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'DK',
     UNITETeam: '',
@@ -9395,7 +9450,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Alexis',
     LastName: 'Pörtig',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'CH',
     UNITETeam: '',
@@ -9403,7 +9458,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Èric',
     LastName: 'Alegre Cerdà',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'ES',
     UNITETeam: '',
@@ -9411,7 +9466,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Paul',
     LastName: 'Karasch',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -9419,7 +9474,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Jonathan',
     LastName: 'Quick',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'DE',
     UNITETeam: '',
@@ -9427,7 +9482,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Theodor',
     LastName: 'Miklas',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'AT',
     UNITETeam: '',
@@ -9435,7 +9490,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Tomás',
     LastName: 'Marco',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'ES',
     UNITETeam: '',
@@ -9443,7 +9498,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Luke',
     LastName: 'De Veen',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'DE',
     UNITETeam: '',
@@ -9451,7 +9506,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Nolan',
     LastName: 'Trombetta',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'FR',
     UNITETeam: '',
@@ -9459,7 +9514,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Palko',
     LastName: 'Fabry',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -9467,7 +9522,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Luke',
     LastName: 'Lukinator',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'DE',
     UNITETeam: '',
@@ -9475,7 +9530,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Dex',
     LastName: 'Eneman',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'BE',
     UNITETeam: '',
@@ -9483,7 +9538,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Freddie',
     LastName: 'Perkins',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -9491,7 +9546,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Valentin',
     LastName: 'Mougenot',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'FR',
     UNITETeam: '',
@@ -9499,7 +9554,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Hugo',
     LastName: 'Benjumea Garcia',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'ES',
     UNITETeam: '',
@@ -9507,7 +9562,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Lukas',
     LastName: 'Schaarschmidt',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'DE',
     UNITETeam: '',
@@ -9515,7 +9570,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Leonardo',
     LastName: 'Taccia',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'IT',
     UNITETeam: '',
@@ -9523,7 +9578,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Zoé',
     LastName: 'Feron',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'BE',
     UNITETeam: '',
@@ -9531,7 +9586,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Maria Amira',
     LastName: 'Pistone',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'IT',
     UNITETeam: '',
@@ -9539,7 +9594,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Bianca Maria',
     LastName: 'Conte',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'IT',
     UNITETeam: '',
@@ -9547,7 +9602,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Illiana',
     LastName: 'Thimpont',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'BE',
     UNITETeam: '',
@@ -9555,7 +9610,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Charlie',
     LastName: 'Nystedt',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'SE',
     UNITETeam: '',
@@ -9563,7 +9618,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Ossian',
     LastName: 'Niska',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'SE',
     UNITETeam: '',
@@ -9571,7 +9626,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Hermína',
     LastName: 'Slavkovská',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'CZ',
     UNITETeam: '',
@@ -9579,7 +9634,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Zara',
     LastName: 'Tarrant',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -9587,7 +9642,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Taïs',
     LastName: 'Jousseaume',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'FR',
     UNITETeam: '',
@@ -9595,7 +9650,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Veit',
     LastName: 'Schäfer',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'DE',
     UNITETeam: '',
@@ -9603,7 +9658,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Oskari',
     LastName: 'Salomäki',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'FI',
     UNITETeam: '',
@@ -9611,7 +9666,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Esmay',
     LastName: 'Rietsema',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'NL',
     UNITETeam: '',
@@ -9619,7 +9674,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Čeněk',
     LastName: 'Čepela',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'CZ',
     UNITETeam: '',
@@ -9627,7 +9682,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Zachary',
     LastName: 'Aldred',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -9635,7 +9690,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Marketa',
     LastName: 'Mohrova',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'CZ',
     UNITETeam: '',
@@ -9643,7 +9698,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Witold',
     LastName: 'Badzio',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'PL',
     UNITETeam: '',
@@ -9651,7 +9706,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Niilo',
     LastName: 'Vähämäki',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'FI',
     UNITETeam: '',
@@ -9659,7 +9714,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Henry',
     LastName: 'Welch',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -9667,7 +9722,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Vojtěch',
     LastName: 'Soukup',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'CZ',
     UNITETeam: '',
@@ -9675,7 +9730,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Thomas',
     LastName: 'Davis',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -9683,7 +9738,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Paul',
     LastName: 'Lejeune',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'FR',
     UNITETeam: '',
@@ -9691,7 +9746,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Nathaël',
     LastName: 'Pouillon Torrientes',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'FR',
     UNITETeam: '',
@@ -9699,7 +9754,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Daniel',
     LastName: 'Magda',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'CZ',
     UNITETeam: '',
@@ -9707,7 +9762,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Roman',
     LastName: 'Garus',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'SK',
     UNITETeam: '',
@@ -9715,7 +9770,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Alessandro',
     LastName: 'Vezzoni',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'IT',
     UNITETeam: '',
@@ -9723,7 +9778,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Riccardo',
     LastName: 'Corino',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'IT',
     UNITETeam: '',
@@ -9731,7 +9786,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Felix',
     LastName: 'Christen',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'CH',
     UNITETeam: '',
@@ -9739,7 +9794,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Drew',
     LastName: 'Stephenson',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -9747,7 +9802,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Šimon',
     LastName: 'Belanyi',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'SK',
     UNITETeam: '',
@@ -9755,7 +9810,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Luka',
     LastName: 'Levain',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'FR',
     UNITETeam: '',
@@ -9763,7 +9818,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Elijah',
     LastName: 'Maclean',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -9771,7 +9826,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Sydney',
     LastName: 'De Bruijn',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'NL',
     UNITETeam: '',
@@ -9779,7 +9834,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Rasmus',
     LastName: 'Wagner',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'DK',
     UNITETeam: '',
@@ -9787,7 +9842,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Alberto',
     LastName: 'Zamuner',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'IT',
     UNITETeam: '',
@@ -9795,7 +9850,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Marley Sylvester',
     LastName: 'Skyum',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'DK',
     UNITETeam: '',
@@ -9803,7 +9858,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Cass',
     LastName: 'Morey',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -9811,7 +9866,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Rohan',
     LastName: 'Scott',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -9819,7 +9874,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Gerard',
     LastName: 'Pascual',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'ES',
     UNITETeam: '',
@@ -9827,7 +9882,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Joe',
     LastName: 'Windibank',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -9835,7 +9890,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Shan Wei',
     LastName: 'Church',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -9843,7 +9898,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Tigran',
     LastName: 'Fatunz',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'DE',
     UNITETeam: '',
@@ -9851,7 +9906,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Raúl',
     LastName: 'Santander',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'ES',
     UNITETeam: '',
@@ -9859,7 +9914,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Daniele',
     LastName: 'Rosati',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'IT',
     UNITETeam: '',
@@ -9867,7 +9922,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Eliot',
     LastName: 'Duclos',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'FR',
     UNITETeam: '',
@@ -9875,7 +9930,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Naël',
     LastName: 'El-Kareh',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'ES',
     UNITETeam: '',
@@ -9883,7 +9938,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Antoni',
     LastName: 'Pilarczyk',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'PL',
     UNITETeam: '',
@@ -9891,7 +9946,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Adam',
     LastName: 'Lawson',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -9899,7 +9954,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Niki',
     LastName: 'Münch',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'DE',
     UNITETeam: '',
@@ -9907,7 +9962,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Jan',
     LastName: 'Jakubowski',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'PL',
     UNITETeam: '',
@@ -9915,7 +9970,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Maïwenn',
     LastName: 'Raoult',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'FR',
     UNITETeam: '',
@@ -9923,7 +9978,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Elliott',
     LastName: 'Lam',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -9931,7 +9986,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Franek',
     LastName: 'Rayss',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'PL',
     UNITETeam: '',
@@ -9939,7 +9994,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Daniel',
     LastName: 'Babinec',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'SK',
     UNITETeam: '',
@@ -9947,7 +10002,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Giorgio',
     LastName: 'Gatti',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'IT',
     UNITETeam: '',
@@ -9955,7 +10010,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Nathan',
     LastName: 'Roget-Ricard',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'FR',
     UNITETeam: '',
@@ -9963,7 +10018,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Damiano',
     LastName: 'Taccia',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'IT',
     UNITETeam: '',
@@ -9971,7 +10026,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Bartłomiej',
     LastName: 'Jurczyk',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'PL',
     UNITETeam: '',
@@ -9979,7 +10034,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Tomi',
     LastName: 'Markkula',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'FI',
     UNITETeam: '',
@@ -9987,7 +10042,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Jakub',
     LastName: 'Truban',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'SK',
     UNITETeam: '',
@@ -9995,7 +10050,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Théo',
     LastName: 'Melo Pacca',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'ES',
     UNITETeam: '',
@@ -10003,7 +10058,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Robin',
     LastName: 'Möller',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'DE',
     UNITETeam: '',
@@ -10011,7 +10066,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Tymek',
     LastName: 'Kubera',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -10019,7 +10074,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Achille',
     LastName: 'Poupard',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'FR',
     UNITETeam: '',
@@ -10027,7 +10082,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Dylan',
     LastName: 'Goad',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -10035,7 +10090,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Daniel',
     LastName: 'James',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -10043,7 +10098,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Tomasz',
     LastName: 'Chalupka',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'PL',
     UNITETeam: '',
@@ -10051,7 +10106,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Xander',
     LastName: 'Brown',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -10059,7 +10114,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Mathias',
     LastName: 'Lamotte',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'FR',
     UNITETeam: '',
@@ -10067,7 +10122,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Leonardo',
     LastName: 'Lattanzi',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'IT',
     UNITETeam: '',
@@ -10075,7 +10130,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Alexander',
     LastName: 'Calder',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -10083,7 +10138,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Jan',
     LastName: 'Domek',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'PL',
     UNITETeam: '',
@@ -10091,7 +10146,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Zach',
     LastName: 'Robbins',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -10099,7 +10154,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Thomas',
     LastName: 'Lambert',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -10107,7 +10162,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Nicholas',
     LastName: 'Calder',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -10115,7 +10170,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Alexandre',
     LastName: 'Ambroise',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'FR',
     UNITETeam: '',
@@ -10123,7 +10178,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Matthew',
     LastName: 'Krajíček',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'CZ',
     UNITETeam: '',
@@ -10131,7 +10186,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Finn',
     LastName: 'De Boer',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -10139,7 +10194,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Aston',
     LastName: 'Russell',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -10147,7 +10202,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Marc',
     LastName: 'López',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'ES',
     UNITETeam: '',
@@ -10155,7 +10210,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Clark',
     LastName: 'Pacheco',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'DE',
     UNITETeam: '',
@@ -10163,7 +10218,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Erwan',
     LastName: 'Henache',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'FR',
     UNITETeam: '',
@@ -10171,7 +10226,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Jaakko',
     LastName: 'Karjalainen',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'FI',
     UNITETeam: '',
@@ -10179,7 +10234,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Alex',
     LastName: 'Stephenson',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -10187,7 +10242,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Robin',
     LastName: 'Charnet',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'FR',
     UNITETeam: '',
@@ -10195,7 +10250,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Christian',
     LastName: 'Panarello',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'IT',
     UNITETeam: '',
@@ -10203,7 +10258,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Nikolaj',
     LastName: 'Wagner',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'DK',
     UNITETeam: '',
@@ -10211,7 +10266,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Vojtěch',
     LastName: 'Kotlán',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'CZ',
     UNITETeam: '',
@@ -10219,7 +10274,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Andrea',
     LastName: 'Nazzaro',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'IT',
     UNITETeam: '',
@@ -10227,7 +10282,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Thomas',
     LastName: 'Launay',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'FR',
     UNITETeam: '',
@@ -10235,7 +10290,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Ben',
     LastName: 'Terre',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'DE',
     UNITETeam: '',
@@ -10243,7 +10298,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Stephan',
     LastName: 'Pennenburg',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'NL',
     UNITETeam: '',
@@ -10251,7 +10306,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Christopher',
     LastName: 'Haag',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'DE',
     UNITETeam: '',
@@ -10259,7 +10314,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Manuel',
     LastName: 'Zanardi',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'IT',
     UNITETeam: '',
@@ -10267,7 +10322,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Leonardo',
     LastName: 'Rubbano',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'IT',
     UNITETeam: '',
@@ -10275,7 +10330,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Martin',
     LastName: 'Cheminade',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'FR',
     UNITETeam: '',
@@ -10283,7 +10338,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Julius',
     LastName: 'Hoeptner',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'DE',
     UNITETeam: '',
@@ -10291,7 +10346,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Lily',
     LastName: 'Santos',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'FR',
     UNITETeam: '',
@@ -10299,7 +10354,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Dario',
     LastName: 'Meneghello',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'IT',
     UNITETeam: '',
@@ -10307,7 +10362,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Lucie',
     LastName: 'D’Anchald',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'FR',
     UNITETeam: '',
@@ -10315,7 +10370,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Alessio',
     LastName: 'Iodice',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'IT',
     UNITETeam: '',
@@ -10323,7 +10378,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Tomas',
     LastName: 'Malaca',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'PT',
     UNITETeam: '',
@@ -10331,7 +10386,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Tyler',
     LastName: 'Green',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -10339,7 +10394,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Mavjut',
     LastName: 'Mahmut',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'NO',
     UNITETeam: '',
@@ -10347,7 +10402,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Camille',
     LastName: 'Vexenat',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'FR',
     UNITETeam: '',
@@ -10355,7 +10410,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Ilias',
     LastName: 'Vukelic',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'DE',
     UNITETeam: '',
@@ -10363,7 +10418,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Alexandros',
     LastName: 'Charaklias',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'DE',
     UNITETeam: '',
@@ -10371,7 +10426,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Florian',
     LastName: 'Appelgren',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'SE',
     UNITETeam: '',
@@ -10379,7 +10434,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Laurence',
     LastName: 'Tuffrey',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -10387,7 +10442,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Paul',
     LastName: 'Scharntke',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'DE',
     UNITETeam: '',
@@ -10395,7 +10450,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'William',
     LastName: 'Chandler',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -10403,7 +10458,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Luka',
     LastName: 'Springsguth',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'DE',
     UNITETeam: '',
@@ -10411,7 +10466,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Vincenzo Maria',
     LastName: 'Ruta',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'IT',
     UNITETeam: '',
@@ -10419,7 +10474,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Vojtěch',
     LastName: 'Bochenek',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'CZ',
     UNITETeam: '',
@@ -10427,7 +10482,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Igor',
     LastName: 'Nowotnik',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -10435,7 +10490,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Nina',
     LastName: 'Eisenblätter',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'DE',
     UNITETeam: '',
@@ -10443,7 +10498,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Alberto',
     LastName: 'Pascucci',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'IT',
     UNITETeam: '',
@@ -10451,7 +10506,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Alex',
     LastName: 'Świniarski',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'PL',
     UNITETeam: '',
@@ -10459,7 +10514,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Jimi',
     LastName: 'Tarhanen',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'FI',
     UNITETeam: '',
@@ -10467,7 +10522,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Dante',
     LastName: 'Ippolito',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'IT',
     UNITETeam: '',
@@ -10475,7 +10530,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Arnau',
     LastName: 'López',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'ES',
     UNITETeam: '',
@@ -10483,7 +10538,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Gianluca',
     LastName: 'De Lucia',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'IT',
     UNITETeam: '',
@@ -10491,7 +10546,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Nils',
     LastName: 'Menzi',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'CH',
     UNITETeam: '',
@@ -10499,7 +10554,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Giovanni',
     LastName: 'Losito',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'IT',
     UNITETeam: '',
@@ -10507,7 +10562,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Charlie',
     LastName: 'Jarvis',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -10515,7 +10570,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Mikkel Melby',
     LastName: 'Henningsmoen',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'NO',
     UNITETeam: '',
@@ -10523,7 +10578,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Olly',
     LastName: 'Foulger',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -10531,7 +10586,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Jake',
     LastName: 'Chapman',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -10539,7 +10594,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Louka',
     LastName: 'Thurtle',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'FR',
     UNITETeam: '',
@@ -10547,7 +10602,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Pedro',
     LastName: 'Martins',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'PT',
     UNITETeam: '',
@@ -10555,7 +10610,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Kyan',
     LastName: 'Opstoel',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'BE',
     UNITETeam: '',
@@ -10563,7 +10618,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'José',
     LastName: 'Gonzaga',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'PT',
     UNITETeam: '',
@@ -10571,7 +10626,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Jack',
     LastName: 'Halford',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -10579,7 +10634,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Max',
     LastName: 'Rowe',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -10587,7 +10642,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Alexis',
     LastName: 'Evrard',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'FR',
     UNITETeam: '',
@@ -10595,7 +10650,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Pablo',
     LastName: 'Jiménez Castejón',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'ES',
     UNITETeam: '',
@@ -10603,7 +10658,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Ben',
     LastName: 'Burghardt',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'DE',
     UNITETeam: '',
@@ -10611,7 +10666,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Bobby-John',
     LastName: 'Martin',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -10619,7 +10674,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Marek',
     LastName: 'Fusek',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'SK',
     UNITETeam: '',
@@ -10627,7 +10682,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Misha',
     LastName: 'Shapkin',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -10635,7 +10690,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Isaac',
     LastName: 'Curtis',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -10643,7 +10698,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Ben',
     LastName: 'Craig',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -10651,7 +10706,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Rik',
     LastName: 'Pellegrom',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'NL',
     UNITETeam: '',
@@ -10659,7 +10714,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Tybalt',
     LastName: 'Lescouzeres',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'FR',
     UNITETeam: '',
@@ -10667,7 +10722,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Mia Sakura',
     LastName: 'Schmid',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'CH',
     UNITETeam: '',
@@ -10675,7 +10730,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Elliot',
     LastName: 'Harding',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -10683,7 +10738,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Horváth',
     LastName: 'Zsolt',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'HU',
     UNITETeam: '',
@@ -10691,7 +10746,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Felix',
     LastName: 'Lehmann',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'DE',
     UNITETeam: '',
@@ -10699,7 +10754,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Tim',
     LastName: 'Eisenblätter',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'DE',
     UNITETeam: '',
@@ -10707,7 +10762,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Frsco',
     LastName: 'Aragona',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'IT',
     UNITETeam: '',
@@ -10715,7 +10770,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Ryan',
     LastName: 'Herrington',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -10723,7 +10778,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Phillip',
     LastName: 'Kalstrup',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'DK',
     UNITETeam: '',
@@ -10731,7 +10786,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Megan',
     LastName: 'Jacques',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -10739,7 +10794,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Josh',
     LastName: 'Pool',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -10747,7 +10802,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Leonore',
     LastName: 'Budka',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'DE',
     UNITETeam: '',
@@ -10755,7 +10810,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Enzo',
     LastName: 'Jousseaume',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'FR',
     UNITETeam: '',
@@ -10763,7 +10818,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Patrik',
     LastName: 'Polak',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'SK',
     UNITETeam: '',
@@ -10771,7 +10826,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Viktoria',
     LastName: 'Denkova',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'CZ',
     UNITETeam: '',
@@ -10779,7 +10834,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Kacper',
     LastName: 'Berus',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'PL',
     UNITETeam: '',
@@ -10787,7 +10842,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Mats',
     LastName: 'Brock',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'DE',
     UNITETeam: '',
@@ -10795,7 +10850,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Paweł',
     LastName: 'Syryjczyk',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'PL',
     UNITETeam: '',
@@ -10803,7 +10858,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Joseph',
     LastName: 'Coleman',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -10811,7 +10866,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Cheuk Fung',
     LastName: 'Ho',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -10819,7 +10874,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Troy',
     LastName: 'Gailley',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -10827,7 +10882,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Richard',
     LastName: 'Ott',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'AT',
     UNITETeam: '',
@@ -10835,7 +10890,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Kacper',
     LastName: 'Grodzki',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -10843,7 +10898,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Alexander',
     LastName: 'Arnold',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'DE',
     UNITETeam: '',
@@ -10851,7 +10906,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Giuseppe',
     LastName: 'Sico',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'IT',
     UNITETeam: '',
@@ -10859,7 +10914,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Nathan',
     LastName: 'Bernard',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'FR',
     UNITETeam: '',
@@ -10867,7 +10922,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Daniel',
     LastName: 'Brown',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -10875,7 +10930,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Santiago',
     LastName: 'De Saussure',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'CH',
     UNITETeam: '',
@@ -10883,7 +10938,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Zubin',
     LastName: 'Schweitzer',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -10891,7 +10946,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Finn',
     LastName: 'Siebert',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'DE',
     UNITETeam: '',
@@ -10899,7 +10954,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Lewis',
     LastName: 'Mapes',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -10907,7 +10962,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Kingsley',
     LastName: 'Mccarthy',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -10915,7 +10970,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Riley',
     LastName: 'Ionn',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -10923,7 +10978,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Daniel',
     LastName: 'Beier',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'DE',
     UNITETeam: '',
@@ -10931,7 +10986,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Joshua',
     LastName: 'Haines',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -10939,7 +10994,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Isaac',
     LastName: 'Webster',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -10947,7 +11002,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Benjiman',
     LastName: 'Reynolds',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -10955,7 +11010,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'George',
     LastName: 'Palferyman',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -10963,7 +11018,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Dylan',
     LastName: 'Mcpherson',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'GB',
     UNITETeam: '',
@@ -10971,7 +11026,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Artun',
     LastName: 'Alagöz',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'DE',
     UNITETeam: '',
@@ -10979,7 +11034,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Ilian',
     LastName: 'Georgiev',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'FR',
     UNITETeam: '',
@@ -10987,7 +11042,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Jan',
     LastName: 'Kousal',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'CZ',
     UNITETeam: '',
@@ -13379,7 +13434,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Agustin',
     LastName: 'Agustín Videla',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'CL',
     UNITETeam: '',
@@ -13387,7 +13442,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Gabriel',
     LastName: 'Torres',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'BR',
     UNITETeam: '',
@@ -13395,7 +13450,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Marcelo',
     LastName: 'Turra',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'BR',
     UNITETeam: '',
@@ -13403,7 +13458,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Luca',
     LastName: 'Momi',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'BR',
     UNITETeam: '',
@@ -13411,7 +13466,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Pyettra',
     LastName: 'Sasso Silva',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'BR',
     UNITETeam: '',
@@ -13419,7 +13474,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Vicente',
     LastName: 'Carrasco',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'CL',
     UNITETeam: '',
@@ -13427,7 +13482,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Gaspar',
     LastName: 'Elgueta',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'CL',
     UNITETeam: '',
@@ -13435,7 +13490,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Leonardo',
     LastName: 'Mendes Jordão',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'BR',
     UNITETeam: '',
@@ -13443,7 +13498,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Davi',
     LastName: 'Ramos',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'BR',
     UNITETeam: '',
@@ -13451,7 +13506,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Mikaela',
     LastName: 'Places Perez',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'EC',
     UNITETeam: '',
@@ -13459,7 +13514,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Arthur Do Nascimento',
     LastName: 'Oliveira',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'BR',
     UNITETeam: '',
@@ -13467,7 +13522,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Guilherme',
     LastName: 'Trindade',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'BR',
     UNITETeam: '',
@@ -13475,7 +13530,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Henry',
     LastName: 'Kuninari',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'BR',
     UNITETeam: '',
@@ -13483,7 +13538,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Jose',
     LastName: 'Rueda',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'CO',
     UNITETeam: '',
@@ -13491,7 +13546,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'João',
     LastName: 'França',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'BR',
     UNITETeam: '',
@@ -13499,7 +13554,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Mauricio',
     LastName: 'Cuba',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'PE',
     UNITETeam: '',
@@ -13507,7 +13562,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Mateo',
     LastName: 'Bravo Navarrete',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'CL',
     UNITETeam: '',
@@ -13515,7 +13570,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Marcelo',
     LastName: 'Battendieri',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'BR',
     UNITETeam: '',
@@ -13523,7 +13578,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Erick',
     LastName: 'Vidal',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'MX',
     UNITETeam: '',
@@ -13531,7 +13586,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Luiz Guilherme',
     LastName: 'Falcao',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'BR',
     UNITETeam: '',
@@ -13539,7 +13594,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Davi',
     LastName: 'Miranda',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'BR',
     UNITETeam: '',
@@ -13547,7 +13602,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Mateus',
     LastName: 'Dias',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'BR',
     UNITETeam: '',
@@ -13555,7 +13610,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Pietro',
     LastName: 'Demarchi',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'BR',
     UNITETeam: '',
@@ -13563,7 +13618,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Omar Leonel',
     LastName: 'Suarez Diaz',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'MX',
     UNITETeam: '',
@@ -13571,7 +13626,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Angel Facundo',
     LastName: 'Santos Flores',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'PE',
     UNITETeam: '',
@@ -13579,7 +13634,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Miguel Mateo',
     LastName: 'Santos Flores',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'PE',
     UNITETeam: '',
@@ -13587,7 +13642,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Antonia Belen',
     LastName: 'Romero Castillo',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'CL',
     UNITETeam: '',
@@ -13595,7 +13650,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Romeo Benjamin',
     LastName: 'Gonzalez Gallegos',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'MX',
     UNITETeam: '',
@@ -13603,7 +13658,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Lucia',
     LastName: 'Taibo',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'AR',
     UNITETeam: '',
@@ -13611,7 +13666,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Juan Esteban',
     LastName: 'Galvis Becerra',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'CO',
     UNITETeam: '',
@@ -13619,7 +13674,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Santiago',
     LastName: 'Sánchez Hernandez',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'MX',
     UNITETeam: '',
@@ -13627,7 +13682,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Osmar',
     LastName: 'Franco',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'MX',
     UNITETeam: '',
@@ -13635,7 +13690,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Yaretzi',
     LastName: 'Martinez Guzman',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'MX',
     UNITETeam: '',
@@ -13643,7 +13698,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Arthur',
     LastName: 'Silva',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'BR',
     UNITETeam: '',
@@ -13651,7 +13706,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Alejandro',
     LastName: 'Etcheverry',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'UY',
     UNITETeam: '',
@@ -13659,7 +13714,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Paul Martin Askel',
     LastName: 'Karl-Alarcón Chiroque',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'PE',
     UNITETeam: '',
@@ -13667,7 +13722,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'José Roberto',
     LastName: 'Jiménez Chávez',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'MX',
     UNITETeam: '',
@@ -13675,7 +13730,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Murilo',
     LastName: 'Santos',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'BR',
     UNITETeam: '',
@@ -13683,7 +13738,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Andres',
     LastName: 'Ortega',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'MX',
     UNITETeam: '',
@@ -13691,7 +13746,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Erick',
     LastName: 'Arias',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'CL',
     UNITETeam: '',
@@ -13699,7 +13754,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Patricio',
     LastName: 'Osornio Martinez',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'MX',
     UNITETeam: '',
@@ -13707,7 +13762,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Omar Manuel',
     LastName: 'Campos Pacheco',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'MX',
     UNITETeam: '',
@@ -13715,7 +13770,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Cristian',
     LastName: 'Villarroel',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'CL',
     UNITETeam: '',
@@ -13723,7 +13778,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Rodolfo',
     LastName: 'Monterrosa Guevara',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'SV',
     UNITETeam: '',
@@ -13731,7 +13786,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Aurora',
     LastName: 'Garcia',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'MX',
     UNITETeam: '',
@@ -13739,7 +13794,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Rafael',
     LastName: 'Oliver',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'CL',
     UNITETeam: '',
@@ -13747,7 +13802,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Gabriela Lizbeth',
     LastName: 'Zamora Pedroza',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'MX',
     UNITETeam: '',
@@ -13755,7 +13810,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Ainaru',
     LastName: 'Guggiana',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'CL',
     UNITETeam: '',
@@ -13763,7 +13818,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Rebeca N',
     LastName: 'Benítez Garcia',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'MX',
     UNITETeam: '',
@@ -13771,7 +13826,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Lucas',
     LastName: 'Lima',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'BR',
     UNITETeam: '',
@@ -13779,7 +13834,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Alvaro',
     LastName: 'Cataldo',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'CL',
     UNITETeam: '',
@@ -13787,7 +13842,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Leonardo',
     LastName: 'Martinez',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'MX',
     UNITETeam: '',
@@ -13795,7 +13850,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Giovanna',
     LastName: 'Gamboa Espinosa',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'MX',
     UNITETeam: '',
@@ -13803,7 +13858,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Leonardo',
     LastName: 'Cabrera Martinez',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'MX',
     UNITETeam: '',
@@ -13811,7 +13866,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Luciana Bingyi',
     LastName: 'Vieira Li',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'BR',
     UNITETeam: '',
@@ -13819,7 +13874,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Ian Alexander',
     LastName: 'Araya Cabezas',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'CL',
     UNITETeam: '',
@@ -13827,7 +13882,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Asher',
     LastName: 'Zumbado',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'CR',
     UNITETeam: '',
@@ -13835,7 +13890,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Nicolas',
     LastName: 'Yoshida',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'BR',
     UNITETeam: '',
@@ -13843,7 +13898,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Gaspar',
     LastName: 'Droguett',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'CL',
     UNITETeam: '',
@@ -13851,7 +13906,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Alessandro',
     LastName: 'Borja',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'EC',
     UNITETeam: '',
@@ -13859,7 +13914,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Armando',
     LastName: 'Mandujano',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'MX',
     UNITETeam: '',
@@ -13867,7 +13922,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Aitana',
     LastName: 'Molina Esquivel',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'CR',
     UNITETeam: '',
@@ -13875,7 +13930,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Hassan Emilio',
     LastName: 'Juez',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'EC',
     UNITETeam: '',
@@ -13883,7 +13938,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Mateus',
     LastName: 'Falcão',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'BR',
     UNITETeam: '',
@@ -13891,7 +13946,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Akira',
     LastName: 'Palares',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'PY',
     UNITETeam: '',
@@ -13899,7 +13954,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Krystel',
     LastName: 'Venegas',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'CR',
     UNITETeam: '',
@@ -13907,7 +13962,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Pedro',
     LastName: 'Nascimento',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'BR',
     UNITETeam: '',
@@ -13915,7 +13970,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'David Lucca',
     LastName: 'Tenenbaum',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'BR',
     UNITETeam: '',
@@ -13923,7 +13978,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Davi',
     LastName: 'Vasconcelos',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'BR',
     UNITETeam: '',
@@ -13931,7 +13986,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Guilherme',
     LastName: 'Motokashi Bando',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'BR',
     UNITETeam: '',
@@ -13939,7 +13994,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Jennifer',
     LastName: 'Matehus',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'EC',
     UNITETeam: '',
@@ -13947,7 +14002,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Martina',
     LastName: 'Senandes Wartchow',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'BR',
     UNITETeam: '',
@@ -13955,7 +14010,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Gabriel Alejandro',
     LastName: 'Andrade López',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'CL',
     UNITETeam: '',
@@ -13963,7 +14018,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Roberto Jesus',
     LastName: 'Castañeda Vazquez',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'MX',
     UNITETeam: '',
@@ -13971,7 +14026,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Miguel',
     LastName: 'Villegas',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'CL',
     UNITETeam: '',
@@ -13979,7 +14034,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Luiz Gabriel',
     LastName: 'Montagnini De Araujo',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'BR',
     UNITETeam: '',
@@ -13987,7 +14042,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Lorenzo',
     LastName: 'Demarchi',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'BR',
     UNITETeam: '',
@@ -13995,7 +14050,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Dylan José',
     LastName: 'Aldaz Pinos',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'EC',
     UNITETeam: '',
@@ -14003,7 +14058,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Layla',
     LastName: 'Dias',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'BR',
     UNITETeam: '',
@@ -14011,7 +14066,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Ian Sebastian',
     LastName: 'Rojas Sanchez',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'CO',
     UNITETeam: '',
@@ -14019,7 +14074,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Paz',
     LastName: 'Bruna Guianatti',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'CL',
     UNITETeam: '',
@@ -14027,7 +14082,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Zoe Marceline',
     LastName: 'Campos Pacheco',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'MX',
     UNITETeam: '',
@@ -14035,7 +14090,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Guilherme',
     LastName: 'De Souza Leite Neres',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'BR',
     UNITETeam: '',
@@ -14043,7 +14098,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Leon',
     LastName: 'Ferreira',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'BR',
     UNITETeam: '',
@@ -14051,7 +14106,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Kenneth',
     LastName: 'Chou',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'CL',
     UNITETeam: '',
@@ -14059,7 +14114,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Lorenzo',
     LastName: 'Vieira',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'BR',
     UNITETeam: '',
@@ -14067,7 +14122,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Juan Martin',
     LastName: 'Pujol',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'UY',
     UNITETeam: '',
@@ -14075,7 +14130,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Samuel',
     LastName: 'Zapateiro',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'PA',
     UNITETeam: '',
@@ -14083,7 +14138,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Leônidas',
     LastName: 'Alcântara',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'BR',
     UNITETeam: '',
@@ -14091,7 +14146,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Bruno',
     LastName: 'Loeza',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'MX',
     UNITETeam: '',
@@ -14099,7 +14154,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Lucas',
     LastName: 'Galvao',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'BR',
     UNITETeam: '',
@@ -14107,7 +14162,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Teodoro',
     LastName: 'San Martín Schwerter',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'CL',
     UNITETeam: '',
@@ -14115,7 +14170,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Julio Cesar',
     LastName: 'Corrales Bermejo',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'EC',
     UNITETeam: '',
@@ -14123,7 +14178,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Enzo',
     LastName: 'Gabriel',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'BR',
     UNITETeam: '',
@@ -14131,7 +14186,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Iker Alessandro',
     LastName: 'Gamboa Heredia',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'MX',
     UNITETeam: '',
@@ -14139,7 +14194,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Alina Beatriz',
     LastName: 'Ovando',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'MX',
     UNITETeam: '',
@@ -14147,7 +14202,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Maria Fernanda',
     LastName: 'Nunes Buechele',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'BR',
     UNITETeam: '',
@@ -14155,7 +14210,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Aylin Valeria',
     LastName: 'Soto',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'MX',
     UNITETeam: '',
@@ -14163,7 +14218,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Lucas Nahuel',
     LastName: 'Aquino Caballero',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'PY',
     UNITETeam: '',
@@ -14171,7 +14226,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Luis Humberto',
     LastName: 'Hoyos',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'MX',
     UNITETeam: '',
@@ -14179,7 +14234,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Juan Pablo',
     LastName: 'Dominguez',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'MX',
     UNITETeam: '',
@@ -14187,7 +14242,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Lia',
     LastName: 'Momi Paniz',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'BR',
     UNITETeam: '',
@@ -14195,7 +14250,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Dante',
     LastName: 'Castro',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'CL',
     UNITETeam: '',
@@ -14203,7 +14258,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Mateo',
     LastName: 'Vargas Espinosa',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'MX',
     UNITETeam: '',
@@ -14211,7 +14266,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Sophie',
     LastName: 'Urzua',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'CL',
     UNITETeam: '',
@@ -14219,7 +14274,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Noah',
     LastName: 'Sousa',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'BR',
     UNITETeam: '',
@@ -14227,7 +14282,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Abigail',
     LastName: 'Altamirano',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'CL',
     UNITETeam: '',
@@ -14235,7 +14290,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Pedro',
     LastName: 'Lucca Medeiros De França',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'BR',
     UNITETeam: '',
@@ -14243,7 +14298,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Gabriel',
     LastName: 'Fernandez',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'BR',
     UNITETeam: '',
@@ -14251,7 +14306,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Emilio',
     LastName: 'Cordero',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'CL',
     UNITETeam: '',
@@ -14259,7 +14314,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Giovanny',
     LastName: 'Sasso Silva',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'BR',
     UNITETeam: '',
@@ -14267,7 +14322,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Pedro',
     LastName: 'Augusto',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'BR',
     UNITETeam: '',
@@ -14275,7 +14330,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Adriano',
     LastName: 'Manzini',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'BR',
     UNITETeam: '',
@@ -14283,7 +14338,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Cássio',
     LastName: 'Moraes',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'BR',
     UNITETeam: '',
@@ -14291,7 +14346,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Rafael',
     LastName: 'Masuko',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'BR',
     UNITETeam: '',
@@ -14299,7 +14354,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Alberto',
     LastName: 'Oliveira Gonzaga Filho',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'BR',
     UNITETeam: '',
@@ -14307,7 +14362,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Gaspar Eduardo',
     LastName: 'Ferreria Vargas',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'CL',
     UNITETeam: '',
@@ -14315,7 +14370,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Guilherme',
     LastName: 'Gonçalves',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'BR',
     UNITETeam: '',
@@ -14323,7 +14378,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Leonardo',
     LastName: 'Viveiros',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'BR',
     UNITETeam: '',
@@ -14331,7 +14386,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Lucas',
     LastName: 'Shiraya',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'BR',
     UNITETeam: '',
@@ -14339,7 +14394,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Juan Esteban',
     LastName: 'Luna',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'CO',
     UNITETeam: '',
@@ -14347,7 +14402,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Lucas',
     LastName: 'Valderrama',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'CL',
     UNITETeam: '',
@@ -14355,7 +14410,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Antonio',
     LastName: 'Peralta',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'CL',
     UNITETeam: '',
@@ -14363,7 +14418,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Sebastian',
     LastName: 'Martinez',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'CL',
     UNITETeam: '',
@@ -14371,7 +14426,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Emily',
     LastName: 'Molina',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'CL',
     UNITETeam: '',
@@ -14379,7 +14434,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Henrique',
     LastName: 'Guarita',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'BR',
     UNITETeam: '',
@@ -14387,7 +14442,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Riquelme',
     LastName: 'Spolavori',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'BR',
     UNITETeam: '',
@@ -14395,7 +14450,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Yazid Ivan',
     LastName: 'Martinez Guzman',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'MX',
     UNITETeam: '',
@@ -14403,7 +14458,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Jared',
     LastName: 'Avila',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'CL',
     UNITETeam: '',
@@ -14411,7 +14466,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Arthur',
     LastName: 'Montagnini De Nardi',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'BR',
     UNITETeam: '',
@@ -14419,7 +14474,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Manuel',
     LastName: 'Lazo',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'PE',
     UNITETeam: '',
@@ -14427,7 +14482,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Sebastian',
     LastName: 'Gallo',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'CL',
     UNITETeam: '',
@@ -14435,7 +14490,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Iorel',
     LastName: 'Jara',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'CL',
     UNITETeam: '',
@@ -14443,7 +14498,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Nikolás',
     LastName: 'Faicán',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'EC',
     UNITETeam: '',
@@ -14451,7 +14506,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Carlos Andrés',
     LastName: 'Sanchez Hernandez',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'MX',
     UNITETeam: '',
@@ -14459,7 +14514,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Felipe',
     LastName: 'Andres',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'AR',
     UNITETeam: '',
@@ -14467,7 +14522,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Joakim',
     LastName: 'Etcheverry',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'UY',
     UNITETeam: '',
@@ -14475,7 +14530,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Luis Octavio',
     LastName: 'Ramos Arteaga',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'MX',
     UNITETeam: '',
@@ -14483,7 +14538,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Alonso',
     LastName: 'Veisaga',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'CL',
     UNITETeam: '',
@@ -14491,7 +14546,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Leonardo',
     LastName: 'Gamboa Espinosa',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'MX',
     UNITETeam: '',
@@ -14499,7 +14554,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Patrick',
     LastName: 'Escalante',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'PE',
     UNITETeam: '',
@@ -14507,7 +14562,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Juan Daniel',
     LastName: 'Palomino Garcia',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'MX',
     UNITETeam: '',
@@ -14515,7 +14570,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Mariano',
     LastName: 'Sánchez Villalobos',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'CR',
     UNITETeam: '',
@@ -14523,7 +14578,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Eduardo',
     LastName: 'Avila Campos',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'MX',
     UNITETeam: '',
@@ -14531,7 +14586,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Amanda',
     LastName: 'Garnier',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'CR',
     UNITETeam: '',
@@ -14539,7 +14594,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Luigi',
     LastName: 'Bolinja',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'BR',
     UNITETeam: '',
@@ -14547,7 +14602,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Rodrigo',
     LastName: 'Núñez',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'MX',
     UNITETeam: '',
@@ -14555,7 +14610,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Carlos Humberto',
     LastName: 'Monterrosa',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'SV',
     UNITETeam: '',
@@ -14563,7 +14618,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Joao',
     LastName: 'Bahiense',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'BR',
     UNITETeam: '',
@@ -14571,7 +14626,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Diego',
     LastName: 'Suarez',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'PE',
     UNITETeam: '',
@@ -14579,7 +14634,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Lucas',
     LastName: 'Carrazana Barraza',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'CL',
     UNITETeam: '',
@@ -14587,7 +14642,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'David',
     LastName: 'Avila',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'MX',
     UNITETeam: '',
@@ -14595,7 +14650,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Axel',
     LastName: 'Bassi',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'CL',
     UNITETeam: '',
@@ -14603,7 +14658,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Cristobal',
     LastName: 'Alfaro',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'CL',
     UNITETeam: '',
@@ -14611,7 +14666,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Miguel',
     LastName: 'Honofre',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'BR',
     UNITETeam: '',
@@ -14619,7 +14674,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Alberto',
     LastName: 'Carmona',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'MX',
     UNITETeam: '',
@@ -14627,7 +14682,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Igor',
     LastName: 'Azevedo',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'BR',
     UNITETeam: '',
@@ -14635,7 +14690,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Gabriel',
     LastName: 'De Almeida Scabar',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'BR',
     UNITETeam: '',
@@ -14643,7 +14698,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Alexandre',
     LastName: 'Back',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'BR',
     UNITETeam: '',
@@ -14651,7 +14706,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Tomas Gustavo',
     LastName: 'Lopez Maripangui',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'CL',
     UNITETeam: '',
@@ -14659,7 +14714,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Arthur',
     LastName: 'Rocha',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'BR',
     UNITETeam: '',
@@ -14667,7 +14722,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Andres',
     LastName: 'Osorio Mendoza',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'MX',
     UNITETeam: '',
@@ -14675,7 +14730,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Bruno',
     LastName: 'Mazzarolo',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'BR',
     UNITETeam: '',
@@ -14683,7 +14738,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Gabriel',
     LastName: 'Soares',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'BR',
     UNITETeam: '',
@@ -14691,7 +14746,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Eithan Alejandro',
     LastName: 'Altamar',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'CO',
     UNITETeam: '',
@@ -14699,7 +14754,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Geovanny',
     LastName: 'Paredes',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'EC',
     UNITETeam: '',
@@ -14707,7 +14762,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Thiago',
     LastName: 'Rosa',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'BR',
     UNITETeam: '',
@@ -14715,7 +14770,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Vicente',
     LastName: 'Schiller',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'BR',
     UNITETeam: '',
@@ -14723,7 +14778,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Josefa',
     LastName: 'Urrutia',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'CL',
     UNITETeam: '',
@@ -14731,7 +14786,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Emma',
     LastName: 'Zubiri',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'AR',
     UNITETeam: '',
@@ -14739,7 +14794,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Mathias',
     LastName: 'Ojeda',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'CL',
     UNITETeam: '',
@@ -14747,7 +14802,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Pedro',
     LastName: 'Mesquita',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'BR',
     UNITETeam: '',
@@ -14755,7 +14810,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Romel Joaquín',
     LastName: 'Zurita Lucero',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'EC',
     UNITETeam: '',
@@ -14763,7 +14818,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Davi',
     LastName: 'Nascimento',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'BR',
     UNITETeam: '',
@@ -14771,7 +14826,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Diego',
     LastName: 'Toro',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'CL',
     UNITETeam: '',
@@ -14779,7 +14834,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Alejandro',
     LastName: 'Marcial',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'MX',
     UNITETeam: '',
@@ -14787,7 +14842,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Luis Carlos',
     LastName: 'Córdova',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'MX',
     UNITETeam: '',
@@ -14795,7 +14850,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Juan',
     LastName: 'Caballero',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'CO',
     UNITETeam: '',
@@ -14803,7 +14858,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Marco Antonio',
     LastName: 'Guerrero Herrera',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'MX',
     UNITETeam: '',
@@ -14811,7 +14866,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Vicente Lionel',
     LastName: 'Flores Rodríguez',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'CL',
     UNITETeam: '',
@@ -14819,7 +14874,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Felipe Guilherme',
     LastName: 'Passarelli De Oliveira',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'BR',
     UNITETeam: '',
@@ -14827,7 +14882,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Luis Esteban',
     LastName: 'Silva',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'CR',
     UNITETeam: '',
@@ -14835,7 +14890,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Carlos',
     LastName: 'Ortiz',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'MX',
     UNITETeam: '',
@@ -14843,7 +14898,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Max',
     LastName: 'Mejia',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'MX',
     UNITETeam: '',
@@ -14851,7 +14906,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Angel',
     LastName: 'Hevia',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'CL',
     UNITETeam: '',
@@ -14859,7 +14914,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Bastian',
     LastName: 'Gamboa',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'MX',
     UNITETeam: '',
@@ -14867,7 +14922,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Andrés',
     LastName: 'Vargas Espinosa',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'MX',
     UNITETeam: '',
@@ -14875,7 +14930,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Lucas',
     LastName: 'Puppin',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'BR',
     UNITETeam: '',
@@ -14883,7 +14938,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Kauan',
     LastName: 'Henrique Ferreira Da Silva',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'BR',
     UNITETeam: '',
@@ -14891,7 +14946,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Evan',
     LastName: 'Araneda',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'CL',
     UNITETeam: '',
@@ -14899,7 +14954,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Herbert',
     LastName: 'Campos Guzmán',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'MX',
     UNITETeam: '',
@@ -14907,7 +14962,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'José De Jesús',
     LastName: 'Jiménez Grajeda',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'MX',
     UNITETeam: '',
@@ -14915,7 +14970,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Emanuel',
     LastName: 'Souza',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'BR',
     UNITETeam: '',
@@ -14923,7 +14978,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Aylin',
     LastName: 'Trejo',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'MX',
     UNITETeam: '',
@@ -14931,7 +14986,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Yuri',
     LastName: 'Lohan',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'BR',
     UNITETeam: '',
@@ -14939,7 +14994,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Joaquin',
     LastName: 'Albornoz',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'CL',
     UNITETeam: '',
@@ -14947,7 +15002,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Ian Gustavo',
     LastName: 'Bezerra De Oliveira',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'BR',
     UNITETeam: '',
@@ -15298,7 +15353,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   },
   {
     FirstName: 'Adilson',
-    LastName: 'Junior',
+    LastName: 'Juniors',
     AgeDivision: 'Masters',
     Game: 'TCG',
     Country: 'BR',
@@ -17347,7 +17402,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Drake',
     LastName: 'Zhu',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'NZ',
     UNITETeam: '',
@@ -17355,7 +17410,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Kingsley',
     LastName: 'Cheng',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'AU',
     UNITETeam: '',
@@ -17363,7 +17418,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Gustavo',
     LastName: 'Goncalves',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'AU',
     UNITETeam: '',
@@ -17371,7 +17426,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Minoru',
     LastName: 'Handa',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'AU',
     UNITETeam: '',
@@ -17379,7 +17434,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Sebastian',
     LastName: 'Li',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'NZ',
     UNITETeam: '',
@@ -17387,7 +17442,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Charlie',
     LastName: 'Lindh',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'AU',
     UNITETeam: '',
@@ -17395,7 +17450,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Robin',
     LastName: 'Luo',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'NZ',
     UNITETeam: '',
@@ -17403,7 +17458,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Anakin',
     LastName: 'De La Garma',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'AU',
     UNITETeam: '',
@@ -17411,7 +17466,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Dylan',
     LastName: 'Smart',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'AU',
     UNITETeam: '',
@@ -17419,7 +17474,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Madeline',
     LastName: 'Burness',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'AU',
     UNITETeam: '',
@@ -17427,7 +17482,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Arnold',
     LastName: 'Hepner',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'AU',
     UNITETeam: '',
@@ -17435,7 +17490,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Winter',
     LastName: 'Steinhardt',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'AU',
     UNITETeam: '',
@@ -17443,7 +17498,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Harry',
     LastName: 'Hall',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'AU',
     UNITETeam: '',
@@ -17451,7 +17506,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Harry',
     LastName: 'Biggar',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'AU',
     UNITETeam: '',
@@ -17459,7 +17514,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Lucan',
     LastName: 'Walker',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'AU',
     UNITETeam: '',
@@ -17467,7 +17522,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Takumi',
     LastName: 'Matsuo',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'AU',
     UNITETeam: '',
@@ -17475,7 +17530,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Wilbur',
     LastName: 'Smit',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'AU',
     UNITETeam: '',
@@ -17483,7 +17538,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Connor',
     LastName: 'Flood',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'NZ',
     UNITETeam: '',
@@ -17491,7 +17546,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Olivia',
     LastName: 'Hanney',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'AU',
     UNITETeam: '',
@@ -17499,7 +17554,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Audrey',
     LastName: 'Hall',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'AU',
     UNITETeam: '',
@@ -17507,7 +17562,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Rhys',
     LastName: 'Beasley',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'AU',
     UNITETeam: '',
@@ -17515,7 +17570,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Attila',
     LastName: 'Roos',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'AU',
     UNITETeam: '',
@@ -17523,7 +17578,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Olivia',
     LastName: 'Harb',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'NZ',
     UNITETeam: '',
@@ -17531,7 +17586,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Oskar',
     LastName: 'Biezaitis-Day',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'AU',
     UNITETeam: '',
@@ -17539,7 +17594,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Gabriel',
     LastName: 'Chong',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'AU',
     UNITETeam: '',
@@ -17547,7 +17602,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Kayden',
     LastName: 'Wang',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'NZ',
     UNITETeam: '',
@@ -17555,7 +17610,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Isaac',
     LastName: 'Smart',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'AU',
     UNITETeam: '',
@@ -17563,7 +17618,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Harry',
     LastName: 'D',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'AU',
     UNITETeam: '',
@@ -17571,7 +17626,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Dylan',
     LastName: 'Li',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'NZ',
     UNITETeam: '',
@@ -17579,7 +17634,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Hamish',
     LastName: 'O',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'AU',
     UNITETeam: '',
@@ -17587,7 +17642,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Nathan',
     LastName: 'Dallow',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'NZ',
     UNITETeam: '',
@@ -17595,7 +17650,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Jesse',
     LastName: 'Lewis',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'AU',
     UNITETeam: '',
@@ -17603,7 +17658,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Kai Lin',
     LastName: 'Lin',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'AU',
     UNITETeam: '',
@@ -17611,7 +17666,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Miles',
     LastName: 'Timlin',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'AU',
     UNITETeam: '',
@@ -17619,7 +17674,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Fergus',
     LastName: 'Bell',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'AU',
     UNITETeam: '',
@@ -17627,7 +17682,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Oliver',
     LastName: 'Hanns',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'AU',
     UNITETeam: '',
@@ -17635,7 +17690,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Hikaru',
     LastName: 'Handa',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'AU',
     UNITETeam: '',
@@ -17643,7 +17698,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Yuichi',
     LastName: 'Matsuo',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'AU',
     UNITETeam: '',
@@ -17651,7 +17706,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Naomi',
     LastName: 'Chan',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'AU',
     UNITETeam: '',
@@ -17659,7 +17714,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Thomas',
     LastName: 'Hormann',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'AU',
     UNITETeam: '',
@@ -17667,7 +17722,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Luke',
     LastName: 'Bennett',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'AU',
     UNITETeam: '',
@@ -17675,7 +17730,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'James',
     LastName: 'Stark',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'AU',
     UNITETeam: '',
@@ -17683,7 +17738,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Ryan',
     LastName: 'Flood',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'NZ',
     UNITETeam: '',
@@ -17691,7 +17746,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Scout',
     LastName: 'Harris',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'NZ',
     UNITETeam: '',
@@ -17699,7 +17754,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Manik',
     LastName: 'Satharasinghe',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'AU',
     UNITETeam: '',
@@ -17707,7 +17762,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Tyson',
     LastName: 'Ashkenazy',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'AU',
     UNITETeam: '',
@@ -17715,7 +17770,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Charlie',
     LastName: 'Ashton Rafferty',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'AU',
     UNITETeam: '',
@@ -17723,7 +17778,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Elijah',
     LastName: 'Smart',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'AU',
     UNITETeam: '',
@@ -17731,7 +17786,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Evan',
     LastName: 'Phillips',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'AU',
     UNITETeam: '',
@@ -17739,7 +17794,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Kajaani',
     LastName: 'Jaffers',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'AU',
     UNITETeam: '',
@@ -17747,7 +17802,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Owen',
     LastName: 'Dyson',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'AU',
     UNITETeam: '',
@@ -17755,7 +17810,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Jake',
     LastName: 'Ng',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'AU',
     UNITETeam: '',
@@ -17763,7 +17818,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'William',
     LastName: 'Flanagan',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'NZ',
     UNITETeam: '',
@@ -17771,7 +17826,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Charlie',
     LastName: 'Au',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'NZ',
     UNITETeam: '',
@@ -17779,7 +17834,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Hunter-James',
     LastName: 'Kokolis',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'AU',
     UNITETeam: '',
@@ -17787,7 +17842,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Dean',
     LastName: 'Turner',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'AU',
     UNITETeam: '',
@@ -17795,7 +17850,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Benjamin',
     LastName: 'James',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'NZ',
     UNITETeam: '',
@@ -17803,7 +17858,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Aurélien',
     LastName: 'Brugnoli-Batten',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'NZ',
     UNITETeam: '',
@@ -17811,7 +17866,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Noah',
     LastName: 'Lewis',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'AU',
     UNITETeam: '',
@@ -17819,7 +17874,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Micah',
     LastName: 'Glover',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'AU',
     UNITETeam: '',
@@ -17827,7 +17882,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Cooper',
     LastName: 'Jackson-Ford',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'NZ',
     UNITETeam: '',
@@ -17835,7 +17890,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Oliver',
     LastName: 'Knight-Leighton',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'AU',
     UNITETeam: '',
@@ -17843,7 +17898,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Ria',
     LastName: 'Woodhead',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'NZ',
     UNITETeam: '',
@@ -17851,7 +17906,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Brody',
     LastName: 'Dunstan',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'AU',
     UNITETeam: '',
@@ -17859,7 +17914,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'William',
     LastName: 'Seifert',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'AU',
     UNITETeam: '',
@@ -17867,7 +17922,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Elliott',
     LastName: 'Murphy',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'AU',
     UNITETeam: '',
@@ -17875,7 +17930,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Will',
     LastName: 'Timlin',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'AU',
     UNITETeam: '',
@@ -17883,7 +17938,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Toby',
     LastName: 'Payne',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'AU',
     UNITETeam: '',
@@ -17891,7 +17946,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Addison',
     LastName: 'Yip',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'AU',
     UNITETeam: '',
@@ -18899,7 +18954,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Zac',
     LastName: 'Aufrichtig',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'ZA',
     UNITETeam: '',
@@ -18907,7 +18962,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Ajay',
     LastName: 'Williams',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'ZA',
     UNITETeam: '',
@@ -18915,7 +18970,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Jude',
     LastName: 'Louw',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'ZA',
     UNITETeam: '',
@@ -18923,7 +18978,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Teegan',
     LastName: 'Mcdonald',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'ZA',
     UNITETeam: '',
@@ -18931,7 +18986,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Moegsien',
     LastName: 'Harris',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'ZA',
     UNITETeam: '',
@@ -18939,7 +18994,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Niklaus',
     LastName: 'Hans',
-    AgeDivision: 'Junior',
+    AgeDivision: 'Juniors',
     Game: 'TCG',
     Country: 'ZA',
     UNITETeam: '',
@@ -18947,7 +19002,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Josh',
     LastName: 'Lillie',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'ZA',
     UNITETeam: '',
@@ -18955,7 +19010,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Jayden',
     LastName: 'Van Der Walt',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'ZA',
     UNITETeam: '',
@@ -18963,7 +19018,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Jahdo',
     LastName: 'Bwakura',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'ZA',
     UNITETeam: '',
@@ -18971,7 +19026,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Brandon',
     LastName: 'Pieters',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'ZA',
     UNITETeam: '',
@@ -18979,7 +19034,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Damian',
     LastName: 'Stone',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'ZA',
     UNITETeam: '',
@@ -18987,7 +19042,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Rafaeel',
     LastName: 'Limbada',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'ZA',
     UNITETeam: '',
@@ -18995,7 +19050,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Mika',
     LastName: 'Ballim',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'ZA',
     UNITETeam: '',
@@ -19003,7 +19058,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Diego',
     LastName: 'Dankers',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'ZA',
     UNITETeam: '',
@@ -19011,7 +19066,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Zuleikah',
     LastName: 'Limbada',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'ZA',
     UNITETeam: '',
@@ -19019,7 +19074,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Zaki',
     LastName: 'Ballim',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'ZA',
     UNITETeam: '',
@@ -19027,7 +19082,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Rhys',
     LastName: 'Anderson',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'ZA',
     UNITETeam: '',
@@ -19035,7 +19090,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Kian',
     LastName: 'Hendricks',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'ZA',
     UNITETeam: '',
@@ -19043,7 +19098,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Casey',
     LastName: 'Williamson',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'ZA',
     UNITETeam: '',
@@ -19051,7 +19106,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'North',
     LastName: 'Taylor',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'AE',
     UNITETeam: '',
@@ -19059,7 +19114,7 @@ export const initialWorldsPlayers: IWorldsPlayers[] = [
   {
     FirstName: 'Jack',
     LastName: 'Paul',
-    AgeDivision: 'Senior',
+    AgeDivision: 'Seniors',
     Game: 'TCG',
     Country: 'ZA',
     UNITETeam: '',

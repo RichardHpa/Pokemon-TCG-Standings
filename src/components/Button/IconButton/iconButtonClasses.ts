@@ -1,5 +1,5 @@
 export const iconButtonClasses = {
-  base: 'font-medium text-sm text-center inline-flex items-center rounded-full',
+  base: 'font-medium text-sm text-center inline-flex items-center',
   icon: {
     base: 'inline-block',
     size: {

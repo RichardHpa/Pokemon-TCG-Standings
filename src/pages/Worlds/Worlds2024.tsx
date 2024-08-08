@@ -3,7 +3,7 @@ import { LoaderFunctionArgs, useLoaderData } from 'react-router-dom';
 import { ArrowRightIcon } from '@heroicons/react/24/solid';
 import { Link } from 'react-router-dom';
 import clsx from 'clsx';
-import { getCountryData, TCountryCode } from 'countries-list';
+import { getCountryData, getEmojiFlag } from 'countries-list';
 
 import WorldsLogo from 'images/wc24-key-art-2x.webp';
 import { RunningPersonIcon } from 'icons/RunningPerson';
@@ -19,11 +19,29 @@ import { NOT_STARTED } from 'constants/tournament';
 import { uppercaseFirstLetter } from 'utils/uppercaseFirstLetter';
 import { removeCountryFromName } from 'utils/removeCountryFromName';
 
-import { useGetPlayersByCountry } from 'hooks/useGetPlayersByCountry';
+import { useGetPlayersByCountry, divisionOrder } from 'hooks/useGetPlayersByCountry';
+import { initialWorldsPlayers, countryList } from 'mocks/tempData/0000128';
 
 import type { Division } from 'types/tournament';
+import type { IWorldsPlayers } from 'mocks/tempData/0000128';
+import type { TCountryCode } from 'countries-list';
 
-import { initialWorldsPlayers } from 'mocks/tempData/0000128';
+const CountryList = () => {
+  return (
+    <div className="flex flex-wrap gap-2 justify-center">
+      {/* @ts-expect-error */}
+      {countryList.map((country: TCountryCode) => {
+        return (
+          <Link key={country} to={`/worlds-2024/${country}`}>
+            <div className="bg-gray-100 text-gray-800 text-sm font-medium px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300 hover:bg-gray-200 hover:dark:bg-gray-500">
+              {getEmojiFlag(country)} {country}
+            </div>
+          </Link>
+        );
+      })}
+    </div>
+  );
+};
 
 const PlayerInfo = ({
   player,
@@ -88,44 +106,91 @@ const PlayerInfo = ({
   );
 };
 
+type GroupedPlayers = {
+  [key in Division]?: IWorldsPlayers[];
+};
+
 const useGetEarlyPlayersByCountry = (country: string) => {
   const players = initialWorldsPlayers.filter(player => player.Country === country);
-  return players;
+
+  const groupedPlayers: GroupedPlayers = players.reduce((acc: GroupedPlayers, player) => {
+    const ageDivision = player.AgeDivision as Division;
+    if (!acc[ageDivision]) {
+      acc[ageDivision] = [];
+    }
+    acc[ageDivision].push(player);
+    return acc;
+  }, {});
+
+  const keys = Object.keys(groupedPlayers) as Division[];
+  const formattedData = keys.map(division => {
+    return {
+      division,
+      data: groupedPlayers[division],
+    };
+  });
+
+  const orderedData = formattedData.sort(
+    (a, b) => divisionOrder.indexOf(a.division) - divisionOrder.indexOf(b.division)
+  );
+
+  return orderedData;
 };
 
 const InitialPlayers = ({ country }: { country: string }) => {
   const players = useGetEarlyPlayersByCountry(country);
+
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 items-baseline">
-      {players.map((player: any) => {
+    <>
+      {players.map(division => {
+        if (!division.data) return null;
+        if (division.data.length === 0) return null;
         return (
-          <Card>
-            <div className="flex flex-col gap-2">
-              <div className="text-center w-full">
-                <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white items-center truncate">
-                  {player.FirstName} {player.LastName}
-                </h5>
-              </div>
+          <div key={division.division}>
+            <div className="mb-8 text-center">
+              <Heading level="2">{uppercaseFirstLetter(division.division)}</Heading>
             </div>
-          </Card>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 items-baseline">
+              {division.data.map((player: any) => {
+                return (
+                  <Card key={`${player.FirstName} ${player.LastName}`}>
+                    <div className="flex flex-col gap-2">
+                      <div className="text-center w-full">
+                        <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white items-center truncate">
+                          {player.FirstName} {player.LastName}
+                        </h5>
+                      </div>
+                    </div>
+                  </Card>
+                );
+              })}
+            </div>
+          </div>
         );
       })}
-    </div>
+    </>
   );
 };
 
 export const worldsLoader = ({ params }: LoaderFunctionArgs) => {
   const { country } = params as { country: string };
+
   if (!country) {
+    throw new Error('Country not found');
+  }
+  const upper = country.toUpperCase();
+
+  if (!countryList.includes(upper)) {
     throw new Error('Country not found');
   }
 
   return {
-    country: country.toUpperCase(),
+    country: upper,
   };
 };
 
-const tournamentId = '0000109';
+const tournamentId = '0000128';
 export const Worlds2024 = () => {
   const { country } = useLoaderData() as { country: string };
 
@@ -166,11 +231,9 @@ export const Worlds2024 = () => {
                 const maxRoundNum = Object.keys(division.data[0].rounds);
                 const currentRound = maxRoundNum[maxRoundNum.length - 1];
                 return (
-                  <div key={division.division} className="">
+                  <div key={division.division}>
                     <div className="mb-8 text-center">
-                      <Heading level="2" className="">
-                        {uppercaseFirstLetter(division.division)}
-                      </Heading>
+                      <Heading level="2">{uppercaseFirstLetter(division.division)}</Heading>
 
                       <p>Currently in round {currentRound}</p>
                     </div>
@@ -192,6 +255,9 @@ export const Worlds2024 = () => {
               })}
             </>
           )}
+
+          <hr />
+          <CountryList />
         </div>
       )}
     </div>

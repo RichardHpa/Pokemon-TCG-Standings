@@ -1,1 +1,1 @@
-export { useGetPlayersByCountry } from './useGetPlayersByCountry';
+export { useGetPlayersByCountry, divisionOrder } from './useGetPlayersByCountry';

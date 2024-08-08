@@ -7,7 +7,7 @@ import { getTournamentStandingsKey } from 'queries/useGetTournamentStandings';
 
 import type { UseGetPlayersByCountry } from './types';
 
-const order = ['Masters', 'Seniors', 'Juniors'];
+export const divisionOrder = ['Masters', 'Seniors', 'Juniors'];
 
 export const useGetPlayersByCountry = ({ tournamentId, country }: UseGetPlayersByCountry) => {
   const queryClient = useQueryClient();
@@ -35,8 +35,9 @@ export const useGetPlayersByCountry = ({ tournamentId, country }: UseGetPlayersB
       });
 
       const orderedData = divisions.sort(
-        (a: any, b: any) => order.indexOf(a.division) - order.indexOf(b.division)
+        (a: any, b: any) => divisionOrder.indexOf(a.division) - divisionOrder.indexOf(b.division)
       );
+
       return {
         tournament: data.tournament,
         divisions: orderedData,
