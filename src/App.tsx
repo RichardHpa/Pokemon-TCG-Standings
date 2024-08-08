@@ -70,10 +70,6 @@ const router = createBrowserRouter([
         path: 'about',
         element: <About />,
       },
-      // {
-      //   path: 'worlds',
-      //   element: <Worlds2024 />,
-      // },
       {
         path: 'worlds-2024/:country',
         loader: worldsLoader,
