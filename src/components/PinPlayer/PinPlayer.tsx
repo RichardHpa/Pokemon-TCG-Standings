@@ -1,4 +1,5 @@
-import { Button } from 'components/Button';
+import { IconButton } from 'components/Button/IconButton';
+import { PinIcon } from 'icons/PinIcon';
 
 import { usePinnedPlayers } from 'providers/PinnedPlayersProvider';
 
@@ -21,10 +22,12 @@ export const PinPlayer = ({
   const checkIsPinned = inPinned(player, tournamentId, division);
 
   return (
-    <Button
-      variant="outlined"
-      color="secondary"
-      size="sm"
+    <IconButton
+      icon={<PinIcon />}
+      alt="View Pinned Players"
+      variant={checkIsPinned ? 'solid' : 'outlined'}
+      size="xs"
+      color={checkIsPinned ? 'primary' : 'secondary'}
       onClick={event => {
         event.stopPropagation();
         if (!checkIsPinned) {
@@ -36,8 +39,6 @@ export const PinPlayer = ({
         }
         togglePinPlayer(player, tournamentId, division);
       }}
-    >
-      {checkIsPinned ? 'Unpin' : 'Pin'}
-    </Button>
+    />
   );
 };

@@ -15,7 +15,7 @@ export function BuyMeACoffeeWidget() {
 
   return (
     <a href="https://www.buymeacoffee.com/richardhpa" target="blank" onClick={handleClick}>
-      <img style={{ height: '50px' }} alt="Buy Me a Coffee Widget" src={image} />
+      <img style={{ height: '40px' }} alt="Buy Me a Coffee Widget" src={image} />
     </a>
   );
 }
