@@ -1,15 +1,24 @@
 export const iconButtonClasses = {
-  base: 'font-medium  text-sm text-center inline-flex items-center',
-  icon: 'h-5 w-5 inline-block',
+  base: 'font-medium text-sm text-center inline-flex items-center rounded-full',
+  icon: {
+    base: 'inline-block',
+    size: {
+      xs: 'h-4 w-4',
+      sm: 'h-4 w-4',
+      base: 'h-5 w-5',
+      lg: 'h-6 w-6',
+      xl: 'h-6 w-6',
+    },
+  },
   rounded: {
     true: 'rounded-full',
     false: 'rounded-lg',
   },
   size: {
-    xs: '',
-    sm: '',
+    xs: 'p-2',
+    sm: 'p-2.5',
     base: 'p-2.5',
-    lg: '',
-    xl: '',
+    lg: 'p-3',
+    xl: 'p-3.5',
   },
 };

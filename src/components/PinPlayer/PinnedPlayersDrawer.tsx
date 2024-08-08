@@ -108,7 +108,7 @@ const DrawerInner = ({ closeDrawer }: { closeDrawer: () => void }) => {
   return (
     <div className="flex-auto">
       <AutoSizer>
-        {({ height, width }) => {
+        {({ height, width }: { height: number; width: number }) => {
           return (
             <List
               ref={listRef}
@@ -149,6 +149,7 @@ export const PinnedPlayersDrawer = () => {
         icon={<PinIcon />}
         alt="View Pinned Players"
         onClick={handleToggleDrawer}
+        color={Object.keys(parsedPlayers).length > 0 ? 'primary' : 'secondary'}
         disabled={Object.keys(parsedPlayers).length === 0}
       />
 

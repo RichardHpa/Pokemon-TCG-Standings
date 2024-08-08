@@ -17,6 +17,6 @@ export const ColorModeSwitcher = () => {
       onClick={handleToggleTheme}
       icon={mode === Theme.DARK ? <MoonIcon /> : <SunIcon />}
       alt={mode === Theme.DARK ? 'Switch to light mode' : 'Switch to dark mode'}
-    ></IconButton>
+    />
   );
 };

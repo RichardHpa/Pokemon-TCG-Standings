@@ -18,7 +18,7 @@ export const IconButton: FC<IconButtonProps> = ({
   ...props
 }) => {
   const RenderedIcon = cloneElement(icon, {
-    className: iconButtonClasses.icon,
+    className: clsx(iconButtonClasses.icon.base, iconButtonClasses.icon.size[size]),
   });
 
   return (
