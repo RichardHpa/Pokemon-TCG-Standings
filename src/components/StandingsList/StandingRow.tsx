@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { Heading } from 'components/Heading';
 import { PinPlayer } from 'components/PinPlayer';
 import { ArchetypeSprites } from 'components/ArchetypeSprites';
+import { RUNNING } from 'constants/tournament';
 
 import { createPlayerUrl } from 'utils/createPlayerUrl';
 
@@ -77,7 +78,7 @@ export const StandingRow: FC<StandingRowProps> = ({
             </svg>
           </div>
         )}
-        {tournamentStatus === 'running' && (
+        {tournamentStatus === RUNNING && (
           <PinPlayer
             tournamentId={tournamentId}
             player={createPlayerUrl(player.name)}
