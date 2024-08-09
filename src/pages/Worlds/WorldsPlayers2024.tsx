@@ -1,6 +1,6 @@
-import { useMemo } from 'react';
+import { useMemo, useState, useEffect } from 'react';
 import { LoaderFunctionArgs, useLoaderData } from 'react-router-dom';
-import { ArrowRightIcon } from '@heroicons/react/24/solid';
+import { ArrowRightIcon, TableCellsIcon, QueueListIcon } from '@heroicons/react/24/solid';
 import { Link } from 'react-router-dom';
 import clsx from 'clsx';
 import { getCountryData } from 'countries-list';
@@ -9,6 +9,7 @@ import { RunningPersonIcon } from 'icons/RunningPerson';
 import { createPlayerUrl } from 'utils/createPlayerUrl';
 import { usePinnedPlayers } from 'providers/PinnedPlayersProvider';
 import { useGetPinnedPlayers } from 'hooks/useGetPinnedPlayers';
+import { useTableLayout, TableLayout } from 'hooks/useTableLayout';
 
 import { Heading } from 'components/Heading';
 import { LoadingPokeball } from 'components/LoadingPokeball';
@@ -16,8 +17,10 @@ import { Card } from 'components/Card';
 import { PlayerRecord } from 'components/PlayerRecord';
 import { RoundRow } from 'components/RoundsTable';
 import { IconButton } from 'components/Button/IconButton';
-import { NOT_STARTED } from 'constants/tournament';
+import { NOT_STARTED, RUNNING } from 'constants/tournament';
 import { PinPlayer } from 'components/PinPlayer';
+import { StandingsList } from 'components/StandingsList';
+import { Tabs, Tab } from 'components/Tabs';
 
 import { CountryList } from './components/CountryList';
 
@@ -187,10 +190,9 @@ const PinnedWorldsPlayers = () => {
     }, []);
   }, [isLoading, filteredPlayers]);
 
-  console.log(worldsPlayers);
-
   if (!worldsPlayers) return null;
   if (worldsPlayers.length === 0) return null;
+
   return (
     <>
       <hr />
@@ -236,6 +238,12 @@ export const worldsLoader = ({ params }: LoaderFunctionArgs) => {
 
 export const WorldsPlayers2024 = () => {
   const { country } = useLoaderData() as { country: string };
+  const { tableLayout, toggleTableLayout } = useTableLayout();
+  const [currentTab, setCurrentTab] = useState(0);
+
+  useEffect(() => {
+    setCurrentTab(0);
+  }, [country]);
 
   const { data, isLoading } = useGetPlayersByCountry({
     tournamentId: fixedTournamentId,
@@ -269,32 +277,64 @@ export const WorldsPlayers2024 = () => {
             <div className="flex flex-col gap-8">
               <PinnedWorldsPlayers />
 
-              {data.divisions.map((division: any) => {
-                const maxRoundNum = Object.keys(division.data[0].rounds);
-                const currentRound = maxRoundNum[maxRoundNum.length - 1];
-                return (
-                  <div key={division.division}>
-                    <div className="mb-8 text-center">
-                      <Heading level="2">{uppercaseFirstLetter(division.division)}</Heading>
+              <Tabs
+                actions={
+                  <IconButton
+                    alt="toggle"
+                    icon={tableLayout === TableLayout.LIST ? <QueueListIcon /> : <TableCellsIcon />}
+                    variant="text"
+                    rounded={false}
+                    color="grey"
+                    onClick={toggleTableLayout}
+                  />
+                }
+              >
+                {data.divisions.map((division: any, index: number) => {
+                  return (
+                    <Tab
+                      key={division.division}
+                      active={currentTab === index}
+                      onClick={() => setCurrentTab(index)}
+                    >
+                      {uppercaseFirstLetter(division.division)}
+                    </Tab>
+                  );
+                })}
+              </Tabs>
 
-                      <p>Currently in round {currentRound}</p>
-                    </div>
-
+              {data.divisions[currentTab] && (
+                <div>
+                  <div className="mb-8 text-center">
+                    <Heading level="2">
+                      {uppercaseFirstLetter(data.divisions[currentTab].division)}
+                    </Heading>
+                  </div>
+                  {tableLayout === TableLayout.LIST ? (
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 items-baseline">
-                      {division.data.map((player: any) => {
+                      {data.divisions[currentTab].data.map((player: any) => {
                         return (
                           <PlayerInfo
                             key={player.name}
                             player={player}
-                            division={division.division}
+                            division={data.divisions[currentTab].division}
                             tournamentId={fixedTournamentId}
                           />
                         );
                       })}
                     </div>
-                  </div>
-                );
-              })}
+                  ) : (
+                    <div className="rounded-xl dark:text-gray-400 border border-gray-100 dark:border-gray-700  bg-white dark:bg-gray-900 h-full flex flex-col overflow-hidden">
+                      <StandingsList
+                        standings={data.divisions[currentTab].data}
+                        tournamentId={fixedTournamentId}
+                        division={data.divisions[currentTab].division}
+                        tournamentStatus={RUNNING}
+                        hideArchetypes
+                      />
+                    </div>
+                  )}
+                </div>
+              )}
             </div>
           )}
 
