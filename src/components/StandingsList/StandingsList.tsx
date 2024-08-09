@@ -70,6 +70,8 @@ export const StandingsList = forwardRef(
         data={standings}
         division={division}
         tournamentId={tournamentId}
+        hideArchetypes={hideArchetypes}
+        tournamentStatus={tournamentStatus}
       />
     );
   }
