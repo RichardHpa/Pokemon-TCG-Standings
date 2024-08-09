@@ -9,6 +9,10 @@ export const Worlds = () => {
       </p>
 
       <CountryList />
+
+      <p className="mb-1 italic text-gray-500 dark:text-gray-400 text-center">
+        Current Standings will be shown once the tournament starts.
+      </p>
     </div>
   );
 };
