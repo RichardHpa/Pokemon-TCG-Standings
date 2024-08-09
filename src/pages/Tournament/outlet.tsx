@@ -4,7 +4,7 @@ import { Heading } from 'components/Heading';
 import { Indicator } from 'components/Indicator';
 import { Tabs, NavTab } from 'components/Tabs';
 
-import { RUNNING } from 'constants/tournament';
+import { RUNNING, NOT_STARTED } from 'constants/tournament';
 import { tournaments } from 'constants/tournaments';
 
 import { useGetTournament } from 'queries/useGetTournament';
@@ -58,28 +58,38 @@ export const TournamentOutlet = () => {
         {tournament.tournamentStatus === RUNNING && <Indicator />}
       </div>
 
-      <Tabs>
-        <NavTab to="masters" active={isBasePath}>
-          Masters{' '}
-          <span className="inline-flex items-center justify-center px-2 h-4 ms-2 text-xs font-semibold text-blue-800 bg-blue-200 rounded-full">
-            {tournament.players.masters}
-          </span>
-        </NavTab>
-        <NavTab to="seniors">
-          Seniors{' '}
-          <span className="inline-flex items-center justify-center px-2 h-4 ms-2 text-xs font-semibold text-blue-800 bg-blue-200 rounded-full">
-            {tournament.players.seniors}
-          </span>
-        </NavTab>
-        <NavTab to="juniors">
-          Juniors{' '}
-          <span className="inline-flex items-center justify-center px-2 h-4 ms-2 text-xs font-semibold text-blue-800 bg-blue-200 rounded-full">
-            {tournament.players.juniors}
-          </span>
-        </NavTab>
-      </Tabs>
-
-      <Outlet />
+      {tournament.tournamentStatus === NOT_STARTED ? (
+        <div>
+          <Heading level="4">Tournament has not started yet</Heading>
+          <p className="text-gray-500 dark:text-gray-400">
+            More information will be provided once the first round standings have been released.
+          </p>
+        </div>
+      ) : (
+        <div>
+          <Tabs>
+            <NavTab to="masters" active={isBasePath}>
+              Masters{' '}
+              <span className="inline-flex items-center justify-center px-2 h-4 ms-2 text-xs font-semibold text-blue-800 bg-blue-200 rounded-full">
+                {tournament.players.masters}
+              </span>
+            </NavTab>
+            <NavTab to="seniors">
+              Seniors{' '}
+              <span className="inline-flex items-center justify-center px-2 h-4 ms-2 text-xs font-semibold text-blue-800 bg-blue-200 rounded-full">
+                {tournament.players.seniors}
+              </span>
+            </NavTab>
+            <NavTab to="juniors">
+              Juniors{' '}
+              <span className="inline-flex items-center justify-center px-2 h-4 ms-2 text-xs font-semibold text-blue-800 bg-blue-200 rounded-full">
+                {tournament.players.juniors}
+              </span>
+            </NavTab>
+          </Tabs>
+          <Outlet />
+        </div>
+      )}
     </div>
   );
 };

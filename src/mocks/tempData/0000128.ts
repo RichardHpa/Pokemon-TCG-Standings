@@ -1,3 +1,5 @@
+import type { TCountryCode } from 'countries-list';
+
 export interface IWorldsPlayers {
   FirstName: string;
   LastName: string;
@@ -7,7 +9,7 @@ export interface IWorldsPlayers {
   UNITETeam: string;
 }
 
-export const countryList = [
+export const countryList: TCountryCode[] = [
   'SG',
   'HK',
   'PH',

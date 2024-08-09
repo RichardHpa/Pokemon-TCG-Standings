@@ -3,9 +3,8 @@ import { LoaderFunctionArgs, useLoaderData } from 'react-router-dom';
 import { ArrowRightIcon } from '@heroicons/react/24/solid';
 import { Link } from 'react-router-dom';
 import clsx from 'clsx';
-import { getCountryData, getEmojiFlag } from 'countries-list';
+import { getCountryData } from 'countries-list';
 
-import WorldsLogo from 'images/wc24-key-art-2x.webp';
 import { RunningPersonIcon } from 'icons/RunningPerson';
 
 import { Heading } from 'components/Heading';
@@ -16,6 +15,8 @@ import { RoundRow } from 'components/RoundsTable';
 import { IconButton } from 'components/Button/IconButton';
 import { NOT_STARTED } from 'constants/tournament';
 
+import { CountryList } from './components/CountryList';
+
 import { uppercaseFirstLetter } from 'utils/uppercaseFirstLetter';
 import { removeCountryFromName } from 'utils/removeCountryFromName';
 
@@ -25,23 +26,6 @@ import { initialWorldsPlayers, countryList } from 'mocks/tempData/0000128';
 import type { Division } from 'types/tournament';
 import type { IWorldsPlayers } from 'mocks/tempData/0000128';
 import type { TCountryCode } from 'countries-list';
-
-const CountryList = () => {
-  return (
-    <div className="flex flex-wrap gap-2 justify-center">
-      {/* @ts-expect-error */}
-      {countryList.map((country: TCountryCode) => {
-        return (
-          <Link key={country} to={`/worlds-2024/${country}`}>
-            <div className="bg-gray-100 text-gray-800 text-sm font-medium px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300 hover:bg-gray-200 hover:dark:bg-gray-500">
-              {getEmojiFlag(country)} {country}
-            </div>
-          </Link>
-        );
-      })}
-    </div>
-  );
-};
 
 const PlayerInfo = ({
   player,
@@ -179,7 +163,7 @@ export const worldsLoader = ({ params }: LoaderFunctionArgs) => {
   if (!country) {
     throw new Error('Country not found');
   }
-  const upper = country.toUpperCase();
+  const upper = country.toUpperCase() as TCountryCode;
 
   if (!countryList.includes(upper)) {
     throw new Error('Country not found');
@@ -191,7 +175,7 @@ export const worldsLoader = ({ params }: LoaderFunctionArgs) => {
 };
 
 const tournamentId = '0000128';
-export const Worlds2024 = () => {
+export const WorldsPlayers2024 = () => {
   const { country } = useLoaderData() as { country: string };
 
   const { data, isLoading } = useGetPlayersByCountry({
@@ -205,10 +189,7 @@ export const Worlds2024 = () => {
 
   return (
     <div className="flex flex-col gap-4">
-      <div className="flex flex-col gap-4 text-center">
-        <img className="h-auto max-w-xs rounded-lg mx-auto" src={WorldsLogo} alt="worlds 2024" />
-        <Heading>Pokemon Worlds 2024</Heading>
-
+      <div className="text-center">
         <p>
           Follow {countryData.name} players as they compete in the Pokemon World Championships 2024
           in Honolulu Hawaii.
