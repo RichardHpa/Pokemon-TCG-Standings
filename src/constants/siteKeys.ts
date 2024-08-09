@@ -1,1 +1,2 @@
-export const pinnedPlayersKey = 'PokemonTCGStandings:pinnedPlayers';
+export const pinnedPlayersKey = 'PokemonTCGStandings:pinnedPlayersV2';
+export const tableLayoutKey = 'PokemonTCGStandings:TableLayout';
