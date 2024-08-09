@@ -2,10 +2,6 @@ import { useState } from 'react';
 
 import { tableLayoutKey } from 'constants/siteKeys';
 
-// import { TableCellsIcon, QueueListIcon } from '@heroicons/react/24/solid';
-
-// import { IconButton } from 'components/Button/IconButton';
-
 export enum TableLayout {
   GRID = 'grid',
   LIST = 'list',
