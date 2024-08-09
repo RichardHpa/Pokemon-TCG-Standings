@@ -6,6 +6,9 @@ import clsx from 'clsx';
 import { getCountryData } from 'countries-list';
 
 import { RunningPersonIcon } from 'icons/RunningPerson';
+import { createPlayerUrl } from 'utils/createPlayerUrl';
+import { usePinnedPlayers } from 'providers/PinnedPlayersProvider';
+import { useGetPinnedPlayers } from 'hooks/useGetPinnedPlayers';
 
 import { Heading } from 'components/Heading';
 import { LoadingPokeball } from 'components/LoadingPokeball';
@@ -14,6 +17,7 @@ import { PlayerRecord } from 'components/PlayerRecord';
 import { RoundRow } from 'components/RoundsTable';
 import { IconButton } from 'components/Button/IconButton';
 import { NOT_STARTED } from 'constants/tournament';
+import { PinPlayer } from 'components/PinPlayer';
 
 import { CountryList } from './components/CountryList';
 
@@ -26,6 +30,9 @@ import { initialWorldsPlayers, countryList } from 'mocks/tempData/0000128';
 import type { Division } from 'types/tournament';
 import type { IWorldsPlayers } from 'mocks/tempData/0000128';
 import type { TCountryCode } from 'countries-list';
+
+// const tournamentId = '0000128';
+const fixedTournamentId = '0000109'; // melbourne 2023
 
 const PlayerInfo = ({
   player,
@@ -54,15 +61,22 @@ const PlayerInfo = ({
               <RunningPersonIcon className="shrink-0 h-5 w-5" />
             </div>
           )}
-          <Link to={`/tournaments/${tournamentId}/${division}/${player.name}`}>
-            <IconButton
-              icon={<ArrowRightIcon />}
-              alt="View more info"
-              variant="text"
-              color="grey"
-              rounded={false}
+          <div className="flex gap-1 items-center">
+            <PinPlayer
+              tournamentId={tournamentId}
+              player={createPlayerUrl(player.name)}
+              division={division}
             />
-          </Link>
+            <Link to={`/tournaments/${tournamentId}/${division}/${player.name}`}>
+              <IconButton
+                icon={<ArrowRightIcon />}
+                alt="View more info"
+                variant="text"
+                color="grey"
+                rounded={false}
+              />
+            </Link>
+          </div>
         </div>
         <div className="flex flex-col gap-2 items-center">
           <div className="relative inline-flex items-center justify-center w-16 h-16 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600">
@@ -77,7 +91,7 @@ const PlayerInfo = ({
           {allRounds && allRounds.length > 0 && (
             <div className="w-full">
               <p className="mb-1 text-xs italic text-gray-500 truncate dark:text-gray-400">
-                Latest Round:
+                Latest Result:
               </p>
               <ul className="border-y-2 border-gray-200 dark:border-gray-700">
                 <RoundRow round={currentRound} roundNum={maxRound} />
@@ -157,6 +171,52 @@ const InitialPlayers = ({ country }: { country: string }) => {
   );
 };
 
+const PinnedWorldsPlayers = () => {
+  const { parsedPlayers } = usePinnedPlayers();
+  const { filteredPlayers, isLoading } = useGetPinnedPlayers(parsedPlayers);
+
+  const worldsPlayers = useMemo(() => {
+    if (isLoading) return [];
+    const tournament = filteredPlayers.find(t => t.tournamentId === fixedTournamentId);
+    const players = tournament?.players;
+    if (!players) return [];
+
+    return Object.entries(players).reduce((acc, [division, players]) => {
+      // @ts-expect-error
+      return acc.concat(players.map(player => ({ division, player })));
+    }, []);
+  }, [isLoading, filteredPlayers]);
+
+  console.log(worldsPlayers);
+
+  if (!worldsPlayers) return null;
+  if (worldsPlayers.length === 0) return null;
+  return (
+    <>
+      <hr />
+      <div className="flex flex-col gap2">
+        <div className="text-center">
+          <Heading level="5">Players your following</Heading>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 items-baseline">
+          {worldsPlayers.map((player: any) => {
+            return (
+              <PlayerInfo
+                key={player.player.name}
+                player={player.player}
+                division={player.division}
+                tournamentId={fixedTournamentId}
+              />
+            );
+          })}
+        </div>
+      </div>
+      <hr />
+    </>
+  );
+};
+
 export const worldsLoader = ({ params }: LoaderFunctionArgs) => {
   const { country } = params as { country: string };
 
@@ -174,12 +234,11 @@ export const worldsLoader = ({ params }: LoaderFunctionArgs) => {
   };
 };
 
-const tournamentId = '0000128';
 export const WorldsPlayers2024 = () => {
   const { country } = useLoaderData() as { country: string };
 
   const { data, isLoading } = useGetPlayersByCountry({
-    tournamentId,
+    tournamentId: fixedTournamentId,
     country: country.toUpperCase(),
   });
 
@@ -207,7 +266,9 @@ export const WorldsPlayers2024 = () => {
           {data.tournament.tournamentStatus === NOT_STARTED ? (
             <InitialPlayers country={country} />
           ) : (
-            <>
+            <div className="flex flex-col gap-8">
+              <PinnedWorldsPlayers />
+
               {data.divisions.map((division: any) => {
                 const maxRoundNum = Object.keys(division.data[0].rounds);
                 const currentRound = maxRoundNum[maxRoundNum.length - 1];
@@ -226,7 +287,7 @@ export const WorldsPlayers2024 = () => {
                             key={player.name}
                             player={player}
                             division={division.division}
-                            tournamentId={tournamentId}
+                            tournamentId={fixedTournamentId}
                           />
                         );
                       })}
@@ -234,7 +295,7 @@ export const WorldsPlayers2024 = () => {
                   </div>
                 );
               })}
-            </>
+            </div>
           )}
 
           <hr />
