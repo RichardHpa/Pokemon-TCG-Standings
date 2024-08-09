@@ -25,9 +25,9 @@ export const PinPlayer = ({
     <IconButton
       icon={<PinIcon />}
       alt="View Pinned Players"
-      variant={checkIsPinned ? 'solid' : 'outlined'}
-      size="xs"
-      color={checkIsPinned ? 'primary' : 'secondary'}
+      variant={checkIsPinned ? 'solid' : 'text'}
+      rounded={false}
+      color={checkIsPinned ? 'primary' : 'grey'}
       onClick={event => {
         event.stopPropagation();
         if (!checkIsPinned) {

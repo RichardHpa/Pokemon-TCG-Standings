@@ -1,19 +1,18 @@
 export const buttonClasses = {
-  base: 'font-medium rounded-lg focus:z-10 focus:ring-4 focus:outline-none text-center',
+  base: 'font-medium rounded-lg text-center',
   disabled: 'opacity-50 cursor-not-allowed pointer-events-none',
   full: 'w-full',
   variant: {
     solid: {
       base: 'border',
       primary: {
-        light: 'text-white bg-blue-700 hover:bg-blue-800 focus:ring-blue-300 border-blue-700',
-        dark: 'dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 dark:border-blue-600',
+        light: 'text-white bg-blue-700 hover:bg-blue-800  border-blue-700',
+        dark: 'dark:bg-blue-600 dark:hover:bg-blue-700  dark:border-blue-600',
       },
       secondary: {
-        base: 'border',
         light:
-          'text-gray-900 hover:text-blue-700 bg-white hover:bg-gray-100 border-gray-200 focus:ring-gray-100 border-white',
-        dark: 'dark:text-gray-400 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-600 dark:border-gray-600  dark:focus:ring-gray-700 dark:border-gray-800',
+          'text-gray-900 hover:text-blue-700 bg-white hover:bg-gray-100 border-gray-200  border-white',
+        dark: 'dark:text-gray-400 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-600 dark:border-gray-600 dark:border-gray-800',
       },
       grey: {
         light: '',
@@ -38,7 +37,7 @@ export const buttonClasses = {
       },
     },
     text: {
-      base: '',
+      base: 'border border-transparent',
       primary: {
         light: 'text-blue-700 hover:text-white focus:ring-blue-300',
         dark: 'dark:text-blue-500 dark:hover:text-white dark:focus:ring-blue-800',

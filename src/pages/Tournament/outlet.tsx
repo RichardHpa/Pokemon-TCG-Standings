@@ -59,14 +59,14 @@ export const TournamentOutlet = () => {
       </div>
 
       {tournament.tournamentStatus === NOT_STARTED ? (
-        <div>
+        <>
           <Heading level="4">Tournament has not started yet</Heading>
           <p className="text-gray-500 dark:text-gray-400">
             More information will be provided once the first round standings have been released.
           </p>
-        </div>
+        </>
       ) : (
-        <div>
+        <>
           <Tabs>
             <NavTab to="masters" active={isBasePath}>
               Masters{' '}
@@ -87,8 +87,9 @@ export const TournamentOutlet = () => {
               </span>
             </NavTab>
           </Tabs>
+
           <Outlet />
-        </div>
+        </>
       )}
     </div>
   );

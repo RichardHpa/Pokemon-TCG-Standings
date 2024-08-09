@@ -11,8 +11,9 @@ export const divisionOrder = ['Masters', 'Seniors', 'Juniors'];
 
 export const useGetPlayersByCountry = ({ tournamentId, country }: UseGetPlayersByCountry) => {
   const queryClient = useQueryClient();
+
   return useQuery({
-    queryKey: getGetTournamentKey(tournamentId),
+    queryKey: [getGetTournamentKey(tournamentId), { country }],
     queryFn: async () => {
       const tournament = await getPokeDataTournament(tournamentId);
       const divisions = tournament.tournament_data;
@@ -37,6 +38,14 @@ export const useGetPlayersByCountry = ({ tournamentId, country }: UseGetPlayersB
       const orderedData = divisions.sort(
         (a: any, b: any) => divisionOrder.indexOf(a.division) - divisionOrder.indexOf(b.division)
       );
+
+      // remove if array is 0
+      orderedData.forEach((division: any) => {
+        if (division.data.length === 0) {
+          const index = orderedData.indexOf(division);
+          orderedData.splice(index, 1);
+        }
+      });
 
       return {
         tournament: data.tournament,

@@ -1,8 +1,10 @@
+import { useCallback } from 'react';
+
 import clsx from 'clsx';
 
 import { buttonClasses } from './classes';
 
-import type { FC } from 'react';
+import type { FC, MouseEvent } from 'react';
 import type { ButtonProps } from './types';
 
 export const Button: FC<ButtonProps> = ({
@@ -13,8 +15,18 @@ export const Button: FC<ButtonProps> = ({
   full = false,
   children,
   className,
+  onClick,
   ...rest
 }) => {
+  const handleOnClick = useCallback(
+    (event: MouseEvent<HTMLButtonElement>) => {
+      event.currentTarget.blur();
+      if (onClick) {
+        onClick(event);
+      }
+    },
+    [onClick]
+  );
   return (
     <button
       type="button"
@@ -30,6 +42,7 @@ export const Button: FC<ButtonProps> = ({
         className
       )}
       {...rest}
+      onClick={handleOnClick}
     >
       {children}
     </button>

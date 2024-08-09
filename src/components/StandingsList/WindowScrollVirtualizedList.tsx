@@ -11,10 +11,14 @@ export const WindowScrollVirtualizedList = ({
   data,
   tournamentId,
   division,
+  tournamentStatus,
+  hideArchetypes = false,
 }: {
   data: Standing[];
   tournamentId: string;
   division: any;
+  tournamentStatus: any;
+  hideArchetypes?: boolean;
 }) => {
   const list = useRef<any>(null);
 
@@ -46,6 +50,8 @@ export const WindowScrollVirtualizedList = ({
               division={division}
               player={data[index]}
               style={style}
+              hideArchetypes={hideArchetypes}
+              tournamentStatus={tournamentStatus}
             />
           );
         }}

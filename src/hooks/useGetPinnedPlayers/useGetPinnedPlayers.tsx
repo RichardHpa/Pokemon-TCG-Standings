@@ -26,7 +26,8 @@ const tournamentsQueryOptions = (tournamentId: any) => {
         });
         return queryClient.setQueryData(divisionKey, data);
       });
-      queryClient.setQueryData(getGetTournamentKey(tournamentId), tournament.tournament);
+
+      queryClient.setQueryData(getGetTournamentKey(tournamentId), tournament);
       return tournament;
     },
     staleTime: 60 * 10 * 1000,
