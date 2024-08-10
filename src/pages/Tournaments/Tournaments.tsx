@@ -4,8 +4,7 @@ import { TournamentsCard } from 'components/TournamentsCard';
 import { useGetTournamentByStatus } from 'hooks/useGetTournamentByStatus';
 
 export const Tournaments = () => {
-  const { runningTournaments, finishedTournaments, upComingTournaments, isError, isLoading } =
-    useGetTournamentByStatus();
+  const { data, isError, isLoading } = useGetTournamentByStatus();
 
   return (
     <div className="flex flex-col gap-4">
@@ -15,19 +14,20 @@ export const Tournaments = () => {
       {isError && <p>Error loading the tournaments</p>}
       {isLoading && <p>Loading tournament info...</p>}
 
-      {runningTournaments && runningTournaments.length > 0 && (
-        <TournamentsCard
-          title="Tournaments currently in progress"
-          tournaments={runningTournaments}
-        />
-      )}
+      {data && (
+        <>
+          {data.runningTournaments && data.runningTournaments.length > 0 && (
+            <TournamentsCard title="Running Tournaments" tournaments={data.runningTournaments} />
+          )}
 
-      {upComingTournaments && upComingTournaments.length > 0 && (
-        <TournamentsCard title="Upcoming Tournaments" tournaments={upComingTournaments} />
-      )}
+          {data.upComingTournaments && data.upComingTournaments.length > 0 && (
+            <TournamentsCard title="Upcoming Tournaments" tournaments={data.upComingTournaments} />
+          )}
 
-      {finishedTournaments && finishedTournaments.length > 0 && (
-        <TournamentsCard title="Latest Tournaments" tournaments={finishedTournaments} />
+          {data.finishedTournaments && data.finishedTournaments.length > 0 && (
+            <TournamentsCard title="Latest Tournaments" tournaments={data.finishedTournaments} />
+          )}
+        </>
       )}
     </div>
   );
