@@ -1,18 +1,18 @@
 import { Heading } from 'components/Heading';
 import { SEO } from 'components/SEO';
-import { TournamentsCard } from 'components/TournamentsCard';
-import { useGetTournamentByStatus } from 'hooks/useGetTournamentByStatus';
+// import { TournamentsCard } from 'components/TournamentsCard';
+// import { useGetTournamentByStatus } from 'hooks/useGetTournamentByStatus';
 
 export const Tournaments = () => {
-  const { runningTournaments, finishedTournaments, upComingTournaments, isError, isLoading } =
-    useGetTournamentByStatus();
+  // const { runningTournaments, finishedTournaments, upComingTournaments, isError, isLoading } =
+  //   useGetTournamentByStatus();
 
   return (
     <div className="flex flex-col gap-4">
       <SEO title="TCG tournaments" />
       <Heading level="3">Latest Pokemon TCG Tournaments</Heading>
 
-      {isError && <p>Error loading the tournaments</p>}
+      {/* {isError && <p>Error loading the tournaments</p>}
       {isLoading && <p>Loading tournament info...</p>}
 
       {runningTournaments && runningTournaments.length > 0 && (
@@ -28,7 +28,7 @@ export const Tournaments = () => {
 
       {finishedTournaments && finishedTournaments.length > 0 && (
         <TournamentsCard title="Latest Tournaments" tournaments={finishedTournaments} />
-      )}
+      )} */}
     </div>
   );
 };

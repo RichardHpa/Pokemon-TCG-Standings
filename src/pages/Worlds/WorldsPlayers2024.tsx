@@ -21,6 +21,7 @@ import { NOT_STARTED, RUNNING } from 'constants/tournament';
 import { PinPlayer } from 'components/PinPlayer';
 import { StandingsList } from 'components/StandingsList';
 import { Tabs, Tab } from 'components/Tabs';
+import { SEO } from 'components/SEO';
 
 import { CountryList } from './components/CountryList';
 
@@ -34,8 +35,7 @@ import type { Division } from 'types/tournament';
 import type { IWorldsPlayers } from 'mocks/tempData/0000128';
 import type { TCountryCode } from 'countries-list';
 
-// const tournamentId = '0000128';
-const fixedTournamentId = '0000109'; // melbourne 2023
+const fixedTournamentId = '0000128';
 
 const PlayerInfo = ({
   player,
@@ -143,6 +143,17 @@ const InitialPlayers = ({ country }: { country: string }) => {
 
   return (
     <>
+      <div>
+        <Heading level="3" className="text-center">
+          Qualified Competitors
+        </Heading>
+
+        <p className="mb-1 italic text-gray-500 dark:text-gray-400 text-center">
+          Once the tournament starts, the player list will be updated with the registered players
+          and their results.
+        </p>
+      </div>
+
       {players.map(division => {
         if (!division.data) return null;
         if (division.data.length === 0) return null;
@@ -256,6 +267,7 @@ export const WorldsPlayers2024 = () => {
 
   return (
     <div className="flex flex-col gap-4">
+      <SEO title={`Worlds 2024 ${country} players`} />
       <div className="text-center">
         <p>
           Follow {countryData.name} players as they compete in the Pokemon World Championships 2024

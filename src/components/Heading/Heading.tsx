@@ -16,9 +16,9 @@ export const Heading = ({ children, level = '1', className = '' }: HeadingProps)
     `h${level}`,
     {
       className: clsx({
+        [className]: !!className,
         [headingClasses.base]: true,
         [headingClasses.level[level]]: true,
-        [className]: !!className,
       }),
     },
     children
