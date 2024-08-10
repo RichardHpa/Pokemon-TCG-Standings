@@ -1,7 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 import { getPokeDataTournaments } from 'api/getTournaments';
 
-import { useGetTournaments, getGetTournamentsKey } from 'queries/useGetTournaments';
+import { getGetTournamentsKey } from 'queries/useGetTournaments';
 
 import { FINISHED, RUNNING, NOT_STARTED } from 'constants/tournament';
 
@@ -38,22 +38,4 @@ export const useGetTournamentByStatus = () => {
       };
     },
   });
-  // const { data: tournaments, ...rest } = useGetTournaments();
-
-  // const runningTournaments = tournaments?.filter(
-  //   tournament => tournament.tournamentStatus === RUNNING
-  // );
-  // const finishedTournaments = tournaments?.filter(
-  //   tournament => tournament.tournamentStatus === FINISHED
-  // );
-  // const upComingTournaments = tournaments?.filter(
-  //   tournament => tournament.tournamentStatus === NOT_STARTED
-  // );
-
-  // return {
-  //   runningTournaments,
-  //   finishedTournaments,
-  //   upComingTournaments,
-  //   ...rest,
-  // };
 };
