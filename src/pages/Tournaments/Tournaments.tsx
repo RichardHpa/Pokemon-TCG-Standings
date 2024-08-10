@@ -6,11 +6,6 @@ import { useGetTournamentByStatus } from 'hooks/useGetTournamentByStatus';
 export const Tournaments = () => {
   const { data, isError, isLoading } = useGetTournamentByStatus();
 
-  // console.log(data);
-  // console.log(runningTournaments, finishedTournaments, upComingTournaments);
-  // console.log('runningTournaments', runningTournaments);
-  // console.log('finishedTournaments', finishedTournaments);
-  // console.log('upComingTournaments', upComingTournaments);
   return (
     <div className="flex flex-col gap-4">
       <SEO title="TCG tournaments" />
@@ -18,21 +13,22 @@ export const Tournaments = () => {
 
       {isError && <p>Error loading the tournaments</p>}
       {isLoading && <p>Loading tournament info...</p>}
-      {data && <pre>{JSON.stringify(data, null, 2)}</pre>}
-      {/* {runningTournaments && runningTournaments.length > 0 && (
-        <TournamentsCard
-          title="Tournaments currently in progress"
-          tournaments={runningTournaments}
-        />
-      )} */}
 
-      {/* {upComingTournaments && upComingTournaments.length > 0 && (
-        <TournamentsCard title="Upcoming Tournaments" tournaments={upComingTournaments} />
-      )} */}
+      {data && (
+        <>
+          {data.runningTournaments && data.runningTournaments.length > 0 && (
+            <TournamentsCard title="Running Tournaments" tournaments={data.runningTournaments} />
+          )}
 
-      {/* {finishedTournaments && finishedTournaments.length > 0 && (
-        <TournamentsCard title="Latest Tournaments" tournaments={finishedTournaments} />
-      )} */}
+          {data.upComingTournaments && data.upComingTournaments.length > 0 && (
+            <TournamentsCard title="Upcoming Tournaments" tournaments={data.upComingTournaments} />
+          )}
+
+          {data.finishedTournaments && data.finishedTournaments.length > 0 && (
+            <TournamentsCard title="Latest Tournaments" tournaments={data.finishedTournaments} />
+          )}
+        </>
+      )}
     </div>
   );
 };
