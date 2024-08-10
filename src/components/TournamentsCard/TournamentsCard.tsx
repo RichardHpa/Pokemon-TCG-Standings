@@ -5,7 +5,7 @@ import { ContentCard } from 'components/ContentCard';
 import { Indicator } from 'components/Indicator';
 
 import { RUNNING, NOT_STARTED } from 'constants/tournament';
-// import { formatDate } from 'helpers/formatDate';
+import { formatDate } from 'helpers/formatDate';
 
 import type { TournamentsCardProps } from './types';
 import type { FC } from 'react';
@@ -26,10 +26,10 @@ const TournamentCardInner = ({ tournament }: { tournament: Tournament }) => {
       </div>
 
       <div className="flex gap-2">
-        {/* <div className="text-sm text-gray-500 dark:text-gray-400">
+        <div className="text-sm text-gray-500 dark:text-gray-400">
           {formatDate(tournament.date.start, 'MMMM d, yyyy')} -{' '}
           {formatDate(tournament.date.end, 'MMMM d, yyyy')}
-        </div> */}
+        </div>
 
         {tournament.tournamentStatus === RUNNING && <Indicator />}
       </div>
