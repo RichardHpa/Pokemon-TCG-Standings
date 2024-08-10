@@ -4,9 +4,13 @@ import { TournamentsCard } from 'components/TournamentsCard';
 import { useGetTournamentByStatus } from 'hooks/useGetTournamentByStatus';
 
 export const Tournaments = () => {
-  const { runningTournaments, finishedTournaments, upComingTournaments, isError, isLoading } =
-    useGetTournamentByStatus();
+  const { data, isError, isLoading } = useGetTournamentByStatus();
 
+  // console.log(data);
+  // console.log(runningTournaments, finishedTournaments, upComingTournaments);
+  // console.log('runningTournaments', runningTournaments);
+  // console.log('finishedTournaments', finishedTournaments);
+  // console.log('upComingTournaments', upComingTournaments);
   return (
     <div className="flex flex-col gap-4">
       <SEO title="TCG tournaments" />
@@ -14,7 +18,7 @@ export const Tournaments = () => {
 
       {isError && <p>Error loading the tournaments</p>}
       {isLoading && <p>Loading tournament info...</p>}
-      {!isLoading && !isError && <p>There is data</p>}
+      {data && <pre>{JSON.stringify(data, null, 2)}</pre>}
       {/* {runningTournaments && runningTournaments.length > 0 && (
         <TournamentsCard
           title="Tournaments currently in progress"
