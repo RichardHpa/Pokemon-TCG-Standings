@@ -265,6 +265,14 @@ export const WorldsPlayers2024 = () => {
     return getCountryData(country.toUpperCase() as TCountryCode);
   }, [country]);
 
+  const round1Started = useMemo(() => {
+    if (!data) return false;
+    if (data.tournament.tournamentStatus === NOT_STARTED) return false;
+    const firstPlayer = data.divisions[0].data[0];
+    if (firstPlayer.rounds['1'].name === 'none') return false;
+    return true;
+  }, [data]);
+
   return (
     <div className="flex flex-col gap-4">
       <SEO title={`Worlds 2024 ${country} players`} />
@@ -283,7 +291,7 @@ export const WorldsPlayers2024 = () => {
 
       {!isLoading && data && (
         <div className="flex flex-col gap-8">
-          {data.tournament.tournamentStatus === NOT_STARTED ? (
+          {!round1Started ? (
             <InitialPlayers country={country} />
           ) : (
             <div className="flex flex-col gap-8">
