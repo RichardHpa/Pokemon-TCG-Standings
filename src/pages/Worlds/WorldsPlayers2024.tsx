@@ -17,7 +17,7 @@ import { Card } from 'components/Card';
 import { PlayerRecord } from 'components/PlayerRecord';
 import { RoundRow } from 'components/RoundsTable';
 import { IconButton } from 'components/Button/IconButton';
-import { NOT_STARTED, RUNNING } from 'constants/tournament';
+import { NOT_STARTED, RUNNING, CHECK_IN } from 'constants/tournament';
 import { PinPlayer } from 'components/PinPlayer';
 import { StandingsList } from 'components/StandingsList';
 import { Tabs, Tab } from 'components/Tabs';
@@ -267,9 +267,13 @@ export const WorldsPlayers2024 = () => {
 
   const round1Started = useMemo(() => {
     if (!data) return false;
-    if (data.tournament.tournamentStatus === NOT_STARTED) return false;
-    const firstPlayer = data.divisions[0].data[0];
-    if (firstPlayer.rounds['1'].name === 'none') return false;
+    if (
+      data.tournament.tournamentStatus === NOT_STARTED ||
+      data.tournament.tournamentStatus === CHECK_IN
+    ) {
+      return false;
+    }
+
     return true;
   }, [data]);
 
