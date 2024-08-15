@@ -9,6 +9,7 @@ import { SimilarPointsList } from 'components/SimilarPointsList';
 import { StandingsCard } from 'components/StandingsCard';
 import { SEO } from 'components/SEO';
 import { ArchetypeSprites } from 'components/ArchetypeSprites';
+import { LoadingPokeball } from 'components/LoadingPokeball';
 
 import { calculatePoints } from 'utils/calculatePoints';
 
@@ -44,7 +45,11 @@ const PlayerInfo: FC<PlayerInfoProps> = ({ tournamentId, playerName, division })
   }, [data]);
 
   if (isLoading || isStandingsLoading) {
-    return <p>Loading...</p>;
+    return (
+      <div className="flex flex-col justify-center items-center">
+        <LoadingPokeball size="100" alt="Loading player info...</p>" />
+      </div>
+    );
   }
 
   if (isError || isStandingsError || !data || !standingsData) {

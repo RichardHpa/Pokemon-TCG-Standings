@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { useGetTournamentStandings } from 'queries/useGetTournamentStandings';
 import { useGetTournament } from 'queries/useGetTournament';
 
+import { LoadingPokeball } from 'components/LoadingPokeball';
 import { StandingsCard } from 'components/StandingsCard';
 
 import { SEO } from 'components/SEO';
@@ -39,7 +40,11 @@ const TournamentStandings = ({ tournament }: { tournament: TournamentType }) => 
   const { query, onSearch, searching, hits } = useFuse(standings, fuseOptions);
 
   if (isLoading) {
-    return <p>Loading standings...</p>;
+    return (
+      <div className="flex flex-col justify-center items-center">
+        <LoadingPokeball size="100" alt="Loading standings...</p>" />
+      </div>
+    );
   }
 
   if (!standings) {
@@ -98,7 +103,11 @@ export const Tournament = () => {
   const { data, isLoading } = useGetTournament(tournamentId);
 
   if (isLoading) {
-    return <p>Loading...</p>;
+    return (
+      <div className="flex flex-col justify-center items-center">
+        <LoadingPokeball size="100" alt="Loading standings...</p>" />
+      </div>
+    );
   }
 
   if (!data) {

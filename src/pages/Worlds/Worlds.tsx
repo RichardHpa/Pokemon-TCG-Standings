@@ -45,7 +45,6 @@ const WorldsStandings = ({ division }: { division: Division }) => {
 export const Worlds = () => {
   const [division, setDivision] = useState<Division>('masters');
   const { data: tournament, isLoading } = useGetTournament(fixedTournamentId);
-  console.log(tournament);
 
   const changeDivision = useCallback((newDivision: Division) => {
     setDivision(newDivision);

@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 
 import { Card } from 'components/Card';
 import { StandingsCard } from 'components/StandingsCard';
+import { LoadingPokeball } from 'components/LoadingPokeball';
 
 import { useFuse } from 'hooks/useFuse';
 
@@ -39,7 +40,11 @@ export const Division = () => {
   }, [division, reset]);
 
   if (isLoading) {
-    return <p>Loading standings...</p>;
+    return (
+      <div className="flex flex-col justify-center items-center">
+        <LoadingPokeball size="100" alt="Loading standings...</p>" />
+      </div>
+    );
   }
 
   if (isError) {

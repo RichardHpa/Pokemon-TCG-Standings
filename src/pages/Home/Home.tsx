@@ -1,8 +1,8 @@
 import { Heading } from 'components/Heading';
 import { SEO } from 'components/SEO';
 import { TournamentsCard } from 'components/TournamentsCard';
+import { LoadingPokeball } from 'components/LoadingPokeball';
 
-// import { useGetLatestTournaments } from 'hooks/useGetLatestTournaments';
 import { useGetTournamentByStatus } from 'hooks/useGetTournamentByStatus';
 
 export const Home = () => {
@@ -13,7 +13,11 @@ export const Home = () => {
   }
 
   if (isLoading) {
-    return <p>Loading tournament info...</p>;
+    return (
+      <div className="flex flex-col justify-center items-center">
+        <LoadingPokeball size="100" alt="Loading tournament info...</p>" />
+      </div>
+    );
   }
 
   return (
