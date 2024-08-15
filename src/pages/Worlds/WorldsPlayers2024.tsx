@@ -35,7 +35,7 @@ import type { Division } from 'types/tournament';
 import type { IWorldsPlayers } from 'mocks/tempData/0000128';
 import type { TCountryCode } from 'countries-list';
 
-const fixedTournamentId = '0000128';
+export const fixedTournamentId = '0000128';
 
 const PlayerInfo = ({
   player,
