@@ -2,9 +2,13 @@ import { http, HttpResponse, passthrough } from 'msw';
 
 import { tournamentsUrl, basePokeDataUrl } from '../constants/api';
 
+import { staticTournaments } from './tempData/tournaments';
+
 export const handlers = [
   http.get(tournamentsUrl, () => {
-    passthrough();
+    // return HttpResponse.json({}, { status: 404 });
+    return HttpResponse.json(staticTournaments);
+    // passthrough();
   }),
 
   http.get(`${basePokeDataUrl}/division/:divisions/tcg/id/:tournamentId`, async ({ params }) => {
