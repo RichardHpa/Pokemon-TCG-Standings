@@ -1,19 +1,24 @@
 import { Heading } from 'components/Heading';
 import { SEO } from 'components/SEO';
 import { TournamentsCard } from 'components/TournamentsCard';
+import { LoadingPokeball } from 'components/LoadingPokeball';
+import { Notice } from 'components/Notice';
 
-// import { useGetLatestTournaments } from 'hooks/useGetLatestTournaments';
 import { useGetTournamentByStatus } from 'hooks/useGetTournamentByStatus';
 
 export const Home = () => {
   const { data, isError, isLoading } = useGetTournamentByStatus();
 
   if (isError) {
-    return <p>Error loading the tournaments</p>;
+    return <Notice status="error">Error loading the tournaments. Please try again later</Notice>;
   }
 
   if (isLoading) {
-    return <p>Loading tournament info...</p>;
+    return (
+      <div className="flex flex-col justify-center items-center">
+        <LoadingPokeball size="100" alt="Loading tournament info...</p>" />
+      </div>
+    );
   }
 
   return (

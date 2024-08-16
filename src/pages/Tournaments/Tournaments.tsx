@@ -1,6 +1,8 @@
 import { Heading } from 'components/Heading';
 import { SEO } from 'components/SEO';
 import { TournamentsCard } from 'components/TournamentsCard';
+import { LoadingPokeball } from 'components/LoadingPokeball';
+
 import { useGetTournamentByStatus } from 'hooks/useGetTournamentByStatus';
 
 export const Tournaments = () => {
@@ -12,7 +14,11 @@ export const Tournaments = () => {
       <Heading level="3">Latest Pokemon TCG Tournaments</Heading>
 
       {isError && <p>Error loading the tournaments</p>}
-      {isLoading && <p>Loading tournament info...</p>}
+      {isLoading && (
+        <div className="flex flex-col justify-center items-center">
+          <LoadingPokeball size="100" alt="Loading standings...</p>" />
+        </div>
+      )}
 
       {data && (
         <>
