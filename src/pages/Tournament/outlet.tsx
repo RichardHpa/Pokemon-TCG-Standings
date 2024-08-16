@@ -4,6 +4,7 @@ import { Heading } from 'components/Heading';
 import { Indicator } from 'components/Indicator';
 import { Tabs, NavTab } from 'components/Tabs';
 import { LoadingPokeball } from 'components/LoadingPokeball';
+import { Notice } from 'components/Notice';
 
 import { RUNNING, NOT_STARTED } from 'constants/tournament';
 import { tournaments } from 'constants/tournaments';
@@ -29,7 +30,7 @@ export const TournamentOutlet = () => {
   }
 
   if (isError || !tournament) {
-    return <p>Error loading your tournaments</p>;
+    return <Notice status="error">Error loading your tournaments, please try again later</Notice>;
   }
 
   return (

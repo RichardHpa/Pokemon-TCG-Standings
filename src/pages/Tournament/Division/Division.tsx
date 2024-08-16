@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import { Card } from 'components/Card';
 import { StandingsCard } from 'components/StandingsCard';
 import { LoadingPokeball } from 'components/LoadingPokeball';
+import { Notice } from 'components/Notice';
 
 import { useFuse } from 'hooks/useFuse';
 
@@ -48,15 +49,15 @@ export const Division = () => {
   }
 
   if (isError) {
-    return <p>There was an error loading the standings</p>;
+    return <Notice status="error">There was an error loading the standings</Notice>;
   }
 
   if (!standings) {
-    return <p>This tournament hasn't started yet</p>;
+    return <Notice status="info">This tournament hasn't started yet</Notice>;
   }
 
   if (standings && standings[0].rounds['1'].name === 'none') {
-    return <p>Standings will be available once round 1 has started</p>;
+    return <Notice status="info">Standings will be available once round 1 has started</Notice>;
   }
 
   return (

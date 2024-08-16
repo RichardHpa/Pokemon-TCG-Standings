@@ -10,8 +10,10 @@ import { StandingsCard } from 'components/StandingsCard';
 import { SEO } from 'components/SEO';
 import { ArchetypeSprites } from 'components/ArchetypeSprites';
 import { LoadingPokeball } from 'components/LoadingPokeball';
+import { Notice } from 'components/Notice';
 
 import { calculatePoints } from 'utils/calculatePoints';
+import { createPlayerName } from 'utils/createPlayerName';
 
 import { getPokedataStandings } from 'api/getPokedataStandings';
 
@@ -52,16 +54,21 @@ const PlayerInfo: FC<PlayerInfoProps> = ({ tournamentId, playerName, division })
     );
   }
 
-  if (isError || isStandingsError || !data || !standingsData) {
-    return <p>No player found</p>;
-  }
-
-  if (data.length === 0) {
-    return <p>No player found</p>;
+  if (isError || isStandingsError || !data || !standingsData || data.length === 0) {
+    return (
+      <Notice status="error">No player found with the name {createPlayerName(playerName)}</Notice>
+    );
   }
 
   if (data.length > 1) {
-    return <p>Multiple players found</p>;
+    return (
+      <Notice status="warning">
+        We have found multiple players with the name {createPlayerName(playerName)}. Since RK9 Labs
+        doesn't provide a unique identifier for players (We need to keep submitting support tickets
+        and hope they will one day), we are unable to determine which player you are looking for.
+        This means that the players information may be incorrect.
+      </Notice>
+    );
   }
 
   const player = data[0];

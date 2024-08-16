@@ -1,5 +1,4 @@
 import { Button } from './Button';
-import { DropdownTest } from 'components/DropdownTest';
 
 import type { Meta, StoryObj } from '@storybook/react';
 
@@ -40,8 +39,4 @@ export const Size: Story = {
       <Button size="xl">extra large</Button>
     </div>
   ),
-};
-
-export const DropDownTest: Story = {
-  render: () => <DropdownTest />,
 };

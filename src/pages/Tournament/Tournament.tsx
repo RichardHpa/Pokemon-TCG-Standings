@@ -5,6 +5,7 @@ import { useGetTournament } from 'queries/useGetTournament';
 
 import { LoadingPokeball } from 'components/LoadingPokeball';
 import { StandingsCard } from 'components/StandingsCard';
+import { Notice } from 'components/Notice';
 
 import { SEO } from 'components/SEO';
 import { Card } from 'components/Card';
@@ -48,11 +49,11 @@ const TournamentStandings = ({ tournament }: { tournament: TournamentType }) => 
   }
 
   if (!standings) {
-    return <p>This tournament hasn't started yet</p>;
+    return <Notice status="info">This tournament hasn't started yet</Notice>;
   }
 
   if (standings && standings[0].rounds['1'].name === 'none') {
-    return <p>Standings will be available once round 1 has started</p>;
+    return <Notice status="info">Standings will be available once round 1 has started</Notice>;
   }
 
   return (

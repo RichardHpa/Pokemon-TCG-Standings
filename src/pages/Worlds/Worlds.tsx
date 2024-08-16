@@ -6,6 +6,7 @@ import { LoadingPokeball } from 'components/LoadingPokeball';
 import { Tabs, Tab } from 'components/Tabs';
 import { CountryList } from './components/CountryList';
 import { StandingsList } from 'components/StandingsList';
+import { Notice } from 'components/Notice';
 
 import { RUNNING, FINISHED } from 'constants/tournament';
 
@@ -30,11 +31,11 @@ const WorldsStandings = ({ division }: { division: Division }) => {
   }
 
   if (!standings) {
-    return <p>This tournament hasn't started yet</p>;
+    return <Notice status="info">This tournament hasn't started yet</Notice>;
   }
 
   if (standings && standings[0].rounds['1'].name === 'none') {
-    return <p>Standings will be available once round 1 has started</p>;
+    <Notice status="info">Standings will be available once round 1 has started</Notice>;
   }
 
   return (
