@@ -19,7 +19,6 @@ import { createPlayerName } from 'utils/createPlayerName';
 import { getPokedataStandings } from 'api/getPokedataStandings';
 
 import { useGetPlayerInfo } from 'hooks/useGetPlayer';
-import { useResponsive } from 'hooks/useResponsive';
 import { useGetTournamentStandings } from 'queries/useGetTournamentStandings';
 
 import type { FC } from 'react';
@@ -45,8 +44,6 @@ const PlayerInfoInner: FC<PlayerInfoInnerProps> = ({
   tournamentId,
   division,
 }) => {
-  const values = useResponsive();
-
   const totalPoints = useMemo(() => {
     return calculatePoints(player.record);
   }, [player]);

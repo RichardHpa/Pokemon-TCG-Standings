@@ -28,11 +28,17 @@ import { CountryList } from './components/CountryList';
 import { uppercaseFirstLetter } from 'utils/uppercaseFirstLetter';
 import { removeCountryFromName } from 'utils/removeCountryFromName';
 
-import { useGetPlayersByCountry, divisionOrder } from 'hooks/useGetPlayersByCountry';
-import { initialWorldsPlayers, countryList } from 'mocks/tempData/0000128';
+import {
+  useGetPlayersByCountry,
+  // divisionOrder
+} from 'hooks/useGetPlayersByCountry';
+import {
+  // initialWorldsPlayers,
+  countryList,
+} from 'mocks/tempData/0000128';
 
 import type { Division } from 'types/tournament';
-import type { IWorldsPlayers } from 'mocks/tempData/0000128';
+// import type { IWorldsPlayers } from 'mocks/tempData/0000128';
 import type { TCountryCode } from 'countries-list';
 
 export const fixedTournamentId = '0000128';
@@ -106,83 +112,83 @@ const PlayerInfo = ({
   );
 };
 
-type GroupedPlayers = {
-  [key in Division]?: IWorldsPlayers[];
-};
+// type GroupedPlayers = {
+//   [key in Division]?: IWorldsPlayers[];
+// };
 
-const useGetEarlyPlayersByCountry = (country: string) => {
-  const players = initialWorldsPlayers.filter(player => player.Country === country);
+// const useGetEarlyPlayersByCountry = (country: string) => {
+//   const players = initialWorldsPlayers.filter(player => player.Country === country);
 
-  const groupedPlayers: GroupedPlayers = players.reduce((acc: GroupedPlayers, player) => {
-    const ageDivision = player.AgeDivision as Division;
-    if (!acc[ageDivision]) {
-      acc[ageDivision] = [];
-    }
-    acc[ageDivision].push(player);
-    return acc;
-  }, {});
+//   const groupedPlayers: GroupedPlayers = players.reduce((acc: GroupedPlayers, player) => {
+//     const ageDivision = player.AgeDivision as Division;
+//     if (!acc[ageDivision]) {
+//       acc[ageDivision] = [];
+//     }
+//     acc[ageDivision].push(player);
+//     return acc;
+//   }, {});
 
-  const keys = Object.keys(groupedPlayers) as Division[];
-  const formattedData = keys.map(division => {
-    return {
-      division,
-      data: groupedPlayers[division],
-    };
-  });
+//   const keys = Object.keys(groupedPlayers) as Division[];
+//   const formattedData = keys.map(division => {
+//     return {
+//       division,
+//       data: groupedPlayers[division],
+//     };
+//   });
 
-  const orderedData = formattedData.sort(
-    (a, b) => divisionOrder.indexOf(a.division) - divisionOrder.indexOf(b.division)
-  );
+//   const orderedData = formattedData.sort(
+//     (a, b) => divisionOrder.indexOf(a.division) - divisionOrder.indexOf(b.division)
+//   );
 
-  return orderedData;
-};
+//   return orderedData;
+// };
 
-const InitialPlayers = ({ country }: { country: string }) => {
-  const players = useGetEarlyPlayersByCountry(country);
+// const InitialPlayers = ({ country }: { country: string }) => {
+//   const players = useGetEarlyPlayersByCountry(country);
 
-  return (
-    <>
-      <div>
-        <Heading level="3" className="text-center">
-          Qualified Competitors
-        </Heading>
+//   return (
+//     <>
+//       <div>
+//         <Heading level="3" className="text-center">
+//           Qualified Competitors
+//         </Heading>
 
-        <p className="mb-1 italic text-gray-500 dark:text-gray-400 text-center">
-          Once the tournament starts, the player list will be updated with the registered players
-          and their results.
-        </p>
-      </div>
+//         <p className="mb-1 italic text-gray-500 dark:text-gray-400 text-center">
+//           Once the tournament starts, the player list will be updated with the registered players
+//           and their results.
+//         </p>
+//       </div>
 
-      {players.map(division => {
-        if (!division.data) return null;
-        if (division.data.length === 0) return null;
-        return (
-          <div key={division.division}>
-            <div className="mb-8 text-center">
-              <Heading level="2">{uppercaseFirstLetter(division.division)}</Heading>
-            </div>
+//       {players.map(division => {
+//         if (!division.data) return null;
+//         if (division.data.length === 0) return null;
+//         return (
+//           <div key={division.division}>
+//             <div className="mb-8 text-center">
+//               <Heading level="2">{uppercaseFirstLetter(division.division)}</Heading>
+//             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 items-baseline">
-              {division.data.map((player: any) => {
-                return (
-                  <Card key={`${player.FirstName} ${player.LastName}`}>
-                    <div className="flex flex-col gap-2">
-                      <div className="text-center w-full">
-                        <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white items-center truncate">
-                          {player.FirstName} {player.LastName}
-                        </h5>
-                      </div>
-                    </div>
-                  </Card>
-                );
-              })}
-            </div>
-          </div>
-        );
-      })}
-    </>
-  );
-};
+//             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 items-baseline">
+//               {division.data.map((player: any) => {
+//                 return (
+//                   <Card key={`${player.FirstName} ${player.LastName}`}>
+//                     <div className="flex flex-col gap-2">
+//                       <div className="text-center w-full">
+//                         <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white items-center truncate">
+//                           {player.FirstName} {player.LastName}
+//                         </h5>
+//                       </div>
+//                     </div>
+//                   </Card>
+//                 );
+//               })}
+//             </div>
+//           </div>
+//         );
+//       })}
+//     </>
+//   );
+// };
 
 const PinnedWorldsPlayers = () => {
   const { parsedPlayers } = usePinnedPlayers();
