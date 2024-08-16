@@ -3,6 +3,8 @@ import { Outlet, Link, useLocation, useParams } from 'react-router-dom';
 import { Heading } from 'components/Heading';
 import { Indicator } from 'components/Indicator';
 import { Tabs, NavTab } from 'components/Tabs';
+import { LoadingPokeball } from 'components/LoadingPokeball';
+import { Notice } from 'components/Notice';
 
 import { RUNNING, NOT_STARTED } from 'constants/tournament';
 import { tournaments } from 'constants/tournaments';
@@ -20,11 +22,15 @@ export const TournamentOutlet = () => {
   const isBasePath = location.pathname === `/tournaments/${tournamentId}`;
 
   if (isLoading) {
-    return <p>Loading Tournament...</p>;
+    return (
+      <div className="flex flex-col justify-center items-center">
+        <LoadingPokeball size="100" alt="Loading tournament info...</p>" />
+      </div>
+    );
   }
 
   if (isError || !tournament) {
-    return <p>Error loading your tournaments</p>;
+    return <Notice status="error">Error loading your tournaments, please try again later</Notice>;
   }
 
   return (

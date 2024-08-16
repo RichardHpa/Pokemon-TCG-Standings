@@ -35,7 +35,7 @@ import type { Division } from 'types/tournament';
 import type { IWorldsPlayers } from 'mocks/tempData/0000128';
 import type { TCountryCode } from 'countries-list';
 
-const fixedTournamentId = '0000128';
+export const fixedTournamentId = '0000128';
 
 const PlayerInfo = ({
   player,
@@ -50,6 +50,9 @@ const PlayerInfo = ({
   const maxRound = allRounds[allRounds.length - 1];
   const currentRound = player.rounds[maxRound];
 
+  const playerUrl = useMemo(() => {
+    return createPlayerUrl(player.name);
+  }, [player.name]);
   return (
     <Card key={player.name}>
       <div className="flex flex-col gap-2">
@@ -65,12 +68,8 @@ const PlayerInfo = ({
             </div>
           )}
           <div className="flex gap-1 items-center">
-            <PinPlayer
-              tournamentId={tournamentId}
-              player={createPlayerUrl(player.name)}
-              division={division}
-            />
-            <Link to={`/tournaments/${tournamentId}/${division}/${player.name}`}>
+            <PinPlayer tournamentId={tournamentId} player={playerUrl} division={division} />
+            <Link to={`/tournaments/${tournamentId}/${division}/${playerUrl}`}>
               <IconButton
                 icon={<ArrowRightIcon />}
                 alt="View more info"

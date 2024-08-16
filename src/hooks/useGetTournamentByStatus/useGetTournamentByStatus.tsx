@@ -1,10 +1,9 @@
 import { useQuery } from '@tanstack/react-query';
 import { getPokeDataTournaments } from 'api/getTournaments';
-import { format, isValid } from 'date-fns';
 
 import { getGetTournamentsKey } from 'queries/useGetTournaments';
 
-import { FINISHED, RUNNING, NOT_STARTED } from 'constants/tournament';
+import { FINISHED, RUNNING, NOT_STARTED, CHECK_IN } from 'constants/tournament';
 
 export const useGetTournamentByStatus = () => {
   return useQuery({
@@ -30,7 +29,8 @@ export const useGetTournamentByStatus = () => {
       );
 
       const upComingTournaments = data?.filter(
-        tournament => tournament.tournamentStatus === NOT_STARTED
+        tournament =>
+          tournament.tournamentStatus === NOT_STARTED || tournament.tournamentStatus === CHECK_IN
       );
 
       return {

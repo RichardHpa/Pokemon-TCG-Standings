@@ -4,12 +4,14 @@ import { Link } from 'react-router-dom';
 import { ContentCard } from 'components/ContentCard';
 import { Indicator } from 'components/Indicator';
 
-import { RUNNING, NOT_STARTED } from 'constants/tournament';
+import { RUNNING, NOT_STARTED, CHECK_IN } from 'constants/tournament';
 import { formatDate } from 'helpers/formatDate';
 
 import type { TournamentsCardProps } from './types';
 import type { FC } from 'react';
 import type { Tournament } from 'types/tournament';
+
+const upcomming = [NOT_STARTED, CHECK_IN];
 
 const TournamentCardInner = ({ tournament }: { tournament: Tournament }) => {
   return (
@@ -46,14 +48,14 @@ export const TournamentsCard: FC<TournamentsCardProps> = ({ title, tournaments }
             <li
               key={tournament.id}
               className={clsx(
-                'w-full items-center pl-3 pr-6 text-gray-700  border-b border-gray-100 dark:border-gray-800 dark:text-gray-400',
+                'w-full items-center pl-3 pr-6 text-gray-700 border-b border-gray-100 dark:border-gray-800 dark:text-gray-400',
                 {
-                  'cursor-pointer  hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900':
-                    tournament.tournamentStatus !== NOT_STARTED,
+                  'cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900':
+                    !upcomming.includes(tournament.tournamentStatus),
                 }
               )}
             >
-              {tournament.tournamentStatus !== NOT_STARTED ? (
+              {!upcomming.includes(tournament.tournamentStatus) ? (
                 <Link to={`/tournaments/${tournament.id}`}>
                   <TournamentCardInner tournament={tournament} />
                 </Link>
