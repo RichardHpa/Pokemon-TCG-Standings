@@ -88,7 +88,7 @@ const PlayerInfoInner: FC<PlayerInfoInnerProps> = ({
             <SimilarPointsList player={player} data={standingsData} totalPoints={totalPoints} />
           </ContentCard>
 
-          <div className="min-h-screen sm:min-h-[600px] col-span-1 sm:col-span-2 lg:col-span-1">
+          <div className="h-screen md:h-auto min-h-screen sm:min-h-[600px] col-span-1 sm:col-span-2 lg:col-span-1">
             <StandingsCard
               tournamentId={tournamentId}
               standings={standingsData}
@@ -97,7 +97,7 @@ const PlayerInfoInner: FC<PlayerInfoInnerProps> = ({
               allowReset
               division={division}
               hideArchetypes
-              fixedContainerHeight={!values.lg ? false : true}
+              fixedContainerHeight
             />
           </div>
         </div>

@@ -55,7 +55,6 @@ export const TournamentsCard: FC<TournamentsCardProps> = ({ title, tournaments }
                 }
               )}
             >
-              {/* {tournament.tournamentStatus !== NOT_STARTED ? ( */}
               {!upcomming.includes(tournament.tournamentStatus) ? (
                 <Link to={`/tournaments/${tournament.id}`}>
                   <TournamentCardInner tournament={tournament} />
