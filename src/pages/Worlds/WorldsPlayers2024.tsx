@@ -3,7 +3,7 @@ import { LoaderFunctionArgs, useLoaderData } from 'react-router-dom';
 import { ArrowRightIcon, TableCellsIcon, QueueListIcon } from '@heroicons/react/24/solid';
 import { Link } from 'react-router-dom';
 import clsx from 'clsx';
-import { getCountryData } from 'countries-list';
+import { getCountryData, getEmojiFlag } from 'countries-list';
 
 import { RunningPersonIcon } from 'icons/RunningPerson';
 import { createPlayerUrl } from 'utils/createPlayerUrl';
@@ -17,7 +17,7 @@ import { Card } from 'components/Card';
 import { PlayerRecord } from 'components/PlayerRecord';
 import { RoundRow } from 'components/RoundsTable';
 import { IconButton } from 'components/Button/IconButton';
-import { NOT_STARTED, RUNNING, CHECK_IN } from 'constants/tournament';
+import { RUNNING } from 'constants/tournament';
 import { PinPlayer } from 'components/PinPlayer';
 import { StandingsList } from 'components/StandingsList';
 import { Tabs, Tab } from 'components/Tabs';
@@ -208,7 +208,9 @@ const PinnedWorldsPlayers = () => {
       <hr />
       <div className="flex flex-col gap2">
         <div className="text-center">
-          <Heading level="5">Players your following</Heading>
+          <Heading level="4" className="!mb-4">
+            Players your following
+          </Heading>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 items-baseline">
@@ -264,27 +266,9 @@ export const WorldsPlayers2024 = () => {
     return getCountryData(country.toUpperCase() as TCountryCode);
   }, [country]);
 
-  const round1Started = useMemo(() => {
-    if (!data) return false;
-    if (
-      data.tournament.tournamentStatus === NOT_STARTED ||
-      data.tournament.tournamentStatus === CHECK_IN
-    ) {
-      return false;
-    }
-
-    return true;
-  }, [data]);
-
   return (
     <div className="flex flex-col gap-4">
       <SEO title={`Worlds 2024 ${country} players`} />
-      <div className="text-center">
-        <p>
-          Follow {countryData.name} players as they compete in the Pokemon World Championships 2024
-          in Honolulu Hawaii.
-        </p>
-      </div>
 
       {isLoading && (
         <div className="flex flex-col justify-center items-center">
@@ -294,72 +278,79 @@ export const WorldsPlayers2024 = () => {
 
       {!isLoading && data && (
         <div className="flex flex-col gap-8">
-          {!round1Started ? (
-            <InitialPlayers country={country} />
-          ) : (
-            <div className="flex flex-col gap-8">
-              <PinnedWorldsPlayers />
+          <div className="flex flex-col gap-8">
+            <PinnedWorldsPlayers />
 
-              <Tabs
-                actions={
-                  <IconButton
-                    alt="toggle"
-                    icon={tableLayout === TableLayout.LIST ? <QueueListIcon /> : <TableCellsIcon />}
-                    variant="text"
-                    rounded={false}
-                    color="grey"
-                    onClick={toggleTableLayout}
-                  />
-                }
-              >
-                {data.divisions.map((division: any, index: number) => {
-                  return (
-                    <Tab
-                      key={division.division}
-                      active={currentTab === index}
-                      onClick={() => setCurrentTab(index)}
-                    >
-                      {uppercaseFirstLetter(division.division)}
-                    </Tab>
-                  );
-                })}
-              </Tabs>
-
-              {data.divisions[currentTab] && (
-                <div>
-                  <div className="mb-8 text-center">
-                    <Heading level="2">
-                      {uppercaseFirstLetter(data.divisions[currentTab].division)}
-                    </Heading>
-                  </div>
-                  {tableLayout === TableLayout.LIST ? (
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 items-baseline">
-                      {data.divisions[currentTab].data.map((player: any) => {
-                        return (
-                          <PlayerInfo
-                            key={player.name}
-                            player={player}
-                            division={data.divisions[currentTab].division}
-                            tournamentId={fixedTournamentId}
-                          />
-                        );
-                      })}
-                    </div>
-                  ) : (
-                    <div className="rounded-xl dark:text-gray-400 border border-gray-100 dark:border-gray-700  bg-white dark:bg-gray-900 h-full flex flex-col overflow-hidden">
-                      <StandingsList
-                        standings={data.divisions[currentTab].data}
-                        tournamentId={fixedTournamentId}
-                        division={data.divisions[currentTab].division}
-                        tournamentStatus={RUNNING}
-                        hideArchetypes
-                      />
-                    </div>
-                  )}
-                </div>
-              )}
+            <div className="text-center">
+              <p>
+                Follow{' '}
+                <strong>
+                  {getEmojiFlag(country.toUpperCase() as TCountryCode)} {countryData.name}
+                </strong>{' '}
+                players as they compete in the Pokemon World Championships 2024 in Honolulu Hawaii.
+              </p>
             </div>
-          )}
+
+            <Tabs
+              actions={
+                <IconButton
+                  alt="toggle"
+                  icon={tableLayout === TableLayout.LIST ? <QueueListIcon /> : <TableCellsIcon />}
+                  variant="text"
+                  rounded={false}
+                  color="grey"
+                  onClick={toggleTableLayout}
+                />
+              }
+            >
+              {data.divisions.map((division: any, index: number) => {
+                return (
+                  <Tab
+                    key={division.division}
+                    active={currentTab === index}
+                    onClick={() => setCurrentTab(index)}
+                  >
+                    {uppercaseFirstLetter(division.division)}
+                  </Tab>
+                );
+              })}
+            </Tabs>
+
+            {data.divisions[currentTab] && (
+              <div>
+                <div className="mb-8 text-center">
+                  <Heading level="2">
+                    {getEmojiFlag(country.toUpperCase() as TCountryCode)}{' '}
+                    {uppercaseFirstLetter(data.divisions[currentTab].division)}
+                  </Heading>
+                </div>
+                {tableLayout === TableLayout.LIST ? (
+                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 items-baseline">
+                    {data.divisions[currentTab].data.map((player: any) => {
+                      return (
+                        <PlayerInfo
+                          key={player.name}
+                          player={player}
+                          division={data.divisions[currentTab].division}
+                          tournamentId={fixedTournamentId}
+                        />
+                      );
+                    })}
+                  </div>
+                ) : (
+                  <div className="rounded-xl dark:text-gray-400 border border-gray-100 dark:border-gray-700  bg-white dark:bg-gray-900 h-full flex flex-col overflow-hidden">
+                    <StandingsList
+                      standings={data.divisions[currentTab].data}
+                      tournamentId={fixedTournamentId}
+                      division={data.divisions[currentTab].division}
+                      tournamentStatus={RUNNING}
+                      hideArchetypes
+                    />
+                  </div>
+                )}
+              </div>
+            )}
+          </div>
 
           <hr />
           <CountryList />
