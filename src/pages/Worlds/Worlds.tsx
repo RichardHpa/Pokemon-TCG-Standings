@@ -92,7 +92,14 @@ export const Worlds = () => {
               )}
             </>
           ) : (
-            'No tournament data available'
+            <Notice status="warning">
+              There seems to be an error retrieving the data for this tournament. This often happens
+              when to many people are trying to access the data at the same time. Please try again
+              in a few minutes.
+              <br />
+              If the problem persists, I will look into hosting my own api to prevent this from
+              happening in the future, though this will take some time and money.
+            </Notice>
           )}
         </div>
       )}
