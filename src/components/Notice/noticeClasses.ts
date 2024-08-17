@@ -1,5 +1,5 @@
 export const noticeClasses = {
-  base: 'flex items-center p-4 mb-4 text-sm border rounded-lg gap-2',
+  base: 'flex p-4 mb-4 text-sm border rounded-lg gap-2 items-start',
   status: {
     info: 'text-blue-800 border-blue-300 bg-blue-50 dark:bg-gray-800 dark:text-blue-400 dark:border-blue-800',
     success:
@@ -11,7 +11,7 @@ export const noticeClasses = {
     dark: 'text-gray-800 border-gray-300 bg-gray-50 dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600',
   },
   dismissible: {
-    base: 'ms-auto -mx-1.5 -my-1.5 rounded-lg focus:ring-2 p-1.5 inline-flex items-center justify-center h-8 w-8 dark:bg-gray-800',
+    base: 'ms-auto -mx-1.5 -my-1.5 rounded-lg focus:ring-2 p-1.5 inline-flex justify-center h-8 w-8 dark:bg-gray-800',
     info: 'bg-blue-50 text-blue-500 focus:ring-blue-400 hover:bg-blue-200 dark:text-blue-400 dark:hover:bg-gray-700',
     error:
       'bg-red-50 text-red-500 focus:ring-red-400 hover:bg-red-200 dark:text-red-400 dark:hover:bg-gray-700',
