@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from 'utils/axios';
 
 import type { Standing } from 'types/standing';
 import type { Division } from 'types/tournament';
