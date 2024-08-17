@@ -201,7 +201,7 @@ export const PinnedPlayersDrawer = () => {
           </div>
         )}
 
-        <DrawerInner closeDrawer={handleCloseDrawer} />
+        {isDrawerOpen && <DrawerInner closeDrawer={handleCloseDrawer} />}
       </div>
     </>
   );
