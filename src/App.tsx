@@ -3,6 +3,7 @@ import { Outlet, createBrowserRouter, RouterProvider, ScrollRestoration } from '
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { ErrorBoundary } from 'react-error-boundary';
+import { Notice } from 'components/Notice';
 
 import { Navbar } from 'components/Navbar';
 
@@ -41,6 +42,18 @@ const Layout = () => {
     <div className="bg-white dark:bg-gray-900 text-black dark:text-gray-200 min-h-screen flex flex-col">
       <Navbar />
       <div className="container mx-auto py-12 px-4 flex flex-col flex-grow">
+        <Notice status="info" dismissible>
+          I am aware of some users encountering a 404 error when trying to view the worlds 2024
+          information.
+          <br />I apologize for this inconvenience and have been working to resolve the issue. I
+          have made a few changes to the site that should help prevent this from happening in the
+          future, but I am still looking into a more permanent solution.
+          <br />
+          One way to help prevent the issue is to not reload the page often. The data will get
+          automatically updated every 5 minutes so there should be no need to reload the page, which
+          causes extra stress on the external api.
+        </Notice>
+
         <Outlet />
       </div>
       <ScrollRestoration />

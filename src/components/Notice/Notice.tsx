@@ -1,4 +1,4 @@
-import { useCallback } from 'react';
+import { useCallback, useState } from 'react';
 import clsx from 'clsx';
 
 import { noticeClasses } from './noticeClasses';
@@ -13,11 +13,18 @@ export const Notice: FC<NoticeProps> = ({
   noticeId,
   onDismiss,
 }) => {
+  const [isDismissed, setIsDismissed] = useState(false);
   const handleDismiss = useCallback(() => {
     if (dismissible && noticeId && onDismiss) {
       onDismiss(noticeId);
+    } else {
+      setIsDismissed(true);
     }
   }, [dismissible, noticeId, onDismiss]);
+
+  if (isDismissed) {
+    return null;
+  }
 
   return (
     <div
@@ -40,7 +47,7 @@ export const Notice: FC<NoticeProps> = ({
       {dismissible && (
         <button
           type="button"
-          className="ms-auto -mx-1.5 -my-1.5 rounded-lg focus:ring-2  p-1.5  inline-flex items-center justify-center h-8 w-8"
+          className="ms-auto -mx-1.5 -my-1.5 rounded-lg focus:ring-2  inline-flex items-center justify-center h-8 w-8"
           data-dismiss-target={`#${noticeId}`}
           aria-label="Close"
           onClick={() => handleDismiss()}

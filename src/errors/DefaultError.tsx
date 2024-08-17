@@ -30,7 +30,7 @@ export const DefaultError: FC<DefaultErrorProps> = ({
             a few minutes.
             <br />
             If the problem persists, I will look into hosting my own api to prevent this from
-            happening in the future, though this will take some time and money.
+            happening in the future, though this will take some time and funding.
           </Notice>
           <p className="mb-4 text-lg font-light text-gray-500 dark:text-gray-400">{message}</p>
           <Link
