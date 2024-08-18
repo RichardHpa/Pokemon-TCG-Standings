@@ -22,9 +22,9 @@
     "roundNumbers": {
       "juniors": 13,
       "seniors": 13,
-      "masters": 14
+      "masters": 15
     },
-    "lastUpdated": "2024-08-18 06:16:35.350173",
+    "lastUpdated": "2024-08-18 07:39:26.859082",
     "rk9link": "WCS01mIMYt8if4wVuaO0"
   },
   "tournament_data": [
@@ -32,274 +32,10 @@
       "division": "masters",
       "data": [
         {
-          "name": "Jesse Parker [US]",
+          "name": "Fernando Cifuentes [CL]",
           "placing": 1,
           "record": {
             "wins": 13,
-            "losses": 0,
-            "ties": 0
-          },
-          "resistances": {
-            "self": 0.25,
-            "opp": 0.25,
-            "oppopp": 0.25
-          },
-          "decklist": "",
-          "drop": -1,
-          "rounds": {
-            "1": {
-              "name": "Julio Santos De Leon [US]",
-              "result": "W",
-              "table": 957
-            },
-            "2": {
-              "name": "Marco Giovannini [AU]",
-              "result": "W",
-              "table": 688
-            },
-            "3": {
-              "name": "Joseph Nawal [US]",
-              "result": "W",
-              "table": 722
-            },
-            "4": {
-              "name": "Isaiah Cheville [US]",
-              "result": "W",
-              "table": 616
-            },
-            "5": {
-              "name": "Adam Denk [CZ]",
-              "result": "W",
-              "table": 604
-            },
-            "6": {
-              "name": "Iori Takahashi [JP]",
-              "result": "W",
-              "table": 609
-            },
-            "7": {
-              "name": "Calvin Connor [US]",
-              "result": "W",
-              "table": 604
-            },
-            "8": {
-              "name": "Isaiah Bradner [US]",
-              "result": "W",
-              "table": 601
-            },
-            "9": {
-              "name": "Fernando Cifuentes [CL]",
-              "result": "W",
-              "table": 601
-            },
-            "10": {
-              "name": "Konsta Kallama [FI]",
-              "result": "W",
-              "table": 601
-            },
-            "11": {
-              "name": "Ryan Harris [US]",
-              "result": "W",
-              "table": 601
-            },
-            "12": {
-              "name": "Taisei Ito [JP]",
-              "result": "W",
-              "table": 601
-            },
-            "13": {
-              "name": "BYE",
-              "result": "W",
-              "table": 0
-            },
-            "14": {
-              "name": "Michael Davidson [US]",
-              "result": null,
-              "table": 601
-            }
-          }
-        },
-        {
-          "name": "Isaiah Bradner [US]",
-          "placing": 2,
-          "record": {
-            "wins": 12,
-            "losses": 1,
-            "ties": 0
-          },
-          "resistances": {
-            "self": 0.25,
-            "opp": 0.25,
-            "oppopp": 0.25
-          },
-          "decklist": "",
-          "drop": -1,
-          "rounds": {
-            "1": {
-              "name": "R1 BYE",
-              "result": "W",
-              "table": 0
-            },
-            "2": {
-              "name": "Collin Merli-Matthews [US]",
-              "result": "W",
-              "table": 858
-            },
-            "3": {
-              "name": "emmanouil vamvoukas [GR]",
-              "result": "W",
-              "table": 696
-            },
-            "4": {
-              "name": "Harry Shallcrass [NZ]",
-              "result": "W",
-              "table": 652
-            },
-            "5": {
-              "name": "Rene Villagrana [MX]",
-              "result": "W",
-              "table": 620
-            },
-            "6": {
-              "name": "Rio Tanabe [JP]",
-              "result": "W",
-              "table": 603
-            },
-            "7": {
-              "name": "Zihao Chen [CN]",
-              "result": "W",
-              "table": 602
-            },
-            "8": {
-              "name": "Jesse Parker [US]",
-              "result": "L",
-              "table": 601
-            },
-            "9": {
-              "name": "Yoshiyuki Yamaguchi [JP]",
-              "result": "W",
-              "table": 604
-            },
-            "10": {
-              "name": "Eder Jarillo [MX]",
-              "result": "W",
-              "table": 603
-            },
-            "11": {
-              "name": "Kaiwen Cabbabe [AU]",
-              "result": "W",
-              "table": 602
-            },
-            "12": {
-              "name": "miloslav posledni [CZ]",
-              "result": "W",
-              "table": 602
-            },
-            "13": {
-              "name": "BYE",
-              "result": "W",
-              "table": 0
-            },
-            "14": {
-              "name": "Raz Wolpe [IL]",
-              "result": null,
-              "table": 604
-            }
-          }
-        },
-        {
-          "name": "James Goreing [AU]",
-          "placing": 3,
-          "record": {
-            "wins": 11,
-            "losses": 1,
-            "ties": 1
-          },
-          "resistances": {
-            "self": 0.25,
-            "opp": 0.25,
-            "oppopp": 0.25
-          },
-          "decklist": "",
-          "drop": -1,
-          "rounds": {
-            "1": {
-              "name": "Courtney Fox [AU]",
-              "result": "W",
-              "table": 674
-            },
-            "2": {
-              "name": "Qian Lei [CN]",
-              "result": "W",
-              "table": 671
-            },
-            "3": {
-              "name": "Shane Addy [UK]",
-              "result": "W",
-              "table": 676
-            },
-            "4": {
-              "name": "Kazuma Shimogami [JP]",
-              "result": "T",
-              "table": 644
-            },
-            "5": {
-              "name": "Austin Ellis [CA]",
-              "result": "W",
-              "table": 627
-            },
-            "6": {
-              "name": "Jose Marrero [US]",
-              "result": "L",
-              "table": 620
-            },
-            "7": {
-              "name": "Rose Gregson [UK]",
-              "result": "W",
-              "table": 657
-            },
-            "8": {
-              "name": "Nicolas Galaz [CL]",
-              "result": "W",
-              "table": 638
-            },
-            "9": {
-              "name": "KAI-YU FANG [TW]",
-              "result": "W",
-              "table": 616
-            },
-            "10": {
-              "name": "SHINYA KARASHIMA [JP]",
-              "result": "W",
-              "table": 610
-            },
-            "11": {
-              "name": "Iori Takahashi [JP]",
-              "result": "W",
-              "table": 605
-            },
-            "12": {
-              "name": "Ryan Harris [US]",
-              "result": "W",
-              "table": 603
-            },
-            "13": {
-              "name": "BYE",
-              "result": "W",
-              "table": 0
-            },
-            "14": {
-              "name": "Seinosuke Shiokawa [JP]",
-              "result": null,
-              "table": 603
-            }
-          }
-        },
-        {
-          "name": "Fernando Cifuentes [CL]",
-          "placing": 4,
-          "record": {
-            "wins": 11,
             "losses": 2,
             "ties": 0
           },
@@ -378,16 +114,21 @@
             },
             "14": {
               "name": "Ian Robb [US]",
-              "result": null,
+              "result": "W",
               "table": 602
+            },
+            "15": {
+              "name": "Jesse Parker [US]",
+              "result": "W",
+              "table": 601
             }
           }
         },
         {
           "name": "Seinosuke Shiokawa [JP]",
-          "placing": 5,
+          "placing": 2,
           "record": {
-            "wins": 11,
+            "wins": 13,
             "losses": 2,
             "ties": 0
           },
@@ -466,17 +207,115 @@
             },
             "14": {
               "name": "James Goreing [AU]",
-              "result": null,
+              "result": "W",
               "table": 603
+            },
+            "15": {
+              "name": "Raz Wolpe [IL]",
+              "result": "W",
+              "table": 602
+            }
+          }
+        },
+        {
+          "name": "Jesse Parker [US]",
+          "placing": 3,
+          "record": {
+            "wins": 14,
+            "losses": 1,
+            "ties": 0
+          },
+          "resistances": {
+            "self": 0.25,
+            "opp": 0.25,
+            "oppopp": 0.25
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Julio Santos De Leon [US]",
+              "result": "W",
+              "table": 957
+            },
+            "2": {
+              "name": "Marco Giovannini [AU]",
+              "result": "W",
+              "table": 688
+            },
+            "3": {
+              "name": "Joseph Nawal [US]",
+              "result": "W",
+              "table": 722
+            },
+            "4": {
+              "name": "Isaiah Cheville [US]",
+              "result": "W",
+              "table": 616
+            },
+            "5": {
+              "name": "Adam Denk [CZ]",
+              "result": "W",
+              "table": 604
+            },
+            "6": {
+              "name": "Iori Takahashi [JP]",
+              "result": "W",
+              "table": 609
+            },
+            "7": {
+              "name": "Calvin Connor [US]",
+              "result": "W",
+              "table": 604
+            },
+            "8": {
+              "name": "Isaiah Bradner [US]",
+              "result": "W",
+              "table": 601
+            },
+            "9": {
+              "name": "Fernando Cifuentes [CL]",
+              "result": "W",
+              "table": 601
+            },
+            "10": {
+              "name": "Konsta Kallama [FI]",
+              "result": "W",
+              "table": 601
+            },
+            "11": {
+              "name": "Ryan Harris [US]",
+              "result": "W",
+              "table": 601
+            },
+            "12": {
+              "name": "Taisei Ito [JP]",
+              "result": "W",
+              "table": 601
+            },
+            "13": {
+              "name": "BYE",
+              "result": "W",
+              "table": 0
+            },
+            "14": {
+              "name": "Michael Davidson [US]",
+              "result": "W",
+              "table": 601
+            },
+            "15": {
+              "name": "Fernando Cifuentes [CL]",
+              "result": "L",
+              "table": 601
             }
           }
         },
         {
           "name": "Raz Wolpe [IL]",
-          "placing": 6,
+          "placing": 4,
           "record": {
-            "wins": 11,
-            "losses": 2,
+            "wins": 12,
+            "losses": 3,
             "ties": 0
           },
           "resistances": {
@@ -554,8 +393,189 @@
             },
             "14": {
               "name": "Isaiah Bradner [US]",
-              "result": null,
+              "result": "W",
               "table": 604
+            },
+            "15": {
+              "name": "Seinosuke Shiokawa [JP]",
+              "result": "L",
+              "table": 602
+            }
+          }
+        },
+        {
+          "name": "Isaiah Bradner [US]",
+          "placing": 5,
+          "record": {
+            "wins": 12,
+            "losses": 2,
+            "ties": 0
+          },
+          "resistances": {
+            "self": 0.25,
+            "opp": 0.25,
+            "oppopp": 0.25
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "R1 BYE",
+              "result": "W",
+              "table": 0
+            },
+            "2": {
+              "name": "Collin Merli-Matthews [US]",
+              "result": "W",
+              "table": 858
+            },
+            "3": {
+              "name": "emmanouil vamvoukas [GR]",
+              "result": "W",
+              "table": 696
+            },
+            "4": {
+              "name": "Harry Shallcrass [NZ]",
+              "result": "W",
+              "table": 652
+            },
+            "5": {
+              "name": "Rene Villagrana [MX]",
+              "result": "W",
+              "table": 620
+            },
+            "6": {
+              "name": "Rio Tanabe [JP]",
+              "result": "W",
+              "table": 603
+            },
+            "7": {
+              "name": "Zihao Chen [CN]",
+              "result": "W",
+              "table": 602
+            },
+            "8": {
+              "name": "Jesse Parker [US]",
+              "result": "L",
+              "table": 601
+            },
+            "9": {
+              "name": "Yoshiyuki Yamaguchi [JP]",
+              "result": "W",
+              "table": 604
+            },
+            "10": {
+              "name": "Eder Jarillo [MX]",
+              "result": "W",
+              "table": 603
+            },
+            "11": {
+              "name": "Kaiwen Cabbabe [AU]",
+              "result": "W",
+              "table": 602
+            },
+            "12": {
+              "name": "miloslav posledni [CZ]",
+              "result": "W",
+              "table": 602
+            },
+            "13": {
+              "name": "BYE",
+              "result": "W",
+              "table": 0
+            },
+            "14": {
+              "name": "Raz Wolpe [IL]",
+              "result": "L",
+              "table": 604
+            }
+          }
+        },
+        {
+          "name": "James Goreing [AU]",
+          "placing": 6,
+          "record": {
+            "wins": 11,
+            "losses": 2,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.25,
+            "opp": 0.25,
+            "oppopp": 0.25
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Courtney Fox [AU]",
+              "result": "W",
+              "table": 674
+            },
+            "2": {
+              "name": "Qian Lei [CN]",
+              "result": "W",
+              "table": 671
+            },
+            "3": {
+              "name": "Shane Addy [UK]",
+              "result": "W",
+              "table": 676
+            },
+            "4": {
+              "name": "Kazuma Shimogami [JP]",
+              "result": "T",
+              "table": 644
+            },
+            "5": {
+              "name": "Austin Ellis [CA]",
+              "result": "W",
+              "table": 627
+            },
+            "6": {
+              "name": "Jose Marrero [US]",
+              "result": "L",
+              "table": 620
+            },
+            "7": {
+              "name": "Rose Gregson [UK]",
+              "result": "W",
+              "table": 657
+            },
+            "8": {
+              "name": "Nicolas Galaz [CL]",
+              "result": "W",
+              "table": 638
+            },
+            "9": {
+              "name": "KAI-YU FANG [TW]",
+              "result": "W",
+              "table": 616
+            },
+            "10": {
+              "name": "SHINYA KARASHIMA [JP]",
+              "result": "W",
+              "table": 610
+            },
+            "11": {
+              "name": "Iori Takahashi [JP]",
+              "result": "W",
+              "table": 605
+            },
+            "12": {
+              "name": "Ryan Harris [US]",
+              "result": "W",
+              "table": 603
+            },
+            "13": {
+              "name": "BYE",
+              "result": "W",
+              "table": 0
+            },
+            "14": {
+              "name": "Seinosuke Shiokawa [JP]",
+              "result": "L",
+              "table": 603
             }
           }
         },
@@ -564,7 +584,7 @@
           "placing": 7,
           "record": {
             "wins": 11,
-            "losses": 2,
+            "losses": 3,
             "ties": 0
           },
           "resistances": {
@@ -642,7 +662,7 @@
             },
             "14": {
               "name": "Jesse Parker [US]",
-              "result": null,
+              "result": "L",
               "table": 601
             }
           }
@@ -652,7 +672,7 @@
           "placing": 8,
           "record": {
             "wins": 11,
-            "losses": 2,
+            "losses": 3,
             "ties": 0
           },
           "resistances": {
@@ -730,7 +750,7 @@
             },
             "14": {
               "name": "Fernando Cifuentes [CL]",
-              "result": null,
+              "result": "L",
               "table": 602
             }
           }
@@ -63168,93 +63188,10 @@
       "division": "juniors",
       "data": [
         {
-          "name": "Gregory V. [FR]",
+          "name": "Logan B. [US]",
           "placing": 1,
           "record": {
             "wins": 11,
-            "losses": 1,
-            "ties": 0
-          },
-          "resistances": {
-            "self": 0.25,
-            "opp": 0.25,
-            "oppopp": 0.25
-          },
-          "decklist": "",
-          "drop": -1,
-          "rounds": {
-            "1": {
-              "name": "R1 BYE",
-              "result": "W",
-              "table": 0
-            },
-            "2": {
-              "name": "Everett Z. [US]",
-              "result": "W",
-              "table": 53
-            },
-            "3": {
-              "name": "Akihiro F. [JP]",
-              "result": "W",
-              "table": 28
-            },
-            "4": {
-              "name": "Robert S. [CA]",
-              "result": "W",
-              "table": 19
-            },
-            "5": {
-              "name": "CHEN-JUI L. [TW]",
-              "result": "W",
-              "table": 9
-            },
-            "6": {
-              "name": "junsuh h. [KR]",
-              "result": "W",
-              "table": 2
-            },
-            "7": {
-              "name": "Oliver C. [UK]",
-              "result": "W",
-              "table": 2
-            },
-            "8": {
-              "name": "Levon F. [DE]",
-              "result": "W",
-              "table": 1
-            },
-            "9": {
-              "name": "Logan B. [US]",
-              "result": "L",
-              "table": 1
-            },
-            "10": {
-              "name": "Yuhi H. [JP]",
-              "result": "W",
-              "table": 3
-            },
-            "11": {
-              "name": "BYE",
-              "result": "W",
-              "table": 0
-            },
-            "12": {
-              "name": "Levon F. [DE]",
-              "result": "W",
-              "table": 1
-            },
-            "13": {
-              "name": "Sakuya O. [JP]",
-              "result": null,
-              "table": 1
-            }
-          }
-        },
-        {
-          "name": "Logan B. [US]",
-          "placing": 2,
-          "record": {
-            "wins": 10,
             "losses": 0,
             "ties": 2
           },
@@ -63328,99 +63265,16 @@
             },
             "13": {
               "name": "Cobey H. [US]",
-              "result": null,
-              "table": 2
-            }
-          }
-        },
-        {
-          "name": "Cobey H. [US]",
-          "placing": 3,
-          "record": {
-            "wins": 10,
-            "losses": 1,
-            "ties": 1
-          },
-          "resistances": {
-            "self": 0.25,
-            "opp": 0.25,
-            "oppopp": 0.25
-          },
-          "decklist": "",
-          "drop": -1,
-          "rounds": {
-            "1": {
-              "name": "Isaac S. [AU]",
               "result": "W",
-              "table": 86
-            },
-            "2": {
-              "name": "Luka O. [US]",
-              "result": "W",
-              "table": 28
-            },
-            "3": {
-              "name": "Park s. [KR]",
-              "result": "W",
-              "table": 9
-            },
-            "4": {
-              "name": "William B. [US]",
-              "result": "L",
-              "table": 9
-            },
-            "5": {
-              "name": "Kayden W. [NZ]",
-              "result": "W",
-              "table": 31
-            },
-            "6": {
-              "name": "RINTARO K. [JP]",
-              "result": "W",
-              "table": 16
-            },
-            "7": {
-              "name": "Samuele C. [IT]",
-              "result": "W",
-              "table": 8
-            },
-            "8": {
-              "name": "Drake Z. [NZ]",
-              "result": "W",
-              "table": 6
-            },
-            "9": {
-              "name": "Hotaru O. [JP]",
-              "result": "W",
-              "table": 5
-            },
-            "10": {
-              "name": "CHEN-JUI L. [TW]",
-              "result": "T",
-              "table": 2
-            },
-            "11": {
-              "name": "Kosuke O. [JP]",
-              "result": "W",
-              "table": 5
-            },
-            "12": {
-              "name": "Kio N. [JP]",
-              "result": "W",
-              "table": 3
-            },
-            "13": {
-              "name": "Logan B. [US]",
-              "result": null,
               "table": 2
             }
           }
         },
         {
           "name": "Sakuya O. [JP]",
-          "placing": 4,
+          "placing": 2,
           "record": {
-            "wins": 10,
+            "wins": 11,
             "losses": 2,
             "ties": 0
           },
@@ -63494,8 +63348,174 @@
             },
             "13": {
               "name": "Gregory V. [FR]",
-              "result": null,
+              "result": "W",
               "table": 1
+            }
+          }
+        },
+        {
+          "name": "Gregory V. [FR]",
+          "placing": 3,
+          "record": {
+            "wins": 11,
+            "losses": 2,
+            "ties": 0
+          },
+          "resistances": {
+            "self": 0.25,
+            "opp": 0.25,
+            "oppopp": 0.25
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "R1 BYE",
+              "result": "W",
+              "table": 0
+            },
+            "2": {
+              "name": "Everett Z. [US]",
+              "result": "W",
+              "table": 53
+            },
+            "3": {
+              "name": "Akihiro F. [JP]",
+              "result": "W",
+              "table": 28
+            },
+            "4": {
+              "name": "Robert S. [CA]",
+              "result": "W",
+              "table": 19
+            },
+            "5": {
+              "name": "CHEN-JUI L. [TW]",
+              "result": "W",
+              "table": 9
+            },
+            "6": {
+              "name": "junsuh h. [KR]",
+              "result": "W",
+              "table": 2
+            },
+            "7": {
+              "name": "Oliver C. [UK]",
+              "result": "W",
+              "table": 2
+            },
+            "8": {
+              "name": "Levon F. [DE]",
+              "result": "W",
+              "table": 1
+            },
+            "9": {
+              "name": "Logan B. [US]",
+              "result": "L",
+              "table": 1
+            },
+            "10": {
+              "name": "Yuhi H. [JP]",
+              "result": "W",
+              "table": 3
+            },
+            "11": {
+              "name": "BYE",
+              "result": "W",
+              "table": 0
+            },
+            "12": {
+              "name": "Levon F. [DE]",
+              "result": "W",
+              "table": 1
+            },
+            "13": {
+              "name": "Sakuya O. [JP]",
+              "result": "L",
+              "table": 1
+            }
+          }
+        },
+        {
+          "name": "Cobey H. [US]",
+          "placing": 4,
+          "record": {
+            "wins": 10,
+            "losses": 2,
+            "ties": 1
+          },
+          "resistances": {
+            "self": 0.25,
+            "opp": 0.25,
+            "oppopp": 0.25
+          },
+          "decklist": "",
+          "drop": -1,
+          "rounds": {
+            "1": {
+              "name": "Isaac S. [AU]",
+              "result": "W",
+              "table": 86
+            },
+            "2": {
+              "name": "Luka O. [US]",
+              "result": "W",
+              "table": 28
+            },
+            "3": {
+              "name": "Park s. [KR]",
+              "result": "W",
+              "table": 9
+            },
+            "4": {
+              "name": "William B. [US]",
+              "result": "L",
+              "table": 9
+            },
+            "5": {
+              "name": "Kayden W. [NZ]",
+              "result": "W",
+              "table": 31
+            },
+            "6": {
+              "name": "RINTARO K. [JP]",
+              "result": "W",
+              "table": 16
+            },
+            "7": {
+              "name": "Samuele C. [IT]",
+              "result": "W",
+              "table": 8
+            },
+            "8": {
+              "name": "Drake Z. [NZ]",
+              "result": "W",
+              "table": 6
+            },
+            "9": {
+              "name": "Hotaru O. [JP]",
+              "result": "W",
+              "table": 5
+            },
+            "10": {
+              "name": "CHEN-JUI L. [TW]",
+              "result": "T",
+              "table": 2
+            },
+            "11": {
+              "name": "Kosuke O. [JP]",
+              "result": "W",
+              "table": 5
+            },
+            "12": {
+              "name": "Kio N. [JP]",
+              "result": "W",
+              "table": 3
+            },
+            "13": {
+              "name": "Logan B. [US]",
+              "result": "L",
+              "table": 2
             }
           }
         },
