@@ -6,6 +6,8 @@ import { PinPlayer } from 'components/PinPlayer';
 import { ArchetypeSprites } from 'components/ArchetypeSprites';
 import { RUNNING } from 'constants/tournament';
 
+import { getCountryFlag } from 'helpers/getCountryFlag';
+
 import { createPlayerUrl } from 'utils/createPlayerUrl';
 
 import type { Standing } from 'types/standing';
@@ -20,6 +22,11 @@ interface StandingRowProps {
   hideArchetypes?: boolean;
   tournamentStatus?: Tournament['tournamentStatus'];
 }
+
+const getCountryCode = (name: string) => {
+  const countryCode = name.match(/\[(\w+)\]$/);
+  return countryCode ? countryCode[1] : '';
+};
 
 export const StandingRow: FC<StandingRowProps> = ({
   player,
@@ -54,7 +61,9 @@ export const StandingRow: FC<StandingRowProps> = ({
             {player.record.wins}-{player.record.losses}-{player.record.ties}
           </p>
           <div className="flex justify-between">
-            <p>{player.name}</p>
+            <p>
+              {player.name} {getCountryFlag(getCountryCode(player.name))}
+            </p>
           </div>
         </div>
       </div>

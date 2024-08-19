@@ -99,6 +99,11 @@ export const getArchetypes = (decklist: DeckList) => {
     return foundArchetype;
   }
 
+  if (pokemonNames.includes('Regidrago VSTAR')) {
+    foundArchetype.push({ pokemon: 'Regidrago VSTAR', image: pokemonList['regidrago'].image });
+    return foundArchetype;
+  }
+
   if (pokemonNames.includes('Dragapult ex')) {
     foundArchetype.push({ pokemon: 'Dragapult ex', image: pokemonList['dragapult'].image });
     if (pokemonNames.includes('Pidgeot ex')) {
@@ -147,6 +152,12 @@ export const getArchetypes = (decklist: DeckList) => {
     } else if (pokemonNames.includes('Iron Hands ex')) {
       foundArchetype.push({ pokemon: 'Iron Hands ex', image: pokemonList['iron-hands'].image });
     }
+    return foundArchetype;
+  }
+
+  // Quad Thorns
+  if (pokemonNames.includes('Iron Thorns ex')) {
+    foundArchetype.push({ pokemon: 'Iron Thorns ex', image: pokemonList['iron-thorns'].image });
     return foundArchetype;
   }
 
