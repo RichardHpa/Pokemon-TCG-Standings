@@ -30,7 +30,7 @@ const queryClient = new QueryClient({
     },
   },
 });
-const noticeId = 'apiNotice';
+const noticeId = 'thank-you-notice';
 const Layout = () => {
   const { sendPageView } = useAnalytics();
   const [dismissedNotice, setDismissedNotice] = useLocalStorage(noticeId, 'false');
@@ -48,16 +48,27 @@ const Layout = () => {
       <Navbar />
       <div className="container mx-auto py-12 px-4 flex flex-col flex-grow">
         {dismissedNotice === 'false' && (
-          <Notice status="info" dismissible noticeId={noticeId} onDismiss={handleOnDismiss}>
-            I am aware of some users encountering a 404 error when trying to view the worlds 2024
-            information.
-            <br />I apologize for this inconvenience and have been working to resolve the issue. I
-            have made a few changes to the site that should help prevent this from happening in the
-            future, but I am still looking into a more permanent solution.
+          <Notice status="success" dismissible noticeId={noticeId} onDismiss={handleOnDismiss}>
+            Thank you for those who have visited PTCG Standings during the 2024 Pokemon World
+            Championships. I hope you found the information useful. <br />I apologize for the api
+            issues that happened during the weekend, I really didn't expect the amount of traffic
+            that came through and I am really grateful for it. I have already started working on a
+            solution to prevent this from happening in the future. Thank you for your patience. If
+            you have any feedback or suggestions, please feel free to reach out to me on X (Twitter)
+            on{' '}
+            <a
+              href="https://twitter.com/RichardHpaNZ"
+              target="_blank"
+              rel="noreferrer"
+              className="underline"
+            >
+              @RichardHpaNZ
+            </a>
+            .<br />
             <br />
-            One way to help prevent the issue is to not reload the page often. The data will get
-            automatically updated every 5 minutes so there should be no need to reload the page,
-            which causes extra stress on the external api.
+            If you would also like to help support the site you can do so by buying me a coffee via
+            the above, or if you would like to help with the development of the site, please get in
+            touch.
           </Notice>
         )}
 

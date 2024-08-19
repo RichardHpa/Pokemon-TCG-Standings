@@ -1,4 +1,3 @@
-import { Notice } from 'components/Notice';
 import { Link } from 'react-router-dom';
 
 import type { FC } from 'react';
@@ -24,14 +23,6 @@ export const DefaultError: FC<DefaultErrorProps> = ({
           <p className="mb-4 text-3xl tracking-tight font-bold text-gray-900 md:text-4xl dark:text-white">
             {title}
           </p>
-          <Notice status="warning">
-            There seems to be an error retrieving the data for this tournament. This often happens
-            when to many people are trying to access the data at the same time. Please try again in
-            a few minutes.
-            <br />
-            If the problem persists, I will look into hosting my own api to prevent this from
-            happening in the future, though this will take some time and funding.
-          </Notice>
           <p className="mb-4 text-lg font-light text-gray-500 dark:text-gray-400">{message}</p>
           <Link
             to="/"

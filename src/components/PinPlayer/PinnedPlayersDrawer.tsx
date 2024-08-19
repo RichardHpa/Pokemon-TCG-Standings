@@ -5,7 +5,7 @@ import AutoSizer from 'react-virtualized-auto-sizer';
 import { VariableSizeList as List } from 'react-window';
 
 import { useGetPinnedPlayers } from 'hooks/useGetPinnedPlayers';
-
+import { FINISHED } from 'constants/tournament';
 import { usePinnedPlayers } from 'providers/PinnedPlayersProvider';
 import { PinIcon } from 'icons/PinIcon';
 import { createPlayerUrl } from 'utils/createPlayerUrl';
@@ -81,8 +81,20 @@ interface SizeMap {
 }
 
 const DrawerInner = ({ closeDrawer }: { closeDrawer: () => void }) => {
-  const { parsedPlayers } = usePinnedPlayers();
+  const { parsedPlayers, handleClearTournament } = usePinnedPlayers();
   const { filteredPlayers, isLoading } = useGetPinnedPlayers(parsedPlayers);
+
+  useEffect(() => {
+    if (isLoading) {
+      return;
+    }
+    filteredPlayers.forEach((tournament, index) => {
+      if (tournament.tournamentStatus === FINISHED) {
+        handleClearTournament(tournament.tournamentId);
+      }
+    });
+  }, [isLoading, filteredPlayers, handleClearTournament, closeDrawer]);
+
   const listRef = useRef<VariableSizeList>(null);
 
   const sizeMap = useRef<SizeMap>({});
