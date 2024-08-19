@@ -279,8 +279,6 @@ export const WorldsPlayers2024 = () => {
       {!isLoading && data && (
         <div className="flex flex-col gap-8">
           <div className="flex flex-col gap-8">
-            <PinnedWorldsPlayers />
-
             <div className="text-center">
               <p>
                 Follow{' '}
