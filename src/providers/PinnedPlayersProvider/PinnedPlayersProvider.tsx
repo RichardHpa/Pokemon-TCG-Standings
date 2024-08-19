@@ -16,6 +16,7 @@ interface PinnedPlayersContextProps {
   togglePinPlayer: (playerName: string, tournamentId: string, division: Division) => void;
   inPinned: (playerName: any, tournamentId: string, division: Division) => boolean;
   parsedPlayers: PinnedPlayersProps;
+  handleClearTournament: (tournamentId: string) => void;
 }
 
 const LikedContext = createContext<PinnedPlayersContextProps>({
@@ -25,6 +26,7 @@ const LikedContext = createContext<PinnedPlayersContextProps>({
   togglePinPlayer: () => {},
   inPinned: () => false,
   parsedPlayers: {},
+  handleClearTournament: () => {},
 });
 
 const getPinnedPlayers = () => {
@@ -111,6 +113,18 @@ export const PinnedPlayersProvider = ({ children }: PinnedPlayersProviderProps) 
     [inPinned, handlePinPlayer, handleUnpinPlayer]
   );
 
+  const handleClearTournament = useCallback(
+    (tournamentId: string) => {
+      const parsedPinnedPlayers = JSON.parse(pinnedPlayers);
+      delete parsedPinnedPlayers[tournamentId];
+
+      const stringifyPinnedPlayers = JSON.stringify(parsedPinnedPlayers);
+      setPinnedPlayers(stringifyPinnedPlayers);
+      localStorage.setItem(pinnedPlayersKey, stringifyPinnedPlayers);
+    },
+    [pinnedPlayers]
+  );
+
   const value = useMemo(() => {
     return {
       pinnedPlayers,
@@ -119,8 +133,16 @@ export const PinnedPlayersProvider = ({ children }: PinnedPlayersProviderProps) 
       togglePinPlayer,
       inPinned,
       parsedPlayers: JSON.parse(pinnedPlayers),
+      handleClearTournament,
     };
-  }, [handlePinPlayer, handleUnpinPlayer, inPinned, pinnedPlayers, togglePinPlayer]);
+  }, [
+    handlePinPlayer,
+    handleUnpinPlayer,
+    inPinned,
+    pinnedPlayers,
+    togglePinPlayer,
+    handleClearTournament,
+  ]);
 
   return <LikedContext.Provider value={value}>{children}</LikedContext.Provider>;
 };

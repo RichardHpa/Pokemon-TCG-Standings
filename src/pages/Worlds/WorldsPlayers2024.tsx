@@ -3,7 +3,8 @@ import { LoaderFunctionArgs, useLoaderData } from 'react-router-dom';
 import { ArrowRightIcon, TableCellsIcon, QueueListIcon } from '@heroicons/react/24/solid';
 import { Link } from 'react-router-dom';
 import clsx from 'clsx';
-import { getCountryData, getEmojiFlag } from 'countries-list';
+import { getCountryData } from 'countries-list';
+import { getCountryFlag } from 'helpers/getCountryFlag';
 
 import { RunningPersonIcon } from 'icons/RunningPerson';
 import { createPlayerUrl } from 'utils/createPlayerUrl';
@@ -283,7 +284,7 @@ export const WorldsPlayers2024 = () => {
               <p>
                 Follow{' '}
                 <strong>
-                  {getEmojiFlag(country.toUpperCase() as TCountryCode)} {countryData.name}
+                  {getCountryFlag(country.toUpperCase())} {countryData.name}
                 </strong>{' '}
                 players as they compete in the Pokemon World Championships 2024 in Honolulu Hawaii.
               </p>
@@ -318,7 +319,7 @@ export const WorldsPlayers2024 = () => {
               <div>
                 <div className="mb-8 text-center">
                   <Heading level="2">
-                    {getEmojiFlag(country.toUpperCase() as TCountryCode)}{' '}
+                    {getCountryFlag(country.toUpperCase())}{' '}
                     {uppercaseFirstLetter(data.divisions[currentTab].division)}
                   </Heading>
                 </div>
