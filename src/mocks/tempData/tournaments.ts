@@ -3455,7 +3455,7 @@ export const staticTournaments = {
           seniors: 'Evan P. [US]',
           masters: 'Fernando Cifuentes [CL]',
         },
-        tournamentStatus: 'running',
+        tournamentStatus: 'finished',
         roundNumbers: {
           juniors: 14,
           seniors: 14,
