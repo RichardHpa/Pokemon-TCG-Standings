@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import { useQueries, queryOptions, useQueryClient } from '@tanstack/react-query';
 
 import { getPokeDataTournament } from 'api/getTournament';
@@ -11,8 +12,8 @@ import type { Division } from 'types/tournament';
 import type { Standing } from 'types/standing';
 
 const tournamentsQueryOptions = (tournamentId: any) => {
-  // eslint-disable-next-line react-hooks/rules-of-hooks
   const queryClient = useQueryClient();
+
   return queryOptions({
     queryKey: ['tournaments', tournamentId, 'pinned'],
     queryFn: async () => {
@@ -41,6 +42,7 @@ type PlayersObject = {
 export interface PinnedTournamentObject {
   tournamentId: string;
   tournamentName: string;
+  tournamentStatus: any;
   players: PlayersObject;
 }
 
@@ -51,12 +53,14 @@ export const useGetPinnedPlayers = (pinnedPlayers: any) => {
     combine: tournaments => {
       const filteredPlayers = tournaments.map(res => {
         if (!res.data) return res;
-        const tournamentId = res.data?.tournament.id;
-        const tournamentName = res.data?.tournament.name;
+        const tournamentId = res.data.tournament.id;
+        const tournamentName = res.data.tournament.name;
+        const tournamentStatus = res.data.tournament.tournamentStatus;
 
         const tournamentObject: PinnedTournamentObject = {
           tournamentId,
           tournamentName,
+          tournamentStatus,
           players: {},
         };
 
