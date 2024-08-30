@@ -33,6 +33,9 @@ export const TournamentOutlet = () => {
     return <Notice status="error">Error loading your tournaments, please try again later</Notice>;
   }
 
+  const streams = tournaments[tournamentId]?.streams;
+  const streamKeys = Object.keys(streams || {});
+
   return (
     <div className="flex flex-col gap-4 flex-grow">
       <div className="flex justify-between mb-4">
@@ -58,6 +61,30 @@ export const TournamentOutlet = () => {
               {formatDate(tournament.date.start, 'MMMM d, yyyy')} -{' '}
               {formatDate(tournament.date.end, 'MMMM d, yyyy')}
             </p>
+
+            {streams && (
+              <div className="flex gap-2">
+                <p className="text-gray-500 dark:text-gray-400">Streams: </p>
+                {Object.entries(streams).map(([day, url], index) => {
+                  return (
+                    <>
+                      <a
+                        key={`${tournamentId}-${day}`}
+                        href={url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-500 dark:text-blue-400 hover:underline"
+                      >
+                        Day {index + 1}
+                      </a>
+                      {index < streamKeys.length - 1 && (
+                        <span className="text-gray-500 dark:text-gray-400">|</span>
+                      )}
+                    </>
+                  );
+                })}
+              </div>
+            )}
           </div>
         </div>
 

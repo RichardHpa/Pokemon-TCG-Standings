@@ -4,15 +4,26 @@ import CupLogo from 'images/tcgCup.png';
 
 import Worlds2024Logo from 'images/wc24-key-art-2x.webp';
 
+interface StreamsMap {
+  day1?: string;
+  day2?: string;
+  day3?: string;
+}
 interface LocalTournamentsMap {
   [key: string]: {
     logo: string;
+    streams?: StreamsMap;
   };
 }
 
 export const tournaments: LocalTournamentsMap = {
   '0000128': {
     logo: Worlds2024Logo,
+    streams: {
+      day1: 'https://www.youtube.com/watch?v=rgE9nxOKots',
+      day2: 'https://www.youtube.com/watch?v=1dvNxsjIzlY',
+      day3: 'https://www.youtube.com/watch?v=M-tQC1AFomU&t=6752s',
+    },
   },
   '0000127': {
     logo: InternationalsLogo,
