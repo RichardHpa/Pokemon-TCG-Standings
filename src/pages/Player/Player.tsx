@@ -1,7 +1,8 @@
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { useMemo, useState, useCallback } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import clsx from 'clsx';
+import { ListBulletIcon } from '@heroicons/react/24/solid';
 
 import { Heading } from 'components/Heading';
 import { RoundsTable } from 'components/RoundsTable';
@@ -12,6 +13,7 @@ import { SEO } from 'components/SEO';
 import { ArchetypeSprites } from 'components/ArchetypeSprites';
 import { LoadingPokeball } from 'components/LoadingPokeball';
 import { Notice } from 'components/Notice';
+import { IconButton } from 'components/Button/IconButton';
 
 import { calculatePoints } from 'utils/calculatePoints';
 import { createPlayerName } from 'utils/createPlayerName';
@@ -19,7 +21,6 @@ import { createPlayerName } from 'utils/createPlayerName';
 import { getPokedataStandings } from 'api/getPokedataStandings';
 
 import { useGetPlayerInfo } from 'hooks/useGetPlayer';
-import { useResponsive } from 'hooks/useResponsive';
 import { useGetTournamentStandings } from 'queries/useGetTournamentStandings';
 
 import type { FC } from 'react';
@@ -45,11 +46,14 @@ const PlayerInfoInner: FC<PlayerInfoInnerProps> = ({
   tournamentId,
   division,
 }) => {
-  const values = useResponsive();
-
+  const navigate = useNavigate();
   const totalPoints = useMemo(() => {
     return calculatePoints(player.record);
   }, [player]);
+
+  const handleViewDecklist = useCallback(() => {
+    navigate('./decklist');
+  }, [navigate]);
 
   return (
     <>
@@ -59,7 +63,18 @@ const PlayerInfoInner: FC<PlayerInfoInnerProps> = ({
             {player.name} {player.placing > standingsData.length && ` - (DQ)`}
           </Heading>
 
-          {player.decklist && <ArchetypeSprites decklist={player.decklist} />}
+          {player.decklist && (
+            <div className="flex gap-2 items-center justify-center">
+              <IconButton
+                icon={<ListBulletIcon />}
+                alt="deck list"
+                rounded={false}
+                color="grey"
+                onClick={handleViewDecklist}
+              />
+              <ArchetypeSprites decklist={player.decklist} />
+            </div>
+          )}
         </div>
 
         <p className="text-gray-500 dark:text-gray-400 mb-2">

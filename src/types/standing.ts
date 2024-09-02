@@ -1,3 +1,5 @@
+import type { SetCodes } from 'constants/sets';
+
 export type Results = 'wins' | 'losses' | 'ties';
 
 export type RecordProps = {
@@ -18,13 +20,13 @@ interface PokemonCard {
   count: number;
   name: string;
   number: string;
-  set: string;
+  set: SetCodes;
 }
 
 export interface DeckList {
   pokemon: PokemonCard[];
-  trainer: unknown[];
-  energy: unknown[];
+  trainer: PokemonCard[];
+  energy: PokemonCard[];
 }
 
 export interface Standing {

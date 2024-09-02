@@ -11,7 +11,7 @@ import { About } from './pages';
 import { Home } from 'pages/Home';
 import { Tournaments } from 'pages/Tournaments';
 import { Tournament, TournamentOutlet } from 'pages/Tournament';
-import { Player } from 'pages/Player';
+import { Player, Decklist } from 'pages/Player';
 import { Division } from 'pages/Tournament/Division';
 import { WorldsPlayers2024, worldsLoader, WorldsOutlet, Worlds } from 'pages/Worlds';
 
@@ -140,7 +140,16 @@ const router = createBrowserRouter([
                   },
                   {
                     path: ':playerName',
-                    element: <Player />,
+                    children: [
+                      {
+                        index: true,
+                        element: <Player />,
+                      },
+                      {
+                        path: 'decklist',
+                        element: <Decklist />,
+                      },
+                    ],
                   },
                 ],
               },

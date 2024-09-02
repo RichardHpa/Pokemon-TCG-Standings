@@ -18,7 +18,7 @@ import { Card } from 'components/Card';
 import { PlayerRecord } from 'components/PlayerRecord';
 import { RoundRow } from 'components/RoundsTable';
 import { IconButton } from 'components/Button/IconButton';
-import { RUNNING } from 'constants/tournament';
+import { FINISHED, RUNNING } from 'constants/tournament';
 import { PinPlayer } from 'components/PinPlayer';
 import { StandingsList } from 'components/StandingsList';
 import { Tabs, Tab } from 'components/Tabs';
@@ -75,7 +75,7 @@ const PlayerInfo = ({
             </div>
           )}
           <div className="flex gap-1 items-center">
-            <PinPlayer tournamentId={tournamentId} player={playerUrl} division={division} />
+            {/* <PinPlayer tournamentId={tournamentId} player={playerUrl} division={division} /> */}
             <Link to={`/tournaments/${tournamentId}/${division}/${playerUrl}`}>
               <IconButton
                 icon={<ArrowRightIcon />}
@@ -348,8 +348,7 @@ export const WorldsPlayers2024 = () => {
                       standings={data.divisions[currentTab].data}
                       tournamentId={fixedTournamentId}
                       division={data.divisions[currentTab].division}
-                      tournamentStatus={RUNNING}
-                      hideArchetypes
+                      tournamentStatus={FINISHED}
                     />
                   </div>
                 )}
