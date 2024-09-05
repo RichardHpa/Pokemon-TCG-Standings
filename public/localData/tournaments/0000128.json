@@ -7658,32 +7658,32 @@
               {
                 "count": 1,
                 "name": "Squawkabilly ex",
-                "number": "154",
-                "set": "SV4a"
+                "number": "169",
+                "set": "PAL"
               },
               {
                 "count": 1,
                 "name": "Iron Bundle",
-                "number": "20",
-                "set": "SV4M"
+                "number": "56",
+                "set": "PAR"
               },
               {
                 "count": 1,
                 "name": "Radiant Greninja",
-                "number": "26",
-                "set": "S9a"
+                "number": "46",
+                "set": "ASR"
               },
               {
                 "count": 1,
                 "name": "Sandy Shocks",
-                "number": "11",
-                "set": "SVHK"
+                "number": "98",
+                "set": "TEF"
               },
               {
                 "count": 3,
                 "name": "Teal Mask Ogerpon ex",
-                "number": "16",
-                "set": "SV6"
+                "number": "25",
+                "set": "TWM"
               }
             ],
             "trainer": [
@@ -7893,56 +7893,56 @@
               {
                 "count": 4,
                 "name": "Ralts",
-                "number": "32",
-                "set": "S9a"
+                "number": "60",
+                "set": "ASR"
               },
               {
                 "count": 4,
                 "name": "Kirlia",
-                "number": "37",
-                "set": "S11a"
+                "number": "68",
+                "set": "SIT"
               },
               {
                 "count": 2,
                 "name": "Gardevoir ex",
-                "number": "92",
-                "set": "SV1S"
+                "number": "228",
+                "set": "SVI"
               },
               {
                 "count": 2,
                 "name": "Munkidori",
-                "number": "107",
-                "set": "SV6"
+                "number": "95",
+                "set": "TWM"
               },
               {
                 "count": 1,
                 "name": "Flutter Mane",
-                "number": "76",
-                "set": "SV5K"
+                "number": "78",
+                "set": "TEF"
               },
               {
                 "count": 1,
                 "name": "Drifloon",
-                "number": "83",
-                "set": "SV4a"
+                "number": "89",
+                "set": "SVI"
               },
               {
                 "count": 1,
                 "name": "Scream Tail",
-                "number": "71",
-                "set": "SV4K"
+                "number": "86",
+                "set": "PAR"
               },
               {
                 "count": 1,
                 "name": "Radiant Greninja",
-                "number": "26",
-                "set": "S9a"
+                "number": "46",
+                "set": "ASR"
               },
               {
                 "count": 1,
                 "name": "Manaphy",
-                "number": "29",
-                "set": "S12a"
+                "number": "41",
+                "set": "BRS"
               }
             ],
             "trainer": [
@@ -9397,16 +9397,10 @@
                 "set": "SIT"
               },
               {
-                "count": 2,
+                "count": 4,
                 "name": "Lugia V",
                 "number": "138",
                 "set": "SIT"
-              },
-              {
-                "count": 2,
-                "name": "Lugia V",
-                "number": "P",
-                "set": "S"
               },
               {
                 "count": 4,
@@ -9417,8 +9411,8 @@
               {
                 "count": 2,
                 "name": "Cinccino",
-                "number": "83",
-                "set": "SV5K"
+                "number": "183",
+                "set": "TEF"
               },
               {
                 "count": 1,
@@ -9429,8 +9423,8 @@
               {
                 "count": 1,
                 "name": "Minccino",
-                "number": "82",
-                "set": "SV5K"
+                "number": "182",
+                "set": "TEF"
               },
               {
                 "count": 2,
@@ -9447,8 +9441,8 @@
               {
                 "count": 1,
                 "name": "Wyrdeer V",
-                "number": "76",
-                "set": "S10D"
+                "number": "180",
+                "set": "ASR"
               },
               {
                 "count": 1,
@@ -9459,8 +9453,8 @@
               {
                 "count": 1,
                 "name": "Flutter Mane",
-                "number": "76",
-                "set": "SV5K"
+                "number": "78",
+                "set": "TEF"
               }
             ],
             "trainer": [
@@ -10152,14 +10146,14 @@
               {
                 "count": 4,
                 "name": "Raging Bolt ex",
-                "number": "89",
-                "set": "SV5K"
+                "number": "196",
+                "set": "TEF"
               },
               {
                 "count": 4,
                 "name": "Teal Mask Ogerpon ex",
-                "number": "114",
-                "set": "SV6"
+                "number": "190",
+                "set": "TWM"
               },
               {
                 "count": 1,
@@ -10170,20 +10164,20 @@
               {
                 "count": 1,
                 "name": "Sandy Shocks",
-                "number": "11",
-                "set": "SVHK"
+                "number": "98",
+                "set": "TEF"
               },
               {
                 "count": 1,
                 "name": "Radiant Greninja",
-                "number": "26",
-                "set": "S9a"
+                "number": "46",
+                "set": "ASR"
               },
               {
                 "count": 1,
                 "name": "Squawkabilly ex",
-                "number": "89",
-                "set": "SV2P"
+                "number": "247",
+                "set": "PAL"
               }
             ],
             "trainer": [
@@ -11380,14 +11374,14 @@
               {
                 "count": 2,
                 "name": "Miraidon ex",
-                "number": "358",
-                "set": "SV4a"
+                "number": "243",
+                "set": "PAF"
               },
               {
                 "count": 1,
                 "name": "Raikou V",
-                "number": "218",
-                "set": "S12a"
+                "number": "GG41",
+                "set": "CRZ"
               },
               {
                 "count": 2,
@@ -11398,8 +11392,8 @@
               {
                 "count": 2,
                 "name": "Squawkabilly ex",
-                "number": "89",
-                "set": "SV2P"
+                "number": "247",
+                "set": "PAL"
               },
               {
                 "count": 1,
@@ -11416,26 +11410,26 @@
               {
                 "count": 1,
                 "name": "Iron Bundle",
-                "number": "71",
-                "set": "SV4M"
+                "number": "66",
+                "set": "SVP"
               },
               {
                 "count": 1,
                 "name": "Bloodmoon Ursaluna ex",
-                "number": "94",
-                "set": "SV5a"
+                "number": "222",
+                "set": "TWM"
               },
               {
                 "count": 1,
                 "name": "Iron Valiant ex",
-                "number": "38",
-                "set": "SV4M"
+                "number": "89",
+                "set": "PAR"
               },
               {
                 "count": 1,
                 "name": "Mew ex",
-                "number": "76",
-                "set": "SV4a"
+                "number": "151",
+                "set": "MEW"
               }
             ],
             "trainer": [
@@ -12615,50 +12609,50 @@
               {
                 "count": 4,
                 "name": "Ralts",
-                "number": "32",
-                "set": "S9a"
+                "number": "60",
+                "set": "ASR"
               },
               {
                 "count": 4,
                 "name": "Kirlia",
-                "number": "37",
-                "set": "S11a"
+                "number": "68",
+                "set": "SIT"
               },
               {
                 "count": 1,
                 "name": "Drifloon",
-                "number": "83",
-                "set": "SV4a"
+                "number": "89",
+                "set": "SVI"
               },
               {
                 "count": 2,
                 "name": "Munkidori",
-                "number": "55",
-                "set": "SV6"
+                "number": "72",
+                "set": "SFA"
               },
               {
                 "count": 2,
                 "name": "Flutter Mane",
-                "number": "76",
-                "set": "SV5K"
+                "number": "78",
+                "set": "TEF"
               },
               {
                 "count": 1,
                 "name": "Scream Tail",
-                "number": "71",
-                "set": "SV4K"
+                "number": "86",
+                "set": "PAR"
               },
               {
                 "count": 1,
                 "name": "Manaphy",
-                "number": "178",
-                "set": "S12a"
+                "number": "GG06",
+                "set": "CRZ"
               },
               {
                 "count": 2,
                 "name": "Gardevoir ex",
-                "number": "328",
-                "set": "SV4a"
+                "number": "217",
+                "set": "PAF"
               }
             ],
             "trainer": [
@@ -15368,7 +15362,7 @@
               {
                 "count": 4,
                 "name": "Archeops",
-                "number": "272",
+                "number": "SWSH272",
                 "set": "PR-SW"
               },
               {
@@ -15603,7 +15597,7 @@
               {
                 "count": 4,
                 "name": "Archeops",
-                "number": "272",
+                "number": "SWSH272",
                 "set": "PR-SW"
               },
               {
@@ -15615,17 +15609,11 @@
               {
                 "count": 4,
                 "name": "Lugia V",
-                "number": "301",
-                "set": "PR-SW"
-              },
-              {
-                "count": 1,
-                "name": "Lugia VSTAR",
-                "number": "211",
+                "number": "138",
                 "set": "SIT"
               },
               {
-                "count": 2,
+                "count": 3,
                 "name": "Lugia VSTAR",
                 "number": "211",
                 "set": "SIT"
@@ -16127,50 +16115,50 @@
               {
                 "count": 2,
                 "name": "Regidrago V",
-                "number": "P",
-                "set": "S"
+                "number": "281",
+                "set": "PR-SW"
               },
               {
                 "count": 1,
                 "name": "Regidrago V",
-                "number": "76",
-                "set": "S12"
+                "number": "135",
+                "set": "SIT"
               },
               {
                 "count": 3,
                 "name": "Regidrago VSTAR",
-                "number": "77",
-                "set": "S12"
+                "number": "136",
+                "set": "SIT"
               },
               {
                 "count": 1,
                 "name": "Teal Mask Ogerpon ex",
-                "number": "125",
-                "set": "SV6"
+                "number": "211",
+                "set": "TWM"
               },
               {
                 "count": 2,
                 "name": "Teal Mask Ogerpon ex",
-                "number": "131",
-                "set": "SV6"
+                "number": "221",
+                "set": "TWM"
               },
               {
                 "count": 2,
                 "name": "Dragapult ex",
-                "number": "120",
-                "set": "SV6"
+                "number": "200",
+                "set": "TWM"
               },
               {
                 "count": 1,
                 "name": "Giratina VSTAR",
-                "number": "81",
-                "set": "S11"
+                "number": "131",
+                "set": "LOR"
               },
               {
                 "count": 1,
                 "name": "Hisuian Goodra VSTAR",
-                "number": "91",
-                "set": "S10a"
+                "number": "202",
+                "set": "LOR"
               },
               {
                 "count": 1,
@@ -16179,16 +16167,10 @@
                 "set": "SFA"
               },
               {
-                "count": 1,
+                "count": 2,
                 "name": "Squawkabilly ex",
-                "number": "65",
-                "set": "SV2P"
-              },
-              {
-                "count": 1,
-                "name": "Squawkabilly ex",
-                "number": "154",
-                "set": "SV4a"
+                "number": "169",
+                "set": "PAL"
               },
               {
                 "count": 1,
@@ -16205,14 +16187,14 @@
               {
                 "count": 1,
                 "name": "Hawlucha",
-                "number": "45",
-                "set": "SV1S"
+                "number": "118",
+                "set": "SV1"
               },
               {
                 "count": 1,
                 "name": "Radiant Charizard",
                 "number": "11",
-                "set": "S10b"
+                "set": "PGO"
               }
             ],
             "trainer": [
@@ -16470,7 +16452,7 @@
               {
                 "count": 1,
                 "name": "Lumineon V",
-                "number": "250",
+                "number": "SWSH250",
                 "set": "PR-SW"
               },
               {
@@ -17958,14 +17940,14 @@
               {
                 "count": 1,
                 "name": "Squawkabilly ex",
-                "number": "154",
-                "set": "SV4a"
+                "number": "169",
+                "set": "PAL"
               },
               {
                 "count": 1,
                 "name": "Radiant Greninja",
-                "number": "26",
-                "set": "S9a"
+                "number": "46",
+                "set": "ASR"
               }
             ],
             "trainer": [
@@ -21326,32 +21308,32 @@
               {
                 "count": 3,
                 "name": "Regidrago V",
-                "number": "107",
-                "set": "S12"
+                "number": "183",
+                "set": "SIT"
               },
               {
                 "count": 3,
                 "name": "Regidrago VSTAR",
-                "number": "117",
-                "set": "S12"
+                "number": "201",
+                "set": "SIT"
               },
               {
                 "count": 3,
                 "name": "Teal Mask Ogerpon ex",
-                "number": "16",
-                "set": "SV6"
+                "number": "25",
+                "set": "TWM"
               },
               {
                 "count": 2,
                 "name": "Dragapult ex",
-                "number": "120",
-                "set": "SV6"
+                "number": "200",
+                "set": "TWM"
               },
               {
                 "count": 1,
                 "name": "Giratina VSTAR",
-                "number": "125",
-                "set": "S11"
+                "number": "212",
+                "set": "LOR"
               },
               {
                 "count": 1,
@@ -21363,13 +21345,13 @@
                 "count": 1,
                 "name": "Radiant Charizard",
                 "number": "11",
-                "set": "S10b"
+                "set": "PGO"
               },
               {
                 "count": 1,
                 "name": "Hawlucha",
-                "number": "45",
-                "set": "SV1S"
+                "number": "118",
+                "set": "SV1"
               },
               {
                 "count": 1,
@@ -25422,14 +25404,14 @@
               {
                 "count": 4,
                 "name": "Teal Mask Ogerpon ex",
-                "number": "16",
-                "set": "SV6"
+                "number": "25",
+                "set": "TWM"
               },
               {
                 "count": 1,
                 "name": "Squawkabilly ex",
-                "number": "337",
-                "set": "SV4a"
+                "number": "223",
+                "set": "PAF"
               },
               {
                 "count": 1,
@@ -25440,20 +25422,20 @@
               {
                 "count": 1,
                 "name": "Sandy Shocks",
-                "number": "11",
-                "set": "SVHK"
+                "number": "98",
+                "set": "TEF"
               },
               {
                 "count": 1,
                 "name": "Iron Bundle",
-                "number": "71",
-                "set": "SV4M"
+                "number": "66",
+                "set": "SVP"
               },
               {
                 "count": 1,
                 "name": "Radiant Greninja",
-                "number": "6",
-                "set": "SVHK"
+                "number": "46",
+                "set": "ASR"
               }
             ],
             "trainer": [
@@ -27705,14 +27687,14 @@
               {
                 "count": 2,
                 "name": "Pidgey",
-                "number": "87",
-                "set": "SV3"
+                "number": "162",
+                "set": "OBF"
               },
               {
                 "count": 2,
                 "name": "Pidgeot ex",
-                "number": "15",
-                "set": "SVHK"
+                "number": "164",
+                "set": "OBF"
               },
               {
                 "count": 1,
@@ -27723,50 +27705,50 @@
               {
                 "count": 1,
                 "name": "Luxray",
-                "number": "61",
-                "set": "SV4a"
+                "number": "71",
+                "set": "PAL"
               },
               {
                 "count": 2,
                 "name": "Rotom V",
-                "number": "37",
-                "set": "S11"
+                "number": "58",
+                "set": "LOR"
               },
               {
                 "count": 2,
                 "name": "Mimikyu",
-                "number": "P",
-                "set": "SV"
+                "number": "97",
+                "set": "PAL"
               },
               {
                 "count": 2,
                 "name": "Cornerstone Mask Ogerpon ex",
-                "number": "128",
-                "set": "SV6"
+                "number": "112",
+                "set": "TWM"
               },
               {
                 "count": 1,
                 "name": "Wellspring Mask Ogerpon ex",
-                "number": "127",
-                "set": "SV6"
+                "number": "64",
+                "set": "TWM"
               },
               {
                 "count": 1,
                 "name": "Feebas",
-                "number": "27",
-                "set": "S11a"
+                "number": "39",
+                "set": "SIT"
               },
               {
                 "count": 1,
                 "name": "Milotic",
-                "number": "30",
-                "set": "SV6"
+                "number": "50",
+                "set": "TWM"
               },
               {
                 "count": 1,
                 "name": "Radiant Tsareena",
-                "number": "9",
-                "set": "S11a"
+                "number": "16",
+                "set": "SIT"
               }
             ],
             "trainer": [
@@ -29319,38 +29301,38 @@
               {
                 "count": 3,
                 "name": "Regidrago V",
-                "number": "108",
-                "set": "S12"
+                "number": "184",
+                "set": "SIT"
               },
               {
                 "count": 3,
                 "name": "Regidrago VSTAR",
-                "number": "77",
-                "set": "S12"
+                "number": "136",
+                "set": "SIT"
               },
               {
                 "count": 3,
                 "name": "Teal Mask Ogerpon ex",
-                "number": "114",
-                "set": "SV6"
+                "number": "190",
+                "set": "TWM"
               },
               {
                 "count": 2,
                 "name": "Dragapult ex",
-                "number": "120",
-                "set": "SV6"
+                "number": "200",
+                "set": "TWM"
               },
               {
                 "count": 1,
                 "name": "Giratina VSTAR",
-                "number": "125",
-                "set": "S11"
+                "number": "212",
+                "set": "LOR"
               },
               {
                 "count": 1,
                 "name": "Hisuian Goodra VSTAR",
-                "number": "91",
-                "set": "S10a"
+                "number": "202",
+                "set": "LOR"
               },
               {
                 "count": 1,
@@ -29361,14 +29343,14 @@
               {
                 "count": 1,
                 "name": "Squawkabilly ex",
-                "number": "94",
-                "set": "SV2P"
+                "number": "264",
+                "set": "PAL"
               },
               {
                 "count": 1,
                 "name": "Mew ex",
-                "number": "195",
-                "set": "SV2a"
+                "number": "193",
+                "set": "MEW"
               },
               {
                 "count": 1,
@@ -29380,13 +29362,13 @@
                 "count": 1,
                 "name": "Radiant Charizard",
                 "number": "11",
-                "set": "S10b"
+                "set": "PGO"
               },
               {
                 "count": 1,
                 "name": "Hawlucha",
-                "number": "282",
-                "set": "SV4a"
+                "number": "175",
+                "set": "PAF"
               }
             ],
             "trainer": [
@@ -85210,14 +85192,14 @@
               {
                 "count": 4,
                 "name": "Flutter Mane",
-                "number": "76",
-                "set": "SV5K"
+                "number": "78",
+                "set": "TEF"
               },
               {
                 "count": 2,
                 "name": "Great Tusk",
-                "number": "42",
-                "set": "SV5K"
+                "number": "97",
+                "set": "TEF"
               },
               {
                 "count": 1,
@@ -85228,8 +85210,8 @@
               {
                 "count": 1,
                 "name": "Radiant Greninja",
-                "number": "33",
-                "set": "S12a"
+                "number": "46",
+                "set": "ASR"
               }
             ],
             "trainer": [
@@ -86174,8 +86156,8 @@
               {
                 "count": 3,
                 "name": "Lugia V",
-                "number": "109",
-                "set": "S12"
+                "number": "185",
+                "set": "SIT"
               },
               {
                 "count": 2,
@@ -86192,20 +86174,20 @@
               {
                 "count": 1,
                 "name": "Iron Bundle",
-                "number": "71",
-                "set": "SV4M"
+                "number": "66",
+                "set": "SVP"
               },
               {
                 "count": 1,
                 "name": "Bloodmoon Ursaluna ex",
-                "number": "94",
-                "set": "SV5a"
+                "number": "222",
+                "set": "TWM"
               },
               {
                 "count": 3,
                 "name": "Cinccino",
-                "number": "83",
-                "set": "SV5K"
+                "number": "183",
+                "set": "TEF"
               },
               {
                 "count": 1,
@@ -86222,8 +86204,8 @@
               {
                 "count": 3,
                 "name": "Lugia VSTAR",
-                "number": "118",
-                "set": "S12"
+                "number": "202",
+                "set": "SIT"
               }
             ],
             "trainer": [
@@ -86879,32 +86861,32 @@
               {
                 "count": 3,
                 "name": "Regidrago V",
-                "number": "76",
-                "set": "S12"
+                "number": "135",
+                "set": "SIT"
               },
               {
                 "count": 3,
                 "name": "Regidrago VSTAR",
-                "number": "77",
-                "set": "S12"
+                "number": "136",
+                "set": "SIT"
               },
               {
                 "count": 3,
                 "name": "Teal Mask Ogerpon ex",
-                "number": "16",
-                "set": "SV6"
+                "number": "25",
+                "set": "TWM"
               },
               {
                 "count": 1,
                 "name": "Hisuian Goodra VSTAR",
-                "number": "57",
-                "set": "S10a"
+                "number": "136",
+                "set": "LOR"
               },
               {
                 "count": 1,
                 "name": "Dragapult ex",
-                "number": "81",
-                "set": "SV6"
+                "number": "130",
+                "set": "TWM"
               },
               {
                 "count": 1,
@@ -86927,26 +86909,26 @@
               {
                 "count": 1,
                 "name": "Squawkabilly ex",
-                "number": "154",
-                "set": "SV4a"
+                "number": "169",
+                "set": "PAL"
               },
               {
                 "count": 1,
                 "name": "Mew ex",
                 "number": "151",
-                "set": "SV2a"
+                "set": "MEW"
               },
               {
                 "count": 1,
                 "name": "Iron Bundle",
-                "number": "20",
-                "set": "SV4M"
+                "number": "56",
+                "set": "PAR"
               },
               {
                 "count": 1,
                 "name": "Hawlucha",
-                "number": "45",
-                "set": "SV1S"
+                "number": "118",
+                "set": "SV1"
               },
               {
                 "count": 1,
@@ -88408,38 +88390,38 @@
               {
                 "count": 3,
                 "name": "Giratina V",
-                "number": "80",
-                "set": "S11"
+                "number": "130",
+                "set": "LOR"
               },
               {
                 "count": 3,
                 "name": "Giratina VSTAR",
-                "number": "81",
-                "set": "S11"
+                "number": "131",
+                "set": "LOR"
               },
               {
                 "count": 4,
                 "name": "Comfey",
-                "number": "49",
-                "set": "S11"
+                "number": "79",
+                "set": "LOR"
               },
               {
                 "count": 1,
                 "name": "Cramorant",
-                "number": "33",
-                "set": "S11"
+                "number": "50",
+                "set": "LOR"
               },
               {
                 "count": 1,
                 "name": "Sableye",
-                "number": "44",
-                "set": "S11"
+                "number": "70",
+                "set": "LOR"
               },
               {
                 "count": 1,
                 "name": "Radiant Greninja",
-                "number": "33",
-                "set": "S12a"
+                "number": "46",
+                "set": "ASR"
               },
               {
                 "count": 1,
@@ -88450,14 +88432,14 @@
               {
                 "count": 1,
                 "name": "Spiritomb",
-                "number": "28",
-                "set": "SV2D"
+                "number": "89",
+                "set": "PAL"
               },
               {
                 "count": 1,
                 "name": "Manaphy",
-                "number": "31",
-                "set": "S9"
+                "number": "41",
+                "set": "BRS"
               },
               {
                 "count": 1,
@@ -88917,26 +88899,26 @@
               {
                 "count": 1,
                 "name": "Bloodmoon Ursaluna ex",
-                "number": "84",
-                "set": "SV5a"
+                "number": "202",
+                "set": "TWM"
               },
               {
                 "count": 1,
                 "name": "Iron Hands ex",
-                "number": "79",
-                "set": "SV4M"
+                "number": "223",
+                "set": "PAR"
               },
               {
                 "count": 1,
                 "name": "Lumineon V",
-                "number": "104",
-                "set": "S9"
+                "number": "155",
+                "set": "BRS"
               },
               {
                 "count": 1,
                 "name": "Lumineon V",
-                "number": "216",
-                "set": "S12a"
+                "number": "GG39",
+                "set": "CRZ"
               },
               {
                 "count": 3,
@@ -88953,20 +88935,20 @@
               {
                 "count": 3,
                 "name": "Minccino",
-                "number": "82",
-                "set": "SV5K"
+                "number": "182",
+                "set": "TEF"
               },
               {
                 "count": 3,
                 "name": "Cinccino",
-                "number": "83",
-                "set": "SV5K"
+                "number": "183",
+                "set": "TEF"
               },
               {
                 "count": 1,
                 "name": "Flutter Mane",
-                "number": "76",
-                "set": "SV5K"
+                "number": "78",
+                "set": "TEF"
               }
             ],
             "trainer": [
@@ -89160,68 +89142,68 @@
               {
                 "count": 2,
                 "name": "Gardevoir ex",
-                "number": "28",
-                "set": "SV1S"
+                "number": "86",
+                "set": "SV1"
               },
               {
                 "count": 4,
                 "name": "Ralts",
-                "number": "32",
-                "set": "S9a"
+                "number": "60",
+                "set": "ASR"
               },
               {
                 "count": 4,
                 "name": "Kirlia",
-                "number": "37",
-                "set": "S11a"
+                "number": "68",
+                "set": "SIT"
               },
               {
                 "count": 1,
                 "name": "Scream Tail",
-                "number": "71",
-                "set": "SV4K"
+                "number": "86",
+                "set": "PAR"
               },
               {
                 "count": 1,
                 "name": "Flutter Mane",
-                "number": "76",
-                "set": "SV5K"
+                "number": "78",
+                "set": "TEF"
               },
               {
                 "count": 1,
                 "name": "Klefki",
-                "number": "45",
-                "set": "SV1V"
+                "number": "96",
+                "set": "SV1"
               },
               {
                 "count": 1,
                 "name": "Cresselia",
-                "number": "28",
-                "set": "S10D"
+                "number": "74",
+                "set": "LOR"
               },
               {
                 "count": 1,
                 "name": "Mimikyu",
-                "number": "34",
-                "set": "SV2P"
+                "number": "97",
+                "set": "PAL"
               },
               {
                 "count": 1,
                 "name": "Drifloon",
-                "number": "83",
-                "set": "SV4a"
+                "number": "89",
+                "set": "SVI"
               },
               {
                 "count": 1,
                 "name": "Manaphy",
-                "number": "178",
-                "set": "S12a"
+                "number": "GG06",
+                "set": "CRZ"
               },
               {
                 "count": 2,
                 "name": "Munkidori",
-                "number": "107",
-                "set": "SV6"
+                "number": "95",
+                "set": "TWM"
               }
             ],
             "trainer": [
@@ -89889,14 +89871,14 @@
               {
                 "count": 4,
                 "name": "Lugia V",
-                "number": "110",
-                "set": "S12"
+                "number": "186",
+                "set": "SIT"
               },
               {
                 "count": 3,
                 "name": "Lugia VSTAR",
-                "number": "123",
-                "set": "S12"
+                "number": "211",
+                "set": "SIT"
               },
               {
                 "count": 4,
@@ -89907,38 +89889,38 @@
               {
                 "count": 2,
                 "name": "Iron Hands ex",
-                "number": "79",
-                "set": "SV4M"
+                "number": "223",
+                "set": "PAR"
               },
               {
                 "count": 2,
                 "name": "Lumineon V",
-                "number": "104",
-                "set": "S9"
+                "number": "155",
+                "set": "BRS"
               },
               {
                 "count": 1,
                 "name": "Radiant Charizard",
                 "number": "11",
-                "set": "S10b"
+                "set": "PGO"
               },
               {
                 "count": 1,
                 "name": "Iron Bundle",
-                "number": "71",
-                "set": "SV4M"
+                "number": "66",
+                "set": "SVP"
               },
               {
                 "count": 1,
                 "name": "Bloodmoon Ursaluna ex",
-                "number": "84",
-                "set": "SV5a"
+                "number": "202",
+                "set": "TWM"
               },
               {
                 "count": 1,
                 "name": "Wyrdeer V",
-                "number": "76",
-                "set": "S10D"
+                "number": "180",
+                "set": "ASR"
               }
             ],
             "trainer": [
@@ -91779,8 +91761,8 @@
               {
                 "count": 2,
                 "name": "Cinccino",
-                "number": "83",
-                "set": "SV5K"
+                "number": "183",
+                "set": "TEF"
               },
               {
                 "count": 2,
@@ -91797,8 +91779,8 @@
               {
                 "count": 1,
                 "name": "Wellspring Mask Ogerpon ex",
-                "number": "38",
-                "set": "SV6"
+                "number": "64",
+                "set": "TWM"
               },
               {
                 "count": 1,
@@ -92199,50 +92181,50 @@
               {
                 "count": 3,
                 "name": "Charizard ex",
-                "number": "349",
-                "set": "SV4a"
+                "number": "234",
+                "set": "PAF"
               },
               {
                 "count": 1,
                 "name": "Charmeleon",
-                "number": "211",
-                "set": "SV4a"
+                "number": "110",
+                "set": "PAF"
               },
               {
                 "count": 3,
                 "name": "Charmander",
-                "number": "210",
-                "set": "SV4a"
+                "number": "109",
+                "set": "PAF"
               },
               {
                 "count": 1,
                 "name": "Radiant Charizard",
-                "number": "15",
-                "set": "S12a"
+                "number": "20",
+                "set": "CRZ"
               },
               {
                 "count": 2,
                 "name": "Pidgeot ex",
-                "number": "335",
-                "set": "SV4a"
+                "number": "221",
+                "set": "PAF"
               },
               {
                 "count": 1,
                 "name": "Pidgeotto",
-                "number": "305",
-                "set": "SV4a"
+                "number": "197",
+                "set": "PAF"
               },
               {
                 "count": 2,
                 "name": "Pidgey",
-                "number": "118",
-                "set": "SV3"
+                "number": "207",
+                "set": "OBF"
               },
               {
                 "count": 1,
                 "name": "Rotom V",
-                "number": "104",
-                "set": "S11"
+                "number": "177",
+                "set": "LOR"
               },
               {
                 "count": 1,
@@ -92283,8 +92265,8 @@
               {
                 "count": 1,
                 "name": "Manaphy",
-                "number": "178",
-                "set": "S12a"
+                "number": "GG06",
+                "set": "CRZ"
               }
             ],
             "trainer": [
@@ -114851,50 +114833,50 @@
               {
                 "count": 4,
                 "name": "Ralts",
-                "number": "32",
-                "set": "S9a"
+                "number": "60",
+                "set": "ASR"
               },
               {
                 "count": 4,
                 "name": "Kirlia",
-                "number": "37",
-                "set": "S11a"
+                "number": "68",
+                "set": "SIT"
               },
               {
                 "count": 2,
                 "name": "Gardevoir ex",
-                "number": "348",
-                "set": "SV4a"
+                "number": "233",
+                "set": "PAF"
               },
               {
                 "count": 2,
                 "name": "Munkidori",
-                "number": "107",
-                "set": "SV6"
+                "number": "95",
+                "set": "TWM"
               },
               {
                 "count": 1,
                 "name": "Flutter Mane",
-                "number": "76",
-                "set": "SV5K"
+                "number": "78",
+                "set": "TEF"
               },
               {
                 "count": 1,
                 "name": "Scream Tail",
-                "number": "71",
-                "set": "SV4K"
+                "number": "86",
+                "set": "PAR"
               },
               {
                 "count": 1,
                 "name": "Drifloon",
-                "number": "260",
-                "set": "SV4a"
+                "number": "155",
+                "set": "PAF"
               },
               {
                 "count": 1,
                 "name": "Klefki",
-                "number": "264",
-                "set": "SV4a"
+                "number": "159",
+                "set": "PAF"
               },
               {
                 "count": 1,
@@ -114905,8 +114887,8 @@
               {
                 "count": 1,
                 "name": "Manaphy",
-                "number": "178",
-                "set": "S12a"
+                "number": "GG06",
+                "set": "CRZ"
               }
             ],
             "trainer": [
@@ -116684,38 +116666,38 @@
               {
                 "count": 4,
                 "name": "Snorlax",
-                "number": "56",
-                "set": "S10b"
+                "number": "55",
+                "set": "PGO"
               },
               {
                 "count": 2,
                 "name": "Rotom V",
-                "number": "37",
-                "set": "S11"
+                "number": "58",
+                "set": "LOR"
               },
               {
                 "count": 1,
                 "name": "Pidgeot V",
-                "number": "82",
-                "set": "S11"
+                "number": "137",
+                "set": "LOR"
               },
               {
                 "count": 1,
                 "name": "Chi-Yu ex",
-                "number": "35",
-                "set": "SV4a"
+                "number": "40",
+                "set": "PAL"
               },
               {
                 "count": 1,
                 "name": "Mimikyu",
-                "number": "88",
-                "set": "SV4a"
+                "number": "39",
+                "set": "PAF"
               },
               {
                 "count": 1,
                 "name": "Cornerstone Mask Ogerpon ex",
-                "number": "65",
-                "set": "SV6"
+                "number": "112",
+                "set": "TWM"
               }
             ],
             "trainer": [
@@ -117204,14 +117186,14 @@
               {
                 "count": 3,
                 "name": "Lugia V",
-                "number": "109",
-                "set": "S12"
+                "number": "185",
+                "set": "SIT"
               },
               {
                 "count": 3,
                 "name": "Lugia VSTAR",
-                "number": "118",
-                "set": "S12"
+                "number": "202",
+                "set": "SIT"
               },
               {
                 "count": 4,
@@ -117228,26 +117210,26 @@
               {
                 "count": 3,
                 "name": "Cinccino",
-                "number": "83",
-                "set": "SV5K"
+                "number": "183",
+                "set": "TEF"
               },
               {
                 "count": 1,
                 "name": "Iron Hands ex",
-                "number": "79",
-                "set": "SV4M"
+                "number": "223",
+                "set": "PAR"
               },
               {
                 "count": 1,
                 "name": "Bloodmoon Ursaluna ex",
-                "number": "84",
-                "set": "SV5a"
+                "number": "202",
+                "set": "TWM"
               },
               {
                 "count": 2,
                 "name": "Lumineon V",
-                "number": "104",
-                "set": "S9"
+                "number": "155",
+                "set": "BRS"
               }
             ],
             "trainer": [
@@ -120526,20 +120508,20 @@
               {
                 "count": 3,
                 "name": "Lugia VSTAR",
-                "number": "P",
-                "set": "S"
+                "number": "139",
+                "set": "SIT"
               },
               {
                 "count": 4,
                 "name": "Archeops",
-                "number": "P",
-                "set": "S"
+                "number": "272",
+                "set": "PR-SW"
               },
               {
                 "count": 2,
                 "name": "Minccino",
-                "number": "82",
-                "set": "SV5K"
+                "number": "182",
+                "set": "TEF"
               },
               {
                 "count": 1,
@@ -120550,32 +120532,32 @@
               {
                 "count": 3,
                 "name": "Cinccino",
-                "number": "83",
-                "set": "SV5K"
+                "number": "183",
+                "set": "TEF"
               },
               {
                 "count": 1,
                 "name": "Bloodmoon Ursaluna ex",
-                "number": "84",
-                "set": "SV5a"
+                "number": "202",
+                "set": "TWM"
               },
               {
                 "count": 1,
                 "name": "Iron Hands ex",
-                "number": "79",
-                "set": "SV4M"
+                "number": "223",
+                "set": "PAR"
               },
               {
                 "count": 1,
                 "name": "Lumineon V",
-                "number": "2",
-                "set": "SPD"
+                "number": "40",
+                "set": "BRS"
               },
               {
                 "count": 1,
                 "name": "Flutter Mane",
-                "number": "33",
-                "set": "SV5K"
+                "number": "78",
+                "set": "TEF"
               }
             ],
             "trainer": [
@@ -120745,32 +120727,32 @@
               {
                 "count": 4,
                 "name": "Snorlax",
-                "number": "56",
-                "set": "S10b"
+                "number": "55",
+                "set": "PGO"
               },
               {
                 "count": 2,
                 "name": "Rotom V",
-                "number": "37",
-                "set": "S11"
+                "number": "58",
+                "set": "LOR"
               },
               {
                 "count": 1,
                 "name": "Pidgeot V",
-                "number": "82",
-                "set": "S11"
+                "number": "137",
+                "set": "LOR"
               },
               {
                 "count": 1,
                 "name": "Cornerstone Mask Ogerpon ex",
-                "number": "119",
-                "set": "SV6"
+                "number": "199",
+                "set": "TWM"
               },
               {
                 "count": 1,
                 "name": "Mimikyu",
-                "number": "341",
-                "set": "SV4a"
+                "number": "75",
+                "set": "SVP"
               }
             ],
             "trainer": [
@@ -123269,26 +123251,26 @@
               {
                 "count": 4,
                 "name": "Teal Mask Ogerpon ex",
-                "number": "16",
-                "set": "SV6"
+                "number": "25",
+                "set": "TWM"
               },
               {
                 "count": 1,
                 "name": "Radiant Greninja",
-                "number": "33",
-                "set": "S12a"
+                "number": "46",
+                "set": "ASR"
               },
               {
                 "count": 1,
                 "name": "Squawkabilly ex",
-                "number": "154",
-                "set": "SV4a"
+                "number": "169",
+                "set": "PAL"
               },
               {
                 "count": 1,
                 "name": "Sandy Shocks",
-                "number": "11",
-                "set": "SVHK"
+                "number": "98",
+                "set": "TEF"
               },
               {
                 "count": 1,
@@ -123299,8 +123281,8 @@
               {
                 "count": 1,
                 "name": "Spiritomb",
-                "number": "86",
-                "set": "SV4a"
+                "number": "89",
+                "set": "PAL"
               }
             ],
             "trainer": [
@@ -124661,56 +124643,56 @@
               {
                 "count": 4,
                 "name": "Lugia V",
-                "number": "109",
-                "set": "S12"
+                "number": "185",
+                "set": "SIT"
               },
               {
                 "count": 3,
                 "name": "Lugia VSTAR",
-                "number": "118",
-                "set": "S12"
+                "number": "202",
+                "set": "SIT"
               },
               {
                 "count": 4,
                 "name": "Archeops",
-                "number": "P",
-                "set": "S"
+                "number": "272",
+                "set": "PR-SW"
               },
               {
                 "count": 1,
                 "name": "Wellspring Mask Ogerpon ex",
-                "number": "117",
-                "set": "SV6"
+                "number": "194",
+                "set": "TWM"
               },
               {
                 "count": 1,
                 "name": "Iron Hands ex",
-                "number": "79",
-                "set": "SV4M"
+                "number": "223",
+                "set": "PAR"
               },
               {
                 "count": 2,
                 "name": "Lumineon V",
-                "number": "104",
-                "set": "S9"
+                "number": "155",
+                "set": "BRS"
               },
               {
                 "count": 2,
                 "name": "Minccino",
-                "number": "82",
-                "set": "SV5K"
+                "number": "182",
+                "set": "TEF"
               },
               {
                 "count": 2,
                 "name": "Cinccino",
-                "number": "83",
-                "set": "SV5K"
+                "number": "183",
+                "set": "TEF"
               },
               {
                 "count": 1,
                 "name": "Bloodmoon Ursaluna ex",
-                "number": "84",
-                "set": "SV5a"
+                "number": "202",
+                "set": "TWM"
               },
               {
                 "count": 1,
@@ -124721,8 +124703,8 @@
               {
                 "count": 1,
                 "name": "Wyrdeer V",
-                "number": "76",
-                "set": "S10D"
+                "number": "180",
+                "set": "ASR"
               }
             ],
             "trainer": [
@@ -124940,8 +124922,8 @@
               {
                 "count": 1,
                 "name": "Wellspring Mask Ogerpon ex",
-                "number": "38",
-                "set": "SV6"
+                "number": "64",
+                "set": "TWM"
               },
               {
                 "count": 1,

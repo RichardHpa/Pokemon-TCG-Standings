@@ -16,7 +16,7 @@ export interface Rounds {
   [key: string]: Round;
 }
 
-interface PokemonCard {
+export interface PokemonCard {
   count: number;
   name: string;
   number: string;

@@ -1,6 +1,6 @@
+import { useMemo } from 'react';
 import clsx from 'clsx';
 
-import { useMemo } from 'react';
 import { getArchetypes } from 'helpers/getArchetypes/getArchetypes';
 
 import type { FC } from 'react';
@@ -28,9 +28,14 @@ const PokemonImage = ({ image, size }: { image: ImageProp; size: 'small' | 'larg
 interface ArchetypeSpritesProps {
   decklist: DeckList;
   size?: 'small' | 'large';
+  onClick?: (e: React.MouseEvent<HTMLDivElement>) => void;
 }
 
-export const ArchetypeSprites: FC<ArchetypeSpritesProps> = ({ decklist, size = 'large' }) => {
+export const ArchetypeSprites: FC<ArchetypeSpritesProps> = ({
+  decklist,
+  size = 'large',
+  onClick = () => {},
+}) => {
   const archetypes = useMemo(() => {
     return getArchetypes(decklist);
   }, [decklist]);
@@ -42,7 +47,7 @@ export const ArchetypeSprites: FC<ArchetypeSpritesProps> = ({ decklist, size = '
   }
 
   return (
-    <div className="flex gap-1">
+    <div className="flex gap-1" onClick={onClick}>
       {archetypes.map((archetype, index) => (
         <PokemonImage key={index} image={archetype} size={size} />
       ))}

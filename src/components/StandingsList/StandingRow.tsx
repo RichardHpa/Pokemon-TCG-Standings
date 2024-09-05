@@ -45,6 +45,13 @@ export const StandingRow: FC<StandingRowProps> = ({
     [division, navigate, tournamentId]
   );
 
+  const handleViewDecklist = useCallback(
+    (player: string) => {
+      navigate(`/tournaments/${tournamentId}/${division}/${createPlayerUrl(player)}/decklist`);
+    },
+    [division, navigate, tournamentId]
+  );
+
   return (
     <li
       className="flex justify-between items-center pl-3 pr-6  text-gray-700 cursor-pointer  hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900 border-b border-gray-100 dark:border-gray-800 dark:text-gray-400"
@@ -69,7 +76,14 @@ export const StandingRow: FC<StandingRowProps> = ({
       </div>
       <div className="flex gap-2 items-center">
         {!hideArchetypes && player.decklist && (
-          <ArchetypeSprites decklist={player.decklist} size="small" />
+          <ArchetypeSprites
+            decklist={player.decklist}
+            size="small"
+            onClick={(event: React.MouseEvent<HTMLDivElement>) => {
+              event.stopPropagation();
+              handleViewDecklist(player.name);
+            }}
+          />
         )}
         {player.drop > 0 && (
           <div className="text-red-500">
