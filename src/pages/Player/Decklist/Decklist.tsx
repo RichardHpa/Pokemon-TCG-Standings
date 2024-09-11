@@ -3,6 +3,8 @@ import { useGetPlayerInfo } from 'hooks/useGetPlayer';
 
 import { setMap } from 'constants/sets';
 
+import { getCountryCode } from 'utils/getCountryCode';
+
 import type { Division } from 'types/tournament';
 import type { DeckList, PokemonCard } from 'types/standing';
 
@@ -20,12 +22,6 @@ const getImageUrl = (card: PokemonCard) => {
   }
 
   return `https://images.pokemontcg.io/${setCode}/${number}.png`;
-};
-
-// TODO: move to helpers
-const getCountryCodeFromName = (name: string) => {
-  const countryCode = name.match(/\[(\w+)\]$/);
-  return countryCode ? countryCode[1] : '';
 };
 
 const useGetDecklist = (deckList: DeckList) => {
@@ -82,21 +78,21 @@ export const Decklist = () => {
     division: Division;
   };
 
-  const { data: playerInfo, isLoading } = useGetPlayerInfo({ tournamentId, playerName, division });
+  const { data, isLoading } = useGetPlayerInfo({ tournamentId, playerName, division });
   if (isLoading) {
     return <p>Loading...</p>;
   }
 
-  if (!playerInfo) {
+  if (!data || !data.players || data.players.length === 0) {
     return <p>Player not found</p>;
   }
 
-  const player = playerInfo[0];
+  const player = data.players[0];
 
   return (
     <>
-      {getCountryCodeFromName(player.name) === 'JP' && (
-        <p className="italic text-gray-500 dark:text-gray-400">
+      {getCountryCode(player.name) === 'JP' && (
+        <p className="italic text-gray-500 dark:text-gray-400 mb-2">
           Some cards may be wrong as we have converted the set list from the Japanese sets, if there
           is something wrong, please raise an issue with us on{' '}
           <a

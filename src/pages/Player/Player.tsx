@@ -1,19 +1,15 @@
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { useMemo, useState, useCallback } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import clsx from 'clsx';
-import { ListBulletIcon } from '@heroicons/react/24/solid';
 
-import { Heading } from 'components/Heading';
 import { RoundsTable } from 'components/RoundsTable';
 import { ContentCard } from 'components/ContentCard';
 import { SimilarPointsList } from 'components/SimilarPointsList';
 import { StandingsCard } from 'components/StandingsCard';
 import { SEO } from 'components/SEO';
-import { ArchetypeSprites } from 'components/ArchetypeSprites';
 import { LoadingPokeball } from 'components/LoadingPokeball';
 import { Notice } from 'components/Notice';
-import { IconButton } from 'components/Button/IconButton';
 
 import { calculatePoints } from 'utils/calculatePoints';
 import { createPlayerName } from 'utils/createPlayerName';
@@ -21,7 +17,6 @@ import { createPlayerName } from 'utils/createPlayerName';
 import { getPokedataStandings } from 'api/getPokedataStandings';
 
 import { useGetPlayerInfo } from 'hooks/useGetPlayer';
-import { useGetTournamentStandings } from 'queries/useGetTournamentStandings';
 
 import type { FC } from 'react';
 import type { Division } from 'types/tournament';
@@ -46,37 +41,13 @@ const PlayerInfoInner: FC<PlayerInfoInnerProps> = ({
   tournamentId,
   division,
 }) => {
-  const navigate = useNavigate();
   const totalPoints = useMemo(() => {
     return calculatePoints(player.record);
   }, [player]);
 
-  const handleViewDecklist = useCallback(() => {
-    navigate('./decklist');
-  }, [navigate]);
-
   return (
     <>
       <div>
-        <div className="flex justify-between">
-          <Heading level="4">
-            {player.name} {player.placing > standingsData.length && ` - (DQ)`}
-          </Heading>
-
-          {player.decklist && (
-            <div className="flex gap-2 items-center justify-center">
-              <IconButton
-                icon={<ListBulletIcon />}
-                alt="deck list"
-                rounded={false}
-                color="grey"
-                onClick={handleViewDecklist}
-              />
-              <ArchetypeSprites decklist={player.decklist} />
-            </div>
-          )}
-        </div>
-
         <p className="text-gray-500 dark:text-gray-400 mb-2">
           {player.record.wins}-{player.record.losses}-{player.record.ties} ({totalPoints})
         </p>
@@ -225,13 +196,7 @@ const MultiplePlayers: FC<MultiplePlayersProps> = ({
 const PlayerInfo: FC<PlayerInfoProps> = ({ tournamentId, playerName, division }) => {
   const { data, isLoading, isError } = useGetPlayerInfo({ tournamentId, division, playerName });
 
-  const {
-    data: standingsData,
-    isLoading: isStandingsLoading,
-    isError: isStandingsError,
-  } = useGetTournamentStandings({ tournamentId, division });
-
-  if (isLoading || isStandingsLoading) {
+  if (isLoading) {
     return (
       <div className="flex flex-col justify-center items-center">
         <LoadingPokeball size="100" alt="Loading player info...</p>" />
@@ -239,25 +204,27 @@ const PlayerInfo: FC<PlayerInfoProps> = ({ tournamentId, playerName, division })
     );
   }
 
-  if (isError || isStandingsError || !data || !standingsData || data.length === 0) {
+  if (isError || !data || !data.players || data.players.length === 0) {
     return (
       <Notice status="error">No player found with the name {createPlayerName(playerName)}</Notice>
     );
   }
 
-  if (data.length > 1) {
+  const players = data.players;
+  const standings = data.standings;
+  if (players.length > 1) {
     return (
       <MultiplePlayers
         playerName={playerName}
-        players={data}
-        standings={standingsData}
+        players={players}
+        standings={standings}
         tournamentId={tournamentId}
         division={division}
       />
     );
   }
 
-  const player = data[0];
+  const player = players[0];
 
   return (
     <div className="flex flex-col gap-4">
@@ -265,7 +232,7 @@ const PlayerInfo: FC<PlayerInfoProps> = ({ tournamentId, playerName, division })
 
       <PlayerInfoInner
         player={player}
-        standingsData={standingsData}
+        standingsData={standings}
         tournamentId={tournamentId}
         division={division}
       />

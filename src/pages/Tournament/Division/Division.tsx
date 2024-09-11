@@ -4,7 +4,6 @@ import { useParams } from 'react-router-dom';
 import { Card } from 'components/Card';
 import { StandingsCard } from 'components/StandingsCard';
 import { LoadingPokeball } from 'components/LoadingPokeball';
-import { Notice } from 'components/Notice';
 
 import { useFuse } from 'hooks/useFuse';
 
@@ -27,11 +26,7 @@ export const Division = () => {
     tournamentId: string;
   };
 
-  const {
-    data: standings = [],
-    isLoading,
-    isError,
-  } = useGetTournamentStandings({ tournamentId, division });
+  const { data: standings = [], isLoading } = useGetTournamentStandings({ tournamentId, division });
 
   const { query, onSearch, searching, hits, reset, rawQuery } = useFuse(standings, fuseOptions);
 
@@ -46,18 +41,6 @@ export const Division = () => {
         <LoadingPokeball size="100" alt="Loading standings...</p>" />
       </div>
     );
-  }
-
-  if (isError) {
-    return <Notice status="error">There was an error loading the standings</Notice>;
-  }
-
-  if (!standings) {
-    return <Notice status="info">This tournament hasn't started yet</Notice>;
-  }
-
-  if (standings && standings[0].rounds['1'].name === 'none') {
-    return <Notice status="info">Standings will be available once round 1 has started</Notice>;
   }
 
   return (

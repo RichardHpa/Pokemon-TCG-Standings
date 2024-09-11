@@ -8,6 +8,7 @@ import { RUNNING } from 'constants/tournament';
 
 import { getCountryFlag } from 'helpers/getCountryFlag';
 
+import { getCountryCode } from 'utils/getCountryCode';
 import { createPlayerUrl } from 'utils/createPlayerUrl';
 
 import type { Standing } from 'types/standing';
@@ -22,11 +23,6 @@ interface StandingRowProps {
   hideArchetypes?: boolean;
   tournamentStatus?: Tournament['tournamentStatus'];
 }
-
-const getCountryCode = (name: string) => {
-  const countryCode = name.match(/\[(\w+)\]$/);
-  return countryCode ? countryCode[1] : '';
-};
 
 export const StandingRow: FC<StandingRowProps> = ({
   player,
