@@ -4,6 +4,7 @@ import { useGetPlayerInfo } from 'hooks/useGetPlayer';
 import { setMap } from 'constants/sets';
 
 import { getCountryCode } from 'utils/getCountryCode';
+import { CardImage } from 'components/CardImage';
 
 import type { Division } from 'types/tournament';
 import type { DeckList, PokemonCard } from 'types/standing';
@@ -59,7 +60,7 @@ const DecklistInner = ({ decklist }: { decklist: DeckList }) => {
       <div className="grid gap-2 grid-cols-8">
         {formattedCards.map(card => (
           <div key={card.name} className="relative">
-            <img src={card.image} alt={card.name} />
+            <CardImage src={card.image} alt={card.name} />
 
             <div className="absolute bottom-0 right-0 inline-flex items-center justify-center w-8 h-8 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600 m-2">
               <span className="font-medium text-gray-600 dark:text-gray-300">{card.count}</span>
