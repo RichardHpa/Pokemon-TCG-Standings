@@ -1,5 +1,11 @@
 import { Standing } from './standing';
 
+export type Division = 'juniors' | 'seniors' | 'masters' | 'juniorsseniors';
+
+export type DivisionMap<T> = {
+  [key in Division]: T;
+};
+
 export interface Tournament {
   id: string;
   name: string;
@@ -8,27 +14,13 @@ export interface Tournament {
     end: string;
   };
   decklists: number;
-  players: {
-    juniors: number;
-    seniors: number;
-    masters: number;
-  };
-  winners: {
-    juniors: string;
-    seniors: string;
-    masters: string;
-  };
+  players: DivisionMap<number>;
+  winners: DivisionMap<string>;
   tournamentStatus: 'finished' | 'running' | 'not-started' | 'check-in';
-  roundNumbers: {
-    juniors: number;
-    seniors: number;
-    masters: number;
-  };
+  roundNumbers: DivisionMap<number>;
   lastUpdated: string;
   rk9link: string;
 }
-
-export type Division = 'juniors' | 'seniors' | 'masters';
 
 export interface TournamentsApiResponse {
   type: 'tcg';

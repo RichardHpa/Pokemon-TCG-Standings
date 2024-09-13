@@ -117,7 +117,7 @@ export const Tournament = () => {
 
   return (
     <>
-      <SEO title="Tournaments" />
+      <SEO title={`${data.name}`} />
 
       <div className="flex-grow flex flex-col gap-4">
         <TournamentStandings tournament={data} />

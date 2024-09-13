@@ -24,7 +24,6 @@ export const useGetTournament = (tournamentId: string) => {
       });
       return tournament;
     },
-    staleTime: 60 * 10 * 1000,
     select: data => {
       return data.tournament;
     },

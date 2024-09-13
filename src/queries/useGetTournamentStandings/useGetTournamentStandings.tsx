@@ -18,7 +18,6 @@ export const tournamentStandingsQuery = ({
   queryOptions({
     queryKey: getTournamentStandingsKey({ tournamentId, division }),
     queryFn: () => getPokedataStandings({ tournamentId, division }),
-    staleTime: 1000 * 60 * 5, // 5 minutes,
   });
 
 export const useGetTournamentStandings = ({

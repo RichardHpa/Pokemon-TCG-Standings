@@ -1,25 +1,24 @@
-import { Outlet, Link, useLocation, useParams } from 'react-router-dom';
+import { Outlet, Link, useParams } from 'react-router-dom';
 
 import { Heading } from 'components/Heading';
 import { Indicator } from 'components/Indicator';
-import { Tabs, NavTab } from 'components/Tabs';
 import { LoadingPokeball } from 'components/LoadingPokeball';
 import { Notice } from 'components/Notice';
+import { DivisionTabs } from 'components/DivisionTabs';
 
-import { RUNNING, NOT_STARTED } from 'constants/tournament';
+import { RUNNING, FINISHED } from 'constants/tournament';
 import { tournaments } from 'constants/tournaments';
 
 import { useGetTournament } from 'queries/useGetTournament';
 
 import { formatDate } from 'helpers/formatDate';
 
+const showStandings = [RUNNING, FINISHED];
+
 export const TournamentOutlet = () => {
-  const location = useLocation();
-  const { tournamentId } = useParams() as { tournamentId: string };
+  const { tournamentId, playerName } = useParams() as { tournamentId: string; playerName?: string };
 
   const { data: tournament, isLoading, isError } = useGetTournament(tournamentId);
-
-  const isBasePath = location.pathname === `/tournaments/${tournamentId}`;
 
   if (isLoading) {
     return (
@@ -32,6 +31,9 @@ export const TournamentOutlet = () => {
   if (isError || !tournament) {
     return <Notice status="error">Error loading your tournaments, please try again later</Notice>;
   }
+
+  const streams = tournaments[tournamentId]?.streams;
+  const streamKeys = Object.keys(streams || {});
 
   return (
     <div className="flex flex-col gap-4 flex-grow">
@@ -58,13 +60,37 @@ export const TournamentOutlet = () => {
               {formatDate(tournament.date.start, 'MMMM d, yyyy')} -{' '}
               {formatDate(tournament.date.end, 'MMMM d, yyyy')}
             </p>
+
+            {streams && (
+              <div className="flex gap-2">
+                <p className="text-gray-500 dark:text-gray-400">Streams: </p>
+                {Object.entries(streams).map(([day, url], index) => {
+                  return (
+                    <>
+                      <a
+                        key={`${tournamentId}-${day}`}
+                        href={url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-500 dark:text-blue-400 hover:underline"
+                      >
+                        Day {index + 1}
+                      </a>
+                      {index < streamKeys.length - 1 && (
+                        <span className="text-gray-500 dark:text-gray-400">|</span>
+                      )}
+                    </>
+                  );
+                })}
+              </div>
+            )}
           </div>
         </div>
 
         {tournament.tournamentStatus === RUNNING && <Indicator />}
       </div>
 
-      {tournament.tournamentStatus === NOT_STARTED ? (
+      {!showStandings.includes(tournament.tournamentStatus) ? (
         <>
           <Heading level="4">Tournament has not started yet</Heading>
           <p className="text-gray-500 dark:text-gray-400">
@@ -72,30 +98,13 @@ export const TournamentOutlet = () => {
           </p>
         </>
       ) : (
-        <>
-          <Tabs>
-            <NavTab to="masters" active={isBasePath}>
-              Masters{' '}
-              <span className="inline-flex items-center justify-center px-2 h-4 ms-2 text-xs font-semibold text-blue-800 bg-blue-200 rounded-full">
-                {tournament.players.masters}
-              </span>
-            </NavTab>
-            <NavTab to="seniors">
-              Seniors{' '}
-              <span className="inline-flex items-center justify-center px-2 h-4 ms-2 text-xs font-semibold text-blue-800 bg-blue-200 rounded-full">
-                {tournament.players.seniors}
-              </span>
-            </NavTab>
-            <NavTab to="juniors">
-              Juniors{' '}
-              <span className="inline-flex items-center justify-center px-2 h-4 ms-2 text-xs font-semibold text-blue-800 bg-blue-200 rounded-full">
-                {tournament.players.juniors}
-              </span>
-            </NavTab>
-          </Tabs>
+        <div className="flex-grow flex flex-col gap-4">
+          {!playerName && (
+            <DivisionTabs tournamentId={tournamentId} divisionsObject={tournament.players} />
+          )}
 
           <Outlet />
-        </>
+        </div>
       )}
     </div>
   );

@@ -8,6 +8,7 @@ import { RUNNING } from 'constants/tournament';
 
 import { getCountryFlag } from 'helpers/getCountryFlag';
 
+import { getCountryCode } from 'utils/getCountryCode';
 import { createPlayerUrl } from 'utils/createPlayerUrl';
 
 import type { Standing } from 'types/standing';
@@ -23,11 +24,6 @@ interface StandingRowProps {
   tournamentStatus?: Tournament['tournamentStatus'];
 }
 
-const getCountryCode = (name: string) => {
-  const countryCode = name.match(/\[(\w+)\]$/);
-  return countryCode ? countryCode[1] : '';
-};
-
 export const StandingRow: FC<StandingRowProps> = ({
   player,
   tournamentId,
@@ -41,6 +37,13 @@ export const StandingRow: FC<StandingRowProps> = ({
   const onRowClick = useCallback(
     (player: string) => {
       navigate(`/tournaments/${tournamentId}/${division}/${createPlayerUrl(player)}`);
+    },
+    [division, navigate, tournamentId]
+  );
+
+  const handleViewDecklist = useCallback(
+    (player: string) => {
+      navigate(`/tournaments/${tournamentId}/${division}/${createPlayerUrl(player)}/decklist`);
     },
     [division, navigate, tournamentId]
   );
@@ -69,7 +72,14 @@ export const StandingRow: FC<StandingRowProps> = ({
       </div>
       <div className="flex gap-2 items-center">
         {!hideArchetypes && player.decklist && (
-          <ArchetypeSprites decklist={player.decklist} size="small" />
+          <ArchetypeSprites
+            decklist={player.decklist}
+            size="small"
+            onClick={(event: React.MouseEvent<HTMLDivElement>) => {
+              event.stopPropagation();
+              handleViewDecklist(player.name);
+            }}
+          />
         )}
         {player.drop > 0 && (
           <div className="text-red-500">
