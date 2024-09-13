@@ -1,6 +1,5 @@
 import { useCallback } from 'react';
 import { Outlet, useParams, useNavigate, Link } from 'react-router-dom';
-import { useQuery } from '@tanstack/react-query';
 import { ListBulletIcon } from '@heroicons/react/24/solid';
 
 import { LoadingPokeball } from 'components/LoadingPokeball';

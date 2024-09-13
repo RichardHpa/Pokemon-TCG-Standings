@@ -19,7 +19,6 @@ export const useGetTournamentByStatus = () => {
 
       return tournaments;
     },
-    staleTime: 1000 * 60 * 10,
     select: data => {
       const runningTournaments = data?.filter(
         tournament => tournament.tournamentStatus === RUNNING

@@ -27,7 +27,6 @@ export const useGetPlayersByCountry = ({ tournamentId, country }: UseGetPlayersB
       });
       return tournament;
     },
-    staleTime: 60 * 10 * 1000,
     select: data => {
       const divisions = data.tournament_data;
 

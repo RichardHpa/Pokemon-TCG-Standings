@@ -1,10 +1,8 @@
-import { useEffect, useCallback } from 'react';
+import { useEffect } from 'react';
 import { Outlet, createBrowserRouter, RouterProvider, ScrollRestoration } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { ErrorBoundary } from 'react-error-boundary';
-import { Notice } from 'components/Notice';
-import { useLocalStorage } from 'hooks/useLocalStorage';
 import { Navbar } from 'components/Navbar';
 
 import { About } from './pages';
@@ -26,52 +24,23 @@ import { FetchingProvider } from 'context/FetchingContext';
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
-      staleTime: 1000 * 10,
+      // 15 minutes stale time
+      staleTime: 1000 * 60 * 15,
     },
   },
 });
-const noticeId = 'thank-you-notice';
+
 const Layout = () => {
   const { sendPageView } = useAnalytics();
-  const [dismissedNotice, setDismissedNotice] = useLocalStorage(noticeId, 'false');
 
   useEffect(() => {
     sendPageView();
   }, [sendPageView]);
 
-  const handleOnDismiss = useCallback(() => {
-    setDismissedNotice('true');
-  }, [setDismissedNotice]);
-
   return (
     <div className="bg-white dark:bg-gray-900 text-black dark:text-gray-200 min-h-screen flex flex-col">
       <Navbar />
       <div className="container mx-auto py-12 px-4 flex flex-col flex-grow">
-        {dismissedNotice === 'false' && (
-          <Notice status="success" dismissible noticeId={noticeId} onDismiss={handleOnDismiss}>
-            Thank you for those who have visited PTCG Standings during the 2024 Pokemon World
-            Championships. I hope you found the information useful. <br />I apologize for the api
-            issues that happened during the weekend, I really didn't expect the amount of traffic
-            that came through and I am really grateful for it. I have already started working on a
-            solution to prevent this from happening in the future. Thank you for your patience. If
-            you have any feedback or suggestions, please feel free to reach out to me on X (Twitter)
-            on{' '}
-            <a
-              href="https://twitter.com/RichardHpaNZ"
-              target="_blank"
-              rel="noreferrer"
-              className="underline"
-            >
-              @RichardHpaNZ
-            </a>
-            .<br />
-            <br />
-            If you would also like to help support the site you can do so by buying me a coffee via
-            the above, or if you would like to help with the development of the site, please get in
-            touch.
-          </Notice>
-        )}
-
         <Outlet />
       </div>
       <ScrollRestoration />
