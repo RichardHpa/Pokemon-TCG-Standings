@@ -2,6 +2,8 @@ import InternationalsLogo from 'images/tcgIC.png';
 import RegionalLogo from 'images/tcgRegional.png';
 import CupLogo from 'images/tcgCup.png';
 
+import RegionalLogo2024 from 'images/tcgRegionals2024.png';
+
 import Worlds2024Logo from 'images/wc24-key-art-2x.webp';
 
 interface StreamsMap {
@@ -17,6 +19,9 @@ interface LocalTournamentsMap {
 }
 
 export const tournaments: LocalTournamentsMap = {
+  '0000129': {
+    logo: RegionalLogo2024,
+  },
   '0000128': {
     logo: Worlds2024Logo,
     streams: {

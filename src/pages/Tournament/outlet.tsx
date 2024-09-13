@@ -6,12 +6,14 @@ import { LoadingPokeball } from 'components/LoadingPokeball';
 import { Notice } from 'components/Notice';
 import { DivisionTabs } from 'components/DivisionTabs';
 
-import { RUNNING, NOT_STARTED } from 'constants/tournament';
+import { RUNNING, FINISHED } from 'constants/tournament';
 import { tournaments } from 'constants/tournaments';
 
 import { useGetTournament } from 'queries/useGetTournament';
 
 import { formatDate } from 'helpers/formatDate';
+
+const showStandings = [RUNNING, FINISHED];
 
 export const TournamentOutlet = () => {
   const { tournamentId, playerName } = useParams() as { tournamentId: string; playerName?: string };
@@ -88,7 +90,7 @@ export const TournamentOutlet = () => {
         {tournament.tournamentStatus === RUNNING && <Indicator />}
       </div>
 
-      {tournament.tournamentStatus === NOT_STARTED ? (
+      {!showStandings.includes(tournament.tournamentStatus) ? (
         <>
           <Heading level="4">Tournament has not started yet</Heading>
           <p className="text-gray-500 dark:text-gray-400">
