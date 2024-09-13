@@ -1,6 +1,7 @@
 import { useState, useCallback } from 'react';
 import { useGetTournament } from 'queries/useGetTournament';
-import { useGetTournamentStandings } from 'queries/useGetTournamentStandings';
+
+import { useGetDivision } from 'hooks/useGetDivision';
 
 import { LoadingPokeball } from 'components/LoadingPokeball';
 import { Tabs, Tab } from 'components/Tabs';
@@ -17,7 +18,7 @@ import type { Division } from 'types/tournament';
 const showStandings = [RUNNING, FINISHED];
 
 const WorldsStandings = ({ division }: { division: Division }) => {
-  const { data: standings, isLoading } = useGetTournamentStandings({
+  const { data: standings, isLoading } = useGetDivision({
     tournamentId: fixedTournamentId,
     division,
   });

@@ -7,7 +7,7 @@ import { LoadingPokeball } from 'components/LoadingPokeball';
 
 import { useFuse } from 'hooks/useFuse';
 
-import { useGetTournamentStandings } from 'queries/useGetTournamentStandings';
+import { useGetDivision } from 'hooks/useGetDivision';
 
 import type { Division as DivisionType } from 'types/tournament';
 
@@ -26,7 +26,7 @@ export const Division = () => {
     tournamentId: string;
   };
 
-  const { data: standings = [], isLoading } = useGetTournamentStandings({ tournamentId, division });
+  const { data: standings = [], isLoading } = useGetDivision({ tournamentId, division });
 
   const { query, onSearch, searching, hits, reset, rawQuery } = useFuse(standings, fuseOptions);
 
