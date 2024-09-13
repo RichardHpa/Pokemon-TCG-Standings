@@ -4,7 +4,7 @@ import { FixedSizeList } from 'react-window';
 
 import { StandingRow } from 'components/StandingsList/StandingRow';
 
-import { useGetTournamentStandings } from 'queries/useGetTournamentStandings';
+import { useGetDivision } from 'hooks/useGetDivision';
 
 import type { ListChildComponentProps } from 'react-window';
 
@@ -50,7 +50,7 @@ const Table = ({ data: apiData }: { data: any[]; containerRef: any }) => {
 };
 
 export const Test = () => {
-  const { data, isLoading, isError } = useGetTournamentStandings({
+  const { data, isLoading, isError } = useGetDivision({
     tournamentId: '0000127',
     division: 'masters',
   });

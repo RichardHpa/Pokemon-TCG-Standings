@@ -1,5 +1,1 @@
-export {
-  useGetTournamentStandings,
-  getTournamentStandingsKey,
-  tournamentStandingsQuery,
-} from './useGetTournamentStandings';
+export { getTournamentStandingsKey } from './useGetTournamentStandings';

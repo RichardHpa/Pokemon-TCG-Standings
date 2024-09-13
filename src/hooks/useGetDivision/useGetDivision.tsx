@@ -1,18 +1,12 @@
 import { useQuery, useQueryClient } from '@tanstack/react-query';
 
-import { createPlayerName } from 'utils/createPlayerName';
-
 import { getPokeDataTournament } from 'api/getTournament';
 
 import { getTournamentStandingsKey } from 'queries/useGetTournamentStandings';
 
 import type { useGetTournamentStandingsProps } from 'queries/useGetTournamentStandings/types';
 
-interface useGetPlayerProps extends useGetTournamentStandingsProps {
-  playerName: string;
-}
-
-export const useGetPlayerInfo = ({ tournamentId, division, playerName }: useGetPlayerProps) => {
+export const useGetDivision = ({ tournamentId, division }: useGetTournamentStandingsProps) => {
   const queryClient = useQueryClient();
   return useQuery({
     queryKey: getTournamentStandingsKey({ tournamentId, division }),
@@ -30,16 +24,6 @@ export const useGetPlayerInfo = ({ tournamentId, division, playerName }: useGetP
 
       const divisionToReturn = divisions.find((division: any) => division.division === division)!;
       return divisionToReturn.data;
-    },
-    select: data => {
-      const name = createPlayerName(playerName);
-      // there can be multiple players with the same name and we have no way to differentiate them so we get them all
-      const players = data.filter((player: any) => player.name === name);
-      if (players.length === 0) {
-        throw new Error('Player not found');
-      }
-
-      return { players, standings: data };
     },
   });
 };

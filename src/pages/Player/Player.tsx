@@ -1,6 +1,5 @@
 import { useParams } from 'react-router-dom';
 import { useMemo, useState, useCallback } from 'react';
-import { useQuery } from '@tanstack/react-query';
 import clsx from 'clsx';
 
 import { RoundsTable } from 'components/RoundsTable';
@@ -14,8 +13,7 @@ import { Notice } from 'components/Notice';
 import { calculatePoints } from 'utils/calculatePoints';
 import { createPlayerName } from 'utils/createPlayerName';
 
-import { getPokedataStandings } from 'api/getPokedataStandings';
-
+import { useGetDivision } from 'hooks/useGetDivision';
 import { useGetPlayerInfo } from 'hooks/useGetPlayer';
 
 import type { FC } from 'react';
@@ -247,10 +245,7 @@ export const Player = () => {
     division: Division;
   };
 
-  const { data, isLoading, isError } = useQuery({
-    queryKey: ['tournament', tournamentId, division, 'standings'],
-    queryFn: () => getPokedataStandings({ tournamentId, division }),
-  });
+  const { data, isLoading, isError } = useGetDivision({ tournamentId, division });
 
   if (isLoading) {
     return (
