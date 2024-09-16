@@ -1,1 +1,1 @@
-export const runningTournaments = ['0000129'];
+export const runningTournaments = [];
