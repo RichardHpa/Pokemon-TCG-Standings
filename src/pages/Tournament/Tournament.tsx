@@ -1,7 +1,8 @@
 import { useParams } from 'react-router-dom';
 
-import { useGetTournamentStandings } from 'queries/useGetTournamentStandings';
 import { useGetTournament } from 'queries/useGetTournament';
+
+import { useGetDivision } from 'hooks/useGetDivision';
 
 import { LoadingPokeball } from 'components/LoadingPokeball';
 import { StandingsCard } from 'components/StandingsCard';
@@ -33,10 +34,8 @@ const fuseOptions = {
 
 const TournamentStandings = ({ tournament }: { tournament: TournamentType }) => {
   const { id: tournamentId } = tournament;
-  const { data: standings = [], isLoading } = useGetTournamentStandings({
-    tournamentId,
-    division: 'masters',
-  });
+
+  const { data: standings = [], isLoading } = useGetDivision({ tournamentId, division: 'masters' });
 
   const { query, onSearch, searching, hits } = useFuse(standings, fuseOptions);
 
@@ -117,7 +116,7 @@ export const Tournament = () => {
 
   return (
     <>
-      <SEO title="Tournaments" />
+      <SEO title={`${data.name}`} />
 
       <div className="flex-grow flex flex-col gap-4">
         <TournamentStandings tournament={data} />

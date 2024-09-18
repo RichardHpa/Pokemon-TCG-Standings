@@ -2,15 +2,14 @@ import { useQuery, useQueryClient } from '@tanstack/react-query';
 
 import { getPokeDataTournament } from 'api/getTournament';
 
-import { baseTournamentKey } from 'queries/useGetTournaments';
 import { getTournamentStandingsKey } from 'queries/useGetTournamentStandings';
 
-export const getGetTournamentKey = (tournamentId: string) => [...baseTournamentKey, tournamentId];
+import type { useGetTournamentStandingsProps } from 'queries/useGetTournamentStandings/types';
 
-export const useGetTournament = (tournamentId: string) => {
+export const useGetDivision = ({ tournamentId, division }: useGetTournamentStandingsProps) => {
   const queryClient = useQueryClient();
   return useQuery({
-    queryKey: getGetTournamentKey(tournamentId),
+    queryKey: getTournamentStandingsKey({ tournamentId, division }),
     queryFn: async () => {
       const tournament = await getPokeDataTournament(tournamentId);
       const divisions = tournament.tournament_data;
@@ -22,10 +21,9 @@ export const useGetTournament = (tournamentId: string) => {
         });
         return queryClient.setQueryData(divisionKey, data);
       });
-      return tournament;
-    },
-    select: data => {
-      return data.tournament;
+
+      const divisionToReturn = divisions.find((division: any) => division.division === division)!;
+      return divisionToReturn.data;
     },
   });
 };

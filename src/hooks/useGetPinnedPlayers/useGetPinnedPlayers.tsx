@@ -31,7 +31,6 @@ const tournamentsQueryOptions = (tournamentId: any) => {
       queryClient.setQueryData(getGetTournamentKey(tournamentId), tournament);
       return tournament;
     },
-    staleTime: 60 * 10 * 1000,
   });
 };
 

@@ -1,8 +1,14 @@
 import axios from 'utils/axios';
 
+import { baseLocalApi } from 'constants/api';
+import { runningTournaments } from 'constants/runningTournaments';
+
 import type { Tournament } from 'types/tournament';
 
-const url = 'https://www.pokedata.ovh/apiv2/tcg/tournaments';
+const url =
+  runningTournaments.length === 0
+    ? 'https://www.pokedata.ovh/apiv2/tcg/tournaments'
+    : `${baseLocalApi}/tournaments`;
 
 export const getPokeDataTournaments = async (): Promise<Tournament[]> => {
   const response = await axios.get(url).then(res => {

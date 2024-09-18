@@ -20,7 +20,6 @@ export const tournamentsQuery = () =>
 
       return tournaments;
     },
-    staleTime: 1000 * 60 * 10,
   });
 
 export const useGetTournaments = () => {

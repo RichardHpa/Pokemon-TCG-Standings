@@ -8,8 +8,8 @@ import { getCountryFlag } from 'helpers/getCountryFlag';
 
 import { RunningPersonIcon } from 'icons/RunningPerson';
 import { createPlayerUrl } from 'utils/createPlayerUrl';
-import { usePinnedPlayers } from 'providers/PinnedPlayersProvider';
-import { useGetPinnedPlayers } from 'hooks/useGetPinnedPlayers';
+// import { usePinnedPlayers } from 'providers/PinnedPlayersProvider';
+// import { useGetPinnedPlayers } from 'hooks/useGetPinnedPlayers';
 import { useTableLayout, TableLayout } from 'hooks/useTableLayout';
 
 import { Heading } from 'components/Heading';
@@ -18,7 +18,7 @@ import { Card } from 'components/Card';
 import { PlayerRecord } from 'components/PlayerRecord';
 import { RoundRow } from 'components/RoundsTable';
 import { IconButton } from 'components/Button/IconButton';
-import { RUNNING } from 'constants/tournament';
+import { FINISHED, RUNNING } from 'constants/tournament';
 import { PinPlayer } from 'components/PinPlayer';
 import { StandingsList } from 'components/StandingsList';
 import { Tabs, Tab } from 'components/Tabs';
@@ -75,7 +75,7 @@ const PlayerInfo = ({
             </div>
           )}
           <div className="flex gap-1 items-center">
-            <PinPlayer tournamentId={tournamentId} player={playerUrl} division={division} />
+            {/* <PinPlayer tournamentId={tournamentId} player={playerUrl} division={division} /> */}
             <Link to={`/tournaments/${tournamentId}/${division}/${playerUrl}`}>
               <IconButton
                 icon={<ArrowRightIcon />}
@@ -191,52 +191,52 @@ const PlayerInfo = ({
 //   );
 // };
 
-const PinnedWorldsPlayers = () => {
-  const { parsedPlayers } = usePinnedPlayers();
-  const { filteredPlayers, isLoading } = useGetPinnedPlayers(parsedPlayers);
+// const PinnedWorldsPlayers = () => {
+//   const { parsedPlayers } = usePinnedPlayers();
+//   const { filteredPlayers, isLoading } = useGetPinnedPlayers(parsedPlayers);
 
-  const worldsPlayers = useMemo(() => {
-    if (isLoading) return [];
-    const tournament = filteredPlayers.find(t => t.tournamentId === fixedTournamentId);
-    const players = tournament?.players;
-    if (!players) return [];
+//   const worldsPlayers = useMemo(() => {
+//     if (isLoading) return [];
+//     const tournament = filteredPlayers.find(t => t.tournamentId === fixedTournamentId);
+//     const players = tournament?.players;
+//     if (!players) return [];
 
-    return Object.entries(players).reduce((acc, [division, players]) => {
-      // @ts-expect-error
-      return acc.concat(players.map(player => ({ division, player })));
-    }, []);
-  }, [isLoading, filteredPlayers]);
+//     return Object.entries(players).reduce((acc, [division, players]) => {
+//       // @ts-expect-error
+//       return acc.concat(players.map(player => ({ division, player })));
+//     }, []);
+//   }, [isLoading, filteredPlayers]);
 
-  if (!worldsPlayers) return null;
-  if (worldsPlayers.length === 0) return null;
+//   if (!worldsPlayers) return null;
+//   if (worldsPlayers.length === 0) return null;
 
-  return (
-    <>
-      <hr />
-      <div className="flex flex-col gap2">
-        <div className="text-center">
-          <Heading level="4" className="!mb-4">
-            Players your following
-          </Heading>
-        </div>
+//   return (
+//     <>
+//       <hr />
+//       <div className="flex flex-col gap2">
+//         <div className="text-center">
+//           <Heading level="4" className="!mb-4">
+//             Players your following
+//           </Heading>
+//         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 items-baseline">
-          {worldsPlayers.map((player: any) => {
-            return (
-              <PlayerInfo
-                key={player.player.name}
-                player={player.player}
-                division={player.division}
-                tournamentId={fixedTournamentId}
-              />
-            );
-          })}
-        </div>
-      </div>
-      <hr />
-    </>
-  );
-};
+//         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 items-baseline">
+//           {worldsPlayers.map((player: any) => {
+//             return (
+//               <PlayerInfo
+//                 key={player.player.name}
+//                 player={player.player}
+//                 division={player.division}
+//                 tournamentId={fixedTournamentId}
+//               />
+//             );
+//           })}
+//         </div>
+//       </div>
+//       <hr />
+//     </>
+//   );
+// };
 
 export const worldsLoader = ({ params }: LoaderFunctionArgs) => {
   const { country } = params as { country: string };
@@ -348,8 +348,7 @@ export const WorldsPlayers2024 = () => {
                       standings={data.divisions[currentTab].data}
                       tournamentId={fixedTournamentId}
                       division={data.divisions[currentTab].division}
-                      tournamentStatus={RUNNING}
-                      hideArchetypes
+                      tournamentStatus={FINISHED}
                     />
                   </div>
                 )}
