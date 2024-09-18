@@ -5,7 +5,7 @@ import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { ErrorBoundary } from 'react-error-boundary';
 import { Navbar } from 'components/Navbar';
 
-import { About } from './pages';
+import { About } from 'pages/About';
 import { Home } from 'pages/Home';
 import { Tournaments } from 'pages/Tournaments';
 import { Tournament, TournamentOutlet } from 'pages/Tournament';
