@@ -15,7 +15,7 @@
     "flowbite-react": "^0.8.0",
     "fuse.js": "^7.0.0",
     "lodash": "^4.17.21",
-    "markdown-to-jsx": "^7.4.6",
+    "markdown-to-jsx": "^7.5.0",
     "msw": "^2.3.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
