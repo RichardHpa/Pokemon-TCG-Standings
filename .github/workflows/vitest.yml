@@ -1,12 +1,6 @@
-name: Test before deploy
+name: ⚡ Vitest
 
-on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+on: push
 
 jobs:
   vitest:
