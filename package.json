@@ -12,7 +12,7 @@
     "countries-list": "^3.1.1",
     "date-fns": "^4.1.0",
     "flowbite": "^2.5.1",
-    "flowbite-react": "^0.8.0",
+    "flowbite-react": "^0.10.1",
     "fuse.js": "^7.0.0",
     "lodash": "^4.17.21",
     "markdown-to-jsx": "^7.5.0",
