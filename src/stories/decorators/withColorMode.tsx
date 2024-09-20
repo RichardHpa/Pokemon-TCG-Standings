@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 
-import { StoryContext, StoryFn } from '@storybook/react';
+import type { StoryContext, StoryFn } from '@storybook/react';
 
 export const withColorModeDecorator = (Story: StoryFn, context: StoryContext) => {
   const theme = context.globals.theme;

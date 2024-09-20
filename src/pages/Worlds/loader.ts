@@ -1,6 +1,6 @@
-import { LoaderFunctionArgs } from 'react-router-dom';
 import { countryList } from 'mocks/tempData/0000128';
 
+import type { LoaderFunctionArgs } from 'react-router-dom';
 import type { TCountryCode } from 'countries-list';
 
 export const worldsLoader = ({ params }: LoaderFunctionArgs) => {
