@@ -7,7 +7,8 @@ import { useGetTournament } from 'queries/useGetTournament';
 
 import type { FC } from 'react';
 import type { Standing } from 'types/standing';
-import { Division } from 'types/tournament';
+import type { Division } from 'types/tournament';
+import type { FixedSizeList } from 'react-window';
 
 interface StandingsCardProps {
   standings?: Standing[];
@@ -30,7 +31,7 @@ export const StandingsCard: FC<StandingsCardProps> = ({
   hideArchetypes = false,
   fixedContainerHeight = false,
 }) => {
-  const listRef = useRef<HTMLUListElement>(null);
+  const listRef = useRef<FixedSizeList>(null);
   const [initialDelay, setInitialDelay] = useState(false);
 
   const { data: tournament } = useGetTournament(tournamentId);
@@ -45,14 +46,12 @@ export const StandingsCard: FC<StandingsCardProps> = ({
 
   useEffect(() => {
     if (scrollToPlayerIndex && listRef.current) {
-      // @ts-expect-error
       listRef.current.scrollToItem(scrollToPlayerIndex, 'start');
     }
   }, [initialDelay, scrollToPlayerIndex]);
 
   const resetScroll = useCallback(() => {
     if (scrollToPlayerIndex && listRef.current) {
-      // @ts-expect-error
       listRef.current.scrollToItem(scrollToPlayerIndex, 'start');
     }
   }, [scrollToPlayerIndex]);

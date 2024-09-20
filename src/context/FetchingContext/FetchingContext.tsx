@@ -44,5 +44,3 @@ export const FetchingProvider: FC<FetchingProviderProps> = ({ children }) => {
     </FetchingContext.Provider>
   );
 };
-
-export const useFetching = () => React.useContext(FetchingContext);

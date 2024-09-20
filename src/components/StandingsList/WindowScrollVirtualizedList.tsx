@@ -6,6 +6,7 @@ import { InnerElement } from './InnerElement';
 import { StandingRow } from './StandingRow';
 
 import type { Standing } from 'types/standing';
+import type { Division, TournamentStatus } from 'types/tournament';
 
 export const WindowScrollVirtualizedList = ({
   data,
@@ -16,13 +17,13 @@ export const WindowScrollVirtualizedList = ({
 }: {
   data: Standing[];
   tournamentId: string;
-  division: any;
-  tournamentStatus: any;
+  division: Division;
+  tournamentStatus: TournamentStatus;
   hideArchetypes?: boolean;
 }) => {
-  const list = useRef<any>(null);
+  const list = useRef<FixedSizeList>(null);
 
-  // @ts-expect-error
+  // @ts-expect-error - scrollTop is not a valid prop
   const onScroll = useCallback(({ scrollTop }) => {
     list.current?.scrollTo(scrollTop);
   }, []);
@@ -30,7 +31,7 @@ export const WindowScrollVirtualizedList = ({
   return (
     <>
       <WindowScroller onScroll={onScroll}>
-        {/* @ts-expect-error */}
+        {/* @ts-expect-error - TODO: need to figure out what the types here are */}
         {({ registerChild }) => <div ref={registerChild} />}
       </WindowScroller>
 

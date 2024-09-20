@@ -7,16 +7,17 @@ import { StandingRow } from 'components/StandingsList/StandingRow';
 import { useGetDivision } from 'hooks/useGetDivision';
 
 import type { ListChildComponentProps } from 'react-window';
+import type { Standing } from 'types/standing';
 
 const innerElementType = forwardRef(({ ...rest }: ListChildComponentProps, ref) => {
-  // @ts-expect-error
+  // @ts-expect-error - ref is not a valid prop
   return <ul ref={ref} {...rest} className="divide-y divide-gray-200 dark:divide-gray-700" />;
 });
 
-const Table = ({ data: apiData }: { data: any[]; containerRef: any }) => {
-  const list = useRef<any>(null);
+const Table = ({ data: apiData }: { data: Standing[]; containerRef: unknown }) => {
+  const list = useRef<FixedSizeList>(null);
 
-  // @ts-expect-error
+  // @ts-expect-error - scrollTop is not a valid prop
   const onScroll = useCallback(({ scrollTop }) => {
     list.current?.scrollTo(scrollTop);
   }, []);

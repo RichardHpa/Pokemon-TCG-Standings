@@ -5,7 +5,7 @@ import lodashDebounce from 'lodash/debounce';
 import type { IFuseOptions } from 'fuse.js';
 
 const debounceTime = 400;
-export function useFuse<T>(list: T[], options: IFuseOptions<T>): any {
+export function useFuse<T>(list: T[], options: IFuseOptions<T>): unknown {
   const [query, updateQuery] = useState('');
   const [rawQuery, setRawQuery] = useState('');
 

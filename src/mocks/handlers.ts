@@ -4,6 +4,8 @@ import { tournamentsUrl, basePokeDataUrl } from '../constants/api';
 
 import { staticTournaments } from './tempData/tournaments';
 
+import type { TournamentsApiResponse } from 'types/tournament';
+
 export const handlers = [
   http.get(tournamentsUrl, () => {
     // return HttpResponse.json({}, { status: 404 });
@@ -41,21 +43,25 @@ export const handlers = [
       return HttpResponse.json({}, { status: 404 });
     }
 
-    const result = await fetch(`/localData/tournaments/${tournamentId}.json`, {
-      headers: {
-        'Content-Type': 'application/json',
-        Accept: 'application/json',
-      },
-    })
+    const result: TournamentsApiResponse = await fetch(
+      `/localData/tournaments/${tournamentId}.json`,
+      {
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+      }
+    )
       .then(res => res.json())
       .catch(() => {
         return null;
       });
 
     if (result) {
-      const data = result.tournament_data.find(
-        (data: any) => data.division.toLowerCase() === division
-      );
+      const data = result.tournament_data.find(data => data.division.toLowerCase() === division);
+      if (!data) {
+        return HttpResponse.json({}, { status: 404 });
+      }
       return HttpResponse.json({
         type: 'tcg',
         tournament: result.tournament,

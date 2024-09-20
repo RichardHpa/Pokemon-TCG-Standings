@@ -1,4 +1,4 @@
-import { useState, createContext, useContext, useEffect } from 'react';
+import { useState, createContext, useEffect } from 'react';
 
 import type { Dispatch, SetStateAction, ReactNode } from 'react';
 
@@ -11,7 +11,7 @@ const themes: Array<Theme> = Object.values(Theme);
 
 type ColorModeContextType = [Theme | null, Dispatch<SetStateAction<Theme>>];
 
-const ColorModeContext = createContext<ColorModeContextType | undefined>(undefined);
+export const ColorModeContext = createContext<ColorModeContextType | undefined>(undefined);
 
 const prefersDarkMQ = '(prefers-color-scheme: dark)';
 const storageKey = 'PokemonTCGStandings:currentTheme';
@@ -51,12 +51,4 @@ function ColorModeProvider({ children }: { children: ReactNode }) {
   );
 }
 
-function useColorMode() {
-  const context = useContext(ColorModeContext);
-  if (context === undefined) {
-    throw new Error('useColorMode must be used within a ColorModeProvider');
-  }
-  return context;
-}
-
-export { Theme, ColorModeProvider, useColorMode };
+export { Theme, ColorModeProvider };

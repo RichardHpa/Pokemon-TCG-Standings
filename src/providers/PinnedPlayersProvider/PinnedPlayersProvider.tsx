@@ -1,4 +1,4 @@
-import { useContext, useState, createContext, useMemo, useCallback } from 'react';
+import { useState, createContext, useMemo, useCallback } from 'react';
 import { pinnedPlayersKey } from 'constants/siteKeys';
 
 import type { Division } from 'types/tournament';
@@ -10,16 +10,16 @@ interface PinnedPlayersProps {
   };
 }
 interface PinnedPlayersContextProps {
-  pinnedPlayers: any;
+  pinnedPlayers: unknown;
   handlePinPlayer: (playerName: string, tournamentId: string, division: Division) => void;
   handleUnpinPlayer: (playerName: string, tournamentId: string, division: Division) => void;
   togglePinPlayer: (playerName: string, tournamentId: string, division: Division) => void;
-  inPinned: (playerName: any, tournamentId: string, division: Division) => boolean;
+  inPinned: (playerName: string, tournamentId: string, division: Division) => boolean;
   parsedPlayers: PinnedPlayersProps;
   handleClearTournament: (tournamentId: string) => void;
 }
 
-const LikedContext = createContext<PinnedPlayersContextProps>({
+export const LikedContext = createContext<PinnedPlayersContextProps>({
   pinnedPlayers: {},
   handlePinPlayer: () => {},
   handleUnpinPlayer: () => {},
@@ -95,7 +95,7 @@ export const PinnedPlayersProvider = ({ children }: PinnedPlayersProviderProps) 
   );
 
   const inPinned = useCallback(
-    (playerName: any, tournamentId: string, division: Division) => {
+    (playerName: string, tournamentId: string, division: Division) => {
       const parsedPinnedPlayers = JSON.parse(pinnedPlayers);
       return parsedPinnedPlayers[tournamentId]?.[division]?.includes(playerName);
     },
@@ -145,9 +145,4 @@ export const PinnedPlayersProvider = ({ children }: PinnedPlayersProviderProps) 
   ]);
 
   return <LikedContext.Provider value={value}>{children}</LikedContext.Provider>;
-};
-
-export const usePinnedPlayers = () => {
-  const context = useContext(LikedContext);
-  return context;
 };

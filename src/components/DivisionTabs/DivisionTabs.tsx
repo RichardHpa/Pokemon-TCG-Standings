@@ -17,7 +17,7 @@ const getSortedDivisions = (divisions: DivisionMap<number>): Division[] => {
 
   // Filter out divisions with a value of 0 and keep only the non-zero divisions
   const filteredDivisions = Object.entries(divisions)
-    .filter(([key, value]) => value > 0)
+    .filter(([_key, value]) => value > 0)
     .map(([key]) => key) as Division[];
 
   // Sort the filtered divisions based on the predefined order

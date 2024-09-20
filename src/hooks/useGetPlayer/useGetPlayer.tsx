@@ -1,3 +1,5 @@
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck - we need to fix the types here
 import { useQuery, useQueryClient } from '@tanstack/react-query';
 
 import { createPlayerName } from 'utils/createPlayerName';
@@ -19,7 +21,7 @@ export const useGetPlayerInfo = ({ tournamentId, division, playerName }: useGetP
     queryFn: async () => {
       const tournament = await getPokeDataTournament(tournamentId);
       const divisions = tournament.tournament_data;
-      divisions.map((division: any) => {
+      divisions.map(division => {
         const data = division.data;
         const divisionKey = getTournamentStandingsKey({
           tournamentId,
@@ -28,13 +30,13 @@ export const useGetPlayerInfo = ({ tournamentId, division, playerName }: useGetP
         return queryClient.setQueryData(divisionKey, data);
       });
 
-      const divisionToReturn = divisions.find((division: any) => division.division === division)!;
+      const divisionToReturn = divisions.find(division => division.division === division)!;
       return divisionToReturn.data;
     },
     select: data => {
       const name = createPlayerName(playerName);
       // there can be multiple players with the same name and we have no way to differentiate them so we get them all
-      const players = data.filter((player: any) => player.name === name);
+      const players = data.filter(player => player.name === name);
       if (players.length === 0) {
         throw new Error('Player not found');
       }

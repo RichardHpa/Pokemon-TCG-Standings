@@ -13,7 +13,7 @@ export const useGetDivision = ({ tournamentId, division }: useGetTournamentStand
     queryFn: async () => {
       const tournament = await getPokeDataTournament(tournamentId);
       const divisions = tournament.tournament_data;
-      divisions.map((division: any) => {
+      divisions.map(division => {
         const data = division.data;
         const divisionKey = getTournamentStandingsKey({
           tournamentId,
@@ -22,7 +22,9 @@ export const useGetDivision = ({ tournamentId, division }: useGetTournamentStand
         return queryClient.setQueryData(divisionKey, data);
       });
 
-      const divisionToReturn = divisions.find((division: any) => division.division === division)!;
+      const divisionToReturn = divisions.find(
+        returnedDivision => returnedDivision.division === division
+      )!;
       return divisionToReturn.data;
     },
   });

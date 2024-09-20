@@ -17,7 +17,7 @@ export const useGetPlayersByCountry = ({ tournamentId, country }: UseGetPlayersB
     queryFn: async () => {
       const tournament = await getPokeDataTournament(tournamentId);
       const divisions = tournament.tournament_data;
-      divisions.map((division: any) => {
+      divisions.map(division => {
         const data = division.data;
         const divisionKey = getTournamentStandingsKey({
           tournamentId,
@@ -30,16 +30,16 @@ export const useGetPlayersByCountry = ({ tournamentId, country }: UseGetPlayersB
     select: data => {
       const divisions = data.tournament_data;
 
-      divisions.forEach((division: any) => {
-        division.data = division.data.filter((player: any) => player.name.includes(`[${country}]`));
+      divisions.forEach(division => {
+        division.data = division.data.filter(player => player.name.includes(`[${country}]`));
       });
 
       const orderedData = divisions.sort(
-        (a: any, b: any) => divisionOrder.indexOf(a.division) - divisionOrder.indexOf(b.division)
+        (a, b) => divisionOrder.indexOf(a.division) - divisionOrder.indexOf(b.division)
       );
 
       // remove if array is 0
-      orderedData.forEach((division: any) => {
+      orderedData.forEach(division => {
         if (division.data.length === 0) {
           const index = orderedData.indexOf(division);
           orderedData.splice(index, 1);

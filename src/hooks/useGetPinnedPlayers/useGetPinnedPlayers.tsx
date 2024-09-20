@@ -8,18 +8,17 @@ import { getTournamentStandingsKey } from 'queries/useGetTournamentStandings';
 
 import { createPlayerName } from 'utils/createPlayerName';
 
-import type { Division } from 'types/tournament';
+import type { Division, TournamentStatus } from 'types/tournament';
 import type { Standing } from 'types/standing';
 
-const tournamentsQueryOptions = (tournamentId: any) => {
+const tournamentsQueryOptions = (tournamentId: string) => {
   const queryClient = useQueryClient();
-
   return queryOptions({
     queryKey: ['tournaments', tournamentId, 'pinned'],
     queryFn: async () => {
       const tournament = await getPokeDataTournament(tournamentId);
       const divisions = tournament.tournament_data;
-      divisions.map((division: any) => {
+      divisions.map(division => {
         const data = division.data;
         const divisionKey = getTournamentStandingsKey({
           tournamentId,
@@ -41,11 +40,15 @@ type PlayersObject = {
 export interface PinnedTournamentObject {
   tournamentId: string;
   tournamentName: string;
-  tournamentStatus: any;
+  tournamentStatus: TournamentStatus;
   players: PlayersObject;
 }
 
-export const useGetPinnedPlayers = (pinnedPlayers: any) => {
+type PinnedPlayers = {
+  [key: string]: PlayersObject;
+};
+
+export const useGetPinnedPlayers = (pinnedPlayers: PinnedPlayers) => {
   const tournamentIds = Object.keys(pinnedPlayers);
   return useQueries({
     queries: tournamentIds?.map(tournamentId => tournamentsQueryOptions(tournamentId)) ?? [],
@@ -65,21 +68,35 @@ export const useGetPinnedPlayers = (pinnedPlayers: any) => {
 
         const pinnedInfo = pinnedPlayers[tournamentId];
         const pinnedDivisions = Object.keys(pinnedInfo) as Division[];
-
+        console.log('pinnedDivisions', pinnedDivisions);
         pinnedDivisions.forEach(division => {
           const divisionData = res.data.tournament_data.find(info => info.division === division);
           if (!divisionData) return;
-          tournamentObject.players[division] = pinnedPlayers[tournamentId][division].map(
-            (player: string) => {
-              const name = createPlayerName(player);
-              const foundPlayer = divisionData.data.find(
-                (player: Standing) => player.name === name
-              );
-              return foundPlayer;
+          if (!tournamentObject.players[division]) {
+            tournamentObject.players[division] = [];
+          }
+          const pinnedPlayersInDivision = pinnedInfo[division];
+          if (!pinnedPlayersInDivision) return;
+          console.log('pinnedPlayersInDivision', pinnedPlayersInDivision);
+          pinnedPlayersInDivision.forEach(playerName => {
+            const foundPlayer = divisionData.data.find(
+              (player: Standing) => createPlayerName(player) === playerName
+            );
+            if (foundPlayer) {
+              tournamentObject.players[division].push(foundPlayer);
             }
-          );
+          });
+          // tournamentObject.players[division] = pinnedPlayers[tournamentId][division].map(
+          //   (player: Standing) => {
+          //     const name = createPlayerName(player);
+          //     const foundPlayer = divisionData.data.find(
+          //       (player: Standing) => player.name === name
+          //     );
+          //     return foundPlayer;
+          //   }
+          // );
         });
-
+        console.log(tournamentObject);
         return tournamentObject;
       }) as PinnedTournamentObject[];
 

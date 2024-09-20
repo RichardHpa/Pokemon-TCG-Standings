@@ -41,7 +41,7 @@ const Row = ({ data, index, setSize, closeDrawer }: RowProps) => {
 
   const players: Player[] = useMemo(() => {
     return Object.entries(tournament.players).reduce((acc, [division, players]) => {
-      // @ts-expect-error
+      // @ts-expect-error - division is a key of PlayersObject
       return acc.concat(players.map(player => ({ division, player })));
     }, []);
   }, [tournament.players]);
@@ -58,7 +58,9 @@ const Row = ({ data, index, setSize, closeDrawer }: RowProps) => {
             return (
               <Link
                 key={player.player.name}
-                to={`/tournaments/${tournament.tournamentId}/${player.division}/${createPlayerUrl(player.player.name)}`}
+                to={`/tournaments/${tournament.tournamentId}/${player.division}/${createPlayerUrl(
+                  player.player.name
+                )}`}
                 className="flex justify-between align-middle w-full px-4 py-2 text-white cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-800"
                 onClick={closeDrawer}
               >
@@ -88,9 +90,9 @@ const DrawerInner = ({ closeDrawer }: { closeDrawer: () => void }) => {
     if (isLoading) {
       return;
     }
-    filteredPlayers.forEach((tournament, index) => {
+    filteredPlayers.forEach(tournament => {
       if (tournament.tournamentStatus === FINISHED) {
-        handleClearTournament(tournament.tournamentId);
+        // handleClearTournament(tournament.tournamentId);
       }
     });
   }, [isLoading, filteredPlayers, handleClearTournament, closeDrawer]);

@@ -41,7 +41,7 @@ export const About = () => {
   const [markdown, setMarkdown] = useState('');
 
   useEffect(() => {
-    // @ts-expect-error
+    // @ts-expect-error - TS doesn't know about the import.meta object
     import('./about.md')
       .then(res =>
         fetch(res.default)

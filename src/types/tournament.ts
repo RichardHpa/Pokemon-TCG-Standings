@@ -1,6 +1,7 @@
 import { Standing } from './standing';
 
 export type Division = 'juniors' | 'seniors' | 'masters' | 'juniorsseniors';
+export type TournamentStatus = 'finished' | 'running' | 'not-started' | 'check-in';
 
 export type DivisionMap<T> = {
   [key in Division]: T;
@@ -16,7 +17,7 @@ export interface Tournament {
   decklists: number;
   players: DivisionMap<number>;
   winners: DivisionMap<string>;
-  tournamentStatus: 'finished' | 'running' | 'not-started' | 'check-in';
+  tournamentStatus: TournamentStatus;
   roundNumbers: DivisionMap<number>;
   lastUpdated: string;
   rk9link: string;

@@ -14,7 +14,7 @@ export const useGetTournament = (tournamentId: string) => {
     queryFn: async () => {
       const tournament = await getPokeDataTournament(tournamentId);
       const divisions = tournament.tournament_data;
-      divisions.map((division: any) => {
+      divisions.map(division => {
         const data = division.data;
         const divisionKey = getTournamentStandingsKey({
           tournamentId,
