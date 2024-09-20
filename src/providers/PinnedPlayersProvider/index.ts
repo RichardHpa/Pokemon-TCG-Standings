@@ -1,1 +1,2 @@
-export { PinnedPlayersProvider, usePinnedPlayers } from './PinnedPlayersProvider';
+export { PinnedPlayersProvider } from './PinnedPlayersProvider';
+export { usePinnedPlayers } from './usePinnedPlayers';

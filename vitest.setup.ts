@@ -5,7 +5,7 @@ import { server } from './src/mocks/node';
 
 beforeAll(() => server.listen());
 afterEach(() => {
-  server.resetHandlers();
-  cleanup();
+    server.resetHandlers();
+    cleanup();
 });
 afterAll(() => server.close());

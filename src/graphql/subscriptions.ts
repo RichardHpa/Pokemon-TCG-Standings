@@ -2,13 +2,14 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-import * as APITypes from "../API";
+import * as APITypes from '../API';
 type GeneratedSubscription<InputType, OutputType> = string & {
-  __generatedSubscriptionInput: InputType;
-  __generatedSubscriptionOutput: OutputType;
+    __generatedSubscriptionInput: InputType;
+    __generatedSubscriptionOutput: OutputType;
 };
 
-export const onCreateTournament = /* GraphQL */ `subscription OnCreateTournament(
+export const onCreateTournament =
+    /* GraphQL */ `subscription OnCreateTournament(
   $filter: ModelSubscriptionTournamentFilterInput
 ) {
   onCreateTournament(filter: $filter) {
@@ -48,10 +49,11 @@ export const onCreateTournament = /* GraphQL */ `subscription OnCreateTournament
   }
 }
 ` as GeneratedSubscription<
-  APITypes.OnCreateTournamentSubscriptionVariables,
-  APITypes.OnCreateTournamentSubscription
->;
-export const onUpdateTournament = /* GraphQL */ `subscription OnUpdateTournament(
+        APITypes.OnCreateTournamentSubscriptionVariables,
+        APITypes.OnCreateTournamentSubscription
+    >;
+export const onUpdateTournament =
+    /* GraphQL */ `subscription OnUpdateTournament(
   $filter: ModelSubscriptionTournamentFilterInput
 ) {
   onUpdateTournament(filter: $filter) {
@@ -91,10 +93,11 @@ export const onUpdateTournament = /* GraphQL */ `subscription OnUpdateTournament
   }
 }
 ` as GeneratedSubscription<
-  APITypes.OnUpdateTournamentSubscriptionVariables,
-  APITypes.OnUpdateTournamentSubscription
->;
-export const onDeleteTournament = /* GraphQL */ `subscription OnDeleteTournament(
+        APITypes.OnUpdateTournamentSubscriptionVariables,
+        APITypes.OnUpdateTournamentSubscription
+    >;
+export const onDeleteTournament =
+    /* GraphQL */ `subscription OnDeleteTournament(
   $filter: ModelSubscriptionTournamentFilterInput
 ) {
   onDeleteTournament(filter: $filter) {
@@ -134,6 +137,6 @@ export const onDeleteTournament = /* GraphQL */ `subscription OnDeleteTournament
   }
 }
 ` as GeneratedSubscription<
-  APITypes.OnDeleteTournamentSubscriptionVariables,
-  APITypes.OnDeleteTournamentSubscription
->;
+        APITypes.OnDeleteTournamentSubscriptionVariables,
+        APITypes.OnDeleteTournamentSubscription
+    >;

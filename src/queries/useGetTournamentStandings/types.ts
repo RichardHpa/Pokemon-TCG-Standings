@@ -1,6 +1,6 @@
-import { Division } from 'types/tournament';
+import type { Division } from 'types/tournament';
 
 export interface useGetTournamentStandingsProps {
-  tournamentId: string;
-  division: Division;
+    tournamentId: string;
+    division: Division;
 }
