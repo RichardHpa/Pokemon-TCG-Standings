@@ -1,5 +1,4 @@
 import { useState, useCallback } from 'react';
-
 import type { FC } from 'react';
 
 interface CardImageProps {
