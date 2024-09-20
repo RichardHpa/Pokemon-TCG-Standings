@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
 
 export interface NavTab {
-  children: ReactNode;
-  to: string;
-  active?: boolean;
+    children: ReactNode;
+    to: string;
+    active?: boolean;
 }

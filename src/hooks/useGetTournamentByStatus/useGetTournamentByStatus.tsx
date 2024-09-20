@@ -6,37 +6,38 @@ import { getGetTournamentsKey } from 'queries/useGetTournaments';
 import { FINISHED, RUNNING, NOT_STARTED, CHECK_IN } from 'constants/tournament';
 
 export const useGetTournamentByStatus = () => {
-  return useQuery({
-    queryKey: getGetTournamentsKey(),
-    queryFn: async () => {
-      const tournaments = await getPokeDataTournaments();
-      if (!tournaments) {
-        throw new Response('', {
-          status: 404,
-          statusText: `No tournaments found`,
-        });
-      }
+    return useQuery({
+        queryKey: getGetTournamentsKey(),
+        queryFn: async () => {
+            const tournaments = await getPokeDataTournaments();
+            if (!tournaments) {
+                throw new Response('', {
+                    status: 404,
+                    statusText: `No tournaments found`,
+                });
+            }
 
-      return tournaments;
-    },
-    select: data => {
-      const runningTournaments = data?.filter(
-        tournament => tournament.tournamentStatus === RUNNING
-      );
-      const finishedTournaments = data?.filter(
-        tournament => tournament.tournamentStatus === FINISHED
-      );
+            return tournaments;
+        },
+        select: (data) => {
+            const runningTournaments = data?.filter(
+                (tournament) => tournament.tournamentStatus === RUNNING
+            );
+            const finishedTournaments = data?.filter(
+                (tournament) => tournament.tournamentStatus === FINISHED
+            );
 
-      const upComingTournaments = data?.filter(
-        tournament =>
-          tournament.tournamentStatus === NOT_STARTED || tournament.tournamentStatus === CHECK_IN
-      );
+            const upComingTournaments = data?.filter(
+                (tournament) =>
+                    tournament.tournamentStatus === NOT_STARTED ||
+                    tournament.tournamentStatus === CHECK_IN
+            );
 
-      return {
-        runningTournaments,
-        finishedTournaments,
-        upComingTournaments,
-      };
-    },
-  });
+            return {
+                runningTournaments,
+                finishedTournaments,
+                upComingTournaments,
+            };
+        },
+    });
 };

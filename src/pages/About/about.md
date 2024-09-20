@@ -14,9 +14,9 @@ There is a lot I would like to add onto this site, but I am only one person and 
 
 Some features I would like to add are:
 
-- More detailed information about the tournaments
-- More detailed information about the players
-- Follow specific decks
+-   More detailed information about the tournaments
+-   More detailed information about the players
+-   Follow specific decks
 
 If you did find the site useful, please let me know. Or even better help me fund it, which could help me add more features and better stability. The best way to do that is to follow the link below and buy me a coffee (since there is no "Buy me pokemon cards" service).
 
