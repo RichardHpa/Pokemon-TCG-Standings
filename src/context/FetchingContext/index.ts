@@ -1,1 +1,2 @@
-export { FetchingContext, FetchingProvider, useFetching } from './FetchingContext';
+export { FetchingContext, FetchingProvider } from './FetchingContext';
+export { useFetching } from './useFetching';

@@ -1,1 +1,2 @@
-export { Theme, ColorModeProvider, useColorMode } from './ColorModeProvider';
+export { Theme, ColorModeProvider } from './ColorModeProvider';
+export { useColorMode } from './useColorMode';

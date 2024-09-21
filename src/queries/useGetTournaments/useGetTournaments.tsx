@@ -7,21 +7,21 @@ export const baseTournamentKey = ['tournaments'];
 export const getGetTournamentsKey = () => baseTournamentKey;
 
 export const tournamentsQuery = () =>
-  queryOptions({
-    queryKey: getGetTournamentsKey(),
-    queryFn: async () => {
-      const tournaments = await getPokeDataTournaments();
-      if (!tournaments) {
-        throw new Response('', {
-          status: 404,
-          statusText: `No tournaments found`,
-        });
-      }
+    queryOptions({
+        queryKey: getGetTournamentsKey(),
+        queryFn: async () => {
+            const tournaments = await getPokeDataTournaments();
+            if (!tournaments) {
+                throw new Response('', {
+                    status: 404,
+                    statusText: `No tournaments found`,
+                });
+            }
 
-      return tournaments;
-    },
-  });
+            return tournaments;
+        },
+    });
 
 export const useGetTournaments = () => {
-  return useQuery(tournamentsQuery());
+    return useQuery(tournamentsQuery());
 };

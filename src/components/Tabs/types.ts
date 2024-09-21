@@ -1,6 +1,6 @@
-import { ReactNode } from 'react';
+import type { ReactNode } from 'react';
 
 export interface Tabs {
-  children: ReactNode;
-  actions?: ReactNode;
+    children: ReactNode;
+    actions?: ReactNode;
 }

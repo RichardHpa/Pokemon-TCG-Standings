@@ -6,17 +6,23 @@ import { IconButton } from 'components/Button/IconButton';
 import { useColorMode, Theme } from 'providers/ColorModeProvider';
 
 export const ColorModeSwitcher = () => {
-  const [mode, setColorMode] = useColorMode();
+    const [mode, setColorMode] = useColorMode();
 
-  const handleToggleTheme = useCallback(() => {
-    setColorMode(prev => (prev === Theme.DARK ? Theme.LIGHT : Theme.DARK));
-  }, [setColorMode]);
+    const handleToggleTheme = useCallback(() => {
+        setColorMode((prev) =>
+            prev === Theme.DARK ? Theme.LIGHT : Theme.DARK
+        );
+    }, [setColorMode]);
 
-  return (
-    <IconButton
-      onClick={handleToggleTheme}
-      icon={mode === Theme.DARK ? <MoonIcon /> : <SunIcon />}
-      alt={mode === Theme.DARK ? 'Switch to light mode' : 'Switch to dark mode'}
-    />
-  );
+    return (
+        <IconButton
+            onClick={handleToggleTheme}
+            icon={mode === Theme.DARK ? <MoonIcon /> : <SunIcon />}
+            alt={
+                mode === Theme.DARK
+                    ? 'Switch to light mode'
+                    : 'Switch to dark mode'
+            }
+        />
+    );
 };
