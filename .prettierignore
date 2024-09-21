@@ -1,0 +1,16 @@
+# Ignore artifacts:
+build
+coverage
+amplify
+
+public/localData
+public/images
+public/sprites
+
+# Ignore all HTML files:
+**/*.html
+
+.github
+.vscode
+
+.graphqlconfig.yml

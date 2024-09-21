@@ -2,10 +2,10 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-import * as APITypes from "../API";
+import * as APITypes from '../API';
 type GeneratedQuery<InputType, OutputType> = string & {
-  __generatedQueryInput: InputType;
-  __generatedQueryOutput: OutputType;
+    __generatedQueryInput: InputType;
+    __generatedQueryOutput: OutputType;
 };
 
 export const getTournament = /* GraphQL */ `query GetTournament($id: ID!) {
@@ -46,8 +46,8 @@ export const getTournament = /* GraphQL */ `query GetTournament($id: ID!) {
   }
 }
 ` as GeneratedQuery<
-  APITypes.GetTournamentQueryVariables,
-  APITypes.GetTournamentQuery
+    APITypes.GetTournamentQueryVariables,
+    APITypes.GetTournamentQuery
 >;
 export const listTournaments = /* GraphQL */ `query ListTournaments(
   $filter: ModelTournamentFilterInput
@@ -72,6 +72,6 @@ export const listTournaments = /* GraphQL */ `query ListTournaments(
   }
 }
 ` as GeneratedQuery<
-  APITypes.ListTournamentsQueryVariables,
-  APITypes.ListTournamentsQuery
+    APITypes.ListTournamentsQueryVariables,
+    APITypes.ListTournamentsQuery
 >;

@@ -2,10 +2,10 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-import * as APITypes from "../API";
+import * as APITypes from '../API';
 type GeneratedMutation<InputType, OutputType> = string & {
-  __generatedMutationInput: InputType;
-  __generatedMutationOutput: OutputType;
+    __generatedMutationInput: InputType;
+    __generatedMutationOutput: OutputType;
 };
 
 export const createTournament = /* GraphQL */ `mutation CreateTournament(
@@ -49,8 +49,8 @@ export const createTournament = /* GraphQL */ `mutation CreateTournament(
   }
 }
 ` as GeneratedMutation<
-  APITypes.CreateTournamentMutationVariables,
-  APITypes.CreateTournamentMutation
+    APITypes.CreateTournamentMutationVariables,
+    APITypes.CreateTournamentMutation
 >;
 export const updateTournament = /* GraphQL */ `mutation UpdateTournament(
   $input: UpdateTournamentInput!
@@ -93,8 +93,8 @@ export const updateTournament = /* GraphQL */ `mutation UpdateTournament(
   }
 }
 ` as GeneratedMutation<
-  APITypes.UpdateTournamentMutationVariables,
-  APITypes.UpdateTournamentMutation
+    APITypes.UpdateTournamentMutationVariables,
+    APITypes.UpdateTournamentMutation
 >;
 export const deleteTournament = /* GraphQL */ `mutation DeleteTournament(
   $input: DeleteTournamentInput!
@@ -137,6 +137,6 @@ export const deleteTournament = /* GraphQL */ `mutation DeleteTournament(
   }
 }
 ` as GeneratedMutation<
-  APITypes.DeleteTournamentMutationVariables,
-  APITypes.DeleteTournamentMutation
+    APITypes.DeleteTournamentMutationVariables,
+    APITypes.DeleteTournamentMutation
 >;
