@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom';
 import { useState, useCallback, useRef, useEffect, useMemo } from 'react';
+import { Link } from 'react-router-dom';
 import clsx from 'clsx';
 import AutoSizer from 'react-virtualized-auto-sizer';
 import { VariableSizeList as List } from 'react-window';
@@ -40,11 +40,13 @@ const Row = ({ data, index, setSize, closeDrawer }: RowProps) => {
     const tournament = data[index];
 
     const players: Player[] = useMemo(() => {
-        return Object.entries(tournament.players).reduce(
+        return Object.entries(tournament.players).reduce<Player[]>(
             (acc, [division, players]) => {
-                // @ts-expect-error - division is a key of PlayersObject
                 return acc.concat(
-                    players.map((player) => ({ division, player }))
+                    players.map((player) => ({
+                        division: division as Division,
+                        player,
+                    }))
                 );
             },
             []
@@ -95,22 +97,37 @@ interface SizeMap {
 }
 
 const DrawerInner = ({ closeDrawer }: { closeDrawer: () => void }) => {
-    const { parsedPlayers, handleClearTournament } = usePinnedPlayers();
-    const { filteredPlayers, isLoading } = useGetPinnedPlayers(parsedPlayers);
+    const {
+        parsedPlayers,
+        //  handleClearTournament
+    } = usePinnedPlayers();
+    const { filteredPlayers: pinnedPlayers, isLoading } =
+        useGetPinnedPlayers(parsedPlayers);
 
-    useEffect(() => {
+    const filteredPlayers = useMemo(() => {
         if (isLoading) {
-            return;
+            return [];
         }
-        filteredPlayers.forEach((tournament) => {
-            if (tournament.tournamentStatus === FINISHED) {
-                // handleClearTournament(tournament.tournamentId);
-            }
-        });
-    }, [isLoading, filteredPlayers, handleClearTournament, closeDrawer]);
+        return pinnedPlayers.filter(
+            (tournament) => tournament.tournamentStatus !== FINISHED
+        );
+    }, [isLoading, pinnedPlayers]);
+
+    // useEffect(() => {
+    //     if (isLoading || filteredPlayers.length === 0) {
+    //         return;
+    //     }
+
+    //     // NOTE: this is causing an issue, I need to figure out a way to clear tournaments that are finished rather than hiding them
+
+    //     // filteredPlayers.forEach((tournament) => {
+    //     //     if (tournament.tournamentStatus === FINISHED) {
+    //     //         handleClearTournament(tournament.tournamentId);
+    //     //     }
+    //     // });
+    // }, [isLoading, filteredPlayers, handleClearTournament, closeDrawer]);
 
     const listRef = useRef<VariableSizeList>(null);
-
     const sizeMap = useRef<SizeMap>({});
 
     const setSize = useCallback((index: number, size: number | undefined) => {
@@ -127,6 +144,14 @@ const DrawerInner = ({ closeDrawer }: { closeDrawer: () => void }) => {
         return (
             <div className="flex items-center justify-center p-4 text-gray-500 dark:text-gray-400">
                 Loading pinned players...
+            </div>
+        );
+    }
+
+    if (filteredPlayers.length === 0) {
+        return (
+            <div className="flex items-center justify-center p-4 text-gray-500 dark:text-gray-400">
+                There are no pinned players for active tournaments
             </div>
         );
     }

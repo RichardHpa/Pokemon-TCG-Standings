@@ -12,6 +12,36 @@ export const getArchetypes = (decklist: DeckList) => {
     const pokemonNames = Object.values(pokemon).map((p) => p.name);
     const foundArchetype = [];
 
+    if (
+        pokemonNames.includes('Cornerstone Mask Ogerpon ex') &&
+        pokemonNames.includes('Noivern ex')
+    ) {
+        foundArchetype.push({
+            pokemon: 'Cornerstone Mask Ogerpon ex',
+            image: pokemonList['ogerpon'].forms?.['cornerstone-mask'].image,
+        });
+        foundArchetype.push({
+            pokemon: 'Noivern ex',
+            image: pokemonList['noivern'].image,
+        });
+        return foundArchetype;
+    }
+
+    if (
+        pokemonNames.includes('Origin Forme Palkia VSTAR') &&
+        pokemonNames.includes('Dusknoir')
+    ) {
+        foundArchetype.push({
+            pokemon: 'Origin Forme Palkia VSTAR',
+            image: pokemonList['palkia'].forms?.origin.image,
+        });
+        foundArchetype.push({
+            pokemon: 'Dusknoir',
+            image: pokemonList['dusknoir'].image,
+        });
+        return foundArchetype;
+    }
+
     if (pokemonNames.includes('Arceus VSTAR')) {
         foundArchetype.push({
             pokemon: 'Arceus VSTAR',
@@ -270,6 +300,22 @@ export const getArchetypes = (decklist: DeckList) => {
                 image: pokemonList['banette'].image,
             });
         }
+        return foundArchetype;
+    }
+
+    if (pokemonNames.includes('Banette ex')) {
+        foundArchetype.push({
+            pokemon: 'Banette ex',
+            image: pokemonList['banette'].image,
+        });
+        return foundArchetype;
+    }
+
+    if (pokemonNames.includes('Iron Valiant ex')) {
+        foundArchetype.push({
+            pokemon: 'Iron Valiant ex',
+            image: pokemonList['iron-valiant'].image,
+        });
         return foundArchetype;
     }
 

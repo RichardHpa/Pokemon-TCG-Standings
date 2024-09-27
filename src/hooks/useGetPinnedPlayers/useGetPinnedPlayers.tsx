@@ -5,6 +5,8 @@ import {
     useQueryClient,
 } from '@tanstack/react-query';
 
+// {"0000127":{"masters":["Tord_Reklev_[NO]","Andrew_Hedrick_[US]"]},"0000109":{"masters":["Kenny_Potter_[NZ]"]}}
+
 import { getPokeDataTournament } from 'api/getTournament';
 
 import { getGetTournamentKey } from 'queries/useGetTournament';
@@ -40,19 +42,21 @@ const tournamentsQueryOptions = (tournamentId: string) => {
     });
 };
 
-type PlayersObject = {
-    [key in Division]?: Standing[];
+type DivisionsObject = {
+    [key in Division]?: string[];
 };
 
 export interface PinnedTournamentObject {
     tournamentId: string;
     tournamentName: string;
     tournamentStatus: TournamentStatus;
-    players: PlayersObject;
+    players: {
+        [key in Division]?: Standing[];
+    };
 }
 
 type PinnedPlayers = {
-    [key: string]: PlayersObject;
+    [key: string]: DivisionsObject;
 };
 
 export const useGetPinnedPlayers = (pinnedPlayers: PinnedPlayers) => {
@@ -63,11 +67,14 @@ export const useGetPinnedPlayers = (pinnedPlayers: PinnedPlayers) => {
                 tournamentsQueryOptions(tournamentId)
             ) ?? [],
         combine: (tournaments) => {
-            const filteredPlayers = tournaments.map((res) => {
-                if (!res.data) return res;
-                const tournamentId = res.data.tournament.id;
-                const tournamentName = res.data.tournament.name;
-                const tournamentStatus = res.data.tournament.tournamentStatus;
+            const filteredPlayers = tournaments.map((tournament) => {
+                if (tournament.isLoading || !tournament.data) return;
+                const tournamentData = tournament.data.tournament_data;
+
+                const tournamentId = tournament.data.tournament.id;
+                const tournamentName = tournament.data.tournament.name;
+                const tournamentStatus =
+                    tournament.data.tournament.tournamentStatus;
 
                 const tournamentObject: PinnedTournamentObject = {
                     tournamentId,
@@ -75,52 +82,39 @@ export const useGetPinnedPlayers = (pinnedPlayers: PinnedPlayers) => {
                     tournamentStatus,
                     players: {},
                 };
-
                 const pinnedInfo = pinnedPlayers[tournamentId];
                 const pinnedDivisions = Object.keys(pinnedInfo) as Division[];
-                console.log('pinnedDivisions', pinnedDivisions);
                 pinnedDivisions.forEach((division) => {
-                    const divisionData = res.data.tournament_data.find(
+                    const fullPinnedDivisionInfo: Standing[] = [];
+                    const divisionData = tournamentData.find(
                         (info) => info.division === division
-                    );
-                    if (!divisionData) return;
-                    if (!tournamentObject.players[division]) {
-                        tournamentObject.players[division] = [];
-                    }
-                    const pinnedPlayersInDivision = pinnedInfo[division];
-                    if (!pinnedPlayersInDivision) return;
-                    console.log(
-                        'pinnedPlayersInDivision',
-                        pinnedPlayersInDivision
-                    );
+                    )!.data;
+
+                    const pinnedPlayersInDivision = pinnedInfo[division]!;
                     pinnedPlayersInDivision.forEach((playerName) => {
-                        const foundPlayer = divisionData.data.find(
-                            (player: Standing) =>
-                                createPlayerName(player) === playerName
+                        const foundPlayerInfo = divisionData.find(
+                            (divisionPlayer) =>
+                                createPlayerName(playerName) ===
+                                divisionPlayer.name
                         );
-                        if (foundPlayer) {
-                            tournamentObject.players[division].push(
-                                foundPlayer
-                            );
-                        }
+                        if (!foundPlayerInfo) return;
+                        fullPinnedDivisionInfo.push(foundPlayerInfo);
                     });
-                    // tournamentObject.players[division] = pinnedPlayers[tournamentId][division].map(
-                    //   (player: Standing) => {
-                    //     const name = createPlayerName(player);
-                    //     const foundPlayer = divisionData.data.find(
-                    //       (player: Standing) => player.name === name
-                    //     );
-                    //     return foundPlayer;
-                    //   }
-                    // );
+                    const sortedPinnedDivisionInfo =
+                        fullPinnedDivisionInfo.sort(
+                            (a, b) => a.placing - b.placing
+                        );
+
+                    tournamentObject.players[division] =
+                        sortedPinnedDivisionInfo;
                 });
-                console.log(tournamentObject);
                 return tournamentObject;
             }) as PinnedTournamentObject[];
 
             return {
                 filteredPlayers,
                 isLoading: tournaments.some((result) => result.isLoading),
+                isFetching: tournaments.some((result) => result.isFetching),
             };
         },
     });
