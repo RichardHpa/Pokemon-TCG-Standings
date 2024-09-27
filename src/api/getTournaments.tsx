@@ -1,20 +1,26 @@
 import axios from 'utils/axios';
 
-import { baseLocalApi } from 'constants/api';
-import { runningTournaments } from 'constants/runningTournaments';
+import { baseLocalApi, tournamentsUrl } from 'constants/api';
+import { staticTournaments } from 'mocks/tempData/tournaments';
 
 import type { Tournament } from 'types/tournament';
 
-const url =
-    runningTournaments.length === 0
-        ? 'https://www.pokedata.ovh/apiv2/tcg/tournaments'
-        : `${baseLocalApi}/tournaments`;
-
 export const getPokeDataTournaments = async (): Promise<Tournament[]> => {
-    const response = await axios.get(url).then((res) => {
-        const data = res.data.tcg.data;
-        return data;
-    });
+    const response = await axios
+        .get(`${baseLocalApi}/tournaments`)
+        .then((customApiDataRes) => {
+            const data = customApiDataRes.data.tcg.data;
+            return data;
+        })
+        .catch(async () => {
+            const res = await axios.get(tournamentsUrl);
+            const data = res.data.tcg.data;
+            return data;
+        });
+
+    if (!response) {
+        return staticTournaments.tcg.data.reverse();
+    }
 
     // the response comes in order from oldest to newest so we want to reverse it
     const reversed = response.reverse();

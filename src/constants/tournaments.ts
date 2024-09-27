@@ -19,8 +19,18 @@ interface LocalTournamentsMap {
 }
 
 export const tournaments: LocalTournamentsMap = {
+    '0000131': {
+        logo: RegionalLogo2024,
+    },
+    '0000130': {
+        logo: RegionalLogo2024,
+    },
     '0000129': {
         logo: RegionalLogo2024,
+        streams: {
+            day1: 'https://www.youtube.com/watch?v=foyiQqsBV3k',
+            day2: 'https://www.youtube.com/watch?v=-Sxb45T3Gfk',
+        },
     },
     '0000128': {
         logo: Worlds2024Logo,
