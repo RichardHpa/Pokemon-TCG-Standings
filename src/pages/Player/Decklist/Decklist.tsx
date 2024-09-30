@@ -61,7 +61,7 @@ const DecklistInner = ({ decklist }: { decklist: DeckList }) => {
 
     return (
         <div>
-            <div className="grid gap-2 grid-cols-8">
+            <div className="grid gap-2 grid-cols-2 sm:grid-cols-4 md:grid-cols-8">
                 {formattedCards.map((card) => (
                     <div key={card.name} className="relative">
                         <CardImage src={card.image} alt={card.name} />
