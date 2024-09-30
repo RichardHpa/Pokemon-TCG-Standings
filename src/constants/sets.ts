@@ -1,5 +1,6 @@
 export type SetCodes =
     // Scarlet & Violet
+    | 'SCR' // Stellar Crown
     | 'SFA' // Shrouded Fable
     | 'TWM' // Twilight Masquerade
     | 'TEF' // Temporal Forces
@@ -1512,6 +1513,7 @@ type SetCodeMap = {
 };
 
 export const setMap: SetCodeMap = {
+    SCR: 'sv7',
     SFA: 'sv6pt5',
     TWM: 'sv6',
     TEF: 'sv5',

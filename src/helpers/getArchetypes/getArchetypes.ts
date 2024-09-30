@@ -13,6 +13,44 @@ export const getArchetypes = (decklist: DeckList) => {
     const foundArchetype = [];
 
     if (
+        pokemonNames.includes('Terapagos ex') &&
+        pokemonNames.includes('Origin Forme Palkia VSTAR')
+    ) {
+        foundArchetype.push({
+            pokemon: 'Terapagos ex',
+            image: pokemonList['terapagos'].forms?.terastal.image,
+        });
+        foundArchetype.push({
+            pokemon: 'Origin Forme Palkia VSTAR',
+            image: pokemonList['palkia'].forms?.origin.image,
+        });
+        return foundArchetype;
+    }
+
+    if (
+        pokemonNames.includes('Terapagos ex') &&
+        pokemonNames.includes('Dusknoir')
+    ) {
+        foundArchetype.push({
+            pokemon: 'Terapagos ex',
+            image: pokemonList['terapagos'].forms?.terastal.image,
+        });
+        foundArchetype.push({
+            pokemon: 'Dusknoir',
+            image: pokemonList['dusknoir'].image,
+        });
+        return foundArchetype;
+    }
+
+    if (pokemonNames.includes('Gouging Fire ex')) {
+        foundArchetype.push({
+            pokemon: 'Gouging Fire ex',
+            image: pokemonList['gouging-fire'].image,
+        });
+        return foundArchetype;
+    }
+
+    if (
         pokemonNames.includes('Cornerstone Mask Ogerpon ex') &&
         pokemonNames.includes('Noivern ex')
     ) {
