@@ -25,5 +25,10 @@ export const getPokeDataTournaments = async (): Promise<Tournament[]> => {
     // the response comes in order from oldest to newest so we want to reverse it
     const reversed = response.reverse();
 
-    return reversed;
+    // remove 0000132
+    const filtered = reversed.filter(
+        (tournament: Tournament) => tournament.id !== '0000132'
+    );
+
+    return filtered;
 };
