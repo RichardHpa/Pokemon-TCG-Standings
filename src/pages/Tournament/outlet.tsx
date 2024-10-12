@@ -1,4 +1,5 @@
 import { Outlet, Link, useParams } from 'react-router-dom';
+import { fromZonedTime } from 'date-fns-tz';
 
 import { Heading } from 'components/Heading';
 import { Indicator } from 'components/Indicator';
@@ -12,6 +13,7 @@ import { tournaments } from 'constants/tournaments';
 import { useGetTournament } from 'queries/useGetTournament';
 
 import { formatDate } from 'helpers/formatDate';
+import { formatDateFromTimezone } from 'helpers/formatDateFromTimezone';
 
 const showStandings = [RUNNING, FINISHED];
 
@@ -74,8 +76,15 @@ export const TournamentOutlet = () => {
                         </Link>
 
                         <p className="text-gray-500 dark:text-gray-400">
-                            {formatDate(tournament.date.start, 'MMMM d, yyyy')}{' '}
-                            - {formatDate(tournament.date.end, 'MMMM d, yyyy')}
+                            {formatDateFromTimezone(
+                                tournament.date.start,
+                                'MMMM d, yyyy'
+                            )}{' '}
+                            -{' '}
+                            {formatDateFromTimezone(
+                                tournament.date.end,
+                                'MMMM d, yyyy'
+                            )}
                         </p>
 
                         {streams && (
