@@ -6,6 +6,13 @@ import { Indicator } from 'components/Indicator';
 
 import { RUNNING, NOT_STARTED, CHECK_IN } from 'constants/tournament';
 import { formatDate } from 'helpers/formatDate';
+import { useResponsive } from 'hooks/useResponsive';
+
+import { getCountryFlag } from 'helpers/getCountryFlag';
+import { getCountryCode } from 'utils/getCountryCode';
+import { removeCountryFromName } from 'utils/removeCountryFromName';
+
+import { tournaments } from 'constants/tournaments';
 
 import type { TournamentsCardProps } from './types';
 import type { FC } from 'react';
@@ -14,23 +21,51 @@ import type { Tournament } from 'types/tournament';
 const upcomming = [NOT_STARTED, CHECK_IN];
 
 const TournamentCardInner = ({ tournament }: { tournament: Tournament }) => {
+    const { md } = useResponsive();
     return (
-        <div className="flex justify-between py-6">
-            <div>
-                <div className="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
-                    {tournament.name}
+        <div className="flex justify-between py-6 gap-8">
+            <div className="flex gap-4">
+                {md && tournaments[tournament.id]?.logo && (
+                    <img
+                        src={tournaments[tournament.id].logo}
+                        alt={tournament.name}
+                        className="w-16 h-fit"
+                    />
+                )}
+                <div>
+                    <div className="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+                        {tournament.name}
+                    </div>
+                    {tournament.winners.masters && (
+                        <div>
+                            Masters winner:{' '}
+                            {removeCountryFromName(tournament.winners.masters)}{' '}
+                            {getCountryFlag(
+                                getCountryCode(tournament.winners.masters)
+                            )}
+                        </div>
+                    )}
+
+                    {tournament.winners.seniors && (
+                        <div>
+                            Seniors winner:{' '}
+                            {removeCountryFromName(tournament.winners.seniors)}{' '}
+                            {getCountryFlag(
+                                getCountryCode(tournament.winners.seniors)
+                            )}
+                        </div>
+                    )}
+
+                    {tournament.winners.juniors && (
+                        <div>
+                            Juniors winner:{' '}
+                            {removeCountryFromName(tournament.winners.juniors)}{' '}
+                            {getCountryFlag(
+                                getCountryCode(tournament.winners.juniors)
+                            )}
+                        </div>
+                    )}
                 </div>
-                {tournament.winners.masters && (
-                    <div>Masters winner: {tournament.winners.masters}</div>
-                )}
-
-                {tournament.winners.seniors && (
-                    <div>Seniors winner: {tournament.winners.seniors}</div>
-                )}
-
-                {tournament.winners.juniors && (
-                    <div>Juniors winner: {tournament.winners.juniors}</div>
-                )}
             </div>
 
             <div className="flex gap-2">

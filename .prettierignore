@@ -3,7 +3,7 @@ build
 coverage
 amplify
 
-public/localData
+
 public/images
 public/sprites
 

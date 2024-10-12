@@ -8,7 +8,7 @@ export type TournamentStatus =
     | 'check-in';
 
 export type DivisionMap<T> = {
-    [key in Division]: T;
+    [key in Division]?: T;
 };
 
 export interface Tournament {
@@ -20,9 +20,9 @@ export interface Tournament {
     };
     decklists: number;
     players: DivisionMap<number>;
-    winners: DivisionMap<string>;
+    winners: DivisionMap<string | null>;
     tournamentStatus: TournamentStatus;
-    roundNumbers: DivisionMap<number>;
+    roundNumbers: DivisionMap<number | null>;
     lastUpdated: string;
     rk9link: string;
 }

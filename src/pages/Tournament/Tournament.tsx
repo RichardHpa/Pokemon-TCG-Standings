@@ -63,7 +63,11 @@ const TournamentStandings = ({
         );
     }
 
-    if (standings && standings[0].rounds['1'].name === 'none') {
+    if (
+        standings &&
+        standings[0].rounds &&
+        standings[0].rounds['1'].name === 'none'
+    ) {
         return (
             <Notice status="info">
                 Standings will be available once round 1 has started

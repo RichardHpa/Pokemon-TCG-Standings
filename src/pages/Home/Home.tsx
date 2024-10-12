@@ -33,7 +33,7 @@ export const Home = () => {
             <SEO />
 
             <Heading level="3">
-                Keep up to date with current Pokemon TCG tournaments
+                Keep up to date with the latest Pokemon TCG tournaments
             </Heading>
 
             {data && (
@@ -44,6 +44,14 @@ export const Home = () => {
                             tournaments={data.runningTournaments}
                         />
                     )}
+
+                    {data.upComingTournaments &&
+                        data.upComingTournaments.length > 0 && (
+                            <TournamentsCard
+                                title="Upcoming Tournaments"
+                                tournaments={data.upComingTournaments}
+                            />
+                        )}
 
                     {data.finishedTournaments.length > 0 && (
                         <TournamentsCard

@@ -2,6 +2,9 @@ export const setConvert = {
     //other
     FR: 'fr',
     // sv
+    SCR: 'sv7',
+    SFA: 'sv6pt5-2',
+    TWM: 'sv6',
     TEF: 'sv5',
     PAF: 'sv4pt5',
     PAR: 'sv4',
@@ -11,6 +14,7 @@ export const setConvert = {
     SVI: 'sv1',
     SVE: 'sve',
     Energy: 'importedenergy',
+
     'PR-SV': 'svp',
     // swsh
     CRZ: 'swsh12pt5',
