@@ -5,7 +5,7 @@ import { ContentCard } from 'components/ContentCard';
 import { Indicator } from 'components/Indicator';
 
 import { RUNNING, NOT_STARTED, CHECK_IN } from 'constants/tournament';
-import { formatDate } from 'helpers/formatDate';
+import { formatDateFromTimezone } from 'helpers/formatDateFromTimezone';
 import { useResponsive } from 'hooks/useResponsive';
 
 import { getCountryFlag } from 'helpers/getCountryFlag';
@@ -70,8 +70,15 @@ const TournamentCardInner = ({ tournament }: { tournament: Tournament }) => {
 
             <div className="flex gap-2">
                 <div className="text-sm text-gray-500 dark:text-gray-400">
-                    {formatDate(tournament.date.start, 'MMMM d, yyyy')} -{' '}
-                    {formatDate(tournament.date.end, 'MMMM d, yyyy')}
+                    {formatDateFromTimezone(
+                        tournament.date.start,
+                        'MMMM d, yyyy'
+                    )}{' '}
+                    -{' '}
+                    {formatDateFromTimezone(
+                        tournament.date.end,
+                        'MMMM d, yyyy'
+                    )}
                 </div>
 
                 {tournament.tournamentStatus === RUNNING && <Indicator />}
