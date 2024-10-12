@@ -1,6 +1,6 @@
 import { useAnalytics } from 'hooks/useAnalytics';
 
-import image from 'images/bmc-button blue.png';
+import image from 'images/buyMeABoosterButton.png';
 
 export function BuyMeACoffeeWidget() {
     const { sendEvent } = useAnalytics();
