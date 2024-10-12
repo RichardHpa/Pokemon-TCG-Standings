@@ -1,6 +1,6 @@
 import { useAnalytics } from 'hooks/useAnalytics';
 
-import image from 'images/bmc-button.png';
+import image from 'images/bmc-button blue.png';
 
 export function BuyMeACoffeeWidget() {
     const { sendEvent } = useAnalytics();
@@ -21,7 +21,7 @@ export function BuyMeACoffeeWidget() {
         >
             <img
                 style={{ height: '40px' }}
-                alt="Buy Me a Coffee Widget"
+                alt="Buy Me a Booster"
                 src={image}
             />
         </a>

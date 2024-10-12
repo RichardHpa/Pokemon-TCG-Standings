@@ -8,6 +8,10 @@ import { RUNNING, NOT_STARTED, CHECK_IN } from 'constants/tournament';
 import { formatDate } from 'helpers/formatDate';
 import { useResponsive } from 'hooks/useResponsive';
 
+import { getCountryFlag } from 'helpers/getCountryFlag';
+import { getCountryCode } from 'utils/getCountryCode';
+import { removeCountryFromName } from 'utils/removeCountryFromName';
+
 import { tournaments } from 'constants/tournaments';
 
 import type { TournamentsCardProps } from './types';
@@ -21,7 +25,7 @@ const TournamentCardInner = ({ tournament }: { tournament: Tournament }) => {
     return (
         <div className="flex justify-between py-6 gap-8">
             <div className="flex gap-4">
-                {md && tournaments[tournament.id] && (
+                {md && tournaments[tournament.id]?.logo && (
                     <img
                         src={tournaments[tournament.id].logo}
                         alt={tournament.name}
@@ -33,15 +37,33 @@ const TournamentCardInner = ({ tournament }: { tournament: Tournament }) => {
                         {tournament.name}
                     </div>
                     {tournament.winners.masters && (
-                        <div>Masters winner: {tournament.winners.masters}</div>
+                        <div>
+                            Masters winner:{' '}
+                            {removeCountryFromName(tournament.winners.masters)}{' '}
+                            {getCountryFlag(
+                                getCountryCode(tournament.winners.masters)
+                            )}
+                        </div>
                     )}
 
                     {tournament.winners.seniors && (
-                        <div>Seniors winner: {tournament.winners.seniors}</div>
+                        <div>
+                            Seniors winner:{' '}
+                            {removeCountryFromName(tournament.winners.seniors)}{' '}
+                            {getCountryFlag(
+                                getCountryCode(tournament.winners.seniors)
+                            )}
+                        </div>
                     )}
 
                     {tournament.winners.juniors && (
-                        <div>Juniors winner: {tournament.winners.juniors}</div>
+                        <div>
+                            Juniors winner:{' '}
+                            {removeCountryFromName(tournament.winners.juniors)}{' '}
+                            {getCountryFlag(
+                                getCountryCode(tournament.winners.juniors)
+                            )}
+                        </div>
                     )}
                 </div>
             </div>

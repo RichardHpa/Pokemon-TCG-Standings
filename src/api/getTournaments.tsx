@@ -25,10 +25,14 @@ export const getPokeDataTournaments = async (): Promise<Tournament[]> => {
     // the response comes in order from oldest to newest so we want to reverse it
     const reversed = response.reverse();
 
-    // remove 0000132
-    const filtered = reversed.filter(
-        (tournament: Tournament) => tournament.id !== '0000132'
+    // there is an issue with the data where the 2025 Lima TCG Special Event where the data is incorrect, I have hardcoded some data for it but we need to tell it to be finished if its in the list
+    const limaSpecialEvent = reversed.findIndex(
+        (tournament: Tournament) => tournament.id === '0000132'
     );
 
-    return filtered;
+    if (limaSpecialEvent !== -1) {
+        reversed[limaSpecialEvent].tournamentStatus = 'finished';
+    }
+
+    return reversed;
 };

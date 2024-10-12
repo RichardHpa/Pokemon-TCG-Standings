@@ -19,7 +19,7 @@ export interface Tournament {
         end: string;
     };
     decklists: number;
-    players: DivisionMap<string | number>;
+    players: DivisionMap<number>;
     winners: DivisionMap<string | null>;
     tournamentStatus: TournamentStatus;
     roundNumbers: DivisionMap<number | null>;

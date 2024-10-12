@@ -18,7 +18,7 @@ export const WindowScrollVirtualizedList = ({
     data: Standing[];
     tournamentId: string;
     division: Division;
-    tournamentStatus: TournamentStatus;
+    tournamentStatus?: TournamentStatus;
     hideArchetypes?: boolean;
 }) => {
     const list = useRef<FixedSizeList>(null);

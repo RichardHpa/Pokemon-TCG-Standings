@@ -1,3 +1,7 @@
+import { getCountryFlag } from 'helpers/getCountryFlag';
+import { getCountryCode } from 'utils/getCountryCode';
+import { removeCountryFromName } from 'utils/removeCountryFromName';
+
 import type { RoundsTableProps } from './types';
 import type { FC } from 'react';
 
@@ -19,7 +23,10 @@ export const RoundRow = ({
                     <p className="text-sm text-gray-500 truncate dark:text-gray-400">
                         Round {roundNum} - Table {round.table}
                     </p>
-                    <p>{round.name}</p>
+                    <p>
+                        {removeCountryFromName(round.name)}{' '}
+                        {getCountryFlag(getCountryCode(round.name))}
+                    </p>
                 </div>
                 <p className={`${colorMap[round.result]} font-bold`}>
                     {round.result}

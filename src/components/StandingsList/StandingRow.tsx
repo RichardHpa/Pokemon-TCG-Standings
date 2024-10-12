@@ -1,5 +1,6 @@
 import { useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
+import clsx from 'clsx';
 
 import { Heading } from 'components/Heading';
 import { PinPlayer } from 'components/PinPlayer';
@@ -7,9 +8,9 @@ import { ArchetypeSprites } from 'components/ArchetypeSprites';
 import { RUNNING } from 'constants/tournament';
 
 import { getCountryFlag } from 'helpers/getCountryFlag';
-
 import { getCountryCode } from 'utils/getCountryCode';
 import { createPlayerUrl } from 'utils/createPlayerUrl';
+import { removeCountryFromName } from 'utils/removeCountryFromName';
 
 import type { Standing } from 'types/standing';
 import type { Division, Tournament } from 'types/tournament';
@@ -33,28 +34,49 @@ export const StandingRow: FC<StandingRowProps> = ({
     tournamentStatus,
 }) => {
     const navigate = useNavigate();
+    const hasData = player.rounds || player.record || player.resistances;
+    const hasRecord =
+        player.record &&
+        player.record.wins + player.record.losses + player.record.ties > 0;
 
-    const onRowClick = useCallback(
-        (player: string) => {
+    const handleViewDecklist = useCallback(
+        (playerName: string) => {
             navigate(
-                `/tournaments/${tournamentId}/${division}/${createPlayerUrl(player)}`
+                `/tournaments/${tournamentId}/${division}/${createPlayerUrl(playerName)}/decklist`
             );
         },
         [division, navigate, tournamentId]
     );
-
-    const handleViewDecklist = useCallback(
-        (player: string) => {
+    const onRowClick = useCallback(
+        (playerName: string) => {
+            if (!hasData && player.decklist) {
+                handleViewDecklist(playerName);
+                return;
+            }
+            if (!hasData) return;
             navigate(
-                `/tournaments/${tournamentId}/${division}/${createPlayerUrl(player)}/decklist`
+                `/tournaments/${tournamentId}/${division}/${createPlayerUrl(playerName)}`
             );
         },
-        [division, navigate, tournamentId]
+        [
+            division,
+            handleViewDecklist,
+            hasData,
+            navigate,
+            player.decklist,
+            tournamentId,
+        ]
     );
 
     return (
         <li
-            className="flex justify-between items-center pl-3 pr-6  text-gray-700 cursor-pointer  hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900 border-b border-gray-100 dark:border-gray-800 dark:text-gray-400"
+            className={clsx(
+                'flex justify-between items-center pl-3 pr-6  text-gray-700  border-b border-gray-100 dark:border-gray-800 dark:text-gray-400',
+                {
+                    'cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900':
+                        player.decklist || hasData,
+                }
+            )}
             style={style}
             onClick={() => onRowClick(player.name)}
         >
@@ -64,13 +86,16 @@ export const StandingRow: FC<StandingRowProps> = ({
                 </Heading>
 
                 <div className="flex-1 min-w-0 mx-2">
-                    <p className="text-sm text-gray-500 truncate dark:text-gray-400">
-                        {player.record.wins}-{player.record.losses}-
-                        {player.record.ties}
-                    </p>
+                    {hasRecord && (
+                        <p className="text-sm text-gray-500 truncate dark:text-gray-400">
+                            {player.record.wins}-{player.record.losses}-
+                            {player.record.ties}
+                        </p>
+                    )}
+
                     <div className="flex justify-between">
                         <p>
-                            {player.name}{' '}
+                            {removeCountryFromName(player.name)}{' '}
                             {getCountryFlag(getCountryCode(player.name))}
                         </p>
                     </div>
