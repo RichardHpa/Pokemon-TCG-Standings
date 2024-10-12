@@ -2,7 +2,7 @@ import InternationalsLogo from 'images/tcgIC.png';
 import RegionalLogo from 'images/tcgRegional.png';
 import CupLogo from 'images/tcgCup.png';
 import ChallengeLogo from 'images/tcgChallenge.png';
-import PlayPokemonLogo from 'images/playpokemon.png';
+import PlayPokemonLogo from 'images/playPokemon.png';
 
 import RegionalLogo2024 from 'images/tcgRegionals2024.png';
 
