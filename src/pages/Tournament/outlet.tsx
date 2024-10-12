@@ -53,7 +53,7 @@ export const TournamentOutlet = () => {
         <div className="flex flex-col gap-4 flex-grow">
             <div className="flex justify-between mb-4">
                 <div className="grid sm:grid-cols-[auto_auto] place-content-start gap-4">
-                    {tournaments[tournamentId] && (
+                    {tournaments[tournamentId]?.logo && (
                         <div className="hidden sm:block">
                             <img
                                 src={tournaments[tournamentId].logo}
@@ -113,6 +113,10 @@ export const TournamentOutlet = () => {
 
                 {tournament.tournamentStatus === RUNNING && <Indicator />}
             </div>
+
+            {tournaments[tournamentId]?.notes && (
+                <Notice>{tournaments[tournamentId].notes}</Notice>
+            )}
 
             {!showStandings.includes(tournament.tournamentStatus) ? (
                 <>

@@ -3,6 +3,10 @@ import { useGetSimilarPlayers } from 'hooks/useGetSimilarPlayers';
 import { ChevronUpIcon, ChevronDownIcon } from '@heroicons/react/24/solid';
 import clsx from 'clsx';
 
+import { getCountryFlag } from 'helpers/getCountryFlag';
+import { getCountryCode } from 'utils/getCountryCode';
+import { removeCountryFromName } from 'utils/removeCountryFromName';
+
 import type { Standing } from 'types/standing';
 import type { FC, ReactNode } from 'react';
 
@@ -71,7 +75,11 @@ const ResistancesListItem: FC<ResistancesListItemProps> = ({
                         </p>
                     </div>
                 </div>
-                <p>{player.name}</p>
+
+                <p>
+                    {removeCountryFromName(player.name)}{' '}
+                    {getCountryFlag(getCountryCode(player.name))}
+                </p>
             </div>
         </ListItem>
     );

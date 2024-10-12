@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom';
+import { useParams, Navigate } from 'react-router-dom';
 import { useMemo, useState, useCallback } from 'react';
 import clsx from 'clsx';
 
@@ -252,6 +252,20 @@ const PlayerInfo: FC<PlayerInfoProps> = ({
     }
 
     const player = players[0];
+
+    const hasData = player.rounds || player.record || player.resistances;
+
+    if (!hasData && player.decklist) {
+        return <Navigate replace to={`decklist`} />;
+    }
+    if (!hasData) {
+        return (
+            <Notice status="warning">
+                We don't have much information about this player yet. Please
+                check back later.
+            </Notice>
+        );
+    }
 
     return (
         <div className="flex flex-col gap-4">
