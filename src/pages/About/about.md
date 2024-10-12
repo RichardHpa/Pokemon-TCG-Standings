@@ -18,7 +18,7 @@ Some features I would like to add are:
 -   More detailed information about the players
 -   Follow specific decks
 
-If you did find the site useful, please let me know. Or even better help me fund it, which could help me add more features and better stability. The best way to do that is to follow the link below and Buy me a booster(via buy me a coffee).
+If you did find the site useful, please let me know. Or even better help me fund it, which could help me add more features and better stability. The best way to do that is to follow the link below and Buy me a booster (via buy me a coffee).
 
 <Coffee/>
 
