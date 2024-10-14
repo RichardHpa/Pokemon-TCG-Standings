@@ -27,6 +27,20 @@ export const getArchetypes = (decklist: DeckList) => {
         return foundArchetype;
     }
 
+    if (pokemonNames.includes('Snorlax')) {
+        foundArchetype.push({
+            pokemon: 'Snorlax',
+            image: pokemonList['snorlax'].image,
+        });
+        if (pokemonNames.includes('Rotom V')) {
+            foundArchetype.push({
+                pokemon: 'Rotom V',
+                image: pokemonList['rotom'].image,
+            });
+        }
+        return foundArchetype;
+    }
+
     if (
         pokemonNames.includes('Terapagos ex') &&
         pokemonNames.includes('Dusknoir')
@@ -61,6 +75,21 @@ export const getArchetypes = (decklist: DeckList) => {
         foundArchetype.push({
             pokemon: 'Noivern ex',
             image: pokemonList['noivern'].image,
+        });
+        return foundArchetype;
+    }
+
+    if (
+        pokemonNames.includes('Cornerstone Mask Ogerpon ex') &&
+        pokemonNames.includes('Mimikyu')
+    ) {
+        foundArchetype.push({
+            pokemon: 'Cornerstone Mask Ogerpon ex',
+            image: pokemonList['ogerpon'].forms?.['cornerstone-mask'].image,
+        });
+        foundArchetype.push({
+            pokemon: 'Mimikyu',
+            image: pokemonList['mimikyu'].image,
         });
         return foundArchetype;
     }
@@ -354,20 +383,6 @@ export const getArchetypes = (decklist: DeckList) => {
             pokemon: 'Iron Valiant ex',
             image: pokemonList['iron-valiant'].image,
         });
-        return foundArchetype;
-    }
-
-    if (pokemonNames.includes('Snorlax')) {
-        foundArchetype.push({
-            pokemon: 'Snorlax',
-            image: pokemonList['snorlax'].image,
-        });
-        if (pokemonNames.includes('Rotom V')) {
-            foundArchetype.push({
-                pokemon: 'Rotom V',
-                image: pokemonList['rotom'].image,
-            });
-        }
         return foundArchetype;
     }
 
