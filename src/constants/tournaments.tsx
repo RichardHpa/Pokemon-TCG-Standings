@@ -29,6 +29,14 @@ interface LocalTournamentsMap {
 }
 
 export const tournaments: LocalTournamentsMap = {
+    '0000134': {
+        name: 'Lille Pokémon TCG Regional Championship 2025',
+        logo: RegionalLogo2024,
+        streams: {
+            day1: 'https://www.youtube.com/live/LVKNtCr6ZOU?si=lUbzSx9WRKsazNeK',
+            day2: 'https://www.youtube.com/live/K185AJ27dWU?si=7fU_p7imqoLzwUEQ',
+        },
+    },
     '0000133': {
         logo: RegionalLogo2024,
         streams: {
@@ -61,10 +69,11 @@ export const tournaments: LocalTournamentsMap = {
         logo: RegionalLogo2024,
     },
     '0000130': {
+        name: 'Dortmund Pokémon TCG Regional Championship 2025',
         logo: RegionalLogo2024,
         streams: {
             day1: 'https://www.youtube.com/watch?v=eS6NkXesdcY',
-            day2: 'https://www.youtube.com/watch?v=8Q6k7Ov6Q2w',
+            day2: 'https://www.youtube.com/watch?v=VzoYFKfrsGk',
         },
     },
     '0000129': {
@@ -301,7 +310,7 @@ export const tournaments: LocalTournamentsMap = {
     '0000054': {
         logo: RegionalLogo,
     },
-    // Dont know why this is out of order
+    // Dont know why this is out of order - Peoria
     '0000053': {
         logo: RegionalLogo,
     },
