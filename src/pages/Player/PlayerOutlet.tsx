@@ -32,7 +32,7 @@ export const PlayerOutlet = () => {
         division,
         playerName,
     });
-    console.log(data);
+
     const handleViewDecklist = useCallback(() => {
         navigate('./decklist');
     }, [navigate]);

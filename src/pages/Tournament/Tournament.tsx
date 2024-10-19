@@ -38,7 +38,7 @@ const TournamentStandings = ({
 }: {
     tournament: TournamentType;
 }) => {
-    const { id: tournamentId } = tournament;
+    const { id: tournamentId, tournamentStatus } = tournament;
 
     const { data: standings = [], isLoading } = useGetDivision({
         tournamentId,
@@ -58,21 +58,9 @@ const TournamentStandings = ({
         );
     }
 
-    if (!standings) {
+    if (tournamentStatus === 'check-in' || tournamentStatus === 'not-started') {
         return (
             <Notice status="info">This tournament hasn't started yet</Notice>
-        );
-    }
-
-    if (
-        standings &&
-        standings[0].rounds &&
-        standings[0].rounds['1'].name === 'none'
-    ) {
-        return (
-            <Notice status="info">
-                Standings will be available once round 1 has started
-            </Notice>
         );
     }
 

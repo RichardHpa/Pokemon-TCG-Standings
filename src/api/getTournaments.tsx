@@ -22,8 +22,6 @@ export const getPokeDataTournaments = async (): Promise<Tournament[]> => {
             return data;
         });
 
-    console.log(response);
-
     const resolvedResponse = response || fixedTournaments.tcg.data;
 
     // the response comes in order from oldest to newest so we want to reverse it
