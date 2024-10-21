@@ -3548,7 +3548,7 @@
             },
             {
                 "id": "0000132",
-                "name": "2025 Lima TCG Special Event - Masters",
+                "name": "2025 Lima TCG Special Event",
                 "date": {
                     "start": "2024-10-04",
                     "end": "2024-10-05"
@@ -3560,9 +3560,9 @@
                     "masters": 329
                 },
                 "winners": {
-                    "juniors": null,
-                    "seniors": null,
-                    "masters": null
+                    "juniors": "Gaspar Elgueta [CL]",
+                    "seniors": "Pyettra Sasso [BR]",
+                    "masters": "Giovanny Sasso [BR]"
                 },
                 "tournamentStatus": "finished",
                 "roundNumbers": {
