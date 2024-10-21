@@ -1,4 +1,5 @@
 {
+    "dataLastUpdated": "10/21/2024, 1:00 PM",
     "tcg": {
         "type": "tcg",
         "data": [
@@ -3563,13 +3564,13 @@
                     "seniors": null,
                     "masters": null
                 },
-                "tournamentStatus": "not-started",
+                "tournamentStatus": "finished",
                 "roundNumbers": {
-                    "juniors": 7,
+                    "juniors": 9,
                     "seniors": 7,
                     "masters": 13
                 },
-                "lastUpdated": "2024-10-07 02:35:18.956393",
+                "lastUpdated": "2024-10-16 10:41:07.708751",
                 "rk9link": "LIM25"
             },
             {
@@ -3596,8 +3597,62 @@
                     "seniors": 14,
                     "masters": 15
                 },
-                "lastUpdated": "2024-10-14 04:31:41.307632",
+                "lastUpdated": "2024-10-15 09:19:45.243762",
                 "rk9link": "LO01mZ7ppP5mQLSyxdbT"
+            },
+            {
+                "id": "0000134",
+                "name": "Lille Pokémon TCG Regional Championship 2025",
+                "date": {
+                    "start": "2024-10-19",
+                    "end": "2024-10-20"
+                },
+                "decklists": 0,
+                "players": {
+                    "juniors": 135,
+                    "seniors": 145,
+                    "masters": 1311
+                },
+                "winners": {
+                    "juniors": "Franciszek R. [PL]",
+                    "seniors": "Luka L. [FR]",
+                    "masters": "James Cox [NL]"
+                },
+                "tournamentStatus": "finished",
+                "roundNumbers": {
+                    "juniors": 13,
+                    "seniors": 13,
+                    "masters": 16
+                },
+                "lastUpdated": "2024-10-21 01:53:03.831631",
+                "rk9link": "LI01majszra4hnrtxJST"
+            },
+            {
+                "id": "0000135",
+                "name": "Lille Pokémon TCG Cup",
+                "date": {
+                    "start": "2024-10-19",
+                    "end": "2024-10-20"
+                },
+                "decklists": 0,
+                "players": {
+                    "juniors": 22,
+                    "seniors": 33,
+                    "masters": 181
+                },
+                "winners": {
+                    "juniors": "Jake E. [UK]",
+                    "seniors": "Indy P. [UK]",
+                    "masters": "Rabah Zibouche [FR]"
+                },
+                "tournamentStatus": "finished",
+                "roundNumbers": {
+                    "juniors": 8,
+                    "seniors": 9,
+                    "masters": 11
+                },
+                "lastUpdated": "2024-10-21 01:57:56.682795",
+                "rk9link": "LI06JoxtL0iBZEBwKjLm"
             }
         ]
     }
