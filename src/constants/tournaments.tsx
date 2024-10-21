@@ -29,6 +29,10 @@ interface LocalTournamentsMap {
 }
 
 export const tournaments: LocalTournamentsMap = {
+    '0000135': {
+        name: 'Lille Pokémon TCG Cup',
+        logo: CupLogo,
+    },
     '0000134': {
         name: 'Lille Pokémon TCG Regional Championship 2025',
         logo: RegionalLogo2024,
