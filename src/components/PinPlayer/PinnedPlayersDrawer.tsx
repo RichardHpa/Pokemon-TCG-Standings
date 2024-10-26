@@ -224,19 +224,13 @@ export const PinnedPlayersDrawer = () => {
                         'translate-x-full': !isDrawerOpen,
                     }
                 )}
-                aria-labelledby="drawer-label"
             >
                 <div>
-                    <h5
-                        id="drawer-label"
-                        className="inline-flex items-center text-base font-semibold text-gray-500 dark:text-gray-400"
-                    >
+                    <h5 className="inline-flex items-center text-base font-semibold text-gray-500 dark:text-gray-400">
                         Pinned Players
                     </h5>
                     <button
                         type="button"
-                        data-drawer-hide="drawer-example"
-                        aria-controls="drawer-example"
                         className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 absolute top-2.5 end-2.5 inline-flex items-center justify-center dark:hover:bg-gray-600 dark:hover:text-white"
                         onClick={handleCloseDrawer}
                     >

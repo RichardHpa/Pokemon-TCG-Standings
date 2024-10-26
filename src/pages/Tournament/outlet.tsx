@@ -1,5 +1,5 @@
+import { Fragment } from 'react';
 import { Outlet, Link, useParams } from 'react-router-dom';
-import { fromZonedTime } from 'date-fns-tz';
 
 import { Heading } from 'components/Heading';
 import { Indicator } from 'components/Indicator';
@@ -12,7 +12,6 @@ import { tournaments } from 'constants/tournaments';
 
 import { useGetTournament } from 'queries/useGetTournament';
 
-import { formatDate } from 'helpers/formatDate';
 import { formatDateFromTimezone } from 'helpers/formatDateFromTimezone';
 
 const showStandings = [RUNNING, FINISHED];
@@ -95,7 +94,7 @@ export const TournamentOutlet = () => {
                                 {Object.entries(streams).map(
                                     ([day, url], index) => {
                                         return (
-                                            <>
+                                            <Fragment key={index}>
                                                 <a
                                                     key={`${tournamentId}-${day}`}
                                                     href={url}
@@ -111,7 +110,7 @@ export const TournamentOutlet = () => {
                                                         |
                                                     </span>
                                                 )}
-                                            </>
+                                            </Fragment>
                                         );
                                     }
                                 )}

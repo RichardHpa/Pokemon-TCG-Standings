@@ -37,19 +37,17 @@ async function enableMocking() {
     });
 }
 
-enableMocking().then(() => {
-    root.render(
-        <React.StrictMode>
-            <HelmetProvider>
-                <PinnedPlayersProvider>
-                    <ColorModeProvider>
-                        <App />
-                    </ColorModeProvider>
-                </PinnedPlayersProvider>
-            </HelmetProvider>
-        </React.StrictMode>
-    );
-});
+root.render(
+    <React.StrictMode>
+        <HelmetProvider>
+            <PinnedPlayersProvider>
+                <ColorModeProvider>
+                    <App />
+                </ColorModeProvider>
+            </PinnedPlayersProvider>
+        </HelmetProvider>
+    </React.StrictMode>
+);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

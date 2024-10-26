@@ -1,10 +1,13 @@
+import { useState, useCallback, useMemo } from 'react';
 import { useParams } from 'react-router-dom';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { useGetPlayerInfo } from 'hooks/useGetPlayer';
 
 import { setMap } from 'constants/sets';
 
 import { getCountryCode } from 'utils/getCountryCode';
 import { CardImage } from 'components/CardImage';
+import { Button } from 'components/Button';
 
 import type { Division } from 'types/tournament';
 import type { DeckList, PokemonCard } from 'types/standing';
@@ -53,14 +56,60 @@ const useGetDecklist = (deckList: DeckList) => {
         ...formattedTrainers,
         ...formattedEnergy,
     ];
-    return { list: deckList, formattedCards };
+
+    const listAsString = useMemo(() => {
+        let string = '';
+        const pokemonCount = formattedPokemon.reduce(
+            (acc, card) => acc + card.count,
+            0
+        );
+        const trainerCount = formattedTrainers.reduce(
+            (acc, card) => acc + card.count,
+            0
+        );
+        const energyCount = formattedEnergy.reduce(
+            (acc, card) => acc + card.count,
+            0
+        );
+        string += `Pokémon: ${pokemonCount}\n`;
+        formattedPokemon.map((card) => {
+            string += `${card.count} ${card.name} ${card.set} ${card.number}\n`;
+        });
+
+        string += `\nTrainers: ${trainerCount}\n`;
+        formattedTrainers.map((card) => {
+            string += `${card.count} ${card.name} ${card.set} ${card.number}\n`;
+        });
+
+        string += `\nEnergy: ${energyCount}\n`;
+        formattedEnergy.map((card) => {
+            string += `${card.count} ${card.name} ${card.set} ${card.number}\n`;
+        });
+        return string;
+    }, [formattedEnergy, formattedPokemon, formattedTrainers]);
+
+    return { list: deckList, formattedCards, listAsString };
 };
 
 const DecklistInner = ({ decklist }: { decklist: DeckList }) => {
-    const { formattedCards } = useGetDecklist(decklist);
+    const [copied, setCopied] = useState(false);
+    const { formattedCards, listAsString } = useGetDecklist(decklist);
+    console.log(formattedCards);
+
+    const handleOnCopy = useCallback(() => {
+        setCopied(true);
+        setTimeout(() => {
+            setCopied(false);
+        }, 2000);
+    }, []);
 
     return (
-        <div>
+        <div className="flex flex-col gap-4">
+            <div>
+                <CopyToClipboard text={listAsString} onCopy={handleOnCopy}>
+                    <Button>{copied ? 'Copied!' : 'Copy Decklist'}</Button>
+                </CopyToClipboard>
+            </div>
             <div className="grid gap-2 grid-cols-2 sm:grid-cols-4 md:grid-cols-8">
                 {formattedCards.map((card) => (
                     <div key={card.name} className="relative">
