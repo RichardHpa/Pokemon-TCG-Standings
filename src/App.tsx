@@ -26,12 +26,15 @@ const queryClient = new QueryClient({
     defaultOptions: {
         queries: {
             // 15 minutes stale time
-            staleTime: 1000 * 60 * 15,
+            // staleTime: 1000 * 60 * 15,
+            // 2 min stale time
+            staleTime: 1000 * 60 * 2,
         },
     },
 });
 
 const Layout = () => {
+    console.log(import.meta.env.MODE);
     const { sendPageView } = useAnalytics();
 
     useEffect(() => {
