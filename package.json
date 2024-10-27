@@ -35,6 +35,7 @@
         "start": "vite",
         "build": "vite build",
         "test": "vitest",
+        "build:staging": "vite build --mode staging",
         "storybook": "storybook dev -p 6006",
         "build-storybook": "storybook build",
         "dev": "vite",
