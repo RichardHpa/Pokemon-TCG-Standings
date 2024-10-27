@@ -35,7 +35,6 @@ const queryClient = new QueryClient({
 });
 
 const Layout = () => {
-    console.log(import.meta.env.MODE);
     const { sendPageView } = useAnalytics();
 
     useEffect(() => {
