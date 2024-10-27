@@ -25,10 +25,11 @@ import { FetchingProvider } from 'context/FetchingContext';
 const queryClient = new QueryClient({
     defaultOptions: {
         queries: {
-            // 15 minutes stale time
-            // staleTime: 1000 * 60 * 15,
-            // 2 min stale time
-            staleTime: 1000 * 60 * 2,
+            // 2 min stale time for non production -- means it will be 2 min in staging
+            staleTime:
+                import.meta.env.MODE === 'production'
+                    ? 1000 * 60 * 15
+                    : 1000 * 60 * 2,
         },
     },
 });
