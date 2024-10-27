@@ -1,6 +1,6 @@
 /* POKEBALL ANIMATIONS */
 /* shake to rotate g.gravity */
-svg.fetching g.gravity {
+svg.animate g.gravity {
     /* ! infinite given the unknown time it takes for the request to be resolved/rejected */
     animation: shake 0.75s infinite cubic-bezier(0.645, 0.045, 0.355, 1);
 }
@@ -16,8 +16,12 @@ svg.fetching g.gravity {
     }
 }
 
+svg.caught g.inner {
+    opacity: 1;
+}
+
 /* pulse to change the color of the innermost circle */
-svg.fetching g.inner {
+svg.animate g.inner {
     /* ! infinite given the unknown time it takes for the request to be resolved/rejected */
     animation: pulse 0.75s infinite cubic-bezier(0.645, 0.045, 0.355, 1);
 }
