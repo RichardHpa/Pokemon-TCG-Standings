@@ -15,9 +15,9 @@ import { removeCountryFromName } from 'utils/removeCountryFromName';
 import { getCountryCode } from 'utils/getCountryCode';
 import { createPlayerUrl } from 'utils/createPlayerUrl';
 
-import { useGetPlayerInfo } from 'hooks/useGetPlayer';
+import { useGetTournament } from 'queries/useGetTournament';
 
-import type { Division } from 'types/tournament';
+import type { Division, TournamentApiResponse } from 'types/tournament';
 
 export const PlayerOutlet = () => {
     const navigate = useNavigate();
@@ -27,10 +27,28 @@ export const PlayerOutlet = () => {
         division: Division;
     };
 
-    const { data, isLoading, isError } = useGetPlayerInfo({
+    const { data, isLoading, isError } = useGetTournament({
         tournamentId,
-        division,
-        playerName,
+        select: useCallback(
+            (data: TournamentApiResponse) => {
+                const divisions = data.tournament_data;
+                const divisionToReturn = divisions.find(
+                    (returnedDivision) => returnedDivision.division === division
+                )!;
+
+                const name = createPlayerName(playerName);
+
+                const players = divisionToReturn.data.filter(
+                    (player) => player.name === name
+                );
+                if (players.length === 0) {
+                    throw new Error('Player not found');
+                }
+
+                return { players, standings: divisionToReturn.data };
+            },
+            [division, playerName]
+        ),
     });
 
     const handleViewDecklist = useCallback(() => {

@@ -8,17 +8,7 @@ import { FINISHED, RUNNING, NOT_STARTED, CHECK_IN } from 'constants/tournament';
 export const useGetTournamentByStatus = () => {
     return useQuery({
         queryKey: getGetTournamentsKey(),
-        queryFn: async () => {
-            const tournaments = await getPokeDataTournaments();
-            if (!tournaments) {
-                throw new Response('', {
-                    status: 404,
-                    statusText: `No tournaments found`,
-                });
-            }
-
-            return tournaments;
-        },
+        queryFn: getPokeDataTournaments,
         select: (data) => {
             const runningTournaments = data?.filter(
                 (tournament) => tournament.tournamentStatus === RUNNING

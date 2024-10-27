@@ -13,11 +13,10 @@ import { Notice } from 'components/Notice';
 import { calculatePoints } from 'utils/calculatePoints';
 import { createPlayerName } from 'utils/createPlayerName';
 
-import { useGetDivision } from 'hooks/useGetDivision';
-import { useGetPlayerInfo } from 'hooks/useGetPlayer';
+import { useGetTournament } from 'queries/useGetTournament';
 
 import type { FC } from 'react';
-import type { Division } from 'types/tournament';
+import type { Division, TournamentApiResponse } from 'types/tournament';
 import type { Standing } from 'types/standing';
 
 interface PlayerInfoProps {
@@ -215,10 +214,28 @@ const PlayerInfo: FC<PlayerInfoProps> = ({
     playerName,
     division,
 }) => {
-    const { data, isLoading, isError } = useGetPlayerInfo({
+    const { data, isLoading, isError } = useGetTournament({
         tournamentId,
-        division,
-        playerName,
+        select: useCallback(
+            (data: TournamentApiResponse) => {
+                const divisions = data.tournament_data;
+                const divisionToReturn = divisions.find(
+                    (returnedDivision) => returnedDivision.division === division
+                )!;
+
+                const name = createPlayerName(playerName);
+
+                const players = divisionToReturn.data.filter(
+                    (player) => player.name === name
+                );
+                if (players.length === 0) {
+                    throw new Error('Player not found');
+                }
+
+                return { players, standings: divisionToReturn.data };
+            },
+            [division, playerName]
+        ),
     });
 
     if (isLoading) {
@@ -288,9 +305,14 @@ export const Player = () => {
         division: Division;
     };
 
-    const { data, isLoading, isError } = useGetDivision({
+    const { data, isLoading, isError } = useGetTournament({
         tournamentId,
-        division,
+        select: (data) => {
+            const divisionData = data.tournament_data.find(
+                (x) => x.division === division
+            );
+            return divisionData?.data || [];
+        },
     });
 
     if (isLoading) {

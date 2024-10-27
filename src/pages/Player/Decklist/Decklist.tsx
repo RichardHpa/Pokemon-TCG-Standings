@@ -1,15 +1,16 @@
 import { useState, useCallback, useMemo } from 'react';
 import { useParams } from 'react-router-dom';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
-import { useGetPlayerInfo } from 'hooks/useGetPlayer';
 
 import { setMap } from 'constants/sets';
-
+import { createPlayerName } from 'utils/createPlayerName';
 import { getCountryCode } from 'utils/getCountryCode';
 import { CardImage } from 'components/CardImage';
 import { Button } from 'components/Button';
 
-import type { Division } from 'types/tournament';
+import { useGetTournament } from 'queries/useGetTournament';
+
+import type { Division, TournamentApiResponse } from 'types/tournament';
 import type { DeckList, PokemonCard } from 'types/standing';
 
 const getImageUrl = (card: PokemonCard) => {
@@ -94,7 +95,6 @@ const useGetDecklist = (deckList: DeckList) => {
 const DecklistInner = ({ decklist }: { decklist: DeckList }) => {
     const [copied, setCopied] = useState(false);
     const { formattedCards, listAsString } = useGetDecklist(decklist);
-    console.log(formattedCards);
 
     const handleOnCopy = useCallback(() => {
         setCopied(true);
@@ -134,11 +134,30 @@ export const Decklist = () => {
         division: Division;
     };
 
-    const { data, isLoading } = useGetPlayerInfo({
+    const { data, isLoading } = useGetTournament({
         tournamentId,
-        playerName,
-        division,
+        select: useCallback(
+            (data: TournamentApiResponse) => {
+                const divisions = data.tournament_data;
+                const divisionToReturn = divisions.find(
+                    (returnedDivision) => returnedDivision.division === division
+                )!;
+
+                const name = createPlayerName(playerName);
+
+                const players = divisionToReturn.data.filter(
+                    (player) => player.name === name
+                );
+                if (players.length === 0) {
+                    throw new Error('Player not found');
+                }
+
+                return { players };
+            },
+            [division, playerName]
+        ),
     });
+
     if (isLoading) {
         return <p>Loading...</p>;
     }

@@ -4,16 +4,16 @@ import { FixedSizeList } from 'react-window';
 
 import { StandingRow } from 'components/StandingsList/StandingRow';
 
-import { useGetDivision } from 'hooks/useGetDivision';
+import { useGetTournament } from 'queries/useGetTournament';
 
 import type { ListChildComponentProps } from 'react-window';
 import type { Standing } from 'types/standing';
 
 const innerElementType = forwardRef(
     ({ ...rest }: ListChildComponentProps, ref) => {
-        // @ts-expect-error - ref is not a valid prop
         return (
             <ul
+                // @ts-expect-error -- TODO: Fix this
                 ref={ref}
                 {...rest}
                 className="divide-y divide-gray-200 dark:divide-gray-700"
@@ -64,9 +64,14 @@ const Table = ({
 };
 
 export const Test = () => {
-    const { data, isLoading, isError } = useGetDivision({
+    const { data, isLoading, isError } = useGetTournament({
         tournamentId: '0000127',
-        division: 'masters',
+        select: (data) => {
+            const mastersDivision = data.tournament_data.find(
+                (division) => division.division === 'masters'
+            );
+            return mastersDivision?.data || [];
+        },
     });
 
     const containerRef = useRef(null);

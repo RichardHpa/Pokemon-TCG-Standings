@@ -1,1 +1,0 @@
-export { useGetDivision } from './useGetDivision';

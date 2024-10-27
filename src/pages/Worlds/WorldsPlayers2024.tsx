@@ -1,4 +1,4 @@
-import { useMemo, useState, useEffect } from 'react';
+import { useMemo, useState, useEffect, useCallback } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import {
     ArrowRightIcon,
@@ -30,13 +30,14 @@ import { CountryList } from './components/CountryList';
 import { uppercaseFirstLetter } from 'utils/uppercaseFirstLetter';
 import { removeCountryFromName } from 'utils/removeCountryFromName';
 
-import { useGetPlayersByCountry } from 'hooks/useGetPlayersByCountry';
+import { useGetTournament } from 'queries/useGetTournament';
 
-import type { Division } from 'types/tournament';
+import type { Division, TournamentApiResponse } from 'types/tournament';
 import type { TCountryCode } from 'countries-list';
 import type { Standing } from 'types/standing';
 
 export const fixedTournamentId = '0000128';
+const divisionOrder = ['Masters', 'Seniors', 'Juniors'];
 
 const PlayerInfo = ({
     player,
@@ -122,9 +123,38 @@ export const WorldsPlayers2024 = () => {
         setCurrentTab(0);
     }, [country]);
 
-    const { data, isLoading } = useGetPlayersByCountry({
+    const { data, isPending } = useGetTournament({
         tournamentId: fixedTournamentId,
-        country: country.toUpperCase(),
+        select: useCallback(
+            (data: TournamentApiResponse) => {
+                const divisions = data.tournament_data;
+                divisions.forEach((division) => {
+                    division.data = division.data.filter((player) =>
+                        player.name.includes(`[${country.toUpperCase()}]`)
+                    );
+                });
+
+                const orderedData = divisions.sort(
+                    (a, b) =>
+                        divisionOrder.indexOf(a.division) -
+                        divisionOrder.indexOf(b.division)
+                );
+
+                // remove if array is 0
+                orderedData.forEach((division) => {
+                    if (division.data.length === 0) {
+                        const index = orderedData.indexOf(division);
+                        orderedData.splice(index, 1);
+                    }
+                });
+
+                return {
+                    tournament: data.tournament,
+                    divisions: orderedData,
+                };
+            },
+            [country]
+        ),
     });
 
     const countryData = useMemo(() => {
@@ -135,7 +165,7 @@ export const WorldsPlayers2024 = () => {
         <div className="flex flex-col gap-4">
             <SEO title={`Worlds 2024 ${country} players`} />
 
-            {isLoading && (
+            {isPending && (
                 <div className="flex flex-col justify-center items-center">
                     <LoadingPokeball
                         size="100"
@@ -145,7 +175,7 @@ export const WorldsPlayers2024 = () => {
                 </div>
             )}
 
-            {!isLoading && data && (
+            {!isPending && data && (
                 <div className="flex flex-col gap-8">
                     <div className="flex flex-col gap-8">
                         <div className="text-center">

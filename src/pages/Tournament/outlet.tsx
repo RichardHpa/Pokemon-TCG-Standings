@@ -26,7 +26,10 @@ export const TournamentOutlet = () => {
         data: tournament,
         isLoading,
         isError,
-    } = useGetTournament(tournamentId);
+    } = useGetTournament({
+        tournamentId,
+        select: (data) => data.tournament,
+    });
 
     if (isLoading) {
         return (
