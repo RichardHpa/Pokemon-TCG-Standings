@@ -85,6 +85,7 @@ const tournamentsQueryOptions = ({
 
 export const useGetPinnedPlayers = (pinnedPlayers: PinnedPlayers) => {
     const tournamentIds = Object.keys(pinnedPlayers);
+
     return useQueries({
         queries:
             tournamentIds?.map((tournamentId) =>
