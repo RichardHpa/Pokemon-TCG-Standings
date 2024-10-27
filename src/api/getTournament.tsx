@@ -1,19 +1,22 @@
 import axios from 'utils/axios';
 import { baseLocalApi } from 'constants/api';
 
-import type { TournamentsApiResponse } from 'types/tournament';
+import { tournaments } from 'constants/tournaments';
+
+import type { TournamentApiResponse } from 'types/tournament';
 
 // chains 3 places where the data could be, locally, custom api, or pokedata api
 export const getPokeDataTournament = async (
     tournamentId: string
-): Promise<TournamentsApiResponse> => {
-    const checkLocalFile = await axios
-        .get(`/localData/tournaments/${tournamentId}.json`)
-        .then((res) => res.data)
-        .catch(() => null);
-
-    if (checkLocalFile) {
-        return checkLocalFile;
+): Promise<TournamentApiResponse> => {
+    const tournament = tournaments[tournamentId];
+    if (tournament && tournament.hasLocalData === true) {
+        const localData = await import(
+            `../data/tournaments/${tournamentId}.json`
+        ).then((data) => {
+            return data.default;
+        });
+        return localData;
     }
 
     const checkCustomApi = await axios

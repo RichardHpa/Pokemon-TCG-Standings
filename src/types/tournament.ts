@@ -19,7 +19,7 @@ export interface Tournament {
         end: string;
     };
     decklists: number;
-    players: DivisionMap<number>;
+    players: DivisionMap<number | string>;
     winners: DivisionMap<string | null>;
     tournamentStatus: TournamentStatus;
     roundNumbers: DivisionMap<number | null>;
@@ -28,6 +28,13 @@ export interface Tournament {
 }
 
 export interface TournamentsApiResponse {
+    tcg: {
+        type: 'tcg';
+        data: Tournament[];
+    };
+}
+
+export interface TournamentApiResponse {
     type: 'tcg';
     tournament: Tournament;
     tournament_data: {

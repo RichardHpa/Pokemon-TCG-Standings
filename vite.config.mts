@@ -111,7 +111,7 @@ function devServerPlugin(): Plugin {
             return {
                 server: {
                     host: HOST || '0.0.0.0',
-                    port: parseInt(PORT || '3000', 10),
+                    port: parseInt(PORT || '3001', 10),
                     open: true,
                     ...(https &&
                         SSL_CRT_FILE &&

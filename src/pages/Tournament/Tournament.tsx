@@ -1,8 +1,7 @@
+import { useCallback } from 'react';
 import { useParams } from 'react-router-dom';
 
 import { useGetTournament } from 'queries/useGetTournament';
-
-import { useGetDivision } from 'hooks/useGetDivision';
 
 import { LoadingPokeball } from 'components/LoadingPokeball';
 import { StandingsCard } from 'components/StandingsCard';
@@ -13,7 +12,10 @@ import { Card } from 'components/Card';
 
 import { useFuse } from 'hooks/useFuse';
 
-import type { Tournament as TournamentType } from 'types/tournament';
+import type {
+    Tournament as TournamentType,
+    TournamentApiResponse,
+} from 'types/tournament';
 
 const fuseOptions = {
     isCaseSensitive: false,
@@ -37,19 +39,26 @@ const TournamentStandings = ({
 }: {
     tournament: TournamentType;
 }) => {
-    const { id: tournamentId } = tournament;
+    const { id: tournamentId, tournamentStatus } = tournament;
 
-    const { data: standings = [], isLoading } = useGetDivision({
+    const { data: standings = [], isPending } = useGetTournament({
         tournamentId,
-        division: 'masters',
+        select: useCallback((data: TournamentApiResponse) => {
+            const divisions = data.tournament_data;
+            const mastersDivision = divisions.find(
+                (foundDivision) => foundDivision.division === 'masters'
+            );
+            return mastersDivision?.data || [];
+        }, []),
     });
 
+    // @ts-expect-error -- TODO: Fix this
     const { query, onSearch, searching, hits } = useFuse(
         standings,
         fuseOptions
     );
 
-    if (isLoading) {
+    if (isPending) {
         return (
             <div className="flex flex-col justify-center items-center">
                 <LoadingPokeball size="100" alt="Loading standings...</p>" />
@@ -57,21 +66,9 @@ const TournamentStandings = ({
         );
     }
 
-    if (!standings) {
+    if (tournamentStatus === 'check-in' || tournamentStatus === 'not-started') {
         return (
             <Notice status="info">This tournament hasn't started yet</Notice>
-        );
-    }
-
-    if (
-        standings &&
-        standings[0].rounds &&
-        standings[0].rounds['1'].name === 'none'
-    ) {
-        return (
-            <Notice status="info">
-                Standings will be available once round 1 has started
-            </Notice>
         );
     }
 
@@ -126,7 +123,11 @@ const TournamentStandings = ({
 
 export const Tournament = () => {
     const { tournamentId } = useParams() as { tournamentId: string };
-    const { data, isLoading } = useGetTournament(tournamentId);
+
+    const { data, isLoading } = useGetTournament({
+        tournamentId: tournamentId,
+        select: (data) => data.tournament,
+    });
 
     if (isLoading) {
         return (

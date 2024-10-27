@@ -1,12 +1,16 @@
+import { useState, useCallback, useMemo } from 'react';
 import { useParams } from 'react-router-dom';
-import { useGetPlayerInfo } from 'hooks/useGetPlayer';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 import { setMap } from 'constants/sets';
-
+import { createPlayerName } from 'utils/createPlayerName';
 import { getCountryCode } from 'utils/getCountryCode';
 import { CardImage } from 'components/CardImage';
+import { Button } from 'components/Button';
 
-import type { Division } from 'types/tournament';
+import { useGetTournament } from 'queries/useGetTournament';
+
+import type { Division, TournamentApiResponse } from 'types/tournament';
 import type { DeckList, PokemonCard } from 'types/standing';
 
 const getImageUrl = (card: PokemonCard) => {
@@ -53,14 +57,59 @@ const useGetDecklist = (deckList: DeckList) => {
         ...formattedTrainers,
         ...formattedEnergy,
     ];
-    return { list: deckList, formattedCards };
+
+    const listAsString = useMemo(() => {
+        let string = '';
+        const pokemonCount = formattedPokemon.reduce(
+            (acc, card) => acc + card.count,
+            0
+        );
+        const trainerCount = formattedTrainers.reduce(
+            (acc, card) => acc + card.count,
+            0
+        );
+        const energyCount = formattedEnergy.reduce(
+            (acc, card) => acc + card.count,
+            0
+        );
+        string += `Pokémon: ${pokemonCount}\n`;
+        formattedPokemon.map((card) => {
+            string += `${card.count} ${card.name} ${card.set} ${card.number}\n`;
+        });
+
+        string += `\nTrainers: ${trainerCount}\n`;
+        formattedTrainers.map((card) => {
+            string += `${card.count} ${card.name} ${card.set} ${card.number}\n`;
+        });
+
+        string += `\nEnergy: ${energyCount}\n`;
+        formattedEnergy.map((card) => {
+            string += `${card.count} ${card.name} ${card.set} ${card.number}\n`;
+        });
+        return string;
+    }, [formattedEnergy, formattedPokemon, formattedTrainers]);
+
+    return { list: deckList, formattedCards, listAsString };
 };
 
 const DecklistInner = ({ decklist }: { decklist: DeckList }) => {
-    const { formattedCards } = useGetDecklist(decklist);
+    const [copied, setCopied] = useState(false);
+    const { formattedCards, listAsString } = useGetDecklist(decklist);
+
+    const handleOnCopy = useCallback(() => {
+        setCopied(true);
+        setTimeout(() => {
+            setCopied(false);
+        }, 2000);
+    }, []);
 
     return (
-        <div>
+        <div className="flex flex-col gap-4">
+            <div>
+                <CopyToClipboard text={listAsString} onCopy={handleOnCopy}>
+                    <Button>{copied ? 'Copied!' : 'Copy Decklist'}</Button>
+                </CopyToClipboard>
+            </div>
             <div className="grid gap-2 grid-cols-2 sm:grid-cols-4 md:grid-cols-8">
                 {formattedCards.map((card) => (
                     <div key={card.name} className="relative">
@@ -85,11 +134,30 @@ export const Decklist = () => {
         division: Division;
     };
 
-    const { data, isLoading } = useGetPlayerInfo({
+    const { data, isLoading } = useGetTournament({
         tournamentId,
-        playerName,
-        division,
+        select: useCallback(
+            (data: TournamentApiResponse) => {
+                const divisions = data.tournament_data;
+                const divisionToReturn = divisions.find(
+                    (returnedDivision) => returnedDivision.division === division
+                )!;
+
+                const name = createPlayerName(playerName);
+
+                const players = divisionToReturn.data.filter(
+                    (player) => player.name === name
+                );
+                if (players.length === 0) {
+                    throw new Error('Player not found');
+                }
+
+                return { players };
+            },
+            [division, playerName]
+        ),
     });
+
     if (isLoading) {
         return <p>Loading...</p>;
     }

@@ -34,7 +34,10 @@ export const StandingsCard: FC<StandingsCardProps> = ({
     const listRef = useRef<FixedSizeList>(null);
     const [initialDelay, setInitialDelay] = useState(false);
 
-    const { data: tournament } = useGetTournament(tournamentId);
+    const { data: tournament } = useGetTournament({
+        tournamentId,
+        select: (data) => data.tournament,
+    });
 
     useEffect(() => {
         // this is to demonstrate a case where the rendering

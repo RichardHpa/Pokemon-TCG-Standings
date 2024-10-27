@@ -7,7 +7,7 @@ import { LoadingPokeball } from 'components/LoadingPokeball';
 
 import { useFuse } from 'hooks/useFuse';
 
-import { useGetDivision } from 'hooks/useGetDivision';
+import { useGetTournament } from 'queries/useGetTournament';
 
 import type { Division as DivisionType } from 'types/tournament';
 
@@ -26,11 +26,17 @@ export const Division = () => {
         tournamentId: string;
     };
 
-    const { data: standings = [], isLoading } = useGetDivision({
+    const { data: standings = [], isLoading } = useGetTournament({
         tournamentId,
-        division,
+        select: (data) => {
+            const divisionData = data.tournament_data.find(
+                (x) => x.division === division
+            );
+            return divisionData?.data || [];
+        },
     });
 
+    // @ts-expect-error -- TODO: Fix this
     const { query, onSearch, searching, hits, reset, rawQuery } = useFuse(
         standings,
         fuseOptions

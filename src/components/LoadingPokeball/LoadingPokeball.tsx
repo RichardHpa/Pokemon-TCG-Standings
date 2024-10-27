@@ -8,25 +8,29 @@ interface LoadingPokeBallProps {
     opened?: boolean;
     alt: string;
     showAlt?: boolean;
+    animate?: boolean;
+    caught?: boolean;
 }
 
 export const LoadingPokeball = ({
     size = 50,
-    loading = true,
+    // loading = true,
     opened = false,
     alt = 'Loading...',
     showAlt = false,
+    animate = true,
+    caught = false,
 }: LoadingPokeBallProps) => {
-    const ballState = useMemo(() => {
-        if (opened) {
-            return 'opened';
-        }
-        if (loading) {
-            return 'fetching';
-        }
+    // const ballState = useMemo(() => {
+    //     if (opened) {
+    //         return 'opened';
+    //     }
+    //     if (loading) {
+    //         return 'fetching';
+    //     }
 
-        return 'opened';
-    }, [loading, opened]);
+    //     return 'opened';
+    // }, [loading, opened]);
 
     return (
         <>
@@ -34,9 +38,14 @@ export const LoadingPokeball = ({
                 viewBox="0 0 100 100"
                 width={size}
                 height={size}
-                className={clsx(ballState)}
+                className={clsx(
+                    // ballState,
+                    animate && 'animate',
+                    opened && 'opened',
+                    caught && 'caught'
+                )}
                 role="progress"
-                aria-label={ballState}
+                // aria-label={ballState}
             >
                 <g transform="translate(50 50) scale(0.8)">
                     <g transform="translate(0 50)">

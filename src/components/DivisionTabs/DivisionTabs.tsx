@@ -8,16 +8,18 @@ import type { Division, DivisionMap } from 'types/tournament';
 
 interface DivisionTabsProps {
     tournamentId: string;
-    divisionsObject: DivisionMap<number>;
+    divisionsObject: DivisionMap<number | string>;
 }
 
-const getSortedDivisions = (divisions: DivisionMap<number>): Division[] => {
+const getSortedDivisions = (
+    divisions: DivisionMap<number | string>
+): Division[] => {
     // Define the sort order
     const sortOrder = ['masters', 'seniors', 'juniors', 'juniorsseniors'];
 
     // Filter out divisions with a value of 0 and keep only the non-zero divisions
     const filteredDivisions = Object.entries(divisions)
-        .filter(([_key, value]) => value > 0)
+        .filter(([_key, value]) => value !== 0 && value !== '0')
         .map(([key]) => key) as Division[];
 
     // Sort the filtered divisions based on the predefined order

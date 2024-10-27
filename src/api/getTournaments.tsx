@@ -1,11 +1,14 @@
 import axios from 'utils/axios';
 
 import { baseLocalApi, tournamentsUrl } from 'constants/api';
-import { staticTournaments } from 'mocks/tempData/tournaments';
 
-import type { Tournament } from 'types/tournament';
+import tournamentJSON from 'mocks/tempData/tournaments.json';
+
+import type { Tournament, TournamentsApiResponse } from 'types/tournament';
 
 export const getPokeDataTournaments = async (): Promise<Tournament[]> => {
+    const fixedTournaments = tournamentJSON as TournamentsApiResponse;
+
     const response = await axios
         .get(`${baseLocalApi}/tournaments`)
         .then((customApiDataRes) => {
@@ -15,15 +18,14 @@ export const getPokeDataTournaments = async (): Promise<Tournament[]> => {
         .catch(async () => {
             const res = await axios.get(tournamentsUrl);
             const data = res.data.tcg.data;
+            if (!data) return null;
             return data;
         });
 
-    if (!response) {
-        return staticTournaments.tcg.data.reverse();
-    }
+    const resolvedResponse = response || fixedTournaments.tcg.data;
 
     // the response comes in order from oldest to newest so we want to reverse it
-    const reversed = response.reverse();
+    const reversed = resolvedResponse.reverse();
 
     // there is an issue with the data where the 2025 Lima TCG Special Event where the data is incorrect, I have hardcoded some data for it but we need to tell it to be finished if its in the list
     const limaSpecialEvent = reversed.findIndex(
