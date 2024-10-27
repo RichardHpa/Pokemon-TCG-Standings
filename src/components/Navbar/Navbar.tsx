@@ -5,6 +5,8 @@ import { Button } from 'components/Button';
 
 import { useResponsive } from 'hooks/useResponsive';
 
+import { LoadingPokeball } from 'components/LoadingPokeball';
+
 import { NavLink } from 'components/NavLink';
 
 import { BuyMeACoffeeWidget } from 'components/BuyMeACoffeeWidget';
@@ -31,10 +33,17 @@ export const Navbar = () => {
                     to="/"
                     className="flex items-center space-x-3 rtl:space-x-reverse hover:underline"
                 >
-                    <img
+                    {/* <img
                         src="/logo192.png"
                         className="h-10"
                         alt="ptcg standings"
+                    /> */}
+                    <LoadingPokeball
+                        animate={false}
+                        opened={false}
+                        size={40}
+                        alt="PTCG Standings"
+                        caught={false}
                     />
                     <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
                         PTCG Standings

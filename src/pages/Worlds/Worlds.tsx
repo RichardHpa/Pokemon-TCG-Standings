@@ -1,7 +1,6 @@
 import { useState, useCallback } from 'react';
-import { useGetTournament } from 'queries/useGetTournament';
 
-import { useGetDivision } from 'hooks/useGetDivision';
+import { useGetTournament } from 'queries/useGetTournament';
 
 import { LoadingPokeball } from 'components/LoadingPokeball';
 import { Tabs, Tab } from 'components/Tabs';
@@ -14,16 +13,26 @@ import { RUNNING, FINISHED } from 'constants/tournament';
 import { fixedTournamentId } from './WorldsPlayers2024';
 
 import type { Division } from 'types/tournament';
+import type { TournamentApiResponse } from 'types/tournament';
 
 const showStandings = [RUNNING, FINISHED];
 
 const WorldsStandings = ({ division }: { division: Division }) => {
-    const { data: standings, isLoading } = useGetDivision({
+    const { data: standings, isPending } = useGetTournament({
         tournamentId: fixedTournamentId,
-        division,
+        select: useCallback(
+            (data: TournamentApiResponse) => {
+                const divisions = data.tournament_data;
+                const findDivision = divisions.find(
+                    (x) => x.division === division
+                );
+                return findDivision?.data || [];
+            },
+            [division]
+        ),
     });
 
-    if (isLoading) {
+    if (isPending) {
         return (
             <div className="flex flex-col justify-center items-center">
                 <LoadingPokeball
@@ -58,7 +67,10 @@ const WorldsStandings = ({ division }: { division: Division }) => {
 
 export const Worlds = () => {
     const [division, setDivision] = useState<Division>('masters');
-    const { data: tournament, isLoading } = useGetTournament(fixedTournamentId);
+    const { data: tournament, isPending } = useGetTournament({
+        tournamentId: fixedTournamentId,
+        select: (data) => data.tournament,
+    });
 
     const changeDivision = useCallback((newDivision: Division) => {
         setDivision(newDivision);
@@ -71,7 +83,7 @@ export const Worlds = () => {
                 the 2024 Pokemon World Champions.
             </p>
 
-            {isLoading ? (
+            {isPending ? (
                 <div className="flex flex-col justify-center items-center">
                     <LoadingPokeball
                         size="100"

@@ -6,7 +6,7 @@ import { LoadingPokeball } from 'components/LoadingPokeball';
 import { useGetTournamentByStatus } from 'hooks/useGetTournamentByStatus';
 
 export const Tournaments = () => {
-    const { data, isError, isLoading } = useGetTournamentByStatus();
+    const { data, isError, isPending } = useGetTournamentByStatus();
 
     return (
         <div className="flex flex-col gap-4">
@@ -14,7 +14,7 @@ export const Tournaments = () => {
             <Heading level="3">Latest Pokemon TCG Tournaments</Heading>
 
             {isError && <p>Error loading the tournaments</p>}
-            {isLoading && (
+            {isPending && (
                 <div className="flex flex-col justify-center items-center">
                     <LoadingPokeball
                         size="100"

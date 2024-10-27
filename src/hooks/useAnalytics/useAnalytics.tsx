@@ -8,14 +8,14 @@ export const useAnalytics = () => {
     const location = useLocation();
 
     useEffect(() => {
-        if (process.env.NODE_ENV !== 'development' && TRACKING_ID) {
+        if (import.meta.env.MODE === 'production' && TRACKING_ID) {
             console.log('initialize ga');
             ReactGA.initialize(TRACKING_ID);
         }
     }, []);
 
     const sendPageView = () => {
-        if (process.env.NODE_ENV !== 'development') {
+        if (import.meta.env.MODE === 'production') {
             ReactGA.send({ hitType: 'pageview', page: location.pathname });
         }
     };

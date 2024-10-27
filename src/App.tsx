@@ -9,21 +9,14 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { ErrorBoundary } from 'react-error-boundary';
 import { Navbar } from 'components/Navbar';
+import { LoadingPokeball } from 'components/LoadingPokeball';
+import { Heading } from 'components/Heading';
 
-import { About } from 'pages/About';
 import { Home } from 'pages/Home';
-import { Tournaments } from 'pages/Tournaments';
-import { Tournament, TournamentOutlet } from 'pages/Tournament';
-import { Player, Decklist, PlayerOutlet } from 'pages/Player';
-import { Division } from 'pages/Tournament/Division';
-import {
-    WorldsPlayers2024,
-    worldsLoader,
-    WorldsOutlet,
-    Worlds,
-} from 'pages/Worlds';
 
-import { Images } from 'pages/images/Images';
+import { TournamentOutlet } from 'pages/Tournament';
+import { PlayerOutlet } from 'pages/Player';
+import { worldsLoader, WorldsOutlet } from 'pages/Worlds';
 
 import { DefaultError } from 'errors/DefaultError';
 
@@ -34,8 +27,11 @@ import { FetchingProvider } from 'context/FetchingContext';
 const queryClient = new QueryClient({
     defaultOptions: {
         queries: {
-            // 15 minutes stale time
-            staleTime: 1000 * 60 * 15,
+            // 2 min stale time for non production -- means it will be 2 min in staging
+            staleTime:
+                import.meta.env.MODE === 'production'
+                    ? 1000 * 60 * 15
+                    : 1000 * 60 * 2,
         },
     },
 });
@@ -74,11 +70,19 @@ const router = createBrowserRouter([
             },
             {
                 path: 'images',
-                element: <Images />,
+                // element: <Images />,
+                async lazy() {
+                    const { Images } = await import('pages/images/Images');
+                    return { Component: Images };
+                },
             },
             {
                 path: 'about',
-                element: <About />,
+                // element: <About />,
+                async lazy() {
+                    const { About } = await import('pages/About');
+                    return { Component: About };
+                },
             },
             {
                 path: 'worlds-2024',
@@ -86,12 +90,21 @@ const router = createBrowserRouter([
                 children: [
                     {
                         index: true,
-                        element: <Worlds />,
+                        // element: <Worlds />,
+                        async lazy() {
+                            const { Worlds } = await import('pages/Worlds');
+                            return { Component: Worlds };
+                        },
                     },
                     {
                         path: ':country',
                         loader: worldsLoader,
-                        element: <WorldsPlayers2024 />,
+                        async lazy() {
+                            const { WorldsPlayers2024 } = await import(
+                                'pages/Worlds'
+                            );
+                            return { Component: WorldsPlayers2024 };
+                        },
                     },
                 ],
             },
@@ -100,7 +113,13 @@ const router = createBrowserRouter([
                 children: [
                     {
                         index: true,
-                        element: <Tournaments />,
+                        // element: <Tournaments />,
+                        async lazy() {
+                            const { Tournaments } = await import(
+                                'pages/Tournaments'
+                            );
+                            return { Component: Tournaments };
+                        },
                     },
                     {
                         path: ':tournamentId',
@@ -108,11 +127,23 @@ const router = createBrowserRouter([
                         children: [
                             {
                                 index: true,
-                                element: <Tournament />,
+                                // element: <Tournament />,
+                                async lazy() {
+                                    const { Tournament } = await import(
+                                        'pages/Tournament'
+                                    );
+                                    return { Component: Tournament };
+                                },
                             },
                             {
                                 path: ':division',
-                                element: <Division />,
+                                // element: <Division />,
+                                async lazy() {
+                                    const { Division } = await import(
+                                        'pages/Tournament/Division'
+                                    );
+                                    return { Component: Division };
+                                },
                             },
                             {
                                 path: ':division/:playerName',
@@ -120,11 +151,23 @@ const router = createBrowserRouter([
                                 children: [
                                     {
                                         index: true,
-                                        element: <Player />,
+                                        // element: <Player />,
+                                        async lazy() {
+                                            const { Player } = await import(
+                                                'pages/Player'
+                                            );
+                                            return { Component: Player };
+                                        },
                                     },
                                     {
                                         path: 'decklist',
-                                        element: <Decklist />,
+                                        // element: <Decklist />,
+                                        async lazy() {
+                                            const { Decklist } = await import(
+                                                'pages/Player'
+                                            );
+                                            return { Component: Decklist };
+                                        },
                                     },
                                 ],
                             },
@@ -140,9 +183,14 @@ const router = createBrowserRouter([
     },
 ]);
 
-export function Fallback() {
-    return <p>Performing initial data load</p>;
-}
+const Fallback = () => (
+    <div className="flex h-full w-full flex-1 flex-col items-center justify-center">
+        <LoadingPokeball alt="Loading app" size="100" />
+        <Heading level="2" className="mt-4">
+            Loading PTCG Standings...
+        </Heading>
+    </div>
+);
 
 function fallbackRender({ error }: { error: Error }) {
     // Call resetErrorBoundary() to reset the error boundary and retry the render.

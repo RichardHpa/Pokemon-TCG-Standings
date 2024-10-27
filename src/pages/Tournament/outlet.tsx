@@ -1,5 +1,5 @@
+import { Fragment } from 'react';
 import { Outlet, Link, useParams } from 'react-router-dom';
-import { fromZonedTime } from 'date-fns-tz';
 
 import { Heading } from 'components/Heading';
 import { Indicator } from 'components/Indicator';
@@ -12,7 +12,6 @@ import { tournaments } from 'constants/tournaments';
 
 import { useGetTournament } from 'queries/useGetTournament';
 
-import { formatDate } from 'helpers/formatDate';
 import { formatDateFromTimezone } from 'helpers/formatDateFromTimezone';
 
 const showStandings = [RUNNING, FINISHED];
@@ -25,11 +24,14 @@ export const TournamentOutlet = () => {
 
     const {
         data: tournament,
-        isLoading,
+        isPending,
         isError,
-    } = useGetTournament(tournamentId);
+    } = useGetTournament({
+        tournamentId,
+        select: (data) => data.tournament,
+    });
 
-    if (isLoading) {
+    if (isPending) {
         return (
             <div className="flex flex-col justify-center items-center">
                 <LoadingPokeball
@@ -40,7 +42,7 @@ export const TournamentOutlet = () => {
         );
     }
 
-    if (isError || !tournament) {
+    if (isError) {
         return (
             <Notice status="error">
                 Error loading your tournaments, please try again later
@@ -95,7 +97,7 @@ export const TournamentOutlet = () => {
                                 {Object.entries(streams).map(
                                     ([day, url], index) => {
                                         return (
-                                            <>
+                                            <Fragment key={index}>
                                                 <a
                                                     key={`${tournamentId}-${day}`}
                                                     href={url}
@@ -111,7 +113,7 @@ export const TournamentOutlet = () => {
                                                         |
                                                     </span>
                                                 )}
-                                            </>
+                                            </Fragment>
                                         );
                                     }
                                 )}

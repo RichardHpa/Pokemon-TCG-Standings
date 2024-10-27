@@ -1,1 +1,0 @@
-export { useGetPlayerInfo } from './useGetPlayer';
