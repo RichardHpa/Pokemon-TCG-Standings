@@ -7,7 +7,7 @@ import { Notice } from 'components/Notice';
 import { useGetTournamentByStatus } from 'hooks/useGetTournamentByStatus';
 
 export const Home = () => {
-    const { data, isError, isLoading } = useGetTournamentByStatus();
+    const { data, isError, isPending } = useGetTournamentByStatus();
 
     if (isError) {
         return (
@@ -17,7 +17,7 @@ export const Home = () => {
         );
     }
 
-    if (isLoading) {
+    if (isPending) {
         return (
             <div className="flex flex-col justify-center items-center">
                 <LoadingPokeball
@@ -36,31 +36,28 @@ export const Home = () => {
                 Keep up to date with the latest Pokemon TCG tournaments
             </Heading>
 
-            {data && (
-                <>
-                    {data.runningTournaments.length > 0 && (
-                        <TournamentsCard
-                            title="Tournaments currently in progress"
-                            tournaments={data.runningTournaments}
-                        />
-                    )}
-
-                    {data.upComingTournaments &&
-                        data.upComingTournaments.length > 0 && (
-                            <TournamentsCard
-                                title="Upcoming Tournaments"
-                                tournaments={data.upComingTournaments}
-                            />
-                        )}
-
-                    {data.finishedTournaments.length > 0 && (
-                        <TournamentsCard
-                            title="Latest Tournaments"
-                            tournaments={data.finishedTournaments.slice(0, 6)}
-                        />
-                    )}
-                </>
+            {data.runningTournaments && data.runningTournaments.length > 0 && (
+                <TournamentsCard
+                    title="Tournaments currently in progress"
+                    tournaments={data.runningTournaments}
+                />
             )}
+
+            {data.upComingTournaments &&
+                data.upComingTournaments.length > 0 && (
+                    <TournamentsCard
+                        title="Upcoming Tournaments"
+                        tournaments={data.upComingTournaments}
+                    />
+                )}
+
+            {data.finishedTournaments &&
+                data.finishedTournaments.length > 0 && (
+                    <TournamentsCard
+                        title="Latest Tournaments"
+                        tournaments={data.finishedTournaments.slice(0, 6)}
+                    />
+                )}
         </div>
     );
 };

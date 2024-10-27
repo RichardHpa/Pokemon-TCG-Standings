@@ -214,7 +214,7 @@ const PlayerInfo: FC<PlayerInfoProps> = ({
     playerName,
     division,
 }) => {
-    const { data, isLoading, isError } = useGetTournament({
+    const { data, isPending, isError } = useGetTournament({
         tournamentId,
         select: useCallback(
             (data: TournamentApiResponse) => {
@@ -238,7 +238,7 @@ const PlayerInfo: FC<PlayerInfoProps> = ({
         ),
     });
 
-    if (isLoading) {
+    if (isPending) {
         return (
             <div className="flex flex-col justify-center items-center">
                 <LoadingPokeball size="100" alt="Loading player info...</p>" />
@@ -305,7 +305,7 @@ export const Player = () => {
         division: Division;
     };
 
-    const { data, isLoading, isError } = useGetTournament({
+    const { data, isPending, isError } = useGetTournament({
         tournamentId,
         select: (data) => {
             const divisionData = data.tournament_data.find(
@@ -315,7 +315,7 @@ export const Player = () => {
         },
     });
 
-    if (isLoading) {
+    if (isPending) {
         return (
             <div className="flex flex-col justify-center items-center">
                 <LoadingPokeball size="100" alt="Loading player info...</p>" />
@@ -323,7 +323,7 @@ export const Player = () => {
         );
     }
 
-    if (isError || !data) {
+    if (isError) {
         return <Notice status="error">Error loading player info</Notice>;
     }
 

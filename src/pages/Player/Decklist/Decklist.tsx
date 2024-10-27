@@ -134,7 +134,7 @@ export const Decklist = () => {
         division: Division;
     };
 
-    const { data, isLoading } = useGetTournament({
+    const { data, isPending } = useGetTournament({
         tournamentId,
         select: useCallback(
             (data: TournamentApiResponse) => {
@@ -158,7 +158,7 @@ export const Decklist = () => {
         ),
     });
 
-    if (isLoading) {
+    if (isPending) {
         return <p>Loading...</p>;
     }
 

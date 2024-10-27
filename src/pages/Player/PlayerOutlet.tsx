@@ -27,7 +27,7 @@ export const PlayerOutlet = () => {
         division: Division;
     };
 
-    const { data, isLoading, isError } = useGetTournament({
+    const { data, isPending, isError } = useGetTournament({
         tournamentId,
         select: useCallback(
             (data: TournamentApiResponse) => {
@@ -55,7 +55,7 @@ export const PlayerOutlet = () => {
         navigate('./decklist');
     }, [navigate]);
 
-    if (isLoading) {
+    if (isPending) {
         return (
             <div className="flex flex-col justify-center items-center">
                 <LoadingPokeball size="100" alt="Loading player info...</p>" />

@@ -18,7 +18,7 @@ import type { TournamentApiResponse } from 'types/tournament';
 const showStandings = [RUNNING, FINISHED];
 
 const WorldsStandings = ({ division }: { division: Division }) => {
-    const { data: standings, isLoading } = useGetTournament({
+    const { data: standings, isPending } = useGetTournament({
         tournamentId: fixedTournamentId,
         select: useCallback(
             (data: TournamentApiResponse) => {
@@ -32,7 +32,7 @@ const WorldsStandings = ({ division }: { division: Division }) => {
         ),
     });
 
-    if (isLoading) {
+    if (isPending) {
         return (
             <div className="flex flex-col justify-center items-center">
                 <LoadingPokeball
@@ -67,7 +67,7 @@ const WorldsStandings = ({ division }: { division: Division }) => {
 
 export const Worlds = () => {
     const [division, setDivision] = useState<Division>('masters');
-    const { data: tournament, isLoading } = useGetTournament({
+    const { data: tournament, isPending } = useGetTournament({
         tournamentId: fixedTournamentId,
         select: (data) => data.tournament,
     });
@@ -83,7 +83,7 @@ export const Worlds = () => {
                 the 2024 Pokemon World Champions.
             </p>
 
-            {isLoading ? (
+            {isPending ? (
                 <div className="flex flex-col justify-center items-center">
                     <LoadingPokeball
                         size="100"

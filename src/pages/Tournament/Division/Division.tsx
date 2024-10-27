@@ -26,7 +26,7 @@ export const Division = () => {
         tournamentId: string;
     };
 
-    const { data: standings = [], isLoading } = useGetTournament({
+    const { data: standings = [], isPending } = useGetTournament({
         tournamentId,
         select: (data) => {
             const divisionData = data.tournament_data.find(
@@ -47,7 +47,7 @@ export const Division = () => {
         reset();
     }, [division, reset]);
 
-    if (isLoading) {
+    if (isPending) {
         return (
             <div className="flex flex-col justify-center items-center">
                 <LoadingPokeball size="100" alt="Loading standings...</p>" />

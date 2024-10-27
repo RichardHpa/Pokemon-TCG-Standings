@@ -24,14 +24,14 @@ export const TournamentOutlet = () => {
 
     const {
         data: tournament,
-        isLoading,
+        isPending,
         isError,
     } = useGetTournament({
         tournamentId,
         select: (data) => data.tournament,
     });
 
-    if (isLoading) {
+    if (isPending) {
         return (
             <div className="flex flex-col justify-center items-center">
                 <LoadingPokeball
@@ -42,7 +42,7 @@ export const TournamentOutlet = () => {
         );
     }
 
-    if (isError || !tournament) {
+    if (isError) {
         return (
             <Notice status="error">
                 Error loading your tournaments, please try again later
