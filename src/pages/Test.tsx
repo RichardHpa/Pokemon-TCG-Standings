@@ -64,7 +64,7 @@ const Table = ({
 };
 
 export const Test = () => {
-    const { data, isLoading, isError } = useGetTournament({
+    const { data, isPending, isError } = useGetTournament({
         tournamentId: '0000127',
         select: (data) => {
             const mastersDivision = data.tournament_data.find(
@@ -76,11 +76,11 @@ export const Test = () => {
 
     const containerRef = useRef(null);
 
-    if (isLoading) {
+    if (isPending) {
         return <p>Loading...</p>;
     }
 
-    if (isError || !data) {
+    if (isError) {
         return <p>Error...</p>;
     }
 

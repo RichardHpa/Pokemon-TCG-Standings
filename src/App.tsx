@@ -9,6 +9,8 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { ErrorBoundary } from 'react-error-boundary';
 import { Navbar } from 'components/Navbar';
+import { LoadingPokeball } from 'components/LoadingPokeball';
+import { Heading } from 'components/Heading';
 
 import { Home } from 'pages/Home';
 
@@ -181,9 +183,14 @@ const router = createBrowserRouter([
     },
 ]);
 
-export function Fallback() {
-    return <p>Performing initial data load</p>;
-}
+const Fallback = () => (
+    <div className="flex h-full w-full flex-1 flex-col items-center justify-center">
+        <LoadingPokeball alt="Loading app" size="100" />
+        <Heading level="2" className="mt-4">
+            Loading PTCG Standings...
+        </Heading>
+    </div>
+);
 
 function fallbackRender({ error }: { error: Error }) {
     // Call resetErrorBoundary() to reset the error boundary and retry the render.

@@ -124,12 +124,12 @@ const TournamentStandings = ({
 export const Tournament = () => {
     const { tournamentId } = useParams() as { tournamentId: string };
 
-    const { data, isLoading } = useGetTournament({
+    const { data, isPending, isError } = useGetTournament({
         tournamentId: tournamentId,
         select: (data) => data.tournament,
     });
 
-    if (isLoading) {
+    if (isPending) {
         return (
             <div className="flex flex-col justify-center items-center">
                 <LoadingPokeball size="100" alt="Loading standings...</p>" />
@@ -137,7 +137,7 @@ export const Tournament = () => {
         );
     }
 
-    if (!data) {
+    if (isError) {
         return <p>No tournament found</p>;
     }
 
