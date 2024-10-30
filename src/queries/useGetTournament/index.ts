@@ -1,1 +1,5 @@
-export { useGetTournament, getGetTournamentKey } from './useGetTournament';
+export {
+    useGetTournament,
+    getGetTournamentKey,
+    getTournamentQueryOptions,
+} from './useGetTournament';

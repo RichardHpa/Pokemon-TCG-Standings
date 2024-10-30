@@ -1,4 +1,4 @@
-import { useQuery } from '@tanstack/react-query';
+import { useQuery, queryOptions } from '@tanstack/react-query';
 
 import { getPokeDataTournament } from 'api/getTournament';
 
@@ -15,14 +15,21 @@ export const getGetTournamentKey = (tournamentId: string) => [
     tournamentId,
 ];
 
-export function useGetTournament<TData = TournamentApiResponse>({
-    tournamentId,
-    select,
-}: useGetTournamentProps<TData>) {
+export function getTournamentQueryOptions<TData = TournamentApiResponse>(
+    tournamentId: string | number,
+    select?: useGetTournamentProps<TData>['select']
+) {
     const parsedTournamentId = tournamentId.toString();
-    return useQuery({
+    return queryOptions({
         queryKey: getGetTournamentKey(parsedTournamentId),
         queryFn: () => getPokeDataTournament(parsedTournamentId),
         select: select,
     });
+}
+
+export function useGetTournament<TData = TournamentApiResponse>({
+    tournamentId,
+    select,
+}: useGetTournamentProps<TData>) {
+    return useQuery(getTournamentQueryOptions<TData>(tournamentId, select));
 }

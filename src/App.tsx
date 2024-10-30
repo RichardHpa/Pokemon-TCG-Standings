@@ -8,6 +8,9 @@ import {
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { ErrorBoundary } from 'react-error-boundary';
+
+import { PinnedPlayersProvider } from 'providers/PinnedPlayersProviderV2';
+
 import { Navbar } from 'components/Navbar';
 import { LoadingPokeball } from 'components/LoadingPokeball';
 import { Heading } from 'components/Heading';
@@ -192,12 +195,11 @@ const Fallback = () => (
     </div>
 );
 
-function fallbackRender({ error }: { error: Error }) {
+function fallbackRender() {
     // Call resetErrorBoundary() to reset the error boundary and retry the render.
     return (
-        <div role="alert">
-            <p>Something went wrong:</p>
-            <pre style={{ color: 'red' }}>{error.message}</pre>
+        <div className="min-h-screen bg-white dark:bg-gray-900">
+            <DefaultError />
         </div>
     );
 }
@@ -206,13 +208,15 @@ function App() {
     return (
         <ErrorBoundary fallbackRender={fallbackRender}>
             <QueryClientProvider client={queryClient}>
-                <FetchingProvider>
-                    <RouterProvider
-                        router={router}
-                        fallbackElement={<Fallback />}
-                    />
-                </FetchingProvider>
-                <ReactQueryDevtools />
+                <PinnedPlayersProvider>
+                    <FetchingProvider>
+                        <RouterProvider
+                            router={router}
+                            fallbackElement={<Fallback />}
+                        />
+                    </FetchingProvider>
+                    <ReactQueryDevtools />
+                </PinnedPlayersProvider>
             </QueryClientProvider>
         </ErrorBoundary>
     );

@@ -11,11 +11,6 @@ export const getPokeDataTournament = async (
 ): Promise<TournamentApiResponse> => {
     const tournament = tournaments[tournamentId];
     if (tournament && tournament.hasLocalData === true) {
-        // const localData = await import(
-        //     `data/tournaments/${tournamentId}.json`
-        // ).then((data) => {
-        //     return data.default;
-        // });
         const localData = await axios
             .get('/data/tournaments/' + tournamentId + '.json')
             .then((res) => res.data);
