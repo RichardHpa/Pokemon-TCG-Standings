@@ -1,7 +1,9 @@
+import { useCallback } from 'react';
 import { IconButton } from 'components/Button/IconButton';
 import { PinIcon } from 'icons/PinIcon';
 
-import { usePinnedPlayers } from 'providers/PinnedPlayersProvider';
+// import { usePinnedPlayers } from 'providers/PinnedPlayersProvider';
+import { usePinnedPlayersContext } from 'providers/PinnedPlayersProviderV2';
 
 import { useAnalytics } from 'hooks/useAnalytics';
 
@@ -18,26 +20,43 @@ export const PinPlayer = ({
 }) => {
     const { sendEvent } = useAnalytics();
 
-    const { togglePinPlayer, inPinned } = usePinnedPlayers();
-    const checkIsPinned = inPinned(player, tournamentId, division);
+    const { togglePlayer, isPlayerPinned } = usePinnedPlayersContext();
+
+    const handlePinPlayer = useCallback(() => {
+        if (!isPlayerPinned(tournamentId, division, player)) {
+            sendEvent({
+                category: 'Pin Player',
+                action: 'click',
+                label: `Pin Player: ${player} - ${division} - ${tournamentId}`,
+            });
+        }
+
+        togglePlayer(tournamentId, division, player);
+    }, [
+        isPlayerPinned,
+        tournamentId,
+        division,
+        player,
+        togglePlayer,
+        sendEvent,
+    ]);
 
     return (
         <IconButton
             icon={<PinIcon />}
             alt="View Pinned Players"
-            variant={checkIsPinned ? 'solid' : 'text'}
+            // variant={checkIsPinned ? 'solid' : 'text'}
+            variant="text"
             rounded={false}
-            color={checkIsPinned ? 'primary' : 'grey'}
+            // color={checkIsPinned ? 'primary' : 'grey'}
+            color={
+                isPlayerPinned(tournamentId, division, player)
+                    ? 'primary'
+                    : 'grey'
+            }
             onClick={(event) => {
                 event.stopPropagation();
-                if (!checkIsPinned) {
-                    sendEvent({
-                        category: 'Pin Player',
-                        action: 'click',
-                        label: `Pin Player: ${player} - ${division} - ${tournamentId}`,
-                    });
-                }
-                togglePinPlayer(player, tournamentId, division);
+                handlePinPlayer();
             }}
         />
     );

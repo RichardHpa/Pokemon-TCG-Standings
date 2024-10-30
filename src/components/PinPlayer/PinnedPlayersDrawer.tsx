@@ -4,9 +4,10 @@ import clsx from 'clsx';
 import AutoSizer from 'react-virtualized-auto-sizer';
 import { VariableSizeList as List } from 'react-window';
 
-import { useGetPinnedPlayers } from 'hooks/useGetPinnedPlayers';
+// import { useGetPinnedPlayers } from 'hooks/useGetPinnedPlayers';
 // import { FINISHED } from 'constants/tournament';
-import { usePinnedPlayers } from 'providers/PinnedPlayersProvider';
+// import { usePinnedPlayers } from 'providers/PinnedPlayersProvider';
+import { usePinnedPlayersContext } from 'providers/PinnedPlayersProviderV2';
 import { PinIcon } from 'icons/PinIcon';
 import { createPlayerUrl } from 'utils/createPlayerUrl';
 
@@ -15,12 +16,13 @@ import { ContentCard } from 'components/ContentCard';
 import { PlayerRecord } from 'components/PlayerRecord';
 
 import type { ListChildComponentProps, VariableSizeList } from 'react-window';
-import type { tournamentsQueryOptionsResult } from 'hooks/useGetPinnedPlayers';
 import type { Division } from 'types/tournament';
 import type { Standing } from 'types/standing';
 
+import type { CombinedInfo } from 'providers/PinnedPlayersProviderV2/types';
+
 interface RowProps {
-    data: tournamentsQueryOptionsResult[];
+    data: CombinedInfo[];
     index: number;
     setSize: (index: number, size: number | undefined) => void;
     closeDrawer: () => void;
@@ -37,35 +39,35 @@ const getFirstLetterAndUpperCase = (str: string) => {
 
 const Row = ({ data, index, setSize, closeDrawer }: RowProps) => {
     const rowRef = useRef<HTMLDivElement>(null);
-    const rowData = data[index];
+    const pinnedInfo = data[index];
 
     useEffect(() => {
         setSize(index, rowRef.current?.getBoundingClientRect().height);
     }, [setSize, index]);
 
     const players = useMemo(() => {
-        return Object.entries(rowData.pinnedDivisions).reduce<Player[]>(
-            (acc, [division, players]) => {
+        return pinnedInfo.divisions.reduce<Player[]>(
+            (acc, { division, players }) => {
                 return acc.concat(
                     players.map((player) => ({
-                        division: division as Division,
+                        division,
                         player,
                     }))
                 );
             },
             []
         );
-    }, [rowData.pinnedDivisions]);
+    }, [pinnedInfo]);
 
     return (
         <div ref={rowRef} className="pb-4">
-            <ContentCard title={rowData.tournament.name}>
+            <ContentCard title={pinnedInfo.name}>
                 <div className="text-sm font-medium divide-y divide-gray-200 dark:divide-gray-700">
                     {players.map((player) => {
                         return (
                             <Link
                                 key={player.player.name}
-                                to={`/tournaments/${rowData.tournament.id}/${player.division}/${createPlayerUrl(
+                                to={`/tournaments/${pinnedInfo.tournamentId}/${player.division}/${createPlayerUrl(
                                     player.player.name
                                 )}`}
                                 className="flex justify-between align-middle w-full px-4 py-2 text-white cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-800"
@@ -97,12 +99,13 @@ interface SizeMap {
 }
 
 const DrawerInner = ({
-    pinnedTournaments,
+    // pinnedTournaments,
     closeDrawer,
 }: {
-    pinnedTournaments: tournamentsQueryOptionsResult[];
+    // pinnedTournaments: tournamentsQueryOptionsResult[];
     closeDrawer: () => void;
 }) => {
+    const { combinedPinnedPlayerDetails } = usePinnedPlayersContext();
     const listRef = useRef<VariableSizeList>(null);
     const sizeMap = useRef<SizeMap>({});
 
@@ -125,9 +128,9 @@ const DrawerInner = ({
                             ref={listRef}
                             height={height}
                             width={width}
-                            itemCount={pinnedTournaments.length}
+                            itemCount={combinedPinnedPlayerDetails.length}
                             itemSize={getSize}
-                            itemData={pinnedTournaments}
+                            itemData={combinedPinnedPlayerDetails}
                         >
                             {({
                                 data,
@@ -151,50 +154,48 @@ const DrawerInner = ({
     );
 };
 
-const DrawerLoader = ({ closeDrawer }: { closeDrawer: () => void }) => {
-    const {
-        parsedPlayers,
-        //  handleClearTournament
-    } = usePinnedPlayers();
-    const { data, isPending, isError } = useGetPinnedPlayers(parsedPlayers);
-    const definedData = data.every((tournament) => tournament !== undefined);
+// const DrawerLoader = ({ closeDrawer }: { closeDrawer: () => void }) => {
+//     const { combinedPinnedPlayerDetails } = usePinnedPlayersContext();
+//     // const { data, isPending, isError } = useGetPinnedPlayers(parsedPlayers);
+//     // const definedData = data.every((tournament) => tournament !== undefined);
 
-    if (isPending) {
-        return (
-            <div className="flex items-center justify-center p-4 text-gray-500 dark:text-gray-400">
-                Loading pinned players...
-            </div>
-        );
-    }
+//     // if (isPending) {
+//     //     return (
+//     //         <div className="flex items-center justify-center p-4 text-gray-500 dark:text-gray-400">
+//     //             Loading pinned players...
+//     //         </div>
+//     //     );
+//     // }
 
-    if (isError) {
-        return (
-            <div className="flex items-center justify-center p-4 text-gray-500 dark:text-gray-400">
-                Error loading pinned players...
-            </div>
-        );
-    }
+//     // if (isError) {
+//     //     return (
+//     //         <div className="flex items-center justify-center p-4 text-gray-500 dark:text-gray-400">
+//     //             Error loading pinned players...
+//     //         </div>
+//     //     );
+//     // }
 
-    if (!data) {
-        return (
-            <div className="flex items-center justify-center p-4 text-gray-500 dark:text-gray-400">
-                There are no pinned players for active tournaments
-            </div>
-        );
-    }
+//     // if (!data) {
+//     //     return (
+//     //         <div className="flex items-center justify-center p-4 text-gray-500 dark:text-gray-400">
+//     //             There are no pinned players for active tournaments
+//     //         </div>
+//     //     );
+//     // }
 
-    if (definedData) {
-        return (
-            <DrawerInner pinnedTournaments={data} closeDrawer={closeDrawer} />
-        );
-    }
+//     // if (definedData) {
+//     //     return (
+//     //         <DrawerInner pinnedTournaments={data} closeDrawer={closeDrawer} />
+//     //     );
+//     // }
 
-    return null;
-};
+//     return null;
+// };
 
 export const PinnedPlayersDrawer = () => {
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-    const { parsedPlayers } = usePinnedPlayers();
+    // const { parsedPlayers } = usePinnedPlayers();
+    const { hasPinnedPlayers } = usePinnedPlayersContext();
 
     const handleToggleDrawer = useCallback(() => {
         setIsDrawerOpen((prevIsDrawerOpen) => !prevIsDrawerOpen);
@@ -211,12 +212,8 @@ export const PinnedPlayersDrawer = () => {
                 icon={<PinIcon />}
                 alt="View Pinned Players"
                 onClick={handleToggleDrawer}
-                color={
-                    Object.keys(parsedPlayers).length > 0
-                        ? 'primary'
-                        : 'secondary'
-                }
-                disabled={Object.keys(parsedPlayers).length === 0}
+                color={hasPinnedPlayers ? 'primary' : 'secondary'}
+                disabled={!hasPinnedPlayers}
             />
 
             <div
@@ -255,14 +252,17 @@ export const PinnedPlayersDrawer = () => {
                     </button>
                 </div>
 
-                {Object.keys(parsedPlayers).length === 0 && (
+                {!hasPinnedPlayers && (
                     <div className="flex items-center justify-center p-4 text-gray-500 dark:text-gray-400">
                         No pinned players
                     </div>
                 )}
 
-                {isDrawerOpen && (
+                {/* {isDrawerOpen && (
                     <DrawerLoader closeDrawer={handleCloseDrawer} />
+                )} */}
+                {isDrawerOpen && (
+                    <DrawerInner closeDrawer={handleCloseDrawer} />
                 )}
             </div>
         </>

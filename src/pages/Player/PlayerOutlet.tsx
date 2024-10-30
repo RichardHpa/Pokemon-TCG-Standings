@@ -2,12 +2,15 @@ import { useCallback } from 'react';
 import { Outlet, useParams, useNavigate, Link } from 'react-router-dom';
 import { ListBulletIcon } from '@heroicons/react/24/solid';
 
+import { RUNNING } from 'constants/tournament';
+
 import { LoadingPokeball } from 'components/LoadingPokeball';
 import { Notice } from 'components/Notice';
 import { SEO } from 'components/SEO';
 import { Heading } from 'components/Heading';
 import { IconButton } from 'components/Button/IconButton';
 import { ArchetypeSprites } from 'components/ArchetypeSprites';
+import { PinPlayer } from 'components/PinPlayer';
 
 import { getCountryFlag } from 'helpers/getCountryFlag';
 import { createPlayerName } from 'utils/createPlayerName';
@@ -45,7 +48,11 @@ export const PlayerOutlet = () => {
                     throw new Error('Player not found');
                 }
 
-                return { players, standings: divisionToReturn.data };
+                return {
+                    players,
+                    standings: divisionToReturn.data,
+                    tournament: data.tournament,
+                };
             },
             [division, playerName]
         ),
@@ -93,16 +100,28 @@ export const PlayerOutlet = () => {
                     </Heading>
                 </Link>
 
-                {player.decklist && (
+                {(player.decklist ||
+                    data.tournament.tournamentStatus === RUNNING) && (
                     <div className="flex gap-2 items-center justify-center">
-                        <IconButton
-                            icon={<ListBulletIcon />}
-                            alt="deck list"
-                            rounded={false}
-                            color="grey"
-                            onClick={handleViewDecklist}
-                        />
-                        <ArchetypeSprites decklist={player.decklist} />
+                        {data.tournament.tournamentStatus === RUNNING && (
+                            <PinPlayer
+                                tournamentId={tournamentId}
+                                player={player.name}
+                                division={division}
+                            />
+                        )}
+                        {player.decklist && (
+                            <div className="flex gap-2 items-center justify-center">
+                                <IconButton
+                                    icon={<ListBulletIcon />}
+                                    alt="deck list"
+                                    rounded={false}
+                                    color="grey"
+                                    onClick={handleViewDecklist}
+                                />
+                                <ArchetypeSprites decklist={player.decklist} />
+                            </div>
+                        )}
                     </div>
                 )}
             </div>

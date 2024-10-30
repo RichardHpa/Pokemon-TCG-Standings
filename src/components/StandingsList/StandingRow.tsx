@@ -131,7 +131,7 @@ export const StandingRow: FC<StandingRowProps> = ({
                 {tournamentStatus === RUNNING && (
                     <PinPlayer
                         tournamentId={tournamentId}
-                        player={createPlayerUrl(player.name)}
+                        player={player.name}
                         division={division}
                     />
                 )}
