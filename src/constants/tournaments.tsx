@@ -5,7 +5,6 @@ import ChallengeLogo from 'images/tcgChallenge.png';
 import PlayPokemonLogo from 'images/playPokemon.png';
 
 import RegionalLogo2024 from 'images/tcgRegionals2024.png';
-
 import WorldsLogo from 'images/tcgWorlds.png';
 import Worlds2024Logo from 'images/wc24-key-art-2x.webp';
 import Worlds2023Logo from 'images/tcgWorlds2023.png';
@@ -31,6 +30,11 @@ interface LocalTournamentsMap {
 }
 
 export const tournaments: LocalTournamentsMap = {
+    '0000136': {
+        name: 'Gdansk Pokémon TCG Regional Championship 2025',
+        hasLocalData: false,
+        logo: RegionalLogo2024,
+    },
     '0000135': {
         name: 'Lille Pokémon TCG Cup',
         hasLocalData: true,

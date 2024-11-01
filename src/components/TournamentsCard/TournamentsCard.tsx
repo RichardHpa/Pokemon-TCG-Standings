@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 
 import { ContentCard } from 'components/ContentCard';
 import { Indicator } from 'components/Indicator';
+import { DecideLogo } from 'components/DecideLogo';
 
 import { RUNNING, NOT_STARTED, CHECK_IN } from 'constants/tournament';
 import { formatDateFromTimezone } from 'helpers/formatDateFromTimezone';
-import { useResponsive } from 'hooks/useResponsive';
 
 import { getCountryFlag } from 'helpers/getCountryFlag';
 import { getCountryCode } from 'utils/getCountryCode';
@@ -21,16 +21,17 @@ import type { Tournament } from 'types/tournament';
 const upcomming = [NOT_STARTED, CHECK_IN];
 
 const TournamentCardInner = ({ tournament }: { tournament: Tournament }) => {
-    const { md } = useResponsive();
     return (
-        <div className="flex justify-between py-6 gap-8">
+        <div className="flex justify-between py-6 gap-8 flex-col md:flex-row">
             <div className="flex gap-4">
-                {md && tournaments[tournament.id]?.logo && (
+                {tournaments[tournament.id]?.logo ? (
                     <img
                         src={tournaments[tournament.id].logo}
                         alt={tournament.name}
                         className="w-16 h-fit"
                     />
+                ) : (
+                    <DecideLogo tournamentName={tournament.name} />
                 )}
                 <div>
                     <div className="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">

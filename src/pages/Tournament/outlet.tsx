@@ -6,6 +6,7 @@ import { Indicator } from 'components/Indicator';
 import { LoadingPokeball } from 'components/LoadingPokeball';
 import { Notice } from 'components/Notice';
 import { DivisionTabs } from 'components/DivisionTabs';
+import { DecideLogo } from 'components/DecideLogo';
 
 import { RUNNING, FINISHED } from 'constants/tournament';
 import { tournaments } from 'constants/tournaments';
@@ -57,15 +58,17 @@ export const TournamentOutlet = () => {
         <div className="flex flex-col gap-4 flex-grow">
             <div className="flex justify-between mb-4">
                 <div className="grid sm:grid-cols-[auto_auto] place-content-start gap-4">
-                    {tournaments[tournamentId]?.logo && (
-                        <div className="hidden sm:block">
+                    <div className="hidden sm:block">
+                        {tournaments[tournamentId]?.logo ? (
                             <img
                                 src={tournaments[tournamentId].logo}
                                 alt={tournament.name}
                                 className="h-0 min-h-full object-contain"
                             />
-                        </div>
-                    )}
+                        ) : (
+                            <DecideLogo tournamentName={tournament.name} />
+                        )}
+                    </div>
 
                     <div>
                         <Link to={`/tournaments/${tournamentId}`}>
