@@ -1,0 +1,1 @@
+export { DecideLogo } from './DecideLogo';
