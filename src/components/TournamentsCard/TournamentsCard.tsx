@@ -23,12 +23,12 @@ const upcomming = [NOT_STARTED, CHECK_IN];
 const TournamentCardInner = ({ tournament }: { tournament: Tournament }) => {
     return (
         <div className="flex justify-between py-6 gap-8 flex-col md:flex-row">
-            <div className="flex gap-4">
+            <div className="flex gap-4 items-start">
                 {tournaments[tournament.id]?.logo ? (
                     <img
                         src={tournaments[tournament.id].logo}
                         alt={tournament.name}
-                        className="w-16 h-fit"
+                        className="w-16"
                     />
                 ) : (
                     <DecideLogo tournamentName={tournament.name} />
