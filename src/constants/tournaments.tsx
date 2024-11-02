@@ -34,6 +34,10 @@ export const tournaments: LocalTournamentsMap = {
         name: 'Gdansk Pokémon TCG Regional Championship 2025',
         hasLocalData: false,
         logo: RegionalLogo2024,
+        streams: {
+            day1: 'https://www.youtube.com/watch?v=BYFKHN53OEE',
+            day2: 'https://www.youtube.com/watch?v=VPYnXfbjbSo',
+        },
     },
     '0000135': {
         name: 'Lille Pokémon TCG Cup',

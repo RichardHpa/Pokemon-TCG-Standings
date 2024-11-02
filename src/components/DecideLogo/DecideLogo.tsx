@@ -56,5 +56,5 @@ export const DecideLogo: FC<DecideLogoProps> = ({ tournamentName }) => {
         return tournamentLogoMap.PlayPokemon;
     }, [tournamentName]);
     if (!logo) return null;
-    return <img src={logo} alt={tournamentName} className="w-16 h-fit" />;
+    return <img src={logo} alt={tournamentName} className="w-16" />;
 };
