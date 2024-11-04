@@ -30,9 +30,14 @@ interface LocalTournamentsMap {
 }
 
 export const tournaments: LocalTournamentsMap = {
+    '0000137': {
+        name: 'Gdansk Pokémon TCG Cup',
+        hasLocalData: true,
+        logo: CupLogo,
+    },
     '0000136': {
         name: 'Gdansk Pokémon TCG Regional Championship 2025',
-        hasLocalData: false,
+        hasLocalData: true,
         logo: RegionalLogo2024,
         streams: {
             day1: 'https://www.youtube.com/watch?v=BYFKHN53OEE',

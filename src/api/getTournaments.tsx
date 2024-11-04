@@ -6,21 +6,28 @@ import tournamentJSON from 'mocks/tempData/tournaments.json';
 
 import type { Tournament, TournamentsApiResponse } from 'types/tournament';
 
+// sometimes we want to force the use of local data
+const useLocalData = true;
+
 export const getPokeDataTournaments = async (): Promise<Tournament[]> => {
     const fixedTournaments = tournamentJSON as TournamentsApiResponse;
-
-    const response = await axios
-        .get(`${baseLocalApi}/tournaments`)
-        .then((customApiDataRes) => {
-            const data = customApiDataRes.data.tcg.data;
-            return data;
-        })
-        .catch(async () => {
-            const res = await axios.get(tournamentsUrl);
-            const data = res.data.tcg.data;
-            if (!data) return null;
-            return data;
-        });
+    let response;
+    if (useLocalData) {
+        response = fixedTournaments.tcg.data;
+    } else {
+        response = await axios
+            .get(`${baseLocalApi}/tournaments`)
+            .then((customApiDataRes) => {
+                const data = customApiDataRes.data.tcg.data;
+                return data;
+            })
+            .catch(async () => {
+                const res = await axios.get(tournamentsUrl);
+                const data = res.data.tcg.data;
+                if (!data) return null;
+                return data;
+            });
+    }
 
     const resolvedResponse = response || fixedTournaments.tcg.data;
 
