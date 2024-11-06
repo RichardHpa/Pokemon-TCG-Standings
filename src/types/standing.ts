@@ -10,6 +10,9 @@ export interface Round {
     name: string;
     result: string;
     table: number;
+
+    // we add this ourselves so it doesn't come from the api
+    decklist?: DeckList;
 }
 
 export interface Rounds {

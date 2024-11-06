@@ -232,6 +232,22 @@ const PlayerInfo: FC<PlayerInfoProps> = ({
                     throw new Error('Player not found');
                 }
 
+                players.forEach((player) => {
+                    const rounds = player.rounds;
+                    Object.keys(rounds).forEach((round) => {
+                        const opponent = rounds[round].name;
+
+                        const opponentPlayer = divisionToReturn.data.find(
+                            (x) => x.name === opponent
+                        );
+
+                        const hasDecklist = opponentPlayer?.decklist;
+                        if (hasDecklist) {
+                            rounds[round].decklist = opponentPlayer?.decklist;
+                        }
+                    });
+                });
+
                 return { players, standings: divisionToReturn.data };
             },
             [division, playerName]
