@@ -488,6 +488,14 @@ export const getArchetypes = (decklist: DeckList) => {
         return foundArchetype;
     }
 
+    if (pokemonNames.includes('Garchomp ex')) {
+        foundArchetype.push({
+            pokemon: 'Garchomp ex',
+            image: pokemonList['garchomp'].image,
+        });
+        return foundArchetype;
+    }
+
     foundArchetype.push({
         pokemon: 'Unknown',
         image: 'substitute.png',

@@ -1,6 +1,7 @@
 import { getCountryFlag } from 'helpers/getCountryFlag';
 import { getCountryCode } from 'utils/getCountryCode';
 import { removeCountryFromName } from 'utils/removeCountryFromName';
+import { ArchetypeSprites } from 'components/ArchetypeSprites';
 
 import type { RoundsTableProps } from './types';
 import type { FC } from 'react';
@@ -28,9 +29,17 @@ export const RoundRow = ({
                         {getCountryFlag(getCountryCode(round.name))}
                     </p>
                 </div>
-                <p className={`${colorMap[round.result]} font-bold`}>
-                    {round.result}
-                </p>
+                <div className="flex gap-2 items-center">
+                    {round.decklist && (
+                        <ArchetypeSprites
+                            size="small"
+                            decklist={round.decklist}
+                        />
+                    )}
+                    <p className={`${colorMap[round.result]} font-bold`}>
+                        {round.result}
+                    </p>
+                </div>
             </div>
         </li>
     );
