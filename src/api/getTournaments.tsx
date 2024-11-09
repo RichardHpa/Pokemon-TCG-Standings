@@ -7,7 +7,7 @@ import tournamentJSON from 'mocks/tempData/tournaments.json';
 import type { Tournament, TournamentsApiResponse } from 'types/tournament';
 
 // sometimes we want to force the use of local data
-const useLocalData = true;
+const useLocalData = false;
 
 export const getPokeDataTournaments = async (): Promise<Tournament[]> => {
     const fixedTournaments = tournamentJSON as TournamentsApiResponse;
