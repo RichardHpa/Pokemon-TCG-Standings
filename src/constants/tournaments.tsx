@@ -30,6 +30,18 @@ interface LocalTournamentsMap {
 }
 
 export const tournaments: LocalTournamentsMap = {
+    '0000138': {
+        name: '2025 Buenos Aires TCG Special Event',
+        hasLocalData: true,
+        logo: PlayPokemonLogo,
+        notes: (
+            <>
+                The data for the 2025 Buenos Aires TCG Special Event was removed
+                immediately after the event ended and we currently have no way
+                to retrieve it. There may me some missing data for this event.
+            </>
+        ),
+    },
     '0000137': {
         name: 'Gdansk Pokémon TCG Cup',
         hasLocalData: true,
