@@ -4,6 +4,8 @@ import { baseLocalApi, tournamentsUrl } from 'constants/api';
 
 import tournamentJSON from 'mocks/tempData/tournaments.json';
 
+import { tournaments } from 'constants/tournaments';
+
 import type { Tournament, TournamentsApiResponse } from 'types/tournament';
 
 // sometimes we want to force the use of local data
@@ -32,16 +34,19 @@ export const getPokeDataTournaments = async (): Promise<Tournament[]> => {
     const resolvedResponse = response || fixedTournaments.tcg.data;
 
     // the response comes in order from oldest to newest so we want to reverse it
-    const reversed = resolvedResponse.reverse();
+    const reversed = [...resolvedResponse].reverse();
 
-    // there is an issue with the data where the 2025 Lima TCG Special Event where the data is incorrect, I have hardcoded some data for it but we need to tell it to be finished if its in the list
-    const limaSpecialEvent = reversed.findIndex(
-        (tournament: Tournament) => tournament.id === '0000132'
-    );
-
-    if (limaSpecialEvent !== -1) {
-        reversed[limaSpecialEvent].tournamentStatus = 'finished';
-    }
+    reversed.forEach((tournament) => {
+        const tournamentId = tournament.id;
+        if (tournaments[tournamentId]) {
+            if (tournaments[tournamentId].name) {
+                tournament.name = tournaments[tournamentId].name;
+            }
+            if (tournaments[tournamentId].hasLocalData) {
+                tournament.tournamentStatus = 'finished';
+            }
+        }
+    });
 
     return reversed;
 };

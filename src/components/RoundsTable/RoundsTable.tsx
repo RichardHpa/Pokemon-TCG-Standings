@@ -22,7 +22,8 @@ export const RoundRow = ({
             <div className="flex justify-between align-top">
                 <div className="text-left">
                     <p className="text-sm text-gray-500 truncate dark:text-gray-400">
-                        Round {roundNum} - Table {round.table}
+                        Round {roundNum}
+                        {round.table && ` - Table ${round.table}`}
                     </p>
                     <p>
                         {removeCountryFromName(round.name)}{' '}
