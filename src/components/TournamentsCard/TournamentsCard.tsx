@@ -5,7 +5,7 @@ import { ContentCard } from 'components/ContentCard';
 import { Indicator } from 'components/Indicator';
 import { DecideLogo } from 'components/DecideLogo';
 
-import { RUNNING, NOT_STARTED, CHECK_IN } from 'constants/tournament';
+import { RUNNING } from 'constants/tournament';
 import { formatDateFromTimezone } from 'helpers/formatDateFromTimezone';
 
 import { getCountryFlag } from 'helpers/getCountryFlag';
@@ -17,8 +17,6 @@ import { tournaments } from 'constants/tournaments';
 import type { TournamentsCardProps } from './types';
 import type { FC } from 'react';
 import type { Tournament } from 'types/tournament';
-
-const upcomming = [NOT_STARTED, CHECK_IN];
 
 const TournamentCardInner = ({ tournament }: { tournament: Tournament }) => {
     return (
@@ -100,26 +98,12 @@ export const TournamentsCard: FC<TournamentsCardProps> = ({
                         <li
                             key={tournament.id}
                             className={clsx(
-                                'w-full items-center pl-3 pr-6 text-gray-700 border-b border-gray-100 dark:border-gray-800 dark:text-gray-400',
-                                {
-                                    'cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900':
-                                        !upcomming.includes(
-                                            tournament.tournamentStatus
-                                        ),
-                                }
+                                'w-full items-center pl-3 pr-6 text-gray-700 border-b border-gray-100 dark:border-gray-800 dark:text-gray-400 cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900'
                             )}
                         >
-                            {!upcomming.includes(
-                                tournament.tournamentStatus
-                            ) ? (
-                                <Link to={`/tournaments/${tournament.id}`}>
-                                    <TournamentCardInner
-                                        tournament={tournament}
-                                    />
-                                </Link>
-                            ) : (
+                            <Link to={`/tournaments/${tournament.id}`}>
                                 <TournamentCardInner tournament={tournament} />
-                            )}
+                            </Link>
                         </li>
                     );
                 })}

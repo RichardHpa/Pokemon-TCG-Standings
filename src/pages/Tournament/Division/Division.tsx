@@ -12,12 +12,11 @@ import { useGetTournament } from 'queries/useGetTournament';
 import type { Division as DivisionType } from 'types/tournament';
 
 const fuseOptions = {
-    isCaseSensitive: false,
-    includeMatches: true,
+    shouldSort: true,
+    threshold: 0.1,
+    location: 0,
+    distance: 100,
     keys: ['name'],
-    threshold: 0.8,
-    includeScore: true,
-    findAllMatches: true,
 };
 
 export const Division = () => {
@@ -37,7 +36,7 @@ export const Division = () => {
     });
 
     // @ts-expect-error -- TODO: Fix this
-    const { query, onSearch, searching, hits, reset, rawQuery } = useFuse(
+    const { query, onSearch, searching, hits, reset } = useFuse(
         standings,
         fuseOptions
     );
@@ -82,7 +81,7 @@ export const Division = () => {
                                 onChange={(e) =>
                                     onSearch(e.target.value.trim())
                                 }
-                                value={rawQuery}
+                                value={query}
                             />
                         </div>
                     </div>
