@@ -70,6 +70,14 @@ export const StandingsCard: FC<StandingsCardProps> = ({
                 )
             }
         >
+            {standings && standings.length === 0 && (
+                <div className="p-4">
+                    <p className="text-center text-gray-500">
+                        No players found in this division
+                    </p>
+                </div>
+            )}
+
             <StandingsList
                 standings={standings}
                 tournamentId={tournamentId}
