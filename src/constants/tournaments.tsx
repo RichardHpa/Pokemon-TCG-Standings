@@ -4,6 +4,7 @@ import CupLogo from 'images/tcgCup.png';
 import ChallengeLogo from 'images/tcgChallenge.png';
 import PlayPokemonLogo from 'images/playPokemon.png';
 
+import InternationalLogo2024 from 'images/tcgInternationals2024.png';
 import RegionalLogo2024 from 'images/tcgRegionals2024.png';
 import WorldsLogo from 'images/tcgWorlds.png';
 import Worlds2024Logo from 'images/wc24-key-art-2x.webp';
@@ -30,6 +31,16 @@ interface LocalTournamentsMap {
 }
 
 export const tournaments: LocalTournamentsMap = {
+    '0000139': {
+        name: 'Latin America Pokémon International Championships 2025',
+        hasLocalData: true,
+        logo: InternationalLogo2024,
+        streams: {
+            day1: 'https://www.youtube.com/watch?v=PCz8aE2zBXg',
+            day2: 'https://www.youtube.com/watch?v=oxkvV_o-ync',
+            day3: 'https://www.youtube.com/watch?v=yL16pc0kkoQ',
+        },
+    },
     '0000138': {
         name: '2025 Buenos Aires TCG Special Event',
         hasLocalData: true,
