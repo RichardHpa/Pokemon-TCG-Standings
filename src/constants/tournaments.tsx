@@ -38,6 +38,7 @@ export const tournaments: LocalTournamentsMap = {
         streams: {
             day1: 'https://www.youtube.com/watch?v=PCz8aE2zBXg',
             day2: 'https://www.youtube.com/watch?v=oxkvV_o-ync',
+            day3: 'https://www.youtube.com/watch?v=yL16pc0kkoQ',
         },
     },
     '0000138': {
