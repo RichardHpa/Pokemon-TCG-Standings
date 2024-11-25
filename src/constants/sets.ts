@@ -1,5 +1,6 @@
 export type SetCodes =
     // Scarlet & Violet
+    | 'SSP' // Surging Sparks
     | 'SCR' // Stellar Crown
     | 'SFA' // Shrouded Fable
     | 'TWM' // Twilight Masquerade
@@ -154,6 +155,26 @@ interface Set {
 
 export const sets: Set[] = [
     // Scarlet and Violet
+    {
+        name: 'Surging Sparks',
+        ptcgoCode: 'SSP',
+        setCode: 'sv8',
+        images: {
+            symbol: 'https://images.pokemontcg.io/sv8/symbol.png',
+            logo: 'https://images.pokemontcg.io/sv8/logo.png',
+        },
+        releaseDate: '2024/11/08',
+    },
+    {
+        name: 'Stellar Crown',
+        ptcgoCode: 'SCR',
+        setCode: 'sv7',
+        images: {
+            symbol: 'https://images.pokemontcg.io/sv7/symbol.png',
+            logo: 'https://images.pokemontcg.io/sv7/logo.png',
+        },
+        releaseDate: '2024/09/27',
+    },
     {
         name: 'Shrouded Fable',
         ptcgoCode: 'SFA',
@@ -1513,6 +1534,7 @@ type SetCodeMap = {
 };
 
 export const setMap: SetCodeMap = {
+    SSP: 'sv8',
     SCR: 'sv7',
     SFA: 'sv6pt5',
     TWM: 'sv6',
