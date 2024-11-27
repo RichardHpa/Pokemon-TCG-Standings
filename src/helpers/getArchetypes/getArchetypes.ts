@@ -12,6 +12,23 @@ export const getArchetypes = (decklist: DeckList) => {
     const pokemonNames = Object.values(pokemon).map((p) => p.name);
     const foundArchetype = [];
 
+    if (pokemonNames.includes('Archaludon ex')) {
+        foundArchetype.push({
+            pokemon: 'Archaludon',
+            image: pokemonList['archaludon'].image,
+        });
+
+        return foundArchetype;
+    }
+
+    if (pokemonNames.includes('Regigigas')) {
+        foundArchetype.push({
+            pokemon: 'Regigigas',
+            image: pokemonList['regigigas'].image,
+        });
+        return foundArchetype;
+    }
+
     if (
         pokemonNames.includes('Terapagos ex') &&
         pokemonNames.includes('Origin Forme Palkia VSTAR')
