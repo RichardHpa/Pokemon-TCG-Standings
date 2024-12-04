@@ -12,6 +12,22 @@ export const getArchetypes = (decklist: DeckList) => {
     const pokemonNames = Object.values(pokemon).map((p) => p.name);
     const foundArchetype = [];
 
+    if (pokemonNames.includes('Ceruledge ex')) {
+        foundArchetype.push({
+            pokemon: 'Ceruledge ex',
+            image: pokemonList['ceruledge'].image,
+        });
+        return foundArchetype;
+    }
+
+    if (pokemonNames.includes('Hydrapple ex')) {
+        foundArchetype.push({
+            pokemon: 'Hydrapple ex',
+            image: pokemonList['hydrapple'].image,
+        });
+        return foundArchetype;
+    }
+
     if (pokemonNames.includes('Archaludon ex')) {
         foundArchetype.push({
             pokemon: 'Archaludon',
@@ -273,6 +289,32 @@ export const getArchetypes = (decklist: DeckList) => {
                 image: pokemonList['bibarel'].image,
             });
         }
+        return foundArchetype;
+    }
+
+    if (pokemonNames.includes('Decidueye ex')) {
+        foundArchetype.push({
+            pokemon: 'Decidueye ex',
+            image: pokemonList['decidueye'].image,
+        });
+
+        return foundArchetype;
+    }
+
+    if (pokemonNames.includes('Blissey ex')) {
+        foundArchetype.push({
+            pokemon: 'Blissey ex',
+            image: pokemonList['blissey'].image,
+        });
+        return foundArchetype;
+    }
+
+    if (pokemonNames.includes('Okidogi ex')) {
+        foundArchetype.push({
+            pokemon: 'Okidogi ex',
+            image: pokemonList['okidogi'].image,
+        });
+
         return foundArchetype;
     }
 

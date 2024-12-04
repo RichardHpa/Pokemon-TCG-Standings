@@ -31,6 +31,15 @@ interface LocalTournamentsMap {
 }
 
 export const tournaments: LocalTournamentsMap = {
+    '0000141': {
+        name: 'Stuttgart Pokémon TCG Regional Championship 2025',
+        hasLocalData: true,
+        logo: RegionalLogo2024,
+        streams: {
+            day1: 'https://www.youtube.com/live/G_yBcTFtCyg?si=bJInheZnCRXk3x2e',
+            day2: 'https://www.youtube.com/live/5NNrLxeklts?si=2ntGxql64Ndwphnk',
+        },
+    },
     '0000140': {
         name: 'Sacramento Pokémon TCG Regional Championship 2025',
         hasLocalData: true,

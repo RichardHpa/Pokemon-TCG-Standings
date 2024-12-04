@@ -79,7 +79,15 @@ export const PlayerOutlet = () => {
     }
 
     if (data.players.length > 1) {
-        return <div>render multiple players</div>;
+        return (
+            <Notice status="error">
+                We found multiple players with the name{' '}
+                {createPlayerName(playerName)}. Currently our system does not
+                support players with the same name in the same division. Please
+                use the country code to differentiate between the players. In
+                the 2025 site update, we will have a better system for this.
+            </Notice>
+        );
     }
 
     const player = data.players[0];
