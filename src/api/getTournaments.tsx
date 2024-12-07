@@ -39,6 +39,9 @@ export const getPokeDataTournaments = async (): Promise<Tournament[]> => {
     reversed.forEach((tournament) => {
         const tournamentId = tournament.id;
         if (tournaments[tournamentId]) {
+            if (tournaments[tournamentId].hide) {
+                reversed.splice(reversed.indexOf(tournament), 1);
+            }
             if (tournaments[tournamentId].name) {
                 tournament.name = tournaments[tournamentId].name;
             }
