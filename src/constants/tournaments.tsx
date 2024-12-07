@@ -27,10 +27,21 @@ interface LocalTournamentsMap {
         notes?: ReactNode;
 
         hasLocalData: boolean;
+        hide?: boolean;
     };
 }
 
 export const tournaments: LocalTournamentsMap = {
+    '0000143': {
+        name: '2025 Bogotá TCG Special Event',
+        hide: true,
+        hasLocalData: false,
+        notes: <>The Data for this event is not available at the moment.</>,
+    },
+    '0000142': {
+        name: 'Perth Pokémon TCG Regional Championship 2025',
+        hasLocalData: false,
+    },
     '0000141': {
         name: 'Stuttgart Pokémon TCG Regional Championship 2025',
         hasLocalData: true,
