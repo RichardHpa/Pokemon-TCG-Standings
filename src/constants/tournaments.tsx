@@ -34,13 +34,20 @@ interface LocalTournamentsMap {
 export const tournaments: LocalTournamentsMap = {
     '0000143': {
         name: '2025 Bogotá TCG Special Event',
-        hide: true,
-        hasLocalData: false,
-        notes: <>The Data for this event is not available at the moment.</>,
+        hide: false,
+        hasLocalData: true,
+        notes: (
+            <>
+                Data for the Latin american tournaments can be inconsistent and
+                some of the standings may be incorrect. If you see any errors,
+                please let us know.
+            </>
+        ),
     },
     '0000142': {
         name: 'Perth Pokémon TCG Regional Championship 2025',
-        hasLocalData: false,
+        hasLocalData: true,
+        logo: RegionalLogo2024,
     },
     '0000141': {
         name: 'Stuttgart Pokémon TCG Regional Championship 2025',
