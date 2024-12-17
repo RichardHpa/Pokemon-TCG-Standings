@@ -32,6 +32,11 @@ interface LocalTournamentsMap {
 }
 
 export const tournaments: LocalTournamentsMap = {
+    '0000144': {
+        name: 'Toronto Pokémon TCG Regional Championship 2025',
+        hasLocalData: true,
+        logo: RegionalLogo2024,
+    },
     '0000143': {
         name: '2025 Bogotá TCG Special Event',
         hide: false,
