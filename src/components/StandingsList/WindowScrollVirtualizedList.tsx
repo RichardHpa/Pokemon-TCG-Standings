@@ -31,32 +31,35 @@ export const WindowScrollVirtualizedList = ({
     return (
         <>
             <WindowScroller onScroll={onScroll}>
-                {/* @ts-expect-error - TODO: need to figure out what the types here are */}
-                {({ registerChild }) => <div ref={registerChild} />}
+                {({ registerChild }) => (
+                    <>
+                        {/* @ts-expect-error - TODO: need to figure out what the types here are */}
+                        <div ref={registerChild} />
+                        <FixedSizeList
+                            ref={list}
+                            itemCount={data.length}
+                            itemSize={77}
+                            width="100%"
+                            height={window.innerHeight}
+                            style={{ height: '100% !important' }}
+                            innerElementType={InnerElement}
+                        >
+                            {({ index, style }) => {
+                                return (
+                                    <StandingRow
+                                        tournamentId={tournamentId}
+                                        division={division}
+                                        player={data[index]}
+                                        style={style}
+                                        hideArchetypes={hideArchetypes}
+                                        tournamentStatus={tournamentStatus}
+                                    />
+                                );
+                            }}
+                        </FixedSizeList>
+                    </>
+                )}
             </WindowScroller>
-
-            <FixedSizeList
-                ref={list}
-                itemCount={data.length}
-                itemSize={77}
-                width="100%"
-                height={window.innerHeight}
-                style={{ height: '100% !important' }}
-                innerElementType={InnerElement}
-            >
-                {({ index, style }) => {
-                    return (
-                        <StandingRow
-                            tournamentId={tournamentId}
-                            division={division}
-                            player={data[index]}
-                            style={style}
-                            hideArchetypes={hideArchetypes}
-                            tournamentStatus={tournamentStatus}
-                        />
-                    );
-                }}
-            </FixedSizeList>
         </>
     );
 };
