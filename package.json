@@ -19,6 +19,7 @@
         "lodash": "^4.17.21",
         "markdown-to-jsx": "^7.5.0",
         "msw": "^2.4.8",
+        "popper.js": "^1.16.1",
         "react": "^18.3.1",
         "react-copy-to-clipboard": "^5.1.0",
         "react-dom": "^18.3.1",

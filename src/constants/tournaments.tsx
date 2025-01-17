@@ -32,6 +32,18 @@ interface LocalTournamentsMap {
 }
 
 export const tournaments: LocalTournamentsMap = {
+    '0000146': {
+        name: 'Rio de Janeiro Pokémon TCG Regional Championship 2025',
+        hasLocalData: false,
+    },
+    '0000145': {
+        name: 'Birmingham Pokémon TCG Regional Championship 2025',
+        hasLocalData: false,
+        streams: {
+            day1: 'https://www.youtube.com/live/5R0GR_yZ-20?si=v0wZNljqu5MxYtCE',
+            day2: 'https://www.youtube.com/live/GoTOuT70t6o?si=BZumTKySaN0P4K01',
+        },
+    },
     '0000144': {
         name: 'Toronto Pokémon TCG Regional Championship 2025',
         hasLocalData: true,
