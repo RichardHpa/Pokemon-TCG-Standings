@@ -1,5 +1,6 @@
 export type SetCodes =
     // Scarlet & Violet
+    | 'PRE' // Prismatic Evolutions
     | 'SSP' // Surging Sparks
     | 'SCR' // Stellar Crown
     | 'SFA' // Shrouded Fable
@@ -155,6 +156,16 @@ interface Set {
 
 export const sets: Set[] = [
     // Scarlet and Violet
+    {
+        name: 'Prismatic Evolutions',
+        ptcgoCode: 'PRE',
+        setCode: 'sv8pt5',
+        images: {
+            symbol: 'https://images.pokemontcg.io/sv8pt5/symbol.png',
+            logo: 'https://images.pokemontcg.io/sv8pt5/logo.png',
+        },
+        releaseDate: '2026/01/17',
+    },
     {
         name: 'Surging Sparks',
         ptcgoCode: 'SSP',
@@ -1534,6 +1545,7 @@ type SetCodeMap = {
 };
 
 export const setMap: SetCodeMap = {
+    PRE: 'sv8pt5',
     SSP: 'sv8',
     SCR: 'sv7',
     SFA: 'sv6pt5',
