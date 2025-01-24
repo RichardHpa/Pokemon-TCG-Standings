@@ -44,7 +44,7 @@ const queryClient = new QueryClient({
 
 const Layout = () => {
     const { sendPageView, sendEvent } = useAnalytics();
-    const noticeId = `thank-you-2024`;
+    const noticeId = `beta-message`;
     const [dismissedNotice, setDismissedNotice] = useLocalStorage(
         noticeId,
         'false'
