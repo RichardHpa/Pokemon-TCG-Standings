@@ -43,7 +43,7 @@ const queryClient = new QueryClient({
 });
 
 const Layout = () => {
-    const { sendPageView } = useAnalytics();
+    const { sendPageView, sendEvent } = useAnalytics();
     const noticeId = `thank-you-2024`;
     const [dismissedNotice, setDismissedNotice] = useLocalStorage(
         noticeId,
@@ -59,6 +59,14 @@ const Layout = () => {
         sendPageView();
     }, [sendPageView]);
 
+    const handleOnBetaClick = useCallback(() => {
+        sendEvent({
+            category: 'Beta Link',
+            action: 'click',
+            label: 'Clicked on Beta Link',
+        });
+    }, [sendEvent]);
+
     return (
         <div className="bg-white dark:bg-gray-900 text-black dark:text-gray-200 min-h-screen flex flex-col">
             <Navbar />
@@ -70,28 +78,30 @@ const Layout = () => {
                         noticeId={noticeId}
                         onDismiss={handleOnDismiss}
                     >
-                        Thank you so much for those who have been using PTCG
-                        Standings over the last few months. We have seen a
-                        steady amount of traffic over this time and have got
-                        some really useful feedback.
-                        <br />
-                        We have updated some of the UI, fixed API issues and
-                        resolved multiple little bugs which have made the site
-                        more stable.
-                        <br />
-                        <br />I am also happy to announce the biggest update to
-                        the site coming in 2025. In the new year I will be
-                        pushing up an update that will give us a full redesign
-                        of the entire site, more ways to interact with data,
-                        statistics of each tournament. And also early in the
-                        year the ability to view round specific data. And mid
-                        2025 our very own API which will allow the site to be
-                        more stable as well as provide more data. These update
-                        may require the site to go down for a short period of
-                        time but I will make sure it happens over a period where
-                        no tournament are running. Once again thank you all so
-                        much for using the site and I can't wait to see it grow
-                        in 2025
+                        Thank you for visiting PTCG Standings. I am happy to say
+                        we are close to launching the next version of the site.
+                        This weekend I am putting it up for a beta test. Feel
+                        free to check it out at{' '}
+                        <u>
+                            <a
+                                href="https://ptcg-standings.fly.dev/"
+                                target="_blank"
+                                onClick={handleOnBetaClick}
+                            >
+                                https://ptcg-standings.fly.dev
+                            </a>
+                        </u>
+                        . If you have any feedback or suggestions, please feel
+                        free to reach out to me on X{' '}
+                        <u>
+                            <a
+                                href="https://x.com/PTCG_Standing"
+                                target="_blank"
+                            >
+                                @PTCG_Standing
+                            </a>
+                        </u>
+                        . I would love to hear from you.
                         <br />
                         <br />- Richard from Ptcg Standings
                     </Notice>

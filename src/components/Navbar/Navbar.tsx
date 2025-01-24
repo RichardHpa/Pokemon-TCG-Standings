@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { Button } from 'components/Button';
 
 import { useResponsive } from 'hooks/useResponsive';
+import { useAnalytics } from 'hooks/useAnalytics';
 
 import { LoadingPokeball } from 'components/LoadingPokeball';
 
@@ -14,6 +15,7 @@ import { ColorModeSwitcher } from 'components/ColorModeSwitcher';
 import { PinnedPlayersDrawer } from 'components/PinPlayer';
 
 export const Navbar = () => {
+    const { sendEvent } = useAnalytics();
     const { md } = useResponsive();
     const [isNavbarOpen, setIsNavbarOpen] = useState(false);
     const buttonRef = useRef<HTMLButtonElement>(null);
@@ -26,6 +28,16 @@ export const Navbar = () => {
         setIsNavbarOpen(false);
     }, []);
 
+    const handleOnBetaClick = useCallback(() => {
+        sendEvent({
+            category: 'Beta Link',
+            action: 'click',
+            label: 'Clicked on Beta Link',
+        });
+
+        window.open('https://ptcg-standings.fly.dev/', '_blank');
+    }, [sendEvent]);
+
     return (
         <nav className="bg-white border-gray-200 dark:bg-gray-900">
             <div className="container flex flex-wrap items-center justify-between md:justify-center lg:justify-between mx-auto p-4">
@@ -33,11 +45,6 @@ export const Navbar = () => {
                     to="/"
                     className="flex items-center space-x-3 rtl:space-x-reverse hover:underline"
                 >
-                    {/* <img
-                        src="/logo192.png"
-                        className="h-10"
-                        alt="ptcg standings"
-                    /> */}
                     <LoadingPokeball
                         animate={false}
                         opened={false}
@@ -88,6 +95,11 @@ export const Navbar = () => {
                     id="navbar-default"
                 >
                     <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row gap-4 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 items-center">
+                        <li className="w-full md:w-auto">
+                            <Button size="sm" full onClick={handleOnBetaClick}>
+                                View V2 Beta
+                            </Button>
+                        </li>
                         <li className="w-full md:w-auto">
                             <Link to="worlds-2024" onClick={handleCloseNavbar}>
                                 <Button size="sm" full>
