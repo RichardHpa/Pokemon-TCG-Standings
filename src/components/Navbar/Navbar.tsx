@@ -31,8 +31,7 @@ export const Navbar = () => {
     const handleOnBetaClick = useCallback(() => {
         sendEvent({
             category: 'Beta Link',
-            action: 'click',
-            label: 'Clicked on Beta Link',
+            action: 'Clicked on Beta Lin',
         });
 
         window.open('https://ptcg-standings.fly.dev/', '_blank');

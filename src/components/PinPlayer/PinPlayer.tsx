@@ -26,7 +26,7 @@ export const PinPlayer = ({
         if (!isPlayerPinned(tournamentId, division, player)) {
             sendEvent({
                 category: 'Pin Player',
-                action: 'click',
+                action: 'Pin Player',
                 label: `Pin Player: ${player} - ${division} - ${tournamentId}`,
             });
         }

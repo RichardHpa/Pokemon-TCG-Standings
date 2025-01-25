@@ -8,8 +8,7 @@ export function BuyMeACoffeeWidget() {
     const handleClick = () => {
         sendEvent({
             category: 'Buy Me a Coffee',
-            action: 'click',
-            label: 'Buy Me a Coffee Widget',
+            action: 'Click on Buy Me a Coffee',
         });
     };
 
