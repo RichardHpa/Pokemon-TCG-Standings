@@ -79,8 +79,8 @@ const Layout = () => {
                     >
                         Thank you for visiting PTCG Standings. I am happy to say
                         we are close to launching the next version of the site.
-                        This weekend I am putting it up for a beta test. Feel
-                        free to check it out at{' '}
+                        I am putting the new site up for a beta test for the
+                        next couple tournaments. Feel free to check it out at{' '}
                         <u>
                             <a
                                 href="https://ptcg-standings.fly.dev/"
@@ -94,10 +94,10 @@ const Layout = () => {
                         free to reach out to me on X{' '}
                         <u>
                             <a
-                                href="https://x.com/PTCG_Standing"
+                                href="https://x.com/PTCG_Standings"
                                 target="_blank"
                             >
-                                @PTCG_Standing
+                                @PTCG_Standings
                             </a>
                         </u>
                         . I would love to hear from you.
