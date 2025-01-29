@@ -32,6 +32,15 @@ interface LocalTournamentsMap {
 }
 
 export const tournaments: LocalTournamentsMap = {
+    '0000147': {
+        name: 'San Antonio Pokémon TCG Regional Championship 2025',
+        hasLocalData: true,
+        logo: RegionalLogo2024,
+        streams: {
+            day1: 'https://www.youtube.com/live/AALuUy1JNS8?si=IThD7x69US4pzwJi',
+            day2: 'https://www.youtube.com/live/-5p61hCBeGI?si=IAc6u-AoDgHdfBqo',
+        },
+    },
     '0000146': {
         name: 'Rio de Janeiro Pokémon TCG Regional Championship 2025',
         logo: RegionalLogo2024,
